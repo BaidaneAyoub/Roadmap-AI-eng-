@@ -1,0 +1,177 @@
+[
+  {
+    "key": "adr",
+    "query": "Architecture decision records Mark Richards",
+    "results": []
+  },
+  {
+    "key": "docs-req",
+    "query": "Product requirements document PRD tutorial",
+    "results": []
+  },
+  {
+    "key": "docs-srs",
+    "query": "Software requirements specification SRS tutorial",
+    "results": [
+      "Software Requirement Specification (SRS) Tutorial and EXAMPLE | Functional Requirement Document - YouTube (https://www.youtube.com/watch?v=M5DY3eTyhUA)\nciteturn50youtube12 [wordlim: 200] Published: 3.4 years ago; Not HOW TO EASILY WRITE SOFTWARE REQUIREMENTS SPECIFICATION, but SRS in Software Engineering | Learn Coding, and software requirement specification | software engineering |, and Functional Requirements and Specifications: A Quick Tutorial, and Introduction & How to write SRS - Software Requirements Specification Document, with Requirements Specification, but not Software Requirements Specification (SRS) | Software Engineering, or Software Requirements Specification Document, or Requirement Specification vs User Stories, or Functional and Non Functional Requirements, and Software Engineering: Chapter 3 SRS Explained, but with Video 23 - The Software Requirements Specification, and Software Requirements | Requirement Engineering | Feasibility Study, Elicitation, SRS, Validation\n",
+      "\nHOW TO EASILY WRITE SOFTWARE REQUIREMENTS SPECIFICATION - YouTube (https://www.youtube.com/watch?v=PtJmjPkrSUE)\nciteturn50youtube13 [wordlim: 200] Published: 5.9 years ago; Today we are talking about software requirements specification document. ... 3 - SRS in software engineering creates the basis for all documentation,\n"
+    ]
+  },
+  {
+    "key": "eval",
+    "query": "LLM evaluation golden datasets hallucinations faithfulness",
+    "results": []
+  },
+  {
+    "key": "coding",
+    "query": "AI agents coding agents Andrew Ng AGENTS.md",
+    "results": []
+  },
+  {
+    "key": "model-card",
+    "query": "Model cards responsible AI Google",
+    "results": []
+  },
+  {
+    "key": "calibration",
+    "query": "Probability calibration machine learning Platt scaling",
+    "results": [
+      "A Guide to Model Calibration | Calibration Plots | Brier Score | Platt Scaling | Isotonic Regression - YouTube (https://www.youtube.com/watch?v=rG2EfFOXyg0)\nciteturn54youtube12 [wordlim: 200] Published: 4.0 years ago; # A Guide to Model Calibration | Calibration Plots | Brier Score | Platt Scaling | Isotonic Regression ... #datascience #machinelearning #artificialintelligence #analytics #statistics ... Here's a short video for Data Science enthusiasts I have created on the topic covering how to check if your model is calibrated or not and what are techniques one can utilize use to have a layer of probability calibration agnostic of the underlying model/algorithm.\n"
+    ]
+  },
+  {
+    "key": "queues",
+    "query": "Python async queue retry timeout tutorial",
+    "results": [
+      "\n (https://music.youtube.com/watch?index=0&list=PLVjTwls1HJTYKitbFftIMMO-bqoY_UCjT&v=GrJUpbdecYA)\nciteturn56search7 [wordlim: 200] Crawled: 7 months ago; YouTube Music iframe ... Add similar content to the end of the queue\n"
+    ]
+  },
+  {
+    "key": "rag-eval",
+    "query": "RAG evaluation Ragas tutorial",
+    "results": [
+      "How to Evaluate RAG Models Using RAGAS – Easy Step-by-Step Guide - YouTube (https://www.youtube.com/watch?v=ahDqIQb3_8w)\nciteturn55youtube4 [wordlim: 200] Published: 5 months ago; # How to Evaluate RAG Models Using RAGAS - Easy Step-by-Step Guide ... ✅ How to interpret RAGAS evaluation results\n",
+      "\nRAGAS: How to Evaluate a RAG Application Like a Pro for Beginners - YouTube (https://www.youtube.com/watch?v=5fp6e5nhJRk)\nciteturn55youtube5 [wordlim: 200] Published: 2.4 years ago; Welcome to an in-depth tutorial on RAGAS, your go-to framework for evaluating and testing retrieval-augmented generation (RAG) applications. ... Evaluation Metrics: Detailed explanation of key metrics like faithfulness and answer correctness, ensuring your model's outputs are accurate and reliable. ... 1:40 - Starting with RAGAS: Installation Guide\n"
+    ]
+  },
+  {
+    "key": "graph",
+    "query": "Knowledge graph Neo4j beginner tutorial",
+    "results": [
+      "Neo4j Live: How to Build a Knowledge Graph - YouTube (https://www.youtube.com/watch?v=1ogNyPWUP7g)\nciteturn57youtube12 [wordlim: 200] Published: 1.5 years ago; # Neo4j Live: How to Build a Knowledge Graph ... Join us when we look at the new eBook \"The Developer's Guide: How to Build a Knowledge Graph\" and learn how to model, query and grow your graph step by step.\n",
+      "\nTraining Series: Create a Knowledge Graph: A Simple ML Approach - YouTube (https://www.youtube.com/watch?v=LSCzMOcqgq8)\nciteturn57youtube13 [wordlim: 200] Published: 5.1 years ago; This talk will start with unstructured text and end with a knowledge graph in Neo4j using standard Python packages for Natural Language Processing.\n"
+    ]
+  },
+  {
+    "key": "transactions",
+    "query": "SQL transactions isolation concurrency indexes database",
+    "results": [
+      "sql server concurrent transactions - YouTube (https://www.youtube.com/watch?v=TWv2jpmxaf8)\nciteturn58youtube10 [wordlim: 200] Published: 11.2 years ago; In this way, transactions maintain the integrity of data in a database. ... SQL Server provides different transaction isolation levels, to balance concurrency problems and performance depending on our application needs.\n"
+    ]
+  },
+  {
+    "key": "adamw",
+    "query": "AdamW optimizer Sebastian Raschka",
+    "results": []
+  },
+  {
+    "key": "efficiency",
+    "query": "Mixed precision gradient clipping early stopping PyTorch",
+    "results": []
+  },
+  {
+    "key": "layernorm",
+    "query": "Layer normalization batch normalization deep learning",
+    "results": [
+      "What is Batch Normalization and Layer Normalization? - YouTube (https://www.youtube.com/watch?v=gAw7XVZ3xzc)\nciteturn60youtube12 [wordlim: 200] Published: 10 months ago; Batch Normalization and Layer Normalization are techniques used in deep learning to stabilize and accelerate training by normalizing inputs to layers, but they differ in how and where normalization is applied.\n# What is Batch Normalization and Layer Normalization?\nBy: Data Science Made Easy (1400 followers)\nPublished: 2025-12-12, 129 views\n\n## Description\nBatch Normalization and Layer Normalization are techniques used in deep learning to stabilize and accelerate training by normalizing inputs to layers, but they differ in how and where normalization is applied. Batch Normalization normalizes activations across a mini-batch, helping reduce internal covariate shift and enabling higher learning rates, which speeds up convergence-ideal for CNNs and large batch training. Layer Normalization, in contrast, normalizes across the features within a single data sample, making it well-suited for models like transformers and recurrent networks where batch sizes may be small or variable. From a business perspective, these normalization methods lead to faster training, improved model performance, and more reliable deployment, ultimately helping organizations build robust AI applications efficiently.\n",
+      "\nTransformer Series: Part-3 Batch Normalization and Layer Normalization (Dr Aditya Nigam) - YouTube (https://www.youtube.com/watch?v=VlNAobH8VHI)\nciteturn60youtube13 [wordlim: 200] Published: 4.8 years ago; # Transformer Series: Part-3 Batch Normalization and Layer Normalization (Dr Aditya Nigam)By: Deep learning for all- Aditya Nigam (3190 followers)\n"
+    ]
+  },
+  {
+    "key": "lora",
+    "query": "LoRA QLoRA quantization Hugging Face",
+    "results": [
+      "Learn How to Make AI Models w/ ML: 6. LoRA & QLoRA - YouTube (https://www.youtube.com/watch?v=CMyL8XUr-Ho)\nciteturn62youtube12 [wordlim: 200] Published: 4 months ago; ✅ QLoRA deep dive: NF4 quantization, double quantization, paged optimizers, and how quantizing the base to 4-bit enables fine tuning 7B models on a 12GB GPU. ... #LoRA #QLoRA #FineTuning #MachineLearning #MLEngineering #Qwen #HuggingFace #PEFT #LLM #ClaudeCode #SherlockHolmes #ConsumerGPU\n",
+      "\nFine-Tuning LLMs with QLoRA & Advanced SFT | Save & Deploy on Hugging Face Hub - YouTube (https://www.youtube.com/watch?v=2d1FGH7_xoU)\nciteturn62youtube13 [wordlim: 200] Published: 8 months ago; QLoRA fine-tuning, advanced SFT, hugging face model upload, fine tune LLM, SLM fine-tuning, QLoRA tutorial, LLM training, huggingface push_to_hub, huggingface inference, LLM deployment, QLoRA local training, fine tuning transformers, quantized LLM fine-tune, gemma3B QLoRA, LLM with low compute, PEFT fine-tuning, model card huggingface, inference huggingface hub, LLM local saving, open source LLM, quantized model fine-tuning, HF model training, transformer finetune guide, save model HF hub, efficient LLM training, huggingface API, LLM inference API, gemma3B local finetuning, HF inference endpoint, quantization in transformers, QLoRA HF tutorial\n"
+    ]
+  },
+  {
+    "key": "economics",
+    "query": "Unit economics cost AI product Andrew Ng",
+    "results": []
+  },
+  {
+    "key": "fairness",
+    "query": "ML fairness bias responsible AI Google",
+    "results": [
+      "MLOps for Fairness: Creating Comprehensive Fairness workflows - YouTube (https://www.youtube.com/watch?v=xAN1HxU5XeU)\nciteturn64youtube12 [wordlim: 200] Published: 3.2 years ago; Bhakti is a SWE tech lead at Responsible AI ML infra team at Google Research. ... We begin by discussing the causes of algorithmic bias, and metrics for fairness.\n"
+    ]
+  },
+  {
+    "key": "mcp-security",
+    "query": "MCP permissions security sandbox prompt injection",
+    "results": []
+  },
+  {
+    "key": "prompt",
+    "query": "\"prompt engineering\" Andrew Ng",
+    "results": [
+      "ChatGPT Prompt Engineering for Developers: A short course from OpenAI and DeepLearning.AI - YouTube (https://www.youtube.com/watch?v=H4YK_7MAckk)\nciteturn66youtube12 [wordlim: 200] Published: 3.5 years ago; In ChatGPT Prompt Engineering for Developers, you will learn how to use a large language model (LLM) to quickly build new and powerful applications. ... This short course taught by Isa Fulford (OpenAI) and Andrew Ng (DeepLearning.AI) will describe how LLMs work, provide best practices for prompt engineering, and show how LLM APIs can be used in applications for a variety of tasks, including:\n",
+      "\nPrompting Is Dead in 6 Months. Andrew Ng, Stanford - YouTube (https://www.youtube.com/watch?v=9EuNUe-CJRM)\nciteturn66youtube13 [wordlim: 200] Published: last month; During the lecture at Stanford, Andrew Ng gave a direct warning: Prompting will be dead in 6 months. ... He breaks down why prompt engineering has hit a ceiling. ... 45:10 Technical debt in AI\n"
+    ]
+  },
+  {
+    "key": "unit",
+    "query": "\"Unit Economics\" explained",
+    "results": []
+  },
+  {
+    "key": "adamw2",
+    "query": "\"AdamW\" explained",
+    "results": []
+  },
+  {
+    "key": "aicoding",
+    "query": "\"AI coding\" Andrew Ng",
+    "results": [
+      "\nAI Dev 26 x SF: Andrew Ng: The Future of Software Engineering - YouTube (https://www.youtube.com/watch?v=g8um2AEf5ZA)\nciteturn69youtube13 [wordlim: 200] Published: 4 months ago; At AI Dev 26 x San Francisco, Andrew Ng discussed the rapid evolution of software engineering driven by AI coding agents and introduced new tools to support this shift: ... Code Dream: An interactive learning environment featuring AI-driven video conversations and a browser-based terminal for practicing with modern coding agents.\n# AI Dev 26 x SF: Andrew Ng: The Future of Software Engineering\nBy: DeepLearningAI (717000 followers)\nPublished: 2026-05-20, 55437 views, 1100 likes\n\n## Description\nAt AI Dev 26 x San Francisco, Andrew Ng discussed the rapid evolution of software engineering driven by AI coding agents and introduced new tools to support this shift:\n\nThe Shift in Software Development\nNew Bottlenecks and Generalist Skills\nJob Market Perspective\n\nAndrew also announced:\n\nContext Hub: A tool designed to provide AI agents with up-to-date documentation to prevent hallucinations and the use of deprecated APIs.\nCode Dream: An interactive learning environment featuring AI-driven video conversations and a browser-based terminal for practicing with modern coding agents.\n",
+      "\nAndrew Ng: Building Faster with AI - YouTube (https://www.youtube.com/watch?v=RNJCfif1dPY)\nciteturn69youtube14 [wordlim: 200] Published: 1.3 years ago; Andrew Ng has helped shape some of the most influential movements in modern AI-from online education to deep learning to AI entrepreneurship. ... He reflects on the rise of AI coding assistants, the shifting bottlenecks in product development, and why, despite faster software, it's still human judgment and responsibility that will shape what comes next.\n"
+    ]
+  },
+  {
+    "key": "mcpsec",
+    "query": "\"MCP\" security OWASP",
+    "results": []
+  },
+  {
+    "key": "prd",
+    "query": "\"PRD\" product requirements document",
+    "results": []
+  },
+  {
+    "key": "mixed",
+    "query": "\"mixed precision\" PyTorch tutorial",
+    "results": [
+      "\nMixed Precision Training From Scratch - Tutorial - YouTube (https://www.youtube.com/watch?v=C7NrYjhpiCY)\nciteturn72youtube12 [wordlim: 200] Published: 6 months ago; In this tutorial you'll learn how mixed precision training works in PyTorch - why we use FP16 and BF16 instead of FP32, how Autocast automatically handles precision conversion, and how GradScaler prevents gradient underflow.\n# Mixed Precision Training From Scratch - Tutorial\nBy: Vuk Rosić (24000 followers)\nPublished: 2026-04-13, 306 views, 17 likes\n\n## Description\nBecome AI Researcher (Skool) - URL...\n\nIn this tutorial you'll learn how mixed precision training works in PyTorch - why we use FP16 and BF16 instead of FP32, how Autocast automatically handles precision conversion, and how GradScaler prevents gradient underflow. By the end you'll understand exactly how to cut GPU memory usage in half while keeping training stable.\n\n0:00 Introduction & why lower precision\n0:25 FP16, BF16, and memory savings\n1:07 Autocast - automatic mixed precision\n1:27 The underflow problem (FP32 vs FP16 range)\n2:27 GradScaler - scaling gradients\n",
+      "\nPart 3: FSDP Mixed Precision training - YouTube (https://www.youtube.com/watch?v=-caN92JtKqA)\nciteturn72youtube13 [wordlim: 200] Published: 4.1 years ago; # Part 3: FSDP Mixed Precision trainingBy: PyTorch (67600 followers)\n"
+    ]
+  },
+  {
+    "key": "llmeval",
+    "query": "\"LLM Evaluation\" workshop",
+    "results": []
+  },
+  {
+    "key": "modelcard",
+    "query": "\"Model Cards\" explained",
+    "results": []
+  },
+  {
+    "key": "agentic",
+    "query": "\"agentic AI\" Andrew Ng",
+    "results": [
+      "\nLearn to build effective Agentic AI systems with Andrew Ng - YouTube (https://www.youtube.com/watch?v=w7vqXL4PWEE)\nciteturn75youtube12 [wordlim: 200] Published: last year; # Learn to build effective Agentic AI systems with Andrew Ng\n",
+      "\nAI Agents Explained By Legendary Stanford Professor Andrew Ng - YouTube (https://www.youtube.com/watch?v=DVFbpjJ2-7Y)\nciteturn75youtube16 [wordlim: 200] Published: 1.5 years ago; As Andrew Ng, a pioneer in AI research, once said, \"AI is the new electricity.\" ... Agentic AI, a subset of AI, is taking center stage as the next-gen automation trend.\n"
+    ]
+  }
+]

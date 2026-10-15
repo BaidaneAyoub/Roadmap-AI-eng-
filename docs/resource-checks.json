@@ -1,0 +1,1839 @@
+{
+  "checkedAt": "2026-10-15T17:29:24.955498+00:00",
+  "results": [
+    {
+      "url": "https://cs50.harvard.edu/python/2022/weeks/0/",
+      "title": "CS50P 0 \u2014 Functions and variables \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://cs50.harvard.edu/python/weeks/0/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.python.org/3/tutorial/datastructures.html",
+      "title": "Python: data structures",
+      "status": 200,
+      "finalUrl": "https://docs.python.org/3/tutorial/datastructures.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://cs50.harvard.edu/python/2022/weeks/1/",
+      "title": "CS50P 1 \u2014 Conditionals \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://cs50.harvard.edu/python/weeks/1/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.python.org/3/tutorial/controlflow.html",
+      "title": "Python: control flow",
+      "status": 200,
+      "finalUrl": "https://docs.python.org/3/tutorial/controlflow.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://cs50.harvard.edu/python/2022/weeks/6/",
+      "title": "CS50P 6 \u2014 File I/O \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://cs50.harvard.edu/python/weeks/6/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.python.org/3/tutorial/inputoutput.html",
+      "title": "Python: input and output",
+      "status": 200,
+      "finalUrl": "https://docs.python.org/3/tutorial/inputoutput.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.python.org/3/tutorial/modules.html",
+      "title": "Python: modules",
+      "status": 200,
+      "finalUrl": "https://docs.python.org/3/tutorial/modules.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.python.org/3/tutorial/venv.html",
+      "title": "Python: virtual environments",
+      "status": 200,
+      "finalUrl": "https://docs.python.org/3/tutorial/venv.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.python.org/3/tutorial/classes.html",
+      "title": "Python: classes",
+      "status": 200,
+      "finalUrl": "https://docs.python.org/3/tutorial/classes.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://cs50.harvard.edu/python/2022/weeks/8/",
+      "title": "CS50P 8 \u2014 Object-oriented programming \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://cs50.harvard.edu/python/weeks/8/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.python.org/3/tutorial/classes.html#generators",
+      "title": "Python: generators",
+      "status": 200,
+      "finalUrl": "https://docs.python.org/3/tutorial/classes.html#generators",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.python.org/3/library/itertools.html#itertools-recipes",
+      "title": "itertools recipes",
+      "status": 200,
+      "finalUrl": "https://docs.python.org/3/library/itertools.html#itertools-recipes",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.python.org/3/library/asyncio-task.html",
+      "title": "Python: asyncio tasks and cancellation",
+      "status": 200,
+      "finalUrl": "https://docs.python.org/3/library/asyncio-task.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytest.org/en/stable/getting-started.html",
+      "title": "pytest: getting started",
+      "status": 200,
+      "finalUrl": "https://docs.pytest.org/en/stable/getting-started.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files",
+      "title": "Python: reading and writing files",
+      "status": 200,
+      "finalUrl": "https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.python.org/3/library/pathlib.html",
+      "title": "Python: pathlib",
+      "status": 200,
+      "finalUrl": "https://docs.python.org/3/library/pathlib.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytest.org/en/stable/how-to/monkeypatch.html",
+      "title": "pytest: monkeypatching",
+      "status": 200,
+      "finalUrl": "https://docs.pytest.org/en/stable/how-to/monkeypatch.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://missing.csail.mit.edu/2020/course-shell/",
+      "title": "Missing Semester \u2014 shell and terminal introduction \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://missing.csail.mit.edu/2020/course-shell/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://missing.csail.mit.edu/2020/shell-tools/",
+      "title": "Missing Semester: shell tools and scripting",
+      "status": 200,
+      "finalUrl": "https://missing.csail.mit.edu/2020/shell-tools/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging",
+      "title": "Pro Git: basic branching and merging",
+      "status": 200,
+      "finalUrl": "https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging",
+      "containsTitle": false
+    },
+    {
+      "url": "https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository",
+      "title": "Pro Git: recording changes",
+      "status": 200,
+      "finalUrl": "https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository",
+      "containsTitle": false
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview",
+      "title": "MDN: overview of HTTP",
+      "status": 200,
+      "finalUrl": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview",
+      "containsTitle": true
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status",
+      "title": "MDN: HTTP status codes",
+      "status": 200,
+      "finalUrl": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status",
+      "containsTitle": true
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods",
+      "title": "MDN: HTTP request methods",
+      "status": 200,
+      "finalUrl": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytest.org/en/stable/how-to/fixtures.html",
+      "title": "pytest: fixtures",
+      "status": 200,
+      "finalUrl": "https://docs.pytest.org/en/stable/how-to/fixtures.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.python.org/3/library/unittest.mock.html",
+      "title": "Python: unittest.mock",
+      "status": 200,
+      "finalUrl": "https://docs.python.org/3/library/unittest.mock.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://d2l.ai/chapter_preliminaries/linear-algebra.html",
+      "title": "D2L: linear algebra",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_preliminaries/linear-algebra.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://mml-book.github.io/",
+      "title": "Mathematics for Machine Learning: free book",
+      "status": 200,
+      "finalUrl": "https://mml-book.github.io/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://d2l.ai/chapter_preliminaries/calculus.html",
+      "title": "D2L: calculus",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_preliminaries/calculus.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://d2l.ai/chapter_preliminaries/autograd.html",
+      "title": "D2L: automatic differentiation",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_preliminaries/autograd.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://d2l.ai/chapter_preliminaries/probability.html",
+      "title": "D2L: probability and statistics",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_preliminaries/probability.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://statquest.org/video_index.html",
+      "title": "Neural Networks Part 11: Word Embedding and Word2Vec \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://statquest.org/video_index.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://numpy.org/doc/stable/user/absolute_beginners.html",
+      "title": "NumPy absolute beginners",
+      "status": 200,
+      "finalUrl": "https://numpy.org/doc/stable/user/absolute_beginners.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://numpy.org/doc/stable/user/basics.broadcasting.html",
+      "title": "NumPy: broadcasting rules",
+      "status": 200,
+      "finalUrl": "https://numpy.org/doc/stable/user/basics.broadcasting.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html",
+      "title": "pandas getting started tutorials",
+      "status": 200,
+      "finalUrl": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://pandas.pydata.org/docs/user_guide/missing_data.html",
+      "title": "pandas missing data guide",
+      "status": 200,
+      "finalUrl": "https://pandas.pydata.org/docs/user_guide/missing_data.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/04_plotting.html",
+      "title": "pandas: plot data",
+      "status": 200,
+      "finalUrl": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/04_plotting.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/inspection.html",
+      "title": "scikit-learn: inspection",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/inspection.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://numpy.org/doc/stable/reference/routines.linalg.html",
+      "title": "NumPy: linear algebra",
+      "status": 200,
+      "finalUrl": "https://numpy.org/doc/stable/reference/routines.linalg.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html",
+      "title": "scikit-learn: PCA",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://pandas.pydata.org/docs/user_guide/merging.html",
+      "title": "pandas: merge and join",
+      "status": 200,
+      "finalUrl": "https://pandas.pydata.org/docs/user_guide/merging.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://numpy.org/doc/stable/reference/random/index.html",
+      "title": "NumPy: random sampling",
+      "status": 200,
+      "finalUrl": "https://numpy.org/doc/stable/reference/random/index.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website",
+      "title": "MDN: your first website",
+      "status": 200,
+      "finalUrl": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website",
+      "containsTitle": true
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch",
+      "title": "MDN: using Fetch",
+      "status": 200,
+      "finalUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch",
+      "containsTitle": true
+    },
+    {
+      "url": "https://fastapi.tiangolo.com/tutorial/",
+      "title": "FastAPI tutorial",
+      "status": 200,
+      "finalUrl": "https://fastapi.tiangolo.com/tutorial/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://fastapi.tiangolo.com/tutorial/body/",
+      "title": "FastAPI: request bodies",
+      "status": 200,
+      "finalUrl": "https://fastapi.tiangolo.com/tutorial/body/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://fastapi.tiangolo.com/tutorial/security/",
+      "title": "FastAPI: security introduction",
+      "status": 200,
+      "finalUrl": "https://fastapi.tiangolo.com/tutorial/security/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction",
+      "title": "MDN: client-side web APIs",
+      "status": 200,
+      "finalUrl": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction",
+      "containsTitle": true
+    },
+    {
+      "url": "https://www.postgresql.org/docs/current/tutorial-join.html",
+      "title": "PostgreSQL: joins",
+      "status": 200,
+      "finalUrl": "https://www.postgresql.org/docs/current/tutorial-join.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://www.postgresql.org/docs/current/indexes.html",
+      "title": "PostgreSQL: indexes",
+      "status": 200,
+      "finalUrl": "https://www.postgresql.org/docs/current/indexes.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://www.postgresql.org/docs/current/tutorial-transactions.html",
+      "title": "PostgreSQL: transactions",
+      "status": 200,
+      "finalUrl": "https://www.postgresql.org/docs/current/tutorial-transactions.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://www.postgresql.org/docs/current/mvcc.html",
+      "title": "PostgreSQL: concurrency control",
+      "status": 200,
+      "finalUrl": "https://www.postgresql.org/docs/current/mvcc.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://github.com/pgvector/pgvector",
+      "title": "pgvector: PostgreSQL vector extension",
+      "status": 200,
+      "finalUrl": "https://github.com/pgvector/pgvector",
+      "containsTitle": true
+    },
+    {
+      "url": "https://neo4j.com/docs/getting-started/appendix/graphdb-concepts/",
+      "title": "Neo4j: graph database concepts",
+      "status": 200,
+      "finalUrl": "https://neo4j.com/docs/getting-started/appendix/graphdb-concepts/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://fastapi.tiangolo.com/tutorial/dependencies/",
+      "title": "FastAPI: dependencies",
+      "status": 200,
+      "finalUrl": "https://fastapi.tiangolo.com/tutorial/dependencies/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://fastapi.tiangolo.com/tutorial/testing/",
+      "title": "FastAPI: testing",
+      "status": 200,
+      "finalUrl": "https://fastapi.tiangolo.com/tutorial/testing/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://www.postgresql.org/docs/current/using-explain.html",
+      "title": "PostgreSQL: using EXPLAIN",
+      "status": 200,
+      "finalUrl": "https://www.postgresql.org/docs/current/using-explain.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://inria.github.io/scikit-learn-mooc/python_scripts/02_numerical_pipeline_introduction.html",
+      "title": "Inria: predictive modeling pipeline",
+      "status": 200,
+      "finalUrl": "https://inria.github.io/scikit-learn-mooc/python_scripts/02_numerical_pipeline_introduction.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/model_evaluation.html#dummy-estimators",
+      "title": "scikit-learn: dummy estimators",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/model_evaluation.html#dummy-estimators",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+      "title": "scikit-learn: cross-validation",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/cross_validation.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+      "title": "scikit-learn: common pitfalls",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/common_pitfalls.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://inria.github.io/scikit-learn-mooc/python_scripts/03_categorical_pipeline.html",
+      "title": "Inria: categorical variables",
+      "status": 200,
+      "finalUrl": "https://inria.github.io/scikit-learn-mooc/python_scripts/03_categorical_pipeline.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/compose.html",
+      "title": "scikit-learn: ColumnTransformer",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/compose.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/linear_model.html",
+      "title": "scikit-learn: linear models",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/linear_model.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://d2l.ai/chapter_linear-regression/linear-regression-scratch.html",
+      "title": "D2L: linear regression from scratch",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_linear-regression/linear-regression-scratch.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/tree.html",
+      "title": "scikit-learn: decision trees",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/tree.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/ensemble.html",
+      "title": "scikit-learn: ensembles",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/ensemble.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+      "title": "scikit-learn: neighbors",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/neighbors.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/clustering.html",
+      "title": "scikit-learn: clustering",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/clustering.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/decomposition.html#pca",
+      "title": "scikit-learn: PCA",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/decomposition.html#pca",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/learning_curve.html",
+      "title": "scikit-learn: validation curves",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/learning_curve.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/grid_search.html",
+      "title": "scikit-learn: tuning estimator parameters",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/grid_search.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+      "title": "scikit-learn: model evaluation",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/calibration.html",
+      "title": "scikit-learn: probability calibration",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/calibration.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/model_persistence.html",
+      "title": "scikit-learn: model persistence",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/model_persistence.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/classification_threshold.html",
+      "title": "scikit-learn: threshold tuning",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/classification_threshold.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/permutation_importance.html",
+      "title": "scikit-learn: permutation importance",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/permutation_importance.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/partial_dependence.html",
+      "title": "scikit-learn: partial dependence",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/partial_dependence.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/svm.html",
+      "title": "scikit-learn: support vector machines",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/svm.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/auto_examples/svm/plot_rbf_parameters.html",
+      "title": "scikit-learn: RBF parameter example",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/auto_examples/svm/plot_rbf_parameters.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html",
+      "title": "scikit-learn: TimeSeriesSplit",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/outlier_detection.html",
+      "title": "scikit-learn: outlier detection",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/outlier_detection.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/decomposition.html",
+      "title": "scikit-learn: decomposition",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/decomposition.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html",
+      "title": "PyTorch: tensor operations",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://d2l.ai/chapter_multilayer-perceptrons/backprop.html",
+      "title": "D2L: backpropagation",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_multilayer-perceptrons/backprop.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=KpKog-L9veg",
+      "title": "StatQuest: ArgMax and SoftMax",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=KpKog-L9veg",
+      "containsTitle": false
+    },
+    {
+      "url": "https://d2l.ai/chapter_linear-classification/softmax-regression.html",
+      "title": "D2L: softmax regression",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_linear-classification/softmax-regression.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/stable/nn.html#loss-functions",
+      "title": "PyTorch: loss functions",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/docs/stable/nn.html#loss-functions",
+      "containsTitle": false
+    },
+    {
+      "url": "https://d2l.ai/chapter_linear-classification/softmax-regression-concise.html",
+      "title": "D2L: softmax implementation",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_linear-classification/softmax-regression-concise.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://d2l.ai/chapter_optimization/index.html",
+      "title": "D2L: optimization algorithms",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_optimization/index.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/stable/optim.html",
+      "title": "PyTorch: optimiser and scheduler usage",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/docs/stable/optim.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://d2l.ai/chapter_multilayer-perceptrons/numerical-stability-and-init.html",
+      "title": "D2L: numerical stability and initialization",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_multilayer-perceptrons/numerical-stability-and-init.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://d2l.ai/chapter_optimization/lr-scheduler.html",
+      "title": "D2L: learning-rate scheduling",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_optimization/lr-scheduler.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://d2l.ai/chapter_multilayer-perceptrons/dropout.html",
+      "title": "D2L: dropout",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_multilayer-perceptrons/dropout.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://d2l.ai/chapter_convolutional-modern/batch-norm.html",
+      "title": "D2L: batch normalization",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_convolutional-modern/batch-norm.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html",
+      "title": "PyTorch: optimization loop",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytorch.org/tutorials/beginner/basics/saveloadrun_tutorial.html",
+      "title": "PyTorch: saving and loading models",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/tutorials/beginner/basics/saveloadrun_tutorial.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://d2l.ai/chapter_convolutional-neural-networks/conv-layer.html",
+      "title": "D2L: convolutions",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_convolutional-neural-networks/conv-layer.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html",
+      "title": "PyTorch: transfer learning",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/index.html",
+      "title": "D2L: attention mechanisms and transformers",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/index.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://d2l.ai/chapter_recurrent-neural-networks/index.html",
+      "title": "D2L: recurrent neural networks",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_recurrent-neural-networks/index.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/stable/amp.html",
+      "title": "PyTorch: automatic mixed precision",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/docs/stable/amp.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.pytorch.org/tutorials/recipes/recipes/benchmark.html",
+      "title": "PyTorch: benchmark utilities",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/tutorials/recipes/recipes/benchmark.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/stable/notes/autograd.html",
+      "title": "PyTorch: autograd mechanics",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/docs/stable/notes/autograd.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/stable/nn.init.html",
+      "title": "PyTorch: initialisation methods",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/docs/stable/nn.init.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://cs231n.github.io/neural-networks-2/",
+      "title": "Stanford CS231n: neural network setup",
+      "status": 200,
+      "finalUrl": "https://cs231n.github.io/neural-networks-2/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.pytorch.org/tutorials/beginner/basics/data_tutorial.html",
+      "title": "PyTorch: datasets and data loaders",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/tutorials/beginner/basics/data_tutorial.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/stable/data.html",
+      "title": "PyTorch: data loading reference",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/docs/stable/data.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/stable/generated/torch.optim.AdamW.html",
+      "title": "PyTorch: AdamW",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/docs/stable/generated/torch.optim.AdamW.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://d2l.ai/chapter_optimization/adam.html",
+      "title": "D2L: Adam",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_optimization/adam.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.BatchNorm1d.html",
+      "title": "PyTorch: BatchNorm1d",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/docs/stable/generated/torch.nn.BatchNorm1d.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html",
+      "title": "PyTorch: LayerNorm",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html",
+      "title": "PyTorch: CrossEntropyLoss",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.BCEWithLogitsLoss.html",
+      "title": "PyTorch: BCEWithLogitsLoss",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/docs/stable/generated/torch.nn.BCEWithLogitsLoss.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://cs231n.github.io/convolutional-networks/",
+      "title": "Stanford CS231n: convolutional networks",
+      "status": 200,
+      "finalUrl": "https://cs231n.github.io/convolutional-networks/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.Conv2d.html",
+      "title": "PyTorch: Conv2d",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/docs/stable/generated/torch.nn.Conv2d.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.pytorch.org/tutorials/intermediate/torchvision_tutorial.html",
+      "title": "TorchVision: object detection tutorial",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/tutorials/intermediate/torchvision_tutorial.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytorch.org/vision/stable/models.html",
+      "title": "TorchVision model task families",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/vision/stable/models.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.pytorch.org/vision/stable/transforms.html",
+      "title": "TorchVision transforms",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/vision/stable/transforms.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://d2l.ai/chapter_recurrent-neural-networks/rnn.html",
+      "title": "D2L: recurrent neural networks",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_recurrent-neural-networks/rnn.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.LSTM.html",
+      "title": "PyTorch: LSTM",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/docs/stable/generated/torch.nn.LSTM.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/attention-scoring-functions.html",
+      "title": "D2L: scaled dot-product attention",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/attention-scoring-functions.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.functional.scaled_dot_product_attention.html",
+      "title": "PyTorch: scaled dot-product attention",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/docs/stable/generated/torch.nn.functional.scaled_dot_product_attention.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html",
+      "title": "D2L: transformer architecture",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://nlp.seas.harvard.edu/annotated-transformer/",
+      "title": "The Annotated Transformer",
+      "status": 200,
+      "finalUrl": "https://nlp.seas.harvard.edu/annotated-transformer/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://d2l.ai/chapter_natural-language-processing-applications/sentiment-analysis-cnn.html",
+      "title": "D2L: convolutions for sequences",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_natural-language-processing-applications/sentiment-analysis-cnn.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.Conv1d.html",
+      "title": "PyTorch: Conv1d",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/docs/stable/generated/torch.nn.Conv1d.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://sbert.net/docs/sentence_transformer/loss_overview.html",
+      "title": "Sentence Transformers: losses",
+      "status": 200,
+      "finalUrl": "https://sbert.net/docs/sentence_transformer/loss_overview.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/stable/generated/torch.nn.TripletMarginLoss.html",
+      "title": "PyTorch: TripletMarginLoss",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/docs/stable/generated/torch.nn.TripletMarginLoss.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://github.com/pytorch/examples/tree/main/vae",
+      "title": "PyTorch: variational autoencoder example",
+      "status": 200,
+      "finalUrl": "https://github.com/pytorch/examples/tree/main/vae",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/stable/distributions.html",
+      "title": "PyTorch: distributions",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/docs/stable/distributions.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://d2l.ai/chapter_generative-adversarial-networks/gan.html",
+      "title": "D2L: generative adversarial networks",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_generative-adversarial-networks/gan.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://huggingface.co/learn/diffusion-course/unit1/1",
+      "title": "Hugging Face: diffusion course introduction",
+      "status": 200,
+      "finalUrl": "https://huggingface.co/learn/diffusion-course/unit1/1",
+      "containsTitle": true
+    },
+    {
+      "url": "https://cs231n.github.io/neural-networks-3/",
+      "title": "Stanford CS231n: learning diagnostics",
+      "status": 200,
+      "finalUrl": "https://cs231n.github.io/neural-networks-3/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/stable/autograd.html",
+      "title": "PyTorch: anomaly detection",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/docs/stable/autograd.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.pytorch.org/tutorials/recipes/recipes/profiler_recipe.html",
+      "title": "PyTorch: profiler recipe",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/tutorials/recipes/recipes/profiler_recipe.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytorch.org/tutorials/beginner/saving_loading_models.html",
+      "title": "PyTorch: saving and loading models",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/tutorials/beginner/saving_loading_models.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://huggingface.co/learn/audio-course/chapter1/introduction",
+      "title": "Hugging Face: audio course introduction",
+      "status": 200,
+      "finalUrl": "https://huggingface.co/learn/audio-course/chapter1/introduction",
+      "containsTitle": true
+    },
+    {
+      "url": "https://librosa.org/doc/0.11.0/generated/librosa.feature.melspectrogram.html",
+      "title": "librosa: mel spectrogram",
+      "status": 200,
+      "finalUrl": "https://librosa.org/doc/0.11.0/generated/librosa.feature.melspectrogram.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://d2l.ai/chapter_reinforcement-learning/mdp.html",
+      "title": "D2L: Markov decision processes",
+      "status": 200,
+      "finalUrl": "https://d2l.ai/chapter_reinforcement-learning/mdp.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://huggingface.co/learn/deep-rl-course/unit1/introduction",
+      "title": "Hugging Face: deep reinforcement learning introduction",
+      "status": 200,
+      "finalUrl": "https://huggingface.co/learn/deep-rl-course/unit1/introduction",
+      "containsTitle": true
+    },
+    {
+      "url": "https://huggingface.co/learn/llm-course/chapter1/1",
+      "title": "Hugging Face LLM course",
+      "status": 200,
+      "finalUrl": "https://huggingface.co/learn/llm-course/chapter1/1",
+      "containsTitle": false
+    },
+    {
+      "url": "https://huggingface.co/learn/llm-course/chapter2/1",
+      "title": "Hugging Face: using transformers",
+      "status": 200,
+      "finalUrl": "https://huggingface.co/learn/llm-course/chapter2/1",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.ollama.com/",
+      "title": "Ollama documentation",
+      "status": 200,
+      "finalUrl": "https://docs.ollama.com/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers/generation_strategies",
+      "title": "Hugging Face: generation strategies",
+      "status": 200,
+      "finalUrl": "https://huggingface.co/docs/transformers/generation_strategies",
+      "containsTitle": true
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers/chat_templating",
+      "title": "Hugging Face: chat templates",
+      "status": 200,
+      "finalUrl": "https://huggingface.co/docs/transformers/chat_templating",
+      "containsTitle": true
+    },
+    {
+      "url": "https://huggingface.co/learn/agents-course/unit1/messages-and-special-tokens",
+      "title": "Hugging Face: messages and special tokens",
+      "status": 200,
+      "finalUrl": "https://huggingface.co/learn/agents-course/unit1/messages-and-special-tokens",
+      "containsTitle": true
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers/kv_cache",
+      "title": "Hugging Face: KV cache strategies",
+      "status": 200,
+      "finalUrl": "https://huggingface.co/docs/transformers/kv_cache",
+      "containsTitle": true
+    },
+    {
+      "url": "https://huggingface.co/learn/agents-course/unit1/tools",
+      "title": "Hugging Face: tools",
+      "status": 200,
+      "finalUrl": "https://huggingface.co/learn/agents-course/unit1/tools",
+      "containsTitle": true
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers/task_summary",
+      "title": "Hugging Face: tasks",
+      "status": 200,
+      "finalUrl": "https://huggingface.co/docs/transformers/v5.19.0/pipeline_tutorial",
+      "containsTitle": true
+    },
+    {
+      "url": "https://huggingface.co/docs/peft/conceptual_guides/lora",
+      "title": "Hugging Face PEFT: LoRA",
+      "status": 200,
+      "finalUrl": "https://huggingface.co/docs/peft/conceptual_guides/lora",
+      "containsTitle": false
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers/quantization/overview",
+      "title": "Hugging Face: quantisation overview",
+      "status": 200,
+      "finalUrl": "https://huggingface.co/docs/transformers/quantization/overview",
+      "containsTitle": true
+    },
+    {
+      "url": "https://huggingface.co/docs/transformers/main_classes/text_generation",
+      "title": "Hugging Face: generation configuration",
+      "status": 200,
+      "finalUrl": "https://huggingface.co/docs/transformers/main_classes/text_generation",
+      "containsTitle": true
+    },
+    {
+      "url": "https://huggingface.co/learn/llm-course/chapter6/5",
+      "title": "Hugging Face LLM course: byte-pair encoding",
+      "status": 200,
+      "finalUrl": "https://huggingface.co/learn/llm-course/chapter6/5",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.python.org/3/howto/unicode.html",
+      "title": "Python: Unicode HOWTO",
+      "status": 200,
+      "finalUrl": "https://docs.python.org/3/howto/unicode.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://huggingface.co/docs/trl/sft_trainer",
+      "title": "Hugging Face TRL: supervised fine-tuning",
+      "status": 200,
+      "finalUrl": "https://huggingface.co/docs/trl/sft_trainer",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html",
+      "title": "Sentence Transformers: semantic search",
+      "status": 200,
+      "finalUrl": "https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.haystack.deepset.ai/docs/documentsplitter",
+      "title": "Haystack: document splitters",
+      "status": 200,
+      "finalUrl": "https://docs.haystack.deepset.ai/docs/documentsplitter",
+      "containsTitle": true
+    },
+    {
+      "url": "https://github.com/facebookresearch/faiss/wiki/Getting-started",
+      "title": "FAISS: getting started",
+      "status": 200,
+      "finalUrl": "https://github.com/facebookresearch/faiss/wiki/Getting-started",
+      "containsTitle": true
+    },
+    {
+      "url": "https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html",
+      "title": "Sentence Transformers: retrieve and rerank",
+      "status": 200,
+      "finalUrl": "https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://qdrant.tech/documentation/concepts/hybrid-queries/",
+      "title": "Qdrant: hybrid queries",
+      "status": 200,
+      "finalUrl": "https://qdrant.tech/documentation/search/hybrid-queries/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.haystack.deepset.ai/docs/evaluation",
+      "title": "Haystack: evaluation",
+      "status": 200,
+      "finalUrl": "https://docs.haystack.deepset.ai/docs/evaluation",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.ragas.io/en/stable/concepts/metrics/overview/",
+      "title": "Ragas: metrics overview",
+      "status": 200,
+      "finalUrl": "https://docs.ragas.io/en/stable/concepts/metrics/overview/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://www.postgresql.org/docs/current/tutorial-select.html",
+      "title": "PostgreSQL: querying tables",
+      "status": 200,
+      "finalUrl": "https://www.postgresql.org/docs/current/tutorial-select.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://huggingface.co/learn/cookbook/advanced_rag",
+      "title": "Hugging Face: advanced RAG and reranking",
+      "status": 200,
+      "finalUrl": "https://huggingface.co/learn/cookbook/advanced_rag",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.python.org/3/library/hashlib.html",
+      "title": "Python: hashlib content hashes",
+      "status": 200,
+      "finalUrl": "https://docs.python.org/3/library/hashlib.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html",
+      "title": "Sentence Transformers: retrieve and rerank",
+      "status": 200,
+      "finalUrl": "https://sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://huggingface.co/learn/cookbook/rag_evaluation",
+      "title": "Hugging Face: evaluate a RAG system",
+      "status": 200,
+      "finalUrl": "https://huggingface.co/learn/cookbook/rag_evaluation",
+      "containsTitle": true
+    },
+    {
+      "url": "https://pair.withgoogle.com/guidebook/chapters/explainability-trust/",
+      "title": "PAIR: explainability and trust",
+      "status": 200,
+      "finalUrl": "https://pair.withgoogle.com/guidebook/chapters/explainability-trust/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://pair.withgoogle.com/guidebook/chapters/user-needs/",
+      "title": "Google PAIR: user needs",
+      "status": 200,
+      "finalUrl": "https://pair.withgoogle.com/guidebook/chapters/user-needs/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+      "title": "Google SRE: monitoring distributed systems",
+      "status": 200,
+      "finalUrl": "https://sre.google/sre-book/monitoring-distributed-systems/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://genai.owasp.org/llm-top-10/",
+      "title": "OWASP Top 10 for LLM applications",
+      "status": 200,
+      "finalUrl": "https://genai.owasp.org/llm-top-10/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices",
+      "title": "MCP: security best practices",
+      "status": 200,
+      "finalUrl": "https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices",
+      "containsTitle": true
+    },
+    {
+      "url": "https://pair.withgoogle.com/guidebook/chapters/errors-failing-gracefully/",
+      "title": "PAIR: errors and graceful failure",
+      "status": 200,
+      "finalUrl": "https://pair.withgoogle.com/guidebook/chapters/errors-failing-gracefully/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://pair.withgoogle.com/guidebook/",
+      "title": "Google PAIR: evaluation and feedback",
+      "status": 200,
+      "finalUrl": "https://pair.withgoogle.com/guidebook/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+      "title": "OWASP: LLM prompt injection",
+      "status": 200,
+      "finalUrl": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/",
+      "title": "OWASP: sensitive information disclosure",
+      "status": 200,
+      "finalUrl": "https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://huggingface.co/learn/agents-course/unit1/what-are-agents",
+      "title": "Hugging Face agents course",
+      "status": 200,
+      "finalUrl": "https://huggingface.co/learn/agents-course/unit1/what-are-agents",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+      "title": "LangGraph: overview",
+      "status": 200,
+      "finalUrl": "https://docs.langchain.com/oss/python/langgraph/overview",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.langchain.com/oss/python/langgraph/persistence",
+      "title": "LangGraph: persistence",
+      "status": 200,
+      "finalUrl": "https://docs.langchain.com/oss/python/langgraph/persistence",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.langchain.com/oss/python/langgraph/workflows-agents",
+      "title": "LangGraph: workflows and agents",
+      "status": 200,
+      "finalUrl": "https://docs.langchain.com/oss/python/langgraph/workflows-agents",
+      "containsTitle": true
+    },
+    {
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "title": "MCP: architecture",
+      "status": 200,
+      "finalUrl": "https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture",
+      "containsTitle": true
+    },
+    {
+      "url": "https://modelcontextprotocol.io/docs/develop/build-server",
+      "title": "MCP: build a server",
+      "status": 200,
+      "finalUrl": "https://modelcontextprotocol.io/docs/2026-07-28/develop/build-server",
+      "containsTitle": true
+    },
+    {
+      "url": "https://modelcontextprotocol.io/docs/develop/build-client",
+      "title": "MCP: build a client",
+      "status": 200,
+      "finalUrl": "https://modelcontextprotocol.io/docs/2026-07-28/develop/build-client",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.langchain.com/oss/python/langgraph/graph-api",
+      "title": "LangGraph: graph API",
+      "status": 200,
+      "finalUrl": "https://docs.langchain.com/oss/python/langgraph/graph-api",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.docker.com/get-started/tutorials/run-an-app/",
+      "title": "Docker: run a container",
+      "status": 200,
+      "finalUrl": "https://docs.docker.com/get-started/tutorials/run-an-app/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.docker.com/get-started/docker-concepts/building-images/writing-a-dockerfile/",
+      "title": "Docker: writing a Dockerfile",
+      "status": 200,
+      "finalUrl": "https://docs.docker.com/get-started/docker-concepts/building-images/writing-a-dockerfile/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.docker.com/compose/gettingstarted/",
+      "title": "Docker: Compose getting started",
+      "status": 200,
+      "finalUrl": "https://docs.docker.com/compose/gettingstarted/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.docker.com/engine/storage/volumes/",
+      "title": "Docker: volumes",
+      "status": 200,
+      "finalUrl": "https://docs.docker.com/engine/storage/volumes/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.github.com/en/actions/tutorials/build-and-test-code/python",
+      "title": "GitHub Actions: Python build and test",
+      "status": 200,
+      "finalUrl": "https://docs.github.com/en/actions/tutorials/build-and-test-code/python",
+      "containsTitle": true
+    },
+    {
+      "url": "https://sre.google/sre-book/release-engineering/",
+      "title": "Google SRE: release engineering",
+      "status": 200,
+      "finalUrl": "https://sre.google/sre-book/release-engineering/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://sre.google/sre-book/handling-overload/",
+      "title": "Google SRE: handling overload",
+      "status": 200,
+      "finalUrl": "https://sre.google/sre-book/handling-overload/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.python.org/3/library/asyncio-queue.html",
+      "title": "asyncio: queues",
+      "status": 200,
+      "finalUrl": "https://docs.python.org/3/library/asyncio-queue.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://sre.google/sre-book/managing-incidents/",
+      "title": "Google SRE: incident management",
+      "status": 200,
+      "finalUrl": "https://sre.google/sre-book/managing-incidents/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://sre.google/sre-book/load-balancing-frontend/",
+      "title": "Google SRE: load balancing at the frontend",
+      "status": 200,
+      "finalUrl": "https://sre.google/sre-book/load-balancing-frontend/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://sre.google/sre-book/addressing-cascading-failures/",
+      "title": "Google SRE: addressing cascading failures",
+      "status": 200,
+      "finalUrl": "https://sre.google/sre-book/addressing-cascading-failures/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/",
+      "title": "AWS Builders Library: timeouts, retries and jitter",
+      "status": 200,
+      "finalUrl": "https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.python.org/3/library/queue.html",
+      "title": "Python: queue",
+      "status": 200,
+      "finalUrl": "https://docs.python.org/3/library/queue.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://sre.google/sre-book/service-level-objectives/",
+      "title": "Google SRE: service level objectives",
+      "status": 200,
+      "finalUrl": "https://sre.google/sre-book/service-level-objectives/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://opentelemetry.io/docs/concepts/signals/",
+      "title": "OpenTelemetry: signals",
+      "status": 200,
+      "finalUrl": "https://opentelemetry.io/docs/concepts/signals/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://developers.google.com/tech-writing/one",
+      "title": "Google: technical writing one",
+      "status": 200,
+      "finalUrl": "https://developers.google.com/tech-writing/one",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.github.com/en/copilot/responsible-use/copilot-code-completion",
+      "title": "GitHub: responsible use of coding assistants",
+      "status": 200,
+      "finalUrl": "https://docs.github.com/en/copilot/responsible-use/inline-suggestions",
+      "containsTitle": true
+    },
+    {
+      "url": "https://docs.pytest.org/en/stable/explanation/goodpractices.html",
+      "title": "pytest: good integration practices",
+      "status": 200,
+      "finalUrl": "https://docs.pytest.org/en/stable/explanation/goodpractices.html",
+      "containsTitle": true
+    },
+    {
+      "url": "https://pair.withgoogle.com/guidebook/chapters/mental-models/",
+      "title": "PAIR: mental models",
+      "status": 200,
+      "finalUrl": "https://pair.withgoogle.com/guidebook/chapters/mental-models/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://pair.withgoogle.com/guidebook/chapters/feedback-controls/",
+      "title": "Google PAIR: feedback and control",
+      "status": 200,
+      "finalUrl": "https://pair.withgoogle.com/guidebook/chapters/feedback-controls/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://sre.google/sre-book/embracing-risk/",
+      "title": "Google SRE: embracing risk",
+      "status": 200,
+      "finalUrl": "https://sre.google/sre-book/embracing-risk/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://adr.github.io/",
+      "title": "Architecture Decision Records",
+      "status": 200,
+      "finalUrl": "https://adr.github.io/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://cs50.harvard.edu/python/2022/weeks/2/",
+      "title": "CS50P 2 \u2014 Loops \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://cs50.harvard.edu/python/weeks/2/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://cs50.harvard.edu/python/",
+      "title": "Harvard CS50P \u2014 full Python university course \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://cs50.harvard.edu/python/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://cs50.harvard.edu/python/2022/weeks/3/",
+      "title": "CS50P 3 \u2014 Exceptions \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://cs50.harvard.edu/python/weeks/3/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://cs50.harvard.edu/python/2022/weeks/4/",
+      "title": "CS50P 4 \u2014 Libraries \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://cs50.harvard.edu/python/weeks/4/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=CvQ7e6yUtnw",
+      "title": "Why Python dataclasses are useful \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=CvQ7e6yUtnw",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=mvJuxowIwIc",
+      "title": "Python type hints and typing features \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=mvJuxowIwIc",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=bD05uGo_sVI",
+      "title": "Python generators: how and why to use them \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=bD05uGo_sVI",
+      "containsTitle": false
+    },
+    {
+      "url": "https://cs50.harvard.edu/python/2022/weeks/9/",
+      "title": "CS50P 9 \u2014 Et cetera \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://cs50.harvard.edu/python/weeks/9/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Qb9s3UiMSTA",
+      "title": "Asyncio in Python \u2014 full tutorial \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=Qb9s3UiMSTA",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=-ARI4Cz-awo",
+      "title": "Python logging basics \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=-ARI4Cz-awo",
+      "containsTitle": false
+    },
+    {
+      "url": "https://cs50.harvard.edu/python/2022/weeks/5/",
+      "title": "CS50P 5 \u2014 Unit tests \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://cs50.harvard.edu/python/weeks/5/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=F2FmTdLtb_4",
+      "title": "System design concepts \u2014 complete course \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=F2FmTdLtb_4",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/git-and-github-crash-course/",
+      "title": "Git and GitHub for beginners \u2014 crash course \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.freecodecamp.org/news/git-and-github-crash-course/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://missing.csail.mit.edu/2020/version-control/",
+      "title": "Missing Semester \u2014 version control with Git \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://missing.csail.mit.edu/2020/version-control/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/",
+      "title": "Python API development \u2014 comprehensive course \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=g8um2AEf5ZA",
+      "title": "The future of software engineering \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=g8um2AEf5ZA",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/linear-algebra-full-course/",
+      "title": "Linear algebra \u2014 full university course \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.freecodecamp.org/news/linear-algebra-full-course/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/",
+      "title": "Data analysis with Python \u2014 full course \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.3blue1brown.com/lessons/gradient-descent",
+      "title": "Gradient descent: how neural networks learn \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.3blue1brown.com/lessons/gradient-descent/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/free-statistics-course/",
+      "title": "College statistics \u2014 full course \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.freecodecamp.org/news/free-statistics-course/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=zJSY8tbf_ys",
+      "title": "Frontend web development bootcamp \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=zJSY8tbf_ys",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/api-documentation-best-practices-course/",
+      "title": "API documentation best practices \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.freecodecamp.org/news/api-documentation-best-practices-course/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/posgresql-course-for-beginners/",
+      "title": "PostgreSQL \u2014 course for beginners \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.freecodecamp.org/news/posgresql-course-for-beginners/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=1ogNyPWUP7g",
+      "title": "Neo4j: building a knowledge graph \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=1ogNyPWUP7g",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/",
+      "title": "RAG fundamentals and advanced techniques \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=jGwO_UgTS7I",
+      "title": "Stanford CS229 \u2014 Lecture 1 \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=jGwO_UgTS7I",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/machine-learning-for-everybody/",
+      "title": "Machine learning for everybody \u2014 full course \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.freecodecamp.org/news/machine-learning-for-everybody/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=4b4MUYve_U8",
+      "title": "Stanford CS229 \u2014 Linear regression and gradient descent \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=4b4MUYve_U8",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=rG2EfFOXyg0",
+      "title": "Model calibration, Brier score and Platt scaling \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=rG2EfFOXyg0",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/mlops-course-learn-to-build-machine-learning-production-grade-projects/",
+      "title": "MLOps: a production-grade project \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.freecodecamp.org/news/mlops-course-learn-to-build-machine-learning-production-grade-projects/",
+      "containsTitle": true
+    },
+    {
+      "url": "https://karpathy.ai/zero-to-hero.html",
+      "title": "Build the GPT tokenizer \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://karpathy.ai/zero-to-hero.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/learn-pytorch-for-deep-learning-in-day/",
+      "title": "PyTorch for deep learning \u2014 full course \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.freecodecamp.org/news/learn-pytorch-for-deep-learning-in-day/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=JXQT_vxqwIs",
+      "title": "Adam optimization algorithm \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=JXQT_vxqwIs",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=hAbRGXkpTX8",
+      "title": "Improving deep neural networks \u2014 complete course \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=hAbRGXkpTX8",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=gAw7XVZ3xzc",
+      "title": "Batch normalization versus layer normalization \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=gAw7XVZ3xzc",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=C7NrYjhpiCY",
+      "title": "Mixed precision training from scratch \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=C7NrYjhpiCY",
+      "containsTitle": false
+    },
+    {
+      "url": "https://introtodeeplearning.com/2025/index.html",
+      "title": "MIT 6.S191 (2025) \u2014 Introduction to LLM Post-Training \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://introtodeeplearning.com/2025/index.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=f3g1zGdxptI",
+      "title": "Stanford CS231N (2025) \u2014 Image Classification with CNNs \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=f3g1zGdxptI",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.3blue1brown.com/lessons/neural-networks",
+      "title": "But what is a neural network? \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.3blue1brown.com/lessons/neural-networks/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/code-an-llm-from-scratch-theory-to-rlhf/",
+      "title": "Code an LLM from scratch \u2014 theory to RLHF \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.freecodecamp.org/news/code-an-llm-from-scratch-theory-to-rlhf/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/local-ai-development-with-ollama-course/",
+      "title": "Local AI development with Ollama \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.freecodecamp.org/news/local-ai-development-with-ollama-course/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=H4YK_7MAckk",
+      "title": "Prompt engineering for developers \u2014 course introduction \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=H4YK_7MAckk",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/learn-rag-and-mcp-fundamentals/",
+      "title": "RAG and MCP fundamentals \u2014 hands-on course \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.freecodecamp.org/news/learn-rag-and-mcp-fundamentals/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/learn-langgraph-and-build-conversational-ai-with-python/",
+      "title": "LangGraph \u2014 complete course for beginners \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.freecodecamp.org/news/learn-langgraph-and-build-conversational-ai-with-python/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=7EcznH0-of8",
+      "title": "Deep dive into LLM evaluation \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=7EcznH0-of8",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=eopc_ijIfLg",
+      "title": "Site reliability engineering fundamentals \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=eopc_ijIfLg",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=dq5jD_qE1Cg",
+      "title": "OWASP LLM01 \u2014 prompt injection \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=dq5jD_qE1Cg",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=xAN1HxU5XeU",
+      "title": "MLOps for fairness: evaluation workflows \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=xAN1HxU5XeU",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/docker-full-course/",
+      "title": "Docker \u2014 full DevOps course \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.freecodecamp.org/news/docker-full-course/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Tz7FsunBbfQ",
+      "title": "GitHub Actions \u2014 full course \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=Tz7FsunBbfQ",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.freecodecamp.org/news/ci-cd-in-production-with-jenkins/",
+      "title": "CI/CD in production with Jenkins \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.freecodecamp.org/news/ci-cd-in-production-with-jenkins/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=n4y9dwinPBQ",
+      "title": "Incident management: SRE implements DevOps \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=n4y9dwinPBQ",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=M5DY3eTyhUA",
+      "title": "Software requirements specification \u2014 worked tutorial \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=M5DY3eTyhUA",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=RNJCfif1dPY",
+      "title": "Building faster with AI \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=RNJCfif1dPY",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=GhB7vz3sg-0",
+      "title": "Architecture decision records: when and how to use them \u2014 publisher verification",
+      "status": 200,
+      "finalUrl": "https://www.youtube.com/watch?v=GhB7vz3sg-0",
+      "containsTitle": false
+    }
+  ]
+}

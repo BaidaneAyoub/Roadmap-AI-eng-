@@ -1,0 +1,830 @@
+[
+  {
+    "topic": "1.1 LLM Foundations",
+    "lessonId": "llm-foundations"
+  },
+  {
+    "topic": "2.1 Full-Stack",
+    "lessonId": "backend-auth"
+  },
+  {
+    "topic": "3.1 Directing",
+    "lessonId": "coding-specifications"
+  },
+  {
+    "topic": "Tokens",
+    "lessonId": "llm-foundations"
+  },
+  {
+    "topic": "Context window",
+    "lessonId": "llm-foundations"
+  },
+  {
+    "topic": "Frontend",
+    "lessonId": "backend-frontend"
+  },
+  {
+    "topic": "Understand problem",
+    "lessonId": "coding-specifications"
+  },
+  {
+    "topic": "Model selection",
+    "lessonId": "llm-model-selection"
+  },
+  {
+    "topic": "Backend",
+    "lessonId": "backend-auth"
+  },
+  {
+    "topic": "Research",
+    "lessonId": "coding-specifications"
+  },
+  {
+    "topic": "Prompt/context",
+    "lessonId": "llm-tools"
+  },
+  {
+    "topic": "APIs",
+    "lessonId": "fastapi"
+  },
+  {
+    "topic": "Requirements",
+    "lessonId": "coding-specifications"
+  },
+  {
+    "topic": "Structured output",
+    "lessonId": "llm-tools"
+  },
+  {
+    "topic": "Authentication",
+    "lessonId": "backend-auth"
+  },
+  {
+    "topic": "Architecture",
+    "lessonId": "deployment-scaling"
+  },
+  {
+    "topic": "Multimodal AI",
+    "lessonId": "llm-tools"
+  },
+  {
+    "topic": "Sessions/state",
+    "lessonId": "backend-auth"
+  },
+  {
+    "topic": "Specifications",
+    "lessonId": "coding-specifications"
+  },
+  {
+    "topic": "Tool calling",
+    "lessonId": "llm-tools"
+  },
+  {
+    "topic": "Caching",
+    "lessonId": "deployment-scaling"
+  },
+  {
+    "topic": "Break into tasks",
+    "lessonId": "coding-specifications"
+  },
+  {
+    "topic": "Fine-tuning",
+    "lessonId": "llm-model-selection"
+  },
+  {
+    "topic": "Async processing",
+    "lessonId": "deployment-scaling"
+  },
+  {
+    "topic": "Delegate correctly",
+    "lessonId": "coding-autonomy"
+  },
+  {
+    "topic": "Open/self-hosted",
+    "lessonId": "llm-model-selection"
+  },
+  {
+    "topic": "Testing",
+    "lessonId": "coding-review"
+  },
+  {
+    "topic": "3.2 Agent Autonomy",
+    "lessonId": "agents-tools"
+  },
+  {
+    "topic": "2.2 Managing Data",
+    "lessonId": "backend-transactions"
+  },
+  {
+    "topic": "1.2 Grounding / RAG",
+    "lessonId": "rag-retrieval"
+  },
+  {
+    "topic": "Give correct context",
+    "lessonId": "agents-tools"
+  },
+  {
+    "topic": "SQL databases",
+    "lessonId": "backend-transactions"
+  },
+  {
+    "topic": "Give correct tools",
+    "lessonId": "agents-tools"
+  },
+  {
+    "topic": "Document parsing",
+    "lessonId": "rag-ingestion"
+  },
+  {
+    "topic": "NoSQL",
+    "lessonId": "backend-transactions"
+  },
+  {
+    "topic": "Define permissions",
+    "lessonId": "agents-tools"
+  },
+  {
+    "topic": "Chunking",
+    "lessonId": "rag-ingestion"
+  },
+  {
+    "topic": "Vector DB",
+    "lessonId": "rag-embeddings"
+  },
+  {
+    "topic": "Define boundaries",
+    "lessonId": "agents-tools"
+  },
+  {
+    "topic": "Embeddings",
+    "lessonId": "rag-embeddings"
+  },
+  {
+    "topic": "Graph DB",
+    "lessonId": "rag-sql-graphs"
+  },
+  {
+    "topic": "Agent loops",
+    "lessonId": "agents-loops"
+  },
+  {
+    "topic": "Vector search",
+    "lessonId": "rag-embeddings"
+  },
+  {
+    "topic": "Indexes",
+    "lessonId": "backend-transactions"
+  },
+  {
+    "topic": "Subagents",
+    "lessonId": "coding-autonomy"
+  },
+  {
+    "topic": "Semantic search",
+    "lessonId": "rag-embeddings"
+  },
+  {
+    "topic": "Transactions",
+    "lessonId": "backend-transactions"
+  },
+  {
+    "topic": "Long-running tasks",
+    "lessonId": "coding-autonomy"
+  },
+  {
+    "topic": "Reranking",
+    "lessonId": "rag-retrieval"
+  },
+  {
+    "topic": "Concurrency",
+    "lessonId": "backend-transactions"
+  },
+  {
+    "topic": "Human approval",
+    "lessonId": "agents-tools"
+  },
+  {
+    "topic": "Vector databases",
+    "lessonId": "rag-embeddings"
+  },
+  {
+    "topic": "Data quality",
+    "lessonId": "backend-transactions"
+  },
+  {
+    "topic": "SQL retrieval",
+    "lessonId": "rag-sql-graphs"
+  },
+  {
+    "topic": "Privacy",
+    "lessonId": "backend-transactions"
+  },
+  {
+    "topic": "3.3 Review AI Work",
+    "lessonId": "coding-review"
+  },
+  {
+    "topic": "Knowledge graphs",
+    "lessonId": "rag-sql-graphs"
+  },
+  {
+    "topic": "Context engineering",
+    "lessonId": "llm-context"
+  },
+  {
+    "topic": "Read generated code",
+    "lessonId": "coding-review"
+  },
+  {
+    "topic": "2.3 System Architecture",
+    "lessonId": "deployment-scaling"
+  },
+  {
+    "topic": "Unit tests",
+    "lessonId": "coding-review"
+  },
+  {
+    "topic": "Integration tests",
+    "lessonId": "coding-review"
+  },
+  {
+    "topic": "1.3 Agentic Systems",
+    "lessonId": "agents-loops"
+  },
+  {
+    "topic": "System design",
+    "lessonId": "product-prototype"
+  },
+  {
+    "topic": "Linters",
+    "lessonId": "coding-review"
+  },
+  {
+    "topic": "Type checking",
+    "lessonId": "coding-review"
+  },
+  {
+    "topic": "Microservices",
+    "lessonId": "deployment-scaling"
+  },
+  {
+    "topic": "Security checks",
+    "lessonId": "security-guardrails"
+  },
+  {
+    "topic": "Queues",
+    "lessonId": "deployment-scaling"
+  },
+  {
+    "topic": "Evals",
+    "lessonId": "eval-human-judge"
+  },
+  {
+    "topic": "Human review",
+    "lessonId": "coding-review"
+  },
+  {
+    "topic": "State",
+    "lessonId": "agents-loops"
+  },
+  {
+    "topic": "Load balancing",
+    "lessonId": "deployment-scaling"
+  },
+  {
+    "topic": "Memory",
+    "lessonId": "agents-loops"
+  },
+  {
+    "topic": "Scalability",
+    "lessonId": "deployment-scaling"
+  },
+  {
+    "topic": "3.4 Customize Agents",
+    "lessonId": "coding-context"
+  },
+  {
+    "topic": "Planning",
+    "lessonId": "agents-loops"
+  },
+  {
+    "topic": "Reliability",
+    "lessonId": "deployment-scaling"
+  },
+  {
+    "topic": "LangGraph",
+    "lessonId": "agents-loops"
+  },
+  {
+    "topic": "Cost/latency",
+    "lessonId": "deployment-scaling"
+  },
+  {
+    "topic": "AGENTS.md",
+    "lessonId": "coding-context"
+  },
+  {
+    "topic": "MCP",
+    "lessonId": "agents-mcp"
+  },
+  {
+    "topic": "Project instructions",
+    "lessonId": "coding-context"
+  },
+  {
+    "topic": "Multi-agent",
+    "lessonId": "agents-loops"
+  },
+  {
+    "topic": "2.4 Security & Reliability",
+    "lessonId": "deployment-scaling"
+  },
+  {
+    "topic": "MCP servers",
+    "lessonId": "agents-mcp"
+  },
+  {
+    "topic": "Guardrails",
+    "lessonId": "security-guardrails"
+  },
+  {
+    "topic": "Custom tools",
+    "lessonId": "coding-context"
+  },
+  {
+    "topic": "Permissions",
+    "lessonId": "agents-tools"
+  },
+  {
+    "topic": "Plugins",
+    "lessonId": "coding-context"
+  },
+  {
+    "topic": "Sandboxing",
+    "lessonId": "agents-tools"
+  },
+  {
+    "topic": "Authorization",
+    "lessonId": "backend-auth"
+  },
+  {
+    "topic": "Hooks",
+    "lessonId": "coding-context"
+  },
+  {
+    "topic": "Secrets",
+    "lessonId": "security-guardrails"
+  },
+  {
+    "topic": "CI/CD integration",
+    "lessonId": "deployment-cicd"
+  },
+  {
+    "topic": "Rate limits",
+    "lessonId": "security-guardrails"
+  },
+  {
+    "topic": "Codebase context",
+    "lessonId": "coding-context"
+  },
+  {
+    "topic": "1.4 Evaluation-Driven",
+    "lessonId": "eval-datasets"
+  },
+  {
+    "topic": "Retries",
+    "lessonId": "deployment-scaling"
+  },
+  {
+    "topic": "Timeouts",
+    "lessonId": "deployment-scaling"
+  },
+  {
+    "topic": "3.5 Coding-Agent",
+    "lessonId": "coding-context"
+  },
+  {
+    "topic": "Testing                 Foundations",
+    "lessonId": "coding-review"
+  },
+  {
+    "topic": "Golden datasets",
+    "lessonId": "eval-datasets"
+  },
+  {
+    "topic": "Prompt injection",
+    "lessonId": "llm-tools"
+  },
+  {
+    "topic": "Automated evals",
+    "lessonId": "eval-datasets"
+  },
+  {
+    "topic": "Data leakage",
+    "lessonId": "security-guardrails"
+  },
+  {
+    "topic": "LLM behavior",
+    "lessonId": "llm-foundations"
+  },
+  {
+    "topic": "Human evals",
+    "lessonId": "eval-human-judge"
+  },
+  {
+    "topic": "Graceful failure",
+    "lessonId": "deployment-scaling"
+  },
+  {
+    "topic": "Context windows",
+    "lessonId": "llm-foundations"
+  },
+  {
+    "topic": "LLM-as-a-judge",
+    "lessonId": "eval-human-judge"
+  },
+  {
+    "topic": "Tool use",
+    "lessonId": "agents-tools"
+  },
+  {
+    "topic": "Error analysis",
+    "lessonId": "ml-metrics"
+  },
+  {
+    "topic": "Failure categories",
+    "lessonId": "eval-human-judge"
+  },
+  {
+    "topic": "2.5 Scaling & Production",
+    "lessonId": "deployment-cicd"
+  },
+  {
+    "topic": "Regression tests",
+    "lessonId": "eval-datasets"
+  },
+  {
+    "topic": "Harnesses",
+    "lessonId": "coding-context"
+  },
+  {
+    "topic": "Business metrics",
+    "lessonId": "eval-metrics"
+  },
+  {
+    "topic": "Git",
+    "lessonId": "engineering-git"
+  },
+  {
+    "topic": "Context management",
+    "lessonId": "llm-context"
+  },
+  {
+    "topic": "Docker",
+    "lessonId": "docker"
+  },
+  {
+    "topic": "Failure modes",
+    "lessonId": "coding-review"
+  },
+  {
+    "topic": "CI/CD",
+    "lessonId": "deployment-cicd"
+  },
+  {
+    "topic": "1.5 Production AI",
+    "lessonId": "deployment-cicd"
+  },
+  {
+    "topic": "Cloud",
+    "lessonId": "deployment-cicd"
+  },
+  {
+    "topic": "Monitoring",
+    "lessonId": "deployment-monitoring"
+  },
+  {
+    "topic": "Deployment",
+    "lessonId": "deployment-cicd"
+  },
+  {
+    "topic": "Logging",
+    "lessonId": "deployment-monitoring"
+  },
+  {
+    "topic": "Tracing",
+    "lessonId": "deployment-monitoring"
+  },
+  {
+    "topic": "Containers",
+    "lessonId": "docker"
+  },
+  {
+    "topic": "Alerts",
+    "lessonId": "deployment-monitoring"
+  },
+  {
+    "topic": "Incident response",
+    "lessonId": "deployment-monitoring"
+  },
+  {
+    "topic": "Cost optimization",
+    "lessonId": "deployment-scaling"
+  },
+  {
+    "topic": "Infrastructure",
+    "lessonId": "deployment-cicd"
+  },
+  {
+    "topic": "Security",
+    "lessonId": "security-guardrails"
+  },
+  {
+    "topic": "Latency",
+    "lessonId": "deployment-scaling"
+  },
+  {
+    "topic": "Cost",
+    "lessonId": "deployment-scaling"
+  },
+  {
+    "topic": "Optimization",
+    "lessonId": "deployment-scaling"
+  },
+  {
+    "topic": "1.6 ML Foundations",
+    "lessonId": "ml-generalization"
+  },
+  {
+    "topic": "Supervised learning",
+    "lessonId": "ml-generalization"
+  },
+  {
+    "topic": "Unsupervised learning",
+    "lessonId": "ml-generalization"
+  },
+  {
+    "topic": "Neural networks",
+    "lessonId": "dl-tensors"
+  },
+  {
+    "topic": "Deep learning",
+    "lessonId": "dl-tensors"
+  },
+  {
+    "topic": "Train / validation / test",
+    "lessonId": "ml-metrics"
+  },
+  {
+    "topic": "Bias & variance",
+    "lessonId": "ml-generalization"
+  },
+  {
+    "topic": "Feature engineering",
+    "lessonId": "ml-generalization"
+  },
+  {
+    "topic": "Model evaluation",
+    "lessonId": "ml-metrics"
+  },
+  {
+    "topic": "Data engineering",
+    "lessonId": "backend-transactions"
+  },
+  {
+    "topic": "Inference",
+    "lessonId": "ml-metrics"
+  },
+  {
+    "topic": "Identify problem",
+    "lessonId": "product-discovery"
+  },
+  {
+    "topic": "Who is the user?",
+    "lessonId": "product-discovery"
+  },
+  {
+    "topic": "Explain AI clearly",
+    "lessonId": "product-prototype"
+  },
+  {
+    "topic": "Prototype quickly",
+    "lessonId": "product-prototype"
+  },
+  {
+    "topic": "What problem",
+    "lessonId": "product-discovery"
+  },
+  {
+    "topic": "Explain limitations",
+    "lessonId": "product-prototype"
+  },
+  {
+    "topic": "Test with users",
+    "lessonId": "product-prototype"
+  },
+  {
+    "topic": "Discuss risks",
+    "lessonId": "product-prototype"
+  },
+  {
+    "topic": "Does it need AI?",
+    "lessonId": "product-discovery"
+  },
+  {
+    "topic": "Measure results",
+    "lessonId": "eval-metrics"
+  },
+  {
+    "topic": "Discuss cost",
+    "lessonId": "deployment-scaling"
+  },
+  {
+    "topic": "Which feature creates",
+    "lessonId": "ml-generalization"
+  },
+  {
+    "topic": "Collect feedback          value?",
+    "lessonId": "product-prototype"
+  },
+  {
+    "topic": "Work with:",
+    "lessonId": "product-prototype"
+  },
+  {
+    "topic": "Engineering",
+    "lessonId": "product-prototype"
+  },
+  {
+    "topic": "Iterate",
+    "lessonId": "product-prototype"
+  },
+  {
+    "topic": "UX",
+    "lessonId": "product-prototype"
+  },
+  {
+    "topic": "Product",
+    "lessonId": "product-prototype"
+  },
+  {
+    "topic": "Design",
+    "lessonId": "product-prototype"
+  },
+  {
+    "topic": "Decide prototype",
+    "lessonId": "product-prototype"
+  },
+  {
+    "topic": "Market",
+    "lessonId": "product-discovery"
+  },
+  {
+    "topic": "Management",
+    "lessonId": "product-prototype"
+  },
+  {
+    "topic": "Legal",
+    "lessonId": "product-prototype"
+  },
+  {
+    "topic": "Customers",
+    "lessonId": "product-prototype"
+  },
+  {
+    "topic": "Technical experiments",
+    "lessonId": "product-prototype"
+  },
+  {
+    "topic": "Unit economics",
+    "lessonId": "product-economics"
+  },
+  {
+    "topic": "Influence decisions",
+    "lessonId": "product-prototype"
+  },
+  {
+    "topic": "Productionize",
+    "lessonId": "deployment-cicd"
+  },
+  {
+    "topic": "A/B testing",
+    "lessonId": "coding-review"
+  },
+  {
+    "topic": "Business model",
+    "lessonId": "product-economics"
+  },
+  {
+    "topic": "ML",
+    "lessonId": "ml-generalization"
+  },
+  {
+    "topic": "Plan",
+    "lessonId": "coding-specifications"
+  },
+  {
+    "topic": "Deep Learning",
+    "lessonId": "dl-tensors"
+  },
+  {
+    "topic": "Delegate",
+    "lessonId": "coding-autonomy"
+  },
+  {
+    "topic": "LLMs",
+    "lessonId": "llm-foundations"
+  },
+  {
+    "topic": "Databases",
+    "lessonId": "backend-sql"
+  },
+  {
+    "topic": "Verify",
+    "lessonId": "coding-review"
+  },
+  {
+    "topic": "RAG",
+    "lessonId": "rag-retrieval"
+  },
+  {
+    "topic": "Agents",
+    "lessonId": "agents-loops"
+  },
+  {
+    "topic": "Automate",
+    "lessonId": "coding-context"
+  },
+  {
+    "topic": "Production AI",
+    "lessonId": "deployment-cicd"
+  },
+  {
+    "topic": "OOP",
+    "lessonId": "python-objects"
+  },
+  {
+    "topic": "FastAPI",
+    "lessonId": "fastapi"
+  },
+  {
+    "topic": "NumPy",
+    "lessonId": "data-pandas"
+  },
+  {
+    "topic": "Pandas",
+    "lessonId": "data-pandas"
+  },
+  {
+    "topic": "scikit-learn",
+    "lessonId": "ml-generalization"
+  },
+  {
+    "topic": "PyTorch",
+    "lessonId": "dl-tensors"
+  },
+  {
+    "topic": "Transformers",
+    "lessonId": "dl-tensors"
+  },
+  {
+    "topic": "LLM APIs",
+    "lessonId": "llm-tools"
+  },
+  {
+    "topic": "Structured outputs",
+    "lessonId": "llm-tools"
+  },
+  {
+    "topic": "Retrieval",
+    "lessonId": "rag-retrieval"
+  },
+  {
+    "topic": "Eval datasets",
+    "lessonId": "eval-datasets"
+  },
+  {
+    "topic": "LLM-as-judge",
+    "lessonId": "eval-human-judge"
+  },
+  {
+    "topic": "Regression testing",
+    "lessonId": "eval-datasets"
+  },
+  {
+    "topic": "Tools",
+    "lessonId": "agents-tools"
+  },
+  {
+    "topic": "Codex / Claude Code / etc.",
+    "lessonId": "coding-autonomy"
+  },
+  {
+    "topic": "Task decomposition",
+    "lessonId": "coding-specifications"
+  },
+  {
+    "topic": "Verification",
+    "lessonId": "coding-review"
+  }
+]

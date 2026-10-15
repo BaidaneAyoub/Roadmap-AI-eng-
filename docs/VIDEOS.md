@@ -1,0 +1,484 @@
+# YouTube learning library
+
+Every concept has selected video links, with explanations and practical watch guidance in the domain documents. Long courses complement focused explanations; you do not have to finish a 26-hour course before moving on. No fabricated timestamps are used. Videos may promote paid courses/cloud services; those are optional. For version-sensitive code, use the current official documentation linked in the lesson.
+
+- [CS50P 0 — Functions and variables](https://www.youtube.com/watch?v=JP7ITIXGpHk) · Harvard CS50 · David Malan · University lecture
+  - Explains: Values, types, functions, parameters and return values.
+  - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://cs50.harvard.edu/python/2022/weeks/0/
+- [CS50P 2 — Loops](https://www.youtube.com/watch?v=-7xg8pGcP6w) · Harvard CS50 · David Malan · University lecture
+  - Explains: Iteration, lists, dictionaries and nested data.
+  - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://cs50.harvard.edu/python/2022/weeks/2/
+- [Harvard CS50P — full Python university course](https://www.youtube.com/watch?v=nLRL_NcnK-4) · Harvard CS50 / freeCodeCamp · Full course
+  - Explains: Python syntax, control flow, exceptions, libraries, tests, files and object-oriented programming.
+  - Useful because: A coherent beginner path; use the individual lectures below instead of watching everything before practicing.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://cs50.harvard.edu/python/
+- [CS50P 1 — Conditionals](https://www.youtube.com/watch?v=_b6NgY_pMdw) · Harvard CS50 · David Malan · University lecture
+  - Explains: Boolean logic, comparisons and branching.
+  - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://cs50.harvard.edu/python/2022/weeks/1/
+- [CS50P 6 — File I/O](https://www.youtube.com/watch?v=KD-Yoel6EVQ) · Harvard CS50 · David Malan · University lecture
+  - Explains: Reading/writing files, CSV data and processing records.
+  - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://cs50.harvard.edu/python/2022/weeks/6/
+- [CS50P 3 — Exceptions](https://www.youtube.com/watch?v=LW7g1169v7w) · Harvard CS50 · David Malan · University lecture
+  - Explains: Exceptions, handling invalid inputs and explicit failure behavior.
+  - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://cs50.harvard.edu/python/2022/weeks/3/
+- [CS50P 4 — Libraries](https://www.youtube.com/watch?v=MztLZWibctI) · Harvard CS50 · David Malan · University lecture
+  - Explains: Imports, packages, command-line arguments and third-party libraries.
+  - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://cs50.harvard.edu/python/2022/weeks/4/
+- [CS50P 8 — Object-oriented programming](https://www.youtube.com/watch?v=e4fwY9ZsxPw) · Harvard CS50 · David Malan · University lecture
+  - Explains: Classes, objects, methods, properties and inheritance.
+  - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://cs50.harvard.edu/python/2022/weeks/8/
+- [Why Python dataclasses are useful](https://www.youtube.com/watch?v=CvQ7e6yUtnw) · ArjanCodes · Focused tutorial
+  - Explains: Dataclass records and Python 3.10 capabilities.
+  - Useful because: Represent inputs/predictions with less boilerplate; still validate external data.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=CvQ7e6yUtnw
+- [Python type hints and typing features](https://www.youtube.com/watch?v=mvJuxowIwIc) · mCoding · Focused tutorial
+  - Explains: Python typing features and clearer annotations.
+  - Useful because: Make interfaces readable while distinguishing type checking from runtime validation.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=mvJuxowIwIc
+- [Python generators: how and why to use them](https://www.youtube.com/watch?v=bD05uGo_sVI) · Corey Schafer · Focused tutorial
+  - Explains: Lazy iteration, yield and the memory benefits of generators.
+  - Useful because: Use it before streaming a dataset or implementing batches.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=bD05uGo_sVI
+- [CS50P 9 — Et cetera](https://www.youtube.com/watch?v=6pgodt1mezg) · Harvard CS50 · David Malan · University lecture
+  - Explains: Comprehensions, generators and useful language features.
+  - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://cs50.harvard.edu/python/2022/weeks/9/
+- [Asyncio in Python — full tutorial](https://www.youtube.com/watch?v=Qb9s3UiMSTA) · Tech With Tim · Tool tutorial
+  - Explains: Coroutines, async/await and concurrent I/O patterns.
+  - Useful because: Understand what happens while an application waits on tools or network requests.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=Qb9s3UiMSTA
+- [Python logging basics](https://www.youtube.com/watch?v=-ARI4Cz-awo) · Corey Schafer · Focused tutorial
+  - Explains: Log levels, formatting and logging to files.
+  - Useful because: Replace scattered print statements with useful operational evidence.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=-ARI4Cz-awo
+- [CS50P 5 — Unit tests](https://www.youtube.com/watch?v=tIrcxwLqzjQ) · Harvard CS50 · David Malan · University lecture
+  - Explains: Assertions, pytest, test organization and testing return values.
+  - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://cs50.harvard.edu/python/2022/weeks/5/
+- [Missing Semester — shell and terminal introduction](https://www.youtube.com/watch?v=Z56Jmr9Z34Q) · MIT Missing Semester · University lecture
+  - Explains: Commands, paths, shell composition and developer tooling.
+  - Useful because: Understand commands rather than copying deployment instructions blindly.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://missing.csail.mit.edu/2020/course-shell/
+- [System design concepts — complete course](https://www.youtube.com/watch?v=F2FmTdLtb_4) · freeCodeCamp · Full course
+  - Explains: Scalability, reliability, storage and architecture tradeoffs.
+  - Useful because: Explain why a queue, index or cache is useful before adding one.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=F2FmTdLtb_4
+- [Git and GitHub for beginners — crash course](https://www.youtube.com/watch?v=RGOj5yH7evk) · freeCodeCamp · Tool course
+  - Explains: Commits, branches, remotes and collaboration workflow.
+  - Useful because: Follow along in a disposable repository before working with teammates.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/git-and-github-crash-course/
+- [Missing Semester — version control with Git](https://www.youtube.com/watch?v=2sjqTHE0zok) · MIT Missing Semester · University lecture
+  - Explains: Git’s data model and the reasoning behind common commands.
+  - Useful because: Useful when branching, merging or recovering a change feels mysterious.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://missing.csail.mit.edu/2020/version-control/
+- [Python API development — comprehensive course](https://www.youtube.com/watch?v=0sOvCWFmrtA) · freeCodeCamp · Sanjeev Thiyagarajan · Long course · approximately 19h
+  - Explains: FastAPI, validation, SQL persistence, authentication, testing and deployment.
+  - Useful because: Follow one stage at a time and consult current FastAPI docs for version changes.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/
+- [The future of software engineering](https://www.youtube.com/watch?v=g8um2AEf5ZA) · DeepLearning.AI · Andrew Ng · Engineering talk
+  - Explains: AI coding agents and the engineering skills needed to direct and verify them.
+  - Useful because: Use the talk as context, then apply the supplied specification and verification labs.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=g8um2AEf5ZA
+- [Linear algebra — full university course](https://www.youtube.com/watch?v=JnTa9XtvmfI) · freeCodeCamp · Long course · publisher describes 20h in two parts
+  - Explains: Vectors, matrices, linear transformations and foundational linear algebra.
+  - Useful because: Build the mathematical foundation for feature matrices, embeddings and neural layers.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/linear-algebra-full-course/
+- [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+  - Explains: NumPy, pandas, cleaning and exploring data with Python.
+  - Useful because: Work through real data transformations before building training pipelines.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [Gradient descent: how neural networks learn](https://www.youtube.com/watch?v=IHZwWFHWa-w) · 3Blue1Brown · Visual explanation
+  - Explains: Loss landscapes, gradients and weight updates.
+  - Useful because: Explain why a learning rate changes training stability.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.3blue1brown.com/lessons/gradient-descent
+- [The Chain Rule](https://www.youtube.com/watch?v=wl1myxrtQHQ) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [College statistics — full course](https://www.youtube.com/watch?v=xxpc-HPKN28) · freeCodeCamp · Full course · approximately 8h
+  - Explains: Descriptive statistics, probability, distributions and statistical reasoning.
+  - Useful because: Learn to interpret dataset summaries and uncertainty instead of trusting one metric.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/free-statistics-course/
+- [Principal Component Analysis (PCA) Step-by-Step](https://www.youtube.com/watch?v=FgakZw6K1QQ) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Frontend web development bootcamp](https://www.youtube.com/watch?v=zJSY8tbf_ys) · freeCodeCamp · Long course
+  - Explains: HTML, CSS, JavaScript and practical browser-side application work.
+  - Useful because: Build a usable interface for your API with explicit loading and failure states.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=zJSY8tbf_ys
+- [API documentation best practices](https://www.youtube.com/watch?v=0CSyIBHQy9g) · freeCodeCamp · Documentation course
+  - Explains: Documenting API behavior and making developer-facing instructions usable.
+  - Useful because: Document your actual contracts and a reproducible example instead of generic prose.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/api-documentation-best-practices-course/
+- [PostgreSQL — course for beginners](https://www.youtube.com/watch?v=SpfIwlAYaKk) · freeCodeCamp · Full tool course
+  - Explains: SQL tables, querying and PostgreSQL fundamentals.
+  - Useful because: Use local PostgreSQL/SQLite practice rather than a paid database service.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/posgresql-course-for-beginners/
+- [Neo4j: building a knowledge graph](https://www.youtube.com/watch?v=1ogNyPWUP7g) · Neo4j · Vendor teaching session
+  - Explains: Modeling entities, querying relationships and growing a knowledge graph.
+  - Useful because: Compare relationship traversal with vector similarity before selecting a database.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=1ogNyPWUP7g
+- [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+  - Explains: Ingestion, retrieval and techniques for grounding model answers.
+  - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [Stanford CS229 — Lecture 1](https://www.youtube.com/watch?v=jGwO_UgTS7I) · Stanford Online · Andrew Ng · University lecture
+  - Explains: The machine-learning problem setup, supervised learning and initial regression concepts.
+  - Useful because: Use it for mathematical framing after basic Python and algebra.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=jGwO_UgTS7I
+- [Machine learning for everybody — full course](https://www.youtube.com/watch?v=i_LwzRVP7bg) · freeCodeCamp · Kylie Ying · Full course
+  - Explains: Practical supervised/unsupervised modeling, preprocessing and model comparisons.
+  - Useful because: A coding-oriented overview; pair it with focused mathematical explanations.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/machine-learning-for-everybody/
+- [Machine Learning Fundamentals: Cross Validation](https://www.youtube.com/watch?v=fSytzGwwBVw) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Stanford CS229 — Linear regression and gradient descent](https://www.youtube.com/watch?v=4b4MUYve_U8) · Stanford Online · Andrew Ng · University lecture
+  - Explains: Linear regression objectives and gradient-based parameter updates.
+  - Useful because: Connect a mathematical loss to your hand-written optimization loop.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=4b4MUYve_U8
+- [Logistic Regression](https://www.youtube.com/watch?v=yIYKR4sgzI8) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Decision and Classification Trees, Clearly Explained!!!](https://www.youtube.com/watch?v=_L39rN6gz7Y) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Random Forests Part 1: Building, using and evaluating](https://www.youtube.com/watch?v=J4Wdy0Wc_xQ) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Gradient Boost Part 1: Regression Main Ideas](https://www.youtube.com/watch?v=3CC4N4z3GJc) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [K-Nearest Neighbors](https://www.youtube.com/watch?v=HVXime0nQeI) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Support Vector Machines (SVM)](https://www.youtube.com/watch?v=efR1C6CvhmE) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [K-Means Clustering](https://www.youtube.com/watch?v=4b5d3muPQmA) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Machine Learning Fundamentals: Bias and Variance](https://www.youtube.com/watch?v=EuBBz3bI-aA) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Regularization Part 1: L2, Ridge Regression](https://www.youtube.com/watch?v=Q81RR3yKn30) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Machine Learning Fundamentals: The Confusion Matrix](https://www.youtube.com/watch?v=Kdsp6soqA7o) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Model calibration, Brier score and Platt scaling](https://www.youtube.com/watch?v=rG2EfFOXyg0) · Data science teaching tutorial · Focused explanation
+  - Explains: Calibration plots, probability quality and calibration methods.
+  - Useful because: Distinguish a confident probability from an accurate classifier.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=rG2EfFOXyg0
+- [MLOps: a production-grade project](https://www.youtube.com/watch?v=-dJPoLm_gtE) · freeCodeCamp · Project course · approximately 3h
+  - Explains: Ingestion, experiment management and deploying a model workflow.
+  - Useful because: Connect evaluation, model artifacts and operations; use local alternatives to optional services.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/mlops-course-learn-to-build-machine-learning-production-grade-projects/
+- [Tensors for Neural Networks, Clearly Explained!!!](https://www.youtube.com/watch?v=L35fFDpwIM4) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Build micrograd: neural networks and backpropagation](https://www.youtube.com/watch?v=VMj-3S1tku0) · Andrej Karpathy · From-scratch lecture
+  - Explains: A scalar autograd engine, computation graphs and a small neural network.
+  - Useful because: Best for understanding what backward() actually does under the surface.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://karpathy.ai/zero-to-hero.html
+- [PyTorch for deep learning — full course](https://www.youtube.com/watch?v=V_xro1bcAuA) · freeCodeCamp · Daniel Bourke · Long course · approximately 26h
+  - Explains: Tensors, training workflows, classification, computer vision and model experiments.
+  - Useful because: A long hands-on course: study the relevant workflow, then build a small CPU lab.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-pytorch-for-deep-learning-in-day/
+- [Neural Networks Part 3: ReLU in Action!!!](https://www.youtube.com/watch?v=68BZ5f7P94E) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Neural Networks Part 5: ArgMax and SoftMax](https://www.youtube.com/watch?v=KpKog-L9veg) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Build GPT from scratch, in code](https://www.youtube.com/watch?v=kCc8FmEb1nY) · Andrej Karpathy · From-scratch lecture
+  - Explains: Language modeling, embeddings, causal attention, transformer blocks and sampling.
+  - Useful because: Trace token IDs to logits and understand a small end-to-end transformer.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://karpathy.ai/zero-to-hero.html
+- [Neural Networks Part 6: Cross Entropy](https://www.youtube.com/watch?v=6ArSys5qHAU) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Adam optimization algorithm](https://www.youtube.com/watch?v=JXQT_vxqwIs) · DeepLearning.AI · Andrew Ng · Focused lecture
+  - Explains: First/second moment estimates, bias correction and Adam updates.
+  - Useful because: Work through the optimizer state before comparing Adam with SGD.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=JXQT_vxqwIs
+- [Stochastic Gradient Descent](https://www.youtube.com/watch?v=vMh0zPT0tLI) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Improving deep neural networks — complete course](https://www.youtube.com/watch?v=hAbRGXkpTX8) · DeepLearning.AI · Andrew Ng · Full course
+  - Explains: Initialization, regularization, gradient checking, optimizers and hyperparameter choices.
+  - Useful because: A structured theory companion for optimization and training stability.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=hAbRGXkpTX8
+- [Makemore: activations, gradients and BatchNorm](https://www.youtube.com/watch?v=P6sfmUTpUmc) · Andrej Karpathy · From-scratch lecture
+  - Explains: Activation statistics, initialization problems, gradients and batch normalization.
+  - Useful because: Debug vanishing/exploding behavior with measured statistics.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://karpathy.ai/zero-to-hero.html
+- [Batch normalization versus layer normalization](https://www.youtube.com/watch?v=gAw7XVZ3xzc) · Data Science tutorial · Focused explanation
+  - Explains: Which dimensions each normalization method uses and how their behavior differs.
+  - Useful because: Compare normalization axes and train/eval behavior; use PyTorch docs for implementation.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=gAw7XVZ3xzc
+- [Neural Networks Part 8: Image Classification with Convolutional Neural Networks (CNNs)](https://www.youtube.com/watch?v=HGwBXDKFk9I) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Neural Networks Part 9: Recurrent Neural Networks (RNNs)](https://www.youtube.com/watch?v=AsNTP8Kwu80) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Neural Networks Part 10: Long Short-Term Memory (LSTM)](https://www.youtube.com/watch?v=YCzL96nL7j0) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Neural Networks Part 13: Attention](https://www.youtube.com/watch?v=PSs6nxngL6k) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Neural Networks Part 14: Transformers](https://www.youtube.com/watch?v=zxQyTK8quyY) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Mixed precision training from scratch](https://www.youtube.com/watch?v=C7NrYjhpiCY) · Vuk Rosić · Focused tutorial
+  - Explains: FP16/BF16, autocast and gradient scaling in PyTorch.
+  - Useful because: Understand the memory/stability tradeoff; follow the CPU lab if GPU support is unavailable.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=C7NrYjhpiCY
+- [Karpathy — Building makemore](https://www.youtube.com/watch?v=PaCmpygFfXo) · Andrej Karpathy · From-scratch lecture · 1h57m
+  - Explains: A character-level bigram language model, tensor operations, likelihood and sampling.
+  - Useful because: Reproduce the tiny model locally and inspect shapes and probabilities at each step.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://karpathy.ai/zero-to-hero.html
+- [Karpathy — Becoming a Backprop Ninja](https://www.youtube.com/watch?v=q8SA3rM6ckI) · Andrej Karpathy · From-scratch lecture · 1h55m
+  - Explains: Manual tensor-level gradients through an MLP and its normalisation and loss operations.
+  - Useful because: Check a small computation by hand and compare its gradients with autograd.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://karpathy.ai/zero-to-hero.html
+- [MIT 6.S191 (2025) — Introduction to Deep Learning](https://www.youtube.com/watch?v=alfdI7S6wCY) · MIT · Alexander Amini · University lecture
+  - Explains: Neural networks, differentiation and the basic training setup.
+  - Useful because: Connect the introductory equations to a small CPU network and its gradients.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://introtodeeplearning.com/2025/index.html
+- [Karpathy — Building makemore Part 2: MLP](https://www.youtube.com/watch?v=TCH_1BHY58I) · Andrej Karpathy · From-scratch lecture · 1h15m
+  - Explains: A multilayer character model, embeddings and practical model-development choices.
+  - Useful because: Use it after the bigram exercise to compare a neural model with a simple baseline.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://karpathy.ai/zero-to-hero.html
+- [Stanford CS231N (2025) — Image Classification with CNNs](https://www.youtube.com/watch?v=f3g1zGdxptI) · Stanford Online · Justin Johnson · University lecture
+  - Explains: Visual representations, convolution and pooling for image classification.
+  - Useful because: Study convolution arithmetic and inspect generated small images before a computer-vision lab.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=f3g1zGdxptI
+- [MIT 6.S191 (2025) — Deep Computer Vision](https://www.youtube.com/watch?v=oGpzWAlP5p0) · MIT · Alexander Amini · University lecture
+  - Explains: Convolutional models and vision tasks.
+  - Useful because: Compare the task families before implementing a tiny image experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://introtodeeplearning.com/2025/index.html
+- [MIT 6.S191 (2025) — Deep Sequence Modeling](https://www.youtube.com/watch?v=GvezxUdLrEk) · MIT · Alexander Amini · University lecture
+  - Explains: Sequence representations and neural architectures for ordered inputs.
+  - Useful because: Use the sequence-model framing alongside the recurrent and attention implementation exercises.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://introtodeeplearning.com/2025/index.html
+- [Karpathy — Building makemore Part 5: WaveNet](https://www.youtube.com/watch?v=t3YJ5hKiMQ0) · Andrej Karpathy · From-scratch lecture · 56m
+  - Explains: A hierarchical sequence model and the engineering of multidimensional tensor operations.
+  - Useful because: Extend a tiny character model while recording tensor shapes; the video distinguishes its implementation from dilated convolutions.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://karpathy.ai/zero-to-hero.html
+- [Neural Networks Part 11: Word Embedding and Word2Vec](https://www.youtube.com/watch?v=viZrOnJclY0) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [MIT 6.S191 (2025) — Deep Generative Modeling](https://www.youtube.com/watch?v=SdTZAMDKrNY) · MIT · Ava Amini · University lecture
+  - Explains: Latent representations and major generative model families.
+  - Useful because: Use the conceptual overview with the written derivations; required practice uses toy distributions.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://introtodeeplearning.com/2025/index.html
+- [But what is a neural network?](https://www.youtube.com/watch?v=aircAruvnKk) · 3Blue1Brown · Visual explanation
+  - Explains: Neurons, layers, weights and a visual picture of classification.
+  - Useful because: Build intuition before implementing a tensor training loop.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.3blue1brown.com/lessons/neural-networks
+- [MIT 6.S191 (2025) — Deep Reinforcement Learning](https://www.youtube.com/watch?v=to-lHJfK4pw) · MIT · Alexander Amini · University lecture
+  - Explains: Decision-making with rewards, policies and reinforcement-learning methods.
+  - Useful because: Build vocabulary before a small bandit experiment; large-scale agent training is optional.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://introtodeeplearning.com/2025/index.html
+- [Build the GPT tokenizer](https://www.youtube.com/watch?v=zduSFxRajkE) · Andrej Karpathy · From-scratch lecture
+  - Explains: Tokenization, byte-pair encoding and the consequences of token boundaries.
+  - Useful because: Understand why context size and token counts differ from word counts.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://karpathy.ai/zero-to-hero.html
+- [Code an LLM from scratch — theory to RLHF](https://www.youtube.com/watch?v=p3sij8QzONQ) · freeCodeCamp · Full course · approximately 6h
+  - Explains: A PyTorch language-model pipeline and the stages of language-model development.
+  - Useful because: Connect model internals to application decisions; large training runs are optional.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/code-an-llm-from-scratch-theory-to-rlhf/
+- [Local AI development with Ollama](https://www.youtube.com/watch?v=GWB9ApTPTv4) · freeCodeCamp · Tool course
+  - Explains: Local model serving and integrating local inference with applications.
+  - Useful because: Useful for a free local model path when your machine meets hardware requirements.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/local-ai-development-with-ollama-course/
+- [Prompt engineering for developers — course introduction](https://www.youtube.com/watch?v=H4YK_7MAckk) · DeepLearning.AI · Andrew Ng and Isa Fulford · Course introduction
+  - Explains: The motivation and scope of structured developer prompting.
+  - Useful because: A starting overview; the linked free fixtures and documentation provide the actual lab.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=H4YK_7MAckk
+- [RAG and MCP fundamentals — hands-on course](https://www.youtube.com/watch?v=I7_WXKhyGms) · freeCodeCamp · Full course · approximately 2h
+  - Explains: Retrieval, MCP coordination and caching integration.
+  - Useful because: Connect knowledge retrieval with tool access while keeping permission checks in software.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-rag-and-mcp-fundamentals/
+- [LangGraph — complete course for beginners](https://www.youtube.com/watch?v=jGg_1h0qzaM) · freeCodeCamp · Full tool course
+  - Explains: Graph state, nodes, workflows and agent applications.
+  - Useful because: Use it to understand orchestration; replace paid provider calls with local/recorded responses.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-langgraph-and-build-conversational-ai-with-python/
+- [MIT 6.S191 (2025) — Introduction to LLM Post-Training](https://www.youtube.com/watch?v=_HfdncCbMOE) · MIT · Maxime Labonne · University guest lecture
+  - Explains: Adaptation data, supervised tuning and preference-based post-training.
+  - Useful because: Compare adaptation choices against a held-out task evaluation before proposing a training run.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://introtodeeplearning.com/2025/index.html
+- [Deep dive into LLM evaluation](https://www.youtube.com/watch?v=7EcznH0-of8) · Weights & Biases · Workshop
+  - Explains: Evaluation datasets, model quality checks and retrieval evaluation.
+  - Useful because: Use the evaluation methodology with local fixtures; hosted tracking accounts are optional.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=7EcznH0-of8
+- [Site reliability engineering fundamentals](https://www.youtube.com/watch?v=eopc_ijIfLg) · Google Cloud Events · Technical session
+  - Explains: Service objectives, error budgets, monitoring, alerting and emergency response.
+  - Useful because: Write actionable monitoring and recovery steps instead of collecting logs without a plan.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=eopc_ijIfLg
+- [OWASP LLM01 — prompt injection](https://www.youtube.com/watch?v=dq5jD_qE1Cg) · Vandana Verma · Security explanation
+  - Explains: Direct/indirect prompt injection and application trust boundaries.
+  - Useful because: Design malicious-input tests rather than assuming a prompt alone enforces permissions.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=dq5jD_qE1Cg
+- [MLOps for fairness: evaluation workflows](https://www.youtube.com/watch?v=xAN1HxU5XeU) · Google Responsible AI speaker · Technical session
+  - Explains: Algorithmic bias, fairness metrics and practical evaluation workflows.
+  - Useful because: Add meaningful error slices and document sample-size limits.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=xAN1HxU5XeU
+- [Docker — full DevOps course](https://www.youtube.com/watch?v=rjjES5IsPdg) · freeCodeCamp · Long tool course · approximately 8h
+  - Explains: Images, containers, Dockerfiles and deploying containerized applications.
+  - Useful because: Package the exact service you tested; keep cloud purchases optional.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/docker-full-course/
+- [GitHub Actions — full course](https://www.youtube.com/watch?v=Tz7FsunBbfQ) · freeCodeCamp · Full tool course
+  - Explains: Workflow configuration, CI/CD and automation.
+  - Useful because: Build a test/build workflow; paid certification is not required.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=Tz7FsunBbfQ
+- [CI/CD in production with Jenkins](https://www.youtube.com/watch?v=uHNOqKdqQas) · freeCodeCamp · Long tool course · approximately 17h
+  - Explains: Continuous integration and delivery pipelines in a production-style workflow.
+  - Useful because: An optional deeper pipeline reference; the roadmap lab uses a smaller GitHub Actions workflow.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/ci-cd-in-production-with-jenkins/
+- [Incident management: SRE implements DevOps](https://www.youtube.com/watch?v=n4y9dwinPBQ) · Google Cloud Tech · Focused lecture
+  - Explains: Incident roles, response process and learning after failures.
+  - Useful because: Rehearse your runbook on a local outage and document what changed.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=n4y9dwinPBQ
+- [Software requirements specification — worked tutorial](https://www.youtube.com/watch?v=M5DY3eTyhUA) · Requirements engineering tutorial · Focused tutorial
+  - Explains: Functional requirements and software specification structure.
+  - Useful because: Write testable requirements and distinguish them from implementation details.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=M5DY3eTyhUA
+- [Building faster with AI](https://www.youtube.com/watch?v=RNJCfif1dPY) · Andrew Ng · Product/engineering talk
+  - Explains: How faster development changes the role of product judgment and ownership.
+  - Useful because: Frame a real user problem and feedback loop before adding more features.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=RNJCfif1dPY
+- [Architecture decision records: when and how to use them](https://www.youtube.com/watch?v=GhB7vz3sg-0) · Architecture teaching session · Focused tutorial
+  - Explains: Lightweight ADRs, decision context and consequences.
+  - Useful because: Preserve the reason for a design choice in a short document.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=GhB7vz3sg-0

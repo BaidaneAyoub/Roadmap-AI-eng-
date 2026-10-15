@@ -1,0 +1,24 @@
+{
+  "checkedOn": "2026-10-15",
+  "method": "Inspected publisher syllabus links and descriptions; no video transcripts or media downloaded, and no claim that full lectures were watched.",
+  "publishers": [
+    {
+      "url": "https://introtodeeplearning.com/2025/index.html",
+      "videos": ["alfdI7S6wCY", "GvezxUdLrEk", "oGpzWAlP5p0", "SdTZAMDKrNY", "to-lHJfK4pw", "_HfdncCbMOE"],
+      "verified": "IDs follow the official lecture links for introduction, sequence modelling, vision, generative modelling, RL and LLM post-training.",
+      "limit": "Direct YouTube fetches were throttled or failed; official publisher provenance establishes the links, not current playback in every region."
+    },
+    {
+      "url": "https://karpathy.ai/zero-to-hero.html",
+      "videos": ["PaCmpygFfXo", "TCH_1BHY58I", "q8SA3rM6ckI", "t3YJ5hKiMQ0"],
+      "verified": "Official syllabus supplies titles, durations, descriptions and direct video links for makemore, MLP, manual backpropagation and WaveNet.",
+      "limit": "The WaveNet lecture is a hierarchical character model; the publisher notes causal dilated convolutions are not covered in that implementation."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=f3g1zGdxptI",
+      "videos": ["f3g1zGdxptI"],
+      "verified": "Stanford Online publisher description identifies CS231N Spring 2025 lecture 5 and lists convolution, pooling and visual representations.",
+      "limit": "Only the public video is required. The separate Stanford course Canvas lectures require enrolment and are not used as a free-access dependency."
+    }
+  ]
+}

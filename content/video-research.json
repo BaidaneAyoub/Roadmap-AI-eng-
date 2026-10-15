@@ -1,0 +1,1788 @@
+[
+  {
+    "source": "https://cs50.harvard.edu/python/2022/weeks/0/",
+    "title": "Week 0 Functions - CS50's Introduction to Programming with Python",
+    "videos": [
+      "nLRL_NcnK-4",
+      "JP7ITIXGpHk"
+    ],
+    "links": [
+      {
+        "url": "https://www.youtube.com/watch?v=nLRL_NcnK-4",
+        "title": "freeCodeCamp"
+      },
+      {
+        "url": "https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://www.youtube.com/subscription_center?add_user=cs50tv",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://youtu.be/JP7ITIXGpHk",
+        "title": "YouTube"
+      }
+    ]
+  },
+  {
+    "source": "https://cs50.harvard.edu/python/2022/weeks/1/",
+    "title": "Week 1 Conditionals - CS50's Introduction to Programming with Python",
+    "videos": [
+      "nLRL_NcnK-4",
+      "_b6NgY_pMdw"
+    ],
+    "links": [
+      {
+        "url": "https://www.youtube.com/watch?v=nLRL_NcnK-4",
+        "title": "freeCodeCamp"
+      },
+      {
+        "url": "https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://www.youtube.com/subscription_center?add_user=cs50tv",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://youtu.be/_b6NgY_pMdw",
+        "title": "YouTube"
+      }
+    ]
+  },
+  {
+    "source": "https://cs50.harvard.edu/python/2022/weeks/2/",
+    "title": "Week 2 Loops - CS50's Introduction to Programming with Python",
+    "videos": [
+      "nLRL_NcnK-4",
+      "-7xg8pGcP6w"
+    ],
+    "links": [
+      {
+        "url": "https://www.youtube.com/watch?v=nLRL_NcnK-4",
+        "title": "freeCodeCamp"
+      },
+      {
+        "url": "https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://www.youtube.com/subscription_center?add_user=cs50tv",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://youtu.be/-7xg8pGcP6w",
+        "title": "YouTube"
+      }
+    ]
+  },
+  {
+    "source": "https://cs50.harvard.edu/python/2022/weeks/3/",
+    "title": "Week 3 Exceptions - CS50's Introduction to Programming with Python",
+    "videos": [
+      "nLRL_NcnK-4",
+      "LW7g1169v7w"
+    ],
+    "links": [
+      {
+        "url": "https://www.youtube.com/watch?v=nLRL_NcnK-4",
+        "title": "freeCodeCamp"
+      },
+      {
+        "url": "https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://www.youtube.com/subscription_center?add_user=cs50tv",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://youtu.be/LW7g1169v7w",
+        "title": "YouTube"
+      }
+    ]
+  },
+  {
+    "source": "https://cs50.harvard.edu/python/2022/weeks/4/",
+    "title": "Week 4 Libraries - CS50's Introduction to Programming with Python",
+    "videos": [
+      "nLRL_NcnK-4",
+      "MztLZWibctI"
+    ],
+    "links": [
+      {
+        "url": "https://www.youtube.com/watch?v=nLRL_NcnK-4",
+        "title": "freeCodeCamp"
+      },
+      {
+        "url": "https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://www.youtube.com/subscription_center?add_user=cs50tv",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://youtu.be/MztLZWibctI",
+        "title": "YouTube"
+      }
+    ]
+  },
+  {
+    "source": "https://cs50.harvard.edu/python/2022/weeks/5/",
+    "title": "Week 5 Unit Tests - CS50's Introduction to Programming with Python",
+    "videos": [
+      "nLRL_NcnK-4",
+      "tIrcxwLqzjQ"
+    ],
+    "links": [
+      {
+        "url": "https://www.youtube.com/watch?v=nLRL_NcnK-4",
+        "title": "freeCodeCamp"
+      },
+      {
+        "url": "https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://www.youtube.com/subscription_center?add_user=cs50tv",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://youtu.be/tIrcxwLqzjQ",
+        "title": "YouTube"
+      }
+    ]
+  },
+  {
+    "source": "https://cs50.harvard.edu/python/2022/weeks/6/",
+    "title": "Week 6 File I/O - CS50's Introduction to Programming with Python",
+    "videos": [
+      "nLRL_NcnK-4",
+      "KD-Yoel6EVQ"
+    ],
+    "links": [
+      {
+        "url": "https://www.youtube.com/watch?v=nLRL_NcnK-4",
+        "title": "freeCodeCamp"
+      },
+      {
+        "url": "https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://www.youtube.com/subscription_center?add_user=cs50tv",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://youtu.be/KD-Yoel6EVQ",
+        "title": "YouTube"
+      }
+    ]
+  },
+  {
+    "source": "https://cs50.harvard.edu/python/2022/weeks/7/",
+    "title": "Week 7 Regular Expressions - CS50's Introduction to Programming with Python",
+    "videos": [
+      "nLRL_NcnK-4",
+      "hy3sd9MOAcc"
+    ],
+    "links": [
+      {
+        "url": "https://www.youtube.com/watch?v=nLRL_NcnK-4",
+        "title": "freeCodeCamp"
+      },
+      {
+        "url": "https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://www.youtube.com/subscription_center?add_user=cs50tv",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://youtu.be/hy3sd9MOAcc",
+        "title": "YouTube"
+      }
+    ]
+  },
+  {
+    "source": "https://cs50.harvard.edu/python/2022/weeks/8/",
+    "title": "Week 8 Object-Oriented Programming - CS50's Introduction to Programming with Python",
+    "videos": [
+      "nLRL_NcnK-4",
+      "e4fwY9ZsxPw"
+    ],
+    "links": [
+      {
+        "url": "https://www.youtube.com/watch?v=nLRL_NcnK-4",
+        "title": "freeCodeCamp"
+      },
+      {
+        "url": "https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://www.youtube.com/subscription_center?add_user=cs50tv",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://youtu.be/e4fwY9ZsxPw",
+        "title": "YouTube"
+      }
+    ]
+  },
+  {
+    "source": "https://cs50.harvard.edu/python/2022/weeks/9/",
+    "title": "Week 9 Et Cetera - CS50's Introduction to Programming with Python",
+    "videos": [
+      "nLRL_NcnK-4",
+      "6pgodt1mezg"
+    ],
+    "links": [
+      {
+        "url": "https://www.youtube.com/watch?v=nLRL_NcnK-4",
+        "title": "freeCodeCamp"
+      },
+      {
+        "url": "https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://www.youtube.com/subscription_center?add_user=cs50tv",
+        "title": "YouTube"
+      },
+      {
+        "url": "https://youtu.be/6pgodt1mezg",
+        "title": "YouTube"
+      }
+    ]
+  },
+  {
+    "source": "https://statquest.org/video_index.html",
+    "title": "Videos!!!",
+    "videos": [
+      "CqOfi41LfDw",
+      "qBigTkBLU6g",
+      "0nK6iPpqNPU",
+      "oI3hZJqXJuc",
+      "rzFX5NWojp0",
+      "vikkiwjQqfU",
+      "SzZ6GpcfoQY",
+      "sHRBg6BhKjI",
+      "yQhTtdq_y9M",
+      "0oc49DyA3hU",
+      "5koKb5B_YWo",
+      "vemZtEM63GY",
+      "JQc3yx0-Q9E",
+      "HDCOUXE3HMM",
+      "L3nlGfSyHV0",
+      "Rsc5znwR5FA",
+      "VX_M3tIyiYk",
+      "qtaqvPAeEJY",
+      "xZ_z8KWkhXE",
+      "XLCWeSVzHUU",
+      "CHOir6-ZpkE",
+      "_IgyaD7vOOA",
+      "9wCnvr7Xw4E",
+      "KLs_7b7SKi4",
+      "OSPr6G6Ka-U",
+      "J8jNoF-K8E8",
+      "YAlJCEDH2uY",
+      "Exk0OoRG0PQ",
+      "67zCIqdeXpo",
+      "A82brFpdr9g",
+      "XNgt7F6FqDU",
+      "Xz0x-8-cgaQ",
+      "N4ZQQqyIf6k",
+      "RiEZ_hEf96A",
+      "fHLhBnmwUM0",
+      "VSi0Z04fWj0",
+      "iujLN48gumk",
+      "crLXJG-EAhk",
+      "TqOeMYtOc1w",
+      "2AQKmw14mHM",
+      "aFDOzpTeg0s",
+      "PaFPbb66DxQ",
+      "Vf7oJ6z2LCc",
+      "7ArmBVF2dCs",
+      "u1cc1r_Y7M0",
+      "zITIFTsivN8",
+      "hokALdIst8k",
+      "NF5_btOaCig",
+      "CqLGvwi-5Pc",
+      "Hrr2anyK_5s",
+      "IFKQLDmRK0Y",
+      "okjYjClSjOg",
+      "ecjN6Xpv6SE",
+      "pYxNSUDSFH4",
+      "XepXtl9YKwc",
+      "p3T-_LMrvBc",
+      "4KKV9yZCoM4",
+      "Dn6b9fCIUpM",
+      "ZYDN25N5WhQ",
+      "ARfXDSkQf1Y",
+      "8nm0G-1uJzA",
+      "udyAvvaMjfM",
+      "nnBJeb_I-q8",
+      "KEofcJ1tfkI",
+      "K8LQSvtjcEo",
+      "UFhJefdVCjE",
+      "Gv9_4yMHFhI",
+      "fSytzGwwBVw",
+      "Kdsp6soqA7o",
+      "vP06aMoz4v8",
+      "EuBBz3bI-aA",
+      "4jRBRDbJemM",
+      "qcvAqAH60Yw",
+      "YtebGVx-Fxw",
+      "eJIp_mgVLwE",
+      "Q81RR3yKn30",
+      "NGf0voTMlcs",
+      "Xm2C_gTAl8c",
+      "1dKRdX9bfIo",
+      "ctmNq7FgbvI",
+      "azXCzI57Yfc",
+      "FgakZw6K1QQ",
+      "HMOI_lkzW08",
+      "oRvgq966yZg",
+      "_UVHneBUBW0",
+      "0Jp4gsfOLMs",
+      "Lsue2gEM9D0",
+      "i4iUvjsGCMc",
+      "GEn-_dAyYME",
+      "pGAUHhLYp5Q",
+      "NEaUSP4YerM",
+      "eN0wFzBA4Sc",
+      "jth4kEvJ3P8",
+      "oMtDyOn2TCc",
+      "7xHsRkOdVwo",
+      "4b5d3muPQmA",
+      "RDZUdRSDOok",
+      "HVXime0nQeI",
+      "O2L2Uv9pdDA",
+      "H3EjCKtlVog",
+      "wl1myxrtQHQ",
+      "sDv4f4s2SB8",
+      "vMh0zPT0tLI",
+      "589nCGeWG1w",
+      "_L39rN6gz7Y",
+      "wpNl-JwwplA",
+      "g9c66TUylZ4",
+      "D0efHEJsfHo",
+      "q90UDEgYqeI",
+      "J4Wdy0Wc_xQ",
+      "mIlw5j3WyVk",
+      "6EXPYzbfLCE",
+      "LsK-xG1cLYA",
+      "ilUbD7EoQnk",
+      "3CC4N4z3GJc",
+      "2xudPOBz-vs",
+      "jxuNLH5dXCs",
+      "StWY5QWMXCw",
+      "W4sYsXGeCls",
+      "OtD8wVaFm6E",
+      "8b1JEDvenQU",
+      "ZVFeW798-2I",
+      "oRrKeUCEbq8",
+      "GrJP9FLV3FE",
+      "e9U0QAFbfLI",
+      "KXOTSkPL2X4",
+      "3Bg2XRFOTzg",
+      "efR1C6CvhmE",
+      "Toet3EiSFcM",
+      "Qc5IyLW_hns",
+      "8A7L0GsBiLQ",
+      "yIYKR4sgzI8",
+      "vN5cNN2-HWE",
+      "BfKanl1aSG0",
+      "xxFYro8QuXA",
+      "9T0wlKdew6I",
+      "JC56jS2gVUE",
+      "C4N3_XJJ-jU",
+      "Z-T0iJEXiwM",
+      "zxagGtF9MeU",
+      "q-BiW5srMFQ",
+      "IN2XmBhILt4",
+      "iyn2zdALii8",
+      "GKZoOHXGcLo",
+      "68BZ5f7P94E",
+      "83LYR-1IcjA",
+      "KpKog-L9veg",
+      "M59JElEPgIg",
+      "6ArSys5qHAU",
+      "xBEh66V9gZo",
+      "HGwBXDKFk9I",
+      "AsNTP8Kwu80",
+      "YCzL96nL7j0",
+      "viZrOnJclY0",
+      "L8HKweZIOmg",
+      "PSs6nxngL6k",
+      "zxQyTK8quyY",
+      "bQ5BoolX9Ag",
+      "GDN649X_acE",
+      "9hbQieQh7-o",
+      "DVGmsnxB2UQ",
+      "qPN_XZcJf_s",
+      "L35fFDpwIM4",
+      "ZTt9gsGcdDo",
+      "KphmOJnLAdI",
+      "FHdlXe1bSe4",
+      "khMzi6xPbuM",
+      "RHGiXPuo_pI",
+      "Qf06XDYXCXI",
+      "C9QSpl5nmrY",
+      "Llqoz1u8Pfk",
+      "6fWk_lQ_K5A",
+      "h5o1n1QMcmM",
+      "lgD9lNB9Ums",
+      "bv9agba7blc",
+      "tlf6wYJrwKY",
+      "nkWGmaYRues",
+      "Wdt6jdi-NQo",
+      "UFB993xufUU",
+      "Gi0JdrxRq5s",
+      "gKnfP2_Xdpo",
+      "TTUrtCY2k-w"
+    ],
+    "links": [
+      {
+        "url": "https://www.youtube.com/playlist?list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9",
+        "title": "Statistics\r\n\t\t\t\t\t\t\t\tFundamentals:"
+      },
+      {
+        "url": "https://www.youtube.com/playlist?list=PLblh5JKOoLUIzaEkCLIUxQFjPIlapw8nU",
+        "title": "Linear\r\n\t\t\t\t\t\t\t\tRegression and Linear Models:"
+      },
+      {
+        "url": "https://www.youtube.com/playlist?list=PLblh5JKOoLUKxzEP5HA2d-Li7IJkHfXSe",
+        "title": "Logistic\r\n\t\t\t\t\t\t\t\tRegression:"
+      },
+      {
+        "url": "https://www.youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF",
+        "title": "Machine\r\n\t\t\t\t\t\t\t\tLearning:"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=CqOfi41LfDw&list=PLblh5JKOoLUIxGDQs4LFFD--41Vzf-ME1",
+        "title": "Neural Networks, Deep Learning, and AI:"
+      },
+      {
+        "url": "https://www.youtube.com/playlist?list=PLblh5JKOoLUJo2Q6xK4tZElbIvAACEykp",
+        "title": "High-Throughput\r\n\t\t\t\t\t\t\t\tSequence Analysis:"
+      },
+      {
+        "url": "https://www.youtube.com/playlist?list=PLblh5JKOoLUJJpBNfk8_YadPwDTO2SCbx",
+        "title": "Statistics\r\n\t\t\t\t\t\t\t\tin R:"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=qBigTkBLU6g&list=PLblh5JKOoLUJUNlfvCNhJMNjNNpt5ljcR",
+        "title": "#66DaysOfData:"
+      },
+      {
+        "url": "https://youtube.com/playlist?list=PLblh5JKOoLUJlFvWDZFVkm2IzJhPJzRwv",
+        "title": "The StatQuest\r\n\t\t\t\t\t\t\t\tMusical Dictionary:"
+      },
+      {
+        "url": "https://youtu.be/qBigTkBLU6g",
+        "title": "Histograms, Clearly Explained"
+      },
+      {
+        "url": "https://youtu.be/0nK6iPpqNPU",
+        "title": "How to tell a story with US Census Data"
+      },
+      {
+        "url": "https://youtu.be/oI3hZJqXJuc",
+        "title": "The Main Ideas behind Probability Distributions"
+      },
+      {
+        "url": "https://youtu.be/rzFX5NWojp0",
+        "title": "The Normal Distribution"
+      },
+      {
+        "url": "https://youtube.com/shorts/-14BImgVENA?feature=share",
+        "title": "The Mean, Median and Mode\r\n\t\t\t\t\t\t\t\t\tfor the Normal Distribution, Sing-a-long!!!"
+      },
+      {
+        "url": "https://youtube.com/shorts/wtLQUjfomig?feature=share",
+        "title": "The Exponential Distribution\r\n\t\t\t\t\t\t\tSing-a-long!!!"
+      },
+      {
+        "url": "https://youtu.be/vikkiwjQqfU",
+        "title": "Population and Estimated Parameters, Clearly\r\n\t\t\t\t\t\t\tExplained"
+      },
+      {
+        "url": "https://youtu.be/SzZ6GpcfoQY",
+        "title": "Estimating the Mean, Variance and Standard Deviation"
+      },
+      {
+        "url": "https://youtu.be/sHRBg6BhKjI",
+        "title": "Why Dividing by N Underestimates the Variance"
+      },
+      {
+        "url": "https://youtu.be/yQhTtdq_y9M",
+        "title": "What is a (mathematical) model?"
+      },
+      {
+        "url": "https://youtu.be/0oc49DyA3hU",
+        "title": "Hypothesis Testing and the Null Hypothesis"
+      },
+      {
+        "url": "https://youtu.be/5koKb5B_YWo",
+        "title": "Alternative Hypothesis: Main Ideas"
+      },
+      {
+        "url": "https://youtu.be/vemZtEM63GY",
+        "title": "p-values: What they are and how to interpret them"
+      },
+      {
+        "url": "https://youtu.be/JQc3yx0-Q9E",
+        "title": "How to Calculate p-values"
+      },
+      {
+        "url": "https://youtu.be/HDCOUXE3HMM",
+        "title": "p-hacking: What it is and how to avoid it"
+      },
+      {
+        "url": "https://youtu.be/L3nlGfSyHV0",
+        "title": "False Discovery Rate (FDR), Clearly Explained"
+      },
+      {
+        "url": "https://youtu.be/Rsc5znwR5FA",
+        "title": "Statistical Power, Clearly Explained"
+      },
+      {
+        "url": "https://youtu.be/VX_M3tIyiYk",
+        "title": "Power Analysis, Clearly Explained"
+      },
+      {
+        "url": "https://youtu.be/qtaqvPAeEJY",
+        "title": "Covariance, Clearly Explained"
+      },
+      {
+        "url": "https://youtu.be/xZ_z8KWkhXE",
+        "title": "Pearson\u2019s Correlation, Clearly Explained"
+      },
+      {
+        "url": "https://youtu.be/XLCWeSVzHUU",
+        "title": "What does it mean to \u201csample from a\r\n\t\t\t\t\t\t\tdistribution\u201d?"
+      },
+      {
+        "url": "https://youtu.be/CHOir6-ZpkE",
+        "title": "Three more lessons from my Pop!!!"
+      },
+      {
+        "url": "https://youtu.be/_IgyaD7vOOA",
+        "title": "Conditional Probability, Clearly Explained"
+      },
+      {
+        "url": "https://youtu.be/9wCnvr7Xw4E",
+        "title": "Bayes\u2019 Theorem, Clearly Explained"
+      },
+      {
+        "url": "https://youtu.be/KLs_7b7SKi4",
+        "title": "Expected Values Part 1, Main Ideas!!! (Expected Values\r\n\t\t\t\t\t\t\tfor Discrete Variables)"
+      },
+      {
+        "url": "https://youtu.be/OSPr6G6Ka-U",
+        "title": "Expected Values Part 2, Continuous Variables"
+      },
+      {
+        "url": "https://youtu.be/J8jNoF-K8E8",
+        "title": "The Binomial Distribution and Test"
+      },
+      {
+        "url": "https://youtu.be/YAlJCEDH2uY",
+        "title": "The Central Limit Theorem (or \u201cHow I Learned to\r\n\t\t\t\t\t\t\tStop Worrying and Love the t-test\u201d)"
+      },
+      {
+        "url": "https://youtu.be/Exk0OoRG0PQ",
+        "title": "The Difference between Technical and Biological\r\n\t\t\t\t\t\t\tReplicates"
+      },
+      {
+        "url": "https://youtu.be/67zCIqdeXpo",
+        "title": "The sample size and the effective sample size"
+      },
+      {
+        "url": "https://youtu.be/A82brFpdr9g",
+        "title": "Standard Deviation vs Standard Error"
+      },
+      {
+        "url": "https://youtu.be/XNgt7F6FqDU",
+        "title": "The Standard Error"
+      },
+      {
+        "url": "https://youtu.be/Xz0x-8-cgaQ",
+        "title": "Bootstrapping Part 1: Main Ideas"
+      },
+      {
+        "url": "https://youtu.be/N4ZQQqyIf6k",
+        "title": "Bootstrapping Part 2: Calculating p-values"
+      },
+      {
+        "url": "https://youtu.be/RiEZ_hEf96A",
+        "title": "Bar Charts Are Better Than Pie Charts"
+      },
+      {
+        "url": "https://youtu.be/fHLhBnmwUM0",
+        "title": "Boxplots, Clearly Explained"
+      },
+      {
+        "url": "https://youtu.be/VSi0Z04fWj0",
+        "title": "Logs (logarithms), clearly explained"
+      },
+      {
+        "url": "https://youtu.be/iujLN48gumk",
+        "title": "The log base \u2018e\u2019 song."
+      },
+      {
+        "url": "https://youtu.be/crLXJG-EAhk",
+        "title": "How to make your own StatQuest!!!"
+      },
+      {
+        "url": "https://youtu.be/TqOeMYtOc1w",
+        "title": "Confidence Intervals"
+      },
+      {
+        "url": "https://youtu.be/2AQKmw14mHM",
+        "title": "R-squared explained"
+      },
+      {
+        "url": "https://youtu.be/aFDOzpTeg0s",
+        "title": "The Essence of Linear Regression"
+      },
+      {
+        "url": "https://youtu.be/PaFPbb66DxQ",
+        "title": "Linear Models Part 0: Fitting a line to data, aka Least\r\n\t\t\t\t\t\t\tSquares, aka Linear Regression"
+      },
+      {
+        "url": "https://youtu.be/Vf7oJ6z2LCc",
+        "title": "Fitting a curve to data, aka Lowess, aka Loess"
+      },
+      {
+        "url": "https://youtu.be/7ArmBVF2dCs",
+        "title": "Linear Models Part 1: Linear Regression"
+      },
+      {
+        "url": "https://youtu.be/u1cc1r_Y7M0",
+        "title": "Linear Models: Linear Regression in R"
+      },
+      {
+        "url": "https://youtu.be/zITIFTsivN8",
+        "title": "Linear Models Part 1.5: Multiple Regression"
+      },
+      {
+        "url": "https://youtu.be/hokALdIst8k",
+        "title": "Linear Models: Multiple Regression in R"
+      },
+      {
+        "url": "https://youtu.be/NF5_btOaCig",
+        "title": "Linear Models Part 2: t-tests and ANOVA"
+      },
+      {
+        "url": "https://youtu.be/CqLGvwi-5Pc",
+        "title": "Linear Models Part 3: Design Matrices"
+      },
+      {
+        "url": "https://youtu.be/Hrr2anyK_5s",
+        "title": "Linear Models: Design Matrix Examples in R"
+      },
+      {
+        "url": "https://youtu.be/IFKQLDmRK0Y",
+        "title": "Quantiles and Percentiles"
+      },
+      {
+        "url": "https://youtu.be/okjYjClSjOg",
+        "title": "Quantile-Quantile Plots (QQ Plots)"
+      },
+      {
+        "url": "https://youtu.be/ecjN6Xpv6SE",
+        "title": "Quantile Normalization"
+      },
+      {
+        "url": "https://youtu.be/pYxNSUDSFH4",
+        "title": "Probability vs Likelihood"
+      },
+      {
+        "url": "https://youtu.be/XepXtl9YKwc",
+        "title": "Maximum Likelihood"
+      },
+      {
+        "url": "https://youtu.be/p3T-_LMrvBc",
+        "title": "Maximum Likelihood: A worked out example for the\r\n\t\t\t\t\t\t\texponential distribution"
+      },
+      {
+        "url": "https://youtu.be/4KKV9yZCoM4",
+        "title": "Maximum Likelihood: A worked out example for the binomial\r\n\t\t\t\t\t\t\tdistribution"
+      },
+      {
+        "url": "https://youtu.be/Dn6b9fCIUpM",
+        "title": "Maximum Likelihood: A worked out example for the normal\r\n\t\t\t\t\t\t\tdistribution"
+      },
+      {
+        "url": "https://youtu.be/ZYDN25N5WhQ",
+        "title": "The Ukulele, Clearly Explained"
+      },
+      {
+        "url": "https://youtu.be/ARfXDSkQf1Y",
+        "title": "Odds and Log(Odds)"
+      },
+      {
+        "url": "https://youtu.be/8nm0G-1uJzA",
+        "title": "Odds Ratios and Log(Odds Ratios)"
+      },
+      {
+        "url": "https://youtu.be/udyAvvaMjfM",
+        "title": "Enrichment Analysis using Fisher\u2019s Exact Test and\r\n\t\t\t\t\t\t\tthe Hypergeometric Distribution"
+      },
+      {
+        "url": "https://youtu.be/nnBJeb_I-q8",
+        "title": "Which t-test to use"
+      },
+      {
+        "url": "https://youtu.be/vemZtEM63GY",
+        "title": "p-values: What they are and how to interpret them"
+      },
+      {
+        "url": "https://youtu.be/JQc3yx0-Q9E",
+        "title": "How to Calculate p-values"
+      },
+      {
+        "url": "https://youtu.be/KEofcJ1tfkI",
+        "title": "Thresholds for Significance"
+      },
+      {
+        "url": "https://youtu.be/K8LQSvtjcEo",
+        "title": "FDR and the Benjamini-Hochberg Method clearly\r\n\t\t\t\t\t\t\texplained"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=UFhJefdVCjE",
+        "title": "p-hacking and power calculations"
+      },
+      {
+        "url": " https://youtu.be/Gv9_4yMHFhI",
+        "title": "A Gentle Introduction to Machine Learning"
+      },
+      {
+        "url": "https://youtu.be/fSytzGwwBVw",
+        "title": "Machine Learning Fundamentals: Cross Validation"
+      },
+      {
+        "url": "https://youtu.be/Kdsp6soqA7o",
+        "title": "Machine Learning Fundamentals: The Confusion Matrix"
+      },
+      {
+        "url": "https://youtu.be/vP06aMoz4v8",
+        "title": "Machine Learning Fundamentals: Sensitivity and\r\n\t\t\t\t\t\t\tSpecificity"
+      },
+      {
+        "url": "https://youtube.com/shorts/PWvfrTgaPBI",
+        "title": "The Sensitivity, Specificity, Precision, Recall\r\n\t\t\t\t\t\t\tSing-a-Long!!!"
+      },
+      {
+        "url": "https://youtu.be/EuBBz3bI-aA",
+        "title": "Machine Learning Fundamentals: Bias and Variance"
+      },
+      {
+        "url": "https://youtu.be/4jRBRDbJemM",
+        "title": "ROC and AUC"
+      },
+      {
+        "url": "https://youtu.be/qcvAqAH60Yw",
+        "title": "ROC and AUC in R"
+      },
+      {
+        "url": "https://youtu.be/YtebGVx-Fxw",
+        "title": "Entropy, Clearly Explained!!!"
+      },
+      {
+        "url": "https://youtu.be/eJIp_mgVLwE",
+        "title": "Mutual Information, Clearly Explained!!!"
+      },
+      {
+        "url": "https://youtu.be/Q81RR3yKn30",
+        "title": "Regularization Part 1: L2, Ridge Regression"
+      },
+      {
+        "url": "https://youtu.be/NGf0voTMlcs",
+        "title": "Regularization Part 2: L1, Lasso Regression"
+      },
+      {
+        "url": "https://youtu.be/Xm2C_gTAl8c",
+        "title": "Regularization Part 2.5: Ridge vs Lasso Visualized (or\r\n\t\t\t\t\t\t\twhy Lasso can set parameters to 0 and Ridge can\u2019t)"
+      },
+      {
+        "url": "https://youtu.be/1dKRdX9bfIo",
+        "title": "Regularization Part 3: Elastic-Net Regression"
+      },
+      {
+        "url": "https://youtu.be/ctmNq7FgbvI",
+        "title": "Regularization Part 4: Ridge, Lasso and Elastic-Net\r\n\t\t\t\t\t\t\tRegression in R"
+      },
+      {
+        "url": "https://youtu.be/azXCzI57Yfc",
+        "title": "Linear Discriminant Analysis (LDA) clearly explained"
+      },
+      {
+        "url": "https://youtu.be/FgakZw6K1QQ",
+        "title": "Principal Component Analysis (PCA) Step-by-Step"
+      },
+      {
+        "url": "https://youtu.be/HMOI_lkzW08",
+        "title": "Principal Component Analysis (PCA) explained in less than\r\n\t\t\t\t\t\t\t5 minutes"
+      },
+      {
+        "url": "https://youtu.be/oRvgq966yZg",
+        "title": "PCA \u2013 Practical Tips"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=_UVHneBUBW0",
+        "title": "Principal Component Analysis\r\n\t\t\t\t\t\t\t(PCA) clearly explained (more details)"
+      },
+      {
+        "url": "https://youtu.be/0Jp4gsfOLMs",
+        "title": "PCA in R"
+      },
+      {
+        "url": "https://youtu.be/Lsue2gEM9D0",
+        "title": "PCA in Python"
+      },
+      {
+        "url": "https://youtu.be/i4iUvjsGCMc",
+        "title": "BAM!!! Clearly Explained"
+      },
+      {
+        "url": "https://youtu.be/GEn-_dAyYME",
+        "title": "Multi-Dimensional Scaling (MDS) and Principal Coordinate\r\n\t\t\t\t\t\t\tAnalysis (PCoA) clearly explained"
+      },
+      {
+        "url": "https://youtu.be/pGAUHhLYp5Q",
+        "title": "MDS and PCoA in R"
+      },
+      {
+        "url": "https://youtu.be/NEaUSP4YerM",
+        "title": "t-SNE, clearly explained"
+      },
+      {
+        "url": "https://youtu.be/eN0wFzBA4Sc",
+        "title": "UMAP Dimension Reduction: Part 1 \u2013 Main Ideas"
+      },
+      {
+        "url": "https://youtu.be/jth4kEvJ3P8",
+        "title": "UMAP Dimension Reduction: Part 2 \u2013 Mathematical\r\n\t\t\t\t\t\t\tDetails"
+      },
+      {
+        "url": "https://youtu.be/oMtDyOn2TCc",
+        "title": "Heatmaps \u2013 considerations for drawing and\r\n\t\t\t\t\t\t\tinterpreting them"
+      },
+      {
+        "url": "https://youtu.be/7xHsRkOdVwo",
+        "title": "Hierarchical Clustering"
+      },
+      {
+        "url": "https://youtu.be/4b5d3muPQmA",
+        "title": "K-Means Clustering"
+      },
+      {
+        "url": "https://youtu.be/RDZUdRSDOok",
+        "title": "Clustering with DBSCAN"
+      },
+      {
+        "url": "https://youtu.be/HVXime0nQeI",
+        "title": "K-Nearest Neighbors"
+      },
+      {
+        "url": "https://youtu.be/O2L2Uv9pdDA",
+        "title": "Naive Bayes"
+      },
+      {
+        "url": "https://youtu.be/H3EjCKtlVog",
+        "title": "Gaussian Naive Bayes"
+      },
+      {
+        "url": "https://youtu.be/wl1myxrtQHQ",
+        "title": "The Chain Rule"
+      },
+      {
+        "url": "https://youtu.be/sDv4f4s2SB8",
+        "title": "Gradient Descent"
+      },
+      {
+        "url": "https://youtu.be/vMh0zPT0tLI",
+        "title": "Stochastic Gradient Descent"
+      },
+      {
+        "url": "https://youtu.be/589nCGeWG1w",
+        "title": "One-Hot, Label, Target and K-Fold Target Encoding,\r\n\t\t\t\t\t\t\tClearly Explained!!!"
+      },
+      {
+        "url": "https://youtu.be/_L39rN6gz7Y",
+        "title": "Decision and Classification Trees, Clearly\r\n\t\t\t\t\t\t\t\t\tExplained!!!"
+      },
+      {
+        "url": "https://youtu.be/wpNl-JwwplA",
+        "title": "Decision Trees Part 2: Feature Selection and\r\n\t\t\t\t\t\t\t\t\tMissing Data"
+      },
+      {
+        "url": "https://youtu.be/g9c66TUylZ4",
+        "title": "Regression Trees"
+      },
+      {
+        "url": "https://youtu.be/D0efHEJsfHo",
+        "title": "How to Prune Trees (Cost Complexity Pruning)"
+      },
+      {
+        "url": "https://youtu.be/q90UDEgYqeI",
+        "title": "Classification Trees in Python, from\r\n\t\t\t\t\t\t\t\t\tStart-to-Finish"
+      },
+      {
+        "url": "https://youtu.be/J4Wdy0Wc_xQ",
+        "title": "Random Forests Part 1: Building, using and evaluating"
+      },
+      {
+        "url": "https://youtu.be/mIlw5j3WyVk",
+        "title": "Random Forests Part 2: Missing data and clustering"
+      },
+      {
+        "url": "https://youtu.be/6EXPYzbfLCE",
+        "title": "Random Forests in R"
+      },
+      {
+        "url": "https://youtu.be/LsK-xG1cLYA",
+        "title": "AdaBoost"
+      },
+      {
+        "url": "https://youtu.be/ilUbD7EoQnk",
+        "title": "Three (3) things to do when starting out in Data\r\n\t\t\t\t\t\t\tScience"
+      },
+      {
+        "url": "https://youtu.be/3CC4N4z3GJc",
+        "title": "Gradient Boost Part 1: Regression Main Ideas"
+      },
+      {
+        "url": "https://youtu.be/2xudPOBz-vs",
+        "title": "Gradient Boost Part 2: Regression Details"
+      },
+      {
+        "url": "https://youtu.be/jxuNLH5dXCs",
+        "title": "Gradient Boost Part 3: Classification Main Ideas"
+      },
+      {
+        "url": "https://youtu.be/StWY5QWMXCw",
+        "title": "Gradient Boost Part 4: Classification Details"
+      },
+      {
+        "url": "https://youtu.be/W4sYsXGeCls",
+        "title": "Troll 2, Clearly Explained!!!"
+      },
+      {
+        "url": "https://youtu.be/OtD8wVaFm6E",
+        "title": "XGBoost Part 1: Regression"
+      },
+      {
+        "url": "https://youtu.be/8b1JEDvenQU",
+        "title": "XGBoost Part 2: Classification"
+      },
+      {
+        "url": "https://youtu.be/ZVFeW798-2I",
+        "title": "XGBoost Part 3: Mathematical Details"
+      },
+      {
+        "url": "https://youtu.be/oRrKeUCEbq8",
+        "title": "XGBoost Part 4: Crazy Cool Optimizations"
+      },
+      {
+        "url": "https://youtu.be/GrJP9FLV3FE",
+        "title": "XGBoost in Python, from Start-to-Finish"
+      },
+      {
+        "url": "https://youtu.be/e9U0QAFbfLI",
+        "title": "Cosine Similarity"
+      },
+      {
+        "url": "https://youtu.be/KXOTSkPL2X4",
+        "title": "CatBoost Part 1: Ordered Target Encoding"
+      },
+      {
+        "url": "https://youtu.be/3Bg2XRFOTzg",
+        "title": "CatBoost Part 2: Building and Using Trees"
+      },
+      {
+        "url": "https://youtu.be/efR1C6CvhmE",
+        "title": "Support Vector Machines (SVM)"
+      },
+      {
+        "url": "https://youtu.be/Toet3EiSFcM",
+        "title": "Part 2: The Polynomial Kernel"
+      },
+      {
+        "url": "https://youtu.be/Qc5IyLW_hns",
+        "title": "Part 3: The Radial (RBF) Kernel"
+      },
+      {
+        "url": "https://youtu.be/8A7L0GsBiLQ",
+        "title": "Support Vector Machines in Python, from\r\n\t\t\t\t\t\t\t\t\tStart-to-Finish"
+      },
+      {
+        "url": "https://youtu.be/yIYKR4sgzI8",
+        "title": "Logistic Regression"
+      },
+      {
+        "url": "https://youtu.be/vN5cNN2-HWE",
+        "title": "Logistic Regression, Details Part 1: Coefficients"
+      },
+      {
+        "url": "https://youtu.be/BfKanl1aSG0",
+        "title": "Logistic Regression, Details Part 2: Maximum\r\n\t\t\t\t\t\t\tLikelihood"
+      },
+      {
+        "url": "https://youtu.be/xxFYro8QuXA",
+        "title": "Logistic Regression, Details Part 3: R-squared and its\r\n\t\t\t\t\t\t\tp-value"
+      },
+      {
+        "url": "https://youtu.be/9T0wlKdew6I",
+        "title": "Saturated Models and Deviance Statistics"
+      },
+      {
+        "url": "https://youtu.be/JC56jS2gVUE",
+        "title": "Deviance Residuals"
+      },
+      {
+        "url": "https://youtu.be/C4N3_XJJ-jU",
+        "title": "Logistic Regression in R"
+      },
+      {
+        "url": "https://youtu.be/Z-T0iJEXiwM",
+        "title": "Reinforcement Learning: Essential Concepts"
+      },
+      {
+        "url": "https://youtu.be/zxagGtF9MeU",
+        "title": "Neural Networks Part 0: Neural Networks are not\r\n\t\t\t\t\t\t\tScary!!!"
+      },
+      {
+        "url": "https://youtu.be/q-BiW5srMFQ",
+        "title": "How AI works in Super Simple Terms!!!"
+      },
+      {
+        "url": "https://youtu.be/CqOfi41LfDw",
+        "title": "Neural Networks Part 1: The Essential Main Ideas"
+      },
+      {
+        "url": "https://youtu.be/IN2XmBhILt4",
+        "title": "Neural Networks Part 2: Backpropagation Main Ideas"
+      },
+      {
+        "url": "https://youtu.be/iyn2zdALii8",
+        "title": "Backpropagation Details Part 1"
+      },
+      {
+        "url": "https://youtu.be/GKZoOHXGcLo",
+        "title": "Backpropagation Details Part 2"
+      },
+      {
+        "url": "https://youtu.be/68BZ5f7P94E",
+        "title": "Neural Networks Part 3: ReLU in Action!!!"
+      },
+      {
+        "url": "https://youtu.be/83LYR-1IcjA",
+        "title": "Neural Networks Part 4: Multiple Inputs and Outputs"
+      },
+      {
+        "url": "https://youtu.be/KpKog-L9veg",
+        "title": "Neural Networks Part 5: ArgMax and SoftMax"
+      },
+      {
+        "url": "https://youtu.be/M59JElEPgIg",
+        "title": "The SoftMax Derivative, Step-by-Step"
+      },
+      {
+        "url": "https://youtu.be/6ArSys5qHAU",
+        "title": "Neural Networks Part 6: Cross Entropy"
+      },
+      {
+        "url": "https://youtu.be/xBEh66V9gZo",
+        "title": "Neural Networks Part 7: Cross Entropy Derivatives and\r\n\t\t\t\t\t\t\tBackpropagation"
+      },
+      {
+        "url": "https://youtu.be/HGwBXDKFk9I",
+        "title": "Neural Networks Part 8: Image Classification with\r\n\t\t\t\t\t\t\tConvolutional Neural Networks (CNNs)"
+      },
+      {
+        "url": "https://youtu.be/AsNTP8Kwu80",
+        "title": "Neural Networks Part 9: Recurrent Neural Networks\r\n\t\t\t\t\t\t\t(RNNs)"
+      },
+      {
+        "url": "https://youtu.be/YCzL96nL7j0",
+        "title": "Neural Networks Part 10: Long Short-Term Memory\r\n\t\t\t\t\t\t\t(LSTM)"
+      },
+      {
+        "url": "https://youtu.be/viZrOnJclY0",
+        "title": "Neural Networks Part 11: Word Embedding and Word2Vec"
+      },
+      {
+        "url": "https://youtu.be/L8HKweZIOmg",
+        "title": "Neural Networks Part 12: Encoder-Decoder (seq2seq)\r\n\t\t\t\t\t\t\tmodels"
+      },
+      {
+        "url": "https://youtu.be/PSs6nxngL6k",
+        "title": "Neural Networks Part 13: Attention"
+      },
+      {
+        "url": "https://youtu.be/zxQyTK8quyY",
+        "title": "Neural Networks Part 14: Transformers"
+      },
+      {
+        "url": "https://youtu.be/bQ5BoolX9Ag",
+        "title": "Neural Networks Part 15: Decoder-Only Transformers (like\r\n\t\t\t\t\t\t\tChatGPT)!!!"
+      },
+      {
+        "url": "https://youtu.be/GDN649X_acE",
+        "title": "Neural Networks Part 16: Encoder-Only Transformers (like\r\n\t\t\t\t\t\t\tBERT)!!!"
+      },
+      {
+        "url": "https://youtu.be/9hbQieQh7-o",
+        "title": "Reinforcement Learning with Neural Networks: Essential\r\n\t\t\t\t\t\t\tConcepts!!!"
+      },
+      {
+        "url": "https://youtu.be/DVGmsnxB2UQ",
+        "title": "Mathematical Details"
+      },
+      {
+        "url": "https://youtu.be/qPN_XZcJf_s",
+        "title": "Reinforcement Learning with Human Feedback (RLHF), Clearly\r\n\t\t\t\t\t\t\tExplained!!!"
+      },
+      {
+        "url": "https://youtu.be/L35fFDpwIM4",
+        "title": "Tensors for Neural Networks, Clearly Explained!!!"
+      },
+      {
+        "url": "https://youtu.be/ZTt9gsGcdDo",
+        "title": "Essential Matrix Algebra for Neural Networks, Clearly\r\n\t\t\t\t\t\t\tExplained!!!"
+      },
+      {
+        "url": "https://youtu.be/KphmOJnLAdI",
+        "title": "The Matrix Math Behind Transformer Neural Networks, One\r\n\t\t\t\t\t\t\tStep at a Time!!!"
+      },
+      {
+        "url": "https://youtu.be/FHdlXe1bSe4",
+        "title": "The StatQuest Introduction to PyTorch"
+      },
+      {
+        "url": "https://youtu.be/khMzi6xPbuM",
+        "title": "Introduction to Coding Neural Networks with\r\n\t\t\t\t\t\t\t\t\tPyTorch + Lightning"
+      },
+      {
+        "url": "https://youtu.be/RHGiXPuo_pI",
+        "title": "Long Short-Term Memory (LSTM) with PyTorch +\r\n\t\t\t\t\t\t\t\t\tLightning"
+      },
+      {
+        "url": "https://youtu.be/Qf06XDYXCXI",
+        "title": "Word Embedding in PyTorch + Lightning"
+      },
+      {
+        "url": "https://youtu.be/C9QSpl5nmrY",
+        "title": "Coding a ChatGPT Like Transformer From Scratch in\r\n\t\t\t\t\t\t\t\t\tPyTorch + Lightning"
+      },
+      {
+        "url": "https://youtu.be/Llqoz1u8Pfk",
+        "title": "Silly Songs, Clearly Explained!!!"
+      },
+      {
+        "url": "https://youtu.be/6fWk_lQ_K5A",
+        "title": "How my pop influenced StatQuest"
+      },
+      {
+        "url": "https://youtu.be/h5o1n1QMcmM",
+        "title": "Optimization with Linear Programming (and the Simplex Algorithm), Main Ideas!!!"
+      },
+      {
+        "url": "https://youtu.be/lgD9lNB9Ums",
+        "title": "The Simplex Algorithm, Mathematical Details!!!"
+      },
+      {
+        "url": "https://youtube.com/shorts/oZ9SrkF_-LE?feature=share",
+        "title": "Normalizing Your Data"
+      },
+      {
+        "url": "https://youtube.com/shorts/A88rDEf-pfk?feature=share",
+        "title": "Standardizing Your Data"
+      },
+      {
+        "url": "https://youtube.com/shorts/P4aYC1kS4d0?feature=share",
+        "title": "Type 1 Errors (False\r\n\t\t\t\t\t\t\tPositive)"
+      },
+      {
+        "url": "https://youtube.com/shorts/qioNUZGVH1A?feature=share",
+        "title": "Type 2 Errors (False\r\n\t\t\t\t\t\t\tNegative)"
+      },
+      {
+        "url": "https://youtube.com/shorts/PWvfrTgaPBI?feature=share",
+        "title": "Sensitivity, Specificity,\r\n\t\t\t\t\t\t\tPrecision and Recall"
+      },
+      {
+        "url": "https://youtube.com/shorts/ccjrsxXmfnw",
+        "title": "PCA Eigenvalues"
+      },
+      {
+        "url": "https://youtu.be/bv9agba7blc",
+        "title": "PCA Eigenvectors"
+      },
+      {
+        "url": "https://youtube.com/shorts/LS6VX7noVWY?feature=share",
+        "title": "Matrix Notation: An m-by-n\r\n\t\t\t\t\t\t\tmatrix"
+      },
+      {
+        "url": "https://youtube.com/shorts/y8xRw76i1qY?feature=share",
+        "title": "Matrix Notation: Multiplying\r\n\t\t\t\t\t\t\tmatrices"
+      },
+      {
+        "url": "https://youtube.com/shorts/953NHzFtGHc",
+        "title": "Likelihood vs Probability"
+      },
+      {
+        "url": "https://youtube.com/shorts/02zO75hHpZQ",
+        "title": "p-values"
+      },
+      {
+        "url": "https://youtube.com/shorts/YaQEUgIr4Mk",
+        "title": "Logistic vs Logit Functions"
+      },
+      {
+        "url": "https://youtube.com/shorts/8ZcccMzTz7Y?feature=share",
+        "title": "Logit (Log of the odds)"
+      },
+      {
+        "url": "https://youtu.be/q90UDEgYqeI",
+        "title": "Classification Trees in Python, from Start-to-Finish"
+      },
+      {
+        "url": "https://youtu.be/8A7L0GsBiLQ",
+        "title": "Support Vector Machines in Python, from\r\n\t\t\t\t\t\t\tStart-to-Finish"
+      },
+      {
+        "url": "https://youtu.be/GrJP9FLV3FE",
+        "title": "XGBoost in Python, from Start-to-Finish"
+      },
+      {
+        "url": "https://youtu.be/tlf6wYJrwKY",
+        "title": "A Gentle Introduction to RNA-seq"
+      },
+      {
+        "url": "https://youtu.be/nkWGmaYRues",
+        "title": "A Gentle Introduction to ChIP-seq"
+      },
+      {
+        "url": "https://youtu.be/Wdt6jdi-NQo",
+        "title": "edgeR, part1: Library Normalization"
+      },
+      {
+        "url": "https://youtu.be/UFB993xufUU",
+        "title": "DESeq2, part1: Library Normalization"
+      },
+      {
+        "url": "https://youtu.be/Gi0JdrxRq5s",
+        "title": "edgeR and DESeq2, part2: Independent Filtering (removing\r\n\t\t\t\t\t\t\tgenes with low read counts)"
+      },
+      {
+        "url": "https://youtu.be/gKnfP2_Xdpo",
+        "title": "RNA-seq \u2013 The Problem with Technical Replicates"
+      },
+      {
+        "url": "https://youtu.be/TTUrtCY2k-w",
+        "title": "RPKM, FPKM, and TPM"
+      },
+      {
+        "url": "https://www.youtube.com/@statquest",
+        "title": "YouTube"
+      }
+    ]
+  },
+  {
+    "source": "https://karpathy.ai/zero-to-hero.html",
+    "title": "Neural Networks: Zero To Hero",
+    "videos": [
+      "VMj-3S1tku0",
+      "PaCmpygFfXo",
+      "TCH_1BHY58I",
+      "P6sfmUTpUmc",
+      "q8SA3rM6ckI",
+      "t3YJ5hKiMQ0",
+      "kCc8FmEb1nY",
+      "zduSFxRajkE"
+    ],
+    "links": [
+      {
+        "url": "https://youtu.be/VMj-3S1tku0",
+        "title": "The spelled-out intro to neural networks and backpropagation: building micrograd"
+      },
+      {
+        "url": "https://youtu.be/PaCmpygFfXo",
+        "title": "The spelled-out intro to language modeling: building makemore"
+      },
+      {
+        "url": "https://youtu.be/TCH_1BHY58I",
+        "title": "Building makemore Part 2: MLP"
+      },
+      {
+        "url": "https://youtu.be/P6sfmUTpUmc",
+        "title": "Building makemore Part 3: Activations & Gradients, BatchNorm"
+      },
+      {
+        "url": "https://youtu.be/q8SA3rM6ckI",
+        "title": "Building makemore Part 4: Becoming a Backprop Ninja"
+      },
+      {
+        "url": "https://youtu.be/t3YJ5hKiMQ0",
+        "title": "Building makemore Part 5: Building a WaveNet"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=kCc8FmEb1nY",
+        "title": "Let's build GPT: from scratch, in code, spelled out."
+      },
+      {
+        "url": "https://youtu.be/zduSFxRajkE",
+        "title": "Let's build the GPT Tokenizer"
+      }
+    ]
+  },
+  {
+    "source": "https://cs229.stanford.edu/syllabus-summer2019.html",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>"
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/learn-pytorch-for-deep-learning-in-day/",
+    "title": "Learn PyTorch for Deep Learning \u2013 Free 26-Hour Course",
+    "videos": [
+      "V_xro1bcAuA"
+    ],
+    "links": [
+      {
+        "url": "https://youtu.be/V_xro1bcAuA",
+        "title": "view the full 26 hour course here"
+      }
+    ]
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/learn-how-to-build-apis-with-python/",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/docker-simplified/",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/git-and-github-for-beginners/",
+    "title": "Git and GitHub Tutorial \u2013 Version Control for Beginners",
+    "videos": [],
+    "links": []
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/learn-sql-in-4-hours/",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/learn-object-oriented-programming-with-python/",
+    "title": "Learn Object Oriented Programming With Python",
+    "videos": [
+      "Ej_02ICOIgs"
+    ],
+    "links": [
+      {
+        "url": "https://youtu.be/Ej_02ICOIgs",
+        "title": "freeCodeCamp.org YouTube channel"
+      }
+    ]
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/learn-python-free-python-courses-for-beginners/",
+    "title": "Learn Python \u2013 Free Python Courses for Beginners",
+    "videos": [
+      "rfscVS0vtbw",
+      "W0wWwglE1Vc",
+      "_uQrJ0TkZlc",
+      "JJmcL1N2KQs",
+      "1F_OgqRuSdI",
+      "WGJJIrtnfpk",
+      "t8pPdKYpowI"
+    ],
+    "links": [
+      {
+        "url": "https://www.youtube.com/watch?v=rfscVS0vtbw",
+        "title": "freeCodeCamp YouTube Course"
+      },
+      {
+        "url": "https://www.youtube.com/playlist?list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg",
+        "title": "Beginner Python YouTube videos by CS Dojo"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=W0wWwglE1Vc&list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg&index=15",
+        "title": "how to build a Twitter bot using Python"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=_uQrJ0TkZlc",
+        "title": "Programming with Mosh YouTube course,"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=JJmcL1N2KQs",
+        "title": "Brad Traversy YouTube course"
+      },
+      {
+        "url": "https://www.youtube.com/playlist?list=PLWKjhJtqVAbkmRvnFmOd4KhDdlK1oIq23",
+        "title": "this Sam Focht YouTube Series"
+      },
+      {
+        "url": "https://www.pythonforbeginners.com/api/using-the-youtube-api",
+        "title": "Using the YouTube API in Python"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=1F_OgqRuSdI&list=PL0-84-yl1fUnRuXGFe_F7qSH1LEnn9LkW",
+        "title": "the YouTube series"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=WGJJIrtnfpk",
+        "title": "this 12 hour YouTube Edureka course"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=t8pPdKYpowI",
+        "title": "this TechWorld with Nana YouTube course"
+      }
+    ]
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/learn-langgraph-build-complex-ai-agents-with-python/",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "source": "https://www.3blue1brown.com/topics/neural-networks",
+    "title": "3Blue1Brown",
+    "videos": [],
+    "links": [
+      {
+        "url": "https://www.youtube.com/@3blue1brown",
+        "title": "Channel"
+      },
+      {
+        "url": "https://www.youtube.com/@grantsanderson",
+        "title": "2nd Channel"
+      }
+    ]
+  },
+  {
+    "source": "https://www.3blue1brown.com/topics/linear-algebra",
+    "title": "3Blue1Brown",
+    "videos": [],
+    "links": [
+      {
+        "url": "https://www.youtube.com/@3blue1brown",
+        "title": "Channel"
+      },
+      {
+        "url": "https://www.youtube.com/@grantsanderson",
+        "title": "2nd Channel"
+      }
+    ]
+  },
+  {
+    "source": "https://missing.csail.mit.edu/2020/course-shell/",
+    "title": "\n    \n      \n        Course Overview + The Shell \u00b7 Missing Semester\n      \n    \n  ",
+    "videos": [
+      "Z56Jmr9Z34Q"
+    ],
+    "links": []
+  },
+  {
+    "source": "https://missing.csail.mit.edu/2020/version-control/",
+    "title": "\n    \n      \n        Version Control (Git) \u00b7 Missing Semester\n      \n    \n  ",
+    "videos": [
+      "2sjqTHE0zok"
+    ],
+    "links": []
+  },
+  {
+    "source": "https://course.fast.ai/Lessons/lesson1.html",
+    "title": "Practical Deep Learning for Coders - 1: Getting started",
+    "videos": [
+      "0_BBRNYInx8",
+      "mYpjmM7O-30",
+      "8SF_h3xF3cE"
+    ],
+    "links": [
+      {
+        "url": "https://youtu.be/0_BBRNYInx8",
+        "title": "Bonus: Lesson 9a"
+      },
+      {
+        "url": "https://youtu.be/mYpjmM7O-30",
+        "title": "Bonus: Lesson 9b"
+      }
+    ]
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/",
+    "title": "Creating APIs with Python - Free 19-Hour Course",
+    "videos": [
+      "0sOvCWFmrtA"
+    ],
+    "links": [
+      {
+        "url": "https://youtu.be/0sOvCWFmrtA",
+        "title": "the freeCodeCamp.org YouTube channel"
+      }
+    ]
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/docker-full-course/",
+    "title": "Docker Full Course",
+    "videos": [
+      "rjjES5IsPdg"
+    ],
+    "links": []
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/git-and-github-crash-course/",
+    "title": "Git and GitHub Crash Course",
+    "videos": [
+      "RGOj5yH7evk"
+    ],
+    "links": [
+      {
+        "url": "https://www.youtube.com/watch?v=RGOj5yH7evk",
+        "title": "on the freeCodeCamp.org YouTube channel"
+      }
+    ]
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/posgresql-course-for-beginners/",
+    "title": "PostgreSQL Course for Beginners",
+    "videos": [
+      "SpfIwlAYaKk"
+    ],
+    "links": [
+      {
+        "url": "https://youtu.be/SpfIwlAYaKk",
+        "title": "the freeCodeCamp.org YouTube channel"
+      }
+    ]
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/learn-langgraph-and-build-conversational-ai-with-python/",
+    "title": "Learn LangGraph and Build Conversational AI with Python",
+    "videos": [
+      "jGg_1h0qzaM"
+    ],
+    "links": [
+      {
+        "url": "https://youtu.be/jGg_1h0qzaM",
+        "title": "freeCodeCamp.org YouTube channel"
+      }
+    ]
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/machine-learning-for-everybody/",
+    "title": "Machine Learning for Everybody",
+    "videos": [
+      "i_LwzRVP7bg"
+    ],
+    "links": []
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/",
+    "title": "Learn Data Analysis with Python \u2013 A Free 4-Hour Course",
+    "videos": [
+      "r-uOLxNrNk8"
+    ],
+    "links": [
+      {
+        "url": "https://youtu.be/r-uOLxNrNk8",
+        "title": "the freeCodeCamp.org YouTube channel"
+      }
+    ]
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/linear-algebra-full-course/",
+    "title": "Learn Linear Algebra with This 20-Hour Course and Free Textbook",
+    "videos": [
+      "JnTa9XtvmfI"
+    ],
+    "links": [
+      {
+        "url": "https://youtu.be/JnTa9XtvmfI",
+        "title": "the freeCodeCamp.org YouTube channel"
+      }
+    ]
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/free-statistics-course/",
+    "title": "Learn College-level Statistics in this free 8-hour course",
+    "videos": [
+      "xxpc-HPKN28"
+    ],
+    "links": [
+      {
+        "url": "https://www.youtube.com/watch?v=xxpc-HPKN28",
+        "title": "freeCodeCamp.org YouTube channel"
+      }
+    ]
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/api-documentation-best-practices-course/",
+    "title": "API Documentation Best Practices Course",
+    "videos": [
+      "0CSyIBHQy9g"
+    ],
+    "links": [
+      {
+        "url": "https://youtu.be/0CSyIBHQy9g",
+        "title": "the freeCodeCamp.org YouTube channel"
+      },
+      {
+        "url": "https://www.classcentral.com/course/skillshare-youtube-masterclass-how-to-build-a-meaningful-channel-80700?go=1&ref=fcc",
+        "title": "On Skillshare\n        YouTube Masterclass - How to Build a Meaningful Channel\n        \n            Anas Nuur Ali\n        \n        \n            \n                \n                    \n                    4.5 out of 5 stars (110) from 110 ratings\n                \n            \n            \n                \n                    \n                    43m\n                    43 minutes\n                \n            \n            \n                Beginner\n            \n            \n        \n        \n            View course\n            \n        \n        (opens in a new tab)"
+      },
+      {
+        "url": "https://www.classcentral.com/course/skillshare-how-to-start-a-youtube-channel-for-beginners-in-2024-step-by-step-61953?go=1&ref=fcc",
+        "title": "On Skillshare\n        How to Start a YouTube Channel for Beginners in 2024 (Step-by-Step)\n        \n            Ben Rowlands\n        \n        \n            \n                \n                    \n                    4.6 out of 5 stars (32) from 32 ratings\n                \n            \n            \n                \n                    \n                    1h 26m\n                    1 hour 26 minutes\n                \n            \n            \n                Beginner\n            \n            \n        \n        \n            View course\n            \n        \n        (opens in a new tab)"
+      },
+      {
+        "url": "https://www.classcentral.com/course/skillshare-create-custom-end-screens-for-your-youtube-videos-with-canva-80523?go=1&ref=fcc",
+        "title": "On Skillshare\n        Create Custom End Screens for your YouTube Videos with Canva\n        \n            Ronny Hermosa\n        \n        \n            \n                \n                    \n                    4.3 out of 5 stars (35) from 35 ratings\n                \n            \n            \n                \n                    \n                    52m\n                    52 minutes\n                \n            \n            \n                Intermediate\n            \n            \n        \n        \n            View course\n            \n        \n        (opens in a new tab)"
+      },
+      {
+        "url": "https://www.classcentral.com/subject/youtube-channel-growth?ref=fcc",
+        "title": "More YouTube Channel Growth courses on Class Central \u2192(opens in a new tab)"
+      },
+      {
+        "url": "https://www.classcentral.com/course/skillshare-youtube-masterclass-how-to-build-a-meaningful-channel-80700?go=1&ref=fcc",
+        "title": "On Skillshare\n        YouTube Masterclass - How to Build a Meaningful Channel\n        \n            Anas Nuur Ali\n        \n        \n            \n                \n                    \n                    4.5 out of 5 stars (110) from 110 ratings\n                \n            \n            \n                \n                    \n                    43m\n                    43 minutes\n                \n            \n            \n                Beginner\n            \n            \n        \n        \n            View course\n            \n        \n        (opens in a new tab)"
+      },
+      {
+        "url": "https://www.classcentral.com/course/skillshare-how-to-start-a-youtube-channel-for-beginners-in-2024-step-by-step-61953?go=1&ref=fcc",
+        "title": "On Skillshare\n        How to Start a YouTube Channel for Beginners in 2024 (Step-by-Step)\n        \n            Ben Rowlands\n        \n        \n            \n                \n                    \n                    4.6 out of 5 stars (32) from 32 ratings\n                \n            \n            \n                \n                    \n                    1h 26m\n                    1 hour 26 minutes\n                \n            \n            \n                Beginner\n            \n            \n        \n        \n            View course\n            \n        \n        (opens in a new tab)"
+      },
+      {
+        "url": "https://www.classcentral.com/course/skillshare-create-custom-end-screens-for-your-youtube-videos-with-canva-80523?go=1&ref=fcc",
+        "title": "On Skillshare\n        Create Custom End Screens for your YouTube Videos with Canva\n        \n            Ronny Hermosa\n        \n        \n            \n                \n                    \n                    4.3 out of 5 stars (35) from 35 ratings\n                \n            \n            \n                \n                    \n                    52m\n                    52 minutes\n                \n            \n            \n                Intermediate\n            \n            \n        \n        \n            View course\n            \n        \n        (opens in a new tab)"
+      },
+      {
+        "url": "https://www.classcentral.com/subject/youtube-channel-growth?ref=fcc",
+        "title": "More YouTube Channel Growth courses on Class Central \u2192(opens in a new tab)"
+      }
+    ]
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/learn-python-and-build-autonomous-agents/",
+    "title": "Learn Python and Build Autonomous Agents",
+    "videos": [
+      "UsfpzxZNsPo"
+    ],
+    "links": [
+      {
+        "url": "https://youtu.be/UsfpzxZNsPo",
+        "title": "the freeCodeCamp.org YouTube channel"
+      }
+    ]
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/code-an-llm-from-scratch-theory-to-rlhf/",
+    "title": "Code an LLM From Scratch \u2013 Theory to RLHF",
+    "videos": [
+      "p3sij8QzONQ"
+    ],
+    "links": [
+      {
+        "url": "https://youtu.be/p3sij8QzONQ",
+        "title": "the full course on our YouTube channel"
+      },
+      {
+        "url": "https://www.classcentral.com/course/udemy-how-to-start-a-youtube-automation-channel-m-159593?go=1&ref=fcc",
+        "title": "On Udemy\n        How to Start a YouTube Automation Channel & Monetize It Fast\n        \n            Bryan Guerra\n        \n        \n            \n                \n                    \n                    4.3 out of 5 stars (3,632) from 3,632 ratings\n                \n            \n            \n                \n                    \n                    5h 41m\n                    5 hours 41 minutes\n                \n            \n            \n                Beginner\n            \n            \n                \n                    \n                    Certificate\n                \n            \n        \n        \n            View course\n            \n        \n        (opens in a new tab)"
+      },
+      {
+        "url": "https://www.classcentral.com/course/skillshare-start-youtube-build-a-channel-from-scratch-84519?go=1&ref=fcc",
+        "title": "On Skillshare\n        Start YouTube: Build a Channel From Scratch\n        \n            Francesco D'Alessio\n        \n        \n            \n                \n                    \n                    4.4 out of 5 stars (17) from 17 ratings\n                \n            \n            \n                \n                    \n                    57m\n                    57 minutes\n                \n            \n            \n                Beginner\n            \n            \n        \n        \n            View course\n            \n        \n        (opens in a new tab)"
+      },
+      {
+        "url": "https://www.classcentral.com/course/skillshare-make-great-youtube-thumbnails-35023?go=1&ref=fcc",
+        "title": "On Skillshare\n        Make Great YouTube Thumbnails\n        \n            Evan (PolyMatter)\n        \n        \n            \n                \n                    \n                    4.3 out of 5 stars (79) from 79 ratings\n                \n            \n            \n                \n                    \n                    1h 11m\n                    1 hour 11 minutes\n                \n            \n            \n                Beginner\n            \n            \n        \n        \n            View course\n            \n        \n        (opens in a new tab)"
+      },
+      {
+        "url": "https://www.classcentral.com/course/skillshare-youtube-analytics-and-seo-masterclass-rank-1-on-youtube-82213?go=1&ref=fcc",
+        "title": "On Skillshare\n        YouTube Analytics and SEO Masterclass: Rank #1 On YouTube!\n        \n            Nader Nadernejad\n        \n        \n            \n                \n                    \n                    3.6 out of 5 stars (60) from 60 ratings\n                \n            \n            \n                \n                    \n                    47m\n                    47 minutes\n                \n            \n            \n                Intermediate\n            \n            \n        \n        \n            View course\n            \n        \n        (opens in a new tab)"
+      },
+      {
+        "url": "https://www.classcentral.com/subject/youtube-channel-growth?ref=fcc",
+        "title": "More YouTube Channel Growth courses on Class Central \u2192(opens in a new tab)"
+      },
+      {
+        "url": "https://www.classcentral.com/course/udemy-how-to-start-a-youtube-automation-channel-m-159593?go=1&ref=fcc",
+        "title": "On Udemy\n        How to Start a YouTube Automation Channel & Monetize It Fast\n        \n            Bryan Guerra\n        \n        \n            \n                \n                    \n                    4.3 out of 5 stars (3,632) from 3,632 ratings\n                \n            \n            \n                \n                    \n                    5h 41m\n                    5 hours 41 minutes\n                \n            \n            \n                Beginner\n            \n            \n                \n                    \n                    Certificate\n                \n            \n        \n        \n            View course\n            \n        \n        (opens in a new tab)"
+      },
+      {
+        "url": "https://www.classcentral.com/course/skillshare-start-youtube-build-a-channel-from-scratch-84519?go=1&ref=fcc",
+        "title": "On Skillshare\n        Start YouTube: Build a Channel From Scratch\n        \n            Francesco D'Alessio\n        \n        \n            \n                \n                    \n                    4.4 out of 5 stars (17) from 17 ratings\n                \n            \n            \n                \n                    \n                    57m\n                    57 minutes\n                \n            \n            \n                Beginner\n            \n            \n        \n        \n            View course\n            \n        \n        (opens in a new tab)"
+      },
+      {
+        "url": "https://www.classcentral.com/course/skillshare-make-great-youtube-thumbnails-35023?go=1&ref=fcc",
+        "title": "On Skillshare\n        Make Great YouTube Thumbnails\n        \n            Evan (PolyMatter)\n        \n        \n            \n                \n                    \n                    4.3 out of 5 stars (79) from 79 ratings\n                \n            \n            \n                \n                    \n                    1h 11m\n                    1 hour 11 minutes\n                \n            \n            \n                Beginner\n            \n            \n        \n        \n            View course\n            \n        \n        (opens in a new tab)"
+      },
+      {
+        "url": "https://www.classcentral.com/course/skillshare-youtube-analytics-and-seo-masterclass-rank-1-on-youtube-82213?go=1&ref=fcc",
+        "title": "On Skillshare\n        YouTube Analytics and SEO Masterclass: Rank #1 On YouTube!\n        \n            Nader Nadernejad\n        \n        \n            \n                \n                    \n                    3.6 out of 5 stars (60) from 60 ratings\n                \n            \n            \n                \n                    \n                    47m\n                    47 minutes\n                \n            \n            \n                Intermediate\n            \n            \n        \n        \n            View course\n            \n        \n        (opens in a new tab)"
+      },
+      {
+        "url": "https://www.classcentral.com/subject/youtube-channel-growth?ref=fcc",
+        "title": "More YouTube Channel Growth courses on Class Central \u2192(opens in a new tab)"
+      }
+    ]
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/local-ai-development-with-ollama-course/",
+    "title": "Local AI Development with Ollama Course",
+    "videos": [
+      "GWB9ApTPTv4"
+    ],
+    "links": [
+      {
+        "url": "https://youtu.be/GWB9ApTPTv4",
+        "title": "on the freeCodeCamp.org YouTube channel"
+      }
+    ]
+  },
+  {
+    "source": "https://www.freecodecamp.org/news/ci-cd-in-production-with-jenkins/",
+    "title": "CI/CD in Production with Jenkins",
+    "videos": [
+      "uHNOqKdqQas"
+    ],
+    "links": [
+      {
+        "url": "https://youtu.be/uHNOqKdqQas",
+        "title": "the freeCodeCamp.org YouTube channel"
+      }
+    ]
+  },
+  {
+    "source": "https://www.3blue1brown.com/lessons/gradient-descent",
+    "title": "Gradient descent, how neural networks learn | 3Blue1Brown",
+    "videos": [
+      "IHZwWFHWa-w"
+    ],
+    "links": []
+  },
+  {
+    "source": "https://www.3blue1brown.com/lessons/neural-networks",
+    "title": "But what is a Neural Network? | 3Blue1Brown",
+    "videos": [
+      "aircAruvnKk"
+    ],
+    "links": []
+  },
+  {
+    "source": "https://www.3blue1brown.com/lessons/backpropagation",
+    "title": "What is backpropagation really doing? | 3Blue1Brown",
+    "videos": [
+      "Ilg3gGewQ5U"
+    ],
+    "links": []
+  }
+]
