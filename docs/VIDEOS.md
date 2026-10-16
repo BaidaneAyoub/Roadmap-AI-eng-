@@ -162,6 +162,31 @@ Every concept has selected video links, with explanations and practical watch gu
   - Useful because: Follow the pipeline, then test chunking and retrieval separately.
   - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
   - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [GitHub Actions — full course](https://www.youtube.com/watch?v=Tz7FsunBbfQ) · freeCodeCamp · Full tool course
+  - Explains: Workflow configuration, CI/CD and automation.
+  - Useful because: Build a test/build workflow; paid certification is not required.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=Tz7FsunBbfQ
+- [Deep dive into LLM evaluation](https://www.youtube.com/watch?v=7EcznH0-of8) · Weights & Biases · Workshop
+  - Explains: Evaluation datasets, model quality checks and retrieval evaluation.
+  - Useful because: Use the evaluation methodology with local fixtures; hosted tracking accounts are optional.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=7EcznH0-of8
+- [Docker — full DevOps course](https://www.youtube.com/watch?v=rjjES5IsPdg) · freeCodeCamp · Long tool course · approximately 8h
+  - Explains: Images, containers, Dockerfiles and deploying containerized applications.
+  - Useful because: Package the exact service you tested; keep cloud purchases optional.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/docker-full-course/
+- [MLOps: a production-grade project](https://www.youtube.com/watch?v=-dJPoLm_gtE) · freeCodeCamp · Project course · approximately 3h
+  - Explains: Ingestion, experiment management and deploying a model workflow.
+  - Useful because: Connect evaluation, model artifacts and operations; use local alternatives to optional services.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/mlops-course-learn-to-build-machine-learning-production-grade-projects/
+- [Neural Networks Part 14: Transformers](https://www.youtube.com/watch?v=zxQyTK8quyY) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
 - [Stanford CS229 — Lecture 1](https://www.youtube.com/watch?v=jGwO_UgTS7I) · Stanford Online · Andrew Ng · University lecture
   - Explains: The machine-learning problem setup, supervised learning and initial regression concepts.
   - Useful because: Use it for mathematical framing after basic Python and algebra.
@@ -237,11 +262,6 @@ Every concept has selected video links, with explanations and practical watch gu
   - Useful because: Distinguish a confident probability from an accurate classifier.
   - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
   - Verification source: https://www.youtube.com/watch?v=rG2EfFOXyg0
-- [MLOps: a production-grade project](https://www.youtube.com/watch?v=-dJPoLm_gtE) · freeCodeCamp · Project course · approximately 3h
-  - Explains: Ingestion, experiment management and deploying a model workflow.
-  - Useful because: Connect evaluation, model artifacts and operations; use local alternatives to optional services.
-  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
-  - Verification source: https://www.freecodecamp.org/news/mlops-course-learn-to-build-machine-learning-production-grade-projects/
 - [Tensors for Neural Networks, Clearly Explained!!!](https://www.youtube.com/watch?v=L35fFDpwIM4) · StatQuest · Josh Starmer · Focused explanation
   - Explains: A visual, step-by-step explanation of the topic named in the title.
   - Useful because: Use the worked intuition before writing the corresponding small experiment.
@@ -318,11 +338,6 @@ Every concept has selected video links, with explanations and practical watch gu
   - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
   - Verification source: https://statquest.org/video_index.html
 - [Neural Networks Part 13: Attention](https://www.youtube.com/watch?v=PSs6nxngL6k) · StatQuest · Josh Starmer · Focused explanation
-  - Explains: A visual, step-by-step explanation of the topic named in the title.
-  - Useful because: Use the worked intuition before writing the corresponding small experiment.
-  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
-  - Verification source: https://statquest.org/video_index.html
-- [Neural Networks Part 14: Transformers](https://www.youtube.com/watch?v=zxQyTK8quyY) · StatQuest · Josh Starmer · Focused explanation
   - Explains: A visual, step-by-step explanation of the topic named in the title.
   - Useful because: Use the worked intuition before writing the corresponding small experiment.
   - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
@@ -427,11 +442,6 @@ Every concept has selected video links, with explanations and practical watch gu
   - Useful because: Compare adaptation choices against a held-out task evaluation before proposing a training run.
   - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
   - Verification source: https://introtodeeplearning.com/2025/index.html
-- [Deep dive into LLM evaluation](https://www.youtube.com/watch?v=7EcznH0-of8) · Weights & Biases · Workshop
-  - Explains: Evaluation datasets, model quality checks and retrieval evaluation.
-  - Useful because: Use the evaluation methodology with local fixtures; hosted tracking accounts are optional.
-  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
-  - Verification source: https://www.youtube.com/watch?v=7EcznH0-of8
 - [Site reliability engineering fundamentals](https://www.youtube.com/watch?v=eopc_ijIfLg) · Google Cloud Events · Technical session
   - Explains: Service objectives, error budgets, monitoring, alerting and emergency response.
   - Useful because: Write actionable monitoring and recovery steps instead of collecting logs without a plan.
@@ -447,16 +457,6 @@ Every concept has selected video links, with explanations and practical watch gu
   - Useful because: Add meaningful error slices and document sample-size limits.
   - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
   - Verification source: https://www.youtube.com/watch?v=xAN1HxU5XeU
-- [Docker — full DevOps course](https://www.youtube.com/watch?v=rjjES5IsPdg) · freeCodeCamp · Long tool course · approximately 8h
-  - Explains: Images, containers, Dockerfiles and deploying containerized applications.
-  - Useful because: Package the exact service you tested; keep cloud purchases optional.
-  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
-  - Verification source: https://www.freecodecamp.org/news/docker-full-course/
-- [GitHub Actions — full course](https://www.youtube.com/watch?v=Tz7FsunBbfQ) · freeCodeCamp · Full tool course
-  - Explains: Workflow configuration, CI/CD and automation.
-  - Useful because: Build a test/build workflow; paid certification is not required.
-  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
-  - Verification source: https://www.youtube.com/watch?v=Tz7FsunBbfQ
 - [CI/CD in production with Jenkins](https://www.youtube.com/watch?v=uHNOqKdqQas) · freeCodeCamp · Long tool course · approximately 17h
   - Explains: Continuous integration and delivery pipelines in a production-style workflow.
   - Useful because: An optional deeper pipeline reference; the roadmap lab uses a smaller GitHub Actions workflow.
