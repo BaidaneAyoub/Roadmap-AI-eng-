@@ -24,7 +24,7 @@ Put your program in Git and understand HTTP + JSON.
 
 Create a validated API and store its data. Take the data branch when your project needs it.
 
-**Optional branches:** [Mathematics and data](roadmap/math-data.md)
+**Optional branches:** [Mathematics and data](roadmap/math-data.md) · [Data Engineering + AI](roadmap/data-engineering-ai.md)
 
 These branches return to the main route; you do not need to finish them to continue.
 

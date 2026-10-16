@@ -283,7 +283,7 @@ const domain = d(
   "A distinct 10-phase roadmap: the data engineering backbone, AI/ML and LLM engineering, and a capstone for system design and interviews. It assumes SQL, Python, medallion warehousing, FastAPI and introductory Airflow are already familiar.",
   lessons.map((lesson, index) => m(`Phase ${index + 1}`, [lesson])),
   ["backend-sql", "python-values", "data-pandas"],
-)[0];
+);
 
 domain.description +=
   " Phases 1–7 build the DE backbone; Phases 8–9 can run alongside Phases 5–7 once the foundation is comfortable. Start Phase 10 after Phase 4 and keep it active throughout the rest of the roadmap. The two-year framing is a pace estimate, not a calendar schedule.";

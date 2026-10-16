@@ -210,6 +210,23 @@ The Andrew map is the supplied reference, not independently authenticated as an 
 - [x] Task decomposition → [coding-specifications](roadmap/coding-agents.md#coding-specifications)
 - [x] Verification → [coding-review](roadmap/coding-agents.md#coding-review)
 
+## Data Engineering + AI master roadmap coverage
+
+The supplied DE_AI_Master_Roadmap.pdf is integrated as a separate optional branch. Each phase retains its detailed topics, exercise and resources in the linked lesson.
+
+- [x] Phase 1: Distributed processing with Spark → [de-spark](roadmap/data-engineering-ai.md#de-spark)
+- [x] Phase 2: Orchestration mastery with Airflow → [de-airflow](roadmap/data-engineering-ai.md#de-airflow)
+- [x] Phase 3: Streaming and CDC with Kafka → [de-kafka](roadmap/data-engineering-ai.md#de-kafka)
+- [x] Phase 4: Lakehouse formats and storage internals → [de-lakehouse](roadmap/data-engineering-ai.md#de-lakehouse)
+- [x] Phase 5: Transformation and modeling with dbt + Kimball → [de-dbt-kimball](roadmap/data-engineering-ai.md#de-dbt-kimball)
+- [x] Phase 6: Data quality and observability → [de-quality-observability](roadmap/data-engineering-ai.md#de-quality-observability)
+- [x] Phase 7: Cloud and infrastructure → [de-cloud-infra](roadmap/data-engineering-ai.md#de-cloud-infra)
+- [x] Phase 8: ML engineering and MLOps → [de-mlops](roadmap/data-engineering-ai.md#de-mlops)
+- [x] Phase 9: LLM and GenAI engineering → [de-llm-genai](roadmap/data-engineering-ai.md#de-llm-genai)
+- [x] Phase 10: System design and interview preparation → [de-system-design-interviews](roadmap/data-engineering-ai.md#de-system-design-interviews)
+
+Sequencing is preserved: Phases 8–9 can run alongside Phases 5–7 once the foundation is comfortable, and Phase 10 begins after Phase 4 and continues throughout the remaining work. The two-year framing is a pace estimate, not a fixed schedule.
+
 ## Documentation guide coverage
 
 - [x] BRD → product/documentation lessons and project document checklist

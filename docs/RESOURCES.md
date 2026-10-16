@@ -59,6 +59,26 @@ Links are per lesson and include specific chapters where available. Optional hos
 - [FastAPI: dependencies](https://fastapi.tiangolo.com/tutorial/dependencies/) — Free; no registration required. No paid materials required.
 - [FastAPI: testing](https://fastapi.tiangolo.com/tutorial/testing/) — Free; no registration required. No paid materials required.
 - [PostgreSQL: using EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) — Free; no registration required. No paid materials required.
+- [Apache Spark: PySpark overview](https://spark.apache.org/docs/latest/api/python/getting_started/index.html) — Free; no registration required. No paid materials required.
+- [Apache Spark: SQL performance tuning](https://spark.apache.org/docs/latest/sql-performance-tuning.html) — Free; no registration required. No paid materials required.
+- [Apache Airflow: core concepts](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/overview.html) — Free; no registration required. No paid materials required.
+- [Apache Airflow: best practices](https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html) — Free; no registration required. No paid materials required.
+- [Apache Kafka: introduction](https://kafka.apache.org/documentation/#introduction) — Free; no registration required. No paid materials required.
+- [Debezium: getting started](https://debezium.io/documentation/reference/stable/tutorial.html) — Free; no registration required. No paid materials required.
+- [Apache Iceberg: documentation](https://iceberg.apache.org/docs/latest/) — Free; no registration required. No paid materials required.
+- [Delta Lake: quick start](https://docs.delta.io/latest/quick-start.html) — Free; no registration required. No paid materials required.
+- [dbt: build your first project](https://docs.getdbt.com/docs/get-started-dbt) — Free; no registration required. No paid materials required.
+- [dbt: incremental models](https://docs.getdbt.com/docs/build/incremental-models) — Free; no registration required. No paid materials required.
+- [Great Expectations: documentation](https://docs.greatexpectations.io/docs/) — Free; no registration required. No paid materials required.
+- [OpenLineage: documentation](https://openlineage.io/docs/) — Free; no registration required. No paid materials required.
+- [Docker: build and run an application](https://docs.docker.com/get-started/) — Free; no registration required. No paid materials required.
+- [Kubernetes: concepts](https://kubernetes.io/docs/concepts/) — Free; no registration required. No paid materials required.
+- [MLflow: tracking](https://mlflow.org/docs/latest/ml/tracking/) — Free; no registration required. No paid materials required.
+- [Feast: feature store concepts](https://docs.feast.dev/getting-started/concepts) — Free; no registration required. No paid materials required.
+- [Hugging Face LLM course](https://huggingface.co/learn/llm-course/chapter1/1) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
+- [OWASP Top 10 for LLM applications](https://genai.owasp.org/llm-top-10/) — Free; no registration required. No paid materials required.
+- [System Design Primer](https://github.com/donnemartin/system-design-primer) — Free; no registration required. No paid materials required.
+- [DataLemur: SQL interview questions](https://datalemur.com/questions) — Free; no registration required. No paid materials required.
 - [Inria: predictive modeling pipeline](https://inria.github.io/scikit-learn-mooc/python_scripts/02_numerical_pipeline_introduction.html) — Free; no registration required. No paid materials required.
 - [scikit-learn: dummy estimators](https://scikit-learn.org/stable/modules/model_evaluation.html#dummy-estimators) — Free; no registration required. No paid materials required.
 - [scikit-learn: cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html) — Free; no registration required. No paid materials required.
@@ -143,7 +163,6 @@ Links are per lesson and include specific chapters where available. Optional hos
 - [librosa: mel spectrogram](https://librosa.org/doc/0.11.0/generated/librosa.feature.melspectrogram.html) — Free; no registration required. No paid materials required.
 - [D2L: Markov decision processes](https://d2l.ai/chapter_reinforcement-learning/mdp.html) — Free; no registration required. No paid materials required.
 - [Hugging Face: deep reinforcement learning introduction](https://huggingface.co/learn/deep-rl-course/unit1/introduction) — Free; no registration required. No paid materials required.
-- [Hugging Face LLM course](https://huggingface.co/learn/llm-course/chapter1/1) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 - [Hugging Face: using transformers](https://huggingface.co/learn/llm-course/chapter2/1) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 - [Ollama documentation](https://docs.ollama.com/) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 - [Hugging Face: generation strategies](https://huggingface.co/docs/transformers/generation_strategies) — Free; no registration required. No paid materials required.
@@ -173,7 +192,6 @@ Links are per lesson and include specific chapters where available. Optional hos
 - [PAIR: explainability and trust](https://pair.withgoogle.com/guidebook/chapters/explainability-trust/) — Free; no registration required. No paid materials required.
 - [Google PAIR: user needs](https://pair.withgoogle.com/guidebook/chapters/user-needs/) — Free; no registration required. No paid materials required.
 - [Google SRE: monitoring distributed systems](https://sre.google/sre-book/monitoring-distributed-systems/) — Free; no registration required. No paid materials required.
-- [OWASP Top 10 for LLM applications](https://genai.owasp.org/llm-top-10/) — Free; no registration required. No paid materials required.
 - [MCP: security best practices](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices) — Free; no registration required. No paid materials required.
 - [PAIR: errors and graceful failure](https://pair.withgoogle.com/guidebook/chapters/errors-failing-gracefully/) — Free; no registration required. No paid materials required.
 - [Google PAIR: evaluation and feedback](https://pair.withgoogle.com/guidebook/) — Free; no registration required. No paid materials required.
