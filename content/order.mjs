@@ -3,6 +3,7 @@ export const domainOrder = [
   "engineering",
   "math-data",
   "backend",
+  "data-engineering-ai",
   "ml",
   "dl",
   "llm",
@@ -33,7 +34,7 @@ export const pipeline = [
     id: "service",
     title: "Build the application shell",
     domain: "backend",
-    choices: ["math-data"],
+    choices: ["math-data", "data-engineering-ai"],
     outcome:
       "Create a validated API and store its data. Take the data branch when your project needs it.",
   },
@@ -112,6 +113,15 @@ export const stageGuides = {
       "Build a FastAPI service with validated inputs, a SQL query and API tests.",
     bridge:
       "Next, learn what a predictive model does so you can compare and serve its results.",
+  },
+  "data-engineering-ai": {
+    phase: "Optional · Data engineering + AI",
+    goal:
+      "Extend the existing SQL, Python, medallion, FastAPI and introductory Airflow foundation into a production-oriented data and AI engineering sequence.",
+    checkpoint:
+      "Build and explain a reproducible CDC-to-lakehouse pipeline, then connect it to a measured ML or RAG workflow and a documented system design.",
+    bridge:
+      "This ten-phase roadmap is an optional parallel track. Phases 8–9 can overlap with Phases 5–7; begin Phase 10 after Phase 4 and keep practicing it throughout.",
   },
   ml: {
     phase: "2 · Model fundamentals",

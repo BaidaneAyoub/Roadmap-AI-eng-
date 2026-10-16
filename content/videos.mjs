@@ -799,6 +799,16 @@ export const lessonVideoKeys = {
   "docs-architecture": ["adr", "system"],
   "docs-ai": ["documentation", "evaluation"],
   "docs-operations": ["incident", "documentation"],
+  "de-spark": ["data"],
+  "de-airflow": ["actions"],
+  "de-kafka": ["system"],
+  "de-lakehouse": ["data"],
+  "de-dbt-kimball": ["data"],
+  "de-quality-observability": ["evaluation"],
+  "de-cloud-infra": ["docker"],
+  "de-mlops": ["mlops"],
+  "de-llm-genai": ["rag"],
+  "de-system-design-interviews": ["system"],
 };
 const fullCourses = {
   python: "pythonFull",
@@ -814,6 +824,7 @@ const fullCourses = {
   deployment: "docker",
   "coding-agents": "coding",
   product: "product",
+  "data-engineering-ai": "system",
 };
 const conceptRules = [
   [/softmax/i, "softmax"],

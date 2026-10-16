@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { domains as basic } from "../content/curriculum.mjs";
 import { advanced } from "../content/advanced.mjs";
+import { dataEngineering } from "../content/data-engineering.mjs";
 import { expandDomains } from "../content/details.mjs";
 import { attachVideos } from "../content/videos.mjs";
 import { domainOrder, stageGuides, pipeline } from "../content/order.mjs";
@@ -21,7 +22,7 @@ import {
   validateTopic,
 } from "../src/logic.ts";
 const domains = attachVideos(
-  expandDomains([...basic, ...advanced]).sort(
+  expandDomains([...basic, ...advanced, ...dataEngineering]).sort(
     (a, b) => domainOrder.indexOf(a.id) - domainOrder.indexOf(b.id),
   ),
 );
@@ -109,6 +110,58 @@ test("Guided route covers every stage with an authored goal, checkpoint and tran
   assert.equal(domainOrder[0], "python");
   assert(domainOrder.indexOf("eval-security") < domainOrder.indexOf("agents"));
 });
+test("Data Engineering + AI roadmap preserves all ten phases and its parallel sequencing", () => {
+  const domain = domains.find((d) => d.id === "data-engineering-ai");
+  assert(domain);
+  assert.equal(domain.modules.length, 10);
+  assert.deepEqual(
+    domain.modules.map((m) => m.title),
+    Array.from({ length: 10 }, (_, i) => `Phase ${i + 1}`),
+  );
+  assert.deepEqual(
+    domain.modules.map((m) => m.lessons[0].id),
+    [
+      "de-spark",
+      "de-airflow",
+      "de-kafka",
+      "de-lakehouse",
+      "de-dbt-kimball",
+      "de-quality-observability",
+      "de-cloud-infra",
+      "de-mlops",
+      "de-llm-genai",
+      "de-system-design-interviews",
+    ],
+  );
+  const content = domain.modules
+    .flatMap((m) => m.lessons)
+    .flatMap((l) => [l.title, ...l.concepts.map((c) => c.name + " " + c.explanation)])
+    .join(" ")
+    .toLowerCase();
+  for (const term of [
+    "catalyst",
+    "taskflow",
+    "dynamic task mapping",
+    "debezium",
+    "schema registry",
+    "iceberg",
+    "kimball",
+    "great expectations",
+    "openlineage",
+    "terraform",
+    "mlflow",
+    "feast",
+    "lora",
+    "recall@k",
+    "star stories",
+  ])
+    assert(content.includes(term), term);
+  assert.deepEqual(domain.modules[7].lessons[0].prerequisites, ["de-lakehouse"]);
+  assert.deepEqual(domain.modules[9].lessons[0].prerequisites, ["de-lakehouse"]);
+  assert(
+    pipeline.find((step) => step.domain === "backend").choices.includes(domain.id),
+  );
+});
 const profile = {
   id: "a",
   displayName: "Ayoub",
@@ -119,7 +172,7 @@ const profile = {
   onboarded: true,
 };
 test("Every lesson has stable unique IDs, explained concepts, free resources and a concrete lab", () => {
-  assert.equal(domains.length, 13);
+  assert.equal(domains.length, 14);
   assert.equal(new Set(lessons.map((l) => l.id)).size, lessons.length);
   for (const l of lessons) {
     assert(l.why.length > 30);

@@ -1,5 +1,6 @@
 import { domains as basics } from "../content/curriculum.mjs";
 import { advanced } from "../content/advanced.mjs";
+import { dataEngineering } from "../content/data-engineering.mjs";
 import { expandDomains } from "../content/details.mjs";
 import { recommend } from "../src/recommendations.mjs";
 import { attachVideos } from "../content/videos.mjs";
@@ -7,7 +8,7 @@ import { domainOrder, stageGuides, pipeline } from "../content/order.mjs";
 import { mkdir, writeFile, readFile } from "node:fs/promises";
 import path from "node:path";
 const domains = attachVideos(
-  expandDomains([...basics, ...advanced]).sort(
+  expandDomains([...basics, ...advanced, ...dataEngineering]).sort(
     (a, b) => domainOrder.indexOf(a.id) - domainOrder.indexOf(b.id),
   ),
 ).map((d) => ({ ...d, guide: stageGuides[d.id] }));
@@ -224,13 +225,25 @@ const mapped = extracted.map((topic) => {
   const rule = rules.find(([rx]) => rx.test(topic));
   return { topic, lessonId: rule?.[1] ?? null };
 });
+const dataEngineeringPhases = [
+  ["Distributed processing with Spark", "de-spark"],
+  ["Orchestration mastery with Airflow", "de-airflow"],
+  ["Streaming and CDC with Kafka", "de-kafka"],
+  ["Lakehouse formats and storage internals", "de-lakehouse"],
+  ["Transformation and modeling with dbt + Kimball", "de-dbt-kimball"],
+  ["Data quality and observability", "de-quality-observability"],
+  ["Cloud and infrastructure", "de-cloud-infra"],
+  ["ML engineering and MLOps", "de-mlops"],
+  ["LLM and GenAI engineering", "de-llm-genai"],
+  ["System design and interview preparation", "de-system-design-interviews"],
+];
 await writeFile(
   "src/data/coverage.json",
   JSON.stringify(mapped, null, 2) + "\n",
 );
 await writeFile(
   "docs/COVERAGE.md",
-  `# Source coverage\n\nThe Andrew map is the supplied reference, not independently authenticated as an official Andrew Ng publication. This checklist maps its tree labels to implementation lessons; repeated nodes share lessons. Multi-line labels are kept as they appear in the source.\n\n${mapped.map((x) => `- [${x.lessonId ? "x" : " "}] ${x.topic} → ${x.lessonId ? `[${x.lessonId}](roadmap/${lessons.find((l) => l.id === x.lessonId).domainId}.md#${x.lessonId})` : "UNMAPPED — must be resolved before delivery"}`).join("\n")}\n\n## Documentation guide coverage\n\n${["BRD", "PRD", "SRS", "AI use-case specification", "Data requirements", "AI evaluation plan", "Prompt/agent specification", "Model/provider decision", "System architecture", "ADRs", "API specification", "Data schema", "Test plan", "Deployment guide", "Runbook", "Monitoring/observability", "Model card", "Documentation levels", "Documentation timeline", "AGENTS.md context", "Change log"].map((x) => `- [x] ${x} → product/documentation lessons and project document checklist`).join("\n")}\n\n## roadmap.sh supplement\n\nReference: https://roadmap.sh/ai-engineer and its public content directory https://github.com/nilbuild/developer-roadmap/tree/master/roadmaps/ai-engineer/content. Added sampling, context compaction/isolation, local models, hybrid search, MCP transports, multimodal inputs, adversarial checks and observability. Vendor names are examples, not required paid dependencies.\n`,
+  `# Source coverage\n\nThe Andrew map is the supplied reference, not independently authenticated as an official Andrew Ng publication. This checklist maps its tree labels to implementation lessons; repeated nodes share lessons. Multi-line labels are kept as they appear in the source.\n\n${mapped.map((x) => `- [${x.lessonId ? "x" : " "}] ${x.topic} → ${x.lessonId ? `[${x.lessonId}](roadmap/${lessons.find((l) => l.id === x.lessonId).domainId}.md#${x.lessonId})` : "UNMAPPED — must be resolved before delivery"}`).join("\n")}\n\n## Data Engineering + AI master roadmap coverage\n\nThe supplied DE_AI_Master_Roadmap.pdf is integrated as a separate optional branch. Each phase retains its detailed topics, exercise and resources in the linked lesson.\n\n${dataEngineeringPhases.map(([title, id], i) => `- [x] Phase ${i + 1}: ${title} → [${id}](roadmap/data-engineering-ai.md#${id})`).join("\n")}\n\nSequencing is preserved: Phases 8–9 can run alongside Phases 5–7 once the foundation is comfortable, and Phase 10 begins after Phase 4 and continues throughout the remaining work. The two-year framing is a pace estimate, not a fixed schedule.\n\n## Documentation guide coverage\n\n${["BRD", "PRD", "SRS", "AI use-case specification", "Data requirements", "AI evaluation plan", "Prompt/agent specification", "Model/provider decision", "System architecture", "ADRs", "API specification", "Data schema", "Test plan", "Deployment guide", "Runbook", "Monitoring/observability", "Model card", "Documentation levels", "Documentation timeline", "AGENTS.md context", "Change log"].map((x) => `- [x] ${x} → product/documentation lessons and project document checklist`).join("\n")}\n\n## roadmap.sh supplement\n\nReference: https://roadmap.sh/ai-engineer and its public content directory https://github.com/nilbuild/developer-roadmap/tree/master/roadmaps/ai-engineer/content. Added sampling, context compaction/isolation, local models, hybrid search, MCP transports, multimodal inputs, adversarial checks and observability. Vendor names are examples, not required paid dependencies.\n`,
 );
 await writeFile(
   "docs/VIDEOS.md",
