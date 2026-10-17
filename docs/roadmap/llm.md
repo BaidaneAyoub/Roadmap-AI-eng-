@@ -2,7 +2,7 @@
 
 Build grounded, bounded language-model features with a free local path.
 
-## Main route · Step 6 of 14
+## AI Engineering · Step 6 of 13
 
 **Goal:** Choose and use language models with deliberate prompts, context and outputs.
 

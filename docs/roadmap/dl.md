@@ -2,7 +2,7 @@
 
 Understand training mechanics, architectures and practical optimization.
 
-## Main route · Step 5 of 14
+## AI Engineering · Step 5 of 13
 
 **Goal:** Understand neural networks, backpropagation and practical optimisation.
 

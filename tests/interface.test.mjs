@@ -46,7 +46,7 @@ test("Project builder shows the first ten ideas, provenance and the next batch c
   assert(
     html.includes("Show more") &&
       html.includes("Curated match") &&
-      html.includes("140 authored projects"),
+      html.includes("142 authored projects"),
   );
 });
 
@@ -109,24 +109,25 @@ test("Simplified lesson keeps every concept, video and exercise available with s
   assert(html.includes('id="lesson-progress"'));
 });
 
-test("Compact roadmap keeps all 14 domain destinations and its eight-step main route", () => {
+test("Roadmap map shows all three roadmaps and every domain destination", () => {
   const html = renderToStaticMarkup(
     createElement(Roadmap, { state, search: "" }),
   );
   for (const domain of catalog.domains)
     assert(html.includes(`href="#/roadmap/${domain.id}"`), domain.id);
-  assert.equal((html.match(/class="pipeline-row"/g) ?? []).length, 8);
-  assert.equal((html.match(/class="pipeline-phase"/g) ?? []).length, 4);
+  const steps = catalog.roadmaps.flatMap((r) => r.domains).length;
+  assert.equal((html.match(/class="pipeline-row"/g) ?? []).length, steps);
+  assert.equal((html.match(/class="pipeline-phase"/g) ?? []).length, 3);
   for (const heading of [
-    "Foundations",
-    "Build an AI application",
-    "Knowledge &amp; quality",
-    "Ship &amp; improve",
+    "AI Engineering",
+    "Data Engineering",
+    "AI + Data Engineering",
   ])
-    assert(html.includes(heading));
+    assert(html.includes(`>${heading}</h2>`), heading);
+  assert(html.includes("SHARED · STUDIED ONCE"));
   assert.equal(
     (html.match(/class="pipeline-topics-disclosure"/g) ?? []).length,
-    14,
+    steps,
   );
 });
 

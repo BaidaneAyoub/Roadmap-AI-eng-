@@ -37,6 +37,17 @@ import * as store from "./store";
 const { domains, lessons } = catalog;
 const lessonById = new Map(lessons.map((l) => [l.id, l]));
 const domainLessons = (id: string) => lessons.filter((l) => l.domainId === id);
+// A shared domain sits in several roadmaps; the first one drives previous/next links.
+const placesOf = (id: string) =>
+  catalog.roadmaps.flatMap((roadmap) =>
+    roadmap.domains.includes(id)
+      ? [{ roadmap, step: roadmap.domains.indexOf(id) }]
+      : [],
+  );
+const neighbourOf = (id: string, offset: number) => {
+  const first = placesOf(id)[0];
+  return first?.roadmap.domains[first.step + offset];
+};
 const nav = [
   ["dashboard", "Overview", "grid"],
   ["roadmap", "Learning roadmap", "route"],
@@ -936,7 +947,11 @@ function PipelineNode({
     >
       <a className="pipeline-node-link" href={`#/roadmap/${id}`}>
         <span className="eyebrow">
-          {branch ? "OPTIONAL BRANCH" : "MAIN ROUTE"}
+          {branch
+            ? "OPTIONAL BRANCH"
+            : placesOf(id).length > 1
+              ? "SHARED · STUDIED ONCE"
+              : "ROADMAP STEP"}
           {outsidePath ? " · NOT IN MY PATH" : ""}
         </span>
         <h3>
@@ -990,12 +1005,10 @@ export function Roadmap({
   const [priority, setPriority] = useState("all");
   const query = search.trim().toLowerCase();
   const chosen = domains.find((d) => d.id === selected);
-  const routeStep = catalog.pipeline.findIndex((s) => s.domain === chosen?.id);
-  const branchParent = catalog.pipeline.find((s) =>
-    s.choices.includes(chosen?.id ?? ""),
-  );
-  const nextStage =
-    routeStep >= 0 ? catalog.pipeline[routeStep + 1] : branchParent;
+  const places = chosen ? placesOf(chosen.id) : [];
+  const previousId = chosen ? neighbourOf(chosen.id, -1) : undefined;
+  const nextId = chosen ? neighbourOf(chosen.id, 1) : undefined;
+  const requires = places.find((p) => p.roadmap.requires)?.roadmap.requires;
   const stageLessons = chosen
     ? domainLessons(chosen.id)
     : lessons
@@ -1017,12 +1030,12 @@ export function Roadmap({
         eyebrow="THE COMPLETE CURRICULUM"
         title={
           chosen
-            ? `${routeStep >= 0 ? `Step ${routeStep + 1}` : "Optional branch"} · ${chosen.title}`
-            : "From zero to shipping AI."
+            ? `Step ${(places[0]?.step ?? 0) + 1} · ${chosen.title}`
+            : "Three roadmaps. One curriculum."
         }
         description={
           chosen?.description ??
-          "Follow the main pipeline. Explore a branch when it helps your project. Click any node to open its lessons."
+          "AI Engineering and Data Engineering share a foundation you study once. AI + Data Engineering is the advanced roadmap after either one. Click any node to open its lessons."
         }
         action={
           chosen ? (
@@ -1040,13 +1053,16 @@ export function Roadmap({
       >
         <div className="eyebrow">
           {chosen
-            ? routeStep >= 0
-              ? `MAIN ROUTE · STEP ${routeStep + 1} OF ${catalog.pipeline.length}`
-              : `OPTIONAL BRANCH · RETURN TO ${domains.find((d) => d.id === branchParent?.domain)?.title}`
+            ? places
+                .map(
+                  (p) =>
+                    `${p.roadmap.title.toUpperCase()} · STEP ${p.step + 1} OF ${p.roadmap.domains.length}`,
+                )
+                .join(" · ")
             : "YOUR STEP-BY-STEP ROUTE"}
         </div>
         <h2>
-          {chosen ? chosen.guide.goal : "One main route. Branches you choose."}
+          {chosen ? chosen.guide.goal : "Pick a roadmap. Shared steps count once."}
         </h2>
         {chosen ? (
           <>
@@ -1054,9 +1070,8 @@ export function Roadmap({
               <strong>Stage checkpoint:</strong> {chosen.guide.checkpoint}
             </p>
             <p className="muted">
-              {routeStep >= 0
-                ? catalog.pipeline[routeStep].outcome
-                : "Explore this branch when it fits your goal. Return to the main route at any time; completion is not a gate."}
+              {catalog.pipeline.find((s) => s.domain === chosen.id)?.outcome}
+              {requires ? ` ${requires}` : ""}
             </p>
             <div className="inline-meta">
               <span>
@@ -1083,10 +1098,10 @@ export function Roadmap({
               >
                 roadmap.sh
               </a>{" "}
-              supplements it. Start with Python and engineering, build an API,
-              use pretrained models, then retrieve, evaluate and deploy. ML and
-              DL are available as deeper branches; you can build AI applications
-              before completing them.
+              supplements it. Choose AI Engineering or Data Engineering; both
+              start from the same Python, engineering, mathematics/data and
+              backend lessons, which you study once. After finishing either,
+              continue with the advanced AI + Data Engineering roadmap.
             </p>
           </details>
         )}
@@ -1158,7 +1173,7 @@ export function Roadmap({
       {!chosen && !query && priority === "all" ? (
         <section
           className="pipeline-map"
-          aria-label="AI engineering pipeline with optional branches"
+          aria-label="AI, Data and AI + Data engineering roadmaps"
         >
           <div className="pipeline-legend">
             <span>
@@ -1170,25 +1185,11 @@ export function Roadmap({
             <span>Arrows guide order, never lock access</span>
           </div>
           <div className="pipeline-terminal">START · Choose a user problem</div>
-          {[
-            ["Foundations", "Python, Git and the engineering basics."],
-            [
-              "Build an AI application",
-              "Connect your backend to a pretrained model.",
-            ],
-            [
-              "Knowledge & quality",
-              "Ground answers, measure quality and add tools when useful.",
-            ],
-            [
-              "Ship & improve",
-              "Deploy, document and turn your work into a real product.",
-            ],
-          ].map(([title, description], phaseIndex) => (
+          {catalog.roadmaps.map((roadmap, phaseIndex) => (
             <section
               className="pipeline-phase"
               data-phase={phaseIndex}
-              key={title}
+              key={roadmap.id}
               aria-labelledby={`pipeline-phase-${phaseIndex}`}
             >
               <header className="pipeline-phase-header">
@@ -1196,20 +1197,25 @@ export function Roadmap({
                   {String(phaseIndex + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <span className="eyebrow">PHASE {phaseIndex + 1} / 4</span>
-                  <h2 id={`pipeline-phase-${phaseIndex}`}>{title}</h2>
-                  <p>{description}</p>
+                  <span className="eyebrow">
+                    ROADMAP {phaseIndex + 1} / {catalog.roadmaps.length}
+                  </span>
+                  <h2 id={`pipeline-phase-${phaseIndex}`}>{roadmap.title}</h2>
+                  <p>
+                    {roadmap.requires ??
+                      `${roadmap.domains.length} steps. Shared steps count in every roadmap that lists them.`}
+                  </p>
                 </div>
               </header>
-              {catalog.pipeline
-                .slice(phaseIndex * 2, phaseIndex * 2 + 2)
+              {roadmap.domains
+                .map((id) => catalog.pipeline.find((s) => s.domain === id)!)
                 .map((step, i) => (
                   <div className="pipeline-row" key={step.id}>
                     <div className="pipeline-step">
                       <span className="mono">
-                        {String(phaseIndex * 2 + i + 1).padStart(2, "0")}
+                        {String(i + 1).padStart(2, "0")}
                       </span>
-                      <h2>{step.title}</h2>
+                      <h2>{domains.find((d) => d.id === step.domain)?.title}</h2>
                       <details className="pipeline-step-info">
                         <summary>What you’ll build</summary>
                         <p>{step.outcome}</p>
@@ -1377,26 +1383,18 @@ export function Roadmap({
           <button className="button" onClick={() => go("roadmap")}>
             All stages
           </button>
-          {routeStep > 0 ? (
-            <a
-              className="button"
-              href={`#/roadmap/${catalog.pipeline[routeStep - 1].domain}`}
-            >
+          {previousId ? (
+            <a className="button" href={`#/roadmap/${previousId}`}>
               ← Previous step:{" "}
-              {
-                domains.find(
-                  (d) => d.id === catalog.pipeline[routeStep - 1].domain,
-                )?.title
-              }
+              {domains.find((d) => d.id === previousId)?.title}
             </a>
           ) : null}
-          {nextStage ? (
+          {nextId ? (
             <button
               className="button primary"
-              onClick={() => go(`roadmap/${nextStage.domain}`)}
+              onClick={() => go(`roadmap/${nextId}`)}
             >
-              {branchParent ? "Return to main route" : "Next step"}:{" "}
-              {domains.find((d) => d.id === nextStage.domain)?.title}
+              Next step: {domains.find((d) => d.id === nextId)?.title}
               <Icon name="arrow" />
             </button>
           ) : null}
@@ -1439,14 +1437,9 @@ export function LessonPage({
   const stage = domains.find((d) => d.id === lesson.domainId)!;
   const stageList = domainLessons(stage.id);
   const lessonStep = stageList.findIndex((l) => l.id === lesson.id);
-  const routeStep = catalog.pipeline.findIndex((s) => s.domain === stage.id);
-  const nextStage =
-    routeStep >= 0
-      ? catalog.pipeline[routeStep + 1]
-      : catalog.pipeline.find((s) => s.choices.includes(stage.id));
+  const nextId = neighbourOf(stage.id, 1);
   const following =
-    stageList[lessonStep + 1] ??
-    (nextStage ? domainLessons(nextStage.domain)[0] : undefined);
+    stageList[lessonStep + 1] ?? (nextId ? domainLessons(nextId)[0] : undefined);
   return (
     <>
       <a href={`#/roadmap/${lesson.domainId}`} className="back-link">
@@ -2612,7 +2605,7 @@ export function ProjectBuilder({
       <SectionTitle
         eyebrow="KNOWLEDGE BECOMES CAPABILITY THROUGH PRACTICE"
         title="What will you build next?"
-        description="Explore 140 authored projects. Connect your skills, build a real system and take a detailed learning prompt to your AI mentor."
+        description="Explore 142 authored projects. Connect your skills, build a real system and take a detailed learning prompt to your AI mentor."
       />
       <div className="builder-layout">
         <aside className="panel skill-picker">

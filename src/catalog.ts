@@ -8,6 +8,7 @@ type Serialized = {
   stages: Catalog['stages'];
   version: number;
   pipeline: Catalog["pipeline"];
+  roadmaps: Catalog["roadmaps"];
   domains: {
     id: string;
     title: string;
@@ -34,6 +35,7 @@ export const catalog: Catalog = {
   stages: serialized.stages,
   version: serialized.version,
   pipeline: serialized.pipeline,
+  roadmaps: serialized.roadmaps,
   lessons,
   domains: serialized.domains.map((d) => ({
     ...d,

@@ -199,7 +199,7 @@ Cost and operations~Read a cloud bill and identify storage, compute, network and
   ),
   l(
     "de-mlops",
-    "Phase 8 · ML engineering and MLOps",
+    "Phase 1 · ML engineering and MLOps",
     "Connect reliable data engineering to reproducible model training and serving, while making feature correctness, model lifecycle and production feedback explicit.",
     `Feature engineering pipelines~Feature pipelines are data pipelines with an ML consumer. Batch and online/real-time feature computation differ in latency and freshness. Feature stores support reuse but must address training-serving skew and point-in-time correctness. Feast models entities and feature views over offline and online stores; point-in-time joins prevent future information leaking into training.~Build a point-in-time feature join and show how a future event would create leakage.
 Model training pipelines~Structure training as extraction, features, train, evaluate and register steps. Reproducibility pins data, code and hyperparameters together. Grid/random search provide baselines; Bayesian optimization may be worth the extra complexity for expensive searches. Cross-validation should be represented in the pipeline, not hidden in an ad hoc notebook.~Build a versioned training DAG with a fixed data snapshot and compare a small grid search with one baseline.
@@ -224,7 +224,7 @@ Integration back into DE~Airflow can orchestrate retrain, evaluate, register and
   ),
   l(
     "de-llm-genai",
-    "Phase 9 · LLM and GenAI engineering",
+    "Phase 2 · LLM and GenAI engineering",
     "Understand enough model architecture and evaluation to build grounded language-model systems that fit into a data platform, without treating a model response as proof of correctness.",
     `Deep learning foundations~Perceptrons, activation functions, backpropagation and gradient descent provide conceptual fluency without derivation-heavy mathematics. CNNs and RNNs address image and sequence tasks; transformers largely replaced RNNs for many sequence workloads. Batch size, learning rate, Adam/SGD, dropout and weight decay shape training.~Explain a forward pass and gradient update in a tiny network, then identify when a CNN, RNN or transformer is a reasonable architecture.
 Transformer architecture~Self-attention is the core interaction mechanism. Encoder, decoder and encoder-decoder designs correspond broadly to BERT-, GPT- and T5-style tasks. Positional encoding and multi-head attention help represent order and multiple relation patterns; this vocabulary helps interpret model cards.~Trace input tokens through positional information and multi-head self-attention, and identify the model family in a model card.
@@ -249,7 +249,7 @@ Agents, lighter touch~Tools use function calling to invoke bounded actions. A si
   ),
   l(
     "de-system-design-interviews",
-    "Phase 10 · System design and interview preparation",
+    "Phase 3 · System design and interview preparation",
     "Use the earlier phases and your own projects to communicate architecture trade-offs, solve practical data-engineering exercises and prepare for DE or AI engineering interviews.",
     `System design framework~Clarify requirements, estimate scale, sketch a high-level design, deep-dive into the critical path and explain trade-offs. Batch and streaming choices depend on throughput, latency and correctness; push back on requirements when the constraints conflict. Practice back-of-envelope data-volume estimates aloud.~Estimate daily event volume and storage for a CDC service, state assumptions, and revise the design when latency requirements change.
 Case studies~Practice a CDC path from Postgres through Kafka into a lake; a real-time analytics dashboard; a domain data warehouse; a feature store/ML pipeline; a data-quality and observability service; and multi-source ingestion into a medallion architecture.~Draw one end-to-end design and include failure recovery, idempotency, ownership and measurable acceptance criteria.
@@ -277,44 +277,27 @@ Company and role-specific preparation~Research target-company technology stacks 
   ),
 ];
 
-const domain = d(
-  "data-engineering-ai",
-  "Data Engineering + AI",
-  "A distinct 10-phase roadmap: the data engineering backbone, AI/ML and LLM engineering, and a capstone for system design and interviews. It assumes SQL, Python, medallion warehousing, FastAPI and introductory Airflow are already familiar.",
-  lessons.map((lesson, index) => m(`Phase ${index + 1}`, [lesson])),
-  ["backend-sql", "python-values", "data-pandas"],
+const phases = (list) => list.map((lesson, index) => m(`Phase ${index + 1}`, [lesson]));
+const foundation = ["backend-sql", "python-values", "data-pandas"];
+
+// d() chains each lesson to the previous one; only the deviations are set below.
+const data = d(
+  "data-engineering",
+  "Data Engineering",
+  "A 7-phase data engineering roadmap: distributed processing, orchestration, streaming and CDC, lakehouse storage, modeling, data quality and cloud infrastructure. It builds on the shared Python, engineering, mathematics/data and backend foundation.",
+  phases(lessons.slice(0, 7)),
+  foundation,
 );
+const [spark, airflow, , lakehouse] = data.modules.map((x) => x.lessons[0]);
+data.modules[2].lessons[0].prerequisites = [spark.id, airflow.id];
 
-domain.description +=
-  " Phases 1–7 build the DE backbone; Phases 8–9 can run alongside Phases 5–7 once the foundation is comfortable. Start Phase 10 after Phase 4 and keep it active throughout the rest of the roadmap. The two-year framing is a pace estimate, not a calendar schedule.";
+const advanced = d(
+  "ai-data",
+  "AI + Data Engineering",
+  "An advanced roadmap for learners who finished the AI Engineering or the Data Engineering roadmap: ML engineering and MLOps on data platforms, LLM and GenAI engineering over data, and system design with interview preparation. It does not repeat either roadmap; review the linked lessons of the roadmap you did not take when a topic is new to you.",
+  phases(lessons.slice(7)),
+  [lakehouse.id],
+);
+advanced.modules[2].lessons[0].prerequisites = [lakehouse.id];
 
-const phase1 = domain.modules[0].lessons[0];
-phase1.prerequisites = ["backend-sql", "python-values", "data-pandas"];
-domain.modules[1].lessons[0].prerequisites = [phase1.id];
-domain.modules[2].lessons[0].prerequisites = [
-  phase1.id,
-  domain.modules[1].lessons[0].id,
-];
-domain.modules[3].lessons[0].prerequisites = [
-  domain.modules[2].lessons[0].id,
-];
-domain.modules[4].lessons[0].prerequisites = [
-  domain.modules[3].lessons[0].id,
-];
-domain.modules[5].lessons[0].prerequisites = [
-  domain.modules[4].lessons[0].id,
-];
-domain.modules[6].lessons[0].prerequisites = [
-  domain.modules[5].lessons[0].id,
-];
-domain.modules[7].lessons[0].prerequisites = [
-  domain.modules[3].lessons[0].id,
-];
-domain.modules[8].lessons[0].prerequisites = [
-  domain.modules[7].lessons[0].id,
-];
-domain.modules[9].lessons[0].prerequisites = [
-  domain.modules[3].lessons[0].id,
-];
-
-export const dataEngineering = [domain];
+export const dataEngineering = [data, advanced];

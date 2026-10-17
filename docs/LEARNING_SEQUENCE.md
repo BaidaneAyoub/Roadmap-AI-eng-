@@ -360,65 +360,9 @@ Open a pipeline node → choose relevant lessons → build each exercise → sav
 
 - [ ] [Backend and data checkpoint](roadmap/backend.md#checkpoint-backend) · 7h · Essential
 
-↓ Next: [Data Engineering + AI](roadmap/data-engineering-ai.md)
-
-## 8. [Data Engineering + AI](roadmap/data-engineering-ai.md)
-
-Optional · Data engineering + AI
-
-**Goal:** Extend the existing SQL, Python, medallion, FastAPI and introductory Airflow foundation into a production-oriented data and AI engineering sequence.
-
-**Checkpoint:** Build and explain a reproducible CDC-to-lakehouse pipeline, then connect it to a measured ML or RAG workflow and a documented system design.
-
-**Transition:** This ten-phase roadmap is an optional parallel track. Phases 8–9 can overlap with Phases 5–7; begin Phase 10 after Phase 4 and keep practicing it throughout.
-
-### Module 1: Phase 1
-
-- [ ] [Phase 1 · Distributed processing with Spark](roadmap/data-engineering-ai.md#de-spark) · 28h · Essential
-
-### Module 2: Phase 2
-
-- [ ] [Phase 2 · Orchestration mastery with Airflow](roadmap/data-engineering-ai.md#de-airflow) · 24h · Essential
-
-### Module 3: Phase 3
-
-- [ ] [Phase 3 · Streaming and CDC with Kafka](roadmap/data-engineering-ai.md#de-kafka) · 26h · Essential
-
-### Module 4: Phase 4
-
-- [ ] [Phase 4 · Lakehouse formats and storage internals](roadmap/data-engineering-ai.md#de-lakehouse) · 26h · Essential
-
-### Module 5: Phase 5
-
-- [ ] [Phase 5 · Transformation and modeling with dbt + Kimball](roadmap/data-engineering-ai.md#de-dbt-kimball) · 22h · Essential
-
-### Module 6: Phase 6
-
-- [ ] [Phase 6 · Data quality and observability](roadmap/data-engineering-ai.md#de-quality-observability) · 19h · Essential
-
-### Module 7: Phase 7
-
-- [ ] [Phase 7 · Cloud and infrastructure](roadmap/data-engineering-ai.md#de-cloud-infra) · 23h · Essential
-
-### Module 8: Phase 8
-
-- [ ] [Phase 8 · ML engineering and MLOps](roadmap/data-engineering-ai.md#de-mlops) · 22h · Essential
-
-### Module 9: Phase 9
-
-- [ ] [Phase 9 · LLM and GenAI engineering](roadmap/data-engineering-ai.md#de-llm-genai) · 23h · Essential
-
-### Module 10: Phase 10
-
-- [ ] [Phase 10 · System design and interview preparation](roadmap/data-engineering-ai.md#de-system-design-interviews) · 20h · Essential
-
-### Module 11: Stage checkpoint
-
-- [ ] [Data engineering checkpoint](roadmap/data-engineering-ai.md#checkpoint-data-engineering-ai) · 7h · Essential
-
 ↓ Next: [Retrieval and RAG](roadmap/rag.md)
 
-## 9. [Retrieval and RAG](roadmap/rag.md)
+## 8. [Retrieval and RAG](roadmap/rag.md)
 
 3 · Build AI applications
 
@@ -463,7 +407,7 @@ Optional · Data engineering + AI
 
 ↓ Next: [Evaluation and security](roadmap/eval-security.md)
 
-## 10. [Evaluation and security](roadmap/eval-security.md)
+## 9. [Evaluation and security](roadmap/eval-security.md)
 
 3 · Build AI applications
 
@@ -499,7 +443,7 @@ Optional · Data engineering + AI
 
 ↓ Next: [Agents and MCP](roadmap/agents.md)
 
-## 11. [Agents and MCP](roadmap/agents.md)
+## 10. [Agents and MCP](roadmap/agents.md)
 
 3 · Build AI applications
 
@@ -535,7 +479,7 @@ Optional · Data engineering + AI
 
 ↓ Next: [Coding agents](roadmap/coding-agents.md)
 
-## 12. [Coding agents](roadmap/coding-agents.md)
+## 11. [Coding agents](roadmap/coding-agents.md)
 
 4 · Ship and improve
 
@@ -567,7 +511,7 @@ Optional · Data engineering + AI
 
 ↓ Next: [Deployment and operations](roadmap/deployment.md)
 
-## 13. [Deployment and operations](roadmap/deployment.md)
+## 12. [Deployment and operations](roadmap/deployment.md)
 
 4 · Ship and improve
 
@@ -604,7 +548,7 @@ Optional · Data engineering + AI
 
 ↓ Next: [Product and documentation](roadmap/product.md)
 
-## 14. [Product and documentation](roadmap/product.md)
+## 13. [Product and documentation](roadmap/product.md)
 
 4 · Ship and improve
 
@@ -635,5 +579,77 @@ Optional · Data engineering + AI
 ### Module 4: Stage checkpoint
 
 - [ ] [Application capstone: evidence-grounded AI service](roadmap/product.md#checkpoint-product) · 19h · Essential
+
+↓ Next: [Data Engineering](roadmap/data-engineering.md)
+
+## 14. [Data Engineering](roadmap/data-engineering.md)
+
+Data Engineering roadmap
+
+**Goal:** Extend the shared Python, SQL and backend foundation into production data pipelines: Spark, Airflow, Kafka/CDC, lakehouse tables, dbt models, quality checks and cloud infrastructure.
+
+**Checkpoint:** Build and explain a reproducible CDC-to-lakehouse pipeline with quality gates, lineage and a recovery test.
+
+**Transition:** Continue with the advanced AI + Data Engineering roadmap to put models and LLMs on top of this platform.
+
+### Module 1: Phase 1
+
+- [ ] [Phase 1 · Distributed processing with Spark](roadmap/data-engineering.md#de-spark) · 28h · Essential
+
+### Module 2: Phase 2
+
+- [ ] [Phase 2 · Orchestration mastery with Airflow](roadmap/data-engineering.md#de-airflow) · 24h · Essential
+
+### Module 3: Phase 3
+
+- [ ] [Phase 3 · Streaming and CDC with Kafka](roadmap/data-engineering.md#de-kafka) · 26h · Essential
+
+### Module 4: Phase 4
+
+- [ ] [Phase 4 · Lakehouse formats and storage internals](roadmap/data-engineering.md#de-lakehouse) · 26h · Essential
+
+### Module 5: Phase 5
+
+- [ ] [Phase 5 · Transformation and modeling with dbt + Kimball](roadmap/data-engineering.md#de-dbt-kimball) · 22h · Essential
+
+### Module 6: Phase 6
+
+- [ ] [Phase 6 · Data quality and observability](roadmap/data-engineering.md#de-quality-observability) · 19h · Essential
+
+### Module 7: Phase 7
+
+- [ ] [Phase 7 · Cloud and infrastructure](roadmap/data-engineering.md#de-cloud-infra) · 23h · Essential
+
+### Module 8: Stage checkpoint
+
+- [ ] [Data engineering checkpoint](roadmap/data-engineering.md#checkpoint-data-engineering) · 7h · Essential
+
+↓ Next: [AI + Data Engineering](roadmap/ai-data.md)
+
+## 15. [AI + Data Engineering](roadmap/ai-data.md)
+
+Advanced · AI + Data Engineering
+
+**Goal:** Combine a data platform with ML and LLM systems: MLOps on lakehouse data, GenAI over governed data, and end-to-end system design.
+
+**Checkpoint:** Serve a measured ML or RAG consumer from a gold-layer table and defend its system design, failure recovery and trade-offs.
+
+**Transition:** Start after finishing the AI Engineering or the Data Engineering roadmap. When a topic comes from the roadmap you did not take, open its linked lesson instead of expecting it to be repeated here.
+
+### Module 1: Phase 1
+
+- [ ] [Phase 1 · ML engineering and MLOps](roadmap/ai-data.md#de-mlops) · 22h · Essential
+
+### Module 2: Phase 2
+
+- [ ] [Phase 2 · LLM and GenAI engineering](roadmap/ai-data.md#de-llm-genai) · 23h · Essential
+
+### Module 3: Phase 3
+
+- [ ] [Phase 3 · System design and interview preparation](roadmap/ai-data.md#de-system-design-interviews) · 20h · Essential
+
+### Module 4: Stage checkpoint
+
+- [ ] [AI + data capstone](roadmap/ai-data.md#checkpoint-ai-data) · 7h · Essential
 
 Build a team capstone and collect user feedback.

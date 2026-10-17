@@ -6,7 +6,7 @@ import { recommend, libraryBrief } from "../src/recommendations.mjs";
 import { projectLibrary, projectLibraryVersion } from "../content/projects.mjs";
 import { mentorPrompt } from "../src/project-mentor.mjs";
 import { attachVideos } from "../content/videos.mjs";
-import { domainOrder, stageGuides, pipeline } from "../content/order.mjs";
+import { domainOrder, stageGuides, pipeline, roadmaps } from "../content/order.mjs";
 import { learningStages } from '../content/deep-route.mjs';
 import { mkdir, writeFile, readFile } from "node:fs/promises";
 import path from "node:path";
@@ -27,6 +27,7 @@ const allVideos = new Map(
 const catalog = {
   version: 1,
   pipeline,
+  roadmaps,
   stages: learningStages(domains),
   domains: domains.map((domain) => ({
     ...domain,
@@ -80,7 +81,7 @@ await writeFile(
 );
 await writeFile(
   "docs/PROJECT_LIBRARY.md",
-  `# Project library · version ${projectLibraryVersion}\n\n${projectLibrary.length} authored projects across 13 domains. Each brief is generated from the same data and composer used by the app. These are educational specifications, not claims that every implementation has been executed.\n\n${domains.map((d) => `- [${d.title}](#${d.id})`).join("\n")}\n\n${domains
+  `# Project library · version ${projectLibraryVersion}\n\n${projectLibrary.length} authored projects across ${domains.length} domains. Each brief is generated from the same data and composer used by the app. These are educational specifications, not claims that every implementation has been executed.\n\n${domains.map((d) => `- [${d.title}](#${d.id})`).join("\n")}\n\n${domains
     .map(
       (d) =>
         `<a id="${d.id}"></a>\n\n## ${d.title}\n\n${libraryBriefs
@@ -99,12 +100,12 @@ await writeFile(
 );
 await writeFile(
   "docs/PIPELINE.md",
-  `# From zero to shipping AI\n\nThe supplied Andrew skills map is the framework, supplemented by [roadmap.sh](https://roadmap.sh/ai-engineer). Follow this suggested application-building route; branches add depth when your project needs them. They are never completion gates. Start with a real user problem and revisit product discovery throughout.\n\n${pipeline.map((step, i) => `## ${i + 1}. ${step.title}\n\n[${domains.find((d) => d.id === step.domain).title}](roadmap/${step.domain}.md)\n\n${step.outcome}\n\n${step.choices.length ? `**Optional branches:** ${step.choices.map((id) => `[${domains.find((d) => d.id === id).title}](roadmap/${id}.md)`).join(" · ")}\n\nThese branches return to the main route; you do not need to finish them to continue.\n\n` : ""}${i < pipeline.length - 1 ? `↓ [Next: ${domains.find((d) => d.id === pipeline[i + 1].domain).title}](roadmap/${pipeline[i + 1].domain}.md)` : "[Choose a capstone](PROJECTS.md)"}`).join("\n\n")}\n\nEvery node opens detailed lessons, free sources and exercises. Completion and understanding are separate self-reported measures. The numbered domain index is a content directory; the pipeline above is the recommended AI application route.\n`,
+  `# Roadmaps\n\nThree roadmaps share one curriculum, built on the supplied Andrew skills map and [roadmap.sh](https://roadmap.sh/ai-engineer). A domain listed in two roadmaps is studied once: progress is recorded per lesson. Prerequisites guide the order; they never lock a lesson.\n\n${roadmaps.map((r) => `## ${r.title}\n\n${r.requires ? `**${r.requires}**\n\n` : ""}${r.domains.map((id, i) => `${i + 1}. [${domains.find((d) => d.id === id).title}](roadmap/${id}.md) — ${pipeline.find((s) => s.domain === id).outcome}`).join("\n")}`).join("\n\n")}\n\nEvery node opens detailed lessons, free sources and exercises. Completion and understanding are separate self-reported measures. [Choose a capstone](PROJECTS.md) when you finish a roadmap.\n`,
 );
 for (const domain of domains) {
-  const step = pipeline.findIndex((s) => s.domain === domain.id);
-  const parent = pipeline.find((s) => s.choices.includes(domain.id));
-  const next = step >= 0 ? pipeline[step + 1] : parent;
+  // A shared domain sits in several roadmaps; the first one supplies the next link.
+  const places = roadmaps.flatMap((r) => r.domains.includes(domain.id) ? [{ r, i: r.domains.indexOf(domain.id) }] : []);
+  const nextId = places[0] && places[0].r.domains[places[0].i + 1];
   const blocks = domain.modules
     .map(
       (module) =>
@@ -125,7 +126,7 @@ for (const domain of domains) {
     .join("\n\n");
   await writeFile(
     `docs/roadmap/${domain.id}.md`,
-    `# ${domain.title}\n\n${domain.description}\n\n## ${step >= 0 ? `Main route · Step ${step + 1} of ${pipeline.length}` : "Optional branch"}\n\n**Goal:** ${domain.guide.goal}\n\n**Stage checkpoint:** ${domain.guide.checkpoint}\n\n${step >= 0 ? pipeline[step].outcome : "Explore this branch when it helps your goal. Return to the main route at any time; completion is not a gate."}\n\nFollow the modules and lessons below at your pace. Finish each exercise, save your evidence and self-assessment, then continue. Completed and Already known count as completed; Skipped is reported separately. You can move ahead at any time.\n\n[Full pipeline](../PIPELINE.md) · ${next ? `[${parent ? "Return to main route" : "Next step"}: ${domains.find((d) => d.id === next.domain).title}](${next.domain}.md)` : "[Choose a capstone](../PROJECTS.md)"}\n\n${blocks}\n`,
+    `# ${domain.title}\n\n${domain.description}\n\n## ${places.map(({ r, i }) => `${r.title} · Step ${i + 1} of ${r.domains.length}`).join(" · ")}\n\n**Goal:** ${domain.guide.goal}\n\n**Stage checkpoint:** ${domain.guide.checkpoint}\n\n${pipeline.find((s) => s.domain === domain.id).outcome}${places[0]?.r.requires ? ` ${places[0].r.requires}` : ""}\n\nFollow the modules and lessons below at your pace. Finish each exercise, save your evidence and self-assessment, then continue. Completed and Already known count as completed; Skipped is reported separately. You can move ahead at any time.\n\n[Full pipeline](../PIPELINE.md) · ${nextId ? `[Next step: ${domains.find((d) => d.id === nextId).title}](${nextId}.md)` : "[Choose a capstone](../PROJECTS.md)"}\n\n${blocks}\n`,
   );
 }
 await writeFile(
@@ -142,7 +143,7 @@ await writeFile(
 );
 await writeFile(
   "docs/PROJECTS.md",
-  `# Project catalog\n\nBrowse the [140-project library with English mentor prompts](PROJECT_LIBRARY.md). Every lesson has ten initial project briefs in its domain document. The website supports further batches without repeating ideas. The website uses the same deterministic composer for combinations, with a named task, deliverable and check for every selected skill. Unmapped custom topics are explicitly general practice.\n\n## Example: ML + DL + FastAPI + Docker\n\n${recommend(
+  `# Project catalog\n\nBrowse the [142-project library with English mentor prompts](PROJECT_LIBRARY.md). Every lesson has ten initial project briefs in its domain document. The website supports further batches without repeating ideas. The website uses the same deterministic composer for combinations, with a named task, deliverable and check for every selected skill. Unmapped custom topics are explicitly general practice.\n\n## Example: ML + DL + FastAPI + Docker\n\n${recommend(
     [
       domains.find((d) => d.id === "ml"),
       domains.find((d) => d.id === "dl"),
@@ -283,7 +284,7 @@ await writeFile(
 );
 await writeFile(
   "docs/COVERAGE.md",
-  `# Source coverage\n\nThe Andrew map is the supplied reference, not independently authenticated as an official Andrew Ng publication. This checklist maps its tree labels to implementation lessons; repeated nodes share lessons. Multi-line labels are kept as they appear in the source.\n\n${mapped.map((x) => `- [${x.lessonId ? "x" : " "}] ${x.topic} → ${x.lessonId ? `[${x.lessonId}](roadmap/${lessons.find((l) => l.id === x.lessonId).domainId}.md#${x.lessonId})` : "UNMAPPED — must be resolved before delivery"}`).join("\n")}\n\n## Data Engineering + AI master roadmap coverage\n\nThe supplied DE_AI_Master_Roadmap.pdf is integrated as a separate optional branch. Each phase retains its detailed topics, exercise and resources in the linked lesson.\n\n${dataEngineeringPhases.map(([title, id], i) => `- [x] Phase ${i + 1}: ${title} → [${id}](roadmap/data-engineering-ai.md#${id})`).join("\n")}\n\nSequencing is preserved: Phases 8–9 can run alongside Phases 5–7 once the foundation is comfortable, and Phase 10 begins after Phase 4 and continues throughout the remaining work. The two-year framing is a pace estimate, not a fixed schedule.\n\n## Documentation guide coverage\n\n${["BRD", "PRD", "SRS", "AI use-case specification", "Data requirements", "AI evaluation plan", "Prompt/agent specification", "Model/provider decision", "System architecture", "ADRs", "API specification", "Data schema", "Test plan", "Deployment guide", "Runbook", "Monitoring/observability", "Model card", "Documentation levels", "Documentation timeline", "AGENTS.md context", "Change log"].map((x) => `- [x] ${x} → product/documentation lessons and project document checklist`).join("\n")}\n\n## roadmap.sh supplement\n\nReference: https://roadmap.sh/ai-engineer and its public content directory https://github.com/nilbuild/developer-roadmap/tree/master/roadmaps/ai-engineer/content. Added sampling, context compaction/isolation, local models, hybrid search, MCP transports, multimodal inputs, adversarial checks and observability. Vendor names are examples, not required paid dependencies.\n`,
+  `# Source coverage\n\nThe Andrew map is the supplied reference, not independently authenticated as an official Andrew Ng publication. This checklist maps its tree labels to implementation lessons; repeated nodes share lessons. Multi-line labels are kept as they appear in the source.\n\n${mapped.map((x) => `- [${x.lessonId ? "x" : " "}] ${x.topic} → ${x.lessonId ? `[${x.lessonId}](roadmap/${lessons.find((l) => l.id === x.lessonId).domainId}.md#${x.lessonId})` : "UNMAPPED — must be resolved before delivery"}`).join("\n")}\n\n## Data Engineering + AI master roadmap coverage\n\nThe supplied DE_AI_Master_Roadmap.pdf is split into the Data Engineering roadmap (source phases 1–7) and the advanced AI + Data Engineering roadmap (source phases 8–10). Each phase retains its detailed topics, exercise and resources in the linked lesson.\n\n${dataEngineeringPhases.map(([title, id], i) => `- [x] Phase ${i + 1}: ${title} → [${id}](roadmap/${lessons.find((l) => l.id === id).domainId}.md#${id})`).join("\n")}\n\nThe advanced roadmap starts after the AI Engineering or the Data Engineering roadmap. The two-year framing is a pace estimate, not a fixed schedule.\n\n## Documentation guide coverage\n\n${["BRD", "PRD", "SRS", "AI use-case specification", "Data requirements", "AI evaluation plan", "Prompt/agent specification", "Model/provider decision", "System architecture", "ADRs", "API specification", "Data schema", "Test plan", "Deployment guide", "Runbook", "Monitoring/observability", "Model card", "Documentation levels", "Documentation timeline", "AGENTS.md context", "Change log"].map((x) => `- [x] ${x} → product/documentation lessons and project document checklist`).join("\n")}\n\n## roadmap.sh supplement\n\nReference: https://roadmap.sh/ai-engineer and its public content directory https://github.com/nilbuild/developer-roadmap/tree/master/roadmaps/ai-engineer/content. Added sampling, context compaction/isolation, local models, hybrid search, MCP transports, multimodal inputs, adversarial checks and observability. Vendor names are examples, not required paid dependencies.\n`,
 );
 await writeFile(
   "docs/VIDEOS.md",

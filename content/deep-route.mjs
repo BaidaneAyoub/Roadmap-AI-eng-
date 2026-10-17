@@ -1,6 +1,6 @@
 // Scientific-first curriculum. Existing lesson and concept identities are never renamed.
 export const routeLevels = ['Foundation', 'Essential', 'Specialization'];
-export const routeOrder = ['python','engineering','math-data','ml','dl','llm','backend','data-engineering-ai','rag','eval-security','agents','coding-agents','deployment','product'];
+export const routeOrder = ['python','engineering','math-data','ml','dl','llm','backend','rag','eval-security','agents','coding-agents','deployment','product','data-engineering','ai-data'];
 export const routeVideoKeys = {};
 const definitions = [];
 function add(id, domain, base, title, keys, lab, lines, source) {
@@ -200,7 +200,8 @@ const checkpoints = {
   dl: ['Foundation capstone: classical versus neural models','Use bundled digits to compare a dummy baseline, logistic regression, a tree model and a small PyTorch network on identical splits. Explain gradients, loss, optimizer and tensor shapes. Save artifacts, reproduce inference, report errors and CPU latency, and document limitations.'],
   llm: ['Model integration checkpoint','Implement a local or fixture-backed model adapter with token budgeting, a model manifest, schema validation, cancellation and bounded failures. Distinguish real model-quality measurements from fixture-only integration tests.'],
   backend: ['Backend and data checkpoint','Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.'],
-  'data-engineering-ai': ['Data engineering checkpoint','Run a local CDC-to-lakehouse pipeline from disposable PostgreSQL through Kafka into bronze, silver and gold tables. Demonstrate an idempotent replay, a schema change, a failing quality check with quarantine, lineage evidence and one ML or RAG consumer measured against a baseline.'],
+  'data-engineering': ['Data engineering checkpoint','Run a local CDC-to-lakehouse pipeline from disposable PostgreSQL through Kafka into bronze, silver and gold tables. Demonstrate an idempotent replay, a schema change, a failing quality check with quarantine, lineage evidence and a Terraform plan for one provider.'],
+  'ai-data': ['AI + data capstone','Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.'],
   rag: ['Grounded retrieval checkpoint','Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.'],
   'eval-security': ['Evaluation and security checkpoint','Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.'],
   agents: ['Bounded tools checkpoint','Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.'],

@@ -427,21 +427,11 @@ Every concept has selected video links, with explanations and practical watch gu
   - Useful because: Follow the pipeline, then test chunking and retrieval separately.
   - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
   - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
-- [GitHub Actions — full course](https://www.youtube.com/watch?v=Tz7FsunBbfQ) · freeCodeCamp · Full tool course
-  - Explains: Workflow configuration, CI/CD and automation.
-  - Useful because: Build a test/build workflow; paid certification is not required.
-  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
-  - Verification source: https://www.youtube.com/watch?v=Tz7FsunBbfQ
 - [Deep dive into LLM evaluation](https://www.youtube.com/watch?v=7EcznH0-of8) · Weights & Biases · Workshop
   - Explains: Evaluation datasets, model quality checks and retrieval evaluation.
   - Useful because: Use the evaluation methodology with local fixtures; hosted tracking accounts are optional.
   - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
   - Verification source: https://www.youtube.com/watch?v=7EcznH0-of8
-- [Docker — full DevOps course](https://www.youtube.com/watch?v=rjjES5IsPdg) · freeCodeCamp · Long tool course · approximately 8h
-  - Explains: Images, containers, Dockerfiles and deploying containerized applications.
-  - Useful because: Package the exact service you tested; keep cloud purchases optional.
-  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
-  - Verification source: https://www.freecodecamp.org/news/docker-full-course/
 - [Site reliability engineering fundamentals](https://www.youtube.com/watch?v=eopc_ijIfLg) · Google Cloud Events · Technical session
   - Explains: Service objectives, error budgets, monitoring, alerting and emergency response.
   - Useful because: Write actionable monitoring and recovery steps instead of collecting logs without a plan.
@@ -462,6 +452,16 @@ Every concept has selected video links, with explanations and practical watch gu
   - Useful because: Write testable requirements and distinguish them from implementation details.
   - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
   - Verification source: https://www.youtube.com/watch?v=M5DY3eTyhUA
+- [GitHub Actions — full course](https://www.youtube.com/watch?v=Tz7FsunBbfQ) · freeCodeCamp · Full tool course
+  - Explains: Workflow configuration, CI/CD and automation.
+  - Useful because: Build a test/build workflow; paid certification is not required.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=Tz7FsunBbfQ
+- [Docker — full DevOps course](https://www.youtube.com/watch?v=rjjES5IsPdg) · freeCodeCamp · Long tool course · approximately 8h
+  - Explains: Images, containers, Dockerfiles and deploying containerized applications.
+  - Useful because: Package the exact service you tested; keep cloud purchases optional.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/docker-full-course/
 - [CI/CD in production with Jenkins](https://www.youtube.com/watch?v=uHNOqKdqQas) · freeCodeCamp · Long tool course · approximately 17h
   - Explains: Continuous integration and delivery pipelines in a production-style workflow.
   - Useful because: An optional deeper pipeline reference; the roadmap lab uses a smaller GitHub Actions workflow.

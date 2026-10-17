@@ -1,6 +1,6 @@
 # AI Engineering Team Roadmap
 
-Version 1 · 14 domains · 178 lessons · 765 concept checks.
+Version 1 · 15 domains · 179 lessons · 770 concept checks.
 
 Follow [the branching AI application pipeline](PIPELINE.md). The list below is a domain directory, not a requirement to complete every topic before continuing. Mark already-known lessons explicitly; skipped lessons do not count as completed. Weekly effort is individual. All required labs can run locally on CPU with generated/built-in data or recorded responses.
 
@@ -11,13 +11,14 @@ Follow [the branching AI application pipeline](PIPELINE.md). The list below is a
 5. [Deep learning](roadmap/dl.md) — Understand training mechanics, architectures and practical optimization.
 6. [LLM engineering](roadmap/llm.md) — Build grounded, bounded language-model features with a free local path.
 7. [Backend and databases](roadmap/backend.md) — Expose reliable APIs and protect shared application state.
-8. [Data Engineering + AI](roadmap/data-engineering-ai.md) — A distinct 10-phase roadmap: the data engineering backbone, AI/ML and LLM engineering, and a capstone for system design and interviews. It assumes SQL, Python, medallion warehousing, FastAPI and introductory Airflow are already familiar. Phases 1–7 build the DE backbone; Phases 8–9 can run alongside Phases 5–7 once the foundation is comfortable. Start Phase 10 after Phase 4 and keep it active throughout the rest of the roadmap. The two-year framing is a pace estimate, not a calendar schedule.
-9. [Retrieval and RAG](roadmap/rag.md) — Connect answers to maintained evidence and evaluate retrieval independently.
-10. [Evaluation and security](roadmap/eval-security.md) — Make quality, safety and failure behavior measurable.
-11. [Agents and MCP](roadmap/agents.md) — Build bounded tool workflows before increasing autonomy.
-12. [Coding agents](roadmap/coding-agents.md) — Direct and verify generated work with clear engineering context.
-13. [Deployment and operations](roadmap/deployment.md) — Release reproducible services and observe their real behavior.
-14. [Product and documentation](roadmap/product.md) — Build useful products and document only what guides real decisions.
+8. [Retrieval and RAG](roadmap/rag.md) — Connect answers to maintained evidence and evaluate retrieval independently.
+9. [Evaluation and security](roadmap/eval-security.md) — Make quality, safety and failure behavior measurable.
+10. [Agents and MCP](roadmap/agents.md) — Build bounded tool workflows before increasing autonomy.
+11. [Coding agents](roadmap/coding-agents.md) — Direct and verify generated work with clear engineering context.
+12. [Deployment and operations](roadmap/deployment.md) — Release reproducible services and observe their real behavior.
+13. [Product and documentation](roadmap/product.md) — Build useful products and document only what guides real decisions.
+14. [Data Engineering](roadmap/data-engineering.md) — A 7-phase data engineering roadmap: distributed processing, orchestration, streaming and CDC, lakehouse storage, modeling, data quality and cloud infrastructure. It builds on the shared Python, engineering, mathematics/data and backend foundation.
+15. [AI + Data Engineering](roadmap/ai-data.md) — An advanced roadmap for learners who finished the AI Engineering or the Data Engineering roadmap: ML engineering and MLOps on data platforms, LLM and GenAI engineering over data, and system design with interview preparation. It does not repeat either roadmap; review the linked lessons of the roadmap you did not take when a topic is new to you.
 
 ## Recommended learning loop
 

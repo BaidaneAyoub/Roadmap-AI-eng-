@@ -1,117 +1,35 @@
-# From zero to shipping AI
+# Roadmaps
 
-The supplied Andrew skills map is the framework, supplemented by [roadmap.sh](https://roadmap.sh/ai-engineer). Follow this suggested application-building route; branches add depth when your project needs them. They are never completion gates. Start with a real user problem and revisit product discovery throughout.
+Three roadmaps share one curriculum, built on the supplied Andrew skills map and [roadmap.sh](https://roadmap.sh/ai-engineer). A domain listed in two roadmaps is studied once: progress is recorded per lesson. Prerequisites guide the order; they never lock a lesson.
 
-## 1. python
+## AI Engineering
 
-[Python](roadmap/python.md)
+1. [Python](roadmap/python.md) — Write reliable Python with validation, explicit state and reproducible tests.
+2. [Engineering foundations](roadmap/engineering.md) — Use Git, HTTP contracts and layered tests to deliver reviewable software.
+3. [Mathematics and data](roadmap/math-data.md) — Clean data and explain linear algebra, gradients, probability and uncertainty.
+4. [Machine learning](roadmap/ml.md) — Compare classical models with leakage-safe evaluation and reproducible inference.
+5. [Deep learning](roadmap/dl.md) — Train and diagnose neural models; complete the scientific foundation capstone.
+6. [LLM engineering](roadmap/llm.md) — Integrate a model with bounded context, structured outputs and measured limitations.
+7. [Backend and databases](roadmap/backend.md) — Expose validated APIs with authorization, relational data and transaction checks.
+8. [Retrieval and RAG](roadmap/rag.md) — Retrieve evidence, preserve citations and abstain when reliable support is missing.
+9. [Evaluation and security](roadmap/eval-security.md) — Measure quality and enforce security boundaries before introducing autonomy.
+10. [Agents and MCP](roadmap/agents.md) — Use bounded tool workflows and versioned MCP contracts with explicit permissions.
+11. [Coding agents](roadmap/coding-agents.md) — Direct coding agents through specifications, code review and verified outcomes.
+12. [Deployment and operations](roadmap/deployment.md) — Containerize, monitor, recover and restore a reproducible local application.
+13. [Product and documentation](roadmap/product.md) — Deliver a user-tested application capstone with requirements and operational evidence.
 
-Write reliable Python with validation, explicit state and reproducible tests.
+## Data Engineering
 
-↓ [Next: Engineering foundations](roadmap/engineering.md)
+1. [Python](roadmap/python.md) — Write reliable Python with validation, explicit state and reproducible tests.
+2. [Engineering foundations](roadmap/engineering.md) — Use Git, HTTP contracts and layered tests to deliver reviewable software.
+3. [Mathematics and data](roadmap/math-data.md) — Clean data and explain linear algebra, gradients, probability and uncertainty.
+4. [Backend and databases](roadmap/backend.md) — Expose validated APIs with authorization, relational data and transaction checks.
+5. [Data Engineering](roadmap/data-engineering.md) — Build a replayable CDC-to-lakehouse pipeline with data contracts, lineage and quality gates.
 
-## 2. engineering
+## AI + Data Engineering
 
-[Engineering foundations](roadmap/engineering.md)
+**Advanced: finish the AI Engineering or the Data Engineering roadmap first.**
 
-Use Git, HTTP contracts and layered tests to deliver reviewable software.
+1. [AI + Data Engineering](roadmap/ai-data.md) — Serve a measured ML or RAG consumer from your data platform and defend its system design.
 
-↓ [Next: Mathematics and data](roadmap/math-data.md)
-
-## 3. math data
-
-[Mathematics and data](roadmap/math-data.md)
-
-Clean data and explain linear algebra, gradients, probability and uncertainty.
-
-↓ [Next: Machine learning](roadmap/ml.md)
-
-## 4. ml
-
-[Machine learning](roadmap/ml.md)
-
-Compare classical models with leakage-safe evaluation and reproducible inference.
-
-↓ [Next: Deep learning](roadmap/dl.md)
-
-## 5. dl
-
-[Deep learning](roadmap/dl.md)
-
-Train and diagnose neural models; complete the scientific foundation capstone.
-
-↓ [Next: LLM engineering](roadmap/llm.md)
-
-## 6. llm
-
-[LLM engineering](roadmap/llm.md)
-
-Integrate a model with bounded context, structured outputs and measured limitations.
-
-↓ [Next: Backend and databases](roadmap/backend.md)
-
-## 7. backend
-
-[Backend and databases](roadmap/backend.md)
-
-Expose validated APIs with authorization, relational data and transaction checks.
-
-↓ [Next: Data Engineering + AI](roadmap/data-engineering-ai.md)
-
-## 8. data engineering ai
-
-[Data Engineering + AI](roadmap/data-engineering-ai.md)
-
-Build a replayable CDC-to-lakehouse pipeline with data contracts, lineage and a measured AI consumer.
-
-↓ [Next: Retrieval and RAG](roadmap/rag.md)
-
-## 9. rag
-
-[Retrieval and RAG](roadmap/rag.md)
-
-Retrieve evidence, preserve citations and abstain when reliable support is missing.
-
-↓ [Next: Evaluation and security](roadmap/eval-security.md)
-
-## 10. eval security
-
-[Evaluation and security](roadmap/eval-security.md)
-
-Measure quality and enforce security boundaries before introducing autonomy.
-
-↓ [Next: Agents and MCP](roadmap/agents.md)
-
-## 11. agents
-
-[Agents and MCP](roadmap/agents.md)
-
-Use bounded tool workflows and versioned MCP contracts with explicit permissions.
-
-↓ [Next: Coding agents](roadmap/coding-agents.md)
-
-## 12. coding agents
-
-[Coding agents](roadmap/coding-agents.md)
-
-Direct coding agents through specifications, code review and verified outcomes.
-
-↓ [Next: Deployment and operations](roadmap/deployment.md)
-
-## 13. deployment
-
-[Deployment and operations](roadmap/deployment.md)
-
-Containerize, monitor, recover and restore a reproducible local application.
-
-↓ [Next: Product and documentation](roadmap/product.md)
-
-## 14. product
-
-[Product and documentation](roadmap/product.md)
-
-Deliver a user-tested application capstone with requirements and operational evidence.
-
-[Choose a capstone](PROJECTS.md)
-
-Every node opens detailed lessons, free sources and exercises. Completion and understanding are separate self-reported measures. The numbered domain index is a content directory; the pipeline above is the recommended AI application route.
+Every node opens detailed lessons, free sources and exercises. Completion and understanding are separate self-reported measures. [Choose a capstone](PROJECTS.md) when you finish a roadmap.

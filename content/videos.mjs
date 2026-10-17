@@ -825,7 +825,8 @@ const fullCourses = {
   deployment: "docker",
   "coding-agents": "coding",
   product: "product",
-  "data-engineering-ai": "system",
+  "data-engineering": "system",
+  "ai-data": "system",
 };
 const conceptRules = [
   [/softmax/i, "softmax"],

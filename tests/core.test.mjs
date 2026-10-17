@@ -6,7 +6,7 @@ import { advanced } from "../content/advanced.mjs";
 import { dataEngineering } from "../content/data-engineering.mjs";
 import { expandDomains } from "../content/details.mjs";
 import { attachVideos } from "../content/videos.mjs";
-import { domainOrder, stageGuides, pipeline } from "../content/order.mjs";
+import { domainOrder, stageGuides, pipeline, roadmaps } from "../content/order.mjs";
 import { recommend } from "../src/recommendations.mjs";
 import {
   totals,
@@ -60,20 +60,32 @@ test("Expanded curriculum preserves saved lesson/concept identities and adds sub
       id,
     );
 });
-test("AI application pipeline covers all domains once with optional model-training branches", async () => {
-  const ids = pipeline.flatMap((s) => [s.domain, ...s.choices]);
-  assert.equal(new Set(ids).size, ids.length);
-  assert.deepEqual([...ids].sort(), [...domainOrder].sort());
-  assert.equal(pipeline[0].domain, "python");
-  assert.equal(pipeline.at(-1).domain, "product");
-  const core = pipeline.map((s) => s.domain);
-  assert(!core.includes("ml") && !core.includes("dl"));
-  assert(core.indexOf("eval-security") < core.indexOf("deployment"));
-  assert.deepEqual(pipeline.find((s) => s.domain === "llm").choices, [
-    "ml",
-    "dl",
-  ]);
+test("Three roadmaps cover every domain, share one foundation and keep the advanced roadmap separate", async () => {
+  assert.deepEqual(
+    pipeline.map((s) => s.domain),
+    domainOrder,
+  );
   assert(pipeline.every((s) => s.outcome.length > 30));
+  const [ai, data, advanced] = roadmaps;
+  assert.deepEqual(
+    roadmaps.map((r) => r.id),
+    ["ai", "data", "ai-data"],
+  );
+  assert.deepEqual(
+    [...new Set(roadmaps.flatMap((r) => r.domains))].sort(),
+    [...domainOrder].sort(),
+  );
+  assert.equal(ai.domains[0], "python");
+  assert.equal(ai.domains.at(-1), "product");
+  assert(ai.domains.indexOf("eval-security") < ai.domains.indexOf("deployment"));
+  assert.deepEqual(
+    ai.domains.filter((id) => data.domains.includes(id)),
+    ["python", "engineering", "math-data", "backend"],
+  );
+  assert.equal(data.domains.at(-1), "data-engineering");
+  assert.deepEqual(advanced.domains, ["ai-data"]);
+  assert(advanced.requires.length > 30);
+  assert(!ai.domains.includes("ai-data") && !data.domains.includes("ai-data"));
   const exported = JSON.parse(
     await readFile(
       new URL("../src/data/catalog.json", import.meta.url),
@@ -81,6 +93,7 @@ test("AI application pipeline covers all domains once with optional model-traini
     ),
   );
   assert.deepEqual(exported.pipeline, pipeline);
+  assert.deepEqual(exported.roadmaps, roadmaps);
 });
 test("Guided route covers every stage with an authored goal, checkpoint and transition", async () => {
   assert.equal(new Set(domainOrder).size, domains.length);
@@ -110,16 +123,23 @@ test("Guided route covers every stage with an authored goal, checkpoint and tran
   assert.equal(domainOrder[0], "python");
   assert(domainOrder.indexOf("eval-security") < domainOrder.indexOf("agents"));
 });
-test("Data Engineering + AI roadmap preserves all ten phases and its parallel sequencing", () => {
-  const domain = domains.find((d) => d.id === "data-engineering-ai");
-  assert(domain);
-  // deepenDomains appends a Stage checkpoint module after the ten phases.
-  const phases = domain.modules.filter((m) => m.title !== "Stage checkpoint");
-  assert.equal(phases.length, 10);
+test("Data Engineering source keeps all ten phases across the Data and advanced AI + Data roadmaps", () => {
+  // deepenDomains appends a Stage checkpoint module after each domain's phases.
+  const phasesOf = (id) =>
+    domains
+      .find((d) => d.id === id)
+      .modules.filter((m) => m.title !== "Stage checkpoint");
+  const data = phasesOf("data-engineering");
+  const advanced = phasesOf("ai-data");
   assert.deepEqual(
-    phases.map((m) => m.title),
-    Array.from({ length: 10 }, (_, i) => `Phase ${i + 1}`),
+    data.map((m) => m.title),
+    Array.from({ length: 7 }, (_, i) => `Phase ${i + 1}`),
   );
+  assert.deepEqual(
+    advanced.map((m) => m.title),
+    ["Phase 1", "Phase 2", "Phase 3"],
+  );
+  const phases = [...data, ...advanced];
   assert.deepEqual(
     phases.map((m) => m.lessons[0].id),
     [
@@ -135,7 +155,7 @@ test("Data Engineering + AI roadmap preserves all ten phases and its parallel se
       "de-system-design-interviews",
     ],
   );
-  const content = domain.modules
+  const content = phases
     .flatMap((m) => m.lessons)
     .flatMap((l) => [l.title, ...l.concepts.map((c) => c.name + " " + c.explanation)])
     .join(" ")
@@ -158,10 +178,8 @@ test("Data Engineering + AI roadmap preserves all ten phases and its parallel se
     "star stories",
   ])
     assert(content.includes(term), term);
-  assert.deepEqual(domain.modules[7].lessons[0].prerequisites, ["de-lakehouse"]);
-  assert.deepEqual(domain.modules[9].lessons[0].prerequisites, ["de-lakehouse"]);
-  const route = pipeline.map((step) => step.domain);
-  assert.equal(route.indexOf(domain.id), route.indexOf("backend") + 1);
+  assert.deepEqual(advanced[0].lessons[0].prerequisites, ["de-lakehouse"]);
+  assert.deepEqual(advanced[2].lessons[0].prerequisites, ["de-lakehouse"]);
 });
 const profile = {
   id: "a",
@@ -173,7 +191,7 @@ const profile = {
   onboarded: true,
 };
 test("Every lesson has stable unique IDs, explained concepts, free resources and a concrete lab", () => {
-  assert.equal(domains.length, 14);
+  assert.equal(domains.length, 15);
   assert.equal(new Set(lessons.map((l) => l.id)).size, lessons.length);
   for (const l of lessons) {
     assert(l.why.length > 30);

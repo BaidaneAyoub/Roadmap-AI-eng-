@@ -1,23 +1,35 @@
 import { routeOrder } from './deep-route.mjs';
 export const domainOrder = [...routeOrder];
-const outcomes = [
-'Write reliable Python with validation, explicit state and reproducible tests.',
-'Use Git, HTTP contracts and layered tests to deliver reviewable software.',
-'Clean data and explain linear algebra, gradients, probability and uncertainty.',
-'Compare classical models with leakage-safe evaluation and reproducible inference.',
-'Train and diagnose neural models; complete the scientific foundation capstone.',
-'Integrate a model with bounded context, structured outputs and measured limitations.',
-'Expose validated APIs with authorization, relational data and transaction checks.',
-'Build a replayable CDC-to-lakehouse pipeline with data contracts, lineage and a measured AI consumer.',
-'Retrieve evidence, preserve citations and abstain when reliable support is missing.',
-'Measure quality and enforce security boundaries before introducing autonomy.',
-'Use bounded tool workflows and versioned MCP contracts with explicit permissions.',
-'Direct coding agents through specifications, code review and verified outcomes.',
-'Containerize, monitor, recover and restore a reproducible local application.',
-'Deliver a user-tested application capstone with requirements and operational evidence.'
-];
-export const pipeline = routeOrder.map((domain,i)=>({id:domain,title:domain.replaceAll('-',' '),domain,choices:[],outcome:outcomes[i]}));
+const outcomes = {
+  python: 'Write reliable Python with validation, explicit state and reproducible tests.',
+  engineering: 'Use Git, HTTP contracts and layered tests to deliver reviewable software.',
+  'math-data': 'Clean data and explain linear algebra, gradients, probability and uncertainty.',
+  ml: 'Compare classical models with leakage-safe evaluation and reproducible inference.',
+  dl: 'Train and diagnose neural models; complete the scientific foundation capstone.',
+  llm: 'Integrate a model with bounded context, structured outputs and measured limitations.',
+  backend: 'Expose validated APIs with authorization, relational data and transaction checks.',
+  rag: 'Retrieve evidence, preserve citations and abstain when reliable support is missing.',
+  'eval-security': 'Measure quality and enforce security boundaries before introducing autonomy.',
+  agents: 'Use bounded tool workflows and versioned MCP contracts with explicit permissions.',
+  'coding-agents': 'Direct coding agents through specifications, code review and verified outcomes.',
+  deployment: 'Containerize, monitor, recover and restore a reproducible local application.',
+  product: 'Deliver a user-tested application capstone with requirements and operational evidence.',
+  'data-engineering': 'Build a replayable CDC-to-lakehouse pipeline with data contracts, lineage and quality gates.',
+  'ai-data': 'Serve a measured ML or RAG consumer from your data platform and defend its system design.',
+};
+export const pipeline = routeOrder.map((domain)=>({id:domain,title:domain.replaceAll('-',' '),domain,choices:[],outcome:outcomes[domain]}));
 
+// Three roadmaps. A domain listed in two roadmaps is studied once: progress is per lesson.
+export const roadmaps = [
+  { id: 'ai', title: 'AI Engineering', domains: routeOrder.filter((d) => !['data-engineering', 'ai-data'].includes(d)) },
+  { id: 'data', title: 'Data Engineering', domains: ['python', 'engineering', 'math-data', 'backend', 'data-engineering'] },
+  {
+    id: 'ai-data',
+    title: 'AI + Data Engineering',
+    requires: 'Advanced: finish the AI Engineering or the Data Engineering roadmap first.',
+    domains: ['ai-data'],
+  },
+];
 // The teaching sequence is authored for this team; source maps describe skills, not a mandatory syllabus.
 export const stageGuides = {
   python: {
@@ -52,14 +64,23 @@ export const stageGuides = {
     bridge:
       "Next, learn what a predictive model does so you can compare and serve its results.",
   },
-  "data-engineering-ai": {
-    phase: "Optional · Data engineering + AI",
+  "data-engineering": {
+    phase: "Data Engineering roadmap",
     goal:
-      "Extend the existing SQL, Python, medallion, FastAPI and introductory Airflow foundation into a production-oriented data and AI engineering sequence.",
+      "Extend the shared Python, SQL and backend foundation into production data pipelines: Spark, Airflow, Kafka/CDC, lakehouse tables, dbt models, quality checks and cloud infrastructure.",
     checkpoint:
-      "Build and explain a reproducible CDC-to-lakehouse pipeline, then connect it to a measured ML or RAG workflow and a documented system design.",
+      "Build and explain a reproducible CDC-to-lakehouse pipeline with quality gates, lineage and a recovery test.",
     bridge:
-      "This ten-phase roadmap is an optional parallel track. Phases 8–9 can overlap with Phases 5–7; begin Phase 10 after Phase 4 and keep practicing it throughout.",
+      "Continue with the advanced AI + Data Engineering roadmap to put models and LLMs on top of this platform.",
+  },
+  "ai-data": {
+    phase: "Advanced · AI + Data Engineering",
+    goal:
+      "Combine a data platform with ML and LLM systems: MLOps on lakehouse data, GenAI over governed data, and end-to-end system design.",
+    checkpoint:
+      "Serve a measured ML or RAG consumer from a gold-layer table and defend its system design, failure recovery and trade-offs.",
+    bridge:
+      "Start after finishing the AI Engineering or the Data Engineering roadmap. When a topic comes from the roadmap you did not take, open its linked lesson instead of expecting it to be repeated here.",
   },
   ml: {
     phase: "2 · Model fundamentals",

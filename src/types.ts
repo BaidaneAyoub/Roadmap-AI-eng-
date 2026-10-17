@@ -72,6 +72,7 @@ export interface Catalog {
     choices: string[];
     outcome: string;
   }[];
+  roadmaps: { id: string; title: string; requires?: string; domains: string[] }[];
 }
 export interface Profile {
   id: string;

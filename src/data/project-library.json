@@ -14554,8 +14554,8 @@
       ]
     },
     {
-      "id": "v2:data-engineering-ai-skew-doctor:de-spark",
-      "patternId": "data-engineering-ai-skew-doctor",
+      "id": "v2:data-engineering-skew-doctor:de-spark",
+      "patternId": "data-engineering-skew-doctor",
       "catalogVersion": 2,
       "source": "Curated match",
       "title": "Spark skew diagnosis lab",
@@ -14647,8 +14647,8 @@
       ]
     },
     {
-      "id": "v2:data-engineering-ai-backfill-dag:de-airflow",
-      "patternId": "data-engineering-ai-backfill-dag",
+      "id": "v2:data-engineering-backfill-dag:de-airflow",
+      "patternId": "data-engineering-backfill-dag",
       "catalogVersion": 2,
       "source": "Curated match",
       "title": "Idempotent backfill orchestrator",
@@ -14658,7 +14658,7 @@
       "output": "An Airflow DAG with mapped partition tasks, retries and a bounded backfill command.",
       "resources": [
         {
-          "title": "data-engineering-ai implementation reference",
+          "title": "data-engineering implementation reference",
           "url": "https://spark.apache.org/docs/latest/api/python/getting_started/index.html",
           "access": "Free reading; no registration. Required data is generated locally or bundled; optional model downloads are labeled in the brief."
         },
@@ -14745,8 +14745,8 @@
       ]
     },
     {
-      "id": "v2:data-engineering-ai-cdc-replay:de-kafka",
-      "patternId": "data-engineering-ai-cdc-replay",
+      "id": "v2:data-engineering-cdc-replay:de-kafka",
+      "patternId": "data-engineering-cdc-replay",
       "catalogVersion": 2,
       "source": "Curated match",
       "title": "Change data capture replay bench",
@@ -14756,7 +14756,7 @@
       "output": "A Debezium-to-Kafka path landing raw events in a bronze sink.",
       "resources": [
         {
-          "title": "data-engineering-ai implementation reference",
+          "title": "data-engineering implementation reference",
           "url": "https://spark.apache.org/docs/latest/api/python/getting_started/index.html",
           "access": "Free reading; no registration. Required data is generated locally or bundled; optional model downloads are labeled in the brief."
         },
@@ -14843,8 +14843,8 @@
       ]
     },
     {
-      "id": "v2:data-engineering-ai-schema-evolver:de-kafka",
-      "patternId": "data-engineering-ai-schema-evolver",
+      "id": "v2:data-engineering-schema-evolver:de-kafka",
+      "patternId": "data-engineering-schema-evolver",
       "catalogVersion": 2,
       "source": "Curated match",
       "title": "Event schema compatibility gate",
@@ -14854,7 +14854,7 @@
       "output": "A schema registry compatibility check and old/new consumer fixtures.",
       "resources": [
         {
-          "title": "data-engineering-ai implementation reference",
+          "title": "data-engineering implementation reference",
           "url": "https://spark.apache.org/docs/latest/api/python/getting_started/index.html",
           "access": "Free reading; no registration. Required data is generated locally or bundled; optional model downloads are labeled in the brief."
         },
@@ -14941,8 +14941,8 @@
       ]
     },
     {
-      "id": "v2:data-engineering-ai-time-travel-table:de-lakehouse",
-      "patternId": "data-engineering-ai-time-travel-table",
+      "id": "v2:data-engineering-time-travel-table:de-lakehouse",
+      "patternId": "data-engineering-time-travel-table",
       "catalogVersion": 2,
       "source": "Curated match",
       "title": "Lakehouse time-travel auditor",
@@ -14952,7 +14952,7 @@
       "output": "A snapshot report, rollback procedure and compaction plan.",
       "resources": [
         {
-          "title": "data-engineering-ai implementation reference",
+          "title": "data-engineering implementation reference",
           "url": "https://spark.apache.org/docs/latest/api/python/getting_started/index.html",
           "access": "Free reading; no registration. Required data is generated locally or bundled; optional model downloads are labeled in the brief."
         },
@@ -15039,8 +15039,8 @@
       ]
     },
     {
-      "id": "v2:data-engineering-ai-star-schema:de-dbt-kimball",
-      "patternId": "data-engineering-ai-star-schema",
+      "id": "v2:data-engineering-star-schema:de-dbt-kimball",
+      "patternId": "data-engineering-star-schema",
       "catalogVersion": 2,
       "source": "Curated match",
       "title": "Sales star-schema builder",
@@ -15050,7 +15050,7 @@
       "output": "A dbt project with staging, a Kimball fact table and a type-2 customer dimension.",
       "resources": [
         {
-          "title": "data-engineering-ai implementation reference",
+          "title": "data-engineering implementation reference",
           "url": "https://spark.apache.org/docs/latest/api/python/getting_started/index.html",
           "access": "Free reading; no registration. Required data is generated locally or bundled; optional model downloads are labeled in the brief."
         },
@@ -15137,8 +15137,8 @@
       ]
     },
     {
-      "id": "v2:data-engineering-ai-quality-gate:de-quality-observability",
-      "patternId": "data-engineering-ai-quality-gate",
+      "id": "v2:data-engineering-quality-gate:de-quality-observability",
+      "patternId": "data-engineering-quality-gate",
       "catalogVersion": 2,
       "source": "Curated match",
       "title": "Data quality quarantine gate",
@@ -15148,7 +15148,7 @@
       "output": "Great Expectations or equivalent checks with quarantine output and lineage events.",
       "resources": [
         {
-          "title": "data-engineering-ai implementation reference",
+          "title": "data-engineering implementation reference",
           "url": "https://spark.apache.org/docs/latest/api/python/getting_started/index.html",
           "access": "Free reading; no registration. Required data is generated locally or bundled; optional model downloads are labeled in the brief."
         },
@@ -15235,8 +15235,8 @@
       ]
     },
     {
-      "id": "v2:data-engineering-ai-infra-plan:de-cloud-infra",
-      "patternId": "data-engineering-ai-infra-plan",
+      "id": "v2:data-engineering-infra-plan:de-cloud-infra",
+      "patternId": "data-engineering-infra-plan",
       "catalogVersion": 2,
       "source": "Curated match",
       "title": "Pipeline infrastructure plan",
@@ -15246,7 +15246,7 @@
       "output": "A Terraform plan, local Kubernetes deployment and least-privilege diagram.",
       "resources": [
         {
-          "title": "data-engineering-ai implementation reference",
+          "title": "data-engineering implementation reference",
           "url": "https://spark.apache.org/docs/latest/api/python/getting_started/index.html",
           "access": "Free reading; no registration. Required data is generated locally or bundled; optional model downloads are labeled in the brief."
         },
@@ -15333,8 +15333,254 @@
       ]
     },
     {
-      "id": "v2:data-engineering-ai-feature-loop:de-mlops",
-      "patternId": "data-engineering-ai-feature-loop",
+      "id": "v2:data-engineering-stream-window:de-kafka+de-spark",
+      "patternId": "data-engineering-stream-window",
+      "catalogVersion": 2,
+      "source": "Curated match",
+      "title": "Late-event window counter",
+      "problem": "A product team needs per-minute order counts that stay correct when events arrive late.",
+      "audience": "A product team",
+      "data": "Generate a seeded event stream with out-of-order and five-minute-late records. Use a fixed seed and keep evaluation cases separate.",
+      "output": "A Spark Structured Streaming or Flink job with event-time windows, a watermark and checkpointing.",
+      "resources": [
+        {
+          "title": "Apache Spark: PySpark overview",
+          "url": "https://spark.apache.org/docs/latest/api/python/getting_started/index.html",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "Apache Kafka: introduction",
+          "url": "https://kafka.apache.org/documentation/#introduction",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        }
+      ],
+      "learningGoals": [
+        "Explain and implement late-event window counter.",
+        "Demonstrate correctness: Restart from the checkpoint and match a batch recount for every closed window.",
+        "Explain the role, tradeoffs and failure modes of Phase 3 · Streaming and CDC with Kafka in the completed system.",
+        "Explain the role, tradeoffs and failure modes of Phase 1 · Distributed processing with Spark in the completed system."
+      ],
+      "boundaries": [
+        "Local educational prototype using fictional, generated or bundled data.",
+        "No paid credentials, production deployment or collection of private personal data required.",
+        "Large-model training is out of scope; use small CPU examples. Recorded responses test integration, not model quality."
+      ],
+      "skills": [
+        "de-kafka",
+        "de-spark"
+      ],
+      "integration": [
+        {
+          "skillId": "de-kafka",
+          "skillTitle": "Phase 3 · Streaming and CDC with Kafka",
+          "catalogSkillId": "de-kafka",
+          "task": "Implement Phase 3 · Streaming and CDC with Kafka in Late-event window counter. Adapt this focused lab to the project data: Build a local CDC demonstration from PostgreSQL through Kafka into a raw event sink. Show schema evolution, delete handling, lag monitoring, restart/replay behavior and a short architecture diagram.  Required concepts: Kafka foundations, Delivery semantics, Schema management, Change data capture, Kafka Connect, Stream processing, Architecture patterns, Operations and debugging.",
+          "deliverable": "Phase 3 · Streaming and CDC with Kafka: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a local CDC demonstration from PostgreSQL through Kafka into a raw event sink. Show schema evolution, delete handling, lag monitoring, restart/replay behavior and a short architecture diagram.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        },
+        {
+          "skillId": "de-spark",
+          "skillTitle": "Phase 1 · Distributed processing with Spark",
+          "catalogSkillId": "de-spark",
+          "task": "Implement Phase 1 · Distributed processing with Spark in Late-event window counter. Adapt this focused lab to the project data: Build a reproducible PySpark batch job over generated event data. Include SQL and DataFrame transformations, a skewed join diagnosis, an explain plan, a small streaming exercise, and a README with measured before/after tuning evidence.  Required concepts: Spark architecture and execution, Core APIs, Partitions, shuffles and skew, Join planning, Memory, caching and spill, Performance diagnosis, UDFs, Window functions, Structured Streaming introduction, Deployment and I/O, Debugging and observability.",
+          "deliverable": "Phase 1 · Distributed processing with Spark: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a reproducible PySpark batch job over generated event data. Include SQL and DataFrame transformations, a skewed join diagnosis, an explain plan, a small streaming exercise, and a README with measured before/after tuning evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        }
+      ],
+      "general": false,
+      "prerequisiteSkills": [],
+      "difficulty": "Beginner → intermediate",
+      "hours": 15,
+      "components": [
+        "Phase 3 · Streaming and CDC with Kafka: Phase 3 · Streaming and CDC with Kafka: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Phase 1 · Distributed processing with Spark: Phase 1 · Distributed processing with Spark: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations"
+      ],
+      "dataFlow": [
+        "Generate a seeded event stream with out-of-order and five-minute-late records.",
+        "Validate source records and preserve stable IDs.",
+        "Phase 3 · Streaming and CDC with Kafka consumes the project records/results and produces: Phase 3 · Streaming and CDC with Kafka: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "Phase 1 · Distributed processing with Spark consumes the project records/results and produces: Phase 1 · Distributed processing with Spark: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "A Spark Structured Streaming or Flink job with event-time windows, a watermark and checkpointing.",
+        "Restart from the checkpoint and match a batch recount for every closed window."
+      ],
+      "stages": [
+        {
+          "title": "MVP · problem and reproducible baseline",
+          "deliverable": "A Spark Structured Streaming or Flink job with event-time windows, a watermark and checkpointing. Start with the smallest deterministic reference before adding extensions.",
+          "check": "Restart from the checkpoint and match a batch recount for every closed window."
+        },
+        {
+          "title": "MVP · Phase 3 · Streaming and CDC with Kafka",
+          "deliverable": "Phase 3 · Streaming and CDC with Kafka: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a local CDC demonstration from PostgreSQL through Kafka into a raw event sink. Show schema evolution, delete handling, lag monitoring, restart/replay behavior and a short architecture diagram.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "MVP · Phase 1 · Distributed processing with Spark",
+          "deliverable": "Phase 1 · Distributed processing with Spark: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a reproducible PySpark batch job over generated event data. Include SQL and DataFrame transformations, a skewed join diagnosis, an explain plan, a small streaming exercise, and a README with measured before/after tuning evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "Integrated demonstration",
+          "deliverable": "One clean-start command, connected end-to-end example and evidence report",
+          "check": "Re-run the same input through all selected components and verify the final output against the source records."
+        },
+        {
+          "title": "Explain and hand off",
+          "deliverable": "README, decision notes and recorded limitations",
+          "check": "A teammate reproduces the example and you explain each selected skill without reading generated code."
+        }
+      ],
+      "milestones": [
+        "MVP · problem and reproducible baseline: A Spark Structured Streaming or Flink job with event-time windows, a watermark and checkpointing. Start with the smallest deterministic reference before adding extensions.",
+        "MVP · Phase 3 · Streaming and CDC with Kafka: Phase 3 · Streaming and CDC with Kafka: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "MVP · Phase 1 · Distributed processing with Spark: Phase 1 · Distributed processing with Spark: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Integrated demonstration: One clean-start command, connected end-to-end example and evidence report",
+        "Explain and hand off: README, decision notes and recorded limitations"
+      ],
+      "acceptance": [
+        "Restart from the checkpoint and match a batch recount for every closed window.",
+        "Phase 3 · Streaming and CDC with Kafka: Build a local CDC demonstration from PostgreSQL through Kafka into a raw event sink. Show schema evolution, delete handling, lag monitoring, restart/replay behavior and a short architecture diagram.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Phase 1 · Distributed processing with Spark: Build a reproducible PySpark batch job over generated event data. Include SQL and DataFrame transformations, a skewed join diagnosis, an explain plan, a small streaming exercise, and a README with measured before/after tuning evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "A teammate can reproduce the demo using the README without paid credentials."
+      ],
+      "documentation": [
+        "README and worked example",
+        "Requirements and success metric",
+        "Architecture, data contracts and ADR",
+        "Evaluation and limitations",
+        "Local deployment guide and recovery runbook"
+      ]
+    },
+    {
+      "id": "v2:data-engineering-partition-pruning:de-lakehouse+de-spark",
+      "patternId": "data-engineering-partition-pruning",
+      "catalogVersion": 2,
+      "source": "Curated match",
+      "title": "Partition and file-layout tuner",
+      "problem": "An analyst needs date-filtered queries to stop scanning the whole table.",
+      "audience": "An analyst",
+      "data": "Generate one year of events written once unpartitioned and once partitioned by day. Use a fixed seed and keep evaluation cases separate.",
+      "output": "Two table layouts with explain plans and a compaction step.",
+      "resources": [
+        {
+          "title": "Apache Spark: PySpark overview",
+          "url": "https://spark.apache.org/docs/latest/api/python/getting_started/index.html",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "Apache Iceberg: documentation",
+          "url": "https://iceberg.apache.org/docs/latest/",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        }
+      ],
+      "learningGoals": [
+        "Explain and implement partition and file-layout tuner.",
+        "Demonstrate correctness: Show bytes scanned and file counts for the same filtered query on both layouts with identical results.",
+        "Explain the role, tradeoffs and failure modes of Phase 4 · Lakehouse formats and storage internals in the completed system.",
+        "Explain the role, tradeoffs and failure modes of Phase 1 · Distributed processing with Spark in the completed system."
+      ],
+      "boundaries": [
+        "Local educational prototype using fictional, generated or bundled data.",
+        "No paid credentials, production deployment or collection of private personal data required.",
+        "Large-model training is out of scope; use small CPU examples. Recorded responses test integration, not model quality."
+      ],
+      "skills": [
+        "de-lakehouse",
+        "de-spark"
+      ],
+      "integration": [
+        {
+          "skillId": "de-lakehouse",
+          "skillTitle": "Phase 4 · Lakehouse formats and storage internals",
+          "catalogSkillId": "de-lakehouse",
+          "task": "Implement Phase 4 · Lakehouse formats and storage internals in Partition and file-layout tuner. Adapt this focused lab to the project data: Build a medallion lakehouse over local sample data using Iceberg or Delta. Document file layout, schema evolution, time travel, compaction, catalog choice and the query evidence used to validate performance.  Required concepts: File formats, Why table formats matter, Iceberg and Delta internals, Table maintenance, Catalogs, Query engines, Lakehouse architecture, Operations and platform fluency.",
+          "deliverable": "Phase 4 · Lakehouse formats and storage internals: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a medallion lakehouse over local sample data using Iceberg or Delta. Document file layout, schema evolution, time travel, compaction, catalog choice and the query evidence used to validate performance.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        },
+        {
+          "skillId": "de-spark",
+          "skillTitle": "Phase 1 · Distributed processing with Spark",
+          "catalogSkillId": "de-spark",
+          "task": "Implement Phase 1 · Distributed processing with Spark in Partition and file-layout tuner. Adapt this focused lab to the project data: Build a reproducible PySpark batch job over generated event data. Include SQL and DataFrame transformations, a skewed join diagnosis, an explain plan, a small streaming exercise, and a README with measured before/after tuning evidence.  Required concepts: Spark architecture and execution, Core APIs, Partitions, shuffles and skew, Join planning, Memory, caching and spill, Performance diagnosis, UDFs, Window functions, Structured Streaming introduction, Deployment and I/O, Debugging and observability.",
+          "deliverable": "Phase 1 · Distributed processing with Spark: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a reproducible PySpark batch job over generated event data. Include SQL and DataFrame transformations, a skewed join diagnosis, an explain plan, a small streaming exercise, and a README with measured before/after tuning evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        }
+      ],
+      "general": false,
+      "prerequisiteSkills": [],
+      "difficulty": "Beginner → intermediate",
+      "hours": 15,
+      "components": [
+        "Phase 4 · Lakehouse formats and storage internals: Phase 4 · Lakehouse formats and storage internals: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Phase 1 · Distributed processing with Spark: Phase 1 · Distributed processing with Spark: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations"
+      ],
+      "dataFlow": [
+        "Generate one year of events written once unpartitioned and once partitioned by day.",
+        "Validate source records and preserve stable IDs.",
+        "Phase 4 · Lakehouse formats and storage internals consumes the project records/results and produces: Phase 4 · Lakehouse formats and storage internals: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "Phase 1 · Distributed processing with Spark consumes the project records/results and produces: Phase 1 · Distributed processing with Spark: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "Two table layouts with explain plans and a compaction step.",
+        "Show bytes scanned and file counts for the same filtered query on both layouts with identical results."
+      ],
+      "stages": [
+        {
+          "title": "MVP · problem and reproducible baseline",
+          "deliverable": "Two table layouts with explain plans and a compaction step. Start with the smallest deterministic reference before adding extensions.",
+          "check": "Show bytes scanned and file counts for the same filtered query on both layouts with identical results."
+        },
+        {
+          "title": "MVP · Phase 4 · Lakehouse formats and storage internals",
+          "deliverable": "Phase 4 · Lakehouse formats and storage internals: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a medallion lakehouse over local sample data using Iceberg or Delta. Document file layout, schema evolution, time travel, compaction, catalog choice and the query evidence used to validate performance.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "MVP · Phase 1 · Distributed processing with Spark",
+          "deliverable": "Phase 1 · Distributed processing with Spark: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a reproducible PySpark batch job over generated event data. Include SQL and DataFrame transformations, a skewed join diagnosis, an explain plan, a small streaming exercise, and a README with measured before/after tuning evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "Integrated demonstration",
+          "deliverable": "One clean-start command, connected end-to-end example and evidence report",
+          "check": "Re-run the same input through all selected components and verify the final output against the source records."
+        },
+        {
+          "title": "Explain and hand off",
+          "deliverable": "README, decision notes and recorded limitations",
+          "check": "A teammate reproduces the example and you explain each selected skill without reading generated code."
+        }
+      ],
+      "milestones": [
+        "MVP · problem and reproducible baseline: Two table layouts with explain plans and a compaction step. Start with the smallest deterministic reference before adding extensions.",
+        "MVP · Phase 4 · Lakehouse formats and storage internals: Phase 4 · Lakehouse formats and storage internals: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "MVP · Phase 1 · Distributed processing with Spark: Phase 1 · Distributed processing with Spark: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Integrated demonstration: One clean-start command, connected end-to-end example and evidence report",
+        "Explain and hand off: README, decision notes and recorded limitations"
+      ],
+      "acceptance": [
+        "Show bytes scanned and file counts for the same filtered query on both layouts with identical results.",
+        "Phase 4 · Lakehouse formats and storage internals: Build a medallion lakehouse over local sample data using Iceberg or Delta. Document file layout, schema evolution, time travel, compaction, catalog choice and the query evidence used to validate performance.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Phase 1 · Distributed processing with Spark: Build a reproducible PySpark batch job over generated event data. Include SQL and DataFrame transformations, a skewed join diagnosis, an explain plan, a small streaming exercise, and a README with measured before/after tuning evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "A teammate can reproduce the demo using the README without paid credentials."
+      ],
+      "documentation": [
+        "README and worked example",
+        "Requirements and success metric",
+        "Architecture, data contracts and ADR",
+        "Evaluation and limitations",
+        "Local deployment guide and recovery runbook"
+      ]
+    },
+    {
+      "id": "v2:ai-data-feature-loop:de-mlops",
+      "patternId": "ai-data-feature-loop",
       "catalogVersion": 2,
       "source": "Curated match",
       "title": "Feature store to prediction loop",
@@ -15344,8 +15590,8 @@
       "output": "A versioned training run tracked in MLflow, a served model and scores written to gold.",
       "resources": [
         {
-          "title": "data-engineering-ai implementation reference",
-          "url": "https://spark.apache.org/docs/latest/api/python/getting_started/index.html",
+          "title": "ai-data implementation reference",
+          "url": "https://mlflow.org/docs/latest/index.html",
           "access": "Free reading; no registration. Required data is generated locally or bundled; optional model downloads are labeled in the brief."
         },
         {
@@ -15358,7 +15604,7 @@
       "learningGoals": [
         "Explain and implement feature store to prediction loop.",
         "Demonstrate correctness: Reproduce the run from its logged data snapshot and flag a simulated feature drift.",
-        "Explain the role, tradeoffs and failure modes of Phase 8 · ML engineering and MLOps in the completed system."
+        "Explain the role, tradeoffs and failure modes of Phase 1 · ML engineering and MLOps in the completed system."
       ],
       "boundaries": [
         "Local educational prototype using fictional, generated or bundled data.",
@@ -15371,25 +15617,25 @@
       "integration": [
         {
           "skillId": "de-mlops",
-          "skillTitle": "Phase 8 · ML engineering and MLOps",
+          "skillTitle": "Phase 1 · ML engineering and MLOps",
           "catalogSkillId": "de-mlops",
-          "task": "Implement Phase 8 · ML engineering and MLOps in Feature store to prediction loop. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.",
-          "deliverable": "Phase 8 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "task": "Implement Phase 1 · ML engineering and MLOps in Feature store to prediction loop. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.",
+          "deliverable": "Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
           "check": "Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
           "general": false
         }
       ],
       "general": false,
       "prerequisiteSkills": [],
-      "difficulty": "Beginner → intermediate",
-      "hours": 10,
+      "difficulty": "Intermediate",
+      "hours": 16,
       "components": [
-        "Phase 8 · ML engineering and MLOps: Phase 8 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations"
+        "Phase 1 · ML engineering and MLOps: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations"
       ],
       "dataFlow": [
         "Generate fictional accounts and a gold-layer feature table.",
         "Validate source records and preserve stable IDs.",
-        "Phase 8 · ML engineering and MLOps consumes the project records/results and produces: Phase 8 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "Phase 1 · ML engineering and MLOps consumes the project records/results and produces: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
         "A versioned training run tracked in MLflow, a served model and scores written to gold.",
         "Reproduce the run from its logged data snapshot and flag a simulated feature drift."
       ],
@@ -15400,8 +15646,8 @@
           "check": "Reproduce the run from its logged data snapshot and flag a simulated feature drift."
         },
         {
-          "title": "MVP · Phase 8 · ML engineering and MLOps",
-          "deliverable": "Phase 8 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "title": "MVP · Phase 1 · ML engineering and MLOps",
+          "deliverable": "Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
           "check": "Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
         },
         {
@@ -15417,13 +15663,13 @@
       ],
       "milestones": [
         "MVP · problem and reproducible baseline: A versioned training run tracked in MLflow, a served model and scores written to gold. Start with the smallest deterministic reference before adding extensions.",
-        "MVP · Phase 8 · ML engineering and MLOps: Phase 8 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "MVP · Phase 1 · ML engineering and MLOps: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
         "Integrated demonstration: One clean-start command, connected end-to-end example and evidence report",
         "Explain and hand off: README, decision notes and recorded limitations"
       ],
       "acceptance": [
         "Reproduce the run from its logged data snapshot and flag a simulated feature drift.",
-        "Phase 8 · ML engineering and MLOps: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Phase 1 · ML engineering and MLOps: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
         "A teammate can reproduce the demo using the README without paid credentials."
       ],
       "documentation": [
@@ -15431,8 +15677,8 @@
       ]
     },
     {
-      "id": "v2:data-engineering-ai-docs-assistant:de-llm-genai",
-      "patternId": "data-engineering-ai-docs-assistant",
+      "id": "v2:ai-data-docs-assistant:de-llm-genai",
+      "patternId": "ai-data-docs-assistant",
       "catalogVersion": 2,
       "source": "Curated match",
       "title": "Pipeline documentation assistant",
@@ -15442,8 +15688,8 @@
       "output": "A local RAG assistant with citations and one read-only metadata tool.",
       "resources": [
         {
-          "title": "data-engineering-ai implementation reference",
-          "url": "https://spark.apache.org/docs/latest/api/python/getting_started/index.html",
+          "title": "ai-data implementation reference",
+          "url": "https://mlflow.org/docs/latest/index.html",
           "access": "Free reading; no registration. Required data is generated locally or bundled; optional model downloads are labeled in the brief."
         },
         {
@@ -15456,7 +15702,7 @@
       "learningGoals": [
         "Explain and implement pipeline documentation assistant.",
         "Demonstrate correctness: Report recall@k on the question set and abstain on questions the docs do not answer.",
-        "Explain the role, tradeoffs and failure modes of Phase 9 · LLM and GenAI engineering in the completed system."
+        "Explain the role, tradeoffs and failure modes of Phase 2 · LLM and GenAI engineering in the completed system."
       ],
       "boundaries": [
         "Local educational prototype using fictional, generated or bundled data.",
@@ -15469,25 +15715,25 @@
       "integration": [
         {
           "skillId": "de-llm-genai",
-          "skillTitle": "Phase 9 · LLM and GenAI engineering",
+          "skillTitle": "Phase 2 · LLM and GenAI engineering",
           "catalogSkillId": "de-llm-genai",
-          "task": "Implement Phase 9 · LLM and GenAI engineering in Pipeline documentation assistant. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.",
-          "deliverable": "Phase 9 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "task": "Implement Phase 2 · LLM and GenAI engineering in Pipeline documentation assistant. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.",
+          "deliverable": "Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
           "check": "Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
           "general": false
         }
       ],
       "general": false,
       "prerequisiteSkills": [],
-      "difficulty": "Beginner → intermediate",
-      "hours": 10,
+      "difficulty": "Intermediate",
+      "hours": 16,
       "components": [
-        "Phase 9 · LLM and GenAI engineering: Phase 9 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations"
+        "Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations"
       ],
       "dataFlow": [
         "Use the project's own README, runbook and dbt docs plus 20 labeled questions.",
         "Validate source records and preserve stable IDs.",
-        "Phase 9 · LLM and GenAI engineering consumes the project records/results and produces: Phase 9 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "Phase 2 · LLM and GenAI engineering consumes the project records/results and produces: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
         "A local RAG assistant with citations and one read-only metadata tool.",
         "Report recall@k on the question set and abstain on questions the docs do not answer."
       ],
@@ -15498,8 +15744,8 @@
           "check": "Report recall@k on the question set and abstain on questions the docs do not answer."
         },
         {
-          "title": "MVP · Phase 9 · LLM and GenAI engineering",
-          "deliverable": "Phase 9 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "title": "MVP · Phase 2 · LLM and GenAI engineering",
+          "deliverable": "Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
           "check": "Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
         },
         {
@@ -15515,13 +15761,13 @@
       ],
       "milestones": [
         "MVP · problem and reproducible baseline: A local RAG assistant with citations and one read-only metadata tool. Start with the smallest deterministic reference before adding extensions.",
-        "MVP · Phase 9 · LLM and GenAI engineering: Phase 9 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "MVP · Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
         "Integrated demonstration: One clean-start command, connected end-to-end example and evidence report",
         "Explain and hand off: README, decision notes and recorded limitations"
       ],
       "acceptance": [
         "Report recall@k on the question set and abstain on questions the docs do not answer.",
-        "Phase 9 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Phase 2 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
         "A teammate can reproduce the demo using the README without paid credentials."
       ],
       "documentation": [
