@@ -106,7 +106,17 @@ export const patterns = [
     check:
       "Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.",
   },
-];
+  {
+    id: "platform",
+    title: "Analytics-to-AI data platform",
+    problem:
+      "Turn raw operational events into governed tables that feed both a forecasting model and a cited policy assistant.",
+    data: "Generate 50000 fictional order events with late arrivals, duplicates and one schema change, plus ten policy documents.",
+    output:
+      "A medallion pipeline whose gold tables feed one tracked model and one assistant with citations.",
+    check:
+      "Replay the pipeline twice and get identical gold tables, then compare the model and the assistant with their baselines on held-out data.",
+  },];
 const tasks = {
   python: [
     "Implement typed, reusable ingestion and transformation functions with explicit errors.",
@@ -234,6 +244,11 @@ const scenarios = {
     target: "the digit class or generated dataset label",
     baseline: "a dummy predictor and a simple fitted estimator",
     skills: ["eval-security", "ml", "dl", "ai-data"],
+  },
+  platform: {
+    target: "next-week order volume per store",
+    baseline: "the same week last year per store, and keyword search over the policy documents",
+    skills: ["data-engineering", "ai-data", "ml", "rag"],
   },
 };
 export function legacyRecommend(skills) {
