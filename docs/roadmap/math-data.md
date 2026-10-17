@@ -2,7 +2,7 @@
 
 Understand the operations and data quality behind model behavior.
 
-## Main route · Step 3 of 13
+## Main route · Step 3 of 14
 
 **Goal:** Understand the data, shapes, gradients and statistics behind AI.
 

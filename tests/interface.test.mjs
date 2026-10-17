@@ -46,7 +46,7 @@ test("Project builder shows the first ten ideas, provenance and the next batch c
   assert(
     html.includes("Show more") &&
       html.includes("Curated match") &&
-      html.includes("130 authored projects"),
+      html.includes("140 authored projects"),
   );
 });
 
@@ -109,7 +109,7 @@ test("Simplified lesson keeps every concept, video and exercise available with s
   assert(html.includes('id="lesson-progress"'));
 });
 
-test("Compact roadmap keeps all 13 domain destinations and its eight-step main route", () => {
+test("Compact roadmap keeps all 14 domain destinations and its eight-step main route", () => {
   const html = renderToStaticMarkup(
     createElement(Roadmap, { state, search: "" }),
   );
@@ -126,7 +126,7 @@ test("Compact roadmap keeps all 13 domain destinations and its eight-step main r
     assert(html.includes(heading));
   assert.equal(
     (html.match(/class="pipeline-topics-disclosure"/g) ?? []).length,
-    13,
+    14,
   );
 });
 

@@ -2,7 +2,7 @@
 
 Use the tools and contracts that make a team project maintainable.
 
-## Main route · Step 2 of 13
+## Main route · Step 2 of 14
 
 **Goal:** Turn scripts into a maintainable, tested team repository.
 

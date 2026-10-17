@@ -2,7 +2,7 @@
 
 Expose reliable APIs and protect shared application state.
 
-## Main route · Step 7 of 13
+## Main route · Step 7 of 14
 
 **Goal:** Build the API and database layer that an AI application needs.
 
@@ -12,7 +12,7 @@ Expose validated APIs with authorization, relational data and transaction checks
 
 Follow the modules and lessons below at your pace. Finish each exercise, save your evidence and self-assessment, then continue. Completed and Already known count as completed; Skipped is reported separately. You can move ahead at any time.
 
-[Full pipeline](../PIPELINE.md) · [Next step: Retrieval and RAG](rag.md)
+[Full pipeline](../PIPELINE.md) · [Next step: Data Engineering + AI](data-engineering-ai.md)
 
 ## FastAPI and full-stack contracts
 

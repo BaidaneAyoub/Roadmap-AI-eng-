@@ -360,9 +360,65 @@ Open a pipeline node → choose relevant lessons → build each exercise → sav
 
 - [ ] [Backend and data checkpoint](roadmap/backend.md#checkpoint-backend) · 7h · Essential
 
+↓ Next: [Data Engineering + AI](roadmap/data-engineering-ai.md)
+
+## 8. [Data Engineering + AI](roadmap/data-engineering-ai.md)
+
+Optional · Data engineering + AI
+
+**Goal:** Extend the existing SQL, Python, medallion, FastAPI and introductory Airflow foundation into a production-oriented data and AI engineering sequence.
+
+**Checkpoint:** Build and explain a reproducible CDC-to-lakehouse pipeline, then connect it to a measured ML or RAG workflow and a documented system design.
+
+**Transition:** This ten-phase roadmap is an optional parallel track. Phases 8–9 can overlap with Phases 5–7; begin Phase 10 after Phase 4 and keep practicing it throughout.
+
+### Module 1: Phase 1
+
+- [ ] [Phase 1 · Distributed processing with Spark](roadmap/data-engineering-ai.md#de-spark) · 28h · Essential
+
+### Module 2: Phase 2
+
+- [ ] [Phase 2 · Orchestration mastery with Airflow](roadmap/data-engineering-ai.md#de-airflow) · 24h · Essential
+
+### Module 3: Phase 3
+
+- [ ] [Phase 3 · Streaming and CDC with Kafka](roadmap/data-engineering-ai.md#de-kafka) · 26h · Essential
+
+### Module 4: Phase 4
+
+- [ ] [Phase 4 · Lakehouse formats and storage internals](roadmap/data-engineering-ai.md#de-lakehouse) · 26h · Essential
+
+### Module 5: Phase 5
+
+- [ ] [Phase 5 · Transformation and modeling with dbt + Kimball](roadmap/data-engineering-ai.md#de-dbt-kimball) · 22h · Essential
+
+### Module 6: Phase 6
+
+- [ ] [Phase 6 · Data quality and observability](roadmap/data-engineering-ai.md#de-quality-observability) · 19h · Essential
+
+### Module 7: Phase 7
+
+- [ ] [Phase 7 · Cloud and infrastructure](roadmap/data-engineering-ai.md#de-cloud-infra) · 23h · Essential
+
+### Module 8: Phase 8
+
+- [ ] [Phase 8 · ML engineering and MLOps](roadmap/data-engineering-ai.md#de-mlops) · 22h · Essential
+
+### Module 9: Phase 9
+
+- [ ] [Phase 9 · LLM and GenAI engineering](roadmap/data-engineering-ai.md#de-llm-genai) · 23h · Essential
+
+### Module 10: Phase 10
+
+- [ ] [Phase 10 · System design and interview preparation](roadmap/data-engineering-ai.md#de-system-design-interviews) · 20h · Essential
+
+### Module 11: Stage checkpoint
+
+- [ ] [Data engineering checkpoint](roadmap/data-engineering-ai.md#checkpoint-data-engineering-ai) · 7h · Essential
+
 ↓ Next: [Retrieval and RAG](roadmap/rag.md)
 
-## 8. [Retrieval and RAG](roadmap/rag.md)
+## 9. [Retrieval and RAG](roadmap/rag.md)
 
 3 · Build AI applications
 
@@ -407,7 +463,7 @@ Open a pipeline node → choose relevant lessons → build each exercise → sav
 
 ↓ Next: [Evaluation and security](roadmap/eval-security.md)
 
-## 9. [Evaluation and security](roadmap/eval-security.md)
+## 10. [Evaluation and security](roadmap/eval-security.md)
 
 3 · Build AI applications
 
@@ -443,7 +499,7 @@ Open a pipeline node → choose relevant lessons → build each exercise → sav
 
 ↓ Next: [Agents and MCP](roadmap/agents.md)
 
-## 10. [Agents and MCP](roadmap/agents.md)
+## 11. [Agents and MCP](roadmap/agents.md)
 
 3 · Build AI applications
 
@@ -479,7 +535,7 @@ Open a pipeline node → choose relevant lessons → build each exercise → sav
 
 ↓ Next: [Coding agents](roadmap/coding-agents.md)
 
-## 11. [Coding agents](roadmap/coding-agents.md)
+## 12. [Coding agents](roadmap/coding-agents.md)
 
 4 · Ship and improve
 
@@ -511,7 +567,7 @@ Open a pipeline node → choose relevant lessons → build each exercise → sav
 
 ↓ Next: [Deployment and operations](roadmap/deployment.md)
 
-## 12. [Deployment and operations](roadmap/deployment.md)
+## 13. [Deployment and operations](roadmap/deployment.md)
 
 4 · Ship and improve
 
@@ -548,7 +604,7 @@ Open a pipeline node → choose relevant lessons → build each exercise → sav
 
 ↓ Next: [Product and documentation](roadmap/product.md)
 
-## 13. [Product and documentation](roadmap/product.md)
+## 14. [Product and documentation](roadmap/product.md)
 
 4 · Ship and improve
 

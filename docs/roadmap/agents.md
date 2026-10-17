@@ -2,7 +2,7 @@
 
 Build bounded tool workflows before increasing autonomy.
 
-## Main route · Step 10 of 13
+## Main route · Step 11 of 14
 
 **Goal:** Build bounded tool workflows with state, recovery and human approval.
 

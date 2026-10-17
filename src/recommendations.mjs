@@ -153,6 +153,11 @@ const tasks = {
     "Keep user authorization in trusted code and test invalid input and cross-user access.",
     "An OpenAPI contract, API checks and a browser/API interaction",
   ],
+  "data-engineering-ai": [
+    "Build an idempotent data pipeline that connects CDC or batch ingestion to tested lakehouse models and a measurable AI consumer.",
+    "Verify replay safety, data contracts, lineage and recovery; compare pipeline and model results with a reproducible baseline.",
+    "A runnable pipeline, quality and lineage report, architecture diagram and documented recovery test",
+  ],
   "eval-security": [
     "Build a golden task set and test evidence support, permissions and failure cases.",
     "Evaluate per-case results, adversarial inputs, latency and a meaningful error slice.",
@@ -203,12 +208,12 @@ const scenarios = {
   documents: {
     target: "validity of a document record",
     baseline: "a deterministic schema validator; keep it authoritative",
-    skills: ["python", "engineering", "backend"],
+    skills: ["python", "engineering", "backend", "data-engineering-ai"],
   },
   operations: {
     target: "the incident category/severity from a log window",
     baseline: "error counts and a keyword-to-runbook mapping",
-    skills: ["deployment", "agents", "eval-security"],
+    skills: ["deployment", "agents", "eval-security", "data-engineering-ai"],
   },
   search: {
     target: "query/item relevance",
@@ -223,7 +228,7 @@ const scenarios = {
   audit: {
     target: "the digit class or generated dataset label",
     baseline: "a dummy predictor and a simple fitted estimator",
-    skills: ["eval-security", "ml", "dl"],
+    skills: ["eval-security", "ml", "dl", "data-engineering-ai"],
   },
 };
 export function legacyRecommend(skills) {

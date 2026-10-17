@@ -2,7 +2,7 @@
 
 Direct and verify generated work with clear engineering context.
 
-## Main route · Step 11 of 13
+## Main route · Step 12 of 14
 
 **Goal:** Direct coding agents using clear specifications and verify their work.
 

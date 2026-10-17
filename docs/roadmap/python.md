@@ -2,7 +2,7 @@
 
 Write understandable, testable programs before adding models.
 
-## Main route · Step 1 of 13
+## Main route · Step 1 of 14
 
 **Goal:** Write reliable Python programs before connecting AI tools.
 

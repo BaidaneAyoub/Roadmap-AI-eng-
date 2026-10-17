@@ -56,9 +56,17 @@ Integrate a model with bounded context, structured outputs and measured limitati
 
 Expose validated APIs with authorization, relational data and transaction checks.
 
+↓ [Next: Data Engineering + AI](roadmap/data-engineering-ai.md)
+
+## 8. data engineering ai
+
+[Data Engineering + AI](roadmap/data-engineering-ai.md)
+
+Build a replayable CDC-to-lakehouse pipeline with data contracts, lineage and a measured AI consumer.
+
 ↓ [Next: Retrieval and RAG](roadmap/rag.md)
 
-## 8. rag
+## 9. rag
 
 [Retrieval and RAG](roadmap/rag.md)
 
@@ -66,7 +74,7 @@ Retrieve evidence, preserve citations and abstain when reliable support is missi
 
 ↓ [Next: Evaluation and security](roadmap/eval-security.md)
 
-## 9. eval security
+## 10. eval security
 
 [Evaluation and security](roadmap/eval-security.md)
 
@@ -74,7 +82,7 @@ Measure quality and enforce security boundaries before introducing autonomy.
 
 ↓ [Next: Agents and MCP](roadmap/agents.md)
 
-## 10. agents
+## 11. agents
 
 [Agents and MCP](roadmap/agents.md)
 
@@ -82,7 +90,7 @@ Use bounded tool workflows and versioned MCP contracts with explicit permissions
 
 ↓ [Next: Coding agents](roadmap/coding-agents.md)
 
-## 11. coding agents
+## 12. coding agents
 
 [Coding agents](roadmap/coding-agents.md)
 
@@ -90,7 +98,7 @@ Direct coding agents through specifications, code review and verified outcomes.
 
 ↓ [Next: Deployment and operations](roadmap/deployment.md)
 
-## 12. deployment
+## 13. deployment
 
 [Deployment and operations](roadmap/deployment.md)
 
@@ -98,7 +106,7 @@ Containerize, monitor, recover and restore a reproducible local application.
 
 ↓ [Next: Product and documentation](roadmap/product.md)
 
-## 13. product
+## 14. product
 
 [Product and documentation](roadmap/product.md)
 

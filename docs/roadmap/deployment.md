@@ -2,7 +2,7 @@
 
 Release reproducible services and observe their real behavior.
 
-## Main route · Step 12 of 13
+## Main route · Step 13 of 14
 
 **Goal:** Package and operate an AI service reliably within a small budget.
 

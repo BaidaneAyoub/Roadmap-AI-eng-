@@ -144,6 +144,17 @@ runbook-drill|Incident runbook rehearsal|A teammate needs usable recovery instru
 metric-tree|Product outcome measurement tree|A builder needs metrics that connect usage to learning outcomes.|Generate fictional sessions, completed exercises and feedback.|A metric tree and instrumentation contract.|Distinguish activity from learning and specify denominator and time window.|product-discovery-metrics
 delivery-contract|Project delivery documentation pack|A team needs a handoff that survives the original developer leaving.|Use a fictional AI search service with example requests.|Requirements, architecture, API spec, evaluation and deployment handoff.|A reviewer can trace one user scenario through every document.|docs-delivery-contracts
 feedback-loop|Feedback prioritization board|A maintainer needs to turn messy feedback into testable changes.|Write 40 fictional feedback notes with conflicting requests.|A categorized backlog with evidence and experiment plans.|Deduplicate reports while retaining disagreement and define a test per priority.|product-discovery,product-prototype`,
+  "data-engineering-ai": `
+skew-doctor|Spark skew diagnosis lab|An analyst needs a slow daily aggregation to finish predictably.|Generate 2 million events with one deliberately hot customer key.|A PySpark job with explain plans and a salted or broadcast fix.|Report task-duration spread before and after and prove both versions return identical totals.|de-spark
+backfill-dag|Idempotent backfill orchestrator|A data owner needs to reload a broken week without duplicating rows.|Generate seven daily partitions with one corrupted day.|An Airflow DAG with mapped partition tasks, retries and a bounded backfill command.|Run the backfill twice and show unchanged row counts plus a DAG integrity test in CI.|de-airflow
+cdc-replay|Change data capture replay bench|A support team needs customer changes mirrored without losing deletes.|Use a disposable PostgreSQL table with scripted inserts, updates and deletes.|A Debezium-to-Kafka path landing raw events in a bronze sink.|Restart the consumer mid-stream and prove deletes and updates replay without duplicates.|de-kafka
+schema-evolver|Event schema compatibility gate|A platform team needs producer changes that do not break existing consumers.|Write Avro schema versions with an added optional field and one breaking rename.|A schema registry compatibility check and old/new consumer fixtures.|Accept the compatible change, reject the breaking one and keep old consumers passing.|de-kafka
+time-travel-table|Lakehouse time-travel auditor|An auditor needs to see what a table contained before a bad load.|Generate three loads into an Iceberg or Delta table, the last one faulty.|A snapshot report, rollback procedure and compaction plan.|Query the pre-fault snapshot, restore it and show file counts before and after compaction.|de-lakehouse
+star-schema|Sales star-schema builder|A manager needs consistent revenue numbers across reports.|Generate fictional orders, customers and products with late-arriving changes.|A dbt project with staging, a Kimball fact table and a type-2 customer dimension.|dbt tests pass, grain is documented and a changed customer keeps correct historical revenue.|de-dbt-kimball
+quality-gate|Data quality quarantine gate|A downstream team needs bad records stopped before they reach reports.|Seed 1000 rows with nulls, duplicates, out-of-range values and a schema drift.|Great Expectations or equivalent checks with quarantine output and lineage events.|Every seeded defect lands in quarantine, clean rows pass and the alert names the failing contract.|de-quality-observability
+infra-plan|Pipeline infrastructure plan|A small team needs a repeatable environment without surprise cloud bills.|Use the local pipeline containers and one chosen cloud provider's free documentation.|A Terraform plan, local Kubernetes deployment and least-privilege diagram.|terraform plan runs with no paid resources applied and the rollback steps restore the previous release.|de-cloud-infra
+feature-loop|Feature store to prediction loop|An analyst needs churn scores written back next to the source data.|Generate fictional accounts and a gold-layer feature table.|A versioned training run tracked in MLflow, a served model and scores written to gold.|Reproduce the run from its logged data snapshot and flag a simulated feature drift.|de-mlops
+docs-assistant|Pipeline documentation assistant|An on-call engineer needs cited answers about pipeline behavior.|Use the project's own README, runbook and dbt docs plus 20 labeled questions.|A local RAG assistant with citations and one read-only metadata tool.|Report recall@k on the question set and abstain on questions the docs do not answer.|de-llm-genai`,
 };
 
 export const projectResourceUrls = {
@@ -153,6 +164,8 @@ export const projectResourceUrls = {
   ml: "https://scikit-learn.org/stable/datasets/toy_dataset.html",
   dl: "https://docs.pytorch.org/tutorials/beginner/basics/intro.html",
   llm: "https://huggingface.co/learn/llm-course/chapter1/1",
+  "data-engineering-ai":
+    "https://spark.apache.org/docs/latest/api/python/getting_started/index.html",
   rag: "https://scikit-learn.org/stable/modules/feature_extraction.html",
   agents: "https://modelcontextprotocol.io/docs/develop/build-server",
   backend: "https://fastapi.tiangolo.com/tutorial/",

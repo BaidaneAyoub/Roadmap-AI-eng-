@@ -23,11 +23,11 @@ const skill = (id) =>
   catalog.lessons.find((s) => s.id === id) ??
   catalog.domains.find((s) => s.id === id);
 
-test("130 authored projects cover each domain ten times with valid native skills and complete briefs", () => {
-  assert.equal(projectLibrary.length, 130);
-  assert.equal(new Set(projectLibrary.map((p) => p.id)).size, 130);
-  assert.equal(new Set(projectLibrary.map((p) => p.title)).size, 130);
-  assert.equal(new Set(projectLibrary.map((p) => p.check)).size, 130);
+test("140 authored projects cover each domain ten times with valid native skills and complete briefs", () => {
+  assert.equal(projectLibrary.length, 140);
+  assert.equal(new Set(projectLibrary.map((p) => p.id)).size, 140);
+  assert.equal(new Set(projectLibrary.map((p) => p.title)).size, 140);
+  assert.equal(new Set(projectLibrary.map((p) => p.check)).size, 140);
   for (const domain of catalog.domains)
     assert.equal(
       projectLibrary.filter((p) => p.domainId === domain.id).length,

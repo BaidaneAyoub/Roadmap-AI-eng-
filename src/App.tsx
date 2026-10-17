@@ -2612,7 +2612,7 @@ export function ProjectBuilder({
       <SectionTitle
         eyebrow="KNOWLEDGE BECOMES CAPABILITY THROUGH PRACTICE"
         title="What will you build next?"
-        description="Explore 130 authored projects. Connect your skills, build a real system and take a detailed learning prompt to your AI mentor."
+        description="Explore 140 authored projects. Connect your skills, build a real system and take a detailed learning prompt to your AI mentor."
       />
       <div className="builder-layout">
         <aside className="panel skill-picker">
