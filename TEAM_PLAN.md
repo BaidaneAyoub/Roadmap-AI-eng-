@@ -2,7 +2,7 @@
 
 2026-10-17 · Ayoub
 
-L-site fih 3 roadmaps. Kol wa7d 3ndo l-part dyalo, w chi 7wayj ba9in bla owner: deploy, CI, vidéos DE w 8 projets AI + Data.
+L-site fih 3 roadmaps. Kol wa7d 3ndo l-part dyalo, w chi 7wayj ba9in bla owner: deploy, CI, vidéos DE w design dyal map.
 
 ## Décision: 3 roadmaps
 
@@ -23,7 +23,7 @@ Kol wa7d 3ndo fichiers dyalo. Ila bghiti tbdl fichier dyal chi wa7d akhor, dir P
 
 | Chkoun | Mission | Fichiers dyalo | Salat mli |
 | --- | --- | --- | --- |
-| Ayoub (orchestra) | Système projets combinés Data + AI (ex. DE + ML + RAG f projet wa7d). `ai-data` fih ghir 2/10 projets f `content/projects.mjs`: khass Ayoub yzid 8. | `content/order.mjs`, `content/deep-route.mjs`, `src/recommendations.mjs`, `src/project-mentor.mjs`, `content/project-tools.mjs` | Projet combiné kaykhrj task + deliverable + check l kol skill, w `npm test` kaydouz kaml |
+| Ayoub (orchestra) | Système projets combinés Data + AI (ex. DE + ML + RAG f projet wa7d). `ai-data` fih 10/10 projets. | `content/order.mjs`, `content/deep-route.mjs`, `src/recommendations.mjs`, `src/project-mentor.mjs`, `content/project-tools.mjs` | Projet combiné kaykhrj task + deliverable + check l kol skill, w `npm test` kaydouz kaml |
 | Bouzin | Login b GitHub: l-code deja kayn (`signIn` f `src/store.ts`, Supabase OAuth), khasso ghir ytkonfigura w ytesta. + Yjm3 sources dyal DE. | `src/store.ts`, `supabase/`, `.env.example` | Membre kaydkhl b GitHub, progress dyalo kaytsauvegarda f cloud, `supabase/tests/security.sql` kaydouz. Liste sources DE (titre, URL, gratuit?, phase) msllma l Marouan w Soulaimane |
 | Omar | Design dyal site kaml. + Yt2akkd mn sources dyal roadmap AI. | `src/workspace.css`, `src/styles.css`, layout f `src/App.tsx` | Kol page mzyana f mobile w desktop, contraste w clavier mzyanin. `npm run check:resources` bla 7ta lien mi9in f AI |
 | Oussama | Ykml w y9add roadmap AI eng w yzid details: concepts, exercices, sources. | `content/curriculum.mjs`, `content/advanced.mjs`, `content/details.mjs` | Kol leçon AI fiha concepts mcher7in, exercice, w source gratuite verifiée 3nd Omar |
@@ -48,7 +48,7 @@ Kaynin 5 blays fin jouj wla kter ghadi ybdlo nfs l-fichier. Hado homa l-boundari
 Hado ma 3ndhom 7ta owner f l-plan l-asli. Kol wa7d fihom 3ndo owner proposé bin parenthèses.
 
 - [ ] **Deploy (Bouzin):** ma kayn 7ta hosting f repo. Login b GitHub khasso URL publique l callback dyal OAuth, ya3ni login ma ykhdmch bla deploy.
-- [ ] **CI (Ayoub):** ma kayn 7ta `.github/workflows`. Khass GitHub Action kaydir `npm ci`, `npm test` w `npm run build` 3la kol PR.
+- [x] **CI (Ayoub), salat (`.github/workflows/ci.yml`):** ma kayn 7ta `.github/workflows`. Khass GitHub Action kaydir `npm ci`, `npm test` w `npm run build` 3la kol PR.
 - [ ] **Design dyal map 3 roadmaps (Omar):** l-map jdida f `Roadmap()` (`src/App.tsx`) khddama b les classes CSS l-9dam, walakin ma tdesignatch. Les étapes communes (python, engineering, math-data, backend) kayt-affichaw f AI w Data b badge « SHARED · STUDIED ONCE ».
 - [x] **2 tests kayt7aydo (Ayoub), salat:** `tests/core.test.mjs:63` w `tests/interface.test.mjs:112` ba9in kaysstnnaw route l-9dima (`choices`, « eight-step »). T9addo m3a les 3 roadmaps; daba `npm test` kaydouz kaml (35/35).
 - [x] **Texte dyal guide DE (Ayoub), salat:** `stageGuides["data-engineering-ai"]` f `content/order.mjs` tbddel b jouj guides: `data-engineering` w `ai-data`.

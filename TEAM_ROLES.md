@@ -73,10 +73,10 @@ Kol wa7d hna l-role dyalo, les fichiers dyalo, w imta tkon l-khdma dyalo salat. 
 
 ## Ayoub: Orchestra + projets AI + Data
 
-1. **Daba:** pushi `main` bach ybdaw drari.
-2. Zid 8 projets l `ai-data` f `content/projects.mjs` (fih ghir 2 daba). Mn ba3d 7iyed l-exception `ponytail:` f `tests/projects.test.mjs`.
-3. Projets combinés (ex. DE + ML + RAG) f `src/recommendations.mjs` (`tasks`, `scenarios`) w `src/project-mentor.mjs`.
-4. Dir CI: GitHub Action kaydir `npm ci`, `npm test` w `npm run build` 3la kol PR.
+1. ~~Pushi `main` bach ybdaw drari.~~ Salat.
+2. ~~Zid 8 projets l `ai-data`.~~ Salat: `ai-data` fih 10, w l-library fiha 150.
+3. Projets combinés f `src/recommendations.mjs`: zdt pattern `platform` (DE + AI + Data + ML + RAG). Ba9i: tzid patterns okhrin ila bghiti.
+4. ~~Dir CI.~~ Salat: `.github/workflows/ci.yml` kaydir `npm ci`, kayverifi les fichiers générés, `npm test` w `npm run build` 3la kol PR.
 5. Reviewi w mergi les PRs, w tab3 l-avancement.
 
 ## Chkoun kaysstnna chkoun
@@ -86,4 +86,4 @@ Kol wa7d hna l-role dyalo, les fichiers dyalo, w imta tkon l-khdma dyalo salat. 
 | Bouzin | Marouan, Soulaimane | Liste dyal sources DE |
 | Omar | Oussama | Liste dyal liens mi9in f AI |
 | Soulaimane | Marouan | PR 3la `content/data-engineering.mjs` (review) |
-| Ayoub | Kolchi | Push dyal `main` 9bel ma ybdaw |
+| Ayoub | Kolchi | Push dyal `main` (salat) |
