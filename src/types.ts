@@ -16,12 +16,23 @@ export interface VideoResource extends Resource {
   scope?: string;
 }
 export interface Concept {
+  commonMistake: string;
+  checkQuestion: string;
+  exercise: string;
   name: string;
   explanation: string;
   example: string;
   videos: VideoResource[];
 }
 export interface Lesson {
+  learningLevel: 'Foundation' | 'Essential' | 'Specialization';
+  studyOrder: number;
+  mastery: 'Explain' | 'Implement' | 'Diagnose' | 'Compare';
+  priorityReason: string;
+  whenNeeded: string;
+  canDefer: string;
+  reviewedAt: string;
+  isCheckpoint?: boolean;
   id: string;
   domainId: string;
   module: string;
@@ -50,6 +61,7 @@ export interface Domain {
   modules: { title: string; lessons: Lesson[] }[];
 }
 export interface Catalog {
+  stages: {id: string; level: Lesson['learningLevel']; domainId: string; title: string; lessonIds: string[]; checkpointId: string | null}[];
   version: number;
   domains: Domain[];
   lessons: Lesson[];
@@ -94,6 +106,16 @@ export interface CustomTopic {
   checklist: ChecklistNode[];
 }
 export interface Brief {
+  catalogVersion?: number;
+  source?: string;
+  audience?: string;
+  learningGoals?: string[];
+  boundaries?: string[];
+  components?: string[];
+  dataFlow?: string[];
+  stages?: { title: string; deliverable: string; check: string }[];
+  resources?: { title: string; url: string; access: string }[];
+  prerequisiteSkills?: string[];
   id: string;
   patternId: string;
   title: string;
@@ -106,6 +128,7 @@ export interface Brief {
   integration: {
     skillId: string;
     skillTitle: string;
+    catalogSkillId?: string;
     task: string;
     check: string;
     deliverable: string;

@@ -133,6 +133,7 @@ export async function loadCloud(): Promise<Workspace | null> {
   [profiles, progress, notes, custom, projects, participants].forEach(
     assertResult,
   );
+  for (const project of projects.data ?? []) validateBrief(project.brief);
   const byUser: Workspace["progress"] = {};
   for (const row of progress.data ?? []) {
     byUser[row.user_id] ??= {};

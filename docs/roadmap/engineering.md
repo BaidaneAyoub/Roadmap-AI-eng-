@@ -2,17 +2,17 @@
 
 Use the tools and contracts that make a team project maintainable.
 
-## Main route · Step 2 of 8
+## Main route · Step 2 of 13
 
 **Goal:** Turn scripts into a maintainable, tested team repository.
 
 **Stage checkpoint:** Open a pull request with a tested HTTP/JSON utility and reproducible setup instructions.
 
-Put your program in Git and understand HTTP + JSON.
+Use Git, HTTP contracts and layered tests to deliver reviewable software.
 
 Follow the modules and lessons below at your pace. Finish each exercise, save your evidence and self-assessment, then continue. Completed and Already known count as completed; Skipped is reported separately. You can move ahead at any time.
 
-[Full pipeline](../PIPELINE.md) · [Next step: Backend and databases](backend.md)
+[Full pipeline](../PIPELINE.md) · [Next step: Mathematics and data](math-data.md)
 
 ## Developer workflow
 
@@ -22,7 +22,7 @@ Follow the modules and lessons below at your pace. Finish each exercise, save yo
 
 Understand processes, paths and environment configuration behind deployment commands.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Foundation · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Control flow and functions](python.md#python-control) Navigation is unrestricted.
 
@@ -108,292 +108,292 @@ Create a shell runbook that locates data, filters logs and starts/stops a small 
 
 #### Ten project recommendations
 
-### Document intake and validation pipeline
+### Reproducible environment trial
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A teammate needs reliable setup from a clean checkout.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use a tiny Python package and a local wheel/cache when available. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Terminal and Linux:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Terminal and Linux, explicitly apply Paths and permissions, Pipes and redirection, Processes and environment.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Terminal and Linux: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Terminal and Linux: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Terminal and Linux:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Terminal and Linux, explicitly apply Paths and permissions, Pipes and redirection, Processes and environment.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Terminal and Linux: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Terminal and Linux: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A locked dependency workflow and clean-environment setup guide.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Terminal and Linux:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Terminal and Linux, explicitly apply Paths and permissions, Pipes and redirection, Processes and environment.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
+- **Terminal and Linux:** Implement Terminal and Linux in Reproducible environment trial. Adapt this focused lab to the project data: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.  Required concepts: Paths and permissions, Pipes and redirection, Processes and environment.
+  - Deliverable: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Terminal and Linux: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A locked dependency workflow and clean-environment setup guide. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Terminal and Linux: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Terminal and Linux: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
+- [ ] Install into a fresh virtual environment and run the smoke test.
+- [ ] Terminal and Linux: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Workspace health inspector
 
-Find unusual stock movements and explain which records need investigation.
+A teammate needs to diagnose missing tools before setup.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Prepare a temporary project with missing files and a fake executable check. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Terminal and Linux:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Terminal and Linux, explicitly apply Paths and permissions, Pipes and redirection, Processes and environment.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Terminal and Linux: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Terminal and Linux: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Terminal and Linux:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Terminal and Linux, explicitly apply Paths and permissions, Pipes and redirection, Processes and environment.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Terminal and Linux: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Terminal and Linux: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A read-only shell inspector and machine-readable health report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Terminal and Linux:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Terminal and Linux, explicitly apply Paths and permissions, Pipes and redirection, Processes and environment.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
+- **Terminal and Linux:** Implement Terminal and Linux in Workspace health inspector. Adapt this focused lab to the project data: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.  Required concepts: Paths and permissions, Pipes and redirection, Processes and environment.
+  - Deliverable: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Terminal and Linux: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A read-only shell inspector and machine-readable health report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Terminal and Linux: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Terminal and Linux: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
+- [ ] Report each missing requirement and return a failing exit code without editing files.
+- [ ] Terminal and Linux: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Search complexity workbench
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A developer needs to choose a lookup strategy for growing catalogs.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Generate sorted ID lists at four sizes with fixed lookup queries. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Terminal and Linux:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Terminal and Linux, explicitly apply Paths and permissions, Pipes and redirection, Processes and environment.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Terminal and Linux: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Terminal and Linux: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A benchmark comparing linear scan, binary search and hash lookup.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Terminal and Linux:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Terminal and Linux, explicitly apply Paths and permissions, Pipes and redirection, Processes and environment.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
+- **Terminal and Linux:** Extend the project with Terminal and Linux in Search complexity workbench. Adapt this focused lab to the project data: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.  Required concepts: Paths and permissions, Pipes and redirection, Processes and environment.
+  - Deliverable: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Terminal and Linux: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A benchmark comparing linear scan, binary search and hash lookup. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Terminal and Linux: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Terminal and Linux: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
+- [ ] Check equal results and plot operation counts separately from noisy wall time.
+- [ ] Terminal and Linux: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### API change compatibility gate
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+An API owner needs to detect breaking schema changes before release.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Author two OpenAPI examples with removed fields and changed types. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A schema comparison CLI and compatibility report.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Terminal and Linux:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Terminal and Linux, explicitly apply Paths and permissions, Pipes and redirection, Processes and environment.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
+- **Terminal and Linux:** Extend the project with Terminal and Linux in API change compatibility gate. Adapt this focused lab to the project data: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.  Required concepts: Paths and permissions, Pipes and redirection, Processes and environment.
+  - Deliverable: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Terminal and Linux: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A schema comparison CLI and compatibility report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Terminal and Linux: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Terminal and Linux: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
+- [ ] Detect each seeded breaking change while allowing a new optional field.
+- [ ] Terminal and Linux: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Release conflict rehearsal
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A small team needs a safe process for reviewing conflicting changes.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Create a disposable local repository with two feature branches. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A documented conflict resolution, PR checklist and release tag.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Terminal and Linux:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Terminal and Linux, explicitly apply Paths and permissions, Pipes and redirection, Processes and environment.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
+- **Terminal and Linux:** Extend the project with Terminal and Linux in Release conflict rehearsal. Adapt this focused lab to the project data: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.  Required concepts: Paths and permissions, Pipes and redirection, Processes and environment.
+  - Deliverable: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Terminal and Linux: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A documented conflict resolution, PR checklist and release tag. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Terminal and Linux: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Terminal and Linux: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.
+- [ ] Reconstruct the release from its tag and explain each conflict decision.
+- [ ] Terminal and Linux: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### HTTP contract playground
+
+An API learner needs to see status codes and caching behavior.
+
+**Data:** Use a local HTTP stub with ten requests and fixed responses. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A request collection demonstrating headers, errors and conditional reads.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Terminal and Linux:** Extend the project with Terminal and Linux in HTTP contract playground. Adapt this focused lab to the project data: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.  Required concepts: Paths and permissions, Pipes and redirection, Processes and environment.
+  - Deliverable: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A request collection demonstrating headers, errors and conditional reads. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Terminal and Linux: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify 200, 304, 400 and 404 cases against documented contracts.
+- [ ] Terminal and Linux: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Repeatable batch import
+
+An operations teammate needs to rerun interrupted imports safely.
+
+**Data:** Generate 100 records with stable IDs and repeated batches. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A resumable importer with an explicit input/output contract.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Terminal and Linux:** Extend the project with Terminal and Linux in Repeatable batch import. Adapt this focused lab to the project data: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.  Required concepts: Paths and permissions, Pipes and redirection, Processes and environment.
+  - Deliverable: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A resumable importer with an explicit input/output contract. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Terminal and Linux: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Run the same batch twice and prove counts and totals do not change.
+- [ ] Terminal and Linux: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Refactor a tangled importer
+
+A maintainer needs isolated parsing, validation and storage responsibilities.
+
+**Data:** Create a small deliberately coupled CSV importer with six failing fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A refactored package with explicit boundaries and unchanged output contracts.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Terminal and Linux:** Extend the project with Terminal and Linux in Refactor a tangled importer. Adapt this focused lab to the project data: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.  Required concepts: Paths and permissions, Pipes and redirection, Processes and environment.
+  - Deliverable: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A refactored package with explicit boundaries and unchanged output contracts. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Terminal and Linux: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Run identical golden inputs before and after refactoring.
+- [ ] Terminal and Linux: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Reviewable feature delivery
+
+A contributor needs to ship a change another teammate can audit.
+
+**Data:** Use a tiny notes app and three requested behavior changes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A sequence of small commits with tests and a review brief.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Terminal and Linux:** Extend the project with Terminal and Linux in Reviewable feature delivery. Adapt this focused lab to the project data: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.  Required concepts: Paths and permissions, Pipes and redirection, Processes and environment.
+  - Deliverable: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A sequence of small commits with tests and a review brief. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Terminal and Linux: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A reviewer can trace each requirement to code, a test and a commit.
+- [ ] Terminal and Linux: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Checkout service testing lab
+
+A developer needs to distinguish unit, integration and contract failures.
+
+**Data:** Use fictional baskets, a local SQLite store and a stub payment adapter. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A small checkout simulator with separated test layers.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Terminal and Linux:** Extend the project with Terminal and Linux in Checkout service testing lab. Adapt this focused lab to the project data: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.  Required concepts: Paths and permissions, Pipes and redirection, Processes and environment.
+  - Deliverable: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A small checkout simulator with separated test layers. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Terminal and Linux: Terminal and Linux: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A failing adapter contract must fail integration without corrupting the store.
+- [ ] Terminal and Linux: Create a shell runbook that locates data, filters logs and starts/stops a small Python process; include Windows PowerShell equivalents.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -407,7 +407,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Collaborate without losing experiments or merging unreviewed changes.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Foundation · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Terminal and Linux](engineering.md#engineering-shell) Navigation is unrestricted.
 
@@ -498,292 +498,292 @@ Create two branches that intentionally conflict, resolve the conflict, and write
 
 #### Ten project recommendations
 
-### Document intake and validation pipeline
+### Release conflict rehearsal
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A small team needs a safe process for reviewing conflicting changes.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Create a disposable local repository with two feature branches. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Git, branches and pull requests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Git, branches and pull requests, explicitly apply Commits, Branches and merges, Pull requests.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Git, branches and pull requests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Git, branches and pull requests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Git, branches and pull requests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Git, branches and pull requests, explicitly apply Commits, Branches and merges, Pull requests.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Git, branches and pull requests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Git, branches and pull requests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A documented conflict resolution, PR checklist and release tag.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Git, branches and pull requests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Git, branches and pull requests, explicitly apply Commits, Branches and merges, Pull requests.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
+- **Git, branches and pull requests:** Implement Git, branches and pull requests in Release conflict rehearsal. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Git, branches and pull requests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A documented conflict resolution, PR checklist and release tag. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Git, branches and pull requests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
+- [ ] Reconstruct the release from its tag and explain each conflict decision.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Reviewable feature delivery
 
-Find unusual stock movements and explain which records need investigation.
+A contributor needs to ship a change another teammate can audit.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Use a tiny notes app and three requested behavior changes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Git, branches and pull requests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Git, branches and pull requests, explicitly apply Commits, Branches and merges, Pull requests.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Git, branches and pull requests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Git, branches and pull requests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Git, branches and pull requests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Git, branches and pull requests, explicitly apply Commits, Branches and merges, Pull requests.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Git, branches and pull requests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Git, branches and pull requests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A sequence of small commits with tests and a review brief.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Git, branches and pull requests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Git, branches and pull requests, explicitly apply Commits, Branches and merges, Pull requests.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
+- **Git, branches and pull requests:** Implement Git, branches and pull requests in Reviewable feature delivery. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Git, branches and pull requests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A sequence of small commits with tests and a review brief. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Git, branches and pull requests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
+- [ ] A reviewer can trace each requirement to code, a test and a commit.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Search complexity workbench
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A developer needs to choose a lookup strategy for growing catalogs.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Generate sorted ID lists at four sizes with fixed lookup queries. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Git, branches and pull requests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Git, branches and pull requests, explicitly apply Commits, Branches and merges, Pull requests.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Git, branches and pull requests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Git, branches and pull requests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A benchmark comparing linear scan, binary search and hash lookup.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Git, branches and pull requests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Git, branches and pull requests, explicitly apply Commits, Branches and merges, Pull requests.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
+- **Git, branches and pull requests:** Extend the project with Git, branches and pull requests in Search complexity workbench. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Git, branches and pull requests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A benchmark comparing linear scan, binary search and hash lookup. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Git, branches and pull requests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
+- [ ] Check equal results and plot operation counts separately from noisy wall time.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### API change compatibility gate
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+An API owner needs to detect breaking schema changes before release.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Author two OpenAPI examples with removed fields and changed types. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A schema comparison CLI and compatibility report.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Git, branches and pull requests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Git, branches and pull requests, explicitly apply Commits, Branches and merges, Pull requests.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
+- **Git, branches and pull requests:** Extend the project with Git, branches and pull requests in API change compatibility gate. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Git, branches and pull requests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A schema comparison CLI and compatibility report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Git, branches and pull requests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
+- [ ] Detect each seeded breaking change while allowing a new optional field.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Reproducible environment trial
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A teammate needs reliable setup from a clean checkout.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use a tiny Python package and a local wheel/cache when available. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A locked dependency workflow and clean-environment setup guide.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Git, branches and pull requests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Git, branches and pull requests, explicitly apply Commits, Branches and merges, Pull requests.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
+- **Git, branches and pull requests:** Extend the project with Git, branches and pull requests in Reproducible environment trial. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Git, branches and pull requests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A locked dependency workflow and clean-environment setup guide. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Git, branches and pull requests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
+- [ ] Install into a fresh virtual environment and run the smoke test.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### HTTP contract playground
+
+An API learner needs to see status codes and caching behavior.
+
+**Data:** Use a local HTTP stub with ten requests and fixed responses. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A request collection demonstrating headers, errors and conditional reads.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Git, branches and pull requests:** Extend the project with Git, branches and pull requests in HTTP contract playground. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A request collection demonstrating headers, errors and conditional reads. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify 200, 304, 400 and 404 cases against documented contracts.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Repeatable batch import
+
+An operations teammate needs to rerun interrupted imports safely.
+
+**Data:** Generate 100 records with stable IDs and repeated batches. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A resumable importer with an explicit input/output contract.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Git, branches and pull requests:** Extend the project with Git, branches and pull requests in Repeatable batch import. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A resumable importer with an explicit input/output contract. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Run the same batch twice and prove counts and totals do not change.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Refactor a tangled importer
+
+A maintainer needs isolated parsing, validation and storage responsibilities.
+
+**Data:** Create a small deliberately coupled CSV importer with six failing fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A refactored package with explicit boundaries and unchanged output contracts.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Git, branches and pull requests:** Extend the project with Git, branches and pull requests in Refactor a tangled importer. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A refactored package with explicit boundaries and unchanged output contracts. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Run identical golden inputs before and after refactoring.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Workspace health inspector
+
+A teammate needs to diagnose missing tools before setup.
+
+**Data:** Prepare a temporary project with missing files and a fake executable check. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A read-only shell inspector and machine-readable health report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Git, branches and pull requests:** Extend the project with Git, branches and pull requests in Workspace health inspector. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A read-only shell inspector and machine-readable health report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report each missing requirement and return a failing exit code without editing files.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Checkout service testing lab
+
+A developer needs to distinguish unit, integration and contract failures.
+
+**Data:** Use fictional baskets, a local SQLite store and a stub payment adapter. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A small checkout simulator with separated test layers.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Git, branches and pull requests:** Extend the project with Git, branches and pull requests in Checkout service testing lab. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A small checkout simulator with separated test layers. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A failing adapter contract must fail integration without corrupting the store.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -797,7 +797,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Model services communicate through explicit request and response contracts.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Foundation · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Git, branches and pull requests](engineering.md#engineering-git) Navigation is unrestricted.
 
@@ -883,292 +883,292 @@ Describe and call a local prediction endpoint; test invalid JSON, missing fields
 
 #### Ten project recommendations
 
-### Document intake and validation pipeline
+### HTTP contract playground
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+An API learner needs to see status codes and caching behavior.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use a local HTTP stub with ten requests and fixed responses. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **HTTP, APIs and JSON contracts:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP, APIs and JSON contracts, explicitly apply Methods and status codes, Headers and serialization, Client resilience.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP, APIs and JSON contracts: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] HTTP, APIs and JSON contracts: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **HTTP, APIs and JSON contracts:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP, APIs and JSON contracts, explicitly apply Methods and status codes, Headers and serialization, Client resilience.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP, APIs and JSON contracts: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] HTTP, APIs and JSON contracts: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A request collection demonstrating headers, errors and conditional reads.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **HTTP, APIs and JSON contracts:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP, APIs and JSON contracts, explicitly apply Methods and status codes, Headers and serialization, Client resilience.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
+- **HTTP, APIs and JSON contracts:** Implement HTTP, APIs and JSON contracts in HTTP contract playground. Adapt this focused lab to the project data: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.  Required concepts: Methods and status codes, Headers and serialization, Client resilience.
+  - Deliverable: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP, APIs and JSON contracts: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A request collection demonstrating headers, errors and conditional reads. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP, APIs and JSON contracts: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] HTTP, APIs and JSON contracts: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
+- [ ] Verify 200, 304, 400 and 404 cases against documented contracts.
+- [ ] HTTP, APIs and JSON contracts: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Search complexity workbench
 
-Find unusual stock movements and explain which records need investigation.
+A developer needs to choose a lookup strategy for growing catalogs.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Generate sorted ID lists at four sizes with fixed lookup queries. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **HTTP, APIs and JSON contracts:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP, APIs and JSON contracts, explicitly apply Methods and status codes, Headers and serialization, Client resilience.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP, APIs and JSON contracts: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] HTTP, APIs and JSON contracts: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **HTTP, APIs and JSON contracts:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP, APIs and JSON contracts, explicitly apply Methods and status codes, Headers and serialization, Client resilience.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP, APIs and JSON contracts: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] HTTP, APIs and JSON contracts: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A benchmark comparing linear scan, binary search and hash lookup.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **HTTP, APIs and JSON contracts:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP, APIs and JSON contracts, explicitly apply Methods and status codes, Headers and serialization, Client resilience.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
+- **HTTP, APIs and JSON contracts:** Extend the project with HTTP, APIs and JSON contracts in Search complexity workbench. Adapt this focused lab to the project data: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.  Required concepts: Methods and status codes, Headers and serialization, Client resilience.
+  - Deliverable: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP, APIs and JSON contracts: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A benchmark comparing linear scan, binary search and hash lookup. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP, APIs and JSON contracts: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] HTTP, APIs and JSON contracts: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
+- [ ] Check equal results and plot operation counts separately from noisy wall time.
+- [ ] HTTP, APIs and JSON contracts: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### API change compatibility gate
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+An API owner needs to detect breaking schema changes before release.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Author two OpenAPI examples with removed fields and changed types. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **HTTP, APIs and JSON contracts:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP, APIs and JSON contracts, explicitly apply Methods and status codes, Headers and serialization, Client resilience.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP, APIs and JSON contracts: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] HTTP, APIs and JSON contracts: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A schema comparison CLI and compatibility report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **HTTP, APIs and JSON contracts:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP, APIs and JSON contracts, explicitly apply Methods and status codes, Headers and serialization, Client resilience.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
+- **HTTP, APIs and JSON contracts:** Extend the project with HTTP, APIs and JSON contracts in API change compatibility gate. Adapt this focused lab to the project data: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.  Required concepts: Methods and status codes, Headers and serialization, Client resilience.
+  - Deliverable: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP, APIs and JSON contracts: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A schema comparison CLI and compatibility report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP, APIs and JSON contracts: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] HTTP, APIs and JSON contracts: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
+- [ ] Detect each seeded breaking change while allowing a new optional field.
+- [ ] HTTP, APIs and JSON contracts: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Reproducible environment trial
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A teammate needs reliable setup from a clean checkout.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use a tiny Python package and a local wheel/cache when available. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A locked dependency workflow and clean-environment setup guide.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **HTTP, APIs and JSON contracts:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP, APIs and JSON contracts, explicitly apply Methods and status codes, Headers and serialization, Client resilience.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
+- **HTTP, APIs and JSON contracts:** Extend the project with HTTP, APIs and JSON contracts in Reproducible environment trial. Adapt this focused lab to the project data: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.  Required concepts: Methods and status codes, Headers and serialization, Client resilience.
+  - Deliverable: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP, APIs and JSON contracts: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A locked dependency workflow and clean-environment setup guide. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP, APIs and JSON contracts: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] HTTP, APIs and JSON contracts: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
+- [ ] Install into a fresh virtual environment and run the smoke test.
+- [ ] HTTP, APIs and JSON contracts: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Release conflict rehearsal
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A small team needs a safe process for reviewing conflicting changes.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Create a disposable local repository with two feature branches. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A documented conflict resolution, PR checklist and release tag.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **HTTP, APIs and JSON contracts:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP, APIs and JSON contracts, explicitly apply Methods and status codes, Headers and serialization, Client resilience.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
+- **HTTP, APIs and JSON contracts:** Extend the project with HTTP, APIs and JSON contracts in Release conflict rehearsal. Adapt this focused lab to the project data: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.  Required concepts: Methods and status codes, Headers and serialization, Client resilience.
+  - Deliverable: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP, APIs and JSON contracts: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A documented conflict resolution, PR checklist and release tag. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP, APIs and JSON contracts: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] HTTP, APIs and JSON contracts: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.
+- [ ] Reconstruct the release from its tag and explain each conflict decision.
+- [ ] HTTP, APIs and JSON contracts: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Repeatable batch import
+
+An operations teammate needs to rerun interrupted imports safely.
+
+**Data:** Generate 100 records with stable IDs and repeated batches. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A resumable importer with an explicit input/output contract.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **HTTP, APIs and JSON contracts:** Extend the project with HTTP, APIs and JSON contracts in Repeatable batch import. Adapt this focused lab to the project data: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.  Required concepts: Methods and status codes, Headers and serialization, Client resilience.
+  - Deliverable: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A resumable importer with an explicit input/output contract. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP, APIs and JSON contracts: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Run the same batch twice and prove counts and totals do not change.
+- [ ] HTTP, APIs and JSON contracts: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Refactor a tangled importer
+
+A maintainer needs isolated parsing, validation and storage responsibilities.
+
+**Data:** Create a small deliberately coupled CSV importer with six failing fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A refactored package with explicit boundaries and unchanged output contracts.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **HTTP, APIs and JSON contracts:** Extend the project with HTTP, APIs and JSON contracts in Refactor a tangled importer. Adapt this focused lab to the project data: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.  Required concepts: Methods and status codes, Headers and serialization, Client resilience.
+  - Deliverable: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A refactored package with explicit boundaries and unchanged output contracts. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP, APIs and JSON contracts: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Run identical golden inputs before and after refactoring.
+- [ ] HTTP, APIs and JSON contracts: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Reviewable feature delivery
+
+A contributor needs to ship a change another teammate can audit.
+
+**Data:** Use a tiny notes app and three requested behavior changes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A sequence of small commits with tests and a review brief.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **HTTP, APIs and JSON contracts:** Extend the project with HTTP, APIs and JSON contracts in Reviewable feature delivery. Adapt this focused lab to the project data: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.  Required concepts: Methods and status codes, Headers and serialization, Client resilience.
+  - Deliverable: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A sequence of small commits with tests and a review brief. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP, APIs and JSON contracts: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A reviewer can trace each requirement to code, a test and a commit.
+- [ ] HTTP, APIs and JSON contracts: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Workspace health inspector
+
+A teammate needs to diagnose missing tools before setup.
+
+**Data:** Prepare a temporary project with missing files and a fake executable check. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A read-only shell inspector and machine-readable health report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **HTTP, APIs and JSON contracts:** Extend the project with HTTP, APIs and JSON contracts in Workspace health inspector. Adapt this focused lab to the project data: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.  Required concepts: Methods and status codes, Headers and serialization, Client resilience.
+  - Deliverable: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A read-only shell inspector and machine-readable health report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP, APIs and JSON contracts: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report each missing requirement and return a failing exit code without editing files.
+- [ ] HTTP, APIs and JSON contracts: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Checkout service testing lab
+
+A developer needs to distinguish unit, integration and contract failures.
+
+**Data:** Use fictional baskets, a local SQLite store and a stub payment adapter. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A small checkout simulator with separated test layers.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **HTTP, APIs and JSON contracts:** Extend the project with HTTP, APIs and JSON contracts in Checkout service testing lab. Adapt this focused lab to the project data: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.  Required concepts: Methods and status codes, Headers and serialization, Client resilience.
+  - Deliverable: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A small checkout simulator with separated test layers. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP, APIs and JSON contracts: HTTP, APIs and JSON contracts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A failing adapter contract must fail integration without corrupting the store.
+- [ ] HTTP, APIs and JSON contracts: Describe and call a local prediction endpoint; test invalid JSON, missing fields and a timeout, and document response codes.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1182,7 +1182,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Keep implementation simple while knowing which operations become slow or fragile.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Foundation · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [HTTP, APIs and JSON contracts](engineering.md#engineering-http) Navigation is unrestricted.
 
@@ -1256,292 +1256,292 @@ Compare list and set deduplication on increasing input sizes; build unit and int
 
 #### Ten project recommendations
 
-### Document intake and validation pipeline
+### Search complexity workbench
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A developer needs to choose a lookup strategy for growing catalogs.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Generate sorted ID lists at four sizes with fixed lookup queries. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Complexity, code structure and testing:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Complexity, code structure and testing, explicitly apply Complexity, Structure, Testing layers.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Complexity, code structure and testing: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Complexity, code structure and testing: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Complexity, code structure and testing:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Complexity, code structure and testing, explicitly apply Complexity, Structure, Testing layers.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Complexity, code structure and testing: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Complexity, code structure and testing: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A benchmark comparing linear scan, binary search and hash lookup.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Complexity, code structure and testing:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Complexity, code structure and testing, explicitly apply Complexity, Structure, Testing layers.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
+- **Complexity, code structure and testing:** Implement Complexity, code structure and testing in Search complexity workbench. Adapt this focused lab to the project data: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.  Required concepts: Complexity, Structure, Testing layers.
+  - Deliverable: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Complexity, code structure and testing: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A benchmark comparing linear scan, binary search and hash lookup. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Complexity, code structure and testing: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Complexity, code structure and testing: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
+- [ ] Check equal results and plot operation counts separately from noisy wall time.
+- [ ] Complexity, code structure and testing: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Reproducible environment trial
 
-Find unusual stock movements and explain which records need investigation.
+A teammate needs reliable setup from a clean checkout.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Use a tiny Python package and a local wheel/cache when available. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Complexity, code structure and testing:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Complexity, code structure and testing, explicitly apply Complexity, Structure, Testing layers.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Complexity, code structure and testing: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Complexity, code structure and testing: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Complexity, code structure and testing:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Complexity, code structure and testing, explicitly apply Complexity, Structure, Testing layers.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Complexity, code structure and testing: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Complexity, code structure and testing: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A locked dependency workflow and clean-environment setup guide.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Complexity, code structure and testing:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Complexity, code structure and testing, explicitly apply Complexity, Structure, Testing layers.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
+- **Complexity, code structure and testing:** Implement Complexity, code structure and testing in Reproducible environment trial. Adapt this focused lab to the project data: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.  Required concepts: Complexity, Structure, Testing layers.
+  - Deliverable: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Complexity, code structure and testing: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A locked dependency workflow and clean-environment setup guide. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Complexity, code structure and testing: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Complexity, code structure and testing: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
+- [ ] Install into a fresh virtual environment and run the smoke test.
+- [ ] Complexity, code structure and testing: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Repeatable batch import
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+An operations teammate needs to rerun interrupted imports safely.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Generate 100 records with stable IDs and repeated batches. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Complexity, code structure and testing:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Complexity, code structure and testing, explicitly apply Complexity, Structure, Testing layers.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Complexity, code structure and testing: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Complexity, code structure and testing: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A resumable importer with an explicit input/output contract.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Complexity, code structure and testing:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Complexity, code structure and testing, explicitly apply Complexity, Structure, Testing layers.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
+- **Complexity, code structure and testing:** Implement Complexity, code structure and testing in Repeatable batch import. Adapt this focused lab to the project data: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.  Required concepts: Complexity, Structure, Testing layers.
+  - Deliverable: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Complexity, code structure and testing: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A resumable importer with an explicit input/output contract. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Complexity, code structure and testing: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Complexity, code structure and testing: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
+- [ ] Run the same batch twice and prove counts and totals do not change.
+- [ ] Complexity, code structure and testing: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Refactor a tangled importer
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A maintainer needs isolated parsing, validation and storage responsibilities.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Create a small deliberately coupled CSV importer with six failing fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A refactored package with explicit boundaries and unchanged output contracts.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Complexity, code structure and testing:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Complexity, code structure and testing, explicitly apply Complexity, Structure, Testing layers.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
+- **Complexity, code structure and testing:** Implement Complexity, code structure and testing in Refactor a tangled importer. Adapt this focused lab to the project data: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.  Required concepts: Complexity, Structure, Testing layers.
+  - Deliverable: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Complexity, code structure and testing: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A refactored package with explicit boundaries and unchanged output contracts. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Complexity, code structure and testing: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Complexity, code structure and testing: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
+- [ ] Run identical golden inputs before and after refactoring.
+- [ ] Complexity, code structure and testing: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### API change compatibility gate
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+An API owner needs to detect breaking schema changes before release.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Author two OpenAPI examples with removed fields and changed types. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A schema comparison CLI and compatibility report.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Complexity, code structure and testing:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Complexity, code structure and testing, explicitly apply Complexity, Structure, Testing layers.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
+- **Complexity, code structure and testing:** Extend the project with Complexity, code structure and testing in API change compatibility gate. Adapt this focused lab to the project data: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.  Required concepts: Complexity, Structure, Testing layers.
+  - Deliverable: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Complexity, code structure and testing: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A schema comparison CLI and compatibility report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Complexity, code structure and testing: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Complexity, code structure and testing: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.
+- [ ] Detect each seeded breaking change while allowing a new optional field.
+- [ ] Complexity, code structure and testing: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Release conflict rehearsal
+
+A small team needs a safe process for reviewing conflicting changes.
+
+**Data:** Create a disposable local repository with two feature branches. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A documented conflict resolution, PR checklist and release tag.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Complexity, code structure and testing:** Extend the project with Complexity, code structure and testing in Release conflict rehearsal. Adapt this focused lab to the project data: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.  Required concepts: Complexity, Structure, Testing layers.
+  - Deliverable: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A documented conflict resolution, PR checklist and release tag. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Complexity, code structure and testing: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reconstruct the release from its tag and explain each conflict decision.
+- [ ] Complexity, code structure and testing: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### HTTP contract playground
+
+An API learner needs to see status codes and caching behavior.
+
+**Data:** Use a local HTTP stub with ten requests and fixed responses. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A request collection demonstrating headers, errors and conditional reads.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Complexity, code structure and testing:** Extend the project with Complexity, code structure and testing in HTTP contract playground. Adapt this focused lab to the project data: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.  Required concepts: Complexity, Structure, Testing layers.
+  - Deliverable: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A request collection demonstrating headers, errors and conditional reads. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Complexity, code structure and testing: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify 200, 304, 400 and 404 cases against documented contracts.
+- [ ] Complexity, code structure and testing: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Reviewable feature delivery
+
+A contributor needs to ship a change another teammate can audit.
+
+**Data:** Use a tiny notes app and three requested behavior changes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A sequence of small commits with tests and a review brief.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Complexity, code structure and testing:** Extend the project with Complexity, code structure and testing in Reviewable feature delivery. Adapt this focused lab to the project data: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.  Required concepts: Complexity, Structure, Testing layers.
+  - Deliverable: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A sequence of small commits with tests and a review brief. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Complexity, code structure and testing: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A reviewer can trace each requirement to code, a test and a commit.
+- [ ] Complexity, code structure and testing: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Workspace health inspector
+
+A teammate needs to diagnose missing tools before setup.
+
+**Data:** Prepare a temporary project with missing files and a fake executable check. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A read-only shell inspector and machine-readable health report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Complexity, code structure and testing:** Extend the project with Complexity, code structure and testing in Workspace health inspector. Adapt this focused lab to the project data: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.  Required concepts: Complexity, Structure, Testing layers.
+  - Deliverable: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A read-only shell inspector and machine-readable health report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Complexity, code structure and testing: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report each missing requirement and return a failing exit code without editing files.
+- [ ] Complexity, code structure and testing: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Checkout service testing lab
+
+A developer needs to distinguish unit, integration and contract failures.
+
+**Data:** Use fictional baskets, a local SQLite store and a stub payment adapter. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A small checkout simulator with separated test layers.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Complexity, code structure and testing:** Extend the project with Complexity, code structure and testing in Checkout service testing lab. Adapt this focused lab to the project data: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.  Required concepts: Complexity, Structure, Testing layers.
+  - Deliverable: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A small checkout simulator with separated test layers. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Complexity, code structure and testing: Complexity, code structure and testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A failing adapter contract must fail integration without corrupting the store.
+- [ ] Complexity, code structure and testing: Compare list and set deduplication on increasing input sizes; build unit and integration checks for a small ingestion pipeline and explain the tradeoff.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1555,7 +1555,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Design predictable service calls so retries and changing datasets do not create inconsistent application behaviour.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Foundation · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [HTTP, APIs and JSON contracts](engineering.md#engineering-http) Navigation is unrestricted.
 
@@ -1671,292 +1671,292 @@ Build a local fake HTTP client and small service contract for project creation a
 
 #### Ten project recommendations
 
-### Document intake and validation pipeline
+### API change compatibility gate
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+An API owner needs to detect breaking schema changes before release.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Author two OpenAPI examples with removed fields and changed types. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **HTTP contracts, pagination and idempotency:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP contracts, pagination and idempotency, explicitly apply Safe and idempotent semantics, Client versus server failures, Pagination stability.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP contracts, pagination and idempotency: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] HTTP contracts, pagination and idempotency: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **HTTP contracts, pagination and idempotency:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP contracts, pagination and idempotency, explicitly apply Safe and idempotent semantics, Client versus server failures, Pagination stability.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP contracts, pagination and idempotency: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] HTTP contracts, pagination and idempotency: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A schema comparison CLI and compatibility report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **HTTP contracts, pagination and idempotency:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP contracts, pagination and idempotency, explicitly apply Safe and idempotent semantics, Client versus server failures, Pagination stability.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
+- **HTTP contracts, pagination and idempotency:** Implement HTTP contracts, pagination and idempotency in API change compatibility gate. Adapt this focused lab to the project data: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.  Required concepts: Safe and idempotent semantics, Client versus server failures, Pagination stability, Idempotency keys, Contract compatibility.
+  - Deliverable: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP contracts, pagination and idempotency: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A schema comparison CLI and compatibility report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP contracts, pagination and idempotency: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] HTTP contracts, pagination and idempotency: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
+- [ ] Detect each seeded breaking change while allowing a new optional field.
+- [ ] HTTP contracts, pagination and idempotency: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Repeatable batch import
 
-Find unusual stock movements and explain which records need investigation.
+An operations teammate needs to rerun interrupted imports safely.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Generate 100 records with stable IDs and repeated batches. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **HTTP contracts, pagination and idempotency:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP contracts, pagination and idempotency, explicitly apply Safe and idempotent semantics, Client versus server failures, Pagination stability.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP contracts, pagination and idempotency: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] HTTP contracts, pagination and idempotency: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **HTTP contracts, pagination and idempotency:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP contracts, pagination and idempotency, explicitly apply Safe and idempotent semantics, Client versus server failures, Pagination stability.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP contracts, pagination and idempotency: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] HTTP contracts, pagination and idempotency: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A resumable importer with an explicit input/output contract.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **HTTP contracts, pagination and idempotency:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP contracts, pagination and idempotency, explicitly apply Safe and idempotent semantics, Client versus server failures, Pagination stability.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
+- **HTTP contracts, pagination and idempotency:** Implement HTTP contracts, pagination and idempotency in Repeatable batch import. Adapt this focused lab to the project data: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.  Required concepts: Safe and idempotent semantics, Client versus server failures, Pagination stability, Idempotency keys, Contract compatibility.
+  - Deliverable: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP contracts, pagination and idempotency: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A resumable importer with an explicit input/output contract. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP contracts, pagination and idempotency: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] HTTP contracts, pagination and idempotency: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
+- [ ] Run the same batch twice and prove counts and totals do not change.
+- [ ] HTTP contracts, pagination and idempotency: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Search complexity workbench
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A developer needs to choose a lookup strategy for growing catalogs.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Generate sorted ID lists at four sizes with fixed lookup queries. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **HTTP contracts, pagination and idempotency:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP contracts, pagination and idempotency, explicitly apply Safe and idempotent semantics, Client versus server failures, Pagination stability.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP contracts, pagination and idempotency: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] HTTP contracts, pagination and idempotency: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A benchmark comparing linear scan, binary search and hash lookup.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **HTTP contracts, pagination and idempotency:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP contracts, pagination and idempotency, explicitly apply Safe and idempotent semantics, Client versus server failures, Pagination stability.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
+- **HTTP contracts, pagination and idempotency:** Extend the project with HTTP contracts, pagination and idempotency in Search complexity workbench. Adapt this focused lab to the project data: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.  Required concepts: Safe and idempotent semantics, Client versus server failures, Pagination stability, Idempotency keys, Contract compatibility.
+  - Deliverable: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP contracts, pagination and idempotency: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A benchmark comparing linear scan, binary search and hash lookup. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP contracts, pagination and idempotency: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] HTTP contracts, pagination and idempotency: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
+- [ ] Check equal results and plot operation counts separately from noisy wall time.
+- [ ] HTTP contracts, pagination and idempotency: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Reproducible environment trial
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A teammate needs reliable setup from a clean checkout.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use a tiny Python package and a local wheel/cache when available. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A locked dependency workflow and clean-environment setup guide.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **HTTP contracts, pagination and idempotency:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP contracts, pagination and idempotency, explicitly apply Safe and idempotent semantics, Client versus server failures, Pagination stability.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
+- **HTTP contracts, pagination and idempotency:** Extend the project with HTTP contracts, pagination and idempotency in Reproducible environment trial. Adapt this focused lab to the project data: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.  Required concepts: Safe and idempotent semantics, Client versus server failures, Pagination stability, Idempotency keys, Contract compatibility.
+  - Deliverable: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP contracts, pagination and idempotency: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A locked dependency workflow and clean-environment setup guide. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP contracts, pagination and idempotency: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] HTTP contracts, pagination and idempotency: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
+- [ ] Install into a fresh virtual environment and run the smoke test.
+- [ ] HTTP contracts, pagination and idempotency: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Release conflict rehearsal
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A small team needs a safe process for reviewing conflicting changes.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Create a disposable local repository with two feature branches. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A documented conflict resolution, PR checklist and release tag.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **HTTP contracts, pagination and idempotency:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For HTTP contracts, pagination and idempotency, explicitly apply Safe and idempotent semantics, Client versus server failures, Pagination stability.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
+- **HTTP contracts, pagination and idempotency:** Extend the project with HTTP contracts, pagination and idempotency in Release conflict rehearsal. Adapt this focused lab to the project data: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.  Required concepts: Safe and idempotent semantics, Client versus server failures, Pagination stability, Idempotency keys, Contract compatibility.
+  - Deliverable: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] HTTP contracts, pagination and idempotency: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A documented conflict resolution, PR checklist and release tag. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP contracts, pagination and idempotency: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] HTTP contracts, pagination and idempotency: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.
+- [ ] Reconstruct the release from its tag and explain each conflict decision.
+- [ ] HTTP contracts, pagination and idempotency: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### HTTP contract playground
+
+An API learner needs to see status codes and caching behavior.
+
+**Data:** Use a local HTTP stub with ten requests and fixed responses. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A request collection demonstrating headers, errors and conditional reads.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **HTTP contracts, pagination and idempotency:** Extend the project with HTTP contracts, pagination and idempotency in HTTP contract playground. Adapt this focused lab to the project data: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.  Required concepts: Safe and idempotent semantics, Client versus server failures, Pagination stability, Idempotency keys, Contract compatibility.
+  - Deliverable: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A request collection demonstrating headers, errors and conditional reads. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP contracts, pagination and idempotency: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify 200, 304, 400 and 404 cases against documented contracts.
+- [ ] HTTP contracts, pagination and idempotency: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Refactor a tangled importer
+
+A maintainer needs isolated parsing, validation and storage responsibilities.
+
+**Data:** Create a small deliberately coupled CSV importer with six failing fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A refactored package with explicit boundaries and unchanged output contracts.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **HTTP contracts, pagination and idempotency:** Extend the project with HTTP contracts, pagination and idempotency in Refactor a tangled importer. Adapt this focused lab to the project data: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.  Required concepts: Safe and idempotent semantics, Client versus server failures, Pagination stability, Idempotency keys, Contract compatibility.
+  - Deliverable: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A refactored package with explicit boundaries and unchanged output contracts. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP contracts, pagination and idempotency: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Run identical golden inputs before and after refactoring.
+- [ ] HTTP contracts, pagination and idempotency: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Reviewable feature delivery
+
+A contributor needs to ship a change another teammate can audit.
+
+**Data:** Use a tiny notes app and three requested behavior changes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A sequence of small commits with tests and a review brief.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **HTTP contracts, pagination and idempotency:** Extend the project with HTTP contracts, pagination and idempotency in Reviewable feature delivery. Adapt this focused lab to the project data: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.  Required concepts: Safe and idempotent semantics, Client versus server failures, Pagination stability, Idempotency keys, Contract compatibility.
+  - Deliverable: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A sequence of small commits with tests and a review brief. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP contracts, pagination and idempotency: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A reviewer can trace each requirement to code, a test and a commit.
+- [ ] HTTP contracts, pagination and idempotency: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Workspace health inspector
+
+A teammate needs to diagnose missing tools before setup.
+
+**Data:** Prepare a temporary project with missing files and a fake executable check. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A read-only shell inspector and machine-readable health report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **HTTP contracts, pagination and idempotency:** Extend the project with HTTP contracts, pagination and idempotency in Workspace health inspector. Adapt this focused lab to the project data: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.  Required concepts: Safe and idempotent semantics, Client versus server failures, Pagination stability, Idempotency keys, Contract compatibility.
+  - Deliverable: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A read-only shell inspector and machine-readable health report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP contracts, pagination and idempotency: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report each missing requirement and return a failing exit code without editing files.
+- [ ] HTTP contracts, pagination and idempotency: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Checkout service testing lab
+
+A developer needs to distinguish unit, integration and contract failures.
+
+**Data:** Use fictional baskets, a local SQLite store and a stub payment adapter. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A small checkout simulator with separated test layers.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **HTTP contracts, pagination and idempotency:** Extend the project with HTTP contracts, pagination and idempotency in Checkout service testing lab. Adapt this focused lab to the project data: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.  Required concepts: Safe and idempotent semantics, Client versus server failures, Pagination stability, Idempotency keys, Contract compatibility.
+  - Deliverable: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A small checkout simulator with separated test layers. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · HTTP contracts, pagination and idempotency: HTTP contracts, pagination and idempotency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A failing adapter contract must fail integration without corrupting the store.
+- [ ] HTTP contracts, pagination and idempotency: Build a local fake HTTP client and small service contract for project creation and listing. Add cursor-pagination tests, a documented error schema and idempotent replay tests including conflicting payloads.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1970,7 +1970,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Choose tests that catch boundary failures while keeping the feedback loop small and reliable.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Foundation · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [Complexity, code structure and testing](engineering.md#engineering-design) Navigation is unrestricted.
 
@@ -2091,292 +2091,714 @@ Create a small repository with unit tests for validation, an integration test th
 
 #### Ten project recommendations
 
-### Document intake and validation pipeline
+### Reviewable feature delivery
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A contributor needs to ship a change another teammate can audit.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use a tiny notes app and three requested behavior changes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Unit, integration and contract tests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Unit, integration and contract tests, explicitly apply Unit boundaries, Integration boundaries, Contract fixtures.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Unit, integration and contract tests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Unit, integration and contract tests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Unit, integration and contract tests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Unit, integration and contract tests, explicitly apply Unit boundaries, Integration boundaries, Contract fixtures.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Unit, integration and contract tests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Unit, integration and contract tests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A sequence of small commits with tests and a review brief.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Unit, integration and contract tests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Unit, integration and contract tests, explicitly apply Unit boundaries, Integration boundaries, Contract fixtures.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
+- **Unit, integration and contract tests:** Implement Unit, integration and contract tests in Reviewable feature delivery. Adapt this focused lab to the project data: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.  Required concepts: Unit boundaries, Integration boundaries, Contract fixtures, Fixture isolation, Failure-path assertions.
+  - Deliverable: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Unit, integration and contract tests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A sequence of small commits with tests and a review brief. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Unit, integration and contract tests: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Unit, integration and contract tests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
+- [ ] A reviewer can trace each requirement to code, a test and a commit.
+- [ ] Unit, integration and contract tests: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Checkout service testing lab
 
-Find unusual stock movements and explain which records need investigation.
+A developer needs to distinguish unit, integration and contract failures.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Use fictional baskets, a local SQLite store and a stub payment adapter. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Unit, integration and contract tests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Unit, integration and contract tests, explicitly apply Unit boundaries, Integration boundaries, Contract fixtures.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Unit, integration and contract tests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Unit, integration and contract tests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Unit, integration and contract tests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Unit, integration and contract tests, explicitly apply Unit boundaries, Integration boundaries, Contract fixtures.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Unit, integration and contract tests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Unit, integration and contract tests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A small checkout simulator with separated test layers.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Unit, integration and contract tests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Unit, integration and contract tests, explicitly apply Unit boundaries, Integration boundaries, Contract fixtures.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
+- **Unit, integration and contract tests:** Implement Unit, integration and contract tests in Checkout service testing lab. Adapt this focused lab to the project data: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.  Required concepts: Unit boundaries, Integration boundaries, Contract fixtures, Fixture isolation, Failure-path assertions.
+  - Deliverable: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Unit, integration and contract tests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A small checkout simulator with separated test layers. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Unit, integration and contract tests: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Unit, integration and contract tests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
+- [ ] A failing adapter contract must fail integration without corrupting the store.
+- [ ] Unit, integration and contract tests: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Search complexity workbench
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A developer needs to choose a lookup strategy for growing catalogs.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Generate sorted ID lists at four sizes with fixed lookup queries. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Unit, integration and contract tests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Unit, integration and contract tests, explicitly apply Unit boundaries, Integration boundaries, Contract fixtures.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Unit, integration and contract tests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Unit, integration and contract tests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A benchmark comparing linear scan, binary search and hash lookup.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Unit, integration and contract tests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Unit, integration and contract tests, explicitly apply Unit boundaries, Integration boundaries, Contract fixtures.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
+- **Unit, integration and contract tests:** Extend the project with Unit, integration and contract tests in Search complexity workbench. Adapt this focused lab to the project data: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.  Required concepts: Unit boundaries, Integration boundaries, Contract fixtures, Fixture isolation, Failure-path assertions.
+  - Deliverable: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Unit, integration and contract tests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A benchmark comparing linear scan, binary search and hash lookup. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Unit, integration and contract tests: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Unit, integration and contract tests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
+- [ ] Check equal results and plot operation counts separately from noisy wall time.
+- [ ] Unit, integration and contract tests: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### API change compatibility gate
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+An API owner needs to detect breaking schema changes before release.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Author two OpenAPI examples with removed fields and changed types. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A schema comparison CLI and compatibility report.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Unit, integration and contract tests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Unit, integration and contract tests, explicitly apply Unit boundaries, Integration boundaries, Contract fixtures.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
+- **Unit, integration and contract tests:** Extend the project with Unit, integration and contract tests in API change compatibility gate. Adapt this focused lab to the project data: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.  Required concepts: Unit boundaries, Integration boundaries, Contract fixtures, Fixture isolation, Failure-path assertions.
+  - Deliverable: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Unit, integration and contract tests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A schema comparison CLI and compatibility report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Unit, integration and contract tests: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Unit, integration and contract tests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
+- [ ] Detect each seeded breaking change while allowing a new optional field.
+- [ ] Unit, integration and contract tests: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Reproducible environment trial
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A teammate needs reliable setup from a clean checkout.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use a tiny Python package and a local wheel/cache when available. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A locked dependency workflow and clean-environment setup guide.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Unit, integration and contract tests:** Version the pipeline, document its HTTP/data contracts and keep changes reviewable.  For Unit, integration and contract tests, explicitly apply Unit boundaries, Integration boundaries, Contract fixtures.
-  - Deliverable: A Git workflow, contract example and integration test
-  - Check: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
+- **Unit, integration and contract tests:** Extend the project with Unit, integration and contract tests in Reproducible environment trial. Adapt this focused lab to the project data: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.  Required concepts: Unit boundaries, Integration boundaries, Contract fixtures, Fixture isolation, Failure-path assertions.
+  - Deliverable: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Unit, integration and contract tests: A Git workflow, contract example and integration test
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A locked dependency workflow and clean-environment setup guide. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Unit, integration and contract tests: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Unit, integration and contract tests: Add an integration check and a reproducible clean-start command. Adapt the lesson lab: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.
+- [ ] Install into a fresh virtual environment and run the smoke test.
+- [ ] Unit, integration and contract tests: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Release conflict rehearsal
+
+A small team needs a safe process for reviewing conflicting changes.
+
+**Data:** Create a disposable local repository with two feature branches. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A documented conflict resolution, PR checklist and release tag.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Unit, integration and contract tests:** Extend the project with Unit, integration and contract tests in Release conflict rehearsal. Adapt this focused lab to the project data: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.  Required concepts: Unit boundaries, Integration boundaries, Contract fixtures, Fixture isolation, Failure-path assertions.
+  - Deliverable: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A documented conflict resolution, PR checklist and release tag. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Unit, integration and contract tests: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reconstruct the release from its tag and explain each conflict decision.
+- [ ] Unit, integration and contract tests: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### HTTP contract playground
+
+An API learner needs to see status codes and caching behavior.
+
+**Data:** Use a local HTTP stub with ten requests and fixed responses. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A request collection demonstrating headers, errors and conditional reads.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Unit, integration and contract tests:** Extend the project with Unit, integration and contract tests in HTTP contract playground. Adapt this focused lab to the project data: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.  Required concepts: Unit boundaries, Integration boundaries, Contract fixtures, Fixture isolation, Failure-path assertions.
+  - Deliverable: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A request collection demonstrating headers, errors and conditional reads. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Unit, integration and contract tests: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify 200, 304, 400 and 404 cases against documented contracts.
+- [ ] Unit, integration and contract tests: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Repeatable batch import
+
+An operations teammate needs to rerun interrupted imports safely.
+
+**Data:** Generate 100 records with stable IDs and repeated batches. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A resumable importer with an explicit input/output contract.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Unit, integration and contract tests:** Extend the project with Unit, integration and contract tests in Repeatable batch import. Adapt this focused lab to the project data: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.  Required concepts: Unit boundaries, Integration boundaries, Contract fixtures, Fixture isolation, Failure-path assertions.
+  - Deliverable: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A resumable importer with an explicit input/output contract. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Unit, integration and contract tests: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Run the same batch twice and prove counts and totals do not change.
+- [ ] Unit, integration and contract tests: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Refactor a tangled importer
+
+A maintainer needs isolated parsing, validation and storage responsibilities.
+
+**Data:** Create a small deliberately coupled CSV importer with six failing fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A refactored package with explicit boundaries and unchanged output contracts.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Unit, integration and contract tests:** Extend the project with Unit, integration and contract tests in Refactor a tangled importer. Adapt this focused lab to the project data: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.  Required concepts: Unit boundaries, Integration boundaries, Contract fixtures, Fixture isolation, Failure-path assertions.
+  - Deliverable: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A refactored package with explicit boundaries and unchanged output contracts. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Unit, integration and contract tests: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Run identical golden inputs before and after refactoring.
+- [ ] Unit, integration and contract tests: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Workspace health inspector
+
+A teammate needs to diagnose missing tools before setup.
+
+**Data:** Prepare a temporary project with missing files and a fake executable check. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A read-only shell inspector and machine-readable health report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Unit, integration and contract tests:** Extend the project with Unit, integration and contract tests in Workspace health inspector. Adapt this focused lab to the project data: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.  Required concepts: Unit boundaries, Integration boundaries, Contract fixtures, Fixture isolation, Failure-path assertions.
+  - Deliverable: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A read-only shell inspector and machine-readable health report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Unit, integration and contract tests: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report each missing requirement and return a failing exit code without editing files.
+- [ ] Unit, integration and contract tests: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Stage checkpoint
+
+<a id="checkpoint-engineering"></a>
+
+### Engineering handoff checkpoint
+
+Demonstrate readiness through a reproducible practical handoff. Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.
+
+**Priority:** Foundation · **Study:** 1h · **Practice:** 6h
+
+**Prerequisites:** [Terminal and Linux](engineering.md#engineering-shell), [Git, branches and pull requests](engineering.md#engineering-git), [HTTP, APIs and JSON contracts](engineering.md#engineering-http), [Complexity, code structure and testing](engineering.md#engineering-design), [HTTP contracts, pagination and idempotency](engineering.md#engineering-api-contracts), [Unit, integration and contract tests](engineering.md#engineering-testing-layers) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Define the success contract:** Write observable checks before implementation so success is not just a plausible demonstration.
+  - Example: Turn this task into a numbered acceptance checklist: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.
+  - Videos:
+    - [CS50P 5 — Unit tests](https://www.youtube.com/watch?v=tIrcxwLqzjQ) · Harvard CS50 · David Malan · University lecture
+      - Explains: Assertions, pytest, test organization and testing return values.
+      - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+      - Watch for: Focus on define the success contract. Then reproduce the lesson example: Turn this task into a numbered acceptance checklist: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/2022/weeks/5/
+    - [System design concepts — complete course](https://www.youtube.com/watch?v=F2FmTdLtb_4) · freeCodeCamp · Full course
+      - Explains: Scalability, reliability, storage and architecture tradeoffs.
+      - Useful because: Explain why a queue, index or cache is useful before adding one.
+      - Watch for: Focus on define the success contract. Then reproduce the lesson example: Turn this task into a numbered acceptance checklist: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=F2FmTdLtb_4
+- [ ] **Reproduce the baseline:** Keep a simple reference output and deterministic inputs so changes can be compared honestly.
+  - Example: Run a fixed input twice and compare saved outputs with the documented baseline.
+  - Videos:
+    - [CS50P 5 — Unit tests](https://www.youtube.com/watch?v=tIrcxwLqzjQ) · Harvard CS50 · David Malan · University lecture
+      - Explains: Assertions, pytest, test organization and testing return values.
+      - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+      - Watch for: Focus on reproduce the baseline. Then reproduce the lesson example: Run a fixed input twice and compare saved outputs with the documented baseline.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/2022/weeks/5/
+    - [System design concepts — complete course](https://www.youtube.com/watch?v=F2FmTdLtb_4) · freeCodeCamp · Full course
+      - Explains: Scalability, reliability, storage and architecture tradeoffs.
+      - Useful because: Explain why a queue, index or cache is useful before adding one.
+      - Watch for: Focus on reproduce the baseline. Then reproduce the lesson example: Run a fixed input twice and compare saved outputs with the documented baseline.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=F2FmTdLtb_4
+- [ ] **Test a failure boundary:** A working happy path does not establish robustness to malformed data or dependency failures.
+  - Example: Inject one malformed input and one controlled failure, then record the resulting state.
+  - Videos:
+    - [CS50P 5 — Unit tests](https://www.youtube.com/watch?v=tIrcxwLqzjQ) · Harvard CS50 · David Malan · University lecture
+      - Explains: Assertions, pytest, test organization and testing return values.
+      - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+      - Watch for: Focus on test a failure boundary. Then reproduce the lesson example: Inject one malformed input and one controlled failure, then record the resulting state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/2022/weeks/5/
+    - [System design concepts — complete course](https://www.youtube.com/watch?v=F2FmTdLtb_4) · freeCodeCamp · Full course
+      - Explains: Scalability, reliability, storage and architecture tradeoffs.
+      - Useful because: Explain why a queue, index or cache is useful before adding one.
+      - Watch for: Focus on test a failure boundary. Then reproduce the lesson example: Inject one malformed input and one controlled failure, then record the resulting state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=F2FmTdLtb_4
+- [ ] **Explain the decisions:** Describe why each technique was chosen and what evidence would make you choose differently.
+  - Example: Write a short decision note comparing the chosen approach with one simpler alternative.
+  - Videos:
+    - [CS50P 5 — Unit tests](https://www.youtube.com/watch?v=tIrcxwLqzjQ) · Harvard CS50 · David Malan · University lecture
+      - Explains: Assertions, pytest, test organization and testing return values.
+      - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+      - Watch for: Focus on explain the decisions. Then reproduce the lesson example: Write a short decision note comparing the chosen approach with one simpler alternative.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/2022/weeks/5/
+    - [System design concepts — complete course](https://www.youtube.com/watch?v=F2FmTdLtb_4) · freeCodeCamp · Full course
+      - Explains: Scalability, reliability, storage and architecture tradeoffs.
+      - Useful because: Explain why a queue, index or cache is useful before adding one.
+      - Watch for: Focus on explain the decisions. Then reproduce the lesson example: Write a short decision note comparing the chosen approach with one simpler alternative.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=F2FmTdLtb_4
+- [ ] **Hand off the evidence:** Another learner must be able to reproduce the result from your instructions and supplied inputs.
+  - Example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+  - Videos:
+    - [CS50P 5 — Unit tests](https://www.youtube.com/watch?v=tIrcxwLqzjQ) · Harvard CS50 · David Malan · University lecture
+      - Explains: Assertions, pytest, test organization and testing return values.
+      - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+      - Watch for: Focus on hand off the evidence. Then reproduce the lesson example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/2022/weeks/5/
+    - [System design concepts — complete course](https://www.youtube.com/watch?v=F2FmTdLtb_4) · freeCodeCamp · Full course
+      - Explains: Scalability, reliability, storage and architecture tradeoffs.
+      - Useful because: Explain why a queue, index or cache is useful before adding one.
+      - Watch for: Focus on hand off the evidence. Then reproduce the lesson example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=F2FmTdLtb_4
+
+#### YouTube: focused explanations and full courses
+
+- [CS50P 5 — Unit tests](https://www.youtube.com/watch?v=tIrcxwLqzjQ) · Harvard CS50 · David Malan · University lecture
+  - Explains: Assertions, pytest, test organization and testing return values.
+  - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://cs50.harvard.edu/python/2022/weeks/5/
+- [The future of software engineering](https://www.youtube.com/watch?v=g8um2AEf5ZA) · DeepLearning.AI · Andrew Ng · Engineering talk
+  - Explains: AI coding agents and the engineering skills needed to direct and verify them.
+  - Useful because: Use the talk as context, then apply the supplied specification and verification labs.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=g8um2AEf5ZA
+- [System design concepts — complete course](https://www.youtube.com/watch?v=F2FmTdLtb_4) · freeCodeCamp · Full course
+  - Explains: Scalability, reliability, storage and architecture tradeoffs.
+  - Useful because: Explain why a queue, index or cache is useful before adding one.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=F2FmTdLtb_4
+
+#### Free written resources
+
+1. [pytest: fixtures](https://docs.pytest.org/en/stable/how-to/fixtures.html) — Free; no registration required. No paid materials required.
+2. [Python: unittest.mock](https://docs.python.org/3/library/unittest.mock.html) — Free; no registration required. No paid materials required.
+
+#### Engineering handoff checkpoint
+
+Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.
+
+**Deliverables**
+
+- Runnable project and reproducible input fixtures
+- README, results and decision notes
+- Failure evidence and clean-start instructions
+
+**Completion checks**
+
+- [ ] Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.
+- [ ] Explain the code and results without relying on an AI-generated summary.
+- [ ] A teammate can reproduce the demo without paid credentials.
+
+#### Ten project recommendations
+
+### Search complexity workbench
+
+A developer needs to choose a lookup strategy for growing catalogs.
+
+**Data:** Generate sorted ID lists at four sizes with fixed lookup queries. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A benchmark comparing linear scan, binary search and hash lookup.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Engineering handoff checkpoint:** Extend the project with Engineering handoff checkpoint in Search complexity workbench. Adapt this focused lab to the project data: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A benchmark comparing linear scan, binary search and hash lookup. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Engineering handoff checkpoint: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Check equal results and plot operation counts separately from noisy wall time.
+- [ ] Engineering handoff checkpoint: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### API change compatibility gate
+
+An API owner needs to detect breaking schema changes before release.
+
+**Data:** Author two OpenAPI examples with removed fields and changed types. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A schema comparison CLI and compatibility report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Engineering handoff checkpoint:** Extend the project with Engineering handoff checkpoint in API change compatibility gate. Adapt this focused lab to the project data: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A schema comparison CLI and compatibility report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Engineering handoff checkpoint: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect each seeded breaking change while allowing a new optional field.
+- [ ] Engineering handoff checkpoint: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Reproducible environment trial
+
+A teammate needs reliable setup from a clean checkout.
+
+**Data:** Use a tiny Python package and a local wheel/cache when available. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A locked dependency workflow and clean-environment setup guide.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Engineering handoff checkpoint:** Extend the project with Engineering handoff checkpoint in Reproducible environment trial. Adapt this focused lab to the project data: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A locked dependency workflow and clean-environment setup guide. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Engineering handoff checkpoint: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Install into a fresh virtual environment and run the smoke test.
+- [ ] Engineering handoff checkpoint: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Release conflict rehearsal
+
+A small team needs a safe process for reviewing conflicting changes.
+
+**Data:** Create a disposable local repository with two feature branches. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A documented conflict resolution, PR checklist and release tag.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Engineering handoff checkpoint:** Extend the project with Engineering handoff checkpoint in Release conflict rehearsal. Adapt this focused lab to the project data: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A documented conflict resolution, PR checklist and release tag. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Engineering handoff checkpoint: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reconstruct the release from its tag and explain each conflict decision.
+- [ ] Engineering handoff checkpoint: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### HTTP contract playground
+
+An API learner needs to see status codes and caching behavior.
+
+**Data:** Use a local HTTP stub with ten requests and fixed responses. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A request collection demonstrating headers, errors and conditional reads.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Engineering handoff checkpoint:** Extend the project with Engineering handoff checkpoint in HTTP contract playground. Adapt this focused lab to the project data: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A request collection demonstrating headers, errors and conditional reads. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Engineering handoff checkpoint: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify 200, 304, 400 and 404 cases against documented contracts.
+- [ ] Engineering handoff checkpoint: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Repeatable batch import
+
+An operations teammate needs to rerun interrupted imports safely.
+
+**Data:** Generate 100 records with stable IDs and repeated batches. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A resumable importer with an explicit input/output contract.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Engineering handoff checkpoint:** Extend the project with Engineering handoff checkpoint in Repeatable batch import. Adapt this focused lab to the project data: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A resumable importer with an explicit input/output contract. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Engineering handoff checkpoint: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Run the same batch twice and prove counts and totals do not change.
+- [ ] Engineering handoff checkpoint: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Refactor a tangled importer
+
+A maintainer needs isolated parsing, validation and storage responsibilities.
+
+**Data:** Create a small deliberately coupled CSV importer with six failing fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A refactored package with explicit boundaries and unchanged output contracts.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Engineering handoff checkpoint:** Extend the project with Engineering handoff checkpoint in Refactor a tangled importer. Adapt this focused lab to the project data: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A refactored package with explicit boundaries and unchanged output contracts. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Engineering handoff checkpoint: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Run identical golden inputs before and after refactoring.
+- [ ] Engineering handoff checkpoint: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Reviewable feature delivery
+
+A contributor needs to ship a change another teammate can audit.
+
+**Data:** Use a tiny notes app and three requested behavior changes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A sequence of small commits with tests and a review brief.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Engineering handoff checkpoint:** Extend the project with Engineering handoff checkpoint in Reviewable feature delivery. Adapt this focused lab to the project data: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A sequence of small commits with tests and a review brief. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Engineering handoff checkpoint: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A reviewer can trace each requirement to code, a test and a commit.
+- [ ] Engineering handoff checkpoint: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Workspace health inspector
+
+A teammate needs to diagnose missing tools before setup.
+
+**Data:** Prepare a temporary project with missing files and a fake executable check. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A read-only shell inspector and machine-readable health report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Engineering handoff checkpoint:** Extend the project with Engineering handoff checkpoint in Workspace health inspector. Adapt this focused lab to the project data: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A read-only shell inspector and machine-readable health report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Engineering handoff checkpoint: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report each missing requirement and return a failing exit code without editing files.
+- [ ] Engineering handoff checkpoint: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Checkout service testing lab
+
+A developer needs to distinguish unit, integration and contract failures.
+
+**Data:** Use fictional baskets, a local SQLite store and a stub payment adapter. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A small checkout simulator with separated test layers.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Engineering handoff checkpoint:** Extend the project with Engineering handoff checkpoint in Checkout service testing lab. Adapt this focused lab to the project data: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A small checkout simulator with separated test layers. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Engineering handoff checkpoint: Engineering handoff checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A failing adapter contract must fail integration without corrupting the store.
+- [ ] Engineering handoff checkpoint: Package the tracker in a Git repository, document its HTTP/JSON contract, create a reviewable change and run unit plus integration checks. A teammate must reproduce setup from the README.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

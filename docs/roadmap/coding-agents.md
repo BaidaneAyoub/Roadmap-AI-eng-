@@ -2,17 +2,17 @@
 
 Direct and verify generated work with clear engineering context.
 
-## Optional branch
+## Main route · Step 11 of 13
 
 **Goal:** Direct coding agents using clear specifications and verify their work.
 
 **Stage checkpoint:** Write AGENTS.md and a task specification; review a generated change using tests and security checks.
 
-Explore this branch when it helps your goal. Return to the main route at any time; completion is not a gate.
+Direct coding agents through specifications, code review and verified outcomes.
 
 Follow the modules and lessons below at your pace. Finish each exercise, save your evidence and self-assessment, then continue. Completed and Already known count as completed; Skipped is reported separately. You can move ahead at any time.
 
-[Full pipeline](../PIPELINE.md) · [Return to main route: Deployment and operations](deployment.md)
+[Full pipeline](../PIPELINE.md) · [Next step: Deployment and operations](deployment.md)
 
 ## Planning and directing work
 
@@ -22,7 +22,7 @@ Follow the modules and lessons below at your pace. Finish each exercise, save yo
 
 Give humans and coding tools a concrete goal and verifiable scope.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Complexity, code structure and testing](engineering.md#engineering-design), [Golden datasets and deterministic regression evaluation](eval-security.md#eval-datasets) Navigation is unrestricted.
 
@@ -96,292 +96,292 @@ Write a one-page specification for a local document-search app including user pr
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Small-patch planning workbench
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A maintainer needs manageable changes instead of one huge generated diff.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Use a three-feature demo application backlog. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Problem definition, research and specifications:** Write a bounded implementation spec and AGENTS.md for this project.  For Problem definition, research and specifications, explicitly apply Problem and research, Requirements and architecture, Task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Problem definition, research and specifications: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Problem definition, research and specifications: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A dependency-ordered task plan with independently testable patches.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Problem definition, research and specifications:** Write a bounded implementation spec and AGENTS.md for this project.  For Problem definition, research and specifications, explicitly apply Problem and research, Requirements and architecture, Task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
+- **Problem definition, research and specifications:** Implement Problem definition, research and specifications in Small-patch planning workbench. Adapt this focused lab to the project data: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.  Required concepts: Problem and research, Requirements and architecture, Task decomposition.
+  - Deliverable: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Problem definition, research and specifications: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A dependency-ordered task plan with independently testable patches. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Problem definition, research and specifications: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Problem definition, research and specifications: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
+- [ ] Each patch has a clear rollback and does not leave broken callers.
+- [ ] Problem definition, research and specifications: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Executable feature handoff
 
-Find unusual stock movements and explain which records need investigation.
+A learner needs an AI coding task with observable completion criteria.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Use a fictional notes-search feature and six user scenarios. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Problem definition, research and specifications:** Write a bounded implementation spec and AGENTS.md for this project.  For Problem definition, research and specifications, explicitly apply Problem and research, Requirements and architecture, Task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Problem definition, research and specifications: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Problem definition, research and specifications: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Problem definition, research and specifications:** Write a bounded implementation spec and AGENTS.md for this project.  For Problem definition, research and specifications, explicitly apply Problem and research, Requirements and architecture, Task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Problem definition, research and specifications: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Problem definition, research and specifications: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A task specification, fixtures and acceptance checklist.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Problem definition, research and specifications:** Write a bounded implementation spec and AGENTS.md for this project.  For Problem definition, research and specifications, explicitly apply Problem and research, Requirements and architecture, Task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
+- **Problem definition, research and specifications:** Implement Problem definition, research and specifications in Executable feature handoff. Adapt this focused lab to the project data: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.  Required concepts: Problem and research, Requirements and architecture, Task decomposition.
+  - Deliverable: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Problem definition, research and specifications: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A task specification, fixtures and acceptance checklist. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Problem definition, research and specifications: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Problem definition, research and specifications: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
+- [ ] Another developer can identify completion without reading the original conversation.
+- [ ] Problem definition, research and specifications: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Coding autonomy boundary lab
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A team needs clear approval boundaries for agent actions.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Create 20 proposed shell/file actions in a temporary sandbox. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Problem definition, research and specifications:** Write a bounded implementation spec and AGENTS.md for this project.  For Problem definition, research and specifications, explicitly apply Problem and research, Requirements and architecture, Task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Problem definition, research and specifications: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Problem definition, research and specifications: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Problem definition, research and specifications:** Write a bounded implementation spec and AGENTS.md for this project.  For Problem definition, research and specifications, explicitly apply Problem and research, Requirements and architecture, Task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Problem definition, research and specifications: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Problem definition, research and specifications: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** An AGENTS.md policy and a dry-run decision table.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Problem definition, research and specifications:** Write a bounded implementation spec and AGENTS.md for this project.  For Problem definition, research and specifications, explicitly apply Problem and research, Requirements and architecture, Task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
+- **Problem definition, research and specifications:** Extend the project with Problem definition, research and specifications in Coding autonomy boundary lab. Adapt this focused lab to the project data: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.  Required concepts: Problem and research, Requirements and architecture, Task decomposition.
+  - Deliverable: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Problem definition, research and specifications: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An AGENTS.md policy and a dry-run decision table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Problem definition, research and specifications: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Problem definition, research and specifications: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
+- [ ] Classify destructive actions consistently without executing them.
+- [ ] Problem definition, research and specifications: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Repository context packager
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A maintainer needs to provide relevant context without secrets.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use a small local demo repository with public and excluded files. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** An allowlisted context bundle and file provenance list.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Problem definition, research and specifications:** Write a bounded implementation spec and AGENTS.md for this project.  For Problem definition, research and specifications, explicitly apply Problem and research, Requirements and architecture, Task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
+- **Problem definition, research and specifications:** Extend the project with Problem definition, research and specifications in Repository context packager. Adapt this focused lab to the project data: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.  Required concepts: Problem and research, Requirements and architecture, Task decomposition.
+  - Deliverable: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Problem definition, research and specifications: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An allowlisted context bundle and file provenance list. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Problem definition, research and specifications: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Problem definition, research and specifications: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
+- [ ] Exclude fake secrets and generated folders; include required caller contracts.
+- [ ] Problem definition, research and specifications: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Agent debugging learning journal
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A learner needs to understand why repeated AI fixes fail.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use three small bugs with known root causes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A hypothesis log, minimal reproductions and verified fixes.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Problem definition, research and specifications:** Write a bounded implementation spec and AGENTS.md for this project.  For Problem definition, research and specifications, explicitly apply Problem and research, Requirements and architecture, Task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
+- **Problem definition, research and specifications:** Extend the project with Problem definition, research and specifications in Agent debugging learning journal. Adapt this focused lab to the project data: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.  Required concepts: Problem and research, Requirements and architecture, Task decomposition.
+  - Deliverable: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Problem definition, research and specifications: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A hypothesis log, minimal reproductions and verified fixes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Problem definition, research and specifications: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Problem definition, research and specifications: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.
+- [ ] Reject changes that only hide errors and explain the actual cause of each bug.
+- [ ] Problem definition, research and specifications: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Generated patch review clinic
+
+A learner needs to detect plausible but broken generated code.
+
+**Data:** Author five tiny patches with security and logic defects. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A review report with reproducing tests and corrected patches.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Problem definition, research and specifications:** Extend the project with Problem definition, research and specifications in Generated patch review clinic. Adapt this focused lab to the project data: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.  Required concepts: Problem and research, Requirements and architecture, Task decomposition.
+  - Deliverable: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A review report with reproducing tests and corrected patches. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Problem definition, research and specifications: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Each finding has a failing test that passes after the correction.
+- [ ] Problem definition, research and specifications: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Requirement-to-test tracker
+
+A reviewer needs evidence that generated changes meet the request.
+
+**Data:** Write ten requirements for a local data importer. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A traceability matrix linking requirements, code and tests.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Problem definition, research and specifications:** Extend the project with Problem definition, research and specifications in Requirement-to-test tracker. Adapt this focused lab to the project data: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.  Required concepts: Problem and research, Requirements and architecture, Task decomposition.
+  - Deliverable: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A traceability matrix linking requirements, code and tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Problem definition, research and specifications: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Every requirement has an observable check and unrelated changes are identified.
+- [ ] Problem definition, research and specifications: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Test-first coding exercise
+
+A learner needs to guide an assistant through a small bug fix.
+
+**Data:** Use a parser with one reproducible Unicode bug. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A failing regression test, bounded task prompt and reviewed fix.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Problem definition, research and specifications:** Extend the project with Problem definition, research and specifications in Test-first coding exercise. Adapt this focused lab to the project data: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.  Required concepts: Problem and research, Requirements and architecture, Task decomposition.
+  - Deliverable: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A failing regression test, bounded task prompt and reviewed fix. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Problem definition, research and specifications: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] The fix handles the failing case without weakening existing tests.
+- [ ] Problem definition, research and specifications: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Coding tool contract simulator
+
+An agent builder needs precise read/search/edit tool semantics.
+
+**Data:** Use temporary text files and deterministic tool-call fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A bounded tool adapter with explicit errors.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Problem definition, research and specifications:** Extend the project with Problem definition, research and specifications in Coding tool contract simulator. Adapt this focused lab to the project data: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.  Required concepts: Problem and research, Requirements and architecture, Task decomposition.
+  - Deliverable: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A bounded tool adapter with explicit errors. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Problem definition, research and specifications: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject traversal and out-of-scope writes and preserve files on failed edits.
+- [ ] Problem definition, research and specifications: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### End-to-end verification handoff
+
+A learner needs to prove a generated feature works beyond compilation.
+
+**Data:** Use a local form/API/storage demo with one seeded integration bug. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A verification plan and evidence report across the complete flow.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Problem definition, research and specifications:** Extend the project with Problem definition, research and specifications in End-to-end verification handoff. Adapt this focused lab to the project data: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.  Required concepts: Problem and research, Requirements and architecture, Task decomposition.
+  - Deliverable: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A verification plan and evidence report across the complete flow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Problem definition, research and specifications: Problem definition, research and specifications: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show input, persisted state and resulting UI behavior for success and failure.
+- [ ] Problem definition, research and specifications: Write a one-page specification for a local document-search app including user problem, architecture, exclusions and five acceptance checks.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -395,7 +395,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Make project context explicit and keep automation within defined permissions.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Problem definition, research and specifications](coding-agents.md#coding-specifications) Navigation is unrestricted.
 
@@ -463,292 +463,292 @@ Create AGENTS.md and a tool-permission table for a sample project; add a local v
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Repository context packager
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A maintainer needs to provide relevant context without secrets.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Use a small local demo repository with public and excluded files. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **AGENTS.md, project instructions, tools, plugins and hooks:** Write a bounded implementation spec and AGENTS.md for this project.  For AGENTS.md, project instructions, tools, plugins and hooks, explicitly apply Project context, Tools, MCP and plugins, Hooks and harnesses.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** An allowlisted context bundle and file provenance list.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **AGENTS.md, project instructions, tools, plugins and hooks:** Write a bounded implementation spec and AGENTS.md for this project.  For AGENTS.md, project instructions, tools, plugins and hooks, explicitly apply Project context, Tools, MCP and plugins, Hooks and harnesses.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
+- **AGENTS.md, project instructions, tools, plugins and hooks:** Implement AGENTS.md, project instructions, tools, plugins and hooks in Repository context packager. Adapt this focused lab to the project data: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.  Required concepts: Project context, Tools, MCP and plugins, Hooks and harnesses.
+  - Deliverable: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An allowlisted context bundle and file provenance list. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · AGENTS.md, project instructions, tools, plugins and hooks: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
+- [ ] Exclude fake secrets and generated folders; include required caller contracts.
+- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Coding tool contract simulator
 
-Find unusual stock movements and explain which records need investigation.
+An agent builder needs precise read/search/edit tool semantics.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Use temporary text files and deterministic tool-call fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **AGENTS.md, project instructions, tools, plugins and hooks:** Write a bounded implementation spec and AGENTS.md for this project.  For AGENTS.md, project instructions, tools, plugins and hooks, explicitly apply Project context, Tools, MCP and plugins, Hooks and harnesses.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **AGENTS.md, project instructions, tools, plugins and hooks:** Write a bounded implementation spec and AGENTS.md for this project.  For AGENTS.md, project instructions, tools, plugins and hooks, explicitly apply Project context, Tools, MCP and plugins, Hooks and harnesses.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A bounded tool adapter with explicit errors.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **AGENTS.md, project instructions, tools, plugins and hooks:** Write a bounded implementation spec and AGENTS.md for this project.  For AGENTS.md, project instructions, tools, plugins and hooks, explicitly apply Project context, Tools, MCP and plugins, Hooks and harnesses.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
+- **AGENTS.md, project instructions, tools, plugins and hooks:** Implement AGENTS.md, project instructions, tools, plugins and hooks in Coding tool contract simulator. Adapt this focused lab to the project data: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.  Required concepts: Project context, Tools, MCP and plugins, Hooks and harnesses.
+  - Deliverable: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A bounded tool adapter with explicit errors. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · AGENTS.md, project instructions, tools, plugins and hooks: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
+- [ ] Reject traversal and out-of-scope writes and preserve files on failed edits.
+- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Coding autonomy boundary lab
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A team needs clear approval boundaries for agent actions.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Create 20 proposed shell/file actions in a temporary sandbox. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **AGENTS.md, project instructions, tools, plugins and hooks:** Write a bounded implementation spec and AGENTS.md for this project.  For AGENTS.md, project instructions, tools, plugins and hooks, explicitly apply Project context, Tools, MCP and plugins, Hooks and harnesses.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **AGENTS.md, project instructions, tools, plugins and hooks:** Write a bounded implementation spec and AGENTS.md for this project.  For AGENTS.md, project instructions, tools, plugins and hooks, explicitly apply Project context, Tools, MCP and plugins, Hooks and harnesses.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** An AGENTS.md policy and a dry-run decision table.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **AGENTS.md, project instructions, tools, plugins and hooks:** Write a bounded implementation spec and AGENTS.md for this project.  For AGENTS.md, project instructions, tools, plugins and hooks, explicitly apply Project context, Tools, MCP and plugins, Hooks and harnesses.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
+- **AGENTS.md, project instructions, tools, plugins and hooks:** Extend the project with AGENTS.md, project instructions, tools, plugins and hooks in Coding autonomy boundary lab. Adapt this focused lab to the project data: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.  Required concepts: Project context, Tools, MCP and plugins, Hooks and harnesses.
+  - Deliverable: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An AGENTS.md policy and a dry-run decision table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · AGENTS.md, project instructions, tools, plugins and hooks: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
+- [ ] Classify destructive actions consistently without executing them.
+- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Agent debugging learning journal
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A learner needs to understand why repeated AI fixes fail.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use three small bugs with known root causes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A hypothesis log, minimal reproductions and verified fixes.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **AGENTS.md, project instructions, tools, plugins and hooks:** Write a bounded implementation spec and AGENTS.md for this project.  For AGENTS.md, project instructions, tools, plugins and hooks, explicitly apply Project context, Tools, MCP and plugins, Hooks and harnesses.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
+- **AGENTS.md, project instructions, tools, plugins and hooks:** Extend the project with AGENTS.md, project instructions, tools, plugins and hooks in Agent debugging learning journal. Adapt this focused lab to the project data: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.  Required concepts: Project context, Tools, MCP and plugins, Hooks and harnesses.
+  - Deliverable: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A hypothesis log, minimal reproductions and verified fixes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · AGENTS.md, project instructions, tools, plugins and hooks: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
+- [ ] Reject changes that only hide errors and explain the actual cause of each bug.
+- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Generated patch review clinic
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A learner needs to detect plausible but broken generated code.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Author five tiny patches with security and logic defects. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A review report with reproducing tests and corrected patches.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **AGENTS.md, project instructions, tools, plugins and hooks:** Write a bounded implementation spec and AGENTS.md for this project.  For AGENTS.md, project instructions, tools, plugins and hooks, explicitly apply Project context, Tools, MCP and plugins, Hooks and harnesses.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
+- **AGENTS.md, project instructions, tools, plugins and hooks:** Extend the project with AGENTS.md, project instructions, tools, plugins and hooks in Generated patch review clinic. Adapt this focused lab to the project data: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.  Required concepts: Project context, Tools, MCP and plugins, Hooks and harnesses.
+  - Deliverable: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A review report with reproducing tests and corrected patches. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · AGENTS.md, project instructions, tools, plugins and hooks: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.
+- [ ] Each finding has a failing test that passes after the correction.
+- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Requirement-to-test tracker
+
+A reviewer needs evidence that generated changes meet the request.
+
+**Data:** Write ten requirements for a local data importer. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A traceability matrix linking requirements, code and tests.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **AGENTS.md, project instructions, tools, plugins and hooks:** Extend the project with AGENTS.md, project instructions, tools, plugins and hooks in Requirement-to-test tracker. Adapt this focused lab to the project data: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.  Required concepts: Project context, Tools, MCP and plugins, Hooks and harnesses.
+  - Deliverable: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A traceability matrix linking requirements, code and tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · AGENTS.md, project instructions, tools, plugins and hooks: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Every requirement has an observable check and unrelated changes are identified.
+- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Small-patch planning workbench
+
+A maintainer needs manageable changes instead of one huge generated diff.
+
+**Data:** Use a three-feature demo application backlog. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A dependency-ordered task plan with independently testable patches.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **AGENTS.md, project instructions, tools, plugins and hooks:** Extend the project with AGENTS.md, project instructions, tools, plugins and hooks in Small-patch planning workbench. Adapt this focused lab to the project data: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.  Required concepts: Project context, Tools, MCP and plugins, Hooks and harnesses.
+  - Deliverable: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A dependency-ordered task plan with independently testable patches. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · AGENTS.md, project instructions, tools, plugins and hooks: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Each patch has a clear rollback and does not leave broken callers.
+- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Executable feature handoff
+
+A learner needs an AI coding task with observable completion criteria.
+
+**Data:** Use a fictional notes-search feature and six user scenarios. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A task specification, fixtures and acceptance checklist.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **AGENTS.md, project instructions, tools, plugins and hooks:** Extend the project with AGENTS.md, project instructions, tools, plugins and hooks in Executable feature handoff. Adapt this focused lab to the project data: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.  Required concepts: Project context, Tools, MCP and plugins, Hooks and harnesses.
+  - Deliverable: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A task specification, fixtures and acceptance checklist. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · AGENTS.md, project instructions, tools, plugins and hooks: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Another developer can identify completion without reading the original conversation.
+- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Test-first coding exercise
+
+A learner needs to guide an assistant through a small bug fix.
+
+**Data:** Use a parser with one reproducible Unicode bug. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A failing regression test, bounded task prompt and reviewed fix.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **AGENTS.md, project instructions, tools, plugins and hooks:** Extend the project with AGENTS.md, project instructions, tools, plugins and hooks in Test-first coding exercise. Adapt this focused lab to the project data: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.  Required concepts: Project context, Tools, MCP and plugins, Hooks and harnesses.
+  - Deliverable: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A failing regression test, bounded task prompt and reviewed fix. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · AGENTS.md, project instructions, tools, plugins and hooks: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] The fix handles the failing case without weakening existing tests.
+- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### End-to-end verification handoff
+
+A learner needs to prove a generated feature works beyond compilation.
+
+**Data:** Use a local form/API/storage demo with one seeded integration bug. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A verification plan and evidence report across the complete flow.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **AGENTS.md, project instructions, tools, plugins and hooks:** Extend the project with AGENTS.md, project instructions, tools, plugins and hooks in End-to-end verification handoff. Adapt this focused lab to the project data: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.  Required concepts: Project context, Tools, MCP and plugins, Hooks and harnesses.
+  - Deliverable: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A verification plan and evidence report across the complete flow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · AGENTS.md, project instructions, tools, plugins and hooks: AGENTS.md, project instructions, tools, plugins and hooks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show input, persisted state and resulting UI behavior for success and failure.
+- [ ] AGENTS.md, project instructions, tools, plugins and hooks: Create AGENTS.md and a tool-permission table for a sample project; add a local verification script and explain which integration capabilities are deliberately disabled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -762,7 +762,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Delegate bounded work without surrendering responsibility for integration.
 
-**Priority:** Useful next · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [AGENTS.md, project instructions, tools, plugins and hooks](coding-agents.md#coding-context) Navigation is unrestricted.
 
@@ -830,292 +830,292 @@ Simulate a planner, implementer and reviewer handoff with written artifacts and 
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Coding tool contract simulator
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+An agent builder needs precise read/search/edit tool semantics.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Use temporary text files and deterministic tool-call fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Agent autonomy, subagents and long-running tasks:** Write a bounded implementation spec and AGENTS.md for this project.  For Agent autonomy, subagents and long-running tasks, explicitly apply Autonomy boundaries, Context management, Delegation.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Agent autonomy, subagents and long-running tasks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Agent autonomy, subagents and long-running tasks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A bounded tool adapter with explicit errors.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Agent autonomy, subagents and long-running tasks:** Write a bounded implementation spec and AGENTS.md for this project.  For Agent autonomy, subagents and long-running tasks, explicitly apply Autonomy boundaries, Context management, Delegation.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
+- **Agent autonomy, subagents and long-running tasks:** Implement Agent autonomy, subagents and long-running tasks in Coding tool contract simulator. Adapt this focused lab to the project data: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.  Required concepts: Autonomy boundaries, Context management, Delegation.
+  - Deliverable: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Agent autonomy, subagents and long-running tasks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A bounded tool adapter with explicit errors. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Agent autonomy, subagents and long-running tasks: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Agent autonomy, subagents and long-running tasks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
+- [ ] Reject traversal and out-of-scope writes and preserve files on failed edits.
+- [ ] Agent autonomy, subagents and long-running tasks: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Coding autonomy boundary lab
 
-Find unusual stock movements and explain which records need investigation.
+A team needs clear approval boundaries for agent actions.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Create 20 proposed shell/file actions in a temporary sandbox. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Agent autonomy, subagents and long-running tasks:** Write a bounded implementation spec and AGENTS.md for this project.  For Agent autonomy, subagents and long-running tasks, explicitly apply Autonomy boundaries, Context management, Delegation.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Agent autonomy, subagents and long-running tasks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Agent autonomy, subagents and long-running tasks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Agent autonomy, subagents and long-running tasks:** Write a bounded implementation spec and AGENTS.md for this project.  For Agent autonomy, subagents and long-running tasks, explicitly apply Autonomy boundaries, Context management, Delegation.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Agent autonomy, subagents and long-running tasks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Agent autonomy, subagents and long-running tasks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** An AGENTS.md policy and a dry-run decision table.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Agent autonomy, subagents and long-running tasks:** Write a bounded implementation spec and AGENTS.md for this project.  For Agent autonomy, subagents and long-running tasks, explicitly apply Autonomy boundaries, Context management, Delegation.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
+- **Agent autonomy, subagents and long-running tasks:** Extend the project with Agent autonomy, subagents and long-running tasks in Coding autonomy boundary lab. Adapt this focused lab to the project data: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.  Required concepts: Autonomy boundaries, Context management, Delegation.
+  - Deliverable: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Agent autonomy, subagents and long-running tasks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An AGENTS.md policy and a dry-run decision table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Agent autonomy, subagents and long-running tasks: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Agent autonomy, subagents and long-running tasks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
+- [ ] Classify destructive actions consistently without executing them.
+- [ ] Agent autonomy, subagents and long-running tasks: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Repository context packager
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A maintainer needs to provide relevant context without secrets.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use a small local demo repository with public and excluded files. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Agent autonomy, subagents and long-running tasks:** Write a bounded implementation spec and AGENTS.md for this project.  For Agent autonomy, subagents and long-running tasks, explicitly apply Autonomy boundaries, Context management, Delegation.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Agent autonomy, subagents and long-running tasks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Agent autonomy, subagents and long-running tasks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Agent autonomy, subagents and long-running tasks:** Write a bounded implementation spec and AGENTS.md for this project.  For Agent autonomy, subagents and long-running tasks, explicitly apply Autonomy boundaries, Context management, Delegation.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Agent autonomy, subagents and long-running tasks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Agent autonomy, subagents and long-running tasks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** An allowlisted context bundle and file provenance list.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Agent autonomy, subagents and long-running tasks:** Write a bounded implementation spec and AGENTS.md for this project.  For Agent autonomy, subagents and long-running tasks, explicitly apply Autonomy boundaries, Context management, Delegation.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
+- **Agent autonomy, subagents and long-running tasks:** Extend the project with Agent autonomy, subagents and long-running tasks in Repository context packager. Adapt this focused lab to the project data: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.  Required concepts: Autonomy boundaries, Context management, Delegation.
+  - Deliverable: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Agent autonomy, subagents and long-running tasks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An allowlisted context bundle and file provenance list. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Agent autonomy, subagents and long-running tasks: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Agent autonomy, subagents and long-running tasks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
+- [ ] Exclude fake secrets and generated folders; include required caller contracts.
+- [ ] Agent autonomy, subagents and long-running tasks: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Agent debugging learning journal
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A learner needs to understand why repeated AI fixes fail.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use three small bugs with known root causes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A hypothesis log, minimal reproductions and verified fixes.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Agent autonomy, subagents and long-running tasks:** Write a bounded implementation spec and AGENTS.md for this project.  For Agent autonomy, subagents and long-running tasks, explicitly apply Autonomy boundaries, Context management, Delegation.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
+- **Agent autonomy, subagents and long-running tasks:** Extend the project with Agent autonomy, subagents and long-running tasks in Agent debugging learning journal. Adapt this focused lab to the project data: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.  Required concepts: Autonomy boundaries, Context management, Delegation.
+  - Deliverable: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Agent autonomy, subagents and long-running tasks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A hypothesis log, minimal reproductions and verified fixes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Agent autonomy, subagents and long-running tasks: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Agent autonomy, subagents and long-running tasks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
+- [ ] Reject changes that only hide errors and explain the actual cause of each bug.
+- [ ] Agent autonomy, subagents and long-running tasks: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Generated patch review clinic
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A learner needs to detect plausible but broken generated code.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Author five tiny patches with security and logic defects. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A review report with reproducing tests and corrected patches.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Agent autonomy, subagents and long-running tasks:** Write a bounded implementation spec and AGENTS.md for this project.  For Agent autonomy, subagents and long-running tasks, explicitly apply Autonomy boundaries, Context management, Delegation.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
+- **Agent autonomy, subagents and long-running tasks:** Extend the project with Agent autonomy, subagents and long-running tasks in Generated patch review clinic. Adapt this focused lab to the project data: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.  Required concepts: Autonomy boundaries, Context management, Delegation.
+  - Deliverable: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Agent autonomy, subagents and long-running tasks: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A review report with reproducing tests and corrected patches. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Agent autonomy, subagents and long-running tasks: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Agent autonomy, subagents and long-running tasks: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.
+- [ ] Each finding has a failing test that passes after the correction.
+- [ ] Agent autonomy, subagents and long-running tasks: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Requirement-to-test tracker
+
+A reviewer needs evidence that generated changes meet the request.
+
+**Data:** Write ten requirements for a local data importer. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A traceability matrix linking requirements, code and tests.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Agent autonomy, subagents and long-running tasks:** Extend the project with Agent autonomy, subagents and long-running tasks in Requirement-to-test tracker. Adapt this focused lab to the project data: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.  Required concepts: Autonomy boundaries, Context management, Delegation.
+  - Deliverable: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A traceability matrix linking requirements, code and tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Agent autonomy, subagents and long-running tasks: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Every requirement has an observable check and unrelated changes are identified.
+- [ ] Agent autonomy, subagents and long-running tasks: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Small-patch planning workbench
+
+A maintainer needs manageable changes instead of one huge generated diff.
+
+**Data:** Use a three-feature demo application backlog. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A dependency-ordered task plan with independently testable patches.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Agent autonomy, subagents and long-running tasks:** Extend the project with Agent autonomy, subagents and long-running tasks in Small-patch planning workbench. Adapt this focused lab to the project data: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.  Required concepts: Autonomy boundaries, Context management, Delegation.
+  - Deliverable: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A dependency-ordered task plan with independently testable patches. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Agent autonomy, subagents and long-running tasks: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Each patch has a clear rollback and does not leave broken callers.
+- [ ] Agent autonomy, subagents and long-running tasks: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Executable feature handoff
+
+A learner needs an AI coding task with observable completion criteria.
+
+**Data:** Use a fictional notes-search feature and six user scenarios. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A task specification, fixtures and acceptance checklist.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Agent autonomy, subagents and long-running tasks:** Extend the project with Agent autonomy, subagents and long-running tasks in Executable feature handoff. Adapt this focused lab to the project data: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.  Required concepts: Autonomy boundaries, Context management, Delegation.
+  - Deliverable: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A task specification, fixtures and acceptance checklist. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Agent autonomy, subagents and long-running tasks: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Another developer can identify completion without reading the original conversation.
+- [ ] Agent autonomy, subagents and long-running tasks: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Test-first coding exercise
+
+A learner needs to guide an assistant through a small bug fix.
+
+**Data:** Use a parser with one reproducible Unicode bug. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A failing regression test, bounded task prompt and reviewed fix.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Agent autonomy, subagents and long-running tasks:** Extend the project with Agent autonomy, subagents and long-running tasks in Test-first coding exercise. Adapt this focused lab to the project data: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.  Required concepts: Autonomy boundaries, Context management, Delegation.
+  - Deliverable: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A failing regression test, bounded task prompt and reviewed fix. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Agent autonomy, subagents and long-running tasks: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] The fix handles the failing case without weakening existing tests.
+- [ ] Agent autonomy, subagents and long-running tasks: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### End-to-end verification handoff
+
+A learner needs to prove a generated feature works beyond compilation.
+
+**Data:** Use a local form/API/storage demo with one seeded integration bug. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A verification plan and evidence report across the complete flow.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Agent autonomy, subagents and long-running tasks:** Extend the project with Agent autonomy, subagents and long-running tasks in End-to-end verification handoff. Adapt this focused lab to the project data: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.  Required concepts: Autonomy boundaries, Context management, Delegation.
+  - Deliverable: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A verification plan and evidence report across the complete flow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Agent autonomy, subagents and long-running tasks: Agent autonomy, subagents and long-running tasks: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show input, persisted state and resulting UI behavior for success and failure.
+- [ ] Agent autonomy, subagents and long-running tasks: Simulate a planner, implementer and reviewer handoff with written artifacts and recorded outputs; introduce one missing requirement and detect it during integration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1129,7 +1129,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Treat generated code as a proposal that requires evidence.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Agent autonomy, subagents and long-running tasks](coding-agents.md#coding-autonomy) Navigation is unrestricted.
 
@@ -1220,292 +1220,292 @@ Review a deliberately flawed fixture patch, identify a contract bug and authoriz
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Agent debugging learning journal
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A learner needs to understand why repeated AI fixes fail.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Use three small bugs with known root causes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Read code, test, lint, type-check and review security:** Write a bounded implementation spec and AGENTS.md for this project.  For Read code, test, lint, type-check and review security, explicitly apply Review, Automated checks, Failure modes and evals.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Read code, test, lint, type-check and review security: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Read code, test, lint, type-check and review security: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A hypothesis log, minimal reproductions and verified fixes.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Read code, test, lint, type-check and review security:** Write a bounded implementation spec and AGENTS.md for this project.  For Read code, test, lint, type-check and review security, explicitly apply Review, Automated checks, Failure modes and evals.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
+- **Read code, test, lint, type-check and review security:** Implement Read code, test, lint, type-check and review security in Agent debugging learning journal. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Read code, test, lint, type-check and review security: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A hypothesis log, minimal reproductions and verified fixes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Read code, test, lint, type-check and review security: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
+- [ ] Reject changes that only hide errors and explain the actual cause of each bug.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Generated patch review clinic
 
-Find unusual stock movements and explain which records need investigation.
+A learner needs to detect plausible but broken generated code.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Author five tiny patches with security and logic defects. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Read code, test, lint, type-check and review security:** Write a bounded implementation spec and AGENTS.md for this project.  For Read code, test, lint, type-check and review security, explicitly apply Review, Automated checks, Failure modes and evals.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Read code, test, lint, type-check and review security: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Read code, test, lint, type-check and review security: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Read code, test, lint, type-check and review security:** Write a bounded implementation spec and AGENTS.md for this project.  For Read code, test, lint, type-check and review security, explicitly apply Review, Automated checks, Failure modes and evals.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Read code, test, lint, type-check and review security: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Read code, test, lint, type-check and review security: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A review report with reproducing tests and corrected patches.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Read code, test, lint, type-check and review security:** Write a bounded implementation spec and AGENTS.md for this project.  For Read code, test, lint, type-check and review security, explicitly apply Review, Automated checks, Failure modes and evals.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
+- **Read code, test, lint, type-check and review security:** Implement Read code, test, lint, type-check and review security in Generated patch review clinic. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Read code, test, lint, type-check and review security: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A review report with reproducing tests and corrected patches. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Read code, test, lint, type-check and review security: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
+- [ ] Each finding has a failing test that passes after the correction.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### End-to-end verification handoff
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A learner needs to prove a generated feature works beyond compilation.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use a local form/API/storage demo with one seeded integration bug. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Read code, test, lint, type-check and review security:** Write a bounded implementation spec and AGENTS.md for this project.  For Read code, test, lint, type-check and review security, explicitly apply Review, Automated checks, Failure modes and evals.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Read code, test, lint, type-check and review security: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Read code, test, lint, type-check and review security: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Read code, test, lint, type-check and review security:** Write a bounded implementation spec and AGENTS.md for this project.  For Read code, test, lint, type-check and review security, explicitly apply Review, Automated checks, Failure modes and evals.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Read code, test, lint, type-check and review security: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Read code, test, lint, type-check and review security: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A verification plan and evidence report across the complete flow.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Read code, test, lint, type-check and review security:** Write a bounded implementation spec and AGENTS.md for this project.  For Read code, test, lint, type-check and review security, explicitly apply Review, Automated checks, Failure modes and evals.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
+- **Read code, test, lint, type-check and review security:** Implement Read code, test, lint, type-check and review security in End-to-end verification handoff. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Read code, test, lint, type-check and review security: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A verification plan and evidence report across the complete flow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Read code, test, lint, type-check and review security: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
+- [ ] Show input, persisted state and resulting UI behavior for success and failure.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Coding autonomy boundary lab
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A team needs clear approval boundaries for agent actions.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Create 20 proposed shell/file actions in a temporary sandbox. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** An AGENTS.md policy and a dry-run decision table.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Read code, test, lint, type-check and review security:** Write a bounded implementation spec and AGENTS.md for this project.  For Read code, test, lint, type-check and review security, explicitly apply Review, Automated checks, Failure modes and evals.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
+- **Read code, test, lint, type-check and review security:** Extend the project with Read code, test, lint, type-check and review security in Coding autonomy boundary lab. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Read code, test, lint, type-check and review security: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An AGENTS.md policy and a dry-run decision table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Read code, test, lint, type-check and review security: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
+- [ ] Classify destructive actions consistently without executing them.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Repository context packager
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A maintainer needs to provide relevant context without secrets.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use a small local demo repository with public and excluded files. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** An allowlisted context bundle and file provenance list.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Read code, test, lint, type-check and review security:** Write a bounded implementation spec and AGENTS.md for this project.  For Read code, test, lint, type-check and review security, explicitly apply Review, Automated checks, Failure modes and evals.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
+- **Read code, test, lint, type-check and review security:** Extend the project with Read code, test, lint, type-check and review security in Repository context packager. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Read code, test, lint, type-check and review security: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An allowlisted context bundle and file provenance list. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Read code, test, lint, type-check and review security: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
+- [ ] Exclude fake secrets and generated folders; include required caller contracts.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Requirement-to-test tracker
+
+A reviewer needs evidence that generated changes meet the request.
+
+**Data:** Write ten requirements for a local data importer. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A traceability matrix linking requirements, code and tests.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Read code, test, lint, type-check and review security:** Extend the project with Read code, test, lint, type-check and review security in Requirement-to-test tracker. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A traceability matrix linking requirements, code and tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Every requirement has an observable check and unrelated changes are identified.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Small-patch planning workbench
+
+A maintainer needs manageable changes instead of one huge generated diff.
+
+**Data:** Use a three-feature demo application backlog. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A dependency-ordered task plan with independently testable patches.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Read code, test, lint, type-check and review security:** Extend the project with Read code, test, lint, type-check and review security in Small-patch planning workbench. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A dependency-ordered task plan with independently testable patches. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Each patch has a clear rollback and does not leave broken callers.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Executable feature handoff
+
+A learner needs an AI coding task with observable completion criteria.
+
+**Data:** Use a fictional notes-search feature and six user scenarios. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A task specification, fixtures and acceptance checklist.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Read code, test, lint, type-check and review security:** Extend the project with Read code, test, lint, type-check and review security in Executable feature handoff. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A task specification, fixtures and acceptance checklist. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Another developer can identify completion without reading the original conversation.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Test-first coding exercise
+
+A learner needs to guide an assistant through a small bug fix.
+
+**Data:** Use a parser with one reproducible Unicode bug. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A failing regression test, bounded task prompt and reviewed fix.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Read code, test, lint, type-check and review security:** Extend the project with Read code, test, lint, type-check and review security in Test-first coding exercise. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A failing regression test, bounded task prompt and reviewed fix. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] The fix handles the failing case without weakening existing tests.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Coding tool contract simulator
+
+An agent builder needs precise read/search/edit tool semantics.
+
+**Data:** Use temporary text files and deterministic tool-call fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A bounded tool adapter with explicit errors.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Read code, test, lint, type-check and review security:** Extend the project with Read code, test, lint, type-check and review security in Coding tool contract simulator. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A bounded tool adapter with explicit errors. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject traversal and out-of-scope writes and preserve files on failed edits.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1519,7 +1519,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Keep automation tied to working user outcomes and maintainable changes.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Read code, test, lint, type-check and review security](coding-agents.md#coding-review) Navigation is unrestricted.
 
@@ -1605,292 +1605,292 @@ Create a minimal CI workflow for a sample app and a verification report covering
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Test-first coding exercise
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A learner needs to guide an assistant through a small bug fix.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Use a parser with one reproducible Unicode bug. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **CI/CD integration, verification and iteration:** Write a bounded implementation spec and AGENTS.md for this project.  For CI/CD integration, verification and iteration, explicitly apply CI integration, Verification, Iteration.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD integration, verification and iteration: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] CI/CD integration, verification and iteration: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A failing regression test, bounded task prompt and reviewed fix.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **CI/CD integration, verification and iteration:** Write a bounded implementation spec and AGENTS.md for this project.  For CI/CD integration, verification and iteration, explicitly apply CI integration, Verification, Iteration.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
+- **CI/CD integration, verification and iteration:** Implement CI/CD integration, verification and iteration in Test-first coding exercise. Adapt this focused lab to the project data: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.  Required concepts: CI integration, Verification, Iteration.
+  - Deliverable: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD integration, verification and iteration: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A failing regression test, bounded task prompt and reviewed fix. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD integration, verification and iteration: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] CI/CD integration, verification and iteration: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
+- [ ] The fix handles the failing case without weakening existing tests.
+- [ ] CI/CD integration, verification and iteration: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### End-to-end verification handoff
 
-Find unusual stock movements and explain which records need investigation.
+A learner needs to prove a generated feature works beyond compilation.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Use a local form/API/storage demo with one seeded integration bug. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **CI/CD integration, verification and iteration:** Write a bounded implementation spec and AGENTS.md for this project.  For CI/CD integration, verification and iteration, explicitly apply CI integration, Verification, Iteration.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD integration, verification and iteration: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] CI/CD integration, verification and iteration: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **CI/CD integration, verification and iteration:** Write a bounded implementation spec and AGENTS.md for this project.  For CI/CD integration, verification and iteration, explicitly apply CI integration, Verification, Iteration.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD integration, verification and iteration: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] CI/CD integration, verification and iteration: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A verification plan and evidence report across the complete flow.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **CI/CD integration, verification and iteration:** Write a bounded implementation spec and AGENTS.md for this project.  For CI/CD integration, verification and iteration, explicitly apply CI integration, Verification, Iteration.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
+- **CI/CD integration, verification and iteration:** Implement CI/CD integration, verification and iteration in End-to-end verification handoff. Adapt this focused lab to the project data: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.  Required concepts: CI integration, Verification, Iteration.
+  - Deliverable: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD integration, verification and iteration: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A verification plan and evidence report across the complete flow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD integration, verification and iteration: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] CI/CD integration, verification and iteration: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
+- [ ] Show input, persisted state and resulting UI behavior for success and failure.
+- [ ] CI/CD integration, verification and iteration: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Coding autonomy boundary lab
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A team needs clear approval boundaries for agent actions.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Create 20 proposed shell/file actions in a temporary sandbox. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **CI/CD integration, verification and iteration:** Write a bounded implementation spec and AGENTS.md for this project.  For CI/CD integration, verification and iteration, explicitly apply CI integration, Verification, Iteration.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD integration, verification and iteration: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] CI/CD integration, verification and iteration: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **CI/CD integration, verification and iteration:** Write a bounded implementation spec and AGENTS.md for this project.  For CI/CD integration, verification and iteration, explicitly apply CI integration, Verification, Iteration.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD integration, verification and iteration: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] CI/CD integration, verification and iteration: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** An AGENTS.md policy and a dry-run decision table.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **CI/CD integration, verification and iteration:** Write a bounded implementation spec and AGENTS.md for this project.  For CI/CD integration, verification and iteration, explicitly apply CI integration, Verification, Iteration.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
+- **CI/CD integration, verification and iteration:** Extend the project with CI/CD integration, verification and iteration in Coding autonomy boundary lab. Adapt this focused lab to the project data: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.  Required concepts: CI integration, Verification, Iteration.
+  - Deliverable: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD integration, verification and iteration: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An AGENTS.md policy and a dry-run decision table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD integration, verification and iteration: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] CI/CD integration, verification and iteration: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
+- [ ] Classify destructive actions consistently without executing them.
+- [ ] CI/CD integration, verification and iteration: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Repository context packager
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A maintainer needs to provide relevant context without secrets.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use a small local demo repository with public and excluded files. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** An allowlisted context bundle and file provenance list.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **CI/CD integration, verification and iteration:** Write a bounded implementation spec and AGENTS.md for this project.  For CI/CD integration, verification and iteration, explicitly apply CI integration, Verification, Iteration.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
+- **CI/CD integration, verification and iteration:** Extend the project with CI/CD integration, verification and iteration in Repository context packager. Adapt this focused lab to the project data: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.  Required concepts: CI integration, Verification, Iteration.
+  - Deliverable: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD integration, verification and iteration: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An allowlisted context bundle and file provenance list. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD integration, verification and iteration: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] CI/CD integration, verification and iteration: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
+- [ ] Exclude fake secrets and generated folders; include required caller contracts.
+- [ ] CI/CD integration, verification and iteration: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Agent debugging learning journal
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A learner needs to understand why repeated AI fixes fail.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use three small bugs with known root causes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A hypothesis log, minimal reproductions and verified fixes.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **CI/CD integration, verification and iteration:** Write a bounded implementation spec and AGENTS.md for this project.  For CI/CD integration, verification and iteration, explicitly apply CI integration, Verification, Iteration.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
+- **CI/CD integration, verification and iteration:** Extend the project with CI/CD integration, verification and iteration in Agent debugging learning journal. Adapt this focused lab to the project data: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.  Required concepts: CI integration, Verification, Iteration.
+  - Deliverable: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD integration, verification and iteration: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A hypothesis log, minimal reproductions and verified fixes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD integration, verification and iteration: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] CI/CD integration, verification and iteration: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.
+- [ ] Reject changes that only hide errors and explain the actual cause of each bug.
+- [ ] CI/CD integration, verification and iteration: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Generated patch review clinic
+
+A learner needs to detect plausible but broken generated code.
+
+**Data:** Author five tiny patches with security and logic defects. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A review report with reproducing tests and corrected patches.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **CI/CD integration, verification and iteration:** Extend the project with CI/CD integration, verification and iteration in Generated patch review clinic. Adapt this focused lab to the project data: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.  Required concepts: CI integration, Verification, Iteration.
+  - Deliverable: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A review report with reproducing tests and corrected patches. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD integration, verification and iteration: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Each finding has a failing test that passes after the correction.
+- [ ] CI/CD integration, verification and iteration: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Requirement-to-test tracker
+
+A reviewer needs evidence that generated changes meet the request.
+
+**Data:** Write ten requirements for a local data importer. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A traceability matrix linking requirements, code and tests.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **CI/CD integration, verification and iteration:** Extend the project with CI/CD integration, verification and iteration in Requirement-to-test tracker. Adapt this focused lab to the project data: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.  Required concepts: CI integration, Verification, Iteration.
+  - Deliverable: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A traceability matrix linking requirements, code and tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD integration, verification and iteration: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Every requirement has an observable check and unrelated changes are identified.
+- [ ] CI/CD integration, verification and iteration: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Small-patch planning workbench
+
+A maintainer needs manageable changes instead of one huge generated diff.
+
+**Data:** Use a three-feature demo application backlog. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A dependency-ordered task plan with independently testable patches.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **CI/CD integration, verification and iteration:** Extend the project with CI/CD integration, verification and iteration in Small-patch planning workbench. Adapt this focused lab to the project data: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.  Required concepts: CI integration, Verification, Iteration.
+  - Deliverable: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A dependency-ordered task plan with independently testable patches. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD integration, verification and iteration: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Each patch has a clear rollback and does not leave broken callers.
+- [ ] CI/CD integration, verification and iteration: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Executable feature handoff
+
+A learner needs an AI coding task with observable completion criteria.
+
+**Data:** Use a fictional notes-search feature and six user scenarios. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A task specification, fixtures and acceptance checklist.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **CI/CD integration, verification and iteration:** Extend the project with CI/CD integration, verification and iteration in Executable feature handoff. Adapt this focused lab to the project data: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.  Required concepts: CI integration, Verification, Iteration.
+  - Deliverable: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A task specification, fixtures and acceptance checklist. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD integration, verification and iteration: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Another developer can identify completion without reading the original conversation.
+- [ ] CI/CD integration, verification and iteration: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Coding tool contract simulator
+
+An agent builder needs precise read/search/edit tool semantics.
+
+**Data:** Use temporary text files and deterministic tool-call fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A bounded tool adapter with explicit errors.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **CI/CD integration, verification and iteration:** Extend the project with CI/CD integration, verification and iteration in Coding tool contract simulator. Adapt this focused lab to the project data: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.  Required concepts: CI integration, Verification, Iteration.
+  - Deliverable: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A bounded tool adapter with explicit errors. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD integration, verification and iteration: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject traversal and out-of-scope writes and preserve files on failed edits.
+- [ ] CI/CD integration, verification and iteration: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1904,7 +1904,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Make coding-agent work reviewable by defining a concrete problem, bounded changes and observable completion criteria.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Essential · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [Read code, test, lint, type-check and review security](coding-agents.md#coding-review) Navigation is unrestricted.
 
@@ -1990,292 +1990,292 @@ Prepare a small reproducible ingestion bug, a bounded task specification and beh
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Requirement-to-test tracker
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A reviewer needs evidence that generated changes meet the request.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Write ten requirements for a local data importer. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Acceptance tests, change scope and evidence-based review:** Write a bounded implementation spec and AGENTS.md for this project.  For Acceptance tests, change scope and evidence-based review, explicitly apply Problem and counterexample, Bounded context, Acceptance versus implementation checks.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Acceptance tests, change scope and evidence-based review: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Acceptance tests, change scope and evidence-based review: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A traceability matrix linking requirements, code and tests.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Acceptance tests, change scope and evidence-based review:** Write a bounded implementation spec and AGENTS.md for this project.  For Acceptance tests, change scope and evidence-based review, explicitly apply Problem and counterexample, Bounded context, Acceptance versus implementation checks.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
+- **Acceptance tests, change scope and evidence-based review:** Implement Acceptance tests, change scope and evidence-based review in Requirement-to-test tracker. Adapt this focused lab to the project data: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.  Required concepts: Problem and counterexample, Bounded context, Acceptance versus implementation checks, Diff and dependency review, Verification evidence.
+  - Deliverable: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Acceptance tests, change scope and evidence-based review: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A traceability matrix linking requirements, code and tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Acceptance tests, change scope and evidence-based review: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Acceptance tests, change scope and evidence-based review: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
+- [ ] Every requirement has an observable check and unrelated changes are identified.
+- [ ] Acceptance tests, change scope and evidence-based review: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Coding autonomy boundary lab
 
-Find unusual stock movements and explain which records need investigation.
+A team needs clear approval boundaries for agent actions.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Create 20 proposed shell/file actions in a temporary sandbox. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Acceptance tests, change scope and evidence-based review:** Write a bounded implementation spec and AGENTS.md for this project.  For Acceptance tests, change scope and evidence-based review, explicitly apply Problem and counterexample, Bounded context, Acceptance versus implementation checks.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Acceptance tests, change scope and evidence-based review: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Acceptance tests, change scope and evidence-based review: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Acceptance tests, change scope and evidence-based review:** Write a bounded implementation spec and AGENTS.md for this project.  For Acceptance tests, change scope and evidence-based review, explicitly apply Problem and counterexample, Bounded context, Acceptance versus implementation checks.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Acceptance tests, change scope and evidence-based review: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Acceptance tests, change scope and evidence-based review: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** An AGENTS.md policy and a dry-run decision table.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Acceptance tests, change scope and evidence-based review:** Write a bounded implementation spec and AGENTS.md for this project.  For Acceptance tests, change scope and evidence-based review, explicitly apply Problem and counterexample, Bounded context, Acceptance versus implementation checks.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
+- **Acceptance tests, change scope and evidence-based review:** Extend the project with Acceptance tests, change scope and evidence-based review in Coding autonomy boundary lab. Adapt this focused lab to the project data: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.  Required concepts: Problem and counterexample, Bounded context, Acceptance versus implementation checks, Diff and dependency review, Verification evidence.
+  - Deliverable: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Acceptance tests, change scope and evidence-based review: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An AGENTS.md policy and a dry-run decision table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Acceptance tests, change scope and evidence-based review: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Acceptance tests, change scope and evidence-based review: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
+- [ ] Classify destructive actions consistently without executing them.
+- [ ] Acceptance tests, change scope and evidence-based review: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Repository context packager
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A maintainer needs to provide relevant context without secrets.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use a small local demo repository with public and excluded files. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Acceptance tests, change scope and evidence-based review:** Write a bounded implementation spec and AGENTS.md for this project.  For Acceptance tests, change scope and evidence-based review, explicitly apply Problem and counterexample, Bounded context, Acceptance versus implementation checks.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Acceptance tests, change scope and evidence-based review: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Acceptance tests, change scope and evidence-based review: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Acceptance tests, change scope and evidence-based review:** Write a bounded implementation spec and AGENTS.md for this project.  For Acceptance tests, change scope and evidence-based review, explicitly apply Problem and counterexample, Bounded context, Acceptance versus implementation checks.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Acceptance tests, change scope and evidence-based review: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Acceptance tests, change scope and evidence-based review: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** An allowlisted context bundle and file provenance list.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Acceptance tests, change scope and evidence-based review:** Write a bounded implementation spec and AGENTS.md for this project.  For Acceptance tests, change scope and evidence-based review, explicitly apply Problem and counterexample, Bounded context, Acceptance versus implementation checks.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
+- **Acceptance tests, change scope and evidence-based review:** Extend the project with Acceptance tests, change scope and evidence-based review in Repository context packager. Adapt this focused lab to the project data: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.  Required concepts: Problem and counterexample, Bounded context, Acceptance versus implementation checks, Diff and dependency review, Verification evidence.
+  - Deliverable: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Acceptance tests, change scope and evidence-based review: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An allowlisted context bundle and file provenance list. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Acceptance tests, change scope and evidence-based review: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Acceptance tests, change scope and evidence-based review: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
+- [ ] Exclude fake secrets and generated folders; include required caller contracts.
+- [ ] Acceptance tests, change scope and evidence-based review: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Agent debugging learning journal
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A learner needs to understand why repeated AI fixes fail.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use three small bugs with known root causes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A hypothesis log, minimal reproductions and verified fixes.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Acceptance tests, change scope and evidence-based review:** Write a bounded implementation spec and AGENTS.md for this project.  For Acceptance tests, change scope and evidence-based review, explicitly apply Problem and counterexample, Bounded context, Acceptance versus implementation checks.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
+- **Acceptance tests, change scope and evidence-based review:** Extend the project with Acceptance tests, change scope and evidence-based review in Agent debugging learning journal. Adapt this focused lab to the project data: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.  Required concepts: Problem and counterexample, Bounded context, Acceptance versus implementation checks, Diff and dependency review, Verification evidence.
+  - Deliverable: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Acceptance tests, change scope and evidence-based review: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A hypothesis log, minimal reproductions and verified fixes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Acceptance tests, change scope and evidence-based review: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Acceptance tests, change scope and evidence-based review: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
+- [ ] Reject changes that only hide errors and explain the actual cause of each bug.
+- [ ] Acceptance tests, change scope and evidence-based review: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Generated patch review clinic
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A learner needs to detect plausible but broken generated code.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Author five tiny patches with security and logic defects. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A review report with reproducing tests and corrected patches.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Acceptance tests, change scope and evidence-based review:** Write a bounded implementation spec and AGENTS.md for this project.  For Acceptance tests, change scope and evidence-based review, explicitly apply Problem and counterexample, Bounded context, Acceptance versus implementation checks.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
+- **Acceptance tests, change scope and evidence-based review:** Extend the project with Acceptance tests, change scope and evidence-based review in Generated patch review clinic. Adapt this focused lab to the project data: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.  Required concepts: Problem and counterexample, Bounded context, Acceptance versus implementation checks, Diff and dependency review, Verification evidence.
+  - Deliverable: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Acceptance tests, change scope and evidence-based review: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A review report with reproducing tests and corrected patches. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Acceptance tests, change scope and evidence-based review: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Acceptance tests, change scope and evidence-based review: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.
+- [ ] Each finding has a failing test that passes after the correction.
+- [ ] Acceptance tests, change scope and evidence-based review: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Small-patch planning workbench
+
+A maintainer needs manageable changes instead of one huge generated diff.
+
+**Data:** Use a three-feature demo application backlog. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A dependency-ordered task plan with independently testable patches.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Acceptance tests, change scope and evidence-based review:** Extend the project with Acceptance tests, change scope and evidence-based review in Small-patch planning workbench. Adapt this focused lab to the project data: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.  Required concepts: Problem and counterexample, Bounded context, Acceptance versus implementation checks, Diff and dependency review, Verification evidence.
+  - Deliverable: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A dependency-ordered task plan with independently testable patches. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Acceptance tests, change scope and evidence-based review: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Each patch has a clear rollback and does not leave broken callers.
+- [ ] Acceptance tests, change scope and evidence-based review: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Executable feature handoff
+
+A learner needs an AI coding task with observable completion criteria.
+
+**Data:** Use a fictional notes-search feature and six user scenarios. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A task specification, fixtures and acceptance checklist.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Acceptance tests, change scope and evidence-based review:** Extend the project with Acceptance tests, change scope and evidence-based review in Executable feature handoff. Adapt this focused lab to the project data: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.  Required concepts: Problem and counterexample, Bounded context, Acceptance versus implementation checks, Diff and dependency review, Verification evidence.
+  - Deliverable: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A task specification, fixtures and acceptance checklist. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Acceptance tests, change scope and evidence-based review: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Another developer can identify completion without reading the original conversation.
+- [ ] Acceptance tests, change scope and evidence-based review: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Test-first coding exercise
+
+A learner needs to guide an assistant through a small bug fix.
+
+**Data:** Use a parser with one reproducible Unicode bug. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A failing regression test, bounded task prompt and reviewed fix.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Acceptance tests, change scope and evidence-based review:** Extend the project with Acceptance tests, change scope and evidence-based review in Test-first coding exercise. Adapt this focused lab to the project data: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.  Required concepts: Problem and counterexample, Bounded context, Acceptance versus implementation checks, Diff and dependency review, Verification evidence.
+  - Deliverable: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A failing regression test, bounded task prompt and reviewed fix. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Acceptance tests, change scope and evidence-based review: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] The fix handles the failing case without weakening existing tests.
+- [ ] Acceptance tests, change scope and evidence-based review: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Coding tool contract simulator
+
+An agent builder needs precise read/search/edit tool semantics.
+
+**Data:** Use temporary text files and deterministic tool-call fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A bounded tool adapter with explicit errors.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Acceptance tests, change scope and evidence-based review:** Extend the project with Acceptance tests, change scope and evidence-based review in Coding tool contract simulator. Adapt this focused lab to the project data: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.  Required concepts: Problem and counterexample, Bounded context, Acceptance versus implementation checks, Diff and dependency review, Verification evidence.
+  - Deliverable: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A bounded tool adapter with explicit errors. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Acceptance tests, change scope and evidence-based review: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject traversal and out-of-scope writes and preserve files on failed edits.
+- [ ] Acceptance tests, change scope and evidence-based review: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### End-to-end verification handoff
+
+A learner needs to prove a generated feature works beyond compilation.
+
+**Data:** Use a local form/API/storage demo with one seeded integration bug. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A verification plan and evidence report across the complete flow.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Acceptance tests, change scope and evidence-based review:** Extend the project with Acceptance tests, change scope and evidence-based review in End-to-end verification handoff. Adapt this focused lab to the project data: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.  Required concepts: Problem and counterexample, Bounded context, Acceptance versus implementation checks, Diff and dependency review, Verification evidence.
+  - Deliverable: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A verification plan and evidence report across the complete flow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Acceptance tests, change scope and evidence-based review: Acceptance tests, change scope and evidence-based review: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show input, persisted state and resulting UI behavior for success and failure.
+- [ ] Acceptance tests, change scope and evidence-based review: Prepare a small reproducible ingestion bug, a bounded task specification and behaviour-level acceptance checks. Implement it manually or with an available coding assistant, then review the diff and produce a verification note with explicit limits.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2289,7 +2289,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Allow useful autonomous work while keeping credentials, side effects and review boundaries explicit.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Essential · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [Agent autonomy, subagents and long-running tasks](coding-agents.md#coding-autonomy) Navigation is unrestricted.
 
@@ -2375,292 +2375,679 @@ Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-f
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Coding autonomy boundary lab
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A team needs clear approval boundaries for agent actions.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Create 20 proposed shell/file actions in a temporary sandbox. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Tool permissions, untrusted context and recoverable task steps:** Write a bounded implementation spec and AGENTS.md for this project.  For Tool permissions, untrusted context and recoverable task steps, explicitly apply Capability scope, Untrusted repository content, Checkpointed task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Tool permissions, untrusted context and recoverable task steps: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Tool permissions, untrusted context and recoverable task steps: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** An AGENTS.md policy and a dry-run decision table.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Tool permissions, untrusted context and recoverable task steps:** Write a bounded implementation spec and AGENTS.md for this project.  For Tool permissions, untrusted context and recoverable task steps, explicitly apply Capability scope, Untrusted repository content, Checkpointed task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
+- **Tool permissions, untrusted context and recoverable task steps:** Implement Tool permissions, untrusted context and recoverable task steps in Coding autonomy boundary lab. Adapt this focused lab to the project data: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.  Required concepts: Capability scope, Untrusted repository content, Checkpointed task decomposition, Secret handling, Review and escalation rules.
+  - Deliverable: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Tool permissions, untrusted context and recoverable task steps: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An AGENTS.md policy and a dry-run decision table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tool permissions, untrusted context and recoverable task steps: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Tool permissions, untrusted context and recoverable task steps: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
+- [ ] Classify destructive actions consistently without executing them.
+- [ ] Tool permissions, untrusted context and recoverable task steps: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Repository context packager
 
-Find unusual stock movements and explain which records need investigation.
+A maintainer needs to provide relevant context without secrets.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Use a small local demo repository with public and excluded files. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Tool permissions, untrusted context and recoverable task steps:** Write a bounded implementation spec and AGENTS.md for this project.  For Tool permissions, untrusted context and recoverable task steps, explicitly apply Capability scope, Untrusted repository content, Checkpointed task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Tool permissions, untrusted context and recoverable task steps: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Tool permissions, untrusted context and recoverable task steps: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Tool permissions, untrusted context and recoverable task steps:** Write a bounded implementation spec and AGENTS.md for this project.  For Tool permissions, untrusted context and recoverable task steps, explicitly apply Capability scope, Untrusted repository content, Checkpointed task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Tool permissions, untrusted context and recoverable task steps: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Tool permissions, untrusted context and recoverable task steps: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** An allowlisted context bundle and file provenance list.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Tool permissions, untrusted context and recoverable task steps:** Write a bounded implementation spec and AGENTS.md for this project.  For Tool permissions, untrusted context and recoverable task steps, explicitly apply Capability scope, Untrusted repository content, Checkpointed task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
+- **Tool permissions, untrusted context and recoverable task steps:** Extend the project with Tool permissions, untrusted context and recoverable task steps in Repository context packager. Adapt this focused lab to the project data: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.  Required concepts: Capability scope, Untrusted repository content, Checkpointed task decomposition, Secret handling, Review and escalation rules.
+  - Deliverable: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Tool permissions, untrusted context and recoverable task steps: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An allowlisted context bundle and file provenance list. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tool permissions, untrusted context and recoverable task steps: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Tool permissions, untrusted context and recoverable task steps: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
+- [ ] Exclude fake secrets and generated folders; include required caller contracts.
+- [ ] Tool permissions, untrusted context and recoverable task steps: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Agent debugging learning journal
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A learner needs to understand why repeated AI fixes fail.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use three small bugs with known root causes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Tool permissions, untrusted context and recoverable task steps:** Write a bounded implementation spec and AGENTS.md for this project.  For Tool permissions, untrusted context and recoverable task steps, explicitly apply Capability scope, Untrusted repository content, Checkpointed task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Tool permissions, untrusted context and recoverable task steps: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Tool permissions, untrusted context and recoverable task steps: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Tool permissions, untrusted context and recoverable task steps:** Write a bounded implementation spec and AGENTS.md for this project.  For Tool permissions, untrusted context and recoverable task steps, explicitly apply Capability scope, Untrusted repository content, Checkpointed task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Tool permissions, untrusted context and recoverable task steps: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Tool permissions, untrusted context and recoverable task steps: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A hypothesis log, minimal reproductions and verified fixes.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Tool permissions, untrusted context and recoverable task steps:** Write a bounded implementation spec and AGENTS.md for this project.  For Tool permissions, untrusted context and recoverable task steps, explicitly apply Capability scope, Untrusted repository content, Checkpointed task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
+- **Tool permissions, untrusted context and recoverable task steps:** Extend the project with Tool permissions, untrusted context and recoverable task steps in Agent debugging learning journal. Adapt this focused lab to the project data: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.  Required concepts: Capability scope, Untrusted repository content, Checkpointed task decomposition, Secret handling, Review and escalation rules.
+  - Deliverable: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Tool permissions, untrusted context and recoverable task steps: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A hypothesis log, minimal reproductions and verified fixes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tool permissions, untrusted context and recoverable task steps: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Tool permissions, untrusted context and recoverable task steps: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
+- [ ] Reject changes that only hide errors and explain the actual cause of each bug.
+- [ ] Tool permissions, untrusted context and recoverable task steps: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Generated patch review clinic
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A learner needs to detect plausible but broken generated code.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Author five tiny patches with security and logic defects. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A review report with reproducing tests and corrected patches.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Tool permissions, untrusted context and recoverable task steps:** Write a bounded implementation spec and AGENTS.md for this project.  For Tool permissions, untrusted context and recoverable task steps, explicitly apply Capability scope, Untrusted repository content, Checkpointed task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
+- **Tool permissions, untrusted context and recoverable task steps:** Extend the project with Tool permissions, untrusted context and recoverable task steps in Generated patch review clinic. Adapt this focused lab to the project data: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.  Required concepts: Capability scope, Untrusted repository content, Checkpointed task decomposition, Secret handling, Review and escalation rules.
+  - Deliverable: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Tool permissions, untrusted context and recoverable task steps: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A review report with reproducing tests and corrected patches. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tool permissions, untrusted context and recoverable task steps: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Tool permissions, untrusted context and recoverable task steps: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
+- [ ] Each finding has a failing test that passes after the correction.
+- [ ] Tool permissions, untrusted context and recoverable task steps: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Requirement-to-test tracker
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A reviewer needs evidence that generated changes meet the request.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Write ten requirements for a local data importer. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A traceability matrix linking requirements, code and tests.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Tool permissions, untrusted context and recoverable task steps:** Write a bounded implementation spec and AGENTS.md for this project.  For Tool permissions, untrusted context and recoverable task steps, explicitly apply Capability scope, Untrusted repository content, Checkpointed task decomposition.
-  - Deliverable: A task handoff, reviewed patch and verification report
-  - Check: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
+- **Tool permissions, untrusted context and recoverable task steps:** Extend the project with Tool permissions, untrusted context and recoverable task steps in Requirement-to-test tracker. Adapt this focused lab to the project data: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.  Required concepts: Capability scope, Untrusted repository content, Checkpointed task decomposition, Secret handling, Review and escalation rules.
+  - Deliverable: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Tool permissions, untrusted context and recoverable task steps: A task handoff, reviewed patch and verification report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A traceability matrix linking requirements, code and tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tool permissions, untrusted context and recoverable task steps: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Tool permissions, untrusted context and recoverable task steps: Review connected callers, run type/tests/security checks and verify the complete user flow. Adapt the lesson lab: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.
+- [ ] Every requirement has an observable check and unrelated changes are identified.
+- [ ] Tool permissions, untrusted context and recoverable task steps: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Small-patch planning workbench
+
+A maintainer needs manageable changes instead of one huge generated diff.
+
+**Data:** Use a three-feature demo application backlog. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A dependency-ordered task plan with independently testable patches.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Tool permissions, untrusted context and recoverable task steps:** Extend the project with Tool permissions, untrusted context and recoverable task steps in Small-patch planning workbench. Adapt this focused lab to the project data: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.  Required concepts: Capability scope, Untrusted repository content, Checkpointed task decomposition, Secret handling, Review and escalation rules.
+  - Deliverable: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A dependency-ordered task plan with independently testable patches. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tool permissions, untrusted context and recoverable task steps: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Each patch has a clear rollback and does not leave broken callers.
+- [ ] Tool permissions, untrusted context and recoverable task steps: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Executable feature handoff
+
+A learner needs an AI coding task with observable completion criteria.
+
+**Data:** Use a fictional notes-search feature and six user scenarios. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A task specification, fixtures and acceptance checklist.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Tool permissions, untrusted context and recoverable task steps:** Extend the project with Tool permissions, untrusted context and recoverable task steps in Executable feature handoff. Adapt this focused lab to the project data: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.  Required concepts: Capability scope, Untrusted repository content, Checkpointed task decomposition, Secret handling, Review and escalation rules.
+  - Deliverable: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A task specification, fixtures and acceptance checklist. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tool permissions, untrusted context and recoverable task steps: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Another developer can identify completion without reading the original conversation.
+- [ ] Tool permissions, untrusted context and recoverable task steps: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Test-first coding exercise
+
+A learner needs to guide an assistant through a small bug fix.
+
+**Data:** Use a parser with one reproducible Unicode bug. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A failing regression test, bounded task prompt and reviewed fix.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Tool permissions, untrusted context and recoverable task steps:** Extend the project with Tool permissions, untrusted context and recoverable task steps in Test-first coding exercise. Adapt this focused lab to the project data: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.  Required concepts: Capability scope, Untrusted repository content, Checkpointed task decomposition, Secret handling, Review and escalation rules.
+  - Deliverable: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A failing regression test, bounded task prompt and reviewed fix. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tool permissions, untrusted context and recoverable task steps: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] The fix handles the failing case without weakening existing tests.
+- [ ] Tool permissions, untrusted context and recoverable task steps: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Coding tool contract simulator
+
+An agent builder needs precise read/search/edit tool semantics.
+
+**Data:** Use temporary text files and deterministic tool-call fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A bounded tool adapter with explicit errors.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Tool permissions, untrusted context and recoverable task steps:** Extend the project with Tool permissions, untrusted context and recoverable task steps in Coding tool contract simulator. Adapt this focused lab to the project data: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.  Required concepts: Capability scope, Untrusted repository content, Checkpointed task decomposition, Secret handling, Review and escalation rules.
+  - Deliverable: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A bounded tool adapter with explicit errors. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tool permissions, untrusted context and recoverable task steps: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject traversal and out-of-scope writes and preserve files on failed edits.
+- [ ] Tool permissions, untrusted context and recoverable task steps: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### End-to-end verification handoff
+
+A learner needs to prove a generated feature works beyond compilation.
+
+**Data:** Use a local form/API/storage demo with one seeded integration bug. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A verification plan and evidence report across the complete flow.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Tool permissions, untrusted context and recoverable task steps:** Extend the project with Tool permissions, untrusted context and recoverable task steps in End-to-end verification handoff. Adapt this focused lab to the project data: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.  Required concepts: Capability scope, Untrusted repository content, Checkpointed task decomposition, Secret handling, Review and escalation rules.
+  - Deliverable: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A verification plan and evidence report across the complete flow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tool permissions, untrusted context and recoverable task steps: Tool permissions, untrusted context and recoverable task steps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show input, persisted state and resulting UI behavior for success and failure.
+- [ ] Tool permissions, untrusted context and recoverable task steps: Write AGENTS.md and a permissions matrix for a toy repository. Run an injected-fixture exercise, simulate an interrupted task from a checkpoint and produce a review checklist that distinguishes local verification from deployment authority.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Stage checkpoint
+
+<a id="checkpoint-coding-agents"></a>
+
+### Coding-agent verification checkpoint
+
+Demonstrate readiness through a reproducible practical handoff. Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.
+
+**Priority:** Essential · **Study:** 1h · **Practice:** 6h
+
+**Prerequisites:** [Problem definition, research and specifications](coding-agents.md#coding-specifications), [AGENTS.md, project instructions, tools, plugins and hooks](coding-agents.md#coding-context), [Agent autonomy, subagents and long-running tasks](coding-agents.md#coding-autonomy), [Read code, test, lint, type-check and review security](coding-agents.md#coding-review), [CI/CD integration, verification and iteration](coding-agents.md#coding-ci), [Acceptance tests, change scope and evidence-based review](coding-agents.md#coding-specification-review), [Tool permissions, untrusted context and recoverable task steps](coding-agents.md#coding-autonomy-controls) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Define the success contract:** Write observable checks before implementation so success is not just a plausible demonstration.
+  - Example: Turn this task into a numbered acceptance checklist: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.
+  - Videos:
+    - [The future of software engineering](https://www.youtube.com/watch?v=g8um2AEf5ZA) · DeepLearning.AI · Andrew Ng · Engineering talk
+      - Explains: AI coding agents and the engineering skills needed to direct and verify them.
+      - Useful because: Use the talk as context, then apply the supplied specification and verification labs.
+      - Watch for: Focus on define the success contract. Then reproduce the lesson example: Turn this task into a numbered acceptance checklist: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=g8um2AEf5ZA
+- [ ] **Reproduce the baseline:** Keep a simple reference output and deterministic inputs so changes can be compared honestly.
+  - Example: Run a fixed input twice and compare saved outputs with the documented baseline.
+  - Videos:
+    - [The future of software engineering](https://www.youtube.com/watch?v=g8um2AEf5ZA) · DeepLearning.AI · Andrew Ng · Engineering talk
+      - Explains: AI coding agents and the engineering skills needed to direct and verify them.
+      - Useful because: Use the talk as context, then apply the supplied specification and verification labs.
+      - Watch for: Focus on reproduce the baseline. Then reproduce the lesson example: Run a fixed input twice and compare saved outputs with the documented baseline.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=g8um2AEf5ZA
+- [ ] **Test a failure boundary:** A working happy path does not establish robustness to malformed data or dependency failures.
+  - Example: Inject one malformed input and one controlled failure, then record the resulting state.
+  - Videos:
+    - [The future of software engineering](https://www.youtube.com/watch?v=g8um2AEf5ZA) · DeepLearning.AI · Andrew Ng · Engineering talk
+      - Explains: AI coding agents and the engineering skills needed to direct and verify them.
+      - Useful because: Use the talk as context, then apply the supplied specification and verification labs.
+      - Watch for: Focus on test a failure boundary. Then reproduce the lesson example: Inject one malformed input and one controlled failure, then record the resulting state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=g8um2AEf5ZA
+- [ ] **Explain the decisions:** Describe why each technique was chosen and what evidence would make you choose differently.
+  - Example: Write a short decision note comparing the chosen approach with one simpler alternative.
+  - Videos:
+    - [The future of software engineering](https://www.youtube.com/watch?v=g8um2AEf5ZA) · DeepLearning.AI · Andrew Ng · Engineering talk
+      - Explains: AI coding agents and the engineering skills needed to direct and verify them.
+      - Useful because: Use the talk as context, then apply the supplied specification and verification labs.
+      - Watch for: Focus on explain the decisions. Then reproduce the lesson example: Write a short decision note comparing the chosen approach with one simpler alternative.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=g8um2AEf5ZA
+- [ ] **Hand off the evidence:** Another learner must be able to reproduce the result from your instructions and supplied inputs.
+  - Example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+  - Videos:
+    - [The future of software engineering](https://www.youtube.com/watch?v=g8um2AEf5ZA) · DeepLearning.AI · Andrew Ng · Engineering talk
+      - Explains: AI coding agents and the engineering skills needed to direct and verify them.
+      - Useful because: Use the talk as context, then apply the supplied specification and verification labs.
+      - Watch for: Focus on hand off the evidence. Then reproduce the lesson example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=g8um2AEf5ZA
+
+#### YouTube: focused explanations and full courses
+
+- [The future of software engineering](https://www.youtube.com/watch?v=g8um2AEf5ZA) · DeepLearning.AI · Andrew Ng · Engineering talk
+  - Explains: AI coding agents and the engineering skills needed to direct and verify them.
+  - Useful because: Use the talk as context, then apply the supplied specification and verification labs.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=g8um2AEf5ZA
+- [RAG and MCP fundamentals — hands-on course](https://www.youtube.com/watch?v=I7_WXKhyGms) · freeCodeCamp · Full course · approximately 2h
+  - Explains: Retrieval, MCP coordination and caching integration.
+  - Useful because: Connect knowledge retrieval with tool access while keeping permission checks in software.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-rag-and-mcp-fundamentals/
+
+#### Free written resources
+
+1. [MCP: security best practices](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices) — Free; no registration required. No paid materials required.
+2. [GitHub: responsible use of coding assistants](https://docs.github.com/en/copilot/responsible-use/copilot-code-completion) — Free; no registration required. No paid materials required.
+
+#### Coding-agent verification checkpoint
+
+Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.
+
+**Deliverables**
+
+- Runnable project and reproducible input fixtures
+- README, results and decision notes
+- Failure evidence and clean-start instructions
+
+**Completion checks**
+
+- [ ] Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.
+- [ ] Explain the code and results without relying on an AI-generated summary.
+- [ ] A teammate can reproduce the demo without paid credentials.
+
+#### Ten project recommendations
+
+### Coding autonomy boundary lab
+
+A team needs clear approval boundaries for agent actions.
+
+**Data:** Create 20 proposed shell/file actions in a temporary sandbox. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An AGENTS.md policy and a dry-run decision table.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Coding-agent verification checkpoint:** Extend the project with Coding-agent verification checkpoint in Coding autonomy boundary lab. Adapt this focused lab to the project data: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An AGENTS.md policy and a dry-run decision table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Coding-agent verification checkpoint: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Classify destructive actions consistently without executing them.
+- [ ] Coding-agent verification checkpoint: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Repository context packager
+
+A maintainer needs to provide relevant context without secrets.
+
+**Data:** Use a small local demo repository with public and excluded files. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An allowlisted context bundle and file provenance list.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Coding-agent verification checkpoint:** Extend the project with Coding-agent verification checkpoint in Repository context packager. Adapt this focused lab to the project data: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An allowlisted context bundle and file provenance list. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Coding-agent verification checkpoint: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Exclude fake secrets and generated folders; include required caller contracts.
+- [ ] Coding-agent verification checkpoint: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Agent debugging learning journal
+
+A learner needs to understand why repeated AI fixes fail.
+
+**Data:** Use three small bugs with known root causes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A hypothesis log, minimal reproductions and verified fixes.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Coding-agent verification checkpoint:** Extend the project with Coding-agent verification checkpoint in Agent debugging learning journal. Adapt this focused lab to the project data: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A hypothesis log, minimal reproductions and verified fixes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Coding-agent verification checkpoint: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject changes that only hide errors and explain the actual cause of each bug.
+- [ ] Coding-agent verification checkpoint: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Generated patch review clinic
+
+A learner needs to detect plausible but broken generated code.
+
+**Data:** Author five tiny patches with security and logic defects. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A review report with reproducing tests and corrected patches.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Coding-agent verification checkpoint:** Extend the project with Coding-agent verification checkpoint in Generated patch review clinic. Adapt this focused lab to the project data: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A review report with reproducing tests and corrected patches. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Coding-agent verification checkpoint: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Each finding has a failing test that passes after the correction.
+- [ ] Coding-agent verification checkpoint: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Requirement-to-test tracker
+
+A reviewer needs evidence that generated changes meet the request.
+
+**Data:** Write ten requirements for a local data importer. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A traceability matrix linking requirements, code and tests.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Coding-agent verification checkpoint:** Extend the project with Coding-agent verification checkpoint in Requirement-to-test tracker. Adapt this focused lab to the project data: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A traceability matrix linking requirements, code and tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Coding-agent verification checkpoint: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Every requirement has an observable check and unrelated changes are identified.
+- [ ] Coding-agent verification checkpoint: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Small-patch planning workbench
+
+A maintainer needs manageable changes instead of one huge generated diff.
+
+**Data:** Use a three-feature demo application backlog. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A dependency-ordered task plan with independently testable patches.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Coding-agent verification checkpoint:** Extend the project with Coding-agent verification checkpoint in Small-patch planning workbench. Adapt this focused lab to the project data: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A dependency-ordered task plan with independently testable patches. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Coding-agent verification checkpoint: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Each patch has a clear rollback and does not leave broken callers.
+- [ ] Coding-agent verification checkpoint: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Executable feature handoff
+
+A learner needs an AI coding task with observable completion criteria.
+
+**Data:** Use a fictional notes-search feature and six user scenarios. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A task specification, fixtures and acceptance checklist.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Coding-agent verification checkpoint:** Extend the project with Coding-agent verification checkpoint in Executable feature handoff. Adapt this focused lab to the project data: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A task specification, fixtures and acceptance checklist. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Coding-agent verification checkpoint: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Another developer can identify completion without reading the original conversation.
+- [ ] Coding-agent verification checkpoint: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Test-first coding exercise
+
+A learner needs to guide an assistant through a small bug fix.
+
+**Data:** Use a parser with one reproducible Unicode bug. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A failing regression test, bounded task prompt and reviewed fix.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Coding-agent verification checkpoint:** Extend the project with Coding-agent verification checkpoint in Test-first coding exercise. Adapt this focused lab to the project data: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A failing regression test, bounded task prompt and reviewed fix. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Coding-agent verification checkpoint: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] The fix handles the failing case without weakening existing tests.
+- [ ] Coding-agent verification checkpoint: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Coding tool contract simulator
+
+An agent builder needs precise read/search/edit tool semantics.
+
+**Data:** Use temporary text files and deterministic tool-call fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A bounded tool adapter with explicit errors.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Coding-agent verification checkpoint:** Extend the project with Coding-agent verification checkpoint in Coding tool contract simulator. Adapt this focused lab to the project data: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A bounded tool adapter with explicit errors. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Coding-agent verification checkpoint: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject traversal and out-of-scope writes and preserve files on failed edits.
+- [ ] Coding-agent verification checkpoint: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### End-to-end verification handoff
+
+A learner needs to prove a generated feature works beyond compilation.
+
+**Data:** Use a local form/API/storage demo with one seeded integration bug. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A verification plan and evidence report across the complete flow.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Coding-agent verification checkpoint:** Extend the project with Coding-agent verification checkpoint in End-to-end verification handoff. Adapt this focused lab to the project data: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A verification plan and evidence report across the complete flow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Coding-agent verification checkpoint: Coding-agent verification checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show input, persisted state and resulting UI behavior for success and failure.
+- [ ] Coding-agent verification checkpoint: Write a bounded implementation specification and AGENTS.md, review a generated change and demonstrate unit, integration, type and security checks. Explain a discovered defect and provide reproducible evidence of the correction.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

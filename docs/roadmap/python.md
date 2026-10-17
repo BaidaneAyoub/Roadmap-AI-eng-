@@ -2,13 +2,13 @@
 
 Write understandable, testable programs before adding models.
 
-## Main route · Step 1 of 8
+## Main route · Step 1 of 13
 
 **Goal:** Write reliable Python programs before connecting AI tools.
 
 **Stage checkpoint:** Build a JSON-based study tracker with functions, validation, logging and tests.
 
-Write and test a small Python program.
+Write reliable Python with validation, explicit state and reproducible tests.
 
 Follow the modules and lessons below at your pace. Finish each exercise, save your evidence and self-assessment, then continue. Completed and Already known count as completed; Skipped is reported separately. You can move ahead at any time.
 
@@ -22,7 +22,7 @@ Follow the modules and lessons below at your pace. Finish each exercise, save yo
 
 Choose data representations that make model inputs and outputs predictable.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Foundation · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** None; start here. Navigation is unrestricted.
 
@@ -113,292 +113,292 @@ Create a dataset record normalizer that converts numeric strings, removes duplic
 
 #### Ten project recommendations
 
-### Learning gap coach
+### Expense reconciliation CLI
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A club treasurer needs consistent totals from differently formatted receipts.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Create three CSV files with 60 fictional expenses, currencies and duplicates. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Types and collections:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Types and collections, explicitly apply Types, Collections, Mutability.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Types and collections: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Types and collections: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Types and collections:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Types and collections, explicitly apply Types, Collections, Mutability.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Types and collections: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Types and collections: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Types and collections:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Types and collections, explicitly apply Types, Collections, Mutability.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Types and collections: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Types and collections: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A typed normalization package and discrepancy report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Types and collections:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Types and collections, explicitly apply Types, Collections, Mutability.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
+- **Types and collections:** Implement Types and collections in Expense reconciliation CLI. Adapt this focused lab to the project data: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.  Required concepts: Types, Collections, Mutability.
+  - Deliverable: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Types and collections: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A typed normalization package and discrepancy report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Types and collections: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Types and collections: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
+- [ ] Detect all seeded duplicates and reject mixed-currency totals.
+- [ ] Types and collections: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Streaming sensor summaries
 
-Find unusual stock movements and explain which records need investigation.
+A hobbyist needs rolling summaries of a long sensor stream.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Generate 100000 timestamp/value pairs lazily with fixed seed 42. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Types and collections:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Types and collections, explicitly apply Types, Collections, Mutability.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Types and collections: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Types and collections: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Types and collections:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Types and collections, explicitly apply Types, Collections, Mutability.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Types and collections: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Types and collections: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Types and collections:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Types and collections, explicitly apply Types, Collections, Mutability.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Types and collections: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Types and collections: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A generator pipeline producing rolling means and invalid-reading counts.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Types and collections:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Types and collections, explicitly apply Types, Collections, Mutability.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
+- **Types and collections:** Implement Types and collections in Streaming sensor summaries. Adapt this focused lab to the project data: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.  Required concepts: Types, Collections, Mutability.
+  - Deliverable: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Types and collections: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A generator pipeline producing rolling means and invalid-reading counts. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Types and collections: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Types and collections: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
+- [ ] Match a small reference calculation while memory stays bounded by the window.
+- [ ] Types and collections: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Concurrent service sampler
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+An operator needs latency samples without overwhelming local services.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Run three local stub endpoints with delays, errors and timeouts. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** An async sampler with bounded concurrency and a latency summary.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Types and collections:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Types and collections, explicitly apply Types, Collections, Mutability.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
+- **Types and collections:** Extend the project with Types and collections in Concurrent service sampler. Adapt this focused lab to the project data: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.  Required concepts: Types, Collections, Mutability.
+  - Deliverable: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Types and collections: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An async sampler with bounded concurrency and a latency summary. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Types and collections: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Types and collections: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
+- [ ] Keep concurrency at four or less and finish when one endpoint never responds.
+- [ ] Types and collections: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Configuration doctor
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A developer needs understandable errors before running a data job.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Create ten JSON configurations with missing and mistyped settings. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A validated configuration loader with redacted diagnostic messages.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Types and collections:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Types and collections, explicitly apply Types, Collections, Mutability.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
+- **Types and collections:** Extend the project with Types and collections in Configuration doctor. Adapt this focused lab to the project data: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.  Required concepts: Types, Collections, Mutability.
+  - Deliverable: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Types and collections: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A validated configuration loader with redacted diagnostic messages. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Types and collections: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Types and collections: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.
+- [ ] Reject each invalid fixture and never print a seeded secret value.
+- [ ] Types and collections: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Safe export writer
+
+A data analyst needs exports that never replace a good file with a partial one.
+
+**Data:** Create ten small records and inject a write failure halfway through export. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A context-managed atomic JSON export utility.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Types and collections:** Extend the project with Types and collections in Safe export writer. Adapt this focused lab to the project data: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.  Required concepts: Types, Collections, Mutability.
+  - Deliverable: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A context-managed atomic JSON export utility. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Types and collections: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] The previous export survives a simulated failure and temporary handles close.
+- [ ] Types and collections: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Duplicate file index
+
+An archivist needs to inspect duplicate notes before cleaning a folder.
+
+**Data:** Create 40 temporary text files including equal contents under different names. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A hash-based index and read-only duplicate report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Types and collections:** Extend the project with Types and collections in Duplicate file index. Adapt this focused lab to the project data: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.  Required concepts: Types, Collections, Mutability.
+  - Deliverable: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A hash-based index and read-only duplicate report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Types and collections: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect content duplicates without treating equal filenames as equal content.
+- [ ] Types and collections: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Log file investigator
+
+A developer needs to locate failed requests across rotated logs.
+
+**Data:** Generate 120 JSONL events including invalid lines and repeated request IDs. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A streaming CLI that groups failures by request without loading every file.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Types and collections:** Extend the project with Types and collections in Log file investigator. Adapt this focused lab to the project data: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.  Required concepts: Types, Collections, Mutability.
+  - Deliverable: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A streaming CLI that groups failures by request without loading every file. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Types and collections: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject corrupt lines with line numbers; produce identical totals with a one-line buffer.
+- [ ] Types and collections: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Pluggable text cleaner
+
+An editor needs reusable transformations for inconsistent draft documents.
+
+**Data:** Write 20 Markdown drafts with whitespace, Unicode and repeated headings. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A package with composable transformations and a CLI entry point.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Types and collections:** Extend the project with Types and collections in Pluggable text cleaner. Adapt this focused lab to the project data: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.  Required concepts: Types, Collections, Mutability.
+  - Deliverable: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A package with composable transformations and a CLI entry point. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Types and collections: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show idempotence and preserve non-ASCII text through every plugin.
+- [ ] Types and collections: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Adaptive terminal quiz
+
+A learner needs practice on concepts they repeatedly miss.
+
+**Data:** Write 25 questions and a local JSON history with two fictional learners. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A CLI quiz with deterministic scoring and weak-topic selection.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Types and collections:** Extend the project with Types and collections in Adaptive terminal quiz. Adapt this focused lab to the project data: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.  Required concepts: Types, Collections, Mutability.
+  - Deliverable: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A CLI quiz with deterministic scoring and weak-topic selection. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Types and collections: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Resume an interrupted quiz and keep the two histories separate.
+- [ ] Types and collections: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Parser regression kit
+
+A maintainer needs confidence when extending a command parser.
+
+**Data:** Author 30 valid and invalid command strings, including quoted arguments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A parser package with parametrized tests and readable failures.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Types and collections:** Extend the project with Types and collections in Parser regression kit. Adapt this focused lab to the project data: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.  Required concepts: Types, Collections, Mutability.
+  - Deliverable: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A parser package with parametrized tests and readable failures. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Types and collections: Types and collections: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Cover empty input, escaped quotes and unknown flags without crashing.
+- [ ] Types and collections: Create a dataset record normalizer that converts numeric strings, removes duplicate IDs and preserves input order. Assert empty input and invalid numeric values are handled.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -412,7 +412,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Turn a notebook experiment into reusable, explicit behavior.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Foundation · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Types and collections](python.md#python-values) Navigation is unrestricted.
 
@@ -508,292 +508,292 @@ Implement text normalization and dataset filtering as pure functions; assert det
 
 #### Ten project recommendations
 
-### Learning gap coach
+### Adaptive terminal quiz
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A learner needs practice on concepts they repeatedly miss.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Write 25 questions and a local JSON history with two fictional learners. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Control flow and functions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Control flow and functions, explicitly apply Branches and loops, Functions, Comprehensions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Control flow and functions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Control flow and functions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Control flow and functions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Control flow and functions, explicitly apply Branches and loops, Functions, Comprehensions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Control flow and functions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Control flow and functions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Control flow and functions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Control flow and functions, explicitly apply Branches and loops, Functions, Comprehensions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Control flow and functions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Control flow and functions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A CLI quiz with deterministic scoring and weak-topic selection.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Control flow and functions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Control flow and functions, explicitly apply Branches and loops, Functions, Comprehensions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
+- **Control flow and functions:** Implement Control flow and functions in Adaptive terminal quiz. Adapt this focused lab to the project data: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.  Required concepts: Branches and loops, Functions, Comprehensions.
+  - Deliverable: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Control flow and functions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A CLI quiz with deterministic scoring and weak-topic selection. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Control flow and functions: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Control flow and functions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
+- [ ] Resume an interrupted quiz and keep the two histories separate.
+- [ ] Control flow and functions: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Parser regression kit
 
-Find unusual stock movements and explain which records need investigation.
+A maintainer needs confidence when extending a command parser.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Author 30 valid and invalid command strings, including quoted arguments. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Control flow and functions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Control flow and functions, explicitly apply Branches and loops, Functions, Comprehensions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Control flow and functions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Control flow and functions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Control flow and functions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Control flow and functions, explicitly apply Branches and loops, Functions, Comprehensions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Control flow and functions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Control flow and functions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Control flow and functions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Control flow and functions, explicitly apply Branches and loops, Functions, Comprehensions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Control flow and functions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Control flow and functions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A parser package with parametrized tests and readable failures.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Control flow and functions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Control flow and functions, explicitly apply Branches and loops, Functions, Comprehensions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
+- **Control flow and functions:** Implement Control flow and functions in Parser regression kit. Adapt this focused lab to the project data: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.  Required concepts: Branches and loops, Functions, Comprehensions.
+  - Deliverable: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Control flow and functions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A parser package with parametrized tests and readable failures. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Control flow and functions: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Control flow and functions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
+- [ ] Cover empty input, escaped quotes and unknown flags without crashing.
+- [ ] Control flow and functions: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Concurrent service sampler
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+An operator needs latency samples without overwhelming local services.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Run three local stub endpoints with delays, errors and timeouts. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** An async sampler with bounded concurrency and a latency summary.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Control flow and functions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Control flow and functions, explicitly apply Branches and loops, Functions, Comprehensions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
+- **Control flow and functions:** Extend the project with Control flow and functions in Concurrent service sampler. Adapt this focused lab to the project data: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.  Required concepts: Branches and loops, Functions, Comprehensions.
+  - Deliverable: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Control flow and functions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An async sampler with bounded concurrency and a latency summary. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Control flow and functions: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Control flow and functions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
+- [ ] Keep concurrency at four or less and finish when one endpoint never responds.
+- [ ] Control flow and functions: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Configuration doctor
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A developer needs understandable errors before running a data job.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Create ten JSON configurations with missing and mistyped settings. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A validated configuration loader with redacted diagnostic messages.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Control flow and functions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Control flow and functions, explicitly apply Branches and loops, Functions, Comprehensions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
+- **Control flow and functions:** Extend the project with Control flow and functions in Configuration doctor. Adapt this focused lab to the project data: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.  Required concepts: Branches and loops, Functions, Comprehensions.
+  - Deliverable: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Control flow and functions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A validated configuration loader with redacted diagnostic messages. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Control flow and functions: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Control flow and functions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.
+- [ ] Reject each invalid fixture and never print a seeded secret value.
+- [ ] Control flow and functions: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Safe export writer
+
+A data analyst needs exports that never replace a good file with a partial one.
+
+**Data:** Create ten small records and inject a write failure halfway through export. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A context-managed atomic JSON export utility.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Control flow and functions:** Extend the project with Control flow and functions in Safe export writer. Adapt this focused lab to the project data: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.  Required concepts: Branches and loops, Functions, Comprehensions.
+  - Deliverable: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A context-managed atomic JSON export utility. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Control flow and functions: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] The previous export survives a simulated failure and temporary handles close.
+- [ ] Control flow and functions: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Expense reconciliation CLI
+
+A club treasurer needs consistent totals from differently formatted receipts.
+
+**Data:** Create three CSV files with 60 fictional expenses, currencies and duplicates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A typed normalization package and discrepancy report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Control flow and functions:** Extend the project with Control flow and functions in Expense reconciliation CLI. Adapt this focused lab to the project data: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.  Required concepts: Branches and loops, Functions, Comprehensions.
+  - Deliverable: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A typed normalization package and discrepancy report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Control flow and functions: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect all seeded duplicates and reject mixed-currency totals.
+- [ ] Control flow and functions: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Duplicate file index
+
+An archivist needs to inspect duplicate notes before cleaning a folder.
+
+**Data:** Create 40 temporary text files including equal contents under different names. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A hash-based index and read-only duplicate report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Control flow and functions:** Extend the project with Control flow and functions in Duplicate file index. Adapt this focused lab to the project data: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.  Required concepts: Branches and loops, Functions, Comprehensions.
+  - Deliverable: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A hash-based index and read-only duplicate report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Control flow and functions: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect content duplicates without treating equal filenames as equal content.
+- [ ] Control flow and functions: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Streaming sensor summaries
+
+A hobbyist needs rolling summaries of a long sensor stream.
+
+**Data:** Generate 100000 timestamp/value pairs lazily with fixed seed 42. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A generator pipeline producing rolling means and invalid-reading counts.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Control flow and functions:** Extend the project with Control flow and functions in Streaming sensor summaries. Adapt this focused lab to the project data: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.  Required concepts: Branches and loops, Functions, Comprehensions.
+  - Deliverable: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A generator pipeline producing rolling means and invalid-reading counts. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Control flow and functions: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match a small reference calculation while memory stays bounded by the window.
+- [ ] Control flow and functions: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Log file investigator
+
+A developer needs to locate failed requests across rotated logs.
+
+**Data:** Generate 120 JSONL events including invalid lines and repeated request IDs. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A streaming CLI that groups failures by request without loading every file.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Control flow and functions:** Extend the project with Control flow and functions in Log file investigator. Adapt this focused lab to the project data: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.  Required concepts: Branches and loops, Functions, Comprehensions.
+  - Deliverable: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A streaming CLI that groups failures by request without loading every file. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Control flow and functions: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject corrupt lines with line numbers; produce identical totals with a one-line buffer.
+- [ ] Control flow and functions: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Pluggable text cleaner
+
+An editor needs reusable transformations for inconsistent draft documents.
+
+**Data:** Write 20 Markdown drafts with whitespace, Unicode and repeated headings. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A package with composable transformations and a CLI entry point.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Control flow and functions:** Extend the project with Control flow and functions in Pluggable text cleaner. Adapt this focused lab to the project data: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.  Required concepts: Branches and loops, Functions, Comprehensions.
+  - Deliverable: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A package with composable transformations and a CLI entry point. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Control flow and functions: Control flow and functions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show idempotence and preserve non-ASCII text through every plugin.
+- [ ] Control flow and functions: Implement text normalization and dataset filtering as pure functions; assert deterministic output, blank text and punctuation handling.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -807,7 +807,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Safely load datasets and report malformed inputs instead of silently losing data.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Foundation · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Control flow and functions](python.md#python-control) Navigation is unrestricted.
 
@@ -898,292 +898,292 @@ Build a JSONL reader that reports invalid line numbers and writes valid records 
 
 #### Ten project recommendations
 
-### Learning gap coach
+### Safe export writer
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A data analyst needs exports that never replace a good file with a partial one.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Create ten small records and inject a write failure halfway through export. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Files, JSON and exceptions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Files, JSON and exceptions, explicitly apply Context managers, JSON, Exceptions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Files, JSON and exceptions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Files, JSON and exceptions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Files, JSON and exceptions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Files, JSON and exceptions, explicitly apply Context managers, JSON, Exceptions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Files, JSON and exceptions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Files, JSON and exceptions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Files, JSON and exceptions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Files, JSON and exceptions, explicitly apply Context managers, JSON, Exceptions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Files, JSON and exceptions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Files, JSON and exceptions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A context-managed atomic JSON export utility.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Files, JSON and exceptions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Files, JSON and exceptions, explicitly apply Context managers, JSON, Exceptions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
+- **Files, JSON and exceptions:** Implement Files, JSON and exceptions in Safe export writer. Adapt this focused lab to the project data: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.  Required concepts: Context managers, JSON, Exceptions.
+  - Deliverable: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Files, JSON and exceptions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A context-managed atomic JSON export utility. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Files, JSON and exceptions: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Files, JSON and exceptions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
+- [ ] The previous export survives a simulated failure and temporary handles close.
+- [ ] Files, JSON and exceptions: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Expense reconciliation CLI
 
-Find unusual stock movements and explain which records need investigation.
+A club treasurer needs consistent totals from differently formatted receipts.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Create three CSV files with 60 fictional expenses, currencies and duplicates. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Files, JSON and exceptions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Files, JSON and exceptions, explicitly apply Context managers, JSON, Exceptions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Files, JSON and exceptions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Files, JSON and exceptions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Files, JSON and exceptions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Files, JSON and exceptions, explicitly apply Context managers, JSON, Exceptions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Files, JSON and exceptions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Files, JSON and exceptions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Files, JSON and exceptions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Files, JSON and exceptions, explicitly apply Context managers, JSON, Exceptions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Files, JSON and exceptions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Files, JSON and exceptions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A typed normalization package and discrepancy report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Files, JSON and exceptions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Files, JSON and exceptions, explicitly apply Context managers, JSON, Exceptions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
+- **Files, JSON and exceptions:** Implement Files, JSON and exceptions in Expense reconciliation CLI. Adapt this focused lab to the project data: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.  Required concepts: Context managers, JSON, Exceptions.
+  - Deliverable: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Files, JSON and exceptions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A typed normalization package and discrepancy report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Files, JSON and exceptions: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Files, JSON and exceptions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
+- [ ] Detect all seeded duplicates and reject mixed-currency totals.
+- [ ] Files, JSON and exceptions: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Duplicate file index
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+An archivist needs to inspect duplicate notes before cleaning a folder.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Create 40 temporary text files including equal contents under different names. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A hash-based index and read-only duplicate report.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Files, JSON and exceptions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Files, JSON and exceptions, explicitly apply Context managers, JSON, Exceptions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
+- **Files, JSON and exceptions:** Implement Files, JSON and exceptions in Duplicate file index. Adapt this focused lab to the project data: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.  Required concepts: Context managers, JSON, Exceptions.
+  - Deliverable: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Files, JSON and exceptions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A hash-based index and read-only duplicate report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Files, JSON and exceptions: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Files, JSON and exceptions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
+- [ ] Detect content duplicates without treating equal filenames as equal content.
+- [ ] Files, JSON and exceptions: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Log file investigator
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A developer needs to locate failed requests across rotated logs.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Generate 120 JSONL events including invalid lines and repeated request IDs. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A streaming CLI that groups failures by request without loading every file.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Files, JSON and exceptions:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Files, JSON and exceptions, explicitly apply Context managers, JSON, Exceptions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
+- **Files, JSON and exceptions:** Implement Files, JSON and exceptions in Log file investigator. Adapt this focused lab to the project data: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.  Required concepts: Context managers, JSON, Exceptions.
+  - Deliverable: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Files, JSON and exceptions: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A streaming CLI that groups failures by request without loading every file. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Files, JSON and exceptions: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Files, JSON and exceptions: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.
+- [ ] Reject corrupt lines with line numbers; produce identical totals with a one-line buffer.
+- [ ] Files, JSON and exceptions: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Concurrent service sampler
+
+An operator needs latency samples without overwhelming local services.
+
+**Data:** Run three local stub endpoints with delays, errors and timeouts. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An async sampler with bounded concurrency and a latency summary.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Files, JSON and exceptions:** Extend the project with Files, JSON and exceptions in Concurrent service sampler. Adapt this focused lab to the project data: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.  Required concepts: Context managers, JSON, Exceptions.
+  - Deliverable: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An async sampler with bounded concurrency and a latency summary. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Files, JSON and exceptions: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Keep concurrency at four or less and finish when one endpoint never responds.
+- [ ] Files, JSON and exceptions: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Configuration doctor
+
+A developer needs understandable errors before running a data job.
+
+**Data:** Create ten JSON configurations with missing and mistyped settings. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A validated configuration loader with redacted diagnostic messages.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Files, JSON and exceptions:** Extend the project with Files, JSON and exceptions in Configuration doctor. Adapt this focused lab to the project data: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.  Required concepts: Context managers, JSON, Exceptions.
+  - Deliverable: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A validated configuration loader with redacted diagnostic messages. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Files, JSON and exceptions: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject each invalid fixture and never print a seeded secret value.
+- [ ] Files, JSON and exceptions: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Streaming sensor summaries
+
+A hobbyist needs rolling summaries of a long sensor stream.
+
+**Data:** Generate 100000 timestamp/value pairs lazily with fixed seed 42. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A generator pipeline producing rolling means and invalid-reading counts.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Files, JSON and exceptions:** Extend the project with Files, JSON and exceptions in Streaming sensor summaries. Adapt this focused lab to the project data: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.  Required concepts: Context managers, JSON, Exceptions.
+  - Deliverable: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A generator pipeline producing rolling means and invalid-reading counts. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Files, JSON and exceptions: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match a small reference calculation while memory stays bounded by the window.
+- [ ] Files, JSON and exceptions: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Pluggable text cleaner
+
+An editor needs reusable transformations for inconsistent draft documents.
+
+**Data:** Write 20 Markdown drafts with whitespace, Unicode and repeated headings. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A package with composable transformations and a CLI entry point.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Files, JSON and exceptions:** Extend the project with Files, JSON and exceptions in Pluggable text cleaner. Adapt this focused lab to the project data: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.  Required concepts: Context managers, JSON, Exceptions.
+  - Deliverable: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A package with composable transformations and a CLI entry point. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Files, JSON and exceptions: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show idempotence and preserve non-ASCII text through every plugin.
+- [ ] Files, JSON and exceptions: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Adaptive terminal quiz
+
+A learner needs practice on concepts they repeatedly miss.
+
+**Data:** Write 25 questions and a local JSON history with two fictional learners. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A CLI quiz with deterministic scoring and weak-topic selection.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Files, JSON and exceptions:** Extend the project with Files, JSON and exceptions in Adaptive terminal quiz. Adapt this focused lab to the project data: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.  Required concepts: Context managers, JSON, Exceptions.
+  - Deliverable: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A CLI quiz with deterministic scoring and weak-topic selection. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Files, JSON and exceptions: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Resume an interrupted quiz and keep the two histories separate.
+- [ ] Files, JSON and exceptions: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Parser regression kit
+
+A maintainer needs confidence when extending a command parser.
+
+**Data:** Author 30 valid and invalid command strings, including quoted arguments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A parser package with parametrized tests and readable failures.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Files, JSON and exceptions:** Extend the project with Files, JSON and exceptions in Parser regression kit. Adapt this focused lab to the project data: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.  Required concepts: Context managers, JSON, Exceptions.
+  - Deliverable: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A parser package with parametrized tests and readable failures. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Files, JSON and exceptions: Files, JSON and exceptions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Cover empty input, escaped quotes and unknown flags without crashing.
+- [ ] Files, JSON and exceptions: Build a JSONL reader that reports invalid line numbers and writes valid records to a separate output file without overwriting the original.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1197,7 +1197,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Keep projects reproducible and imports independent of one computer.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Foundation · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Files, JSON and exceptions](python.md#python-files) Navigation is unrestricted.
 
@@ -1283,292 +1283,292 @@ Split the JSONL reader into a package and CLI; document a clean environment inst
 
 #### Ten project recommendations
 
-### Learning gap coach
+### Configuration doctor
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A developer needs understandable errors before running a data job.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Create ten JSON configurations with missing and mistyped settings. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Modules, environments and dependencies:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Modules, environments and dependencies, explicitly apply Modules and packages, Virtual environments, Dependency versions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Modules, environments and dependencies: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Modules, environments and dependencies: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Modules, environments and dependencies:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Modules, environments and dependencies, explicitly apply Modules and packages, Virtual environments, Dependency versions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Modules, environments and dependencies: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Modules, environments and dependencies: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Modules, environments and dependencies:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Modules, environments and dependencies, explicitly apply Modules and packages, Virtual environments, Dependency versions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Modules, environments and dependencies: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Modules, environments and dependencies: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A validated configuration loader with redacted diagnostic messages.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Modules, environments and dependencies:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Modules, environments and dependencies, explicitly apply Modules and packages, Virtual environments, Dependency versions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
+- **Modules, environments and dependencies:** Implement Modules, environments and dependencies in Configuration doctor. Adapt this focused lab to the project data: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.  Required concepts: Modules and packages, Virtual environments, Dependency versions.
+  - Deliverable: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Modules, environments and dependencies: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A validated configuration loader with redacted diagnostic messages. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Modules, environments and dependencies: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Modules, environments and dependencies: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
+- [ ] Reject each invalid fixture and never print a seeded secret value.
+- [ ] Modules, environments and dependencies: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Pluggable text cleaner
 
-Find unusual stock movements and explain which records need investigation.
+An editor needs reusable transformations for inconsistent draft documents.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Write 20 Markdown drafts with whitespace, Unicode and repeated headings. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Modules, environments and dependencies:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Modules, environments and dependencies, explicitly apply Modules and packages, Virtual environments, Dependency versions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Modules, environments and dependencies: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Modules, environments and dependencies: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Modules, environments and dependencies:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Modules, environments and dependencies, explicitly apply Modules and packages, Virtual environments, Dependency versions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Modules, environments and dependencies: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Modules, environments and dependencies: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Modules, environments and dependencies:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Modules, environments and dependencies, explicitly apply Modules and packages, Virtual environments, Dependency versions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Modules, environments and dependencies: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Modules, environments and dependencies: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A package with composable transformations and a CLI entry point.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Modules, environments and dependencies:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Modules, environments and dependencies, explicitly apply Modules and packages, Virtual environments, Dependency versions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
+- **Modules, environments and dependencies:** Implement Modules, environments and dependencies in Pluggable text cleaner. Adapt this focused lab to the project data: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.  Required concepts: Modules and packages, Virtual environments, Dependency versions.
+  - Deliverable: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Modules, environments and dependencies: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A package with composable transformations and a CLI entry point. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Modules, environments and dependencies: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Modules, environments and dependencies: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
+- [ ] Show idempotence and preserve non-ASCII text through every plugin.
+- [ ] Modules, environments and dependencies: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Parser regression kit
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A maintainer needs confidence when extending a command parser.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Author 30 valid and invalid command strings, including quoted arguments. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A parser package with parametrized tests and readable failures.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Modules, environments and dependencies:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Modules, environments and dependencies, explicitly apply Modules and packages, Virtual environments, Dependency versions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
+- **Modules, environments and dependencies:** Implement Modules, environments and dependencies in Parser regression kit. Adapt this focused lab to the project data: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.  Required concepts: Modules and packages, Virtual environments, Dependency versions.
+  - Deliverable: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Modules, environments and dependencies: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A parser package with parametrized tests and readable failures. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Modules, environments and dependencies: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Modules, environments and dependencies: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
+- [ ] Cover empty input, escaped quotes and unknown flags without crashing.
+- [ ] Modules, environments and dependencies: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Refactor a tangled importer
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A maintainer needs isolated parsing, validation and storage responsibilities.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Create a small deliberately coupled CSV importer with six failing fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A refactored package with explicit boundaries and unchanged output contracts.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Modules, environments and dependencies:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Modules, environments and dependencies, explicitly apply Modules and packages, Virtual environments, Dependency versions.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
+- **Modules, environments and dependencies:** Implement Modules, environments and dependencies in Refactor a tangled importer. Adapt this focused lab to the project data: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.  Required concepts: Modules and packages, Virtual environments, Dependency versions.
+  - Deliverable: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Modules, environments and dependencies: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A refactored package with explicit boundaries and unchanged output contracts. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Modules, environments and dependencies: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Modules, environments and dependencies: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.
+- [ ] Run identical golden inputs before and after refactoring.
+- [ ] Modules, environments and dependencies: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Concurrent service sampler
+
+An operator needs latency samples without overwhelming local services.
+
+**Data:** Run three local stub endpoints with delays, errors and timeouts. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An async sampler with bounded concurrency and a latency summary.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Modules, environments and dependencies:** Extend the project with Modules, environments and dependencies in Concurrent service sampler. Adapt this focused lab to the project data: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.  Required concepts: Modules and packages, Virtual environments, Dependency versions.
+  - Deliverable: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An async sampler with bounded concurrency and a latency summary. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Modules, environments and dependencies: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Keep concurrency at four or less and finish when one endpoint never responds.
+- [ ] Modules, environments and dependencies: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Safe export writer
+
+A data analyst needs exports that never replace a good file with a partial one.
+
+**Data:** Create ten small records and inject a write failure halfway through export. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A context-managed atomic JSON export utility.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Modules, environments and dependencies:** Extend the project with Modules, environments and dependencies in Safe export writer. Adapt this focused lab to the project data: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.  Required concepts: Modules and packages, Virtual environments, Dependency versions.
+  - Deliverable: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A context-managed atomic JSON export utility. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Modules, environments and dependencies: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] The previous export survives a simulated failure and temporary handles close.
+- [ ] Modules, environments and dependencies: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Expense reconciliation CLI
+
+A club treasurer needs consistent totals from differently formatted receipts.
+
+**Data:** Create three CSV files with 60 fictional expenses, currencies and duplicates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A typed normalization package and discrepancy report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Modules, environments and dependencies:** Extend the project with Modules, environments and dependencies in Expense reconciliation CLI. Adapt this focused lab to the project data: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.  Required concepts: Modules and packages, Virtual environments, Dependency versions.
+  - Deliverable: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A typed normalization package and discrepancy report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Modules, environments and dependencies: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect all seeded duplicates and reject mixed-currency totals.
+- [ ] Modules, environments and dependencies: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Duplicate file index
+
+An archivist needs to inspect duplicate notes before cleaning a folder.
+
+**Data:** Create 40 temporary text files including equal contents under different names. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A hash-based index and read-only duplicate report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Modules, environments and dependencies:** Extend the project with Modules, environments and dependencies in Duplicate file index. Adapt this focused lab to the project data: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.  Required concepts: Modules and packages, Virtual environments, Dependency versions.
+  - Deliverable: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A hash-based index and read-only duplicate report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Modules, environments and dependencies: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect content duplicates without treating equal filenames as equal content.
+- [ ] Modules, environments and dependencies: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Streaming sensor summaries
+
+A hobbyist needs rolling summaries of a long sensor stream.
+
+**Data:** Generate 100000 timestamp/value pairs lazily with fixed seed 42. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A generator pipeline producing rolling means and invalid-reading counts.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Modules, environments and dependencies:** Extend the project with Modules, environments and dependencies in Streaming sensor summaries. Adapt this focused lab to the project data: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.  Required concepts: Modules and packages, Virtual environments, Dependency versions.
+  - Deliverable: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A generator pipeline producing rolling means and invalid-reading counts. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Modules, environments and dependencies: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match a small reference calculation while memory stays bounded by the window.
+- [ ] Modules, environments and dependencies: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Log file investigator
+
+A developer needs to locate failed requests across rotated logs.
+
+**Data:** Generate 120 JSONL events including invalid lines and repeated request IDs. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A streaming CLI that groups failures by request without loading every file.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Modules, environments and dependencies:** Extend the project with Modules, environments and dependencies in Log file investigator. Adapt this focused lab to the project data: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.  Required concepts: Modules and packages, Virtual environments, Dependency versions.
+  - Deliverable: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A streaming CLI that groups failures by request without loading every file. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Modules, environments and dependencies: Modules, environments and dependencies: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject corrupt lines with line numbers; produce identical totals with a one-line buffer.
+- [ ] Modules, environments and dependencies: Split the JSONL reader into a package and CLI; document a clean environment installation and verify it from another working directory.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1582,7 +1582,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Express model records and interfaces without unnecessary inheritance.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Foundation · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Modules, environments and dependencies](python.md#python-modules) Navigation is unrestricted.
 
@@ -1678,292 +1678,292 @@ Represent dataset records and predictions with typed dataclasses; reject malform
 
 #### Ten project recommendations
 
-### Learning gap coach
+### Configuration doctor
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A developer needs understandable errors before running a data job.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Create ten JSON configurations with missing and mistyped settings. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **OOP, dataclasses and typing:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For OOP, dataclasses and typing, explicitly apply Classes, Dataclasses, Type hints.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] OOP, dataclasses and typing: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] OOP, dataclasses and typing: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **OOP, dataclasses and typing:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For OOP, dataclasses and typing, explicitly apply Classes, Dataclasses, Type hints.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] OOP, dataclasses and typing: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] OOP, dataclasses and typing: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **OOP, dataclasses and typing:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For OOP, dataclasses and typing, explicitly apply Classes, Dataclasses, Type hints.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] OOP, dataclasses and typing: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] OOP, dataclasses and typing: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A validated configuration loader with redacted diagnostic messages.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **OOP, dataclasses and typing:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For OOP, dataclasses and typing, explicitly apply Classes, Dataclasses, Type hints.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
+- **OOP, dataclasses and typing:** Implement OOP, dataclasses and typing in Configuration doctor. Adapt this focused lab to the project data: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.  Required concepts: Classes, Dataclasses, Type hints.
+  - Deliverable: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] OOP, dataclasses and typing: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A validated configuration loader with redacted diagnostic messages. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · OOP, dataclasses and typing: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] OOP, dataclasses and typing: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
+- [ ] Reject each invalid fixture and never print a seeded secret value.
+- [ ] OOP, dataclasses and typing: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Pluggable text cleaner
 
-Find unusual stock movements and explain which records need investigation.
+An editor needs reusable transformations for inconsistent draft documents.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Write 20 Markdown drafts with whitespace, Unicode and repeated headings. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **OOP, dataclasses and typing:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For OOP, dataclasses and typing, explicitly apply Classes, Dataclasses, Type hints.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] OOP, dataclasses and typing: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] OOP, dataclasses and typing: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **OOP, dataclasses and typing:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For OOP, dataclasses and typing, explicitly apply Classes, Dataclasses, Type hints.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] OOP, dataclasses and typing: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] OOP, dataclasses and typing: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **OOP, dataclasses and typing:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For OOP, dataclasses and typing, explicitly apply Classes, Dataclasses, Type hints.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] OOP, dataclasses and typing: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] OOP, dataclasses and typing: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A package with composable transformations and a CLI entry point.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **OOP, dataclasses and typing:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For OOP, dataclasses and typing, explicitly apply Classes, Dataclasses, Type hints.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
+- **OOP, dataclasses and typing:** Implement OOP, dataclasses and typing in Pluggable text cleaner. Adapt this focused lab to the project data: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.  Required concepts: Classes, Dataclasses, Type hints.
+  - Deliverable: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] OOP, dataclasses and typing: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A package with composable transformations and a CLI entry point. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · OOP, dataclasses and typing: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] OOP, dataclasses and typing: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
+- [ ] Show idempotence and preserve non-ASCII text through every plugin.
+- [ ] OOP, dataclasses and typing: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Adaptive terminal quiz
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A learner needs practice on concepts they repeatedly miss.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Write 25 questions and a local JSON history with two fictional learners. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A CLI quiz with deterministic scoring and weak-topic selection.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **OOP, dataclasses and typing:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For OOP, dataclasses and typing, explicitly apply Classes, Dataclasses, Type hints.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
+- **OOP, dataclasses and typing:** Implement OOP, dataclasses and typing in Adaptive terminal quiz. Adapt this focused lab to the project data: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.  Required concepts: Classes, Dataclasses, Type hints.
+  - Deliverable: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] OOP, dataclasses and typing: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A CLI quiz with deterministic scoring and weak-topic selection. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · OOP, dataclasses and typing: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] OOP, dataclasses and typing: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
+- [ ] Resume an interrupted quiz and keep the two histories separate.
+- [ ] OOP, dataclasses and typing: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Concurrent service sampler
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+An operator needs latency samples without overwhelming local services.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Run three local stub endpoints with delays, errors and timeouts. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** An async sampler with bounded concurrency and a latency summary.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **OOP, dataclasses and typing:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For OOP, dataclasses and typing, explicitly apply Classes, Dataclasses, Type hints.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
+- **OOP, dataclasses and typing:** Extend the project with OOP, dataclasses and typing in Concurrent service sampler. Adapt this focused lab to the project data: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.  Required concepts: Classes, Dataclasses, Type hints.
+  - Deliverable: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] OOP, dataclasses and typing: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An async sampler with bounded concurrency and a latency summary. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · OOP, dataclasses and typing: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] OOP, dataclasses and typing: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.
+- [ ] Keep concurrency at four or less and finish when one endpoint never responds.
+- [ ] OOP, dataclasses and typing: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Safe export writer
+
+A data analyst needs exports that never replace a good file with a partial one.
+
+**Data:** Create ten small records and inject a write failure halfway through export. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A context-managed atomic JSON export utility.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **OOP, dataclasses and typing:** Extend the project with OOP, dataclasses and typing in Safe export writer. Adapt this focused lab to the project data: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.  Required concepts: Classes, Dataclasses, Type hints.
+  - Deliverable: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A context-managed atomic JSON export utility. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · OOP, dataclasses and typing: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] The previous export survives a simulated failure and temporary handles close.
+- [ ] OOP, dataclasses and typing: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Expense reconciliation CLI
+
+A club treasurer needs consistent totals from differently formatted receipts.
+
+**Data:** Create three CSV files with 60 fictional expenses, currencies and duplicates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A typed normalization package and discrepancy report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **OOP, dataclasses and typing:** Extend the project with OOP, dataclasses and typing in Expense reconciliation CLI. Adapt this focused lab to the project data: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.  Required concepts: Classes, Dataclasses, Type hints.
+  - Deliverable: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A typed normalization package and discrepancy report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · OOP, dataclasses and typing: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect all seeded duplicates and reject mixed-currency totals.
+- [ ] OOP, dataclasses and typing: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Duplicate file index
+
+An archivist needs to inspect duplicate notes before cleaning a folder.
+
+**Data:** Create 40 temporary text files including equal contents under different names. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A hash-based index and read-only duplicate report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **OOP, dataclasses and typing:** Extend the project with OOP, dataclasses and typing in Duplicate file index. Adapt this focused lab to the project data: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.  Required concepts: Classes, Dataclasses, Type hints.
+  - Deliverable: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A hash-based index and read-only duplicate report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · OOP, dataclasses and typing: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect content duplicates without treating equal filenames as equal content.
+- [ ] OOP, dataclasses and typing: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Streaming sensor summaries
+
+A hobbyist needs rolling summaries of a long sensor stream.
+
+**Data:** Generate 100000 timestamp/value pairs lazily with fixed seed 42. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A generator pipeline producing rolling means and invalid-reading counts.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **OOP, dataclasses and typing:** Extend the project with OOP, dataclasses and typing in Streaming sensor summaries. Adapt this focused lab to the project data: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.  Required concepts: Classes, Dataclasses, Type hints.
+  - Deliverable: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A generator pipeline producing rolling means and invalid-reading counts. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · OOP, dataclasses and typing: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match a small reference calculation while memory stays bounded by the window.
+- [ ] OOP, dataclasses and typing: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Log file investigator
+
+A developer needs to locate failed requests across rotated logs.
+
+**Data:** Generate 120 JSONL events including invalid lines and repeated request IDs. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A streaming CLI that groups failures by request without loading every file.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **OOP, dataclasses and typing:** Extend the project with OOP, dataclasses and typing in Log file investigator. Adapt this focused lab to the project data: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.  Required concepts: Classes, Dataclasses, Type hints.
+  - Deliverable: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A streaming CLI that groups failures by request without loading every file. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · OOP, dataclasses and typing: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject corrupt lines with line numbers; produce identical totals with a one-line buffer.
+- [ ] OOP, dataclasses and typing: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Parser regression kit
+
+A maintainer needs confidence when extending a command parser.
+
+**Data:** Author 30 valid and invalid command strings, including quoted arguments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A parser package with parametrized tests and readable failures.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **OOP, dataclasses and typing:** Extend the project with OOP, dataclasses and typing in Parser regression kit. Adapt this focused lab to the project data: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.  Required concepts: Classes, Dataclasses, Type hints.
+  - Deliverable: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A parser package with parametrized tests and readable failures. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · OOP, dataclasses and typing: OOP, dataclasses and typing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Cover empty input, escaped quotes and unknown flags without crashing.
+- [ ] OOP, dataclasses and typing: Represent dataset records and predictions with typed dataclasses; reject malformed external records explicitly and test serialization.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1977,7 +1977,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Process data incrementally instead of loading everything into memory.
 
-**Priority:** Useful next · **Study:** 2h · **Practice:** 3h
+**Priority:** Foundation · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [OOP, dataclasses and typing](python.md#python-objects) Navigation is unrestricted.
 
@@ -2068,292 +2068,292 @@ Stream a generated 10,000-record file into batches; assert the final partial bat
 
 #### Ten project recommendations
 
-### Learning gap coach
+### Duplicate file index
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+An archivist needs to inspect duplicate notes before cleaning a folder.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Create 40 temporary text files including equal contents under different names. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Iterators and generators:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Iterators and generators, explicitly apply Iteration protocol, Generators, Batching.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Iterators and generators: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Iterators and generators: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Iterators and generators:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Iterators and generators, explicitly apply Iteration protocol, Generators, Batching.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Iterators and generators: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Iterators and generators: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Iterators and generators:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Iterators and generators, explicitly apply Iteration protocol, Generators, Batching.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Iterators and generators: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Iterators and generators: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A hash-based index and read-only duplicate report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Iterators and generators:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Iterators and generators, explicitly apply Iteration protocol, Generators, Batching.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
+- **Iterators and generators:** Implement Iterators and generators in Duplicate file index. Adapt this focused lab to the project data: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.  Required concepts: Iteration protocol, Generators, Batching.
+  - Deliverable: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Iterators and generators: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A hash-based index and read-only duplicate report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Iterators and generators: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Iterators and generators: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
+- [ ] Detect content duplicates without treating equal filenames as equal content.
+- [ ] Iterators and generators: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Streaming sensor summaries
 
-Find unusual stock movements and explain which records need investigation.
+A hobbyist needs rolling summaries of a long sensor stream.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Generate 100000 timestamp/value pairs lazily with fixed seed 42. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Iterators and generators:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Iterators and generators, explicitly apply Iteration protocol, Generators, Batching.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Iterators and generators: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Iterators and generators: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Iterators and generators:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Iterators and generators, explicitly apply Iteration protocol, Generators, Batching.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Iterators and generators: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Iterators and generators: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Iterators and generators:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Iterators and generators, explicitly apply Iteration protocol, Generators, Batching.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Iterators and generators: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Iterators and generators: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A generator pipeline producing rolling means and invalid-reading counts.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Iterators and generators:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Iterators and generators, explicitly apply Iteration protocol, Generators, Batching.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
+- **Iterators and generators:** Implement Iterators and generators in Streaming sensor summaries. Adapt this focused lab to the project data: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.  Required concepts: Iteration protocol, Generators, Batching.
+  - Deliverable: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Iterators and generators: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A generator pipeline producing rolling means and invalid-reading counts. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Iterators and generators: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Iterators and generators: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
+- [ ] Match a small reference calculation while memory stays bounded by the window.
+- [ ] Iterators and generators: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Log file investigator
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A developer needs to locate failed requests across rotated logs.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Generate 120 JSONL events including invalid lines and repeated request IDs. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A streaming CLI that groups failures by request without loading every file.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Iterators and generators:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Iterators and generators, explicitly apply Iteration protocol, Generators, Batching.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
+- **Iterators and generators:** Implement Iterators and generators in Log file investigator. Adapt this focused lab to the project data: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.  Required concepts: Iteration protocol, Generators, Batching.
+  - Deliverable: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Iterators and generators: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A streaming CLI that groups failures by request without loading every file. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Iterators and generators: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Iterators and generators: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
+- [ ] Reject corrupt lines with line numbers; produce identical totals with a one-line buffer.
+- [ ] Iterators and generators: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Concurrent service sampler
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+An operator needs latency samples without overwhelming local services.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Run three local stub endpoints with delays, errors and timeouts. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** An async sampler with bounded concurrency and a latency summary.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Iterators and generators:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Iterators and generators, explicitly apply Iteration protocol, Generators, Batching.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
+- **Iterators and generators:** Extend the project with Iterators and generators in Concurrent service sampler. Adapt this focused lab to the project data: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.  Required concepts: Iteration protocol, Generators, Batching.
+  - Deliverable: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Iterators and generators: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An async sampler with bounded concurrency and a latency summary. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Iterators and generators: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Iterators and generators: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.
+- [ ] Keep concurrency at four or less and finish when one endpoint never responds.
+- [ ] Iterators and generators: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Configuration doctor
+
+A developer needs understandable errors before running a data job.
+
+**Data:** Create ten JSON configurations with missing and mistyped settings. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A validated configuration loader with redacted diagnostic messages.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Iterators and generators:** Extend the project with Iterators and generators in Configuration doctor. Adapt this focused lab to the project data: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.  Required concepts: Iteration protocol, Generators, Batching.
+  - Deliverable: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A validated configuration loader with redacted diagnostic messages. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Iterators and generators: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject each invalid fixture and never print a seeded secret value.
+- [ ] Iterators and generators: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Safe export writer
+
+A data analyst needs exports that never replace a good file with a partial one.
+
+**Data:** Create ten small records and inject a write failure halfway through export. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A context-managed atomic JSON export utility.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Iterators and generators:** Extend the project with Iterators and generators in Safe export writer. Adapt this focused lab to the project data: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.  Required concepts: Iteration protocol, Generators, Batching.
+  - Deliverable: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A context-managed atomic JSON export utility. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Iterators and generators: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] The previous export survives a simulated failure and temporary handles close.
+- [ ] Iterators and generators: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Expense reconciliation CLI
+
+A club treasurer needs consistent totals from differently formatted receipts.
+
+**Data:** Create three CSV files with 60 fictional expenses, currencies and duplicates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A typed normalization package and discrepancy report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Iterators and generators:** Extend the project with Iterators and generators in Expense reconciliation CLI. Adapt this focused lab to the project data: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.  Required concepts: Iteration protocol, Generators, Batching.
+  - Deliverable: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A typed normalization package and discrepancy report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Iterators and generators: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect all seeded duplicates and reject mixed-currency totals.
+- [ ] Iterators and generators: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Pluggable text cleaner
+
+An editor needs reusable transformations for inconsistent draft documents.
+
+**Data:** Write 20 Markdown drafts with whitespace, Unicode and repeated headings. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A package with composable transformations and a CLI entry point.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Iterators and generators:** Extend the project with Iterators and generators in Pluggable text cleaner. Adapt this focused lab to the project data: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.  Required concepts: Iteration protocol, Generators, Batching.
+  - Deliverable: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A package with composable transformations and a CLI entry point. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Iterators and generators: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show idempotence and preserve non-ASCII text through every plugin.
+- [ ] Iterators and generators: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Adaptive terminal quiz
+
+A learner needs practice on concepts they repeatedly miss.
+
+**Data:** Write 25 questions and a local JSON history with two fictional learners. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A CLI quiz with deterministic scoring and weak-topic selection.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Iterators and generators:** Extend the project with Iterators and generators in Adaptive terminal quiz. Adapt this focused lab to the project data: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.  Required concepts: Iteration protocol, Generators, Batching.
+  - Deliverable: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A CLI quiz with deterministic scoring and weak-topic selection. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Iterators and generators: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Resume an interrupted quiz and keep the two histories separate.
+- [ ] Iterators and generators: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Parser regression kit
+
+A maintainer needs confidence when extending a command parser.
+
+**Data:** Author 30 valid and invalid command strings, including quoted arguments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A parser package with parametrized tests and readable failures.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Iterators and generators:** Extend the project with Iterators and generators in Parser regression kit. Adapt this focused lab to the project data: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.  Required concepts: Iteration protocol, Generators, Batching.
+  - Deliverable: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A parser package with parametrized tests and readable failures. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Iterators and generators: Iterators and generators: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Cover empty input, escaped quotes and unknown flags without crashing.
+- [ ] Iterators and generators: Stream a generated 10,000-record file into batches; assert the final partial batch and empty input, and show memory does not require retaining all records.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2367,7 +2367,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Make concurrent I/O observable and preserve confidence when changing behavior.
 
-**Priority:** Core · **Study:** 3h · **Practice:** 4h
+**Priority:** Foundation · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [Iterators and generators](python.md#python-iteration) Navigation is unrestricted.
 
@@ -2463,292 +2463,292 @@ Run three simulated I/O tasks concurrently with timeouts, log their outcomes and
 
 #### Ten project recommendations
 
-### Learning gap coach
+### Concurrent service sampler
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+An operator needs latency samples without overwhelming local services.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Run three local stub endpoints with delays, errors and timeouts. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Async, logging, debugging and pytest:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async, logging, debugging and pytest, explicitly apply Async I/O, Logging and debugging, pytest.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Async, logging, debugging and pytest: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Async, logging, debugging and pytest: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Async, logging, debugging and pytest:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async, logging, debugging and pytest, explicitly apply Async I/O, Logging and debugging, pytest.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Async, logging, debugging and pytest: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Async, logging, debugging and pytest: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Async, logging, debugging and pytest:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async, logging, debugging and pytest, explicitly apply Async I/O, Logging and debugging, pytest.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Async, logging, debugging and pytest: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Async, logging, debugging and pytest: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** An async sampler with bounded concurrency and a latency summary.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Async, logging, debugging and pytest:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async, logging, debugging and pytest, explicitly apply Async I/O, Logging and debugging, pytest.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
+- **Async, logging, debugging and pytest:** Implement Async, logging, debugging and pytest in Concurrent service sampler. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Async, logging, debugging and pytest: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An async sampler with bounded concurrency and a latency summary. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Async, logging, debugging and pytest: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
+- [ ] Keep concurrency at four or less and finish when one endpoint never responds.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Configuration doctor
 
-Find unusual stock movements and explain which records need investigation.
+A developer needs understandable errors before running a data job.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Create ten JSON configurations with missing and mistyped settings. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Async, logging, debugging and pytest:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async, logging, debugging and pytest, explicitly apply Async I/O, Logging and debugging, pytest.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Async, logging, debugging and pytest: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Async, logging, debugging and pytest: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Async, logging, debugging and pytest:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async, logging, debugging and pytest, explicitly apply Async I/O, Logging and debugging, pytest.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Async, logging, debugging and pytest: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Async, logging, debugging and pytest: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Async, logging, debugging and pytest:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async, logging, debugging and pytest, explicitly apply Async I/O, Logging and debugging, pytest.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Async, logging, debugging and pytest: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Async, logging, debugging and pytest: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A validated configuration loader with redacted diagnostic messages.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Async, logging, debugging and pytest:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async, logging, debugging and pytest, explicitly apply Async I/O, Logging and debugging, pytest.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
+- **Async, logging, debugging and pytest:** Extend the project with Async, logging, debugging and pytest in Configuration doctor. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Async, logging, debugging and pytest: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A validated configuration loader with redacted diagnostic messages. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Async, logging, debugging and pytest: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
+- [ ] Reject each invalid fixture and never print a seeded secret value.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Safe export writer
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A data analyst needs exports that never replace a good file with a partial one.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Create ten small records and inject a write failure halfway through export. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A context-managed atomic JSON export utility.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Async, logging, debugging and pytest:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async, logging, debugging and pytest, explicitly apply Async I/O, Logging and debugging, pytest.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
+- **Async, logging, debugging and pytest:** Extend the project with Async, logging, debugging and pytest in Safe export writer. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Async, logging, debugging and pytest: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A context-managed atomic JSON export utility. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Async, logging, debugging and pytest: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
+- [ ] The previous export survives a simulated failure and temporary handles close.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Expense reconciliation CLI
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A club treasurer needs consistent totals from differently formatted receipts.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Create three CSV files with 60 fictional expenses, currencies and duplicates. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A typed normalization package and discrepancy report.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Async, logging, debugging and pytest:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async, logging, debugging and pytest, explicitly apply Async I/O, Logging and debugging, pytest.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
+- **Async, logging, debugging and pytest:** Extend the project with Async, logging, debugging and pytest in Expense reconciliation CLI. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Async, logging, debugging and pytest: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A typed normalization package and discrepancy report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Async, logging, debugging and pytest: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
+- [ ] Detect all seeded duplicates and reject mixed-currency totals.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Duplicate file index
+
+An archivist needs to inspect duplicate notes before cleaning a folder.
+
+**Data:** Create 40 temporary text files including equal contents under different names. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A hash-based index and read-only duplicate report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Async, logging, debugging and pytest:** Extend the project with Async, logging, debugging and pytest in Duplicate file index. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A hash-based index and read-only duplicate report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect content duplicates without treating equal filenames as equal content.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Streaming sensor summaries
+
+A hobbyist needs rolling summaries of a long sensor stream.
+
+**Data:** Generate 100000 timestamp/value pairs lazily with fixed seed 42. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A generator pipeline producing rolling means and invalid-reading counts.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Async, logging, debugging and pytest:** Extend the project with Async, logging, debugging and pytest in Streaming sensor summaries. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A generator pipeline producing rolling means and invalid-reading counts. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match a small reference calculation while memory stays bounded by the window.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Log file investigator
+
+A developer needs to locate failed requests across rotated logs.
+
+**Data:** Generate 120 JSONL events including invalid lines and repeated request IDs. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A streaming CLI that groups failures by request without loading every file.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Async, logging, debugging and pytest:** Extend the project with Async, logging, debugging and pytest in Log file investigator. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A streaming CLI that groups failures by request without loading every file. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject corrupt lines with line numbers; produce identical totals with a one-line buffer.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Pluggable text cleaner
+
+An editor needs reusable transformations for inconsistent draft documents.
+
+**Data:** Write 20 Markdown drafts with whitespace, Unicode and repeated headings. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A package with composable transformations and a CLI entry point.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Async, logging, debugging and pytest:** Extend the project with Async, logging, debugging and pytest in Pluggable text cleaner. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A package with composable transformations and a CLI entry point. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show idempotence and preserve non-ASCII text through every plugin.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Adaptive terminal quiz
+
+A learner needs practice on concepts they repeatedly miss.
+
+**Data:** Write 25 questions and a local JSON history with two fictional learners. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A CLI quiz with deterministic scoring and weak-topic selection.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Async, logging, debugging and pytest:** Extend the project with Async, logging, debugging and pytest in Adaptive terminal quiz. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A CLI quiz with deterministic scoring and weak-topic selection. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Resume an interrupted quiz and keep the two histories separate.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Parser regression kit
+
+A maintainer needs confidence when extending a command parser.
+
+**Data:** Author 30 valid and invalid command strings, including quoted arguments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A parser package with parametrized tests and readable failures.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Async, logging, debugging and pytest:** Extend the project with Async, logging, debugging and pytest in Parser regression kit. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A parser package with parametrized tests and readable failures. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Cover empty input, escaped quotes and unknown flags without crashing.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2762,7 +2762,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Handle files and resources predictably when an AI pipeline stops halfway through an operation.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Foundation · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [Files, JSON and exceptions](python.md#python-files) Navigation is unrestricted.
 
@@ -2878,292 +2878,292 @@ Build a CPU-only JSON configuration loader/writer using pathlib and context mana
 
 #### Ten project recommendations
 
-### Learning gap coach
+### Safe export writer
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A data analyst needs exports that never replace a good file with a partial one.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Create ten small records and inject a write failure halfway through export. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Context managers, paths and safe file operations:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Context managers, paths and safe file operations, explicitly apply Context manager lifecycle, Path resolution, Encoding and newline contracts.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Context managers, paths and safe file operations: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Context managers, paths and safe file operations: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Context managers, paths and safe file operations:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Context managers, paths and safe file operations, explicitly apply Context manager lifecycle, Path resolution, Encoding and newline contracts.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Context managers, paths and safe file operations: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Context managers, paths and safe file operations: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Context managers, paths and safe file operations:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Context managers, paths and safe file operations, explicitly apply Context manager lifecycle, Path resolution, Encoding and newline contracts.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Context managers, paths and safe file operations: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Context managers, paths and safe file operations: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A context-managed atomic JSON export utility.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Context managers, paths and safe file operations:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Context managers, paths and safe file operations, explicitly apply Context manager lifecycle, Path resolution, Encoding and newline contracts.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
+- **Context managers, paths and safe file operations:** Implement Context managers, paths and safe file operations in Safe export writer. Adapt this focused lab to the project data: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.  Required concepts: Context manager lifecycle, Path resolution, Encoding and newline contracts, Atomic replacement, Bounded input handling.
+  - Deliverable: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Context managers, paths and safe file operations: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A context-managed atomic JSON export utility. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Context managers, paths and safe file operations: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Context managers, paths and safe file operations: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
+- [ ] The previous export survives a simulated failure and temporary handles close.
+- [ ] Context managers, paths and safe file operations: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Concurrent service sampler
 
-Find unusual stock movements and explain which records need investigation.
+An operator needs latency samples without overwhelming local services.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Run three local stub endpoints with delays, errors and timeouts. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Context managers, paths and safe file operations:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Context managers, paths and safe file operations, explicitly apply Context manager lifecycle, Path resolution, Encoding and newline contracts.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Context managers, paths and safe file operations: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Context managers, paths and safe file operations: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Context managers, paths and safe file operations:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Context managers, paths and safe file operations, explicitly apply Context manager lifecycle, Path resolution, Encoding and newline contracts.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Context managers, paths and safe file operations: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Context managers, paths and safe file operations: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Context managers, paths and safe file operations:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Context managers, paths and safe file operations, explicitly apply Context manager lifecycle, Path resolution, Encoding and newline contracts.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Context managers, paths and safe file operations: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Context managers, paths and safe file operations: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** An async sampler with bounded concurrency and a latency summary.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Context managers, paths and safe file operations:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Context managers, paths and safe file operations, explicitly apply Context manager lifecycle, Path resolution, Encoding and newline contracts.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
+- **Context managers, paths and safe file operations:** Extend the project with Context managers, paths and safe file operations in Concurrent service sampler. Adapt this focused lab to the project data: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.  Required concepts: Context manager lifecycle, Path resolution, Encoding and newline contracts, Atomic replacement, Bounded input handling.
+  - Deliverable: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Context managers, paths and safe file operations: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An async sampler with bounded concurrency and a latency summary. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Context managers, paths and safe file operations: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Context managers, paths and safe file operations: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
+- [ ] Keep concurrency at four or less and finish when one endpoint never responds.
+- [ ] Context managers, paths and safe file operations: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Configuration doctor
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A developer needs understandable errors before running a data job.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Create ten JSON configurations with missing and mistyped settings. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A validated configuration loader with redacted diagnostic messages.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Context managers, paths and safe file operations:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Context managers, paths and safe file operations, explicitly apply Context manager lifecycle, Path resolution, Encoding and newline contracts.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
+- **Context managers, paths and safe file operations:** Extend the project with Context managers, paths and safe file operations in Configuration doctor. Adapt this focused lab to the project data: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.  Required concepts: Context manager lifecycle, Path resolution, Encoding and newline contracts, Atomic replacement, Bounded input handling.
+  - Deliverable: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Context managers, paths and safe file operations: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A validated configuration loader with redacted diagnostic messages. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Context managers, paths and safe file operations: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Context managers, paths and safe file operations: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
+- [ ] Reject each invalid fixture and never print a seeded secret value.
+- [ ] Context managers, paths and safe file operations: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Expense reconciliation CLI
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A club treasurer needs consistent totals from differently formatted receipts.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Create three CSV files with 60 fictional expenses, currencies and duplicates. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A typed normalization package and discrepancy report.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Context managers, paths and safe file operations:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Context managers, paths and safe file operations, explicitly apply Context manager lifecycle, Path resolution, Encoding and newline contracts.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
+- **Context managers, paths and safe file operations:** Extend the project with Context managers, paths and safe file operations in Expense reconciliation CLI. Adapt this focused lab to the project data: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.  Required concepts: Context manager lifecycle, Path resolution, Encoding and newline contracts, Atomic replacement, Bounded input handling.
+  - Deliverable: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Context managers, paths and safe file operations: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A typed normalization package and discrepancy report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Context managers, paths and safe file operations: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Context managers, paths and safe file operations: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.
+- [ ] Detect all seeded duplicates and reject mixed-currency totals.
+- [ ] Context managers, paths and safe file operations: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Duplicate file index
+
+An archivist needs to inspect duplicate notes before cleaning a folder.
+
+**Data:** Create 40 temporary text files including equal contents under different names. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A hash-based index and read-only duplicate report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Context managers, paths and safe file operations:** Extend the project with Context managers, paths and safe file operations in Duplicate file index. Adapt this focused lab to the project data: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.  Required concepts: Context manager lifecycle, Path resolution, Encoding and newline contracts, Atomic replacement, Bounded input handling.
+  - Deliverable: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A hash-based index and read-only duplicate report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Context managers, paths and safe file operations: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect content duplicates without treating equal filenames as equal content.
+- [ ] Context managers, paths and safe file operations: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Streaming sensor summaries
+
+A hobbyist needs rolling summaries of a long sensor stream.
+
+**Data:** Generate 100000 timestamp/value pairs lazily with fixed seed 42. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A generator pipeline producing rolling means and invalid-reading counts.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Context managers, paths and safe file operations:** Extend the project with Context managers, paths and safe file operations in Streaming sensor summaries. Adapt this focused lab to the project data: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.  Required concepts: Context manager lifecycle, Path resolution, Encoding and newline contracts, Atomic replacement, Bounded input handling.
+  - Deliverable: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A generator pipeline producing rolling means and invalid-reading counts. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Context managers, paths and safe file operations: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match a small reference calculation while memory stays bounded by the window.
+- [ ] Context managers, paths and safe file operations: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Log file investigator
+
+A developer needs to locate failed requests across rotated logs.
+
+**Data:** Generate 120 JSONL events including invalid lines and repeated request IDs. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A streaming CLI that groups failures by request without loading every file.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Context managers, paths and safe file operations:** Extend the project with Context managers, paths and safe file operations in Log file investigator. Adapt this focused lab to the project data: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.  Required concepts: Context manager lifecycle, Path resolution, Encoding and newline contracts, Atomic replacement, Bounded input handling.
+  - Deliverable: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A streaming CLI that groups failures by request without loading every file. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Context managers, paths and safe file operations: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject corrupt lines with line numbers; produce identical totals with a one-line buffer.
+- [ ] Context managers, paths and safe file operations: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Pluggable text cleaner
+
+An editor needs reusable transformations for inconsistent draft documents.
+
+**Data:** Write 20 Markdown drafts with whitespace, Unicode and repeated headings. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A package with composable transformations and a CLI entry point.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Context managers, paths and safe file operations:** Extend the project with Context managers, paths and safe file operations in Pluggable text cleaner. Adapt this focused lab to the project data: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.  Required concepts: Context manager lifecycle, Path resolution, Encoding and newline contracts, Atomic replacement, Bounded input handling.
+  - Deliverable: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A package with composable transformations and a CLI entry point. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Context managers, paths and safe file operations: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show idempotence and preserve non-ASCII text through every plugin.
+- [ ] Context managers, paths and safe file operations: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Adaptive terminal quiz
+
+A learner needs practice on concepts they repeatedly miss.
+
+**Data:** Write 25 questions and a local JSON history with two fictional learners. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A CLI quiz with deterministic scoring and weak-topic selection.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Context managers, paths and safe file operations:** Extend the project with Context managers, paths and safe file operations in Adaptive terminal quiz. Adapt this focused lab to the project data: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.  Required concepts: Context manager lifecycle, Path resolution, Encoding and newline contracts, Atomic replacement, Bounded input handling.
+  - Deliverable: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A CLI quiz with deterministic scoring and weak-topic selection. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Context managers, paths and safe file operations: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Resume an interrupted quiz and keep the two histories separate.
+- [ ] Context managers, paths and safe file operations: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Parser regression kit
+
+A maintainer needs confidence when extending a command parser.
+
+**Data:** Author 30 valid and invalid command strings, including quoted arguments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A parser package with parametrized tests and readable failures.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Context managers, paths and safe file operations:** Extend the project with Context managers, paths and safe file operations in Parser regression kit. Adapt this focused lab to the project data: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.  Required concepts: Context manager lifecycle, Path resolution, Encoding and newline contracts, Atomic replacement, Bounded input handling.
+  - Deliverable: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A parser package with parametrized tests and readable failures. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Context managers, paths and safe file operations: Context managers, paths and safe file operations: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Cover empty input, escaped quotes and unknown flags without crashing.
+- [ ] Context managers, paths and safe file operations: Build a CPU-only JSON configuration loader/writer using pathlib and context managers. Test Unicode, missing files, malformed JSON and failed writes; keep the last valid file intact when serialisation fails.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -3177,7 +3177,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Make concurrent network-style work predictable and testable without requiring a live paid API.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Foundation · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [Async, logging, debugging and pytest](python.md#python-async) Navigation is unrestricted.
 
@@ -3298,292 +3298,1134 @@ Write an asynchronous fake-inference runner with timeouts, cancellation and a th
 
 #### Ten project recommendations
 
-### Learning gap coach
+### Concurrent service sampler
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+An operator needs latency samples without overwhelming local services.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Run three local stub endpoints with delays, errors and timeouts. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Async cancellation, timeouts and test doubles:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async cancellation, timeouts and test doubles, explicitly apply Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Async cancellation, timeouts and test doubles: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Async cancellation, timeouts and test doubles: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Async cancellation, timeouts and test doubles:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async cancellation, timeouts and test doubles, explicitly apply Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Async cancellation, timeouts and test doubles: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Async cancellation, timeouts and test doubles: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Async cancellation, timeouts and test doubles:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async cancellation, timeouts and test doubles, explicitly apply Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Async cancellation, timeouts and test doubles: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Async cancellation, timeouts and test doubles: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** An async sampler with bounded concurrency and a latency summary.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Async cancellation, timeouts and test doubles:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async cancellation, timeouts and test doubles, explicitly apply Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
+- **Async cancellation, timeouts and test doubles:** Implement Async cancellation, timeouts and test doubles in Concurrent service sampler. Adapt this focused lab to the project data: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.  Required concepts: Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup, Bounded concurrency, Dependency fakes.
+  - Deliverable: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Async cancellation, timeouts and test doubles: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An async sampler with bounded concurrency and a latency summary. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async cancellation, timeouts and test doubles: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Async cancellation, timeouts and test doubles: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
+- [ ] Keep concurrency at four or less and finish when one endpoint never responds.
+- [ ] Async cancellation, timeouts and test doubles: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Configuration doctor
 
-Find unusual stock movements and explain which records need investigation.
+A developer needs understandable errors before running a data job.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Create ten JSON configurations with missing and mistyped settings. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Async cancellation, timeouts and test doubles:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async cancellation, timeouts and test doubles, explicitly apply Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Async cancellation, timeouts and test doubles: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Async cancellation, timeouts and test doubles: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Async cancellation, timeouts and test doubles:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async cancellation, timeouts and test doubles, explicitly apply Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Async cancellation, timeouts and test doubles: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Async cancellation, timeouts and test doubles: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Async cancellation, timeouts and test doubles:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async cancellation, timeouts and test doubles, explicitly apply Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Async cancellation, timeouts and test doubles: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Async cancellation, timeouts and test doubles: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A validated configuration loader with redacted diagnostic messages.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Async cancellation, timeouts and test doubles:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async cancellation, timeouts and test doubles, explicitly apply Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
+- **Async cancellation, timeouts and test doubles:** Extend the project with Async cancellation, timeouts and test doubles in Configuration doctor. Adapt this focused lab to the project data: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.  Required concepts: Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup, Bounded concurrency, Dependency fakes.
+  - Deliverable: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Async cancellation, timeouts and test doubles: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A validated configuration loader with redacted diagnostic messages. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async cancellation, timeouts and test doubles: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Async cancellation, timeouts and test doubles: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
+- [ ] Reject each invalid fixture and never print a seeded secret value.
+- [ ] Async cancellation, timeouts and test doubles: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Safe export writer
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A data analyst needs exports that never replace a good file with a partial one.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Create ten small records and inject a write failure halfway through export. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A context-managed atomic JSON export utility.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Async cancellation, timeouts and test doubles:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async cancellation, timeouts and test doubles, explicitly apply Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
+- **Async cancellation, timeouts and test doubles:** Extend the project with Async cancellation, timeouts and test doubles in Safe export writer. Adapt this focused lab to the project data: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.  Required concepts: Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup, Bounded concurrency, Dependency fakes.
+  - Deliverable: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Async cancellation, timeouts and test doubles: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A context-managed atomic JSON export utility. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async cancellation, timeouts and test doubles: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Async cancellation, timeouts and test doubles: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
+- [ ] The previous export survives a simulated failure and temporary handles close.
+- [ ] Async cancellation, timeouts and test doubles: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Expense reconciliation CLI
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A club treasurer needs consistent totals from differently formatted receipts.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Create three CSV files with 60 fictional expenses, currencies and duplicates. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A typed normalization package and discrepancy report.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Async cancellation, timeouts and test doubles:** Implement typed, reusable ingestion and transformation functions with explicit errors.  For Async cancellation, timeouts and test doubles, explicitly apply Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup.
-  - Deliverable: A Python package/CLI and passing unit checks
-  - Check: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
+- **Async cancellation, timeouts and test doubles:** Extend the project with Async cancellation, timeouts and test doubles in Expense reconciliation CLI. Adapt this focused lab to the project data: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.  Required concepts: Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup, Bounded concurrency, Dependency fakes.
+  - Deliverable: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Async cancellation, timeouts and test doubles: A Python package/CLI and passing unit checks
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A typed normalization package and discrepancy report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async cancellation, timeouts and test doubles: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Async cancellation, timeouts and test doubles: Run parametrized checks on empty, malformed and Unicode input. Adapt the lesson lab: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.
+- [ ] Detect all seeded duplicates and reject mixed-currency totals.
+- [ ] Async cancellation, timeouts and test doubles: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Duplicate file index
+
+An archivist needs to inspect duplicate notes before cleaning a folder.
+
+**Data:** Create 40 temporary text files including equal contents under different names. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A hash-based index and read-only duplicate report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Async cancellation, timeouts and test doubles:** Extend the project with Async cancellation, timeouts and test doubles in Duplicate file index. Adapt this focused lab to the project data: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.  Required concepts: Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup, Bounded concurrency, Dependency fakes.
+  - Deliverable: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A hash-based index and read-only duplicate report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async cancellation, timeouts and test doubles: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect content duplicates without treating equal filenames as equal content.
+- [ ] Async cancellation, timeouts and test doubles: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Streaming sensor summaries
+
+A hobbyist needs rolling summaries of a long sensor stream.
+
+**Data:** Generate 100000 timestamp/value pairs lazily with fixed seed 42. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A generator pipeline producing rolling means and invalid-reading counts.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Async cancellation, timeouts and test doubles:** Extend the project with Async cancellation, timeouts and test doubles in Streaming sensor summaries. Adapt this focused lab to the project data: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.  Required concepts: Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup, Bounded concurrency, Dependency fakes.
+  - Deliverable: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A generator pipeline producing rolling means and invalid-reading counts. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async cancellation, timeouts and test doubles: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match a small reference calculation while memory stays bounded by the window.
+- [ ] Async cancellation, timeouts and test doubles: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Log file investigator
+
+A developer needs to locate failed requests across rotated logs.
+
+**Data:** Generate 120 JSONL events including invalid lines and repeated request IDs. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A streaming CLI that groups failures by request without loading every file.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Async cancellation, timeouts and test doubles:** Extend the project with Async cancellation, timeouts and test doubles in Log file investigator. Adapt this focused lab to the project data: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.  Required concepts: Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup, Bounded concurrency, Dependency fakes.
+  - Deliverable: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A streaming CLI that groups failures by request without loading every file. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async cancellation, timeouts and test doubles: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject corrupt lines with line numbers; produce identical totals with a one-line buffer.
+- [ ] Async cancellation, timeouts and test doubles: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Pluggable text cleaner
+
+An editor needs reusable transformations for inconsistent draft documents.
+
+**Data:** Write 20 Markdown drafts with whitespace, Unicode and repeated headings. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A package with composable transformations and a CLI entry point.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Async cancellation, timeouts and test doubles:** Extend the project with Async cancellation, timeouts and test doubles in Pluggable text cleaner. Adapt this focused lab to the project data: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.  Required concepts: Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup, Bounded concurrency, Dependency fakes.
+  - Deliverable: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A package with composable transformations and a CLI entry point. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async cancellation, timeouts and test doubles: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show idempotence and preserve non-ASCII text through every plugin.
+- [ ] Async cancellation, timeouts and test doubles: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Adaptive terminal quiz
+
+A learner needs practice on concepts they repeatedly miss.
+
+**Data:** Write 25 questions and a local JSON history with two fictional learners. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A CLI quiz with deterministic scoring and weak-topic selection.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Async cancellation, timeouts and test doubles:** Extend the project with Async cancellation, timeouts and test doubles in Adaptive terminal quiz. Adapt this focused lab to the project data: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.  Required concepts: Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup, Bounded concurrency, Dependency fakes.
+  - Deliverable: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A CLI quiz with deterministic scoring and weak-topic selection. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async cancellation, timeouts and test doubles: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Resume an interrupted quiz and keep the two histories separate.
+- [ ] Async cancellation, timeouts and test doubles: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Parser regression kit
+
+A maintainer needs confidence when extending a command parser.
+
+**Data:** Author 30 valid and invalid command strings, including quoted arguments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A parser package with parametrized tests and readable failures.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Async cancellation, timeouts and test doubles:** Extend the project with Async cancellation, timeouts and test doubles in Parser regression kit. Adapt this focused lab to the project data: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.  Required concepts: Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup, Bounded concurrency, Dependency fakes.
+  - Deliverable: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A parser package with parametrized tests and readable failures. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Async cancellation, timeouts and test doubles: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Cover empty input, escaped quotes and unknown flags without crashing.
+- [ ] Async cancellation, timeouts and test doubles: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Mutability, copying, scope and function contracts
+
+<a id="python-mutation-scope"></a>
+
+### Mutability, copying, scope and function contracts
+
+Mutability, copying, scope and function contracts helps you make explainable engineering decisions and test failure cases. Build the experiment below before relying on the concept in an AI system.
+
+**Priority:** Foundation · **Study:** 4h · **Practice:** 5h
+
+**Prerequisites:** [Control flow and functions](python.md#python-control) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Object identity:** Two names may reference one mutable object; assignment does not copy its contents.
+  - Example: Assign b=a for a list, append through b and compare a with a copied list.
+  - Videos:
+    - [CS50P 0 — Functions and variables](https://www.youtube.com/watch?v=JP7ITIXGpHk) · Harvard CS50 · David Malan · University lecture
+      - Explains: Values, types, functions, parameters and return values.
+      - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+      - Watch for: Focus on object identity. Then reproduce the lesson example: Assign b=a for a list, append through b and compare a with a copied list.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/2022/weeks/0/
+    - [Harvard CS50P — full Python university course](https://www.youtube.com/watch?v=nLRL_NcnK-4) · Harvard CS50 / freeCodeCamp · Full course
+      - Explains: Python syntax, control flow, exceptions, libraries, tests, files and object-oriented programming.
+      - Useful because: A coherent beginner path; use the individual lectures below instead of watching everything before practicing.
+      - Watch for: Focus on object identity. Then reproduce the lesson example: Assign b=a for a list, append through b and compare a with a copied list.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/
+- [ ] **Shallow versus deep copy:** A shallow copy creates an outer container but preserves references to nested objects.
+  - Example: Copy a list of dictionaries and change a nested tag list.
+  - Videos:
+    - [CS50P 0 — Functions and variables](https://www.youtube.com/watch?v=JP7ITIXGpHk) · Harvard CS50 · David Malan · University lecture
+      - Explains: Values, types, functions, parameters and return values.
+      - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+      - Watch for: Focus on shallow versus deep copy. Then reproduce the lesson example: Copy a list of dictionaries and change a nested tag list.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/2022/weeks/0/
+    - [Harvard CS50P — full Python university course](https://www.youtube.com/watch?v=nLRL_NcnK-4) · Harvard CS50 / freeCodeCamp · Full course
+      - Explains: Python syntax, control flow, exceptions, libraries, tests, files and object-oriented programming.
+      - Useful because: A coherent beginner path; use the individual lectures below instead of watching everything before practicing.
+      - Watch for: Focus on shallow versus deep copy. Then reproduce the lesson example: Copy a list of dictionaries and change a nested tag list.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/
+- [ ] **Mutable defaults:** Default argument objects are created at function definition time and may survive multiple calls.
+  - Example: Compare a default list parameter with a None sentinel that constructs a fresh list.
+  - Videos:
+    - [CS50P 0 — Functions and variables](https://www.youtube.com/watch?v=JP7ITIXGpHk) · Harvard CS50 · David Malan · University lecture
+      - Explains: Values, types, functions, parameters and return values.
+      - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+      - Watch for: Focus on mutable defaults. Then reproduce the lesson example: Compare a default list parameter with a None sentinel that constructs a fresh list.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/2022/weeks/0/
+    - [Harvard CS50P — full Python university course](https://www.youtube.com/watch?v=nLRL_NcnK-4) · Harvard CS50 / freeCodeCamp · Full course
+      - Explains: Python syntax, control flow, exceptions, libraries, tests, files and object-oriented programming.
+      - Useful because: A coherent beginner path; use the individual lectures below instead of watching everything before practicing.
+      - Watch for: Focus on mutable defaults. Then reproduce the lesson example: Compare a default list parameter with a None sentinel that constructs a fresh list.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/
+- [ ] **Local scope and closures:** Name lookup follows lexical scope; rebinding differs from mutating an existing object.
+  - Example: Return two counter closures and inspect whether their captured state is independent.
+  - Videos:
+    - [CS50P 0 — Functions and variables](https://www.youtube.com/watch?v=JP7ITIXGpHk) · Harvard CS50 · David Malan · University lecture
+      - Explains: Values, types, functions, parameters and return values.
+      - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+      - Watch for: Focus on local scope and closures. Then reproduce the lesson example: Return two counter closures and inspect whether their captured state is independent.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/2022/weeks/0/
+    - [Harvard CS50P — full Python university course](https://www.youtube.com/watch?v=nLRL_NcnK-4) · Harvard CS50 / freeCodeCamp · Full course
+      - Explains: Python syntax, control flow, exceptions, libraries, tests, files and object-oriented programming.
+      - Useful because: A coherent beginner path; use the individual lectures below instead of watching everything before practicing.
+      - Watch for: Focus on local scope and closures. Then reproduce the lesson example: Return two counter closures and inspect whether their captured state is independent.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/
+- [ ] **Pure function contracts:** A pure transformation returns results without changing its inputs, simplifying testing and reuse.
+  - Example: Normalize a record while asserting the original dictionary is unchanged.
+  - Videos:
+    - [CS50P 0 — Functions and variables](https://www.youtube.com/watch?v=JP7ITIXGpHk) · Harvard CS50 · David Malan · University lecture
+      - Explains: Values, types, functions, parameters and return values.
+      - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+      - Watch for: Focus on pure function contracts. Then reproduce the lesson example: Normalize a record while asserting the original dictionary is unchanged.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/2022/weeks/0/
+    - [Harvard CS50P — full Python university course](https://www.youtube.com/watch?v=nLRL_NcnK-4) · Harvard CS50 / freeCodeCamp · Full course
+      - Explains: Python syntax, control flow, exceptions, libraries, tests, files and object-oriented programming.
+      - Useful because: A coherent beginner path; use the individual lectures below instead of watching everything before practicing.
+      - Watch for: Focus on pure function contracts. Then reproduce the lesson example: Normalize a record while asserting the original dictionary is unchanged.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/
+
+#### YouTube: focused explanations and full courses
+
+- [CS50P 0 — Functions and variables](https://www.youtube.com/watch?v=JP7ITIXGpHk) · Harvard CS50 · David Malan · University lecture
+  - Explains: Values, types, functions, parameters and return values.
+  - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://cs50.harvard.edu/python/2022/weeks/0/
+- [CS50P 2 — Loops](https://www.youtube.com/watch?v=-7xg8pGcP6w) · Harvard CS50 · David Malan · University lecture
+  - Explains: Iteration, lists, dictionaries and nested data.
+  - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://cs50.harvard.edu/python/2022/weeks/2/
+- [Harvard CS50P — full Python university course](https://www.youtube.com/watch?v=nLRL_NcnK-4) · Harvard CS50 / freeCodeCamp · Full course
+  - Explains: Python syntax, control flow, exceptions, libraries, tests, files and object-oriented programming.
+  - Useful because: A coherent beginner path; use the individual lectures below instead of watching everything before practicing.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://cs50.harvard.edu/python/
+
+#### Free written resources
+
+1. [Official reference: Mutability, copying, scope and function contracts](https://docs.python.org/3/tutorial/classes.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+2. [CS50P: conditionals](https://cs50.harvard.edu/python/2022/weeks/1/) — Free OpenCourseWare; account optional for submissions. Certificates on external platforms may cost money.
+
+#### Lab: Mutability, copying, scope and function contracts
+
+Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.
+
+**Deliverables**
+
+- Runnable CPU notebook or script with deterministic fixtures
+- Measured outputs, failure cases and a README explaining decisions
+
+**Completion checks**
+
+- [ ] Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.
+- [ ] Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+#### Ten project recommendations
+
+### Concurrent service sampler
+
+An operator needs latency samples without overwhelming local services.
+
+**Data:** Run three local stub endpoints with delays, errors and timeouts. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An async sampler with bounded concurrency and a latency summary.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mutability, copying, scope and function contracts:** Extend the project with Mutability, copying, scope and function contracts in Concurrent service sampler. Adapt this focused lab to the project data: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.  Required concepts: Object identity, Shallow versus deep copy, Mutable defaults, Local scope and closures, Pure function contracts.
+  - Deliverable: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An async sampler with bounded concurrency and a latency summary. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mutability, copying, scope and function contracts: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Keep concurrency at four or less and finish when one endpoint never responds.
+- [ ] Mutability, copying, scope and function contracts: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Configuration doctor
+
+A developer needs understandable errors before running a data job.
+
+**Data:** Create ten JSON configurations with missing and mistyped settings. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A validated configuration loader with redacted diagnostic messages.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mutability, copying, scope and function contracts:** Extend the project with Mutability, copying, scope and function contracts in Configuration doctor. Adapt this focused lab to the project data: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.  Required concepts: Object identity, Shallow versus deep copy, Mutable defaults, Local scope and closures, Pure function contracts.
+  - Deliverable: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A validated configuration loader with redacted diagnostic messages. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mutability, copying, scope and function contracts: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject each invalid fixture and never print a seeded secret value.
+- [ ] Mutability, copying, scope and function contracts: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Safe export writer
+
+A data analyst needs exports that never replace a good file with a partial one.
+
+**Data:** Create ten small records and inject a write failure halfway through export. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A context-managed atomic JSON export utility.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mutability, copying, scope and function contracts:** Extend the project with Mutability, copying, scope and function contracts in Safe export writer. Adapt this focused lab to the project data: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.  Required concepts: Object identity, Shallow versus deep copy, Mutable defaults, Local scope and closures, Pure function contracts.
+  - Deliverable: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A context-managed atomic JSON export utility. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mutability, copying, scope and function contracts: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] The previous export survives a simulated failure and temporary handles close.
+- [ ] Mutability, copying, scope and function contracts: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Expense reconciliation CLI
+
+A club treasurer needs consistent totals from differently formatted receipts.
+
+**Data:** Create three CSV files with 60 fictional expenses, currencies and duplicates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A typed normalization package and discrepancy report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mutability, copying, scope and function contracts:** Extend the project with Mutability, copying, scope and function contracts in Expense reconciliation CLI. Adapt this focused lab to the project data: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.  Required concepts: Object identity, Shallow versus deep copy, Mutable defaults, Local scope and closures, Pure function contracts.
+  - Deliverable: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A typed normalization package and discrepancy report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mutability, copying, scope and function contracts: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect all seeded duplicates and reject mixed-currency totals.
+- [ ] Mutability, copying, scope and function contracts: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Duplicate file index
+
+An archivist needs to inspect duplicate notes before cleaning a folder.
+
+**Data:** Create 40 temporary text files including equal contents under different names. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A hash-based index and read-only duplicate report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mutability, copying, scope and function contracts:** Extend the project with Mutability, copying, scope and function contracts in Duplicate file index. Adapt this focused lab to the project data: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.  Required concepts: Object identity, Shallow versus deep copy, Mutable defaults, Local scope and closures, Pure function contracts.
+  - Deliverable: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A hash-based index and read-only duplicate report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mutability, copying, scope and function contracts: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect content duplicates without treating equal filenames as equal content.
+- [ ] Mutability, copying, scope and function contracts: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Streaming sensor summaries
+
+A hobbyist needs rolling summaries of a long sensor stream.
+
+**Data:** Generate 100000 timestamp/value pairs lazily with fixed seed 42. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A generator pipeline producing rolling means and invalid-reading counts.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mutability, copying, scope and function contracts:** Extend the project with Mutability, copying, scope and function contracts in Streaming sensor summaries. Adapt this focused lab to the project data: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.  Required concepts: Object identity, Shallow versus deep copy, Mutable defaults, Local scope and closures, Pure function contracts.
+  - Deliverable: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A generator pipeline producing rolling means and invalid-reading counts. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mutability, copying, scope and function contracts: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match a small reference calculation while memory stays bounded by the window.
+- [ ] Mutability, copying, scope and function contracts: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Log file investigator
+
+A developer needs to locate failed requests across rotated logs.
+
+**Data:** Generate 120 JSONL events including invalid lines and repeated request IDs. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A streaming CLI that groups failures by request without loading every file.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mutability, copying, scope and function contracts:** Extend the project with Mutability, copying, scope and function contracts in Log file investigator. Adapt this focused lab to the project data: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.  Required concepts: Object identity, Shallow versus deep copy, Mutable defaults, Local scope and closures, Pure function contracts.
+  - Deliverable: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A streaming CLI that groups failures by request without loading every file. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mutability, copying, scope and function contracts: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject corrupt lines with line numbers; produce identical totals with a one-line buffer.
+- [ ] Mutability, copying, scope and function contracts: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Pluggable text cleaner
+
+An editor needs reusable transformations for inconsistent draft documents.
+
+**Data:** Write 20 Markdown drafts with whitespace, Unicode and repeated headings. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A package with composable transformations and a CLI entry point.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mutability, copying, scope and function contracts:** Extend the project with Mutability, copying, scope and function contracts in Pluggable text cleaner. Adapt this focused lab to the project data: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.  Required concepts: Object identity, Shallow versus deep copy, Mutable defaults, Local scope and closures, Pure function contracts.
+  - Deliverable: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A package with composable transformations and a CLI entry point. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mutability, copying, scope and function contracts: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show idempotence and preserve non-ASCII text through every plugin.
+- [ ] Mutability, copying, scope and function contracts: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Adaptive terminal quiz
+
+A learner needs practice on concepts they repeatedly miss.
+
+**Data:** Write 25 questions and a local JSON history with two fictional learners. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A CLI quiz with deterministic scoring and weak-topic selection.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mutability, copying, scope and function contracts:** Extend the project with Mutability, copying, scope and function contracts in Adaptive terminal quiz. Adapt this focused lab to the project data: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.  Required concepts: Object identity, Shallow versus deep copy, Mutable defaults, Local scope and closures, Pure function contracts.
+  - Deliverable: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A CLI quiz with deterministic scoring and weak-topic selection. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mutability, copying, scope and function contracts: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Resume an interrupted quiz and keep the two histories separate.
+- [ ] Mutability, copying, scope and function contracts: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Parser regression kit
+
+A maintainer needs confidence when extending a command parser.
+
+**Data:** Author 30 valid and invalid command strings, including quoted arguments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A parser package with parametrized tests and readable failures.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mutability, copying, scope and function contracts:** Extend the project with Mutability, copying, scope and function contracts in Parser regression kit. Adapt this focused lab to the project data: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.  Required concepts: Object identity, Shallow versus deep copy, Mutable defaults, Local scope and closures, Pure function contracts.
+  - Deliverable: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A parser package with parametrized tests and readable failures. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mutability, copying, scope and function contracts: Mutability, copying, scope and function contracts: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Cover empty input, escaped quotes and unknown flags without crashing.
+- [ ] Mutability, copying, scope and function contracts: Build a pure record-normalization function and a deliberately mutating version. Test shared nested lists, mutable defaults, Unicode strings and invalid values; explain which objects change and why.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Stage checkpoint
+
+<a id="checkpoint-python"></a>
+
+### Python reliability checkpoint
+
+Demonstrate readiness through a reproducible practical handoff. Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.
+
+**Priority:** Foundation · **Study:** 1h · **Practice:** 6h
+
+**Prerequisites:** [Types and collections](python.md#python-values), [Control flow and functions](python.md#python-control), [Files, JSON and exceptions](python.md#python-files), [Modules, environments and dependencies](python.md#python-modules), [OOP, dataclasses and typing](python.md#python-objects), [Iterators and generators](python.md#python-iteration), [Async, logging, debugging and pytest](python.md#python-async), [Context managers, paths and safe file operations](python.md#python-resources-context), [Async cancellation, timeouts and test doubles](python.md#python-async-testing), [Mutability, copying, scope and function contracts](python.md#python-mutation-scope) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Define the success contract:** Write observable checks before implementation so success is not just a plausible demonstration.
+  - Example: Turn this task into a numbered acceptance checklist: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.
+  - Videos:
+    - [CS50P 0 — Functions and variables](https://www.youtube.com/watch?v=JP7ITIXGpHk) · Harvard CS50 · David Malan · University lecture
+      - Explains: Values, types, functions, parameters and return values.
+      - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+      - Watch for: Focus on define the success contract. Then reproduce the lesson example: Turn this task into a numbered acceptance checklist: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/2022/weeks/0/
+    - [Harvard CS50P — full Python university course](https://www.youtube.com/watch?v=nLRL_NcnK-4) · Harvard CS50 / freeCodeCamp · Full course
+      - Explains: Python syntax, control flow, exceptions, libraries, tests, files and object-oriented programming.
+      - Useful because: A coherent beginner path; use the individual lectures below instead of watching everything before practicing.
+      - Watch for: Focus on define the success contract. Then reproduce the lesson example: Turn this task into a numbered acceptance checklist: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/
+- [ ] **Reproduce the baseline:** Keep a simple reference output and deterministic inputs so changes can be compared honestly.
+  - Example: Run a fixed input twice and compare saved outputs with the documented baseline.
+  - Videos:
+    - [CS50P 0 — Functions and variables](https://www.youtube.com/watch?v=JP7ITIXGpHk) · Harvard CS50 · David Malan · University lecture
+      - Explains: Values, types, functions, parameters and return values.
+      - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+      - Watch for: Focus on reproduce the baseline. Then reproduce the lesson example: Run a fixed input twice and compare saved outputs with the documented baseline.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/2022/weeks/0/
+    - [Harvard CS50P — full Python university course](https://www.youtube.com/watch?v=nLRL_NcnK-4) · Harvard CS50 / freeCodeCamp · Full course
+      - Explains: Python syntax, control flow, exceptions, libraries, tests, files and object-oriented programming.
+      - Useful because: A coherent beginner path; use the individual lectures below instead of watching everything before practicing.
+      - Watch for: Focus on reproduce the baseline. Then reproduce the lesson example: Run a fixed input twice and compare saved outputs with the documented baseline.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/
+- [ ] **Test a failure boundary:** A working happy path does not establish robustness to malformed data or dependency failures.
+  - Example: Inject one malformed input and one controlled failure, then record the resulting state.
+  - Videos:
+    - [CS50P 0 — Functions and variables](https://www.youtube.com/watch?v=JP7ITIXGpHk) · Harvard CS50 · David Malan · University lecture
+      - Explains: Values, types, functions, parameters and return values.
+      - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+      - Watch for: Focus on test a failure boundary. Then reproduce the lesson example: Inject one malformed input and one controlled failure, then record the resulting state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/2022/weeks/0/
+    - [Harvard CS50P — full Python university course](https://www.youtube.com/watch?v=nLRL_NcnK-4) · Harvard CS50 / freeCodeCamp · Full course
+      - Explains: Python syntax, control flow, exceptions, libraries, tests, files and object-oriented programming.
+      - Useful because: A coherent beginner path; use the individual lectures below instead of watching everything before practicing.
+      - Watch for: Focus on test a failure boundary. Then reproduce the lesson example: Inject one malformed input and one controlled failure, then record the resulting state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/
+- [ ] **Explain the decisions:** Describe why each technique was chosen and what evidence would make you choose differently.
+  - Example: Write a short decision note comparing the chosen approach with one simpler alternative.
+  - Videos:
+    - [CS50P 0 — Functions and variables](https://www.youtube.com/watch?v=JP7ITIXGpHk) · Harvard CS50 · David Malan · University lecture
+      - Explains: Values, types, functions, parameters and return values.
+      - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+      - Watch for: Focus on explain the decisions. Then reproduce the lesson example: Write a short decision note comparing the chosen approach with one simpler alternative.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/2022/weeks/0/
+    - [Harvard CS50P — full Python university course](https://www.youtube.com/watch?v=nLRL_NcnK-4) · Harvard CS50 / freeCodeCamp · Full course
+      - Explains: Python syntax, control flow, exceptions, libraries, tests, files and object-oriented programming.
+      - Useful because: A coherent beginner path; use the individual lectures below instead of watching everything before practicing.
+      - Watch for: Focus on explain the decisions. Then reproduce the lesson example: Write a short decision note comparing the chosen approach with one simpler alternative.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/
+- [ ] **Hand off the evidence:** Another learner must be able to reproduce the result from your instructions and supplied inputs.
+  - Example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+  - Videos:
+    - [CS50P 0 — Functions and variables](https://www.youtube.com/watch?v=JP7ITIXGpHk) · Harvard CS50 · David Malan · University lecture
+      - Explains: Values, types, functions, parameters and return values.
+      - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+      - Watch for: Focus on hand off the evidence. Then reproduce the lesson example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/2022/weeks/0/
+    - [Harvard CS50P — full Python university course](https://www.youtube.com/watch?v=nLRL_NcnK-4) · Harvard CS50 / freeCodeCamp · Full course
+      - Explains: Python syntax, control flow, exceptions, libraries, tests, files and object-oriented programming.
+      - Useful because: A coherent beginner path; use the individual lectures below instead of watching everything before practicing.
+      - Watch for: Focus on hand off the evidence. Then reproduce the lesson example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://cs50.harvard.edu/python/
+
+#### YouTube: focused explanations and full courses
+
+- [CS50P 0 — Functions and variables](https://www.youtube.com/watch?v=JP7ITIXGpHk) · Harvard CS50 · David Malan · University lecture
+  - Explains: Values, types, functions, parameters and return values.
+  - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://cs50.harvard.edu/python/2022/weeks/0/
+- [CS50P 2 — Loops](https://www.youtube.com/watch?v=-7xg8pGcP6w) · Harvard CS50 · David Malan · University lecture
+  - Explains: Iteration, lists, dictionaries and nested data.
+  - Useful because: A structured explanation with live coding; pause and reproduce the examples.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://cs50.harvard.edu/python/2022/weeks/2/
+- [Harvard CS50P — full Python university course](https://www.youtube.com/watch?v=nLRL_NcnK-4) · Harvard CS50 / freeCodeCamp · Full course
+  - Explains: Python syntax, control flow, exceptions, libraries, tests, files and object-oriented programming.
+  - Useful because: A coherent beginner path; use the individual lectures below instead of watching everything before practicing.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://cs50.harvard.edu/python/
+
+#### Free written resources
+
+1. [Official reference: Mutability, copying, scope and function contracts](https://docs.python.org/3/tutorial/classes.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+2. [CS50P: conditionals](https://cs50.harvard.edu/python/2022/weeks/1/) — Free OpenCourseWare; account optional for submissions. Certificates on external platforms may cost money.
+
+#### Python reliability checkpoint
+
+Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.
+
+**Deliverables**
+
+- Runnable project and reproducible input fixtures
+- README, results and decision notes
+- Failure evidence and clean-start instructions
+
+**Completion checks**
+
+- [ ] Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.
+- [ ] Explain the code and results without relying on an AI-generated summary.
+- [ ] A teammate can reproduce the demo without paid credentials.
+
+#### Ten project recommendations
+
+### Concurrent service sampler
+
+An operator needs latency samples without overwhelming local services.
+
+**Data:** Run three local stub endpoints with delays, errors and timeouts. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An async sampler with bounded concurrency and a latency summary.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Python reliability checkpoint:** Extend the project with Python reliability checkpoint in Concurrent service sampler. Adapt this focused lab to the project data: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An async sampler with bounded concurrency and a latency summary. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Python reliability checkpoint: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Keep concurrency at four or less and finish when one endpoint never responds.
+- [ ] Python reliability checkpoint: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Configuration doctor
+
+A developer needs understandable errors before running a data job.
+
+**Data:** Create ten JSON configurations with missing and mistyped settings. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A validated configuration loader with redacted diagnostic messages.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Python reliability checkpoint:** Extend the project with Python reliability checkpoint in Configuration doctor. Adapt this focused lab to the project data: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A validated configuration loader with redacted diagnostic messages. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Python reliability checkpoint: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject each invalid fixture and never print a seeded secret value.
+- [ ] Python reliability checkpoint: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Safe export writer
+
+A data analyst needs exports that never replace a good file with a partial one.
+
+**Data:** Create ten small records and inject a write failure halfway through export. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A context-managed atomic JSON export utility.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Python reliability checkpoint:** Extend the project with Python reliability checkpoint in Safe export writer. Adapt this focused lab to the project data: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A context-managed atomic JSON export utility. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Python reliability checkpoint: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] The previous export survives a simulated failure and temporary handles close.
+- [ ] Python reliability checkpoint: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Expense reconciliation CLI
+
+A club treasurer needs consistent totals from differently formatted receipts.
+
+**Data:** Create three CSV files with 60 fictional expenses, currencies and duplicates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A typed normalization package and discrepancy report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Python reliability checkpoint:** Extend the project with Python reliability checkpoint in Expense reconciliation CLI. Adapt this focused lab to the project data: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A typed normalization package and discrepancy report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Python reliability checkpoint: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect all seeded duplicates and reject mixed-currency totals.
+- [ ] Python reliability checkpoint: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Duplicate file index
+
+An archivist needs to inspect duplicate notes before cleaning a folder.
+
+**Data:** Create 40 temporary text files including equal contents under different names. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A hash-based index and read-only duplicate report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Python reliability checkpoint:** Extend the project with Python reliability checkpoint in Duplicate file index. Adapt this focused lab to the project data: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A hash-based index and read-only duplicate report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Python reliability checkpoint: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect content duplicates without treating equal filenames as equal content.
+- [ ] Python reliability checkpoint: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Streaming sensor summaries
+
+A hobbyist needs rolling summaries of a long sensor stream.
+
+**Data:** Generate 100000 timestamp/value pairs lazily with fixed seed 42. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A generator pipeline producing rolling means and invalid-reading counts.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Python reliability checkpoint:** Extend the project with Python reliability checkpoint in Streaming sensor summaries. Adapt this focused lab to the project data: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A generator pipeline producing rolling means and invalid-reading counts. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Python reliability checkpoint: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match a small reference calculation while memory stays bounded by the window.
+- [ ] Python reliability checkpoint: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Log file investigator
+
+A developer needs to locate failed requests across rotated logs.
+
+**Data:** Generate 120 JSONL events including invalid lines and repeated request IDs. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A streaming CLI that groups failures by request without loading every file.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Python reliability checkpoint:** Extend the project with Python reliability checkpoint in Log file investigator. Adapt this focused lab to the project data: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A streaming CLI that groups failures by request without loading every file. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Python reliability checkpoint: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject corrupt lines with line numbers; produce identical totals with a one-line buffer.
+- [ ] Python reliability checkpoint: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Pluggable text cleaner
+
+An editor needs reusable transformations for inconsistent draft documents.
+
+**Data:** Write 20 Markdown drafts with whitespace, Unicode and repeated headings. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A package with composable transformations and a CLI entry point.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Python reliability checkpoint:** Extend the project with Python reliability checkpoint in Pluggable text cleaner. Adapt this focused lab to the project data: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A package with composable transformations and a CLI entry point. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Python reliability checkpoint: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show idempotence and preserve non-ASCII text through every plugin.
+- [ ] Python reliability checkpoint: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Adaptive terminal quiz
+
+A learner needs practice on concepts they repeatedly miss.
+
+**Data:** Write 25 questions and a local JSON history with two fictional learners. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A CLI quiz with deterministic scoring and weak-topic selection.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Python reliability checkpoint:** Extend the project with Python reliability checkpoint in Adaptive terminal quiz. Adapt this focused lab to the project data: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A CLI quiz with deterministic scoring and weak-topic selection. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Python reliability checkpoint: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Resume an interrupted quiz and keep the two histories separate.
+- [ ] Python reliability checkpoint: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Parser regression kit
+
+A maintainer needs confidence when extending a command parser.
+
+**Data:** Author 30 valid and invalid command strings, including quoted arguments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A parser package with parametrized tests and readable failures.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Python reliability checkpoint:** Extend the project with Python reliability checkpoint in Parser regression kit. Adapt this focused lab to the project data: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A parser package with parametrized tests and readable failures. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Python reliability checkpoint: Python reliability checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Cover empty input, escaped quotes and unknown flags without crashing.
+- [ ] Python reliability checkpoint: Build a JSON study tracker with pure transformations, validated input, file persistence, logging and pytest. Demonstrate malformed input, independent state and a clean virtual-environment setup.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

@@ -25,7 +25,14 @@ import {
   totals,
   validateWorkspace,
 } from "./logic";
-import { recommend } from "./recommendations.mjs";
+import { recommendAll } from "./recommendations.mjs";
+import {
+  learnerContext,
+  mentorPrompt,
+  copyMentorPrompt,
+  promptDownload,
+} from "./project-mentor.mjs";
+import { projectTools } from "../content/project-tools.mjs";
 import * as store from "./store";
 const { domains, lessons } = catalog;
 const lessonById = new Map(lessons.map((l) => [l.id, l]));
@@ -2525,7 +2532,7 @@ function CustomTopics({
   );
 }
 
-function ProjectBuilder({
+export function ProjectBuilder({
   state,
   user,
   run,
@@ -2543,6 +2550,11 @@ function ProjectBuilder({
   );
   const [query, setQuery] = useState("");
   const [expanded, setExpanded] = useState<string | null>(null);
+  const [visibleCount, setVisibleCount] = useState(10);
+  useEffect(() => {
+    setVisibleCount(10);
+    setExpanded(null);
+  }, [selected]);
   useEffect(() => {
     if (initialSkill) setSelected([initialSkill]);
   }, [initialSkill]);
@@ -2558,6 +2570,7 @@ function ProjectBuilder({
         return {
           id: t.id,
           title: t.title,
+          mapping: t.mapping,
           domainId: mapped
             ? "domainId" in mapped
               ? mapped.domainId
@@ -2573,7 +2586,8 @@ function ProjectBuilder({
   const chosen = selected
     .map((id) => allSkills.find((s) => s.id === id))
     .filter((s) => s !== undefined);
-  const briefs = recommend(chosen) as Brief[];
+  const allBriefs = recommendAll(chosen) as Brief[];
+  const briefs = allBriefs.slice(0, visibleCount);
   const toggle = (id: string) =>
     setSelected((s) =>
       s.includes(id) ? s.filter((x) => x !== id) : [...s, id],
@@ -2598,7 +2612,7 @@ function ProjectBuilder({
       <SectionTitle
         eyebrow="KNOWLEDGE BECOMES CAPABILITY THROUGH PRACTICE"
         title="What will you build next?"
-        description="Pick one skill or connect a few. Get ten concrete projects that use every selected skill."
+        description="Explore 130 authored projects. Connect your skills, build a real system and take a detailed learning prompt to your AI mentor."
       />
       <div className="builder-layout">
         <aside className="panel skill-picker">
@@ -2641,6 +2655,9 @@ function ProjectBuilder({
               .filter((s) =>
                 [
                   s.title,
+                  ...Object.values(projectTools)
+                    .filter((t) => t.lessons.includes(s.id))
+                    .map((t) => t.title),
                   ...("concepts" in s
                     ? (s.concepts?.map((c) => c.name) ?? [])
                     : []),
@@ -2693,24 +2710,30 @@ function ProjectBuilder({
           {briefs.length ? (
             <>
               <div className="section-heading">
-                <h2>10 ways to put it together</h2>
+                <h2>
+                  {briefs.length} of {allBriefs.length} project ideas
+                </h2>
                 <Badge tone="green">No AI credits needed</Badge>
               </div>
               <p className="small muted">
-                Curated briefs + deterministic skill integration. Every selected
-                skill has a task, deliverable and check.
+                Library matches come first, followed by adapted projects and
+                composed practice patterns. Every selected skill has a task,
+                deliverable and check.
               </p>
               {briefs.map((brief, i) => {
                 const instances = state.projects.filter(
                   (p) => p.brief.id === brief.id,
                 );
-                const missing = selected
-                  .flatMap((id) => lessonById.get(id)?.prerequisites ?? [])
-                  .filter(
-                    (id, i, a) =>
-                      a.indexOf(id) === i &&
-                      !complete(statusFor(id, user, state.progress[user.id])),
-                  );
+                const missing = [
+                  ...selected.flatMap(
+                    (id) => lessonById.get(id)?.prerequisites ?? [],
+                  ),
+                  ...(brief.prerequisiteSkills ?? []),
+                ].filter(
+                  (id, i, a) =>
+                    a.indexOf(id) === i &&
+                    !complete(statusFor(id, user, state.progress[user.id])),
+                );
                 return (
                   <section className="panel project-card" key={brief.id}>
                     <div className="project-card-heading">
@@ -2720,6 +2743,7 @@ function ProjectBuilder({
                       <div>
                         <div className="inline-meta">
                           <Badge>{brief.difficulty}</Badge>
+                          <Badge>{brief.source ?? "Legacy project"}</Badge>
                           <span className="small muted">≈ {brief.hours}h</span>
                         </div>
                         <h3>{brief.title}</h3>
@@ -2740,7 +2764,12 @@ function ProjectBuilder({
                       <p className="small muted">
                         Suggested preparation:{" "}
                         {missing
-                          .map((id) => lessonById.get(id)?.title)
+                          .map(
+                            (id) =>
+                              lessonById.get(id)?.title ??
+                              domains.find((d) => d.id === id)?.title ??
+                              id,
+                          )
                           .join(", ")}
                         . You can still start.
                       </p>
@@ -2804,11 +2833,33 @@ function ProjectBuilder({
                       </button>
                     </div>
                     {expanded === brief.id ? (
-                      <BriefDetail brief={brief} />
+                      <BriefDetail
+                        brief={brief}
+                        learning={learnerContext(
+                          brief,
+                          lessons,
+                          user,
+                          state.progress[user.id],
+                        )}
+                      />
                     ) : null}
                   </section>
                 );
               })}
+              {visibleCount < allBriefs.length ? (
+                <button
+                  className="button full"
+                  onClick={() => setVisibleCount((n) => n + 10)}
+                >
+                  Show more · next{" "}
+                  {Math.min(10, allBriefs.length - visibleCount)} projects
+                </button>
+              ) : (
+                <p className="small muted" role="status">
+                  You have reached the end of these recommendations. Change your
+                  skills to explore other projects.
+                </p>
+              )}
             </>
           ) : (
             <section className="panel empty builder-empty">
@@ -2833,15 +2884,86 @@ function ProjectBuilder({
     </>
   );
 }
-function BriefDetail({ brief }: { brief: Brief }) {
+export function BriefDetail({
+  brief,
+  learning = [],
+}: {
+  brief: Brief;
+  learning?: ReturnType<typeof learnerContext>;
+}) {
   return (
     <div className="brief-detail">
+      {brief.audience ? (
+        <>
+          <h4>Overview</h4>
+          <p>
+            <b>For:</b> {brief.audience}
+          </p>
+        </>
+      ) : null}
+      {brief.learningGoals ? (
+        <>
+          <h4>What you will learn</h4>
+          <ul>
+            {brief.learningGoals.map((x) => (
+              <li key={x}>{x}</li>
+            ))}
+          </ul>
+        </>
+      ) : null}
+      {brief.prerequisiteSkills?.length ? (
+        <p className="hint">
+          Additional project background:{" "}
+          {brief.prerequisiteSkills
+            .map(
+              (id) =>
+                lessonById.get(id)?.title ??
+                domains.find((d) => d.id === id)?.title ??
+                id,
+            )
+            .join(", ")}
+          . Learn the minimum as you reach each milestone; navigation stays
+          unrestricted.
+        </p>
+      ) : null}
+      {brief.boundaries ? (
+        <details>
+          <summary>Scope and limitations</summary>
+          <ul>
+            {brief.boundaries.map((x) => (
+              <li key={x}>{x}</li>
+            ))}
+          </ul>
+        </details>
+      ) : null}
       <h4>Free data & tools</h4>
       <p>{brief.data}</p>
+      {brief.resources?.length ? (
+        <ul>
+          {brief.resources.map((r) => (
+            <li key={r.url}>
+              <a href={safeUrl(r.url)} target="_blank" rel="noreferrer">
+                {r.title}
+              </a>
+              <p className="small muted">{r.access}</p>
+            </li>
+          ))}
+        </ul>
+      ) : null}
       <p className="small muted">
         Use Python/NumPy/scikit-learn/PyTorch on CPU as relevant. Model
         responses can be recorded fixtures. No paid APIs required.
       </p>
+      {brief.dataFlow ? (
+        <details className="project-flow">
+          <summary>Architecture and data flow</summary>
+          <ol>
+            {brief.dataFlow.map((x, i) => (
+              <li key={i}>{x}</li>
+            ))}
+          </ol>
+        </details>
+      ) : null}
       <h4>How every skill contributes</h4>
       {brief.integration.map((i) => (
         <div className="integration" key={i.skillId}>
@@ -2855,7 +2977,7 @@ function BriefDetail({ brief }: { brief: Brief }) {
           </p>
         </div>
       ))}
-      <h4>Milestones</h4>
+      <h4>Build plan</h4>
       <ol>
         {brief.milestones.map((x) => (
           <li key={x}>{x}</li>
@@ -2873,7 +2995,93 @@ function BriefDetail({ brief }: { brief: Brief }) {
           <li key={x}>{x}</li>
         ))}
       </ul>
+      <MentorPanel key={brief.id} brief={brief} learning={learning} />
     </div>
+  );
+}
+
+function MentorPanel({
+  brief,
+  learning,
+}: {
+  brief: Brief;
+  learning: ReturnType<typeof learnerContext>;
+}) {
+  const [copyState, setCopyState] = useState("idle");
+  const [preview, setPreview] = useState(false);
+  const text = mentorPrompt(brief, learning);
+  useEffect(() => {
+    setCopyState("idle");
+  }, [text]);
+  const download = () => {
+    const file = promptDownload(brief, learning);
+    const url = URL.createObjectURL(new Blob([file.text], { type: file.type }));
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = file.filename;
+    document.body.append(link);
+    link.click();
+    link.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+  };
+  return (
+    <section className="mentor-panel" aria-label="AI learning mentor prompt">
+      <span className="eyebrow">LEARN BY BUILDING</span>
+      <h4>Your AI mentor handoff</h4>
+      <p>
+        A detailed English prompt with this project, your selected skills and
+        self-reported learning signals. Your AI will explain, give one exercise
+        at a time and review your attempt before continuing.
+      </p>
+      <p className="small muted">
+        Generated locally. No AI request is sent. Private notes, evidence links
+        and team details are excluded.
+      </p>
+      <div className="mentor-actions">
+        <button
+          className="button primary"
+          disabled={copyState === "copying"}
+          onClick={async () => {
+            setCopyState("copying");
+            setCopyState(await copyMentorPrompt(text, navigator.clipboard));
+          }}
+        >
+          Copy mentor prompt
+        </button>
+        <button className="button subtle" onClick={download}>
+          Download .md
+        </button>
+        <button
+          className="text-button"
+          aria-expanded={preview}
+          onClick={() => setPreview((v) => !v)}
+        >
+          {preview ? "Hide prompt" : "Preview prompt"}
+        </button>
+      </div>
+      <p role="status" className="small">
+        {copyState === "copied"
+          ? "Prompt copied. Paste it into your preferred AI assistant."
+          : copyState === "manual"
+            ? "Could not access the clipboard. Select and copy the text below manually."
+            : copyState === "copying"
+              ? "Copying…"
+              : ""}
+      </p>
+      {preview || copyState === "manual" ? (
+        <label className="mentor-preview">
+          English mentor prompt
+          <textarea
+            readOnly
+            value={text}
+            rows={16}
+            onFocus={(e) => {
+              if (copyState === "manual") e.currentTarget.select();
+            }}
+          />
+        </label>
+      ) : null}
+    </section>
   );
 }
 
@@ -3218,7 +3426,19 @@ function ProjectEditor({
           Start my own copy
         </button>
       </div>
-      {expanded ? <BriefDetail brief={project.brief} /> : null}
+      {expanded ? (
+        <BriefDetail
+          brief={project.brief}
+          learning={learnerContext(
+            project.brief,
+            lessons,
+            state.profiles.find((p) => p.id === state.userId) ?? {
+              knownLessons: [],
+            },
+            state.progress[state.userId],
+          )}
+        />
+      ) : null}
     </section>
   );
 }

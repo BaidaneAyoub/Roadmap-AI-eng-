@@ -215,6 +215,61 @@ export function validateTopic(topic: import("./types.ts").CustomTopic) {
   if (!count) throw new Error("Add at least one checklist item.");
 }
 export function validateBrief(brief: import("./types.ts").Brief) {
+  if (
+    brief.resources !== undefined &&
+    (!Array.isArray(brief.resources) ||
+      !brief.resources.every(
+        (r) =>
+          r &&
+          typeof r.title === "string" &&
+          typeof r.access === "string" &&
+          safeUrl(r.url),
+      ))
+  )
+    throw new Error("Invalid project resource.");
+  for (const name of ["source", "audience"] as const)
+    if (
+      brief[name] !== undefined &&
+      (typeof brief[name] !== "string" || !brief[name].trim())
+    )
+      throw new Error("Invalid project description.");
+  if (
+    brief.catalogVersion !== undefined &&
+    (!Number.isInteger(brief.catalogVersion) || brief.catalogVersion < 1)
+  )
+    throw new Error("Invalid project catalog version.");
+  for (const name of [
+    "learningGoals",
+    "boundaries",
+    "components",
+    "dataFlow",
+  ] as const)
+    if (
+      brief[name] !== undefined &&
+      (!Array.isArray(brief[name]) ||
+        !brief[name].length ||
+        !brief[name].every((x) => typeof x === "string" && x.trim()))
+    )
+      throw new Error("Invalid project learning detail.");
+  if (
+    brief.prerequisiteSkills !== undefined &&
+    (!Array.isArray(brief.prerequisiteSkills) ||
+      !brief.prerequisiteSkills.every((x) => typeof x === "string" && x.trim()))
+  )
+    throw new Error("Invalid project preparation.");
+  if (
+    brief.stages !== undefined &&
+    (!Array.isArray(brief.stages) ||
+      !brief.stages.length ||
+      !brief.stages.every(
+        (s) =>
+          s &&
+          [s.title, s.deliverable, s.check].every(
+            (x) => typeof x === "string" && x.trim(),
+          ),
+      ))
+  )
+    throw new Error("Invalid project stages.");
   for (const name of [
     "id",
     "patternId",
@@ -245,7 +300,18 @@ export function validateBrief(brief: import("./types.ts").Brief) {
     brief.integration.length !== brief.skills.length
   )
     throw new Error("Invalid project skill integration.");
+  if (
+    new Set(brief.skills).size !== brief.skills.length ||
+    new Set(brief.integration.map((i) => i?.skillId)).size !==
+      brief.skills.length
+  )
+    throw new Error("Duplicate project skill integration.");
   for (const i of brief.integration) {
+    if (
+      i.catalogSkillId !== undefined &&
+      (typeof i.catalogSkillId !== "string" || !i.catalogSkillId)
+    )
+      throw new Error("Invalid project skill mapping.");
     if (
       !brief.skills.includes(i.skillId) ||
       ![i.skillTitle, i.task, i.check, i.deliverable].every(

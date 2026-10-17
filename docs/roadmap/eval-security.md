@@ -2,17 +2,17 @@
 
 Make quality, safety and failure behavior measurable.
 
-## Main route · Step 6 of 8
+## Main route · Step 9 of 13
 
 **Goal:** Measure quality and protect the application against predictable failures.
 
 **Stage checkpoint:** Create a golden dataset, regression report and prompt-injection tests with explicit failure handling.
 
-Test quality, privacy and hostile inputs. Add agents only when tools and multi-step workflows serve the problem.
+Measure quality and enforce security boundaries before introducing autonomy.
 
 Follow the modules and lessons below at your pace. Finish each exercise, save your evidence and self-assessment, then continue. Completed and Already known count as completed; Skipped is reported separately. You can move ahead at any time.
 
-[Full pipeline](../PIPELINE.md) · [Next step: Deployment and operations](deployment.md)
+[Full pipeline](../PIPELINE.md) · [Next step: Agents and MCP](agents.md)
 
 ## Evaluation-driven development
 
@@ -22,7 +22,7 @@ Follow the modules and lessons below at your pace. Finish each exercise, save yo
 
 Make improvement claims reproducible and keep evaluation cases separate from tuning.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Imbalance, metrics, calibration and error analysis](ml.md#ml-metrics), [Prompting, sampling and structured outputs](llm.md#llm-prompting) Navigation is unrestricted.
 
@@ -90,292 +90,292 @@ Create a twenty-case fixture dataset and an offline evaluator with schema, citat
 
 #### Ten project recommendations
 
-### Product review quality explorer
+### Golden dataset workshop
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A team needs a small trustworthy evaluation set.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Author 40 questions with expected answers, sources and failure categories. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Golden datasets and deterministic regression evaluation:** Build a golden task set and test evidence support, permissions and failure cases.  For Golden datasets and deterministic regression evaluation, explicitly apply Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Golden datasets and deterministic regression evaluation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Golden datasets and deterministic regression evaluation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Golden datasets and deterministic regression evaluation:** Build a golden task set and test evidence support, permissions and failure cases.  For Golden datasets and deterministic regression evaluation, explicitly apply Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Golden datasets and deterministic regression evaluation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Golden datasets and deterministic regression evaluation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Dataset and model audit studio
-
-Audit data quality and model behavior so a teammate can reproduce the findings.
-
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
-
-**Output:** A reproducible audit report with slices, evidence and a model card.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Golden datasets and deterministic regression evaluation:** Build a golden task set and test evidence support, permissions and failure cases.  For Golden datasets and deterministic regression evaluation, explicitly apply Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Golden datasets and deterministic regression evaluation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Golden datasets and deterministic regression evaluation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Golden datasets and deterministic regression evaluation:** Build a golden task set and test evidence support, permissions and failure cases.  For Golden datasets and deterministic regression evaluation, explicitly apply Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Golden datasets and deterministic regression evaluation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Golden datasets and deterministic regression evaluation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A versioned evaluation dataset and deterministic runner.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Golden datasets and deterministic regression evaluation:** Build a golden task set and test evidence support, permissions and failure cases.  For Golden datasets and deterministic regression evaluation, explicitly apply Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
+- **Golden datasets and deterministic regression evaluation:** Implement Golden datasets and deterministic regression evaluation in Golden dataset workshop. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Golden datasets and deterministic regression evaluation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A versioned evaluation dataset and deterministic runner. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Golden datasets and deterministic regression evaluation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
+- [ ] Separate development cases from a locked holdout and detect a seeded regression.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Release regression gate
 
-Find unusual stock movements and explain which records need investigation.
+A maintainer needs a repeatable quality decision before release.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Store baseline and candidate results for 40 fixed cases. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Golden datasets and deterministic regression evaluation:** Build a golden task set and test evidence support, permissions and failure cases.  For Golden datasets and deterministic regression evaluation, explicitly apply Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Golden datasets and deterministic regression evaluation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Golden datasets and deterministic regression evaluation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A deterministic CI gate with explicit allowed regressions.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Golden datasets and deterministic regression evaluation:** Build a golden task set and test evidence support, permissions and failure cases.  For Golden datasets and deterministic regression evaluation, explicitly apply Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
+- **Golden datasets and deterministic regression evaluation:** Implement Golden datasets and deterministic regression evaluation in Release regression gate. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Golden datasets and deterministic regression evaluation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A deterministic CI gate with explicit allowed regressions. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Golden datasets and deterministic regression evaluation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
+- [ ] Fail when a critical case regresses even if average score improves.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Prompt regression workbench
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A support writer needs repeatable checks before changing instructions.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Author 30 requests with expected structured responses and recorded fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Golden datasets and deterministic regression evaluation:** Build a golden task set and test evidence support, permissions and failure cases.  For Golden datasets and deterministic regression evaluation, explicitly apply Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Golden datasets and deterministic regression evaluation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Golden datasets and deterministic regression evaluation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A prompt version comparison harness.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Golden datasets and deterministic regression evaluation:** Build a golden task set and test evidence support, permissions and failure cases.  For Golden datasets and deterministic regression evaluation, explicitly apply Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
+- **Golden datasets and deterministic regression evaluation:** Implement Golden datasets and deterministic regression evaluation in Prompt regression workbench. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Golden datasets and deterministic regression evaluation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A prompt version comparison harness. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Golden datasets and deterministic regression evaluation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
+- [ ] Detect malformed JSON, unsupported claims and changed required fields.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Evidence faithfulness audit
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A researcher needs to identify unsupported answer claims.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Author 25 answers paired with short source passages. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A claim-level support annotation and scoring report.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Golden datasets and deterministic regression evaluation:** Build a golden task set and test evidence support, permissions and failure cases.  For Golden datasets and deterministic regression evaluation, explicitly apply Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
+- **Golden datasets and deterministic regression evaluation:** Extend the project with Golden datasets and deterministic regression evaluation in Evidence faithfulness audit. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Golden datasets and deterministic regression evaluation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A claim-level support annotation and scoring report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Golden datasets and deterministic regression evaluation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
+- [ ] Distinguish absent evidence from direct contradiction.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Guardrail bypass experiment
+
+A developer needs to know where validation actually holds.
+
+**Data:** Write malformed schemas, Unicode evasions and oversized-input fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A bounded-input validation and adversarial test suite.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Golden datasets and deterministic regression evaluation:** Extend the project with Golden datasets and deterministic regression evaluation in Guardrail bypass experiment. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A bounded-input validation and adversarial test suite. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Enforce server-side size/schema checks and document uncovered behaviors.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Prompt injection boundary lab
+
+A developer needs to prevent retrieved instructions from becoming commands.
+
+**Data:** Create 20 local malicious-document fixtures and benign controls. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An adversarial harness for a read-only assistant.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Golden datasets and deterministic regression evaluation:** Extend the project with Golden datasets and deterministic regression evaluation in Prompt injection boundary lab. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An adversarial harness for a read-only assistant. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Tool permissions remain enforced even if an answer follows injected text.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Human and model judge agreement lab
+
+A reviewer needs to know when automated ratings disagree.
+
+**Data:** Use 30 anonymized fictional outputs and recorded judge scores. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A rubric, blind review sheet and disagreement report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Golden datasets and deterministic regression evaluation:** Extend the project with Golden datasets and deterministic regression evaluation in Human and model judge agreement lab. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A rubric, blind review sheet and disagreement report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report agreement and inspect disagreements without treating model scores as truth.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data minimization audit
+
+A team needs to track which fields reach each component.
+
+**Data:** Use fictional profiles containing both necessary and unnecessary fields. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A data-flow inventory and allowlisted request serializer.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Golden datasets and deterministic regression evaluation:** Extend the project with Golden datasets and deterministic regression evaluation in Data minimization audit. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A data-flow inventory and allowlisted request serializer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Disallowed fields never enter prompts, telemetry or exported examples.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Secret exposure regression kit
+
+A maintainer needs to prevent test secrets leaking into logs.
+
+**Data:** Generate fake credentials and malformed requests only. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A redaction pipeline with log and response checks.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Golden datasets and deterministic regression evaluation:** Extend the project with Golden datasets and deterministic regression evaluation in Secret exposure regression kit. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A redaction pipeline with log and response checks. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] No seeded secret appears in outputs, including exception messages.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Evaluation slice explorer
+
+An analyst needs to find failures hidden by an average score.
+
+**Data:** Generate 100 labeled results across language and length slices. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A per-slice report with sample counts and uncertainty.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Golden datasets and deterministic regression evaluation:** Extend the project with Golden datasets and deterministic regression evaluation in Evaluation slice explorer. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A per-slice report with sample counts and uncertainty. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Flag small samples and reproduce all aggregate metrics from raw cases.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -389,7 +389,7 @@ Estimate upcoming task volume and make uncertainty visible to planners.
 
 Combine measurable checks with careful human judgment and known judge limitations.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Golden datasets and deterministic regression evaluation](eval-security.md#eval-datasets) Navigation is unrestricted.
 
@@ -452,292 +452,292 @@ Build a human-rating sheet and a fixture-based judge comparison; compute agreeme
 
 #### Ten project recommendations
 
-### Product review quality explorer
+### Human and model judge agreement lab
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A reviewer needs to know when automated ratings disagree.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Use 30 anonymized fictional outputs and recorded judge scores. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Human evaluation, LLM judges and error analysis:** Build a golden task set and test evidence support, permissions and failure cases.  For Human evaluation, LLM judges and error analysis, explicitly apply Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Human evaluation, LLM judges and error analysis: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Human evaluation, LLM judges and error analysis: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Human evaluation, LLM judges and error analysis:** Build a golden task set and test evidence support, permissions and failure cases.  For Human evaluation, LLM judges and error analysis, explicitly apply Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Human evaluation, LLM judges and error analysis: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Human evaluation, LLM judges and error analysis: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Dataset and model audit studio
-
-Audit data quality and model behavior so a teammate can reproduce the findings.
-
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
-
-**Output:** A reproducible audit report with slices, evidence and a model card.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Human evaluation, LLM judges and error analysis:** Build a golden task set and test evidence support, permissions and failure cases.  For Human evaluation, LLM judges and error analysis, explicitly apply Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Human evaluation, LLM judges and error analysis: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Human evaluation, LLM judges and error analysis: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Human evaluation, LLM judges and error analysis:** Build a golden task set and test evidence support, permissions and failure cases.  For Human evaluation, LLM judges and error analysis, explicitly apply Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Human evaluation, LLM judges and error analysis: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Human evaluation, LLM judges and error analysis: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A rubric, blind review sheet and disagreement report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Human evaluation, LLM judges and error analysis:** Build a golden task set and test evidence support, permissions and failure cases.  For Human evaluation, LLM judges and error analysis, explicitly apply Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
+- **Human evaluation, LLM judges and error analysis:** Implement Human evaluation, LLM judges and error analysis in Human and model judge agreement lab. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Human evaluation, LLM judges and error analysis: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A rubric, blind review sheet and disagreement report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Human evaluation, LLM judges and error analysis: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
+- [ ] Report agreement and inspect disagreements without treating model scores as truth.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Independent review coordinator
 
-Find unusual stock movements and explain which records need investigation.
+A team needs independent checks before combining conclusions.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Use three deterministic reviewers for schema, evidence and policy. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
+**Output:** A coordinator with separate review results and conflict handling.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Human evaluation, LLM judges and error analysis:** Build a golden task set and test evidence support, permissions and failure cases.  For Human evaluation, LLM judges and error analysis, explicitly apply Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
+- **Human evaluation, LLM judges and error analysis:** Implement Human evaluation, LLM judges and error analysis in Independent review coordinator. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Human evaluation, LLM judges and error analysis: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A coordinator with separate review results and conflict handling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Human evaluation, LLM judges and error analysis: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
+- [ ] Keep dissent visible and enforce a timeout per reviewer.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Learning gap coach
+### Evidence faithfulness audit
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A researcher needs to identify unsupported answer claims.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Author 25 answers paired with short source passages. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A claim-level support annotation and scoring report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Human evaluation, LLM judges and error analysis:** Build a golden task set and test evidence support, permissions and failure cases.  For Human evaluation, LLM judges and error analysis, explicitly apply Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
+- **Human evaluation, LLM judges and error analysis:** Extend the project with Human evaluation, LLM judges and error analysis in Evidence faithfulness audit. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Human evaluation, LLM judges and error analysis: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A claim-level support annotation and scoring report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Human evaluation, LLM judges and error analysis: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
+- [ ] Distinguish absent evidence from direct contradiction.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Golden dataset workshop
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A team needs a small trustworthy evaluation set.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Author 40 questions with expected answers, sources and failure categories. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Human evaluation, LLM judges and error analysis:** Build a golden task set and test evidence support, permissions and failure cases.  For Human evaluation, LLM judges and error analysis, explicitly apply Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Human evaluation, LLM judges and error analysis: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Human evaluation, LLM judges and error analysis: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A versioned evaluation dataset and deterministic runner.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Human evaluation, LLM judges and error analysis:** Build a golden task set and test evidence support, permissions and failure cases.  For Human evaluation, LLM judges and error analysis, explicitly apply Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
+- **Human evaluation, LLM judges and error analysis:** Extend the project with Human evaluation, LLM judges and error analysis in Golden dataset workshop. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Human evaluation, LLM judges and error analysis: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A versioned evaluation dataset and deterministic runner. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Human evaluation, LLM judges and error analysis: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
+- [ ] Separate development cases from a locked holdout and detect a seeded regression.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Guardrail bypass experiment
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A developer needs to know where validation actually holds.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Write malformed schemas, Unicode evasions and oversized-input fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A bounded-input validation and adversarial test suite.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Human evaluation, LLM judges and error analysis:** Build a golden task set and test evidence support, permissions and failure cases.  For Human evaluation, LLM judges and error analysis, explicitly apply Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
+- **Human evaluation, LLM judges and error analysis:** Extend the project with Human evaluation, LLM judges and error analysis in Guardrail bypass experiment. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Human evaluation, LLM judges and error analysis: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A bounded-input validation and adversarial test suite. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Human evaluation, LLM judges and error analysis: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
+- [ ] Enforce server-side size/schema checks and document uncovered behaviors.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Prompt injection boundary lab
+
+A developer needs to prevent retrieved instructions from becoming commands.
+
+**Data:** Create 20 local malicious-document fixtures and benign controls. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An adversarial harness for a read-only assistant.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Human evaluation, LLM judges and error analysis:** Extend the project with Human evaluation, LLM judges and error analysis in Prompt injection boundary lab. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An adversarial harness for a read-only assistant. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Tool permissions remain enforced even if an answer follows injected text.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data minimization audit
+
+A team needs to track which fields reach each component.
+
+**Data:** Use fictional profiles containing both necessary and unnecessary fields. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A data-flow inventory and allowlisted request serializer.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Human evaluation, LLM judges and error analysis:** Extend the project with Human evaluation, LLM judges and error analysis in Data minimization audit. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A data-flow inventory and allowlisted request serializer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Disallowed fields never enter prompts, telemetry or exported examples.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Release regression gate
+
+A maintainer needs a repeatable quality decision before release.
+
+**Data:** Store baseline and candidate results for 40 fixed cases. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A deterministic CI gate with explicit allowed regressions.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Human evaluation, LLM judges and error analysis:** Extend the project with Human evaluation, LLM judges and error analysis in Release regression gate. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A deterministic CI gate with explicit allowed regressions. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Fail when a critical case regresses even if average score improves.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Secret exposure regression kit
+
+A maintainer needs to prevent test secrets leaking into logs.
+
+**Data:** Generate fake credentials and malformed requests only. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A redaction pipeline with log and response checks.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Human evaluation, LLM judges and error analysis:** Extend the project with Human evaluation, LLM judges and error analysis in Secret exposure regression kit. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A redaction pipeline with log and response checks. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] No seeded secret appears in outputs, including exception messages.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Evaluation slice explorer
+
+An analyst needs to find failures hidden by an average score.
+
+**Data:** Generate 100 labeled results across language and length slices. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A per-slice report with sample counts and uncertainty.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Human evaluation, LLM judges and error analysis:** Extend the project with Human evaluation, LLM judges and error analysis in Evaluation slice explorer. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A per-slice report with sample counts and uncertainty. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Flag small samples and reproduce all aggregate metrics from raw cases.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -751,7 +751,7 @@ Estimate upcoming task volume and make uncertainty visible to planners.
 
 Measure product outcomes alongside model quality, latency and cost.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Human evaluation, LLM judges and error analysis](eval-security.md#eval-human-judge) Navigation is unrestricted.
 
@@ -819,292 +819,292 @@ Evaluate twenty fixture tasks with evidence support, completion rate and latency
 
 #### Ten project recommendations
 
-### Product review quality explorer
+### Evidence faithfulness audit
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A researcher needs to identify unsupported answer claims.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Author 25 answers paired with short source passages. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Faithfulness, hallucinations, task success and business metrics:** Build a golden task set and test evidence support, permissions and failure cases.  For Faithfulness, hallucinations, task success and business metrics, explicitly apply Faithfulness and hallucinations, Task completion, Operational and business metrics.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Faithfulness, hallucinations, task success and business metrics: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Faithfulness, hallucinations, task success and business metrics:** Build a golden task set and test evidence support, permissions and failure cases.  For Faithfulness, hallucinations, task success and business metrics, explicitly apply Faithfulness and hallucinations, Task completion, Operational and business metrics.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Faithfulness, hallucinations, task success and business metrics: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Dataset and model audit studio
-
-Audit data quality and model behavior so a teammate can reproduce the findings.
-
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
-
-**Output:** A reproducible audit report with slices, evidence and a model card.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Faithfulness, hallucinations, task success and business metrics:** Build a golden task set and test evidence support, permissions and failure cases.  For Faithfulness, hallucinations, task success and business metrics, explicitly apply Faithfulness and hallucinations, Task completion, Operational and business metrics.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Faithfulness, hallucinations, task success and business metrics: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Faithfulness, hallucinations, task success and business metrics:** Build a golden task set and test evidence support, permissions and failure cases.  For Faithfulness, hallucinations, task success and business metrics, explicitly apply Faithfulness and hallucinations, Task completion, Operational and business metrics.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Faithfulness, hallucinations, task success and business metrics: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A claim-level support annotation and scoring report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Faithfulness, hallucinations, task success and business metrics:** Build a golden task set and test evidence support, permissions and failure cases.  For Faithfulness, hallucinations, task success and business metrics, explicitly apply Faithfulness and hallucinations, Task completion, Operational and business metrics.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
+- **Faithfulness, hallucinations, task success and business metrics:** Implement Faithfulness, hallucinations, task success and business metrics in Evidence faithfulness audit. Adapt this focused lab to the project data: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.  Required concepts: Faithfulness and hallucinations, Task completion, Operational and business metrics.
+  - Deliverable: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Faithfulness, hallucinations, task success and business metrics: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A claim-level support annotation and scoring report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Faithfulness, hallucinations, task success and business metrics: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
+- [ ] Distinguish absent evidence from direct contradiction.
+- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Evaluation slice explorer
 
-Find unusual stock movements and explain which records need investigation.
+An analyst needs to find failures hidden by an average score.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Generate 100 labeled results across language and length slices. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Faithfulness, hallucinations, task success and business metrics:** Build a golden task set and test evidence support, permissions and failure cases.  For Faithfulness, hallucinations, task success and business metrics, explicitly apply Faithfulness and hallucinations, Task completion, Operational and business metrics.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Faithfulness, hallucinations, task success and business metrics: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A per-slice report with sample counts and uncertainty.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Faithfulness, hallucinations, task success and business metrics:** Build a golden task set and test evidence support, permissions and failure cases.  For Faithfulness, hallucinations, task success and business metrics, explicitly apply Faithfulness and hallucinations, Task completion, Operational and business metrics.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
+- **Faithfulness, hallucinations, task success and business metrics:** Implement Faithfulness, hallucinations, task success and business metrics in Evaluation slice explorer. Adapt this focused lab to the project data: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.  Required concepts: Faithfulness and hallucinations, Task completion, Operational and business metrics.
+  - Deliverable: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Faithfulness, hallucinations, task success and business metrics: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A per-slice report with sample counts and uncertainty. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Faithfulness, hallucinations, task success and business metrics: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
+- [ ] Flag small samples and reproduce all aggregate metrics from raw cases.
+- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Retrieval failure diagnosis bench
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A maintainer needs to separate retrieval and answer failures.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Write 25 questions including missing evidence and conflicting passages. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Faithfulness, hallucinations, task success and business metrics:** Build a golden task set and test evidence support, permissions and failure cases.  For Faithfulness, hallucinations, task success and business metrics, explicitly apply Faithfulness and hallucinations, Task completion, Operational and business metrics.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Faithfulness, hallucinations, task success and business metrics: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A retrieval/answer error taxonomy and regression report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Faithfulness, hallucinations, task success and business metrics:** Build a golden task set and test evidence support, permissions and failure cases.  For Faithfulness, hallucinations, task success and business metrics, explicitly apply Faithfulness and hallucinations, Task completion, Operational and business metrics.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
+- **Faithfulness, hallucinations, task success and business metrics:** Implement Faithfulness, hallucinations, task success and business metrics in Retrieval failure diagnosis bench. Adapt this focused lab to the project data: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.  Required concepts: Faithfulness and hallucinations, Task completion, Operational and business metrics.
+  - Deliverable: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Faithfulness, hallucinations, task success and business metrics: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A retrieval/answer error taxonomy and regression report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Faithfulness, hallucinations, task success and business metrics: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
+- [ ] Measure retrieval recall separately from answer faithfulness.
+- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Golden dataset workshop
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A team needs a small trustworthy evaluation set.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Author 40 questions with expected answers, sources and failure categories. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A versioned evaluation dataset and deterministic runner.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Faithfulness, hallucinations, task success and business metrics:** Build a golden task set and test evidence support, permissions and failure cases.  For Faithfulness, hallucinations, task success and business metrics, explicitly apply Faithfulness and hallucinations, Task completion, Operational and business metrics.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
+- **Faithfulness, hallucinations, task success and business metrics:** Extend the project with Faithfulness, hallucinations, task success and business metrics in Golden dataset workshop. Adapt this focused lab to the project data: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.  Required concepts: Faithfulness and hallucinations, Task completion, Operational and business metrics.
+  - Deliverable: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Faithfulness, hallucinations, task success and business metrics: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A versioned evaluation dataset and deterministic runner. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Faithfulness, hallucinations, task success and business metrics: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.
+- [ ] Separate development cases from a locked holdout and detect a seeded regression.
+- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Guardrail bypass experiment
+
+A developer needs to know where validation actually holds.
+
+**Data:** Write malformed schemas, Unicode evasions and oversized-input fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A bounded-input validation and adversarial test suite.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Faithfulness, hallucinations, task success and business metrics:** Extend the project with Faithfulness, hallucinations, task success and business metrics in Guardrail bypass experiment. Adapt this focused lab to the project data: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.  Required concepts: Faithfulness and hallucinations, Task completion, Operational and business metrics.
+  - Deliverable: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A bounded-input validation and adversarial test suite. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Faithfulness, hallucinations, task success and business metrics: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Enforce server-side size/schema checks and document uncovered behaviors.
+- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Prompt injection boundary lab
+
+A developer needs to prevent retrieved instructions from becoming commands.
+
+**Data:** Create 20 local malicious-document fixtures and benign controls. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An adversarial harness for a read-only assistant.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Faithfulness, hallucinations, task success and business metrics:** Extend the project with Faithfulness, hallucinations, task success and business metrics in Prompt injection boundary lab. Adapt this focused lab to the project data: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.  Required concepts: Faithfulness and hallucinations, Task completion, Operational and business metrics.
+  - Deliverable: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An adversarial harness for a read-only assistant. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Faithfulness, hallucinations, task success and business metrics: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Tool permissions remain enforced even if an answer follows injected text.
+- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Human and model judge agreement lab
+
+A reviewer needs to know when automated ratings disagree.
+
+**Data:** Use 30 anonymized fictional outputs and recorded judge scores. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A rubric, blind review sheet and disagreement report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Faithfulness, hallucinations, task success and business metrics:** Extend the project with Faithfulness, hallucinations, task success and business metrics in Human and model judge agreement lab. Adapt this focused lab to the project data: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.  Required concepts: Faithfulness and hallucinations, Task completion, Operational and business metrics.
+  - Deliverable: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A rubric, blind review sheet and disagreement report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Faithfulness, hallucinations, task success and business metrics: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report agreement and inspect disagreements without treating model scores as truth.
+- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data minimization audit
+
+A team needs to track which fields reach each component.
+
+**Data:** Use fictional profiles containing both necessary and unnecessary fields. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A data-flow inventory and allowlisted request serializer.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Faithfulness, hallucinations, task success and business metrics:** Extend the project with Faithfulness, hallucinations, task success and business metrics in Data minimization audit. Adapt this focused lab to the project data: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.  Required concepts: Faithfulness and hallucinations, Task completion, Operational and business metrics.
+  - Deliverable: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A data-flow inventory and allowlisted request serializer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Faithfulness, hallucinations, task success and business metrics: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Disallowed fields never enter prompts, telemetry or exported examples.
+- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Release regression gate
+
+A maintainer needs a repeatable quality decision before release.
+
+**Data:** Store baseline and candidate results for 40 fixed cases. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A deterministic CI gate with explicit allowed regressions.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Faithfulness, hallucinations, task success and business metrics:** Extend the project with Faithfulness, hallucinations, task success and business metrics in Release regression gate. Adapt this focused lab to the project data: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.  Required concepts: Faithfulness and hallucinations, Task completion, Operational and business metrics.
+  - Deliverable: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A deterministic CI gate with explicit allowed regressions. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Faithfulness, hallucinations, task success and business metrics: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Fail when a critical case regresses even if average score improves.
+- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Secret exposure regression kit
+
+A maintainer needs to prevent test secrets leaking into logs.
+
+**Data:** Generate fake credentials and malformed requests only. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A redaction pipeline with log and response checks.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Faithfulness, hallucinations, task success and business metrics:** Extend the project with Faithfulness, hallucinations, task success and business metrics in Secret exposure regression kit. Adapt this focused lab to the project data: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.  Required concepts: Faithfulness and hallucinations, Task completion, Operational and business metrics.
+  - Deliverable: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A redaction pipeline with log and response checks. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Faithfulness, hallucinations, task success and business metrics: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] No seeded secret appears in outputs, including exception messages.
+- [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1118,7 +1118,7 @@ Estimate upcoming task volume and make uncertainty visible to planners.
 
 Keep retrieved content and model proposals outside trusted authorization decisions.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Faithfulness, hallucinations, task success and business metrics](eval-security.md#eval-metrics) Navigation is unrestricted.
 
@@ -1204,292 +1204,292 @@ Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized docu
 
 #### Ten project recommendations
 
-### Product review quality explorer
+### Prompt injection boundary lab
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A developer needs to prevent retrieved instructions from becoming commands.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Create 20 local malicious-document fixtures and benign controls. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Prompt injection, leakage and adversarial testing:** Build a golden task set and test evidence support, permissions and failure cases.  For Prompt injection, leakage and adversarial testing, explicitly apply Prompt injection, Leakage and privacy, Adversarial tests.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt injection, leakage and adversarial testing: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Prompt injection, leakage and adversarial testing: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Prompt injection, leakage and adversarial testing:** Build a golden task set and test evidence support, permissions and failure cases.  For Prompt injection, leakage and adversarial testing, explicitly apply Prompt injection, Leakage and privacy, Adversarial tests.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt injection, leakage and adversarial testing: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Prompt injection, leakage and adversarial testing: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Dataset and model audit studio
-
-Audit data quality and model behavior so a teammate can reproduce the findings.
-
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
-
-**Output:** A reproducible audit report with slices, evidence and a model card.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Prompt injection, leakage and adversarial testing:** Build a golden task set and test evidence support, permissions and failure cases.  For Prompt injection, leakage and adversarial testing, explicitly apply Prompt injection, Leakage and privacy, Adversarial tests.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt injection, leakage and adversarial testing: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Prompt injection, leakage and adversarial testing: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Prompt injection, leakage and adversarial testing:** Build a golden task set and test evidence support, permissions and failure cases.  For Prompt injection, leakage and adversarial testing, explicitly apply Prompt injection, Leakage and privacy, Adversarial tests.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt injection, leakage and adversarial testing: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Prompt injection, leakage and adversarial testing: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** An adversarial harness for a read-only assistant.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Prompt injection, leakage and adversarial testing:** Build a golden task set and test evidence support, permissions and failure cases.  For Prompt injection, leakage and adversarial testing, explicitly apply Prompt injection, Leakage and privacy, Adversarial tests.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
+- **Prompt injection, leakage and adversarial testing:** Implement Prompt injection, leakage and adversarial testing in Prompt injection boundary lab. Adapt this focused lab to the project data: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.  Required concepts: Prompt injection, Leakage and privacy, Adversarial tests.
+  - Deliverable: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt injection, leakage and adversarial testing: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An adversarial harness for a read-only assistant. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt injection, leakage and adversarial testing: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Prompt injection, leakage and adversarial testing: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
+- [ ] Tool permissions remain enforced even if an answer follows injected text.
+- [ ] Prompt injection, leakage and adversarial testing: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Evidence faithfulness audit
 
-Find unusual stock movements and explain which records need investigation.
+A researcher needs to identify unsupported answer claims.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Author 25 answers paired with short source passages. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Prompt injection, leakage and adversarial testing:** Build a golden task set and test evidence support, permissions and failure cases.  For Prompt injection, leakage and adversarial testing, explicitly apply Prompt injection, Leakage and privacy, Adversarial tests.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt injection, leakage and adversarial testing: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Prompt injection, leakage and adversarial testing: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A claim-level support annotation and scoring report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Prompt injection, leakage and adversarial testing:** Build a golden task set and test evidence support, permissions and failure cases.  For Prompt injection, leakage and adversarial testing, explicitly apply Prompt injection, Leakage and privacy, Adversarial tests.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
+- **Prompt injection, leakage and adversarial testing:** Extend the project with Prompt injection, leakage and adversarial testing in Evidence faithfulness audit. Adapt this focused lab to the project data: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.  Required concepts: Prompt injection, Leakage and privacy, Adversarial tests.
+  - Deliverable: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt injection, leakage and adversarial testing: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A claim-level support annotation and scoring report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt injection, leakage and adversarial testing: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Prompt injection, leakage and adversarial testing: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
+- [ ] Distinguish absent evidence from direct contradiction.
+- [ ] Prompt injection, leakage and adversarial testing: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Golden dataset workshop
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A team needs a small trustworthy evaluation set.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Author 40 questions with expected answers, sources and failure categories. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Prompt injection, leakage and adversarial testing:** Build a golden task set and test evidence support, permissions and failure cases.  For Prompt injection, leakage and adversarial testing, explicitly apply Prompt injection, Leakage and privacy, Adversarial tests.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt injection, leakage and adversarial testing: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Prompt injection, leakage and adversarial testing: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A versioned evaluation dataset and deterministic runner.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Prompt injection, leakage and adversarial testing:** Build a golden task set and test evidence support, permissions and failure cases.  For Prompt injection, leakage and adversarial testing, explicitly apply Prompt injection, Leakage and privacy, Adversarial tests.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
+- **Prompt injection, leakage and adversarial testing:** Extend the project with Prompt injection, leakage and adversarial testing in Golden dataset workshop. Adapt this focused lab to the project data: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.  Required concepts: Prompt injection, Leakage and privacy, Adversarial tests.
+  - Deliverable: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt injection, leakage and adversarial testing: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A versioned evaluation dataset and deterministic runner. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt injection, leakage and adversarial testing: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Prompt injection, leakage and adversarial testing: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
+- [ ] Separate development cases from a locked holdout and detect a seeded regression.
+- [ ] Prompt injection, leakage and adversarial testing: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Guardrail bypass experiment
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A developer needs to know where validation actually holds.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Write malformed schemas, Unicode evasions and oversized-input fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A bounded-input validation and adversarial test suite.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Prompt injection, leakage and adversarial testing:** Build a golden task set and test evidence support, permissions and failure cases.  For Prompt injection, leakage and adversarial testing, explicitly apply Prompt injection, Leakage and privacy, Adversarial tests.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
+- **Prompt injection, leakage and adversarial testing:** Extend the project with Prompt injection, leakage and adversarial testing in Guardrail bypass experiment. Adapt this focused lab to the project data: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.  Required concepts: Prompt injection, Leakage and privacy, Adversarial tests.
+  - Deliverable: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt injection, leakage and adversarial testing: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A bounded-input validation and adversarial test suite. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt injection, leakage and adversarial testing: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Prompt injection, leakage and adversarial testing: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.
+- [ ] Enforce server-side size/schema checks and document uncovered behaviors.
+- [ ] Prompt injection, leakage and adversarial testing: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Human and model judge agreement lab
+
+A reviewer needs to know when automated ratings disagree.
+
+**Data:** Use 30 anonymized fictional outputs and recorded judge scores. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A rubric, blind review sheet and disagreement report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Prompt injection, leakage and adversarial testing:** Extend the project with Prompt injection, leakage and adversarial testing in Human and model judge agreement lab. Adapt this focused lab to the project data: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.  Required concepts: Prompt injection, Leakage and privacy, Adversarial tests.
+  - Deliverable: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A rubric, blind review sheet and disagreement report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt injection, leakage and adversarial testing: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report agreement and inspect disagreements without treating model scores as truth.
+- [ ] Prompt injection, leakage and adversarial testing: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data minimization audit
+
+A team needs to track which fields reach each component.
+
+**Data:** Use fictional profiles containing both necessary and unnecessary fields. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A data-flow inventory and allowlisted request serializer.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Prompt injection, leakage and adversarial testing:** Extend the project with Prompt injection, leakage and adversarial testing in Data minimization audit. Adapt this focused lab to the project data: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.  Required concepts: Prompt injection, Leakage and privacy, Adversarial tests.
+  - Deliverable: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A data-flow inventory and allowlisted request serializer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt injection, leakage and adversarial testing: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Disallowed fields never enter prompts, telemetry or exported examples.
+- [ ] Prompt injection, leakage and adversarial testing: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Release regression gate
+
+A maintainer needs a repeatable quality decision before release.
+
+**Data:** Store baseline and candidate results for 40 fixed cases. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A deterministic CI gate with explicit allowed regressions.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Prompt injection, leakage and adversarial testing:** Extend the project with Prompt injection, leakage and adversarial testing in Release regression gate. Adapt this focused lab to the project data: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.  Required concepts: Prompt injection, Leakage and privacy, Adversarial tests.
+  - Deliverable: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A deterministic CI gate with explicit allowed regressions. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt injection, leakage and adversarial testing: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Fail when a critical case regresses even if average score improves.
+- [ ] Prompt injection, leakage and adversarial testing: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Secret exposure regression kit
+
+A maintainer needs to prevent test secrets leaking into logs.
+
+**Data:** Generate fake credentials and malformed requests only. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A redaction pipeline with log and response checks.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Prompt injection, leakage and adversarial testing:** Extend the project with Prompt injection, leakage and adversarial testing in Secret exposure regression kit. Adapt this focused lab to the project data: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.  Required concepts: Prompt injection, Leakage and privacy, Adversarial tests.
+  - Deliverable: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A redaction pipeline with log and response checks. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt injection, leakage and adversarial testing: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] No seeded secret appears in outputs, including exception messages.
+- [ ] Prompt injection, leakage and adversarial testing: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Evaluation slice explorer
+
+An analyst needs to find failures hidden by an average score.
+
+**Data:** Generate 100 labeled results across language and length slices. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A per-slice report with sample counts and uncertainty.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Prompt injection, leakage and adversarial testing:** Extend the project with Prompt injection, leakage and adversarial testing in Evaluation slice explorer. Adapt this focused lab to the project data: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.  Required concepts: Prompt injection, Leakage and privacy, Adversarial tests.
+  - Deliverable: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A per-slice report with sample counts and uncertainty. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt injection, leakage and adversarial testing: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Flag small samples and reproduce all aggregate metrics from raw cases.
+- [ ] Prompt injection, leakage and adversarial testing: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Local AI service threat model
+
+A builder needs practical boundaries for a small AI app.
+
+**Data:** Use a fictional notes assistant architecture and seeded abuse cases. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A threat model linked to tests and mitigations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Prompt injection, leakage and adversarial testing:** Extend the project with Prompt injection, leakage and adversarial testing in Local AI service threat model. Adapt this focused lab to the project data: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.  Required concepts: Prompt injection, Leakage and privacy, Adversarial tests.
+  - Deliverable: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A threat model linked to tests and mitigations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt injection, leakage and adversarial testing: Prompt injection, leakage and adversarial testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Trace each trust boundary to a concrete enforcement point and test.
+- [ ] Prompt injection, leakage and adversarial testing: Create ten malicious inputs for a mock RAG/tool app; assert no unauthorized document, secret or write operation is exposed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1503,7 +1503,7 @@ Estimate upcoming task volume and make uncertainty visible to planners.
 
 Constrain inputs and actions while making limitations visible to users.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Prompt injection, leakage and adversarial testing](eval-security.md#security-injection) Navigation is unrestricted.
 
@@ -1609,292 +1609,292 @@ Implement a fixture-based policy gate with input limits, redacted logging and sa
 
 #### Ten project recommendations
 
-### Product review quality explorer
+### Guardrail bypass experiment
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A developer needs to know where validation actually holds.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Write malformed schemas, Unicode evasions and oversized-input fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Guardrails, secrets, bias/fairness and graceful failure:** Build a golden task set and test evidence support, permissions and failure cases.  For Guardrails, secrets, bias/fairness and graceful failure, explicitly apply Guardrails, Secrets and rate limits, Bias and fairness.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Guardrails, secrets, bias/fairness and graceful failure:** Build a golden task set and test evidence support, permissions and failure cases.  For Guardrails, secrets, bias/fairness and graceful failure, explicitly apply Guardrails, Secrets and rate limits, Bias and fairness.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Dataset and model audit studio
-
-Audit data quality and model behavior so a teammate can reproduce the findings.
-
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
-
-**Output:** A reproducible audit report with slices, evidence and a model card.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Guardrails, secrets, bias/fairness and graceful failure:** Build a golden task set and test evidence support, permissions and failure cases.  For Guardrails, secrets, bias/fairness and graceful failure, explicitly apply Guardrails, Secrets and rate limits, Bias and fairness.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Guardrails, secrets, bias/fairness and graceful failure:** Build a golden task set and test evidence support, permissions and failure cases.  For Guardrails, secrets, bias/fairness and graceful failure, explicitly apply Guardrails, Secrets and rate limits, Bias and fairness.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A bounded-input validation and adversarial test suite.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Guardrails, secrets, bias/fairness and graceful failure:** Build a golden task set and test evidence support, permissions and failure cases.  For Guardrails, secrets, bias/fairness and graceful failure, explicitly apply Guardrails, Secrets and rate limits, Bias and fairness.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
+- **Guardrails, secrets, bias/fairness and graceful failure:** Implement Guardrails, secrets, bias/fairness and graceful failure in Guardrail bypass experiment. Adapt this focused lab to the project data: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.  Required concepts: Guardrails, Secrets and rate limits, Bias and fairness, Graceful failure.
+  - Deliverable: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A bounded-input validation and adversarial test suite. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Guardrails, secrets, bias/fairness and graceful failure: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
+- [ ] Enforce server-side size/schema checks and document uncovered behaviors.
+- [ ] Guardrails, secrets, bias/fairness and graceful failure: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Secret exposure regression kit
 
-Find unusual stock movements and explain which records need investigation.
+A maintainer needs to prevent test secrets leaking into logs.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Generate fake credentials and malformed requests only. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Guardrails, secrets, bias/fairness and graceful failure:** Build a golden task set and test evidence support, permissions and failure cases.  For Guardrails, secrets, bias/fairness and graceful failure, explicitly apply Guardrails, Secrets and rate limits, Bias and fairness.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A redaction pipeline with log and response checks.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Guardrails, secrets, bias/fairness and graceful failure:** Build a golden task set and test evidence support, permissions and failure cases.  For Guardrails, secrets, bias/fairness and graceful failure, explicitly apply Guardrails, Secrets and rate limits, Bias and fairness.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
+- **Guardrails, secrets, bias/fairness and graceful failure:** Implement Guardrails, secrets, bias/fairness and graceful failure in Secret exposure regression kit. Adapt this focused lab to the project data: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.  Required concepts: Guardrails, Secrets and rate limits, Bias and fairness, Graceful failure.
+  - Deliverable: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A redaction pipeline with log and response checks. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Guardrails, secrets, bias/fairness and graceful failure: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
+- [ ] No seeded secret appears in outputs, including exception messages.
+- [ ] Guardrails, secrets, bias/fairness and graceful failure: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Evidence faithfulness audit
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A researcher needs to identify unsupported answer claims.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Author 25 answers paired with short source passages. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Guardrails, secrets, bias/fairness and graceful failure:** Build a golden task set and test evidence support, permissions and failure cases.  For Guardrails, secrets, bias/fairness and graceful failure, explicitly apply Guardrails, Secrets and rate limits, Bias and fairness.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A claim-level support annotation and scoring report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Guardrails, secrets, bias/fairness and graceful failure:** Build a golden task set and test evidence support, permissions and failure cases.  For Guardrails, secrets, bias/fairness and graceful failure, explicitly apply Guardrails, Secrets and rate limits, Bias and fairness.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
+- **Guardrails, secrets, bias/fairness and graceful failure:** Extend the project with Guardrails, secrets, bias/fairness and graceful failure in Evidence faithfulness audit. Adapt this focused lab to the project data: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.  Required concepts: Guardrails, Secrets and rate limits, Bias and fairness, Graceful failure.
+  - Deliverable: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A claim-level support annotation and scoring report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Guardrails, secrets, bias/fairness and graceful failure: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
+- [ ] Distinguish absent evidence from direct contradiction.
+- [ ] Guardrails, secrets, bias/fairness and graceful failure: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Golden dataset workshop
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A team needs a small trustworthy evaluation set.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Author 40 questions with expected answers, sources and failure categories. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A versioned evaluation dataset and deterministic runner.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Guardrails, secrets, bias/fairness and graceful failure:** Build a golden task set and test evidence support, permissions and failure cases.  For Guardrails, secrets, bias/fairness and graceful failure, explicitly apply Guardrails, Secrets and rate limits, Bias and fairness.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
+- **Guardrails, secrets, bias/fairness and graceful failure:** Extend the project with Guardrails, secrets, bias/fairness and graceful failure in Golden dataset workshop. Adapt this focused lab to the project data: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.  Required concepts: Guardrails, Secrets and rate limits, Bias and fairness, Graceful failure.
+  - Deliverable: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A versioned evaluation dataset and deterministic runner. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Guardrails, secrets, bias/fairness and graceful failure: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.
+- [ ] Separate development cases from a locked holdout and detect a seeded regression.
+- [ ] Guardrails, secrets, bias/fairness and graceful failure: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Prompt injection boundary lab
+
+A developer needs to prevent retrieved instructions from becoming commands.
+
+**Data:** Create 20 local malicious-document fixtures and benign controls. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An adversarial harness for a read-only assistant.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Guardrails, secrets, bias/fairness and graceful failure:** Extend the project with Guardrails, secrets, bias/fairness and graceful failure in Prompt injection boundary lab. Adapt this focused lab to the project data: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.  Required concepts: Guardrails, Secrets and rate limits, Bias and fairness, Graceful failure.
+  - Deliverable: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An adversarial harness for a read-only assistant. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Guardrails, secrets, bias/fairness and graceful failure: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Tool permissions remain enforced even if an answer follows injected text.
+- [ ] Guardrails, secrets, bias/fairness and graceful failure: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Human and model judge agreement lab
+
+A reviewer needs to know when automated ratings disagree.
+
+**Data:** Use 30 anonymized fictional outputs and recorded judge scores. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A rubric, blind review sheet and disagreement report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Guardrails, secrets, bias/fairness and graceful failure:** Extend the project with Guardrails, secrets, bias/fairness and graceful failure in Human and model judge agreement lab. Adapt this focused lab to the project data: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.  Required concepts: Guardrails, Secrets and rate limits, Bias and fairness, Graceful failure.
+  - Deliverable: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A rubric, blind review sheet and disagreement report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Guardrails, secrets, bias/fairness and graceful failure: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report agreement and inspect disagreements without treating model scores as truth.
+- [ ] Guardrails, secrets, bias/fairness and graceful failure: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data minimization audit
+
+A team needs to track which fields reach each component.
+
+**Data:** Use fictional profiles containing both necessary and unnecessary fields. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A data-flow inventory and allowlisted request serializer.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Guardrails, secrets, bias/fairness and graceful failure:** Extend the project with Guardrails, secrets, bias/fairness and graceful failure in Data minimization audit. Adapt this focused lab to the project data: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.  Required concepts: Guardrails, Secrets and rate limits, Bias and fairness, Graceful failure.
+  - Deliverable: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A data-flow inventory and allowlisted request serializer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Guardrails, secrets, bias/fairness and graceful failure: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Disallowed fields never enter prompts, telemetry or exported examples.
+- [ ] Guardrails, secrets, bias/fairness and graceful failure: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Release regression gate
+
+A maintainer needs a repeatable quality decision before release.
+
+**Data:** Store baseline and candidate results for 40 fixed cases. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A deterministic CI gate with explicit allowed regressions.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Guardrails, secrets, bias/fairness and graceful failure:** Extend the project with Guardrails, secrets, bias/fairness and graceful failure in Release regression gate. Adapt this focused lab to the project data: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.  Required concepts: Guardrails, Secrets and rate limits, Bias and fairness, Graceful failure.
+  - Deliverable: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A deterministic CI gate with explicit allowed regressions. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Guardrails, secrets, bias/fairness and graceful failure: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Fail when a critical case regresses even if average score improves.
+- [ ] Guardrails, secrets, bias/fairness and graceful failure: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Evaluation slice explorer
+
+An analyst needs to find failures hidden by an average score.
+
+**Data:** Generate 100 labeled results across language and length slices. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A per-slice report with sample counts and uncertainty.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Guardrails, secrets, bias/fairness and graceful failure:** Extend the project with Guardrails, secrets, bias/fairness and graceful failure in Evaluation slice explorer. Adapt this focused lab to the project data: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.  Required concepts: Guardrails, Secrets and rate limits, Bias and fairness, Graceful failure.
+  - Deliverable: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A per-slice report with sample counts and uncertainty. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Guardrails, secrets, bias/fairness and graceful failure: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Flag small samples and reproduce all aggregate metrics from raw cases.
+- [ ] Guardrails, secrets, bias/fairness and graceful failure: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Local AI service threat model
+
+A builder needs practical boundaries for a small AI app.
+
+**Data:** Use a fictional notes assistant architecture and seeded abuse cases. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A threat model linked to tests and mitigations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Guardrails, secrets, bias/fairness and graceful failure:** Extend the project with Guardrails, secrets, bias/fairness and graceful failure in Local AI service threat model. Adapt this focused lab to the project data: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.  Required concepts: Guardrails, Secrets and rate limits, Bias and fairness, Graceful failure.
+  - Deliverable: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A threat model linked to tests and mitigations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Guardrails, secrets, bias/fairness and graceful failure: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Trace each trust boundary to a concrete enforcement point and test.
+- [ ] Guardrails, secrets, bias/fairness and graceful failure: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1908,7 +1908,7 @@ Estimate upcoming task volume and make uncertainty visible to planners.
 
 Avoid shipping a change because an unreliable judge or a tiny benchmark produced an attractive average.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Essential · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [Human evaluation, LLM judges and error analysis](eval-security.md#eval-human-judge) Navigation is unrestricted.
 
@@ -1994,292 +1994,292 @@ Use recorded judge outputs for twenty paired answers, swap presentation order an
 
 #### Ten project recommendations
 
-### Product review quality explorer
+### Human and model judge agreement lab
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A reviewer needs to know when automated ratings disagree.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Use 30 anonymized fictional outputs and recorded judge scores. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Judge rubrics, disagreement and uncertain improvements:** Build a golden task set and test evidence support, permissions and failure cases.  For Judge rubrics, disagreement and uncertain improvements, explicitly apply Operational rubrics, Position and presentation bias, Human disagreement.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Judge rubrics, disagreement and uncertain improvements: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Judge rubrics, disagreement and uncertain improvements: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Judge rubrics, disagreement and uncertain improvements:** Build a golden task set and test evidence support, permissions and failure cases.  For Judge rubrics, disagreement and uncertain improvements, explicitly apply Operational rubrics, Position and presentation bias, Human disagreement.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Judge rubrics, disagreement and uncertain improvements: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Judge rubrics, disagreement and uncertain improvements: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Dataset and model audit studio
-
-Audit data quality and model behavior so a teammate can reproduce the findings.
-
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
-
-**Output:** A reproducible audit report with slices, evidence and a model card.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Judge rubrics, disagreement and uncertain improvements:** Build a golden task set and test evidence support, permissions and failure cases.  For Judge rubrics, disagreement and uncertain improvements, explicitly apply Operational rubrics, Position and presentation bias, Human disagreement.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Judge rubrics, disagreement and uncertain improvements: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Judge rubrics, disagreement and uncertain improvements: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Judge rubrics, disagreement and uncertain improvements:** Build a golden task set and test evidence support, permissions and failure cases.  For Judge rubrics, disagreement and uncertain improvements, explicitly apply Operational rubrics, Position and presentation bias, Human disagreement.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Judge rubrics, disagreement and uncertain improvements: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Judge rubrics, disagreement and uncertain improvements: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A rubric, blind review sheet and disagreement report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Judge rubrics, disagreement and uncertain improvements:** Build a golden task set and test evidence support, permissions and failure cases.  For Judge rubrics, disagreement and uncertain improvements, explicitly apply Operational rubrics, Position and presentation bias, Human disagreement.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
+- **Judge rubrics, disagreement and uncertain improvements:** Implement Judge rubrics, disagreement and uncertain improvements in Human and model judge agreement lab. Adapt this focused lab to the project data: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.  Required concepts: Operational rubrics, Position and presentation bias, Human disagreement, Paired uncertainty, Regression slices and holdouts.
+  - Deliverable: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Judge rubrics, disagreement and uncertain improvements: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A rubric, blind review sheet and disagreement report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Judge rubrics, disagreement and uncertain improvements: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Judge rubrics, disagreement and uncertain improvements: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
+- [ ] Report agreement and inspect disagreements without treating model scores as truth.
+- [ ] Judge rubrics, disagreement and uncertain improvements: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Evidence faithfulness audit
 
-Find unusual stock movements and explain which records need investigation.
+A researcher needs to identify unsupported answer claims.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Author 25 answers paired with short source passages. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Judge rubrics, disagreement and uncertain improvements:** Build a golden task set and test evidence support, permissions and failure cases.  For Judge rubrics, disagreement and uncertain improvements, explicitly apply Operational rubrics, Position and presentation bias, Human disagreement.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Judge rubrics, disagreement and uncertain improvements: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Judge rubrics, disagreement and uncertain improvements: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A claim-level support annotation and scoring report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Judge rubrics, disagreement and uncertain improvements:** Build a golden task set and test evidence support, permissions and failure cases.  For Judge rubrics, disagreement and uncertain improvements, explicitly apply Operational rubrics, Position and presentation bias, Human disagreement.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
+- **Judge rubrics, disagreement and uncertain improvements:** Extend the project with Judge rubrics, disagreement and uncertain improvements in Evidence faithfulness audit. Adapt this focused lab to the project data: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.  Required concepts: Operational rubrics, Position and presentation bias, Human disagreement, Paired uncertainty, Regression slices and holdouts.
+  - Deliverable: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Judge rubrics, disagreement and uncertain improvements: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A claim-level support annotation and scoring report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Judge rubrics, disagreement and uncertain improvements: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Judge rubrics, disagreement and uncertain improvements: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
+- [ ] Distinguish absent evidence from direct contradiction.
+- [ ] Judge rubrics, disagreement and uncertain improvements: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Golden dataset workshop
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A team needs a small trustworthy evaluation set.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Author 40 questions with expected answers, sources and failure categories. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Judge rubrics, disagreement and uncertain improvements:** Build a golden task set and test evidence support, permissions and failure cases.  For Judge rubrics, disagreement and uncertain improvements, explicitly apply Operational rubrics, Position and presentation bias, Human disagreement.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Judge rubrics, disagreement and uncertain improvements: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Judge rubrics, disagreement and uncertain improvements: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A versioned evaluation dataset and deterministic runner.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Judge rubrics, disagreement and uncertain improvements:** Build a golden task set and test evidence support, permissions and failure cases.  For Judge rubrics, disagreement and uncertain improvements, explicitly apply Operational rubrics, Position and presentation bias, Human disagreement.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
+- **Judge rubrics, disagreement and uncertain improvements:** Extend the project with Judge rubrics, disagreement and uncertain improvements in Golden dataset workshop. Adapt this focused lab to the project data: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.  Required concepts: Operational rubrics, Position and presentation bias, Human disagreement, Paired uncertainty, Regression slices and holdouts.
+  - Deliverable: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Judge rubrics, disagreement and uncertain improvements: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A versioned evaluation dataset and deterministic runner. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Judge rubrics, disagreement and uncertain improvements: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Judge rubrics, disagreement and uncertain improvements: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
+- [ ] Separate development cases from a locked holdout and detect a seeded regression.
+- [ ] Judge rubrics, disagreement and uncertain improvements: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Guardrail bypass experiment
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A developer needs to know where validation actually holds.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Write malformed schemas, Unicode evasions and oversized-input fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A bounded-input validation and adversarial test suite.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Judge rubrics, disagreement and uncertain improvements:** Build a golden task set and test evidence support, permissions and failure cases.  For Judge rubrics, disagreement and uncertain improvements, explicitly apply Operational rubrics, Position and presentation bias, Human disagreement.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
+- **Judge rubrics, disagreement and uncertain improvements:** Extend the project with Judge rubrics, disagreement and uncertain improvements in Guardrail bypass experiment. Adapt this focused lab to the project data: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.  Required concepts: Operational rubrics, Position and presentation bias, Human disagreement, Paired uncertainty, Regression slices and holdouts.
+  - Deliverable: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Judge rubrics, disagreement and uncertain improvements: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A bounded-input validation and adversarial test suite. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Judge rubrics, disagreement and uncertain improvements: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Judge rubrics, disagreement and uncertain improvements: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.
+- [ ] Enforce server-side size/schema checks and document uncovered behaviors.
+- [ ] Judge rubrics, disagreement and uncertain improvements: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Prompt injection boundary lab
+
+A developer needs to prevent retrieved instructions from becoming commands.
+
+**Data:** Create 20 local malicious-document fixtures and benign controls. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An adversarial harness for a read-only assistant.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Judge rubrics, disagreement and uncertain improvements:** Extend the project with Judge rubrics, disagreement and uncertain improvements in Prompt injection boundary lab. Adapt this focused lab to the project data: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.  Required concepts: Operational rubrics, Position and presentation bias, Human disagreement, Paired uncertainty, Regression slices and holdouts.
+  - Deliverable: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An adversarial harness for a read-only assistant. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Judge rubrics, disagreement and uncertain improvements: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Tool permissions remain enforced even if an answer follows injected text.
+- [ ] Judge rubrics, disagreement and uncertain improvements: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data minimization audit
+
+A team needs to track which fields reach each component.
+
+**Data:** Use fictional profiles containing both necessary and unnecessary fields. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A data-flow inventory and allowlisted request serializer.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Judge rubrics, disagreement and uncertain improvements:** Extend the project with Judge rubrics, disagreement and uncertain improvements in Data minimization audit. Adapt this focused lab to the project data: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.  Required concepts: Operational rubrics, Position and presentation bias, Human disagreement, Paired uncertainty, Regression slices and holdouts.
+  - Deliverable: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A data-flow inventory and allowlisted request serializer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Judge rubrics, disagreement and uncertain improvements: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Disallowed fields never enter prompts, telemetry or exported examples.
+- [ ] Judge rubrics, disagreement and uncertain improvements: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Release regression gate
+
+A maintainer needs a repeatable quality decision before release.
+
+**Data:** Store baseline and candidate results for 40 fixed cases. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A deterministic CI gate with explicit allowed regressions.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Judge rubrics, disagreement and uncertain improvements:** Extend the project with Judge rubrics, disagreement and uncertain improvements in Release regression gate. Adapt this focused lab to the project data: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.  Required concepts: Operational rubrics, Position and presentation bias, Human disagreement, Paired uncertainty, Regression slices and holdouts.
+  - Deliverable: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A deterministic CI gate with explicit allowed regressions. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Judge rubrics, disagreement and uncertain improvements: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Fail when a critical case regresses even if average score improves.
+- [ ] Judge rubrics, disagreement and uncertain improvements: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Secret exposure regression kit
+
+A maintainer needs to prevent test secrets leaking into logs.
+
+**Data:** Generate fake credentials and malformed requests only. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A redaction pipeline with log and response checks.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Judge rubrics, disagreement and uncertain improvements:** Extend the project with Judge rubrics, disagreement and uncertain improvements in Secret exposure regression kit. Adapt this focused lab to the project data: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.  Required concepts: Operational rubrics, Position and presentation bias, Human disagreement, Paired uncertainty, Regression slices and holdouts.
+  - Deliverable: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A redaction pipeline with log and response checks. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Judge rubrics, disagreement and uncertain improvements: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] No seeded secret appears in outputs, including exception messages.
+- [ ] Judge rubrics, disagreement and uncertain improvements: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Evaluation slice explorer
+
+An analyst needs to find failures hidden by an average score.
+
+**Data:** Generate 100 labeled results across language and length slices. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A per-slice report with sample counts and uncertainty.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Judge rubrics, disagreement and uncertain improvements:** Extend the project with Judge rubrics, disagreement and uncertain improvements in Evaluation slice explorer. Adapt this focused lab to the project data: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.  Required concepts: Operational rubrics, Position and presentation bias, Human disagreement, Paired uncertainty, Regression slices and holdouts.
+  - Deliverable: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A per-slice report with sample counts and uncertainty. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Judge rubrics, disagreement and uncertain improvements: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Flag small samples and reproduce all aggregate metrics from raw cases.
+- [ ] Judge rubrics, disagreement and uncertain improvements: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Local AI service threat model
+
+A builder needs practical boundaries for a small AI app.
+
+**Data:** Use a fictional notes assistant architecture and seeded abuse cases. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A threat model linked to tests and mitigations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Judge rubrics, disagreement and uncertain improvements:** Extend the project with Judge rubrics, disagreement and uncertain improvements in Local AI service threat model. Adapt this focused lab to the project data: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.  Required concepts: Operational rubrics, Position and presentation bias, Human disagreement, Paired uncertainty, Regression slices and holdouts.
+  - Deliverable: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A threat model linked to tests and mitigations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Judge rubrics, disagreement and uncertain improvements: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Trace each trust boundary to a concrete enforcement point and test.
+- [ ] Judge rubrics, disagreement and uncertain improvements: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2293,7 +2293,7 @@ Estimate upcoming task volume and make uncertainty visible to planners.
 
 Place controls at real trust boundaries rather than assuming a prompt can secure every operation.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Essential · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [Prompt injection, leakage and adversarial testing](eval-security.md#security-injection) Navigation is unrestricted.
 
@@ -2414,292 +2414,1124 @@ Threat-model a local document assistant using fake secrets and recorded model re
 
 #### Ten project recommendations
 
-### Product review quality explorer
+### Data minimization audit
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A team needs to track which fields reach each component.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Use fictional profiles containing both necessary and unnecessary fields. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Threat modelling, indirect injection and data minimisation:** Build a golden task set and test evidence support, permissions and failure cases.  For Threat modelling, indirect injection and data minimisation, explicitly apply Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Threat modelling, indirect injection and data minimisation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Threat modelling, indirect injection and data minimisation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Threat modelling, indirect injection and data minimisation:** Build a golden task set and test evidence support, permissions and failure cases.  For Threat modelling, indirect injection and data minimisation, explicitly apply Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Threat modelling, indirect injection and data minimisation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Threat modelling, indirect injection and data minimisation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Dataset and model audit studio
-
-Audit data quality and model behavior so a teammate can reproduce the findings.
-
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
-
-**Output:** A reproducible audit report with slices, evidence and a model card.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Threat modelling, indirect injection and data minimisation:** Build a golden task set and test evidence support, permissions and failure cases.  For Threat modelling, indirect injection and data minimisation, explicitly apply Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Threat modelling, indirect injection and data minimisation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Threat modelling, indirect injection and data minimisation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Threat modelling, indirect injection and data minimisation:** Build a golden task set and test evidence support, permissions and failure cases.  For Threat modelling, indirect injection and data minimisation, explicitly apply Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Threat modelling, indirect injection and data minimisation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Threat modelling, indirect injection and data minimisation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A data-flow inventory and allowlisted request serializer.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Threat modelling, indirect injection and data minimisation:** Build a golden task set and test evidence support, permissions and failure cases.  For Threat modelling, indirect injection and data minimisation, explicitly apply Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
+- **Threat modelling, indirect injection and data minimisation:** Implement Threat modelling, indirect injection and data minimisation in Data minimization audit. Adapt this focused lab to the project data: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.  Required concepts: Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation, Data minimisation and logging, Defence-in-depth testing.
+  - Deliverable: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Threat modelling, indirect injection and data minimisation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A data-flow inventory and allowlisted request serializer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Threat modelling, indirect injection and data minimisation: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Threat modelling, indirect injection and data minimisation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
+- [ ] Disallowed fields never enter prompts, telemetry or exported examples.
+- [ ] Threat modelling, indirect injection and data minimisation: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Local AI service threat model
 
-Find unusual stock movements and explain which records need investigation.
+A builder needs practical boundaries for a small AI app.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Use a fictional notes assistant architecture and seeded abuse cases. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Threat modelling, indirect injection and data minimisation:** Build a golden task set and test evidence support, permissions and failure cases.  For Threat modelling, indirect injection and data minimisation, explicitly apply Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Threat modelling, indirect injection and data minimisation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Threat modelling, indirect injection and data minimisation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A threat model linked to tests and mitigations.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Threat modelling, indirect injection and data minimisation:** Build a golden task set and test evidence support, permissions and failure cases.  For Threat modelling, indirect injection and data minimisation, explicitly apply Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
+- **Threat modelling, indirect injection and data minimisation:** Implement Threat modelling, indirect injection and data minimisation in Local AI service threat model. Adapt this focused lab to the project data: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.  Required concepts: Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation, Data minimisation and logging, Defence-in-depth testing.
+  - Deliverable: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Threat modelling, indirect injection and data minimisation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A threat model linked to tests and mitigations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Threat modelling, indirect injection and data minimisation: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Threat modelling, indirect injection and data minimisation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
+- [ ] Trace each trust boundary to a concrete enforcement point and test.
+- [ ] Threat modelling, indirect injection and data minimisation: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Evidence faithfulness audit
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A researcher needs to identify unsupported answer claims.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Author 25 answers paired with short source passages. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Threat modelling, indirect injection and data minimisation:** Build a golden task set and test evidence support, permissions and failure cases.  For Threat modelling, indirect injection and data minimisation, explicitly apply Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Threat modelling, indirect injection and data minimisation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Threat modelling, indirect injection and data minimisation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A claim-level support annotation and scoring report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Threat modelling, indirect injection and data minimisation:** Build a golden task set and test evidence support, permissions and failure cases.  For Threat modelling, indirect injection and data minimisation, explicitly apply Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
+- **Threat modelling, indirect injection and data minimisation:** Extend the project with Threat modelling, indirect injection and data minimisation in Evidence faithfulness audit. Adapt this focused lab to the project data: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.  Required concepts: Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation, Data minimisation and logging, Defence-in-depth testing.
+  - Deliverable: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Threat modelling, indirect injection and data minimisation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A claim-level support annotation and scoring report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Threat modelling, indirect injection and data minimisation: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Threat modelling, indirect injection and data minimisation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
+- [ ] Distinguish absent evidence from direct contradiction.
+- [ ] Threat modelling, indirect injection and data minimisation: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Golden dataset workshop
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A team needs a small trustworthy evaluation set.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Author 40 questions with expected answers, sources and failure categories. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A versioned evaluation dataset and deterministic runner.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Threat modelling, indirect injection and data minimisation:** Build a golden task set and test evidence support, permissions and failure cases.  For Threat modelling, indirect injection and data minimisation, explicitly apply Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation.
-  - Deliverable: An evaluation dataset, security checks and a results report
-  - Check: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
+- **Threat modelling, indirect injection and data minimisation:** Extend the project with Threat modelling, indirect injection and data minimisation in Golden dataset workshop. Adapt this focused lab to the project data: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.  Required concepts: Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation, Data minimisation and logging, Defence-in-depth testing.
+  - Deliverable: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Threat modelling, indirect injection and data minimisation: An evaluation dataset, security checks and a results report
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A versioned evaluation dataset and deterministic runner. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Threat modelling, indirect injection and data minimisation: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Threat modelling, indirect injection and data minimisation: Evaluate per-case results, adversarial inputs, latency and a meaningful error slice. Adapt the lesson lab: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.
+- [ ] Separate development cases from a locked holdout and detect a seeded regression.
+- [ ] Threat modelling, indirect injection and data minimisation: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Guardrail bypass experiment
+
+A developer needs to know where validation actually holds.
+
+**Data:** Write malformed schemas, Unicode evasions and oversized-input fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A bounded-input validation and adversarial test suite.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Threat modelling, indirect injection and data minimisation:** Extend the project with Threat modelling, indirect injection and data minimisation in Guardrail bypass experiment. Adapt this focused lab to the project data: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.  Required concepts: Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation, Data minimisation and logging, Defence-in-depth testing.
+  - Deliverable: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A bounded-input validation and adversarial test suite. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Threat modelling, indirect injection and data minimisation: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Enforce server-side size/schema checks and document uncovered behaviors.
+- [ ] Threat modelling, indirect injection and data minimisation: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Prompt injection boundary lab
+
+A developer needs to prevent retrieved instructions from becoming commands.
+
+**Data:** Create 20 local malicious-document fixtures and benign controls. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An adversarial harness for a read-only assistant.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Threat modelling, indirect injection and data minimisation:** Extend the project with Threat modelling, indirect injection and data minimisation in Prompt injection boundary lab. Adapt this focused lab to the project data: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.  Required concepts: Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation, Data minimisation and logging, Defence-in-depth testing.
+  - Deliverable: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An adversarial harness for a read-only assistant. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Threat modelling, indirect injection and data minimisation: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Tool permissions remain enforced even if an answer follows injected text.
+- [ ] Threat modelling, indirect injection and data minimisation: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Human and model judge agreement lab
+
+A reviewer needs to know when automated ratings disagree.
+
+**Data:** Use 30 anonymized fictional outputs and recorded judge scores. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A rubric, blind review sheet and disagreement report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Threat modelling, indirect injection and data minimisation:** Extend the project with Threat modelling, indirect injection and data minimisation in Human and model judge agreement lab. Adapt this focused lab to the project data: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.  Required concepts: Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation, Data minimisation and logging, Defence-in-depth testing.
+  - Deliverable: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A rubric, blind review sheet and disagreement report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Threat modelling, indirect injection and data minimisation: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report agreement and inspect disagreements without treating model scores as truth.
+- [ ] Threat modelling, indirect injection and data minimisation: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Release regression gate
+
+A maintainer needs a repeatable quality decision before release.
+
+**Data:** Store baseline and candidate results for 40 fixed cases. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A deterministic CI gate with explicit allowed regressions.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Threat modelling, indirect injection and data minimisation:** Extend the project with Threat modelling, indirect injection and data minimisation in Release regression gate. Adapt this focused lab to the project data: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.  Required concepts: Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation, Data minimisation and logging, Defence-in-depth testing.
+  - Deliverable: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A deterministic CI gate with explicit allowed regressions. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Threat modelling, indirect injection and data minimisation: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Fail when a critical case regresses even if average score improves.
+- [ ] Threat modelling, indirect injection and data minimisation: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Secret exposure regression kit
+
+A maintainer needs to prevent test secrets leaking into logs.
+
+**Data:** Generate fake credentials and malformed requests only. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A redaction pipeline with log and response checks.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Threat modelling, indirect injection and data minimisation:** Extend the project with Threat modelling, indirect injection and data minimisation in Secret exposure regression kit. Adapt this focused lab to the project data: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.  Required concepts: Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation, Data minimisation and logging, Defence-in-depth testing.
+  - Deliverable: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A redaction pipeline with log and response checks. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Threat modelling, indirect injection and data minimisation: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] No seeded secret appears in outputs, including exception messages.
+- [ ] Threat modelling, indirect injection and data minimisation: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Evaluation slice explorer
+
+An analyst needs to find failures hidden by an average score.
+
+**Data:** Generate 100 labeled results across language and length slices. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A per-slice report with sample counts and uncertainty.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Threat modelling, indirect injection and data minimisation:** Extend the project with Threat modelling, indirect injection and data minimisation in Evaluation slice explorer. Adapt this focused lab to the project data: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.  Required concepts: Assets and trust boundaries, Indirect prompt injection, Least privilege and output validation, Data minimisation and logging, Defence-in-depth testing.
+  - Deliverable: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A per-slice report with sample counts and uncertainty. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Threat modelling, indirect injection and data minimisation: Threat modelling, indirect injection and data minimisation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Flag small samples and reproduce all aggregate metrics from raw cases.
+- [ ] Threat modelling, indirect injection and data minimisation: Threat-model a local document assistant using fake secrets and recorded model responses. Add adversarial documents, permission checks, output validation and log redaction; report the attack cases each boundary blocks and the remaining limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Output handling, model supply chains and resource limits
+
+<a id="security-output-supply"></a>
+
+### Output handling, model supply chains and resource limits
+
+Output handling, model supply chains and resource limits helps you make explainable engineering decisions and test failure cases. Build the experiment below before relying on the concept in an AI system.
+
+**Priority:** Essential · **Study:** 4h · **Practice:** 5h
+
+**Prerequisites:** [Threat modelling, indirect injection and data minimisation](eval-security.md#security-threat-boundaries) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Supply-chain provenance:** Downloaded models, plugins and dependencies are separate trust decisions from a model's textual answers.
+  - Example: Record origin and revision for every executable dependency in a toy manifest.
+  - Videos:
+    - [OWASP LLM01 — prompt injection](https://www.youtube.com/watch?v=dq5jD_qE1Cg) · Vandana Verma · Security explanation
+      - Explains: Direct/indirect prompt injection and application trust boundaries.
+      - Useful because: Design malicious-input tests rather than assuming a prompt alone enforces permissions.
+      - Watch for: Focus on supply-chain provenance. Then reproduce the lesson example: Record origin and revision for every executable dependency in a toy manifest.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=dq5jD_qE1Cg
+    - [Deep dive into LLM evaluation](https://www.youtube.com/watch?v=7EcznH0-of8) · Weights & Biases · Workshop
+      - Explains: Evaluation datasets, model quality checks and retrieval evaluation.
+      - Useful because: Use the evaluation methodology with local fixtures; hosted tracking accounts are optional.
+      - Watch for: Focus on supply-chain provenance. Then reproduce the lesson example: Record origin and revision for every executable dependency in a toy manifest.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=7EcznH0-of8
+- [ ] **Unsafe output handling:** Generated text must not become executable HTML, SQL or shell syntax without a trusted boundary.
+  - Example: Test a response containing an HTML handler and a proposed SQL write.
+  - Videos:
+    - [OWASP LLM01 — prompt injection](https://www.youtube.com/watch?v=dq5jD_qE1Cg) · Vandana Verma · Security explanation
+      - Explains: Direct/indirect prompt injection and application trust boundaries.
+      - Useful because: Design malicious-input tests rather than assuming a prompt alone enforces permissions.
+      - Watch for: Focus on unsafe output handling. Then reproduce the lesson example: Test a response containing an HTML handler and a proposed SQL write.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=dq5jD_qE1Cg
+    - [Deep dive into LLM evaluation](https://www.youtube.com/watch?v=7EcznH0-of8) · Weights & Biases · Workshop
+      - Explains: Evaluation datasets, model quality checks and retrieval evaluation.
+      - Useful because: Use the evaluation methodology with local fixtures; hosted tracking accounts are optional.
+      - Watch for: Focus on unsafe output handling. Then reproduce the lesson example: Test a response containing an HTML handler and a proposed SQL write.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=7EcznH0-of8
+- [ ] **Retrieval poisoning:** An attacker-controlled document can manipulate retrieval or introduce misleading evidence.
+  - Example: Insert a conflicting source into a fixture corpus and trace its influence.
+  - Videos:
+    - [OWASP LLM01 — prompt injection](https://www.youtube.com/watch?v=dq5jD_qE1Cg) · Vandana Verma · Security explanation
+      - Explains: Direct/indirect prompt injection and application trust boundaries.
+      - Useful because: Design malicious-input tests rather than assuming a prompt alone enforces permissions.
+      - Watch for: Focus on retrieval poisoning. Then reproduce the lesson example: Insert a conflicting source into a fixture corpus and trace its influence.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=dq5jD_qE1Cg
+    - [Deep dive into LLM evaluation](https://www.youtube.com/watch?v=7EcznH0-of8) · Weights & Biases · Workshop
+      - Explains: Evaluation datasets, model quality checks and retrieval evaluation.
+      - Useful because: Use the evaluation methodology with local fixtures; hosted tracking accounts are optional.
+      - Watch for: Focus on retrieval poisoning. Then reproduce the lesson example: Insert a conflicting source into a fixture corpus and trace its influence.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=7EcznH0-of8
+- [ ] **Unbounded consumption:** Token, payload, time and tool-call budgets limit denial-of-service and accidental loops.
+  - Example: Reject an oversized input and stop a workflow after five tool calls.
+  - Videos:
+    - [OWASP LLM01 — prompt injection](https://www.youtube.com/watch?v=dq5jD_qE1Cg) · Vandana Verma · Security explanation
+      - Explains: Direct/indirect prompt injection and application trust boundaries.
+      - Useful because: Design malicious-input tests rather than assuming a prompt alone enforces permissions.
+      - Watch for: Focus on unbounded consumption. Then reproduce the lesson example: Reject an oversized input and stop a workflow after five tool calls.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=dq5jD_qE1Cg
+    - [Deep dive into LLM evaluation](https://www.youtube.com/watch?v=7EcznH0-of8) · Weights & Biases · Workshop
+      - Explains: Evaluation datasets, model quality checks and retrieval evaluation.
+      - Useful because: Use the evaluation methodology with local fixtures; hosted tracking accounts are optional.
+      - Watch for: Focus on unbounded consumption. Then reproduce the lesson example: Reject an oversized input and stop a workflow after five tool calls.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=7EcznH0-of8
+- [ ] **Failure containment:** A rejected or failed action should not leave partial writes or hidden side effects.
+  - Example: Fail a multi-step local operation after validation and inspect stored state.
+  - Videos:
+    - [OWASP LLM01 — prompt injection](https://www.youtube.com/watch?v=dq5jD_qE1Cg) · Vandana Verma · Security explanation
+      - Explains: Direct/indirect prompt injection and application trust boundaries.
+      - Useful because: Design malicious-input tests rather than assuming a prompt alone enforces permissions.
+      - Watch for: Focus on failure containment. Then reproduce the lesson example: Fail a multi-step local operation after validation and inspect stored state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=dq5jD_qE1Cg
+    - [Deep dive into LLM evaluation](https://www.youtube.com/watch?v=7EcznH0-of8) · Weights & Biases · Workshop
+      - Explains: Evaluation datasets, model quality checks and retrieval evaluation.
+      - Useful because: Use the evaluation methodology with local fixtures; hosted tracking accounts are optional.
+      - Watch for: Focus on failure containment. Then reproduce the lesson example: Fail a multi-step local operation after validation and inspect stored state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=7EcznH0-of8
+
+#### YouTube: focused explanations and full courses
+
+- [OWASP LLM01 — prompt injection](https://www.youtube.com/watch?v=dq5jD_qE1Cg) · Vandana Verma · Security explanation
+  - Explains: Direct/indirect prompt injection and application trust boundaries.
+  - Useful because: Design malicious-input tests rather than assuming a prompt alone enforces permissions.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=dq5jD_qE1Cg
+- [Deep dive into LLM evaluation](https://www.youtube.com/watch?v=7EcznH0-of8) · Weights & Biases · Workshop
+  - Explains: Evaluation datasets, model quality checks and retrieval evaluation.
+  - Useful because: Use the evaluation methodology with local fixtures; hosted tracking accounts are optional.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=7EcznH0-of8
+
+#### Free written resources
+
+1. [Official reference: Output handling, model supply chains and resource limits](https://genai.owasp.org/llm-top-10/) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+2. [OWASP: LLM prompt injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) — Free; no registration required. No paid materials required.
+
+#### Lab: Output handling, model supply chains and resource limits
+
+Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.
+
+**Deliverables**
+
+- Runnable CPU notebook or script with deterministic fixtures
+- Measured outputs, failure cases and a README explaining decisions
+
+**Completion checks**
+
+- [ ] Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.
+- [ ] Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+#### Ten project recommendations
+
+### Evidence faithfulness audit
+
+A researcher needs to identify unsupported answer claims.
+
+**Data:** Author 25 answers paired with short source passages. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A claim-level support annotation and scoring report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Output handling, model supply chains and resource limits:** Extend the project with Output handling, model supply chains and resource limits in Evidence faithfulness audit. Adapt this focused lab to the project data: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.  Required concepts: Supply-chain provenance, Unsafe output handling, Retrieval poisoning, Unbounded consumption, Failure containment.
+  - Deliverable: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A claim-level support annotation and scoring report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Output handling, model supply chains and resource limits: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Distinguish absent evidence from direct contradiction.
+- [ ] Output handling, model supply chains and resource limits: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Golden dataset workshop
+
+A team needs a small trustworthy evaluation set.
+
+**Data:** Author 40 questions with expected answers, sources and failure categories. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A versioned evaluation dataset and deterministic runner.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Output handling, model supply chains and resource limits:** Extend the project with Output handling, model supply chains and resource limits in Golden dataset workshop. Adapt this focused lab to the project data: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.  Required concepts: Supply-chain provenance, Unsafe output handling, Retrieval poisoning, Unbounded consumption, Failure containment.
+  - Deliverable: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A versioned evaluation dataset and deterministic runner. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Output handling, model supply chains and resource limits: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Separate development cases from a locked holdout and detect a seeded regression.
+- [ ] Output handling, model supply chains and resource limits: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Guardrail bypass experiment
+
+A developer needs to know where validation actually holds.
+
+**Data:** Write malformed schemas, Unicode evasions and oversized-input fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A bounded-input validation and adversarial test suite.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Output handling, model supply chains and resource limits:** Extend the project with Output handling, model supply chains and resource limits in Guardrail bypass experiment. Adapt this focused lab to the project data: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.  Required concepts: Supply-chain provenance, Unsafe output handling, Retrieval poisoning, Unbounded consumption, Failure containment.
+  - Deliverable: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A bounded-input validation and adversarial test suite. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Output handling, model supply chains and resource limits: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Enforce server-side size/schema checks and document uncovered behaviors.
+- [ ] Output handling, model supply chains and resource limits: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Prompt injection boundary lab
+
+A developer needs to prevent retrieved instructions from becoming commands.
+
+**Data:** Create 20 local malicious-document fixtures and benign controls. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An adversarial harness for a read-only assistant.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Output handling, model supply chains and resource limits:** Extend the project with Output handling, model supply chains and resource limits in Prompt injection boundary lab. Adapt this focused lab to the project data: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.  Required concepts: Supply-chain provenance, Unsafe output handling, Retrieval poisoning, Unbounded consumption, Failure containment.
+  - Deliverable: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An adversarial harness for a read-only assistant. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Output handling, model supply chains and resource limits: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Tool permissions remain enforced even if an answer follows injected text.
+- [ ] Output handling, model supply chains and resource limits: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Human and model judge agreement lab
+
+A reviewer needs to know when automated ratings disagree.
+
+**Data:** Use 30 anonymized fictional outputs and recorded judge scores. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A rubric, blind review sheet and disagreement report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Output handling, model supply chains and resource limits:** Extend the project with Output handling, model supply chains and resource limits in Human and model judge agreement lab. Adapt this focused lab to the project data: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.  Required concepts: Supply-chain provenance, Unsafe output handling, Retrieval poisoning, Unbounded consumption, Failure containment.
+  - Deliverable: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A rubric, blind review sheet and disagreement report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Output handling, model supply chains and resource limits: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report agreement and inspect disagreements without treating model scores as truth.
+- [ ] Output handling, model supply chains and resource limits: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data minimization audit
+
+A team needs to track which fields reach each component.
+
+**Data:** Use fictional profiles containing both necessary and unnecessary fields. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A data-flow inventory and allowlisted request serializer.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Output handling, model supply chains and resource limits:** Extend the project with Output handling, model supply chains and resource limits in Data minimization audit. Adapt this focused lab to the project data: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.  Required concepts: Supply-chain provenance, Unsafe output handling, Retrieval poisoning, Unbounded consumption, Failure containment.
+  - Deliverable: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A data-flow inventory and allowlisted request serializer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Output handling, model supply chains and resource limits: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Disallowed fields never enter prompts, telemetry or exported examples.
+- [ ] Output handling, model supply chains and resource limits: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Release regression gate
+
+A maintainer needs a repeatable quality decision before release.
+
+**Data:** Store baseline and candidate results for 40 fixed cases. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A deterministic CI gate with explicit allowed regressions.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Output handling, model supply chains and resource limits:** Extend the project with Output handling, model supply chains and resource limits in Release regression gate. Adapt this focused lab to the project data: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.  Required concepts: Supply-chain provenance, Unsafe output handling, Retrieval poisoning, Unbounded consumption, Failure containment.
+  - Deliverable: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A deterministic CI gate with explicit allowed regressions. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Output handling, model supply chains and resource limits: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Fail when a critical case regresses even if average score improves.
+- [ ] Output handling, model supply chains and resource limits: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Secret exposure regression kit
+
+A maintainer needs to prevent test secrets leaking into logs.
+
+**Data:** Generate fake credentials and malformed requests only. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A redaction pipeline with log and response checks.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Output handling, model supply chains and resource limits:** Extend the project with Output handling, model supply chains and resource limits in Secret exposure regression kit. Adapt this focused lab to the project data: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.  Required concepts: Supply-chain provenance, Unsafe output handling, Retrieval poisoning, Unbounded consumption, Failure containment.
+  - Deliverable: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A redaction pipeline with log and response checks. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Output handling, model supply chains and resource limits: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] No seeded secret appears in outputs, including exception messages.
+- [ ] Output handling, model supply chains and resource limits: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Evaluation slice explorer
+
+An analyst needs to find failures hidden by an average score.
+
+**Data:** Generate 100 labeled results across language and length slices. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A per-slice report with sample counts and uncertainty.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Output handling, model supply chains and resource limits:** Extend the project with Output handling, model supply chains and resource limits in Evaluation slice explorer. Adapt this focused lab to the project data: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.  Required concepts: Supply-chain provenance, Unsafe output handling, Retrieval poisoning, Unbounded consumption, Failure containment.
+  - Deliverable: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A per-slice report with sample counts and uncertainty. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Output handling, model supply chains and resource limits: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Flag small samples and reproduce all aggregate metrics from raw cases.
+- [ ] Output handling, model supply chains and resource limits: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Local AI service threat model
+
+A builder needs practical boundaries for a small AI app.
+
+**Data:** Use a fictional notes assistant architecture and seeded abuse cases. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A threat model linked to tests and mitigations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Output handling, model supply chains and resource limits:** Extend the project with Output handling, model supply chains and resource limits in Local AI service threat model. Adapt this focused lab to the project data: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.  Required concepts: Supply-chain provenance, Unsafe output handling, Retrieval poisoning, Unbounded consumption, Failure containment.
+  - Deliverable: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A threat model linked to tests and mitigations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Output handling, model supply chains and resource limits: Output handling, model supply chains and resource limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Trace each trust boundary to a concrete enforcement point and test.
+- [ ] Output handling, model supply chains and resource limits: Threat-model a local assistant and test fake dependency manifests, hostile generated output, oversized documents and repeated tool requests. Enforce boundaries in trusted code and record residual risks.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Stage checkpoint
+
+<a id="checkpoint-eval-security"></a>
+
+### Evaluation and security checkpoint
+
+Demonstrate readiness through a reproducible practical handoff. Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.
+
+**Priority:** Essential · **Study:** 1h · **Practice:** 6h
+
+**Prerequisites:** [Golden datasets and deterministic regression evaluation](eval-security.md#eval-datasets), [Human evaluation, LLM judges and error analysis](eval-security.md#eval-human-judge), [Faithfulness, hallucinations, task success and business metrics](eval-security.md#eval-metrics), [Prompt injection, leakage and adversarial testing](eval-security.md#security-injection), [Guardrails, secrets, bias/fairness and graceful failure](eval-security.md#security-guardrails), [Judge rubrics, disagreement and uncertain improvements](eval-security.md#eval-judges-statistics), [Threat modelling, indirect injection and data minimisation](eval-security.md#security-threat-boundaries), [Output handling, model supply chains and resource limits](eval-security.md#security-output-supply) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Define the success contract:** Write observable checks before implementation so success is not just a plausible demonstration.
+  - Example: Turn this task into a numbered acceptance checklist: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.
+  - Videos:
+    - [OWASP LLM01 — prompt injection](https://www.youtube.com/watch?v=dq5jD_qE1Cg) · Vandana Verma · Security explanation
+      - Explains: Direct/indirect prompt injection and application trust boundaries.
+      - Useful because: Design malicious-input tests rather than assuming a prompt alone enforces permissions.
+      - Watch for: Focus on define the success contract. Then reproduce the lesson example: Turn this task into a numbered acceptance checklist: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=dq5jD_qE1Cg
+    - [Deep dive into LLM evaluation](https://www.youtube.com/watch?v=7EcznH0-of8) · Weights & Biases · Workshop
+      - Explains: Evaluation datasets, model quality checks and retrieval evaluation.
+      - Useful because: Use the evaluation methodology with local fixtures; hosted tracking accounts are optional.
+      - Watch for: Focus on define the success contract. Then reproduce the lesson example: Turn this task into a numbered acceptance checklist: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=7EcznH0-of8
+- [ ] **Reproduce the baseline:** Keep a simple reference output and deterministic inputs so changes can be compared honestly.
+  - Example: Run a fixed input twice and compare saved outputs with the documented baseline.
+  - Videos:
+    - [OWASP LLM01 — prompt injection](https://www.youtube.com/watch?v=dq5jD_qE1Cg) · Vandana Verma · Security explanation
+      - Explains: Direct/indirect prompt injection and application trust boundaries.
+      - Useful because: Design malicious-input tests rather than assuming a prompt alone enforces permissions.
+      - Watch for: Focus on reproduce the baseline. Then reproduce the lesson example: Run a fixed input twice and compare saved outputs with the documented baseline.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=dq5jD_qE1Cg
+    - [Deep dive into LLM evaluation](https://www.youtube.com/watch?v=7EcznH0-of8) · Weights & Biases · Workshop
+      - Explains: Evaluation datasets, model quality checks and retrieval evaluation.
+      - Useful because: Use the evaluation methodology with local fixtures; hosted tracking accounts are optional.
+      - Watch for: Focus on reproduce the baseline. Then reproduce the lesson example: Run a fixed input twice and compare saved outputs with the documented baseline.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=7EcznH0-of8
+- [ ] **Test a failure boundary:** A working happy path does not establish robustness to malformed data or dependency failures.
+  - Example: Inject one malformed input and one controlled failure, then record the resulting state.
+  - Videos:
+    - [OWASP LLM01 — prompt injection](https://www.youtube.com/watch?v=dq5jD_qE1Cg) · Vandana Verma · Security explanation
+      - Explains: Direct/indirect prompt injection and application trust boundaries.
+      - Useful because: Design malicious-input tests rather than assuming a prompt alone enforces permissions.
+      - Watch for: Focus on test a failure boundary. Then reproduce the lesson example: Inject one malformed input and one controlled failure, then record the resulting state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=dq5jD_qE1Cg
+    - [Deep dive into LLM evaluation](https://www.youtube.com/watch?v=7EcznH0-of8) · Weights & Biases · Workshop
+      - Explains: Evaluation datasets, model quality checks and retrieval evaluation.
+      - Useful because: Use the evaluation methodology with local fixtures; hosted tracking accounts are optional.
+      - Watch for: Focus on test a failure boundary. Then reproduce the lesson example: Inject one malformed input and one controlled failure, then record the resulting state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=7EcznH0-of8
+- [ ] **Explain the decisions:** Describe why each technique was chosen and what evidence would make you choose differently.
+  - Example: Write a short decision note comparing the chosen approach with one simpler alternative.
+  - Videos:
+    - [OWASP LLM01 — prompt injection](https://www.youtube.com/watch?v=dq5jD_qE1Cg) · Vandana Verma · Security explanation
+      - Explains: Direct/indirect prompt injection and application trust boundaries.
+      - Useful because: Design malicious-input tests rather than assuming a prompt alone enforces permissions.
+      - Watch for: Focus on explain the decisions. Then reproduce the lesson example: Write a short decision note comparing the chosen approach with one simpler alternative.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=dq5jD_qE1Cg
+    - [Deep dive into LLM evaluation](https://www.youtube.com/watch?v=7EcznH0-of8) · Weights & Biases · Workshop
+      - Explains: Evaluation datasets, model quality checks and retrieval evaluation.
+      - Useful because: Use the evaluation methodology with local fixtures; hosted tracking accounts are optional.
+      - Watch for: Focus on explain the decisions. Then reproduce the lesson example: Write a short decision note comparing the chosen approach with one simpler alternative.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=7EcznH0-of8
+- [ ] **Hand off the evidence:** Another learner must be able to reproduce the result from your instructions and supplied inputs.
+  - Example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+  - Videos:
+    - [OWASP LLM01 — prompt injection](https://www.youtube.com/watch?v=dq5jD_qE1Cg) · Vandana Verma · Security explanation
+      - Explains: Direct/indirect prompt injection and application trust boundaries.
+      - Useful because: Design malicious-input tests rather than assuming a prompt alone enforces permissions.
+      - Watch for: Focus on hand off the evidence. Then reproduce the lesson example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=dq5jD_qE1Cg
+    - [Deep dive into LLM evaluation](https://www.youtube.com/watch?v=7EcznH0-of8) · Weights & Biases · Workshop
+      - Explains: Evaluation datasets, model quality checks and retrieval evaluation.
+      - Useful because: Use the evaluation methodology with local fixtures; hosted tracking accounts are optional.
+      - Watch for: Focus on hand off the evidence. Then reproduce the lesson example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=7EcznH0-of8
+
+#### YouTube: focused explanations and full courses
+
+- [OWASP LLM01 — prompt injection](https://www.youtube.com/watch?v=dq5jD_qE1Cg) · Vandana Verma · Security explanation
+  - Explains: Direct/indirect prompt injection and application trust boundaries.
+  - Useful because: Design malicious-input tests rather than assuming a prompt alone enforces permissions.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=dq5jD_qE1Cg
+- [Deep dive into LLM evaluation](https://www.youtube.com/watch?v=7EcznH0-of8) · Weights & Biases · Workshop
+  - Explains: Evaluation datasets, model quality checks and retrieval evaluation.
+  - Useful because: Use the evaluation methodology with local fixtures; hosted tracking accounts are optional.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=7EcznH0-of8
+
+#### Free written resources
+
+1. [Official reference: Output handling, model supply chains and resource limits](https://genai.owasp.org/llm-top-10/) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+2. [OWASP: LLM prompt injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) — Free; no registration required. No paid materials required.
+
+#### Evaluation and security checkpoint
+
+Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.
+
+**Deliverables**
+
+- Runnable project and reproducible input fixtures
+- README, results and decision notes
+- Failure evidence and clean-start instructions
+
+**Completion checks**
+
+- [ ] Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.
+- [ ] Explain the code and results without relying on an AI-generated summary.
+- [ ] A teammate can reproduce the demo without paid credentials.
+
+#### Ten project recommendations
+
+### Evidence faithfulness audit
+
+A researcher needs to identify unsupported answer claims.
+
+**Data:** Author 25 answers paired with short source passages. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A claim-level support annotation and scoring report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Evaluation and security checkpoint:** Extend the project with Evaluation and security checkpoint in Evidence faithfulness audit. Adapt this focused lab to the project data: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A claim-level support annotation and scoring report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evaluation and security checkpoint: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Distinguish absent evidence from direct contradiction.
+- [ ] Evaluation and security checkpoint: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Golden dataset workshop
+
+A team needs a small trustworthy evaluation set.
+
+**Data:** Author 40 questions with expected answers, sources and failure categories. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A versioned evaluation dataset and deterministic runner.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Evaluation and security checkpoint:** Extend the project with Evaluation and security checkpoint in Golden dataset workshop. Adapt this focused lab to the project data: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A versioned evaluation dataset and deterministic runner. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evaluation and security checkpoint: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Separate development cases from a locked holdout and detect a seeded regression.
+- [ ] Evaluation and security checkpoint: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Guardrail bypass experiment
+
+A developer needs to know where validation actually holds.
+
+**Data:** Write malformed schemas, Unicode evasions and oversized-input fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A bounded-input validation and adversarial test suite.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Evaluation and security checkpoint:** Extend the project with Evaluation and security checkpoint in Guardrail bypass experiment. Adapt this focused lab to the project data: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A bounded-input validation and adversarial test suite. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evaluation and security checkpoint: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Enforce server-side size/schema checks and document uncovered behaviors.
+- [ ] Evaluation and security checkpoint: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Prompt injection boundary lab
+
+A developer needs to prevent retrieved instructions from becoming commands.
+
+**Data:** Create 20 local malicious-document fixtures and benign controls. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An adversarial harness for a read-only assistant.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Evaluation and security checkpoint:** Extend the project with Evaluation and security checkpoint in Prompt injection boundary lab. Adapt this focused lab to the project data: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An adversarial harness for a read-only assistant. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evaluation and security checkpoint: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Tool permissions remain enforced even if an answer follows injected text.
+- [ ] Evaluation and security checkpoint: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Human and model judge agreement lab
+
+A reviewer needs to know when automated ratings disagree.
+
+**Data:** Use 30 anonymized fictional outputs and recorded judge scores. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A rubric, blind review sheet and disagreement report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Evaluation and security checkpoint:** Extend the project with Evaluation and security checkpoint in Human and model judge agreement lab. Adapt this focused lab to the project data: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A rubric, blind review sheet and disagreement report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evaluation and security checkpoint: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report agreement and inspect disagreements without treating model scores as truth.
+- [ ] Evaluation and security checkpoint: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data minimization audit
+
+A team needs to track which fields reach each component.
+
+**Data:** Use fictional profiles containing both necessary and unnecessary fields. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A data-flow inventory and allowlisted request serializer.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Evaluation and security checkpoint:** Extend the project with Evaluation and security checkpoint in Data minimization audit. Adapt this focused lab to the project data: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A data-flow inventory and allowlisted request serializer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evaluation and security checkpoint: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Disallowed fields never enter prompts, telemetry or exported examples.
+- [ ] Evaluation and security checkpoint: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Release regression gate
+
+A maintainer needs a repeatable quality decision before release.
+
+**Data:** Store baseline and candidate results for 40 fixed cases. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A deterministic CI gate with explicit allowed regressions.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Evaluation and security checkpoint:** Extend the project with Evaluation and security checkpoint in Release regression gate. Adapt this focused lab to the project data: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A deterministic CI gate with explicit allowed regressions. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evaluation and security checkpoint: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Fail when a critical case regresses even if average score improves.
+- [ ] Evaluation and security checkpoint: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Secret exposure regression kit
+
+A maintainer needs to prevent test secrets leaking into logs.
+
+**Data:** Generate fake credentials and malformed requests only. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A redaction pipeline with log and response checks.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Evaluation and security checkpoint:** Extend the project with Evaluation and security checkpoint in Secret exposure regression kit. Adapt this focused lab to the project data: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A redaction pipeline with log and response checks. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evaluation and security checkpoint: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] No seeded secret appears in outputs, including exception messages.
+- [ ] Evaluation and security checkpoint: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Evaluation slice explorer
+
+An analyst needs to find failures hidden by an average score.
+
+**Data:** Generate 100 labeled results across language and length slices. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A per-slice report with sample counts and uncertainty.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Evaluation and security checkpoint:** Extend the project with Evaluation and security checkpoint in Evaluation slice explorer. Adapt this focused lab to the project data: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A per-slice report with sample counts and uncertainty. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evaluation and security checkpoint: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Flag small samples and reproduce all aggregate metrics from raw cases.
+- [ ] Evaluation and security checkpoint: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Local AI service threat model
+
+A builder needs practical boundaries for a small AI app.
+
+**Data:** Use a fictional notes assistant architecture and seeded abuse cases. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A threat model linked to tests and mitigations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Evaluation and security checkpoint:** Extend the project with Evaluation and security checkpoint in Local AI service threat model. Adapt this focused lab to the project data: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A threat model linked to tests and mitigations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evaluation and security checkpoint: Evaluation and security checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Trace each trust boundary to a concrete enforcement point and test.
+- [ ] Evaluation and security checkpoint: Build a locked holdout and regression runner for the assistant. Test unsupported claims, malicious retrieved text, unauthorized tools, oversized payloads and malformed output. Publish failures and residual risks.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

@@ -137,31 +137,16 @@ Every concept has selected video links, with explanations and practical watch gu
   - Useful because: Use the worked intuition before writing the corresponding small experiment.
   - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
   - Verification source: https://statquest.org/video_index.html
-- [Frontend web development bootcamp](https://www.youtube.com/watch?v=zJSY8tbf_ys) · freeCodeCamp · Long course
-  - Explains: HTML, CSS, JavaScript and practical browser-side application work.
-  - Useful because: Build a usable interface for your API with explicit loading and failure states.
+- [Neural Networks Part 6: Cross Entropy](https://www.youtube.com/watch?v=6ArSys5qHAU) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
   - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
-  - Verification source: https://www.youtube.com/watch?v=zJSY8tbf_ys
-- [API documentation best practices](https://www.youtube.com/watch?v=0CSyIBHQy9g) · freeCodeCamp · Documentation course
-  - Explains: Documenting API behavior and making developer-facing instructions usable.
-  - Useful because: Document your actual contracts and a reproducible example instead of generic prose.
+  - Verification source: https://statquest.org/video_index.html
+- [Neural Networks Part 5: ArgMax and SoftMax](https://www.youtube.com/watch?v=KpKog-L9veg) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
   - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
-  - Verification source: https://www.freecodecamp.org/news/api-documentation-best-practices-course/
-- [PostgreSQL — course for beginners](https://www.youtube.com/watch?v=SpfIwlAYaKk) · freeCodeCamp · Full tool course
-  - Explains: SQL tables, querying and PostgreSQL fundamentals.
-  - Useful because: Use local PostgreSQL/SQLite practice rather than a paid database service.
-  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
-  - Verification source: https://www.freecodecamp.org/news/posgresql-course-for-beginners/
-- [Neo4j: building a knowledge graph](https://www.youtube.com/watch?v=1ogNyPWUP7g) · Neo4j · Vendor teaching session
-  - Explains: Modeling entities, querying relationships and growing a knowledge graph.
-  - Useful because: Compare relationship traversal with vector similarity before selecting a database.
-  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
-  - Verification source: https://www.youtube.com/watch?v=1ogNyPWUP7g
-- [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
-  - Explains: Ingestion, retrieval and techniques for grounding model answers.
-  - Useful because: Follow the pipeline, then test chunking and retrieval separately.
-  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
-  - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+  - Verification source: https://statquest.org/video_index.html
 - [Stanford CS229 — Lecture 1](https://www.youtube.com/watch?v=jGwO_UgTS7I) · Stanford Online · Andrew Ng · University lecture
   - Explains: The machine-learning problem setup, supervised learning and initial regression concepts.
   - Useful because: Use it for mathematical framing after basic Python and algebra.
@@ -262,21 +247,11 @@ Every concept has selected video links, with explanations and practical watch gu
   - Useful because: Use the worked intuition before writing the corresponding small experiment.
   - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
   - Verification source: https://statquest.org/video_index.html
-- [Neural Networks Part 5: ArgMax and SoftMax](https://www.youtube.com/watch?v=KpKog-L9veg) · StatQuest · Josh Starmer · Focused explanation
-  - Explains: A visual, step-by-step explanation of the topic named in the title.
-  - Useful because: Use the worked intuition before writing the corresponding small experiment.
-  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
-  - Verification source: https://statquest.org/video_index.html
 - [Build GPT from scratch, in code](https://www.youtube.com/watch?v=kCc8FmEb1nY) · Andrej Karpathy · From-scratch lecture
   - Explains: Language modeling, embeddings, causal attention, transformer blocks and sampling.
   - Useful because: Trace token IDs to logits and understand a small end-to-end transformer.
   - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
   - Verification source: https://karpathy.ai/zero-to-hero.html
-- [Neural Networks Part 6: Cross Entropy](https://www.youtube.com/watch?v=6ArSys5qHAU) · StatQuest · Josh Starmer · Focused explanation
-  - Explains: A visual, step-by-step explanation of the topic named in the title.
-  - Useful because: Use the worked intuition before writing the corresponding small experiment.
-  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
-  - Verification source: https://statquest.org/video_index.html
 - [Adam optimization algorithm](https://www.youtube.com/watch?v=JXQT_vxqwIs) · DeepLearning.AI · Andrew Ng · Focused lecture
   - Explains: First/second moment estimates, bias correction and Adam updates.
   - Useful because: Work through the optimizer state before comparing Adam with SGD.
@@ -427,6 +402,31 @@ Every concept has selected video links, with explanations and practical watch gu
   - Useful because: Compare adaptation choices against a held-out task evaluation before proposing a training run.
   - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
   - Verification source: https://introtodeeplearning.com/2025/index.html
+- [Frontend web development bootcamp](https://www.youtube.com/watch?v=zJSY8tbf_ys) · freeCodeCamp · Long course
+  - Explains: HTML, CSS, JavaScript and practical browser-side application work.
+  - Useful because: Build a usable interface for your API with explicit loading and failure states.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=zJSY8tbf_ys
+- [API documentation best practices](https://www.youtube.com/watch?v=0CSyIBHQy9g) · freeCodeCamp · Documentation course
+  - Explains: Documenting API behavior and making developer-facing instructions usable.
+  - Useful because: Document your actual contracts and a reproducible example instead of generic prose.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/api-documentation-best-practices-course/
+- [PostgreSQL — course for beginners](https://www.youtube.com/watch?v=SpfIwlAYaKk) · freeCodeCamp · Full tool course
+  - Explains: SQL tables, querying and PostgreSQL fundamentals.
+  - Useful because: Use local PostgreSQL/SQLite practice rather than a paid database service.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/posgresql-course-for-beginners/
+- [Neo4j: building a knowledge graph](https://www.youtube.com/watch?v=1ogNyPWUP7g) · Neo4j · Vendor teaching session
+  - Explains: Modeling entities, querying relationships and growing a knowledge graph.
+  - Useful because: Compare relationship traversal with vector similarity before selecting a database.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=1ogNyPWUP7g
+- [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+  - Explains: Ingestion, retrieval and techniques for grounding model answers.
+  - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
 - [Deep dive into LLM evaluation](https://www.youtube.com/watch?v=7EcznH0-of8) · Weights & Biases · Workshop
   - Explains: Evaluation datasets, model quality checks and retrieval evaluation.
   - Useful because: Use the evaluation methodology with local fixtures; hosted tracking accounts are optional.
@@ -447,16 +447,21 @@ Every concept has selected video links, with explanations and practical watch gu
   - Useful because: Add meaningful error slices and document sample-size limits.
   - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
   - Verification source: https://www.youtube.com/watch?v=xAN1HxU5XeU
-- [Docker — full DevOps course](https://www.youtube.com/watch?v=rjjES5IsPdg) · freeCodeCamp · Long tool course · approximately 8h
-  - Explains: Images, containers, Dockerfiles and deploying containerized applications.
-  - Useful because: Package the exact service you tested; keep cloud purchases optional.
+- [Software requirements specification — worked tutorial](https://www.youtube.com/watch?v=M5DY3eTyhUA) · Requirements engineering tutorial · Focused tutorial
+  - Explains: Functional requirements and software specification structure.
+  - Useful because: Write testable requirements and distinguish them from implementation details.
   - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
-  - Verification source: https://www.freecodecamp.org/news/docker-full-course/
+  - Verification source: https://www.youtube.com/watch?v=M5DY3eTyhUA
 - [GitHub Actions — full course](https://www.youtube.com/watch?v=Tz7FsunBbfQ) · freeCodeCamp · Full tool course
   - Explains: Workflow configuration, CI/CD and automation.
   - Useful because: Build a test/build workflow; paid certification is not required.
   - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
   - Verification source: https://www.youtube.com/watch?v=Tz7FsunBbfQ
+- [Docker — full DevOps course](https://www.youtube.com/watch?v=rjjES5IsPdg) · freeCodeCamp · Long tool course · approximately 8h
+  - Explains: Images, containers, Dockerfiles and deploying containerized applications.
+  - Useful because: Package the exact service you tested; keep cloud purchases optional.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/docker-full-course/
 - [CI/CD in production with Jenkins](https://www.youtube.com/watch?v=uHNOqKdqQas) · freeCodeCamp · Long tool course · approximately 17h
   - Explains: Continuous integration and delivery pipelines in a production-style workflow.
   - Useful because: An optional deeper pipeline reference; the roadmap lab uses a smaller GitHub Actions workflow.
@@ -467,11 +472,6 @@ Every concept has selected video links, with explanations and practical watch gu
   - Useful because: Rehearse your runbook on a local outage and document what changed.
   - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
   - Verification source: https://www.youtube.com/watch?v=n4y9dwinPBQ
-- [Software requirements specification — worked tutorial](https://www.youtube.com/watch?v=M5DY3eTyhUA) · Requirements engineering tutorial · Focused tutorial
-  - Explains: Functional requirements and software specification structure.
-  - Useful because: Write testable requirements and distinguish them from implementation details.
-  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
-  - Verification source: https://www.youtube.com/watch?v=M5DY3eTyhUA
 - [Building faster with AI](https://www.youtube.com/watch?v=RNJCfif1dPY) · Andrew Ng · Product/engineering talk
   - Explains: How faster development changes the role of product judgment and ownership.
   - Useful because: Frame a real user problem and feedback loop before adding more features.

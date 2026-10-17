@@ -2,13 +2,13 @@
 
 Connect answers to maintained evidence and evaluate retrieval independently.
 
-## Main route · Step 5 of 8
+## Main route · Step 8 of 13
 
 **Goal:** Retrieve useful evidence and connect answers to traceable sources.
 
 **Stage checkpoint:** Build a document search pipeline with chunking, hybrid retrieval, citations and retrieval measurements.
 
-Add document retrieval and citations when the application needs external knowledge.
+Retrieve evidence, preserve citations and abstain when reliable support is missing.
 
 Follow the modules and lessons below at your pace. Finish each exercise, save your evidence and self-assessment, then continue. Completed and Already known count as completed; Skipped is reported separately. You can move ahead at any time.
 
@@ -22,7 +22,7 @@ Follow the modules and lessons below at your pace. Finish each exercise, save yo
 
 Preserve source identity and useful boundaries when preparing knowledge.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Context engineering, memory and caching](llm.md#llm-context), [pandas, cleaning and missing values](math-data.md#data-pandas) Navigation is unrestricted.
 
@@ -85,292 +85,292 @@ Index ten local Markdown documents with heading-aware chunks, stable source IDs 
 
 #### Ten project recommendations
 
-### Research library navigator
+### Incremental document index
 
-Help a learner find relevant passages in a small technical reading collection.
+A librarian needs updated documents without stale duplicate chunks.
 
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
+**Data:** Create 20 versioned local documents with additions and deletions. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A searchable library with grounded answers and source references.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Document parsing, chunking and metadata:** Index the project’s records and notes with source IDs and permission metadata.  For Document parsing, chunking and metadata, explicitly apply Parsing, Chunking, Metadata and refresh.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Document parsing, chunking and metadata: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Document parsing, chunking and metadata: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** An idempotent ingestion and deletion workflow.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Document parsing, chunking and metadata:** Index the project’s records and notes with source IDs and permission metadata.  For Document parsing, chunking and metadata, explicitly apply Parsing, Chunking, Metadata and refresh.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
+- **Document parsing, chunking and metadata:** Implement Document parsing, chunking and metadata in Incremental document index. Adapt this focused lab to the project data: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.  Required concepts: Parsing, Chunking, Metadata and refresh.
+  - Deliverable: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Document parsing, chunking and metadata: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An idempotent ingestion and deletion workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, chunking and metadata: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Document parsing, chunking and metadata: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
+- [ ] Re-ingest twice, delete a source and prove its chunks disappear.
+- [ ] Document parsing, chunking and metadata: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Support ticket triage desk
+### Chunking experiment arena
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A builder needs evidence for choosing chunk size and overlap.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Write six documents with headings, lists and answers crossing boundaries. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Document parsing, chunking and metadata:** Index the project’s records and notes with source IDs and permission metadata.  For Document parsing, chunking and metadata, explicitly apply Parsing, Chunking, Metadata and refresh.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Document parsing, chunking and metadata: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Document parsing, chunking and metadata: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Document parsing, chunking and metadata:** Index the project’s records and notes with source IDs and permission metadata.  For Document parsing, chunking and metadata, explicitly apply Parsing, Chunking, Metadata and refresh.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Document parsing, chunking and metadata: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Document parsing, chunking and metadata: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Document parsing, chunking and metadata:** Index the project’s records and notes with source IDs and permission metadata.  For Document parsing, chunking and metadata, explicitly apply Parsing, Chunking, Metadata and refresh.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Document parsing, chunking and metadata: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Document parsing, chunking and metadata: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A chunking benchmark and source-offset viewer.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Document parsing, chunking and metadata:** Index the project’s records and notes with source IDs and permission metadata.  For Document parsing, chunking and metadata, explicitly apply Parsing, Chunking, Metadata and refresh.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
+- **Document parsing, chunking and metadata:** Extend the project with Document parsing, chunking and metadata in Chunking experiment arena. Adapt this focused lab to the project data: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.  Required concepts: Parsing, Chunking, Metadata and refresh.
+  - Deliverable: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Document parsing, chunking and metadata: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A chunking benchmark and source-offset viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, chunking and metadata: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Document parsing, chunking and metadata: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
+- [ ] Compare retrieval on identical queries and preserve exact source spans.
+- [ ] Document parsing, chunking and metadata: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Citation integrity checker
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A reviewer needs to catch answers citing the wrong source.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Write 30 claims, source passages and deliberately incorrect citations. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A citation validation report and abstention interface.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Document parsing, chunking and metadata:** Index the project’s records and notes with source IDs and permission metadata.  For Document parsing, chunking and metadata, explicitly apply Parsing, Chunking, Metadata and refresh.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
+- **Document parsing, chunking and metadata:** Extend the project with Document parsing, chunking and metadata in Citation integrity checker. Adapt this focused lab to the project data: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.  Required concepts: Parsing, Chunking, Metadata and refresh.
+  - Deliverable: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Document parsing, chunking and metadata: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A citation validation report and abstention interface. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, chunking and metadata: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Document parsing, chunking and metadata: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
+- [ ] Flag missing IDs and unsupported spans; do not equate a valid link with support.
+- [ ] Document parsing, chunking and metadata: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Embedding retrieval scorecard
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A builder needs to choose representations for a small corpus.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Use local notes and labeled paraphrases; TF-IDF is the offline baseline. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** A representation comparison with dimension and latency reports.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Document parsing, chunking and metadata:** Index the project’s records and notes with source IDs and permission metadata.  For Document parsing, chunking and metadata, explicitly apply Parsing, Chunking, Metadata and refresh.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
+- **Document parsing, chunking and metadata:** Extend the project with Document parsing, chunking and metadata in Embedding retrieval scorecard. Adapt this focused lab to the project data: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.  Required concepts: Parsing, Chunking, Metadata and refresh.
+  - Deliverable: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Document parsing, chunking and metadata: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A representation comparison with dimension and latency reports. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, chunking and metadata: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Document parsing, chunking and metadata: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
+- [ ] Keep evaluation queries separate and identify model download requirements.
+- [ ] Document parsing, chunking and metadata: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Concept relationship explorer
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A learner needs to navigate relationships between study notes.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Author 25 concepts and 40 typed relationships in JSON. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A graph traversal and provenance viewer.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Document parsing, chunking and metadata:** Index the project’s records and notes with source IDs and permission metadata.  For Document parsing, chunking and metadata, explicitly apply Parsing, Chunking, Metadata and refresh.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
+- **Document parsing, chunking and metadata:** Extend the project with Document parsing, chunking and metadata in Concept relationship explorer. Adapt this focused lab to the project data: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.  Required concepts: Parsing, Chunking, Metadata and refresh.
+  - Deliverable: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Document parsing, chunking and metadata: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A graph traversal and provenance viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, chunking and metadata: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Document parsing, chunking and metadata: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
+- [ ] Handle cycles and distinguish authored edges from inferred hypotheses.
+- [ ] Document parsing, chunking and metadata: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Hybrid retrieval benchmark
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+An analyst needs both exact-code and paraphrase retrieval.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Generate 80 catalog entries with product codes and prose descriptions. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A lexical/vector fusion and reranking comparison.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Document parsing, chunking and metadata:** Index the project’s records and notes with source IDs and permission metadata.  For Document parsing, chunking and metadata, explicitly apply Parsing, Chunking, Metadata and refresh.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
+- **Document parsing, chunking and metadata:** Extend the project with Document parsing, chunking and metadata in Hybrid retrieval benchmark. Adapt this focused lab to the project data: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.  Required concepts: Parsing, Chunking, Metadata and refresh.
+  - Deliverable: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Document parsing, chunking and metadata: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A lexical/vector fusion and reranking comparison. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, chunking and metadata: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Document parsing, chunking and metadata: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.
+- [ ] Measure exact-code and paraphrase slices separately.
+- [ ] Document parsing, chunking and metadata: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Personal notes retrieval desk
+
+A student needs answers traceable to their own notes.
+
+**Data:** Create ten Markdown notes and 20 query/relevance judgments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A local search interface with passage IDs and citations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Document parsing, chunking and metadata:** Extend the project with Document parsing, chunking and metadata in Personal notes retrieval desk. Adapt this focused lab to the project data: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.  Required concepts: Parsing, Chunking, Metadata and refresh.
+  - Deliverable: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A local search interface with passage IDs and citations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, chunking and metadata: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report recall at five and refuse unsupported answers.
+- [ ] Document parsing, chunking and metadata: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Permission-aware team search
+
+A team needs retrieval that respects document access rights.
+
+**Data:** Generate three fictional roles and 30 access-labeled documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval filter and adversarial permission test set.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Document parsing, chunking and metadata:** Extend the project with Document parsing, chunking and metadata in Permission-aware team search. Adapt this focused lab to the project data: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.  Required concepts: Parsing, Chunking, Metadata and refresh.
+  - Deliverable: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval filter and adversarial permission test set. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, chunking and metadata: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Unauthorized passages never enter the retrieved context.
+- [ ] Document parsing, chunking and metadata: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Retrieval failure diagnosis bench
+
+A maintainer needs to separate retrieval and answer failures.
+
+**Data:** Write 25 questions including missing evidence and conflicting passages. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval/answer error taxonomy and regression report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Document parsing, chunking and metadata:** Extend the project with Document parsing, chunking and metadata in Retrieval failure diagnosis bench. Adapt this focused lab to the project data: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.  Required concepts: Parsing, Chunking, Metadata and refresh.
+  - Deliverable: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval/answer error taxonomy and regression report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, chunking and metadata: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Measure retrieval recall separately from answer faithfulness.
+- [ ] Document parsing, chunking and metadata: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Read-only SQL evidence assistant
+
+An analyst needs answers grounded in tabular records.
+
+**Data:** Use a local SQLite database of fictional orders and customers. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A whitelisted query workflow with rows cited as evidence.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Document parsing, chunking and metadata:** Extend the project with Document parsing, chunking and metadata in Read-only SQL evidence assistant. Adapt this focused lab to the project data: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.  Required concepts: Parsing, Chunking, Metadata and refresh.
+  - Deliverable: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A whitelisted query workflow with rows cited as evidence. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, chunking and metadata: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject writes, bound row counts and verify join totals.
+- [ ] Document parsing, chunking and metadata: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -384,7 +384,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Choose representations and retrieval storage based on measured relevance.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Document parsing, chunking and metadata](rag.md#rag-ingestion) Navigation is unrestricted.
 
@@ -470,292 +470,292 @@ Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it 
 
 #### Ten project recommendations
 
-### Research library navigator
+### Embedding retrieval scorecard
 
-Help a learner find relevant passages in a small technical reading collection.
+A builder needs to choose representations for a small corpus.
 
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
+**Data:** Use local notes and labeled paraphrases; TF-IDF is the offline baseline. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A searchable library with grounded answers and source references.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Embeddings, similarity, indexes and vector databases:** Index the project’s records and notes with source IDs and permission metadata.  For Embeddings, similarity, indexes and vector databases, explicitly apply Embedding selection, Similarity and indexing, Vector stores.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Embeddings, similarity, indexes and vector databases: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Embeddings, similarity, indexes and vector databases: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A representation comparison with dimension and latency reports.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Embeddings, similarity, indexes and vector databases:** Index the project’s records and notes with source IDs and permission metadata.  For Embeddings, similarity, indexes and vector databases, explicitly apply Embedding selection, Similarity and indexing, Vector stores.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
+- **Embeddings, similarity, indexes and vector databases:** Implement Embeddings, similarity, indexes and vector databases in Embedding retrieval scorecard. Adapt this focused lab to the project data: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.  Required concepts: Embedding selection, Similarity and indexing, Vector stores.
+  - Deliverable: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Embeddings, similarity, indexes and vector databases: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A representation comparison with dimension and latency reports. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Embeddings, similarity, indexes and vector databases: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Embeddings, similarity, indexes and vector databases: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
+- [ ] Keep evaluation queries separate and identify model download requirements.
+- [ ] Embeddings, similarity, indexes and vector databases: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Support ticket triage desk
+### Vector lookup service
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A search builder needs predictable similarity queries and filters.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Generate 100 normalized vectors with source and role metadata. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Embeddings, similarity, indexes and vector databases:** Index the project’s records and notes with source IDs and permission metadata.  For Embeddings, similarity, indexes and vector databases, explicitly apply Embedding selection, Similarity and indexing, Vector stores.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Embeddings, similarity, indexes and vector databases: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Embeddings, similarity, indexes and vector databases: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Embeddings, similarity, indexes and vector databases:** Index the project’s records and notes with source IDs and permission metadata.  For Embeddings, similarity, indexes and vector databases, explicitly apply Embedding selection, Similarity and indexing, Vector stores.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Embeddings, similarity, indexes and vector databases: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Embeddings, similarity, indexes and vector databases: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Embeddings, similarity, indexes and vector databases:** Index the project’s records and notes with source IDs and permission metadata.  For Embeddings, similarity, indexes and vector databases, explicitly apply Embedding selection, Similarity and indexing, Vector stores.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Embeddings, similarity, indexes and vector databases: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Embeddings, similarity, indexes and vector databases: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A local vector search API and metadata filter tests.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Embeddings, similarity, indexes and vector databases:** Index the project’s records and notes with source IDs and permission metadata.  For Embeddings, similarity, indexes and vector databases, explicitly apply Embedding selection, Similarity and indexing, Vector stores.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
+- **Embeddings, similarity, indexes and vector databases:** Implement Embeddings, similarity, indexes and vector databases in Vector lookup service. Adapt this focused lab to the project data: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.  Required concepts: Embedding selection, Similarity and indexing, Vector stores.
+  - Deliverable: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Embeddings, similarity, indexes and vector databases: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A local vector search API and metadata filter tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Embeddings, similarity, indexes and vector databases: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Embeddings, similarity, indexes and vector databases: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
+- [ ] Compare with brute-force scores and reject unauthorized IDs.
+- [ ] Embeddings, similarity, indexes and vector databases: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Chunking experiment arena
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A builder needs evidence for choosing chunk size and overlap.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Write six documents with headings, lists and answers crossing boundaries. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A chunking benchmark and source-offset viewer.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Embeddings, similarity, indexes and vector databases:** Index the project’s records and notes with source IDs and permission metadata.  For Embeddings, similarity, indexes and vector databases, explicitly apply Embedding selection, Similarity and indexing, Vector stores.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
+- **Embeddings, similarity, indexes and vector databases:** Extend the project with Embeddings, similarity, indexes and vector databases in Chunking experiment arena. Adapt this focused lab to the project data: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.  Required concepts: Embedding selection, Similarity and indexing, Vector stores.
+  - Deliverable: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Embeddings, similarity, indexes and vector databases: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A chunking benchmark and source-offset viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Embeddings, similarity, indexes and vector databases: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Embeddings, similarity, indexes and vector databases: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
+- [ ] Compare retrieval on identical queries and preserve exact source spans.
+- [ ] Embeddings, similarity, indexes and vector databases: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Citation integrity checker
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A reviewer needs to catch answers citing the wrong source.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Write 30 claims, source passages and deliberately incorrect citations. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** A citation validation report and abstention interface.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Embeddings, similarity, indexes and vector databases:** Index the project’s records and notes with source IDs and permission metadata.  For Embeddings, similarity, indexes and vector databases, explicitly apply Embedding selection, Similarity and indexing, Vector stores.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
+- **Embeddings, similarity, indexes and vector databases:** Extend the project with Embeddings, similarity, indexes and vector databases in Citation integrity checker. Adapt this focused lab to the project data: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.  Required concepts: Embedding selection, Similarity and indexing, Vector stores.
+  - Deliverable: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Embeddings, similarity, indexes and vector databases: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A citation validation report and abstention interface. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Embeddings, similarity, indexes and vector databases: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Embeddings, similarity, indexes and vector databases: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
+- [ ] Flag missing IDs and unsupported spans; do not equate a valid link with support.
+- [ ] Embeddings, similarity, indexes and vector databases: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Concept relationship explorer
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A learner needs to navigate relationships between study notes.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Author 25 concepts and 40 typed relationships in JSON. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A graph traversal and provenance viewer.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Embeddings, similarity, indexes and vector databases:** Index the project’s records and notes with source IDs and permission metadata.  For Embeddings, similarity, indexes and vector databases, explicitly apply Embedding selection, Similarity and indexing, Vector stores.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
+- **Embeddings, similarity, indexes and vector databases:** Extend the project with Embeddings, similarity, indexes and vector databases in Concept relationship explorer. Adapt this focused lab to the project data: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.  Required concepts: Embedding selection, Similarity and indexing, Vector stores.
+  - Deliverable: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Embeddings, similarity, indexes and vector databases: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A graph traversal and provenance viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Embeddings, similarity, indexes and vector databases: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Embeddings, similarity, indexes and vector databases: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
+- [ ] Handle cycles and distinguish authored edges from inferred hypotheses.
+- [ ] Embeddings, similarity, indexes and vector databases: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Hybrid retrieval benchmark
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+An analyst needs both exact-code and paraphrase retrieval.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Generate 80 catalog entries with product codes and prose descriptions. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A lexical/vector fusion and reranking comparison.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Embeddings, similarity, indexes and vector databases:** Index the project’s records and notes with source IDs and permission metadata.  For Embeddings, similarity, indexes and vector databases, explicitly apply Embedding selection, Similarity and indexing, Vector stores.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
+- **Embeddings, similarity, indexes and vector databases:** Extend the project with Embeddings, similarity, indexes and vector databases in Hybrid retrieval benchmark. Adapt this focused lab to the project data: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.  Required concepts: Embedding selection, Similarity and indexing, Vector stores.
+  - Deliverable: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Embeddings, similarity, indexes and vector databases: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A lexical/vector fusion and reranking comparison. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Embeddings, similarity, indexes and vector databases: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Embeddings, similarity, indexes and vector databases: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.
+- [ ] Measure exact-code and paraphrase slices separately.
+- [ ] Embeddings, similarity, indexes and vector databases: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Incremental document index
+
+A librarian needs updated documents without stale duplicate chunks.
+
+**Data:** Create 20 versioned local documents with additions and deletions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An idempotent ingestion and deletion workflow.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Embeddings, similarity, indexes and vector databases:** Extend the project with Embeddings, similarity, indexes and vector databases in Incremental document index. Adapt this focused lab to the project data: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.  Required concepts: Embedding selection, Similarity and indexing, Vector stores.
+  - Deliverable: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An idempotent ingestion and deletion workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Embeddings, similarity, indexes and vector databases: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Re-ingest twice, delete a source and prove its chunks disappear.
+- [ ] Embeddings, similarity, indexes and vector databases: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Personal notes retrieval desk
+
+A student needs answers traceable to their own notes.
+
+**Data:** Create ten Markdown notes and 20 query/relevance judgments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A local search interface with passage IDs and citations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Embeddings, similarity, indexes and vector databases:** Extend the project with Embeddings, similarity, indexes and vector databases in Personal notes retrieval desk. Adapt this focused lab to the project data: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.  Required concepts: Embedding selection, Similarity and indexing, Vector stores.
+  - Deliverable: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A local search interface with passage IDs and citations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Embeddings, similarity, indexes and vector databases: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report recall at five and refuse unsupported answers.
+- [ ] Embeddings, similarity, indexes and vector databases: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Permission-aware team search
+
+A team needs retrieval that respects document access rights.
+
+**Data:** Generate three fictional roles and 30 access-labeled documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval filter and adversarial permission test set.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Embeddings, similarity, indexes and vector databases:** Extend the project with Embeddings, similarity, indexes and vector databases in Permission-aware team search. Adapt this focused lab to the project data: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.  Required concepts: Embedding selection, Similarity and indexing, Vector stores.
+  - Deliverable: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval filter and adversarial permission test set. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Embeddings, similarity, indexes and vector databases: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Unauthorized passages never enter the retrieved context.
+- [ ] Embeddings, similarity, indexes and vector databases: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Retrieval failure diagnosis bench
+
+A maintainer needs to separate retrieval and answer failures.
+
+**Data:** Write 25 questions including missing evidence and conflicting passages. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval/answer error taxonomy and regression report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Embeddings, similarity, indexes and vector databases:** Extend the project with Embeddings, similarity, indexes and vector databases in Retrieval failure diagnosis bench. Adapt this focused lab to the project data: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.  Required concepts: Embedding selection, Similarity and indexing, Vector stores.
+  - Deliverable: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval/answer error taxonomy and regression report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Embeddings, similarity, indexes and vector databases: Embeddings, similarity, indexes and vector databases: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Measure retrieval recall separately from answer faithfulness.
+- [ ] Embeddings, similarity, indexes and vector databases: Build a CPU-friendly TF-IDF/cosine index as a lexical-vector baseline, label it clearly, and compare its ranking with optional local sentence embeddings.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -769,7 +769,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Recover relevant evidence while respecting permissions and improving result order.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Embeddings, similarity, indexes and vector databases](rag.md#rag-embeddings) Navigation is unrestricted.
 
@@ -832,292 +832,292 @@ Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fus
 
 #### Ten project recommendations
 
-### Research library navigator
+### Personal notes retrieval desk
 
-Help a learner find relevant passages in a small technical reading collection.
+A student needs answers traceable to their own notes.
 
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
+**Data:** Create ten Markdown notes and 20 query/relevance judgments. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A searchable library with grounded answers and source references.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Lexical, semantic and hybrid retrieval; filters and reranking:** Index the project’s records and notes with source IDs and permission metadata.  For Lexical, semantic and hybrid retrieval; filters and reranking, explicitly apply Hybrid search, Filters, Reranking.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A local search interface with passage IDs and citations.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Lexical, semantic and hybrid retrieval; filters and reranking:** Index the project’s records and notes with source IDs and permission metadata.  For Lexical, semantic and hybrid retrieval; filters and reranking, explicitly apply Hybrid search, Filters, Reranking.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
+- **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Personal notes retrieval desk: A local search interface with passage IDs and citations. Focus: Hybrid search, Filters, Reranking.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A local search interface with passage IDs and citations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Lexical, semantic and hybrid retrieval; filters and reranking: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
+- [ ] Report recall at five and refuse unsupported answers.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Support ticket triage desk
+### Permission-aware team search
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A team needs retrieval that respects document access rights.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Generate three fictional roles and 30 access-labeled documents. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Lexical, semantic and hybrid retrieval; filters and reranking:** Index the project’s records and notes with source IDs and permission metadata.  For Lexical, semantic and hybrid retrieval; filters and reranking, explicitly apply Hybrid search, Filters, Reranking.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Lexical, semantic and hybrid retrieval; filters and reranking:** Index the project’s records and notes with source IDs and permission metadata.  For Lexical, semantic and hybrid retrieval; filters and reranking, explicitly apply Hybrid search, Filters, Reranking.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Lexical, semantic and hybrid retrieval; filters and reranking:** Index the project’s records and notes with source IDs and permission metadata.  For Lexical, semantic and hybrid retrieval; filters and reranking, explicitly apply Hybrid search, Filters, Reranking.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A retrieval filter and adversarial permission test set.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Lexical, semantic and hybrid retrieval; filters and reranking:** Index the project’s records and notes with source IDs and permission metadata.  For Lexical, semantic and hybrid retrieval; filters and reranking, explicitly apply Hybrid search, Filters, Reranking.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
+- **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Permission-aware team search: A retrieval filter and adversarial permission test set. Focus: Hybrid search, Filters, Reranking.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A retrieval filter and adversarial permission test set. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Lexical, semantic and hybrid retrieval; filters and reranking: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
+- [ ] Unauthorized passages never enter the retrieved context.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Chunking experiment arena
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A builder needs evidence for choosing chunk size and overlap.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Write six documents with headings, lists and answers crossing boundaries. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A chunking benchmark and source-offset viewer.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Lexical, semantic and hybrid retrieval; filters and reranking:** Index the project’s records and notes with source IDs and permission metadata.  For Lexical, semantic and hybrid retrieval; filters and reranking, explicitly apply Hybrid search, Filters, Reranking.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
+- **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Chunking experiment arena: A chunking benchmark and source-offset viewer. Focus: Hybrid search, Filters, Reranking.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A chunking benchmark and source-offset viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Lexical, semantic and hybrid retrieval; filters and reranking: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
+- [ ] Compare retrieval on identical queries and preserve exact source spans.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Citation integrity checker
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A reviewer needs to catch answers citing the wrong source.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Write 30 claims, source passages and deliberately incorrect citations. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** A citation validation report and abstention interface.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Lexical, semantic and hybrid retrieval; filters and reranking:** Index the project’s records and notes with source IDs and permission metadata.  For Lexical, semantic and hybrid retrieval; filters and reranking, explicitly apply Hybrid search, Filters, Reranking.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
+- **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Citation integrity checker: A citation validation report and abstention interface. Focus: Hybrid search, Filters, Reranking.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A citation validation report and abstention interface. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Lexical, semantic and hybrid retrieval; filters and reranking: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
+- [ ] Flag missing IDs and unsupported spans; do not equate a valid link with support.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Embedding retrieval scorecard
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A builder needs to choose representations for a small corpus.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use local notes and labeled paraphrases; TF-IDF is the offline baseline. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A representation comparison with dimension and latency reports.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Lexical, semantic and hybrid retrieval; filters and reranking:** Index the project’s records and notes with source IDs and permission metadata.  For Lexical, semantic and hybrid retrieval; filters and reranking, explicitly apply Hybrid search, Filters, Reranking.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
+- **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Embedding retrieval scorecard: A representation comparison with dimension and latency reports. Focus: Hybrid search, Filters, Reranking.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A representation comparison with dimension and latency reports. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Lexical, semantic and hybrid retrieval; filters and reranking: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
+- [ ] Keep evaluation queries separate and identify model download requirements.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Concept relationship explorer
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A learner needs to navigate relationships between study notes.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Author 25 concepts and 40 typed relationships in JSON. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A graph traversal and provenance viewer.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Lexical, semantic and hybrid retrieval; filters and reranking:** Index the project’s records and notes with source IDs and permission metadata.  For Lexical, semantic and hybrid retrieval; filters and reranking, explicitly apply Hybrid search, Filters, Reranking.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
+- **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Concept relationship explorer: A graph traversal and provenance viewer. Focus: Hybrid search, Filters, Reranking.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A graph traversal and provenance viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Lexical, semantic and hybrid retrieval; filters and reranking: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
+- [ ] Handle cycles and distinguish authored edges from inferred hypotheses.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Hybrid retrieval benchmark
+
+An analyst needs both exact-code and paraphrase retrieval.
+
+**Data:** Generate 80 catalog entries with product codes and prose descriptions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A lexical/vector fusion and reranking comparison.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Hybrid retrieval benchmark: A lexical/vector fusion and reranking comparison. Focus: Hybrid search, Filters, Reranking.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A lexical/vector fusion and reranking comparison. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Lexical, semantic and hybrid retrieval; filters and reranking: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Measure exact-code and paraphrase slices separately.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Incremental document index
+
+A librarian needs updated documents without stale duplicate chunks.
+
+**Data:** Create 20 versioned local documents with additions and deletions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An idempotent ingestion and deletion workflow.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Incremental document index: An idempotent ingestion and deletion workflow. Focus: Hybrid search, Filters, Reranking.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An idempotent ingestion and deletion workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Lexical, semantic and hybrid retrieval; filters and reranking: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Re-ingest twice, delete a source and prove its chunks disappear.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Retrieval failure diagnosis bench
+
+A maintainer needs to separate retrieval and answer failures.
+
+**Data:** Write 25 questions including missing evidence and conflicting passages. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval/answer error taxonomy and regression report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Retrieval failure diagnosis bench: A retrieval/answer error taxonomy and regression report. Focus: Hybrid search, Filters, Reranking.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval/answer error taxonomy and regression report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Lexical, semantic and hybrid retrieval; filters and reranking: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Measure retrieval recall separately from answer faithfulness.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Read-only SQL evidence assistant
+
+An analyst needs answers grounded in tabular records.
+
+**Data:** Use a local SQLite database of fictional orders and customers. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A whitelisted query workflow with rows cited as evidence.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Read-only SQL evidence assistant: A whitelisted query workflow with rows cited as evidence. Focus: Hybrid search, Filters, Reranking.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A whitelisted query workflow with rows cited as evidence. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Lexical, semantic and hybrid retrieval; filters and reranking: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject writes, bound row counts and verify join totals.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1131,7 +1131,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Make source support testable and refuse unsupported answers.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Lexical, semantic and hybrid retrieval; filters and reranking](rag.md#rag-retrieval) Navigation is unrestricted.
 
@@ -1199,292 +1199,292 @@ Build an extractive local Q&A system with citations and abstentions; evaluate tw
 
 #### Ten project recommendations
 
-### Research library navigator
+### Retrieval failure diagnosis bench
 
-Help a learner find relevant passages in a small technical reading collection.
+A maintainer needs to separate retrieval and answer failures.
 
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
+**Data:** Write 25 questions including missing evidence and conflicting passages. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A searchable library with grounded answers and source references.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Grounded generation, citations and retrieval evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For Grounded generation, citations and retrieval evaluation, explicitly apply Grounding, Citations, Retrieval metrics.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Grounded generation, citations and retrieval evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Grounded generation, citations and retrieval evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A retrieval/answer error taxonomy and regression report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Grounded generation, citations and retrieval evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For Grounded generation, citations and retrieval evaluation, explicitly apply Grounding, Citations, Retrieval metrics.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
+- **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Retrieval failure diagnosis bench: A retrieval/answer error taxonomy and regression report. Focus: Grounding, Citations, Retrieval metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Grounded generation, citations and retrieval evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A retrieval/answer error taxonomy and regression report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded generation, citations and retrieval evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Grounded generation, citations and retrieval evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
+- [ ] Measure retrieval recall separately from answer faithfulness.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Support ticket triage desk
+### Chunking experiment arena
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A builder needs evidence for choosing chunk size and overlap.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Write six documents with headings, lists and answers crossing boundaries. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Grounded generation, citations and retrieval evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For Grounded generation, citations and retrieval evaluation, explicitly apply Grounding, Citations, Retrieval metrics.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Grounded generation, citations and retrieval evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Grounded generation, citations and retrieval evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Grounded generation, citations and retrieval evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For Grounded generation, citations and retrieval evaluation, explicitly apply Grounding, Citations, Retrieval metrics.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Grounded generation, citations and retrieval evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Grounded generation, citations and retrieval evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Grounded generation, citations and retrieval evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For Grounded generation, citations and retrieval evaluation, explicitly apply Grounding, Citations, Retrieval metrics.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Grounded generation, citations and retrieval evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Grounded generation, citations and retrieval evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A chunking benchmark and source-offset viewer.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Grounded generation, citations and retrieval evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For Grounded generation, citations and retrieval evaluation, explicitly apply Grounding, Citations, Retrieval metrics.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
+- **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Chunking experiment arena: A chunking benchmark and source-offset viewer. Focus: Grounding, Citations, Retrieval metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Grounded generation, citations and retrieval evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A chunking benchmark and source-offset viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded generation, citations and retrieval evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Grounded generation, citations and retrieval evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
+- [ ] Compare retrieval on identical queries and preserve exact source spans.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Citation integrity checker
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A reviewer needs to catch answers citing the wrong source.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Write 30 claims, source passages and deliberately incorrect citations. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A citation validation report and abstention interface.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Grounded generation, citations and retrieval evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For Grounded generation, citations and retrieval evaluation, explicitly apply Grounding, Citations, Retrieval metrics.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
+- **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Citation integrity checker: A citation validation report and abstention interface. Focus: Grounding, Citations, Retrieval metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Grounded generation, citations and retrieval evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A citation validation report and abstention interface. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded generation, citations and retrieval evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Grounded generation, citations and retrieval evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
+- [ ] Flag missing IDs and unsupported spans; do not equate a valid link with support.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Embedding retrieval scorecard
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A builder needs to choose representations for a small corpus.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Use local notes and labeled paraphrases; TF-IDF is the offline baseline. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** A representation comparison with dimension and latency reports.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Grounded generation, citations and retrieval evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For Grounded generation, citations and retrieval evaluation, explicitly apply Grounding, Citations, Retrieval metrics.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
+- **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Embedding retrieval scorecard: A representation comparison with dimension and latency reports. Focus: Grounding, Citations, Retrieval metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Grounded generation, citations and retrieval evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A representation comparison with dimension and latency reports. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded generation, citations and retrieval evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Grounded generation, citations and retrieval evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
+- [ ] Keep evaluation queries separate and identify model download requirements.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Concept relationship explorer
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A learner needs to navigate relationships between study notes.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Author 25 concepts and 40 typed relationships in JSON. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A graph traversal and provenance viewer.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Grounded generation, citations and retrieval evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For Grounded generation, citations and retrieval evaluation, explicitly apply Grounding, Citations, Retrieval metrics.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
+- **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Concept relationship explorer: A graph traversal and provenance viewer. Focus: Grounding, Citations, Retrieval metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Grounded generation, citations and retrieval evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A graph traversal and provenance viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded generation, citations and retrieval evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Grounded generation, citations and retrieval evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
+- [ ] Handle cycles and distinguish authored edges from inferred hypotheses.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Hybrid retrieval benchmark
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+An analyst needs both exact-code and paraphrase retrieval.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Generate 80 catalog entries with product codes and prose descriptions. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A lexical/vector fusion and reranking comparison.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Grounded generation, citations and retrieval evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For Grounded generation, citations and retrieval evaluation, explicitly apply Grounding, Citations, Retrieval metrics.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
+- **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Hybrid retrieval benchmark: A lexical/vector fusion and reranking comparison. Focus: Grounding, Citations, Retrieval metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Grounded generation, citations and retrieval evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A lexical/vector fusion and reranking comparison. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded generation, citations and retrieval evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Grounded generation, citations and retrieval evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
+- [ ] Measure exact-code and paraphrase slices separately.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Incremental document index
+
+A librarian needs updated documents without stale duplicate chunks.
+
+**Data:** Create 20 versioned local documents with additions and deletions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An idempotent ingestion and deletion workflow.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Incremental document index: An idempotent ingestion and deletion workflow. Focus: Grounding, Citations, Retrieval metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An idempotent ingestion and deletion workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded generation, citations and retrieval evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Re-ingest twice, delete a source and prove its chunks disappear.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Personal notes retrieval desk
+
+A student needs answers traceable to their own notes.
+
+**Data:** Create ten Markdown notes and 20 query/relevance judgments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A local search interface with passage IDs and citations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Personal notes retrieval desk: A local search interface with passage IDs and citations. Focus: Grounding, Citations, Retrieval metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A local search interface with passage IDs and citations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded generation, citations and retrieval evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report recall at five and refuse unsupported answers.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Permission-aware team search
+
+A team needs retrieval that respects document access rights.
+
+**Data:** Generate three fictional roles and 30 access-labeled documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval filter and adversarial permission test set.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Permission-aware team search: A retrieval filter and adversarial permission test set. Focus: Grounding, Citations, Retrieval metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval filter and adversarial permission test set. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded generation, citations and retrieval evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Unauthorized passages never enter the retrieved context.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Read-only SQL evidence assistant
+
+An analyst needs answers grounded in tabular records.
+
+**Data:** Use a local SQLite database of fictional orders and customers. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A whitelisted query workflow with rows cited as evidence.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Read-only SQL evidence assistant: A whitelisted query workflow with rows cited as evidence. Focus: Grounding, Citations, Retrieval metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A whitelisted query workflow with rows cited as evidence. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded generation, citations and retrieval evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject writes, bound row counts and verify join totals.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1498,7 +1498,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Use structured relationships when vector similarity alone cannot answer the question.
 
-**Priority:** Useful next · **Study:** 2h · **Practice:** 3h
+**Priority:** Specialization · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Grounded generation, citations and retrieval evaluation](rag.md#rag-answers) Navigation is unrestricted.
 
@@ -1589,292 +1589,292 @@ Create a small SQLite database and an in-memory entity graph; route three questi
 
 #### Ten project recommendations
 
-### Research library navigator
+### Concept relationship explorer
 
-Help a learner find relevant passages in a small technical reading collection.
+A learner needs to navigate relationships between study notes.
 
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
+**Data:** Author 25 concepts and 40 typed relationships in JSON. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A searchable library with grounded answers and source references.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **SQL retrieval and knowledge graphs:** Index the project’s records and notes with source IDs and permission metadata.  For SQL retrieval and knowledge graphs, explicitly apply SQL retrieval, Knowledge graphs, Retrieval choice.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] SQL retrieval and knowledge graphs: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] SQL retrieval and knowledge graphs: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A graph traversal and provenance viewer.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **SQL retrieval and knowledge graphs:** Index the project’s records and notes with source IDs and permission metadata.  For SQL retrieval and knowledge graphs, explicitly apply SQL retrieval, Knowledge graphs, Retrieval choice.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
+- **SQL retrieval and knowledge graphs:** Implement SQL retrieval and knowledge graphs in Concept relationship explorer. Adapt this focused lab to the project data: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.  Required concepts: SQL retrieval, Knowledge graphs, Retrieval choice.
+  - Deliverable: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] SQL retrieval and knowledge graphs: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A graph traversal and provenance viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL retrieval and knowledge graphs: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] SQL retrieval and knowledge graphs: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
+- [ ] Handle cycles and distinguish authored edges from inferred hypotheses.
+- [ ] SQL retrieval and knowledge graphs: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Support ticket triage desk
+### Read-only SQL evidence assistant
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+An analyst needs answers grounded in tabular records.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Use a local SQLite database of fictional orders and customers. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **SQL retrieval and knowledge graphs:** Index the project’s records and notes with source IDs and permission metadata.  For SQL retrieval and knowledge graphs, explicitly apply SQL retrieval, Knowledge graphs, Retrieval choice.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] SQL retrieval and knowledge graphs: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] SQL retrieval and knowledge graphs: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **SQL retrieval and knowledge graphs:** Index the project’s records and notes with source IDs and permission metadata.  For SQL retrieval and knowledge graphs, explicitly apply SQL retrieval, Knowledge graphs, Retrieval choice.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] SQL retrieval and knowledge graphs: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] SQL retrieval and knowledge graphs: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **SQL retrieval and knowledge graphs:** Index the project’s records and notes with source IDs and permission metadata.  For SQL retrieval and knowledge graphs, explicitly apply SQL retrieval, Knowledge graphs, Retrieval choice.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] SQL retrieval and knowledge graphs: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] SQL retrieval and knowledge graphs: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A whitelisted query workflow with rows cited as evidence.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **SQL retrieval and knowledge graphs:** Index the project’s records and notes with source IDs and permission metadata.  For SQL retrieval and knowledge graphs, explicitly apply SQL retrieval, Knowledge graphs, Retrieval choice.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
+- **SQL retrieval and knowledge graphs:** Implement SQL retrieval and knowledge graphs in Read-only SQL evidence assistant. Adapt this focused lab to the project data: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.  Required concepts: SQL retrieval, Knowledge graphs, Retrieval choice.
+  - Deliverable: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] SQL retrieval and knowledge graphs: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A whitelisted query workflow with rows cited as evidence. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL retrieval and knowledge graphs: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] SQL retrieval and knowledge graphs: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
+- [ ] Reject writes, bound row counts and verify join totals.
+- [ ] SQL retrieval and knowledge graphs: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Chunking experiment arena
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A builder needs evidence for choosing chunk size and overlap.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Write six documents with headings, lists and answers crossing boundaries. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A chunking benchmark and source-offset viewer.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **SQL retrieval and knowledge graphs:** Index the project’s records and notes with source IDs and permission metadata.  For SQL retrieval and knowledge graphs, explicitly apply SQL retrieval, Knowledge graphs, Retrieval choice.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
+- **SQL retrieval and knowledge graphs:** Extend the project with SQL retrieval and knowledge graphs in Chunking experiment arena. Adapt this focused lab to the project data: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.  Required concepts: SQL retrieval, Knowledge graphs, Retrieval choice.
+  - Deliverable: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] SQL retrieval and knowledge graphs: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A chunking benchmark and source-offset viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL retrieval and knowledge graphs: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] SQL retrieval and knowledge graphs: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
+- [ ] Compare retrieval on identical queries and preserve exact source spans.
+- [ ] SQL retrieval and knowledge graphs: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Citation integrity checker
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A reviewer needs to catch answers citing the wrong source.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Write 30 claims, source passages and deliberately incorrect citations. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** A citation validation report and abstention interface.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **SQL retrieval and knowledge graphs:** Index the project’s records and notes with source IDs and permission metadata.  For SQL retrieval and knowledge graphs, explicitly apply SQL retrieval, Knowledge graphs, Retrieval choice.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
+- **SQL retrieval and knowledge graphs:** Extend the project with SQL retrieval and knowledge graphs in Citation integrity checker. Adapt this focused lab to the project data: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.  Required concepts: SQL retrieval, Knowledge graphs, Retrieval choice.
+  - Deliverable: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] SQL retrieval and knowledge graphs: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A citation validation report and abstention interface. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL retrieval and knowledge graphs: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] SQL retrieval and knowledge graphs: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
+- [ ] Flag missing IDs and unsupported spans; do not equate a valid link with support.
+- [ ] SQL retrieval and knowledge graphs: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Embedding retrieval scorecard
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A builder needs to choose representations for a small corpus.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use local notes and labeled paraphrases; TF-IDF is the offline baseline. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A representation comparison with dimension and latency reports.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **SQL retrieval and knowledge graphs:** Index the project’s records and notes with source IDs and permission metadata.  For SQL retrieval and knowledge graphs, explicitly apply SQL retrieval, Knowledge graphs, Retrieval choice.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
+- **SQL retrieval and knowledge graphs:** Extend the project with SQL retrieval and knowledge graphs in Embedding retrieval scorecard. Adapt this focused lab to the project data: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.  Required concepts: SQL retrieval, Knowledge graphs, Retrieval choice.
+  - Deliverable: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] SQL retrieval and knowledge graphs: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A representation comparison with dimension and latency reports. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL retrieval and knowledge graphs: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] SQL retrieval and knowledge graphs: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
+- [ ] Keep evaluation queries separate and identify model download requirements.
+- [ ] SQL retrieval and knowledge graphs: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Hybrid retrieval benchmark
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+An analyst needs both exact-code and paraphrase retrieval.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Generate 80 catalog entries with product codes and prose descriptions. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A lexical/vector fusion and reranking comparison.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **SQL retrieval and knowledge graphs:** Index the project’s records and notes with source IDs and permission metadata.  For SQL retrieval and knowledge graphs, explicitly apply SQL retrieval, Knowledge graphs, Retrieval choice.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
+- **SQL retrieval and knowledge graphs:** Extend the project with SQL retrieval and knowledge graphs in Hybrid retrieval benchmark. Adapt this focused lab to the project data: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.  Required concepts: SQL retrieval, Knowledge graphs, Retrieval choice.
+  - Deliverable: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] SQL retrieval and knowledge graphs: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A lexical/vector fusion and reranking comparison. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL retrieval and knowledge graphs: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] SQL retrieval and knowledge graphs: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.
+- [ ] Measure exact-code and paraphrase slices separately.
+- [ ] SQL retrieval and knowledge graphs: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Incremental document index
+
+A librarian needs updated documents without stale duplicate chunks.
+
+**Data:** Create 20 versioned local documents with additions and deletions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An idempotent ingestion and deletion workflow.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **SQL retrieval and knowledge graphs:** Extend the project with SQL retrieval and knowledge graphs in Incremental document index. Adapt this focused lab to the project data: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.  Required concepts: SQL retrieval, Knowledge graphs, Retrieval choice.
+  - Deliverable: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An idempotent ingestion and deletion workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL retrieval and knowledge graphs: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Re-ingest twice, delete a source and prove its chunks disappear.
+- [ ] SQL retrieval and knowledge graphs: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Personal notes retrieval desk
+
+A student needs answers traceable to their own notes.
+
+**Data:** Create ten Markdown notes and 20 query/relevance judgments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A local search interface with passage IDs and citations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **SQL retrieval and knowledge graphs:** Extend the project with SQL retrieval and knowledge graphs in Personal notes retrieval desk. Adapt this focused lab to the project data: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.  Required concepts: SQL retrieval, Knowledge graphs, Retrieval choice.
+  - Deliverable: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A local search interface with passage IDs and citations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL retrieval and knowledge graphs: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report recall at five and refuse unsupported answers.
+- [ ] SQL retrieval and knowledge graphs: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Permission-aware team search
+
+A team needs retrieval that respects document access rights.
+
+**Data:** Generate three fictional roles and 30 access-labeled documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval filter and adversarial permission test set.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **SQL retrieval and knowledge graphs:** Extend the project with SQL retrieval and knowledge graphs in Permission-aware team search. Adapt this focused lab to the project data: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.  Required concepts: SQL retrieval, Knowledge graphs, Retrieval choice.
+  - Deliverable: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval filter and adversarial permission test set. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL retrieval and knowledge graphs: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Unauthorized passages never enter the retrieved context.
+- [ ] SQL retrieval and knowledge graphs: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Retrieval failure diagnosis bench
+
+A maintainer needs to separate retrieval and answer failures.
+
+**Data:** Write 25 questions including missing evidence and conflicting passages. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval/answer error taxonomy and regression report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **SQL retrieval and knowledge graphs:** Extend the project with SQL retrieval and knowledge graphs in Retrieval failure diagnosis bench. Adapt this focused lab to the project data: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.  Required concepts: SQL retrieval, Knowledge graphs, Retrieval choice.
+  - Deliverable: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval/answer error taxonomy and regression report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL retrieval and knowledge graphs: SQL retrieval and knowledge graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Measure retrieval recall separately from answer faithfulness.
+- [ ] SQL retrieval and knowledge graphs: Create a small SQLite database and an in-memory entity graph; route three question types to SQL, graph traversal or text retrieval and cite each result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1888,7 +1888,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Make retrieval reproducible when documents are parsed, edited, deleted or ingested more than once.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Essential · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [Document parsing, chunking and metadata](rag.md#rag-ingestion) Navigation is unrestricted.
 
@@ -1974,292 +1974,292 @@ Build a CPU text-ingestion index over five local Markdown fixtures with determin
 
 #### Ten project recommendations
 
-### Research library navigator
+### Chunking experiment arena
 
-Help a learner find relevant passages in a small technical reading collection.
+A builder needs evidence for choosing chunk size and overlap.
 
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
+**Data:** Write six documents with headings, lists and answers crossing boundaries. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A searchable library with grounded answers and source references.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Chunk boundaries, document identity and ingestion updates:** Index the project’s records and notes with source IDs and permission metadata.  For Chunk boundaries, document identity and ingestion updates, explicitly apply Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Chunk boundaries, document identity and ingestion updates: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Chunk boundaries, document identity and ingestion updates: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A chunking benchmark and source-offset viewer.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Chunk boundaries, document identity and ingestion updates:** Index the project’s records and notes with source IDs and permission metadata.  For Chunk boundaries, document identity and ingestion updates, explicitly apply Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
+- **Chunk boundaries, document identity and ingestion updates:** Implement Chunk boundaries, document identity and ingestion updates in Chunking experiment arena. Adapt this focused lab to the project data: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.  Required concepts: Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs, Upserts and deletions, Metadata and access filters.
+  - Deliverable: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Chunk boundaries, document identity and ingestion updates: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A chunking benchmark and source-offset viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Chunk boundaries, document identity and ingestion updates: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Chunk boundaries, document identity and ingestion updates: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
+- [ ] Compare retrieval on identical queries and preserve exact source spans.
+- [ ] Chunk boundaries, document identity and ingestion updates: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Support ticket triage desk
+### Citation integrity checker
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A reviewer needs to catch answers citing the wrong source.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Write 30 claims, source passages and deliberately incorrect citations. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Chunk boundaries, document identity and ingestion updates:** Index the project’s records and notes with source IDs and permission metadata.  For Chunk boundaries, document identity and ingestion updates, explicitly apply Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Chunk boundaries, document identity and ingestion updates: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Chunk boundaries, document identity and ingestion updates: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Chunk boundaries, document identity and ingestion updates:** Index the project’s records and notes with source IDs and permission metadata.  For Chunk boundaries, document identity and ingestion updates, explicitly apply Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Chunk boundaries, document identity and ingestion updates: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Chunk boundaries, document identity and ingestion updates: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Chunk boundaries, document identity and ingestion updates:** Index the project’s records and notes with source IDs and permission metadata.  For Chunk boundaries, document identity and ingestion updates, explicitly apply Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Chunk boundaries, document identity and ingestion updates: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Chunk boundaries, document identity and ingestion updates: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A citation validation report and abstention interface.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Chunk boundaries, document identity and ingestion updates:** Index the project’s records and notes with source IDs and permission metadata.  For Chunk boundaries, document identity and ingestion updates, explicitly apply Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
+- **Chunk boundaries, document identity and ingestion updates:** Extend the project with Chunk boundaries, document identity and ingestion updates in Citation integrity checker. Adapt this focused lab to the project data: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.  Required concepts: Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs, Upserts and deletions, Metadata and access filters.
+  - Deliverable: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Chunk boundaries, document identity and ingestion updates: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A citation validation report and abstention interface. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Chunk boundaries, document identity and ingestion updates: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Chunk boundaries, document identity and ingestion updates: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
+- [ ] Flag missing IDs and unsupported spans; do not equate a valid link with support.
+- [ ] Chunk boundaries, document identity and ingestion updates: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Embedding retrieval scorecard
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A builder needs to choose representations for a small corpus.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use local notes and labeled paraphrases; TF-IDF is the offline baseline. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A representation comparison with dimension and latency reports.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Chunk boundaries, document identity and ingestion updates:** Index the project’s records and notes with source IDs and permission metadata.  For Chunk boundaries, document identity and ingestion updates, explicitly apply Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
+- **Chunk boundaries, document identity and ingestion updates:** Extend the project with Chunk boundaries, document identity and ingestion updates in Embedding retrieval scorecard. Adapt this focused lab to the project data: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.  Required concepts: Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs, Upserts and deletions, Metadata and access filters.
+  - Deliverable: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Chunk boundaries, document identity and ingestion updates: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A representation comparison with dimension and latency reports. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Chunk boundaries, document identity and ingestion updates: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Chunk boundaries, document identity and ingestion updates: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
+- [ ] Keep evaluation queries separate and identify model download requirements.
+- [ ] Chunk boundaries, document identity and ingestion updates: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Concept relationship explorer
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A learner needs to navigate relationships between study notes.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Author 25 concepts and 40 typed relationships in JSON. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** A graph traversal and provenance viewer.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Chunk boundaries, document identity and ingestion updates:** Index the project’s records and notes with source IDs and permission metadata.  For Chunk boundaries, document identity and ingestion updates, explicitly apply Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
+- **Chunk boundaries, document identity and ingestion updates:** Extend the project with Chunk boundaries, document identity and ingestion updates in Concept relationship explorer. Adapt this focused lab to the project data: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.  Required concepts: Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs, Upserts and deletions, Metadata and access filters.
+  - Deliverable: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Chunk boundaries, document identity and ingestion updates: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A graph traversal and provenance viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Chunk boundaries, document identity and ingestion updates: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Chunk boundaries, document identity and ingestion updates: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
+- [ ] Handle cycles and distinguish authored edges from inferred hypotheses.
+- [ ] Chunk boundaries, document identity and ingestion updates: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Hybrid retrieval benchmark
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+An analyst needs both exact-code and paraphrase retrieval.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Generate 80 catalog entries with product codes and prose descriptions. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A lexical/vector fusion and reranking comparison.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Chunk boundaries, document identity and ingestion updates:** Index the project’s records and notes with source IDs and permission metadata.  For Chunk boundaries, document identity and ingestion updates, explicitly apply Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
+- **Chunk boundaries, document identity and ingestion updates:** Extend the project with Chunk boundaries, document identity and ingestion updates in Hybrid retrieval benchmark. Adapt this focused lab to the project data: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.  Required concepts: Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs, Upserts and deletions, Metadata and access filters.
+  - Deliverable: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Chunk boundaries, document identity and ingestion updates: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A lexical/vector fusion and reranking comparison. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Chunk boundaries, document identity and ingestion updates: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Chunk boundaries, document identity and ingestion updates: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
+- [ ] Measure exact-code and paraphrase slices separately.
+- [ ] Chunk boundaries, document identity and ingestion updates: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Incremental document index
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A librarian needs updated documents without stale duplicate chunks.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Create 20 versioned local documents with additions and deletions. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** An idempotent ingestion and deletion workflow.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Chunk boundaries, document identity and ingestion updates:** Index the project’s records and notes with source IDs and permission metadata.  For Chunk boundaries, document identity and ingestion updates, explicitly apply Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
+- **Chunk boundaries, document identity and ingestion updates:** Extend the project with Chunk boundaries, document identity and ingestion updates in Incremental document index. Adapt this focused lab to the project data: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.  Required concepts: Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs, Upserts and deletions, Metadata and access filters.
+  - Deliverable: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Chunk boundaries, document identity and ingestion updates: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An idempotent ingestion and deletion workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Chunk boundaries, document identity and ingestion updates: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Chunk boundaries, document identity and ingestion updates: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.
+- [ ] Re-ingest twice, delete a source and prove its chunks disappear.
+- [ ] Chunk boundaries, document identity and ingestion updates: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Personal notes retrieval desk
+
+A student needs answers traceable to their own notes.
+
+**Data:** Create ten Markdown notes and 20 query/relevance judgments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A local search interface with passage IDs and citations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Chunk boundaries, document identity and ingestion updates:** Extend the project with Chunk boundaries, document identity and ingestion updates in Personal notes retrieval desk. Adapt this focused lab to the project data: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.  Required concepts: Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs, Upserts and deletions, Metadata and access filters.
+  - Deliverable: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A local search interface with passage IDs and citations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Chunk boundaries, document identity and ingestion updates: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report recall at five and refuse unsupported answers.
+- [ ] Chunk boundaries, document identity and ingestion updates: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Permission-aware team search
+
+A team needs retrieval that respects document access rights.
+
+**Data:** Generate three fictional roles and 30 access-labeled documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval filter and adversarial permission test set.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Chunk boundaries, document identity and ingestion updates:** Extend the project with Chunk boundaries, document identity and ingestion updates in Permission-aware team search. Adapt this focused lab to the project data: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.  Required concepts: Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs, Upserts and deletions, Metadata and access filters.
+  - Deliverable: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval filter and adversarial permission test set. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Chunk boundaries, document identity and ingestion updates: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Unauthorized passages never enter the retrieved context.
+- [ ] Chunk boundaries, document identity and ingestion updates: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Retrieval failure diagnosis bench
+
+A maintainer needs to separate retrieval and answer failures.
+
+**Data:** Write 25 questions including missing evidence and conflicting passages. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval/answer error taxonomy and regression report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Chunk boundaries, document identity and ingestion updates:** Extend the project with Chunk boundaries, document identity and ingestion updates in Retrieval failure diagnosis bench. Adapt this focused lab to the project data: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.  Required concepts: Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs, Upserts and deletions, Metadata and access filters.
+  - Deliverable: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval/answer error taxonomy and regression report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Chunk boundaries, document identity and ingestion updates: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Measure retrieval recall separately from answer faithfulness.
+- [ ] Chunk boundaries, document identity and ingestion updates: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Read-only SQL evidence assistant
+
+An analyst needs answers grounded in tabular records.
+
+**Data:** Use a local SQLite database of fictional orders and customers. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A whitelisted query workflow with rows cited as evidence.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Chunk boundaries, document identity and ingestion updates:** Extend the project with Chunk boundaries, document identity and ingestion updates in Read-only SQL evidence assistant. Adapt this focused lab to the project data: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.  Required concepts: Parsing fidelity, Chunk boundaries and overlap, Stable document and chunk IDs, Upserts and deletions, Metadata and access filters.
+  - Deliverable: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A whitelisted query workflow with rows cited as evidence. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Chunk boundaries, document identity and ingestion updates: Chunk boundaries, document identity and ingestion updates: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject writes, bound row counts and verify join totals.
+- [ ] Chunk boundaries, document identity and ingestion updates: Build a CPU text-ingestion index over five local Markdown fixtures with deterministic IDs and versioned chunks. Compare two chunking methods, test repeated ingestion, updates and deletion, and add an access-filter regression test.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2273,7 +2273,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Measure which retrieval stage improves relevance rather than assuming that adding a reranker always helps.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Specialization · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [Lexical, semantic and hybrid retrieval; filters and reranking](rag.md#rag-retrieval) Navigation is unrestricted.
 
@@ -2359,292 +2359,292 @@ Create a 30-passage local corpus with ten relevance-labelled queries. Compare a 
 
 #### Ten project recommendations
 
-### Research library navigator
+### Hybrid retrieval benchmark
 
-Help a learner find relevant passages in a small technical reading collection.
+An analyst needs both exact-code and paraphrase retrieval.
 
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
+**Data:** Generate 80 catalog entries with product codes and prose descriptions. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A searchable library with grounded answers and source references.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **BM25-style retrieval, vector fusion and reranking evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For BM25-style retrieval, vector fusion and reranking evaluation, explicitly apply Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A lexical/vector fusion and reranking comparison.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **BM25-style retrieval, vector fusion and reranking evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For BM25-style retrieval, vector fusion and reranking evaluation, explicitly apply Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
+- **BM25-style retrieval, vector fusion and reranking evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Hybrid retrieval benchmark: A lexical/vector fusion and reranking comparison. Focus: Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion, Cross-encoder reranking, Stage-by-stage metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A lexical/vector fusion and reranking comparison. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · BM25-style retrieval, vector fusion and reranking evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
+- [ ] Measure exact-code and paraphrase slices separately.
+- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Support ticket triage desk
+### Chunking experiment arena
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A builder needs evidence for choosing chunk size and overlap.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Write six documents with headings, lists and answers crossing boundaries. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **BM25-style retrieval, vector fusion and reranking evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For BM25-style retrieval, vector fusion and reranking evaluation, explicitly apply Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **BM25-style retrieval, vector fusion and reranking evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For BM25-style retrieval, vector fusion and reranking evaluation, explicitly apply Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **BM25-style retrieval, vector fusion and reranking evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For BM25-style retrieval, vector fusion and reranking evaluation, explicitly apply Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A chunking benchmark and source-offset viewer.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **BM25-style retrieval, vector fusion and reranking evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For BM25-style retrieval, vector fusion and reranking evaluation, explicitly apply Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
+- **BM25-style retrieval, vector fusion and reranking evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Chunking experiment arena: A chunking benchmark and source-offset viewer. Focus: Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion, Cross-encoder reranking, Stage-by-stage metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A chunking benchmark and source-offset viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · BM25-style retrieval, vector fusion and reranking evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
+- [ ] Compare retrieval on identical queries and preserve exact source spans.
+- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Citation integrity checker
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A reviewer needs to catch answers citing the wrong source.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Write 30 claims, source passages and deliberately incorrect citations. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A citation validation report and abstention interface.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **BM25-style retrieval, vector fusion and reranking evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For BM25-style retrieval, vector fusion and reranking evaluation, explicitly apply Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
+- **BM25-style retrieval, vector fusion and reranking evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Citation integrity checker: A citation validation report and abstention interface. Focus: Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion, Cross-encoder reranking, Stage-by-stage metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A citation validation report and abstention interface. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · BM25-style retrieval, vector fusion and reranking evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
+- [ ] Flag missing IDs and unsupported spans; do not equate a valid link with support.
+- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Embedding retrieval scorecard
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A builder needs to choose representations for a small corpus.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Use local notes and labeled paraphrases; TF-IDF is the offline baseline. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** A representation comparison with dimension and latency reports.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **BM25-style retrieval, vector fusion and reranking evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For BM25-style retrieval, vector fusion and reranking evaluation, explicitly apply Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
+- **BM25-style retrieval, vector fusion and reranking evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Embedding retrieval scorecard: A representation comparison with dimension and latency reports. Focus: Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion, Cross-encoder reranking, Stage-by-stage metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A representation comparison with dimension and latency reports. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · BM25-style retrieval, vector fusion and reranking evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
+- [ ] Keep evaluation queries separate and identify model download requirements.
+- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Concept relationship explorer
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A learner needs to navigate relationships between study notes.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Author 25 concepts and 40 typed relationships in JSON. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A graph traversal and provenance viewer.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **BM25-style retrieval, vector fusion and reranking evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For BM25-style retrieval, vector fusion and reranking evaluation, explicitly apply Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
+- **BM25-style retrieval, vector fusion and reranking evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Concept relationship explorer: A graph traversal and provenance viewer. Focus: Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion, Cross-encoder reranking, Stage-by-stage metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A graph traversal and provenance viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · BM25-style retrieval, vector fusion and reranking evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
+- [ ] Handle cycles and distinguish authored edges from inferred hypotheses.
+- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Incremental document index
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A librarian needs updated documents without stale duplicate chunks.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Create 20 versioned local documents with additions and deletions. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** An idempotent ingestion and deletion workflow.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **BM25-style retrieval, vector fusion and reranking evaluation:** Index the project’s records and notes with source IDs and permission metadata.  For BM25-style retrieval, vector fusion and reranking evaluation, explicitly apply Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
+- **BM25-style retrieval, vector fusion and reranking evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Incremental document index: An idempotent ingestion and deletion workflow. Focus: Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion, Cross-encoder reranking, Stage-by-stage metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An idempotent ingestion and deletion workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · BM25-style retrieval, vector fusion and reranking evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.
+- [ ] Re-ingest twice, delete a source and prove its chunks disappear.
+- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Personal notes retrieval desk
+
+A student needs answers traceable to their own notes.
+
+**Data:** Create ten Markdown notes and 20 query/relevance judgments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A local search interface with passage IDs and citations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **BM25-style retrieval, vector fusion and reranking evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Personal notes retrieval desk: A local search interface with passage IDs and citations. Focus: Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion, Cross-encoder reranking, Stage-by-stage metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A local search interface with passage IDs and citations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · BM25-style retrieval, vector fusion and reranking evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report recall at five and refuse unsupported answers.
+- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Permission-aware team search
+
+A team needs retrieval that respects document access rights.
+
+**Data:** Generate three fictional roles and 30 access-labeled documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval filter and adversarial permission test set.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **BM25-style retrieval, vector fusion and reranking evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Permission-aware team search: A retrieval filter and adversarial permission test set. Focus: Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion, Cross-encoder reranking, Stage-by-stage metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval filter and adversarial permission test set. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · BM25-style retrieval, vector fusion and reranking evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Unauthorized passages never enter the retrieved context.
+- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Retrieval failure diagnosis bench
+
+A maintainer needs to separate retrieval and answer failures.
+
+**Data:** Write 25 questions including missing evidence and conflicting passages. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval/answer error taxonomy and regression report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **BM25-style retrieval, vector fusion and reranking evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Retrieval failure diagnosis bench: A retrieval/answer error taxonomy and regression report. Focus: Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion, Cross-encoder reranking, Stage-by-stage metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval/answer error taxonomy and regression report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · BM25-style retrieval, vector fusion and reranking evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Measure retrieval recall separately from answer faithfulness.
+- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Read-only SQL evidence assistant
+
+An analyst needs answers grounded in tabular records.
+
+**Data:** Use a local SQLite database of fictional orders and customers. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A whitelisted query workflow with rows cited as evidence.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **BM25-style retrieval, vector fusion and reranking evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Read-only SQL evidence assistant: A whitelisted query workflow with rows cited as evidence. Focus: Lexical versus semantic signals, Score-scale mismatch, Reciprocal rank fusion, Cross-encoder reranking, Stage-by-stage metrics.
+  - Deliverable: Index, labeled query set, retrieval report and citation examples
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A whitelisted query workflow with rows cited as evidence. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · BM25-style retrieval, vector fusion and reranking evaluation: Index, labeled query set, retrieval report and citation examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject writes, bound row counts and verify join totals.
+- [ ] BM25-style retrieval, vector fusion and reranking evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a 30-passage local corpus with ten relevance-labelled queries. Compare a lexical baseline, toy or local vector retrieval and rank fusion; use deterministic recorded reranker scores for the free CPU path and report stage-wise metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2658,7 +2658,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Make grounded answers traceable and explicitly handle questions whose evidence is missing or conflicting.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Essential · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [Grounded generation, citations and retrieval evaluation](rag.md#rag-answers) Navigation is unrestricted.
 
@@ -2744,292 +2744,1864 @@ Build an answer-validation harness using recorded answers over a small Markdown 
 
 #### Ten project recommendations
 
-### Research library navigator
+### Citation integrity checker
 
-Help a learner find relevant passages in a small technical reading collection.
+A reviewer needs to catch answers citing the wrong source.
 
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
+**Data:** Write 30 claims, source passages and deliberately incorrect citations. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A searchable library with grounded answers and source references.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Evidence selection, citation validation and abstention:** Index the project’s records and notes with source IDs and permission metadata.  For Evidence selection, citation validation and abstention, explicitly apply Evidence budget, Claim-level support, Citation validity versus faithfulness.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Evidence selection, citation validation and abstention: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Evidence selection, citation validation and abstention: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A citation validation report and abstention interface.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Evidence selection, citation validation and abstention:** Index the project’s records and notes with source IDs and permission metadata.  For Evidence selection, citation validation and abstention, explicitly apply Evidence budget, Claim-level support, Citation validity versus faithfulness.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
+- **Evidence selection, citation validation and abstention:** Implement Evidence selection, citation validation and abstention in Citation integrity checker. Adapt this focused lab to the project data: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.  Required concepts: Evidence budget, Claim-level support, Citation validity versus faithfulness, Conflicting or stale evidence, Abstention and escalation.
+  - Deliverable: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Evidence selection, citation validation and abstention: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A citation validation report and abstention interface. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evidence selection, citation validation and abstention: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Evidence selection, citation validation and abstention: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
+- [ ] Flag missing IDs and unsupported spans; do not equate a valid link with support.
+- [ ] Evidence selection, citation validation and abstention: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Support ticket triage desk
+### Chunking experiment arena
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A builder needs evidence for choosing chunk size and overlap.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Write six documents with headings, lists and answers crossing boundaries. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Evidence selection, citation validation and abstention:** Index the project’s records and notes with source IDs and permission metadata.  For Evidence selection, citation validation and abstention, explicitly apply Evidence budget, Claim-level support, Citation validity versus faithfulness.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Evidence selection, citation validation and abstention: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Evidence selection, citation validation and abstention: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Evidence selection, citation validation and abstention:** Index the project’s records and notes with source IDs and permission metadata.  For Evidence selection, citation validation and abstention, explicitly apply Evidence budget, Claim-level support, Citation validity versus faithfulness.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Evidence selection, citation validation and abstention: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Evidence selection, citation validation and abstention: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Evidence selection, citation validation and abstention:** Index the project’s records and notes with source IDs and permission metadata.  For Evidence selection, citation validation and abstention, explicitly apply Evidence budget, Claim-level support, Citation validity versus faithfulness.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Evidence selection, citation validation and abstention: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Evidence selection, citation validation and abstention: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A chunking benchmark and source-offset viewer.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Evidence selection, citation validation and abstention:** Index the project’s records and notes with source IDs and permission metadata.  For Evidence selection, citation validation and abstention, explicitly apply Evidence budget, Claim-level support, Citation validity versus faithfulness.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
+- **Evidence selection, citation validation and abstention:** Extend the project with Evidence selection, citation validation and abstention in Chunking experiment arena. Adapt this focused lab to the project data: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.  Required concepts: Evidence budget, Claim-level support, Citation validity versus faithfulness, Conflicting or stale evidence, Abstention and escalation.
+  - Deliverable: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Evidence selection, citation validation and abstention: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A chunking benchmark and source-offset viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evidence selection, citation validation and abstention: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Evidence selection, citation validation and abstention: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
+- [ ] Compare retrieval on identical queries and preserve exact source spans.
+- [ ] Evidence selection, citation validation and abstention: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Embedding retrieval scorecard
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A builder needs to choose representations for a small corpus.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use local notes and labeled paraphrases; TF-IDF is the offline baseline. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A representation comparison with dimension and latency reports.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Evidence selection, citation validation and abstention:** Index the project’s records and notes with source IDs and permission metadata.  For Evidence selection, citation validation and abstention, explicitly apply Evidence budget, Claim-level support, Citation validity versus faithfulness.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
+- **Evidence selection, citation validation and abstention:** Extend the project with Evidence selection, citation validation and abstention in Embedding retrieval scorecard. Adapt this focused lab to the project data: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.  Required concepts: Evidence budget, Claim-level support, Citation validity versus faithfulness, Conflicting or stale evidence, Abstention and escalation.
+  - Deliverable: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Evidence selection, citation validation and abstention: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A representation comparison with dimension and latency reports. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evidence selection, citation validation and abstention: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Evidence selection, citation validation and abstention: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
+- [ ] Keep evaluation queries separate and identify model download requirements.
+- [ ] Evidence selection, citation validation and abstention: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Concept relationship explorer
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A learner needs to navigate relationships between study notes.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Author 25 concepts and 40 typed relationships in JSON. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** A graph traversal and provenance viewer.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Evidence selection, citation validation and abstention:** Index the project’s records and notes with source IDs and permission metadata.  For Evidence selection, citation validation and abstention, explicitly apply Evidence budget, Claim-level support, Citation validity versus faithfulness.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
+- **Evidence selection, citation validation and abstention:** Extend the project with Evidence selection, citation validation and abstention in Concept relationship explorer. Adapt this focused lab to the project data: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.  Required concepts: Evidence budget, Claim-level support, Citation validity versus faithfulness, Conflicting or stale evidence, Abstention and escalation.
+  - Deliverable: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Evidence selection, citation validation and abstention: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A graph traversal and provenance viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evidence selection, citation validation and abstention: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Evidence selection, citation validation and abstention: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
+- [ ] Handle cycles and distinguish authored edges from inferred hypotheses.
+- [ ] Evidence selection, citation validation and abstention: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Hybrid retrieval benchmark
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+An analyst needs both exact-code and paraphrase retrieval.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Generate 80 catalog entries with product codes and prose descriptions. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A lexical/vector fusion and reranking comparison.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Evidence selection, citation validation and abstention:** Index the project’s records and notes with source IDs and permission metadata.  For Evidence selection, citation validation and abstention, explicitly apply Evidence budget, Claim-level support, Citation validity versus faithfulness.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
+- **Evidence selection, citation validation and abstention:** Extend the project with Evidence selection, citation validation and abstention in Hybrid retrieval benchmark. Adapt this focused lab to the project data: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.  Required concepts: Evidence budget, Claim-level support, Citation validity versus faithfulness, Conflicting or stale evidence, Abstention and escalation.
+  - Deliverable: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Evidence selection, citation validation and abstention: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A lexical/vector fusion and reranking comparison. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evidence selection, citation validation and abstention: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Evidence selection, citation validation and abstention: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
+- [ ] Measure exact-code and paraphrase slices separately.
+- [ ] Evidence selection, citation validation and abstention: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Incremental document index
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A librarian needs updated documents without stale duplicate chunks.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Create 20 versioned local documents with additions and deletions. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** An idempotent ingestion and deletion workflow.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Evidence selection, citation validation and abstention:** Index the project’s records and notes with source IDs and permission metadata.  For Evidence selection, citation validation and abstention, explicitly apply Evidence budget, Claim-level support, Citation validity versus faithfulness.
-  - Deliverable: A local retrieval index, twenty query fixtures and grounded answers
-  - Check: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
+- **Evidence selection, citation validation and abstention:** Extend the project with Evidence selection, citation validation and abstention in Incremental document index. Adapt this focused lab to the project data: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.  Required concepts: Evidence budget, Claim-level support, Citation validity versus faithfulness, Conflicting or stale evidence, Abstention and escalation.
+  - Deliverable: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Evidence selection, citation validation and abstention: A local retrieval index, twenty query fixtures and grounded answers
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An idempotent ingestion and deletion workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evidence selection, citation validation and abstention: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Evidence selection, citation validation and abstention: Compare lexical/vector retrieval and evaluate citations with labeled queries. Adapt the lesson lab: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.
+- [ ] Re-ingest twice, delete a source and prove its chunks disappear.
+- [ ] Evidence selection, citation validation and abstention: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Personal notes retrieval desk
+
+A student needs answers traceable to their own notes.
+
+**Data:** Create ten Markdown notes and 20 query/relevance judgments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A local search interface with passage IDs and citations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Evidence selection, citation validation and abstention:** Extend the project with Evidence selection, citation validation and abstention in Personal notes retrieval desk. Adapt this focused lab to the project data: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.  Required concepts: Evidence budget, Claim-level support, Citation validity versus faithfulness, Conflicting or stale evidence, Abstention and escalation.
+  - Deliverable: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A local search interface with passage IDs and citations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evidence selection, citation validation and abstention: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report recall at five and refuse unsupported answers.
+- [ ] Evidence selection, citation validation and abstention: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Permission-aware team search
+
+A team needs retrieval that respects document access rights.
+
+**Data:** Generate three fictional roles and 30 access-labeled documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval filter and adversarial permission test set.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Evidence selection, citation validation and abstention:** Extend the project with Evidence selection, citation validation and abstention in Permission-aware team search. Adapt this focused lab to the project data: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.  Required concepts: Evidence budget, Claim-level support, Citation validity versus faithfulness, Conflicting or stale evidence, Abstention and escalation.
+  - Deliverable: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval filter and adversarial permission test set. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evidence selection, citation validation and abstention: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Unauthorized passages never enter the retrieved context.
+- [ ] Evidence selection, citation validation and abstention: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Retrieval failure diagnosis bench
+
+A maintainer needs to separate retrieval and answer failures.
+
+**Data:** Write 25 questions including missing evidence and conflicting passages. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval/answer error taxonomy and regression report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Evidence selection, citation validation and abstention:** Extend the project with Evidence selection, citation validation and abstention in Retrieval failure diagnosis bench. Adapt this focused lab to the project data: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.  Required concepts: Evidence budget, Claim-level support, Citation validity versus faithfulness, Conflicting or stale evidence, Abstention and escalation.
+  - Deliverable: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval/answer error taxonomy and regression report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evidence selection, citation validation and abstention: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Measure retrieval recall separately from answer faithfulness.
+- [ ] Evidence selection, citation validation and abstention: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Read-only SQL evidence assistant
+
+An analyst needs answers grounded in tabular records.
+
+**Data:** Use a local SQLite database of fictional orders and customers. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A whitelisted query workflow with rows cited as evidence.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Evidence selection, citation validation and abstention:** Extend the project with Evidence selection, citation validation and abstention in Read-only SQL evidence assistant. Adapt this focused lab to the project data: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.  Required concepts: Evidence budget, Claim-level support, Citation validity versus faithfulness, Conflicting or stale evidence, Abstention and escalation.
+  - Deliverable: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A whitelisted query workflow with rows cited as evidence. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evidence selection, citation validation and abstention: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject writes, bound row counts and verify join totals.
+- [ ] Evidence selection, citation validation and abstention: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Document parsing, OCR limits and source provenance
+
+<a id="rag-parsing-ocr"></a>
+
+### Document parsing, OCR limits and source provenance
+
+Document parsing, OCR limits and source provenance helps you make explainable engineering decisions and test failure cases. Build the experiment below before relying on the concept in an AI system.
+
+**Priority:** Essential · **Study:** 4h · **Practice:** 5h
+
+**Prerequisites:** [Document parsing, chunking and metadata](rag.md#rag-ingestion) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Extraction versus interpretation:** Parsing extracts representations while OCR estimates text from pixels; neither guarantees correct meaning.
+  - Example: Compare text extracted from a digital page with a deliberately corrupted OCR fixture.
+  - Videos:
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on extraction versus interpretation. Then reproduce the lesson example: Compare text extracted from a digital page with a deliberately corrupted OCR fixture.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [ ] **Reading order:** Columns, headers and tables can be flattened into misleading token sequences.
+  - Example: Reconstruct a two-column fixture and retain section boundaries.
+  - Videos:
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on reading order. Then reproduce the lesson example: Reconstruct a two-column fixture and retain section boundaries.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [ ] **Table semantics:** Cells require row and column context to remain meaningful.
+  - Example: Serialize a price table with headers repeated in each row record.
+  - Videos:
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on table semantics. Then reproduce the lesson example: Serialize a price table with headers repeated in each row record.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [ ] **Provenance:** Stable source IDs, offsets and version hashes let answers be traced back after ingestion.
+  - Example: Store source ID, page, extraction version and content hash per chunk.
+  - Videos:
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on provenance. Then reproduce the lesson example: Store source ID, page, extraction version and content hash per chunk.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [ ] **Extraction quality:** Missing text and low-confidence spans need warnings or rejection before retrieval.
+  - Example: Seed five unreadable spans and test the ingestion rejection report.
+  - Videos:
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on extraction quality. Then reproduce the lesson example: Seed five unreadable spans and test the ingestion rejection report.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+
+#### YouTube: focused explanations and full courses
+
+- [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+  - Explains: Ingestion, retrieval and techniques for grounding model answers.
+  - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+  - Explains: NumPy, pandas, cleaning and exploring data with Python.
+  - Useful because: Work through real data transformations before building training pipelines.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+
+#### Free written resources
+
+1. [Official reference: Document parsing, OCR limits and source provenance](https://pymupdf.readthedocs.io/en/latest/recipes-text.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+2. [Sentence Transformers: semantic search](https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
+
+#### Lab: Document parsing, OCR limits and source provenance
+
+Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.
+
+**Deliverables**
+
+- Runnable CPU notebook or script with deterministic fixtures
+- Measured outputs, failure cases and a README explaining decisions
+
+**Completion checks**
+
+- [ ] Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.
+- [ ] Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+#### Ten project recommendations
+
+### Chunking experiment arena
+
+A builder needs evidence for choosing chunk size and overlap.
+
+**Data:** Write six documents with headings, lists and answers crossing boundaries. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A chunking benchmark and source-offset viewer.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Document parsing, OCR limits and source provenance:** Extend the project with Document parsing, OCR limits and source provenance in Chunking experiment arena. Adapt this focused lab to the project data: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.  Required concepts: Extraction versus interpretation, Reading order, Table semantics, Provenance, Extraction quality.
+  - Deliverable: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A chunking benchmark and source-offset viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, OCR limits and source provenance: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compare retrieval on identical queries and preserve exact source spans.
+- [ ] Document parsing, OCR limits and source provenance: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Citation integrity checker
+
+A reviewer needs to catch answers citing the wrong source.
+
+**Data:** Write 30 claims, source passages and deliberately incorrect citations. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A citation validation report and abstention interface.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Document parsing, OCR limits and source provenance:** Extend the project with Document parsing, OCR limits and source provenance in Citation integrity checker. Adapt this focused lab to the project data: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.  Required concepts: Extraction versus interpretation, Reading order, Table semantics, Provenance, Extraction quality.
+  - Deliverable: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A citation validation report and abstention interface. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, OCR limits and source provenance: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Flag missing IDs and unsupported spans; do not equate a valid link with support.
+- [ ] Document parsing, OCR limits and source provenance: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Embedding retrieval scorecard
+
+A builder needs to choose representations for a small corpus.
+
+**Data:** Use local notes and labeled paraphrases; TF-IDF is the offline baseline. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A representation comparison with dimension and latency reports.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Document parsing, OCR limits and source provenance:** Extend the project with Document parsing, OCR limits and source provenance in Embedding retrieval scorecard. Adapt this focused lab to the project data: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.  Required concepts: Extraction versus interpretation, Reading order, Table semantics, Provenance, Extraction quality.
+  - Deliverable: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A representation comparison with dimension and latency reports. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, OCR limits and source provenance: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Keep evaluation queries separate and identify model download requirements.
+- [ ] Document parsing, OCR limits and source provenance: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Concept relationship explorer
+
+A learner needs to navigate relationships between study notes.
+
+**Data:** Author 25 concepts and 40 typed relationships in JSON. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A graph traversal and provenance viewer.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Document parsing, OCR limits and source provenance:** Extend the project with Document parsing, OCR limits and source provenance in Concept relationship explorer. Adapt this focused lab to the project data: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.  Required concepts: Extraction versus interpretation, Reading order, Table semantics, Provenance, Extraction quality.
+  - Deliverable: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A graph traversal and provenance viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, OCR limits and source provenance: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Handle cycles and distinguish authored edges from inferred hypotheses.
+- [ ] Document parsing, OCR limits and source provenance: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Hybrid retrieval benchmark
+
+An analyst needs both exact-code and paraphrase retrieval.
+
+**Data:** Generate 80 catalog entries with product codes and prose descriptions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A lexical/vector fusion and reranking comparison.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Document parsing, OCR limits and source provenance:** Extend the project with Document parsing, OCR limits and source provenance in Hybrid retrieval benchmark. Adapt this focused lab to the project data: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.  Required concepts: Extraction versus interpretation, Reading order, Table semantics, Provenance, Extraction quality.
+  - Deliverable: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A lexical/vector fusion and reranking comparison. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, OCR limits and source provenance: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Measure exact-code and paraphrase slices separately.
+- [ ] Document parsing, OCR limits and source provenance: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Incremental document index
+
+A librarian needs updated documents without stale duplicate chunks.
+
+**Data:** Create 20 versioned local documents with additions and deletions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An idempotent ingestion and deletion workflow.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Document parsing, OCR limits and source provenance:** Extend the project with Document parsing, OCR limits and source provenance in Incremental document index. Adapt this focused lab to the project data: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.  Required concepts: Extraction versus interpretation, Reading order, Table semantics, Provenance, Extraction quality.
+  - Deliverable: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An idempotent ingestion and deletion workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, OCR limits and source provenance: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Re-ingest twice, delete a source and prove its chunks disappear.
+- [ ] Document parsing, OCR limits and source provenance: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Personal notes retrieval desk
+
+A student needs answers traceable to their own notes.
+
+**Data:** Create ten Markdown notes and 20 query/relevance judgments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A local search interface with passage IDs and citations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Document parsing, OCR limits and source provenance:** Extend the project with Document parsing, OCR limits and source provenance in Personal notes retrieval desk. Adapt this focused lab to the project data: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.  Required concepts: Extraction versus interpretation, Reading order, Table semantics, Provenance, Extraction quality.
+  - Deliverable: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A local search interface with passage IDs and citations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, OCR limits and source provenance: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report recall at five and refuse unsupported answers.
+- [ ] Document parsing, OCR limits and source provenance: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Permission-aware team search
+
+A team needs retrieval that respects document access rights.
+
+**Data:** Generate three fictional roles and 30 access-labeled documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval filter and adversarial permission test set.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Document parsing, OCR limits and source provenance:** Extend the project with Document parsing, OCR limits and source provenance in Permission-aware team search. Adapt this focused lab to the project data: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.  Required concepts: Extraction versus interpretation, Reading order, Table semantics, Provenance, Extraction quality.
+  - Deliverable: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval filter and adversarial permission test set. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, OCR limits and source provenance: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Unauthorized passages never enter the retrieved context.
+- [ ] Document parsing, OCR limits and source provenance: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Retrieval failure diagnosis bench
+
+A maintainer needs to separate retrieval and answer failures.
+
+**Data:** Write 25 questions including missing evidence and conflicting passages. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval/answer error taxonomy and regression report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Document parsing, OCR limits and source provenance:** Extend the project with Document parsing, OCR limits and source provenance in Retrieval failure diagnosis bench. Adapt this focused lab to the project data: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.  Required concepts: Extraction versus interpretation, Reading order, Table semantics, Provenance, Extraction quality.
+  - Deliverable: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval/answer error taxonomy and regression report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, OCR limits and source provenance: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Measure retrieval recall separately from answer faithfulness.
+- [ ] Document parsing, OCR limits and source provenance: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Read-only SQL evidence assistant
+
+An analyst needs answers grounded in tabular records.
+
+**Data:** Use a local SQLite database of fictional orders and customers. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A whitelisted query workflow with rows cited as evidence.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Document parsing, OCR limits and source provenance:** Extend the project with Document parsing, OCR limits and source provenance in Read-only SQL evidence assistant. Adapt this focused lab to the project data: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.  Required concepts: Extraction versus interpretation, Reading order, Table semantics, Provenance, Extraction quality.
+  - Deliverable: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A whitelisted query workflow with rows cited as evidence. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, OCR limits and source provenance: Document parsing, OCR limits and source provenance: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject writes, bound row counts and verify join totals.
+- [ ] Document parsing, OCR limits and source provenance: Create Markdown, HTML and scanned-text fixtures with tables and broken reading order. Produce a normalized document schema with page/section IDs and explicit extraction warnings; keep OCR optional with supplied text fixtures.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Approximate nearest neighbors and index tradeoffs
+
+<a id="rag-ann-indexes"></a>
+
+### Approximate nearest neighbors and index tradeoffs
+
+Approximate nearest neighbors and index tradeoffs helps you make explainable engineering decisions and test failure cases. Build the experiment below before relying on the concept in an AI system.
+
+**Priority:** Specialization · **Study:** 4h · **Practice:** 5h
+
+**Prerequisites:** [Embeddings, similarity, indexes and vector databases](rag.md#rag-embeddings) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Exact search baseline:** A brute-force reference is needed to measure approximation error.
+  - Example: Compute every cosine score for twenty fixed queries.
+  - Videos:
+    - [Neural Networks Part 11: Word Embedding and Word2Vec](https://www.youtube.com/watch?v=viZrOnJclY0) · StatQuest · Josh Starmer · Focused explanation
+      - Explains: A visual, step-by-step explanation of the topic named in the title.
+      - Useful because: Use the worked intuition before writing the corresponding small experiment.
+      - Watch for: Focus on exact search baseline. Then reproduce the lesson example: Compute every cosine score for twenty fixed queries.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://statquest.org/video_index.html
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on exact search baseline. Then reproduce the lesson example: Compute every cosine score for twenty fixed queries.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [ ] **Candidate search:** Approximate methods reduce search work by exploring a subset of candidates.
+  - Example: Search a fixed subset and compare top-five results with exhaustive scoring.
+  - Videos:
+    - [Neural Networks Part 11: Word Embedding and Word2Vec](https://www.youtube.com/watch?v=viZrOnJclY0) · StatQuest · Josh Starmer · Focused explanation
+      - Explains: A visual, step-by-step explanation of the topic named in the title.
+      - Useful because: Use the worked intuition before writing the corresponding small experiment.
+      - Watch for: Focus on candidate search. Then reproduce the lesson example: Search a fixed subset and compare top-five results with exhaustive scoring.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://statquest.org/video_index.html
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on candidate search. Then reproduce the lesson example: Search a fixed subset and compare top-five results with exhaustive scoring.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [ ] **Index parameters:** Construction and query parameters trade memory, build time and query recall.
+  - Example: Record settings beside measurements rather than comparing unnamed defaults.
+  - Videos:
+    - [Neural Networks Part 11: Word Embedding and Word2Vec](https://www.youtube.com/watch?v=viZrOnJclY0) · StatQuest · Josh Starmer · Focused explanation
+      - Explains: A visual, step-by-step explanation of the topic named in the title.
+      - Useful because: Use the worked intuition before writing the corresponding small experiment.
+      - Watch for: Focus on index parameters. Then reproduce the lesson example: Record settings beside measurements rather than comparing unnamed defaults.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://statquest.org/video_index.html
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on index parameters. Then reproduce the lesson example: Record settings beside measurements rather than comparing unnamed defaults.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [ ] **Filtering:** Filtering before versus after candidate retrieval can change recall and permission guarantees.
+  - Example: Query a small authorized subset and compare prefilter with postfilter behavior.
+  - Videos:
+    - [Neural Networks Part 11: Word Embedding and Word2Vec](https://www.youtube.com/watch?v=viZrOnJclY0) · StatQuest · Josh Starmer · Focused explanation
+      - Explains: A visual, step-by-step explanation of the topic named in the title.
+      - Useful because: Use the worked intuition before writing the corresponding small experiment.
+      - Watch for: Focus on filtering. Then reproduce the lesson example: Query a small authorized subset and compare prefilter with postfilter behavior.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://statquest.org/video_index.html
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on filtering. Then reproduce the lesson example: Query a small authorized subset and compare prefilter with postfilter behavior.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [ ] **Updates and freshness:** Deletion and replacement semantics determine whether stale records remain retrievable.
+  - Example: Delete ten source IDs and verify none appear after an index update.
+  - Videos:
+    - [Neural Networks Part 11: Word Embedding and Word2Vec](https://www.youtube.com/watch?v=viZrOnJclY0) · StatQuest · Josh Starmer · Focused explanation
+      - Explains: A visual, step-by-step explanation of the topic named in the title.
+      - Useful because: Use the worked intuition before writing the corresponding small experiment.
+      - Watch for: Focus on updates and freshness. Then reproduce the lesson example: Delete ten source IDs and verify none appear after an index update.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://statquest.org/video_index.html
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on updates and freshness. Then reproduce the lesson example: Delete ten source IDs and verify none appear after an index update.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+
+#### YouTube: focused explanations and full courses
+
+- [Neural Networks Part 11: Word Embedding and Word2Vec](https://www.youtube.com/watch?v=viZrOnJclY0) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+  - Explains: Ingestion, retrieval and techniques for grounding model answers.
+  - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+
+#### Free written resources
+
+1. [Official reference: Approximate nearest neighbors and index tradeoffs](https://github.com/facebookresearch/faiss/wiki) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+2. [Sentence Transformers: semantic search](https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
+
+#### Lab: Approximate nearest neighbors and index tradeoffs
+
+Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.
+
+**Deliverables**
+
+- Runnable CPU notebook or script with deterministic fixtures
+- Measured outputs, failure cases and a README explaining decisions
+
+**Completion checks**
+
+- [ ] Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.
+- [ ] Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+#### Ten project recommendations
+
+### Chunking experiment arena
+
+A builder needs evidence for choosing chunk size and overlap.
+
+**Data:** Write six documents with headings, lists and answers crossing boundaries. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A chunking benchmark and source-offset viewer.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Approximate nearest neighbors and index tradeoffs:** Extend the project with Approximate nearest neighbors and index tradeoffs in Chunking experiment arena. Adapt this focused lab to the project data: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.  Required concepts: Exact search baseline, Candidate search, Index parameters, Filtering, Updates and freshness.
+  - Deliverable: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A chunking benchmark and source-offset viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Approximate nearest neighbors and index tradeoffs: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compare retrieval on identical queries and preserve exact source spans.
+- [ ] Approximate nearest neighbors and index tradeoffs: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Citation integrity checker
+
+A reviewer needs to catch answers citing the wrong source.
+
+**Data:** Write 30 claims, source passages and deliberately incorrect citations. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A citation validation report and abstention interface.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Approximate nearest neighbors and index tradeoffs:** Extend the project with Approximate nearest neighbors and index tradeoffs in Citation integrity checker. Adapt this focused lab to the project data: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.  Required concepts: Exact search baseline, Candidate search, Index parameters, Filtering, Updates and freshness.
+  - Deliverable: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A citation validation report and abstention interface. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Approximate nearest neighbors and index tradeoffs: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Flag missing IDs and unsupported spans; do not equate a valid link with support.
+- [ ] Approximate nearest neighbors and index tradeoffs: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Embedding retrieval scorecard
+
+A builder needs to choose representations for a small corpus.
+
+**Data:** Use local notes and labeled paraphrases; TF-IDF is the offline baseline. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A representation comparison with dimension and latency reports.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Approximate nearest neighbors and index tradeoffs:** Extend the project with Approximate nearest neighbors and index tradeoffs in Embedding retrieval scorecard. Adapt this focused lab to the project data: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.  Required concepts: Exact search baseline, Candidate search, Index parameters, Filtering, Updates and freshness.
+  - Deliverable: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A representation comparison with dimension and latency reports. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Approximate nearest neighbors and index tradeoffs: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Keep evaluation queries separate and identify model download requirements.
+- [ ] Approximate nearest neighbors and index tradeoffs: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Concept relationship explorer
+
+A learner needs to navigate relationships between study notes.
+
+**Data:** Author 25 concepts and 40 typed relationships in JSON. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A graph traversal and provenance viewer.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Approximate nearest neighbors and index tradeoffs:** Extend the project with Approximate nearest neighbors and index tradeoffs in Concept relationship explorer. Adapt this focused lab to the project data: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.  Required concepts: Exact search baseline, Candidate search, Index parameters, Filtering, Updates and freshness.
+  - Deliverable: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A graph traversal and provenance viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Approximate nearest neighbors and index tradeoffs: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Handle cycles and distinguish authored edges from inferred hypotheses.
+- [ ] Approximate nearest neighbors and index tradeoffs: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Hybrid retrieval benchmark
+
+An analyst needs both exact-code and paraphrase retrieval.
+
+**Data:** Generate 80 catalog entries with product codes and prose descriptions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A lexical/vector fusion and reranking comparison.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Approximate nearest neighbors and index tradeoffs:** Extend the project with Approximate nearest neighbors and index tradeoffs in Hybrid retrieval benchmark. Adapt this focused lab to the project data: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.  Required concepts: Exact search baseline, Candidate search, Index parameters, Filtering, Updates and freshness.
+  - Deliverable: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A lexical/vector fusion and reranking comparison. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Approximate nearest neighbors and index tradeoffs: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Measure exact-code and paraphrase slices separately.
+- [ ] Approximate nearest neighbors and index tradeoffs: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Incremental document index
+
+A librarian needs updated documents without stale duplicate chunks.
+
+**Data:** Create 20 versioned local documents with additions and deletions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An idempotent ingestion and deletion workflow.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Approximate nearest neighbors and index tradeoffs:** Extend the project with Approximate nearest neighbors and index tradeoffs in Incremental document index. Adapt this focused lab to the project data: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.  Required concepts: Exact search baseline, Candidate search, Index parameters, Filtering, Updates and freshness.
+  - Deliverable: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An idempotent ingestion and deletion workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Approximate nearest neighbors and index tradeoffs: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Re-ingest twice, delete a source and prove its chunks disappear.
+- [ ] Approximate nearest neighbors and index tradeoffs: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Personal notes retrieval desk
+
+A student needs answers traceable to their own notes.
+
+**Data:** Create ten Markdown notes and 20 query/relevance judgments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A local search interface with passage IDs and citations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Approximate nearest neighbors and index tradeoffs:** Extend the project with Approximate nearest neighbors and index tradeoffs in Personal notes retrieval desk. Adapt this focused lab to the project data: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.  Required concepts: Exact search baseline, Candidate search, Index parameters, Filtering, Updates and freshness.
+  - Deliverable: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A local search interface with passage IDs and citations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Approximate nearest neighbors and index tradeoffs: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report recall at five and refuse unsupported answers.
+- [ ] Approximate nearest neighbors and index tradeoffs: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Permission-aware team search
+
+A team needs retrieval that respects document access rights.
+
+**Data:** Generate three fictional roles and 30 access-labeled documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval filter and adversarial permission test set.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Approximate nearest neighbors and index tradeoffs:** Extend the project with Approximate nearest neighbors and index tradeoffs in Permission-aware team search. Adapt this focused lab to the project data: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.  Required concepts: Exact search baseline, Candidate search, Index parameters, Filtering, Updates and freshness.
+  - Deliverable: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval filter and adversarial permission test set. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Approximate nearest neighbors and index tradeoffs: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Unauthorized passages never enter the retrieved context.
+- [ ] Approximate nearest neighbors and index tradeoffs: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Retrieval failure diagnosis bench
+
+A maintainer needs to separate retrieval and answer failures.
+
+**Data:** Write 25 questions including missing evidence and conflicting passages. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval/answer error taxonomy and regression report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Approximate nearest neighbors and index tradeoffs:** Extend the project with Approximate nearest neighbors and index tradeoffs in Retrieval failure diagnosis bench. Adapt this focused lab to the project data: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.  Required concepts: Exact search baseline, Candidate search, Index parameters, Filtering, Updates and freshness.
+  - Deliverable: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval/answer error taxonomy and regression report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Approximate nearest neighbors and index tradeoffs: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Measure retrieval recall separately from answer faithfulness.
+- [ ] Approximate nearest neighbors and index tradeoffs: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Read-only SQL evidence assistant
+
+An analyst needs answers grounded in tabular records.
+
+**Data:** Use a local SQLite database of fictional orders and customers. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A whitelisted query workflow with rows cited as evidence.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Approximate nearest neighbors and index tradeoffs:** Extend the project with Approximate nearest neighbors and index tradeoffs in Read-only SQL evidence assistant. Adapt this focused lab to the project data: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.  Required concepts: Exact search baseline, Candidate search, Index parameters, Filtering, Updates and freshness.
+  - Deliverable: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A whitelisted query workflow with rows cited as evidence. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Approximate nearest neighbors and index tradeoffs: Approximate nearest neighbors and index tradeoffs: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject writes, bound row counts and verify join totals.
+- [ ] Approximate nearest neighbors and index tradeoffs: Create 1000 normalized vectors and a brute-force reference. Compare a bounded candidate-search simulation or optional local index against exact recall, latency and memory; test updates and filtered queries.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Graph-grounded retrieval and GraphRAG limits
+
+<a id="rag-graph-grounding"></a>
+
+### Graph-grounded retrieval and GraphRAG limits
+
+Graph-grounded retrieval and GraphRAG limits helps you make explainable engineering decisions and test failure cases. Build the experiment below before relying on the concept in an AI system.
+
+**Priority:** Specialization · **Study:** 4h · **Practice:** 5h
+
+**Prerequisites:** [SQL retrieval and knowledge graphs](rag.md#rag-sql-graphs) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Entity resolution:** Different names may refer to one entity while identical names may refer to different entities.
+  - Example: Resolve two aliases using explicit source metadata and preserve an ambiguous name.
+  - Videos:
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on entity resolution. Then reproduce the lesson example: Resolve two aliases using explicit source metadata and preserve an ambiguous name.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [ ] **Typed edges:** Relations need direction, type and provenance to support meaningful traversal.
+  - Example: Store prerequisite-of and related-to as separate edge types.
+  - Videos:
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on typed edges. Then reproduce the lesson example: Store prerequisite-of and related-to as separate edge types.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [ ] **Multi-hop retrieval:** Following several edges can expose connected evidence but compounds extraction mistakes.
+  - Example: Trace a two-edge path and show the source for each edge.
+  - Videos:
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on multi-hop retrieval. Then reproduce the lesson example: Trace a two-edge path and show the source for each edge.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [ ] **Extraction confidence:** Model-extracted relations are hypotheses until supported and checked.
+  - Example: Mark an unsupported extracted edge and exclude it from an evidence answer.
+  - Videos:
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on extraction confidence. Then reproduce the lesson example: Mark an unsupported extracted edge and exclude it from an evidence answer.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [ ] **Graph value test:** A graph is justified when it improves a measured task compared with simpler retrieval.
+  - Example: Compare answers on ten relational and ten direct-lookup questions.
+  - Videos:
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on graph value test. Then reproduce the lesson example: Compare answers on ten relational and ten direct-lookup questions.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+
+#### YouTube: focused explanations and full courses
+
+- [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+  - Explains: Ingestion, retrieval and techniques for grounding model answers.
+  - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [Neural Networks Part 11: Word Embedding and Word2Vec](https://www.youtube.com/watch?v=viZrOnJclY0) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+
+#### Free written resources
+
+1. [Official reference: Graph-grounded retrieval and GraphRAG limits](https://microsoft.github.io/graphrag/) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+2. [PostgreSQL: querying tables](https://www.postgresql.org/docs/current/tutorial-select.html) — Free; no registration required. No paid materials required.
+
+#### Lab: Graph-grounded retrieval and GraphRAG limits
+
+Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.
+
+**Deliverables**
+
+- Runnable CPU notebook or script with deterministic fixtures
+- Measured outputs, failure cases and a README explaining decisions
+
+**Completion checks**
+
+- [ ] Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.
+- [ ] Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+#### Ten project recommendations
+
+### Chunking experiment arena
+
+A builder needs evidence for choosing chunk size and overlap.
+
+**Data:** Write six documents with headings, lists and answers crossing boundaries. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A chunking benchmark and source-offset viewer.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Graph-grounded retrieval and GraphRAG limits:** Extend the project with Graph-grounded retrieval and GraphRAG limits in Chunking experiment arena. Adapt this focused lab to the project data: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.  Required concepts: Entity resolution, Typed edges, Multi-hop retrieval, Extraction confidence, Graph value test.
+  - Deliverable: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A chunking benchmark and source-offset viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Graph-grounded retrieval and GraphRAG limits: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compare retrieval on identical queries and preserve exact source spans.
+- [ ] Graph-grounded retrieval and GraphRAG limits: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Citation integrity checker
+
+A reviewer needs to catch answers citing the wrong source.
+
+**Data:** Write 30 claims, source passages and deliberately incorrect citations. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A citation validation report and abstention interface.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Graph-grounded retrieval and GraphRAG limits:** Extend the project with Graph-grounded retrieval and GraphRAG limits in Citation integrity checker. Adapt this focused lab to the project data: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.  Required concepts: Entity resolution, Typed edges, Multi-hop retrieval, Extraction confidence, Graph value test.
+  - Deliverable: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A citation validation report and abstention interface. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Graph-grounded retrieval and GraphRAG limits: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Flag missing IDs and unsupported spans; do not equate a valid link with support.
+- [ ] Graph-grounded retrieval and GraphRAG limits: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Embedding retrieval scorecard
+
+A builder needs to choose representations for a small corpus.
+
+**Data:** Use local notes and labeled paraphrases; TF-IDF is the offline baseline. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A representation comparison with dimension and latency reports.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Graph-grounded retrieval and GraphRAG limits:** Extend the project with Graph-grounded retrieval and GraphRAG limits in Embedding retrieval scorecard. Adapt this focused lab to the project data: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.  Required concepts: Entity resolution, Typed edges, Multi-hop retrieval, Extraction confidence, Graph value test.
+  - Deliverable: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A representation comparison with dimension and latency reports. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Graph-grounded retrieval and GraphRAG limits: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Keep evaluation queries separate and identify model download requirements.
+- [ ] Graph-grounded retrieval and GraphRAG limits: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Concept relationship explorer
+
+A learner needs to navigate relationships between study notes.
+
+**Data:** Author 25 concepts and 40 typed relationships in JSON. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A graph traversal and provenance viewer.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Graph-grounded retrieval and GraphRAG limits:** Extend the project with Graph-grounded retrieval and GraphRAG limits in Concept relationship explorer. Adapt this focused lab to the project data: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.  Required concepts: Entity resolution, Typed edges, Multi-hop retrieval, Extraction confidence, Graph value test.
+  - Deliverable: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A graph traversal and provenance viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Graph-grounded retrieval and GraphRAG limits: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Handle cycles and distinguish authored edges from inferred hypotheses.
+- [ ] Graph-grounded retrieval and GraphRAG limits: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Hybrid retrieval benchmark
+
+An analyst needs both exact-code and paraphrase retrieval.
+
+**Data:** Generate 80 catalog entries with product codes and prose descriptions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A lexical/vector fusion and reranking comparison.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Graph-grounded retrieval and GraphRAG limits:** Extend the project with Graph-grounded retrieval and GraphRAG limits in Hybrid retrieval benchmark. Adapt this focused lab to the project data: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.  Required concepts: Entity resolution, Typed edges, Multi-hop retrieval, Extraction confidence, Graph value test.
+  - Deliverable: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A lexical/vector fusion and reranking comparison. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Graph-grounded retrieval and GraphRAG limits: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Measure exact-code and paraphrase slices separately.
+- [ ] Graph-grounded retrieval and GraphRAG limits: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Incremental document index
+
+A librarian needs updated documents without stale duplicate chunks.
+
+**Data:** Create 20 versioned local documents with additions and deletions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An idempotent ingestion and deletion workflow.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Graph-grounded retrieval and GraphRAG limits:** Extend the project with Graph-grounded retrieval and GraphRAG limits in Incremental document index. Adapt this focused lab to the project data: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.  Required concepts: Entity resolution, Typed edges, Multi-hop retrieval, Extraction confidence, Graph value test.
+  - Deliverable: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An idempotent ingestion and deletion workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Graph-grounded retrieval and GraphRAG limits: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Re-ingest twice, delete a source and prove its chunks disappear.
+- [ ] Graph-grounded retrieval and GraphRAG limits: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Personal notes retrieval desk
+
+A student needs answers traceable to their own notes.
+
+**Data:** Create ten Markdown notes and 20 query/relevance judgments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A local search interface with passage IDs and citations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Graph-grounded retrieval and GraphRAG limits:** Extend the project with Graph-grounded retrieval and GraphRAG limits in Personal notes retrieval desk. Adapt this focused lab to the project data: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.  Required concepts: Entity resolution, Typed edges, Multi-hop retrieval, Extraction confidence, Graph value test.
+  - Deliverable: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A local search interface with passage IDs and citations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Graph-grounded retrieval and GraphRAG limits: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report recall at five and refuse unsupported answers.
+- [ ] Graph-grounded retrieval and GraphRAG limits: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Permission-aware team search
+
+A team needs retrieval that respects document access rights.
+
+**Data:** Generate three fictional roles and 30 access-labeled documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval filter and adversarial permission test set.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Graph-grounded retrieval and GraphRAG limits:** Extend the project with Graph-grounded retrieval and GraphRAG limits in Permission-aware team search. Adapt this focused lab to the project data: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.  Required concepts: Entity resolution, Typed edges, Multi-hop retrieval, Extraction confidence, Graph value test.
+  - Deliverable: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval filter and adversarial permission test set. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Graph-grounded retrieval and GraphRAG limits: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Unauthorized passages never enter the retrieved context.
+- [ ] Graph-grounded retrieval and GraphRAG limits: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Retrieval failure diagnosis bench
+
+A maintainer needs to separate retrieval and answer failures.
+
+**Data:** Write 25 questions including missing evidence and conflicting passages. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval/answer error taxonomy and regression report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Graph-grounded retrieval and GraphRAG limits:** Extend the project with Graph-grounded retrieval and GraphRAG limits in Retrieval failure diagnosis bench. Adapt this focused lab to the project data: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.  Required concepts: Entity resolution, Typed edges, Multi-hop retrieval, Extraction confidence, Graph value test.
+  - Deliverable: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval/answer error taxonomy and regression report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Graph-grounded retrieval and GraphRAG limits: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Measure retrieval recall separately from answer faithfulness.
+- [ ] Graph-grounded retrieval and GraphRAG limits: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Read-only SQL evidence assistant
+
+An analyst needs answers grounded in tabular records.
+
+**Data:** Use a local SQLite database of fictional orders and customers. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A whitelisted query workflow with rows cited as evidence.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Graph-grounded retrieval and GraphRAG limits:** Extend the project with Graph-grounded retrieval and GraphRAG limits in Read-only SQL evidence assistant. Adapt this focused lab to the project data: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.  Required concepts: Entity resolution, Typed edges, Multi-hop retrieval, Extraction confidence, Graph value test.
+  - Deliverable: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A whitelisted query workflow with rows cited as evidence. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Graph-grounded retrieval and GraphRAG limits: Graph-grounded retrieval and GraphRAG limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject writes, bound row counts and verify join totals.
+- [ ] Graph-grounded retrieval and GraphRAG limits: Build a small authored graph of 25 concepts with source-backed edges. Compare graph traversal with lexical retrieval on multi-hop questions; report extraction errors and do not fabricate evidence for missing edges.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Stage checkpoint
+
+<a id="checkpoint-rag"></a>
+
+### Grounded retrieval checkpoint
+
+Demonstrate readiness through a reproducible practical handoff. Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.
+
+**Priority:** Essential · **Study:** 1h · **Practice:** 6h
+
+**Prerequisites:** [Document parsing, chunking and metadata](rag.md#rag-ingestion), [Embeddings, similarity, indexes and vector databases](rag.md#rag-embeddings), [Lexical, semantic and hybrid retrieval; filters and reranking](rag.md#rag-retrieval), [Grounded generation, citations and retrieval evaluation](rag.md#rag-answers), [Chunk boundaries, document identity and ingestion updates](rag.md#rag-chunking-experiments), [Evidence selection, citation validation and abstention](rag.md#rag-citations-abstention), [Document parsing, OCR limits and source provenance](rag.md#rag-parsing-ocr) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Define the success contract:** Write observable checks before implementation so success is not just a plausible demonstration.
+  - Example: Turn this task into a numbered acceptance checklist: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.
+  - Videos:
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on define the success contract. Then reproduce the lesson example: Turn this task into a numbered acceptance checklist: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [ ] **Reproduce the baseline:** Keep a simple reference output and deterministic inputs so changes can be compared honestly.
+  - Example: Run a fixed input twice and compare saved outputs with the documented baseline.
+  - Videos:
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on reproduce the baseline. Then reproduce the lesson example: Run a fixed input twice and compare saved outputs with the documented baseline.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [ ] **Test a failure boundary:** A working happy path does not establish robustness to malformed data or dependency failures.
+  - Example: Inject one malformed input and one controlled failure, then record the resulting state.
+  - Videos:
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on test a failure boundary. Then reproduce the lesson example: Inject one malformed input and one controlled failure, then record the resulting state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [ ] **Explain the decisions:** Describe why each technique was chosen and what evidence would make you choose differently.
+  - Example: Write a short decision note comparing the chosen approach with one simpler alternative.
+  - Videos:
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on explain the decisions. Then reproduce the lesson example: Write a short decision note comparing the chosen approach with one simpler alternative.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [ ] **Hand off the evidence:** Another learner must be able to reproduce the result from your instructions and supplied inputs.
+  - Example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+  - Videos:
+    - [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Ingestion, retrieval and techniques for grounding model answers.
+      - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+      - Watch for: Focus on hand off the evidence. Then reproduce the lesson example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+
+#### YouTube: focused explanations and full courses
+
+- [RAG fundamentals and advanced techniques](https://www.youtube.com/watch?v=ea2W8IogX80) · freeCodeCamp · Full course · approximately 2h
+  - Explains: Ingestion, retrieval and techniques for grounding model answers.
+  - Useful because: Follow the pipeline, then test chunking and retrieval separately.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-rag-fundamentals-and-advanced-techniques/
+- [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+  - Explains: NumPy, pandas, cleaning and exploring data with Python.
+  - Useful because: Work through real data transformations before building training pipelines.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+
+#### Free written resources
+
+1. [Official reference: Document parsing, OCR limits and source provenance](https://pymupdf.readthedocs.io/en/latest/recipes-text.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+2. [Sentence Transformers: semantic search](https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
+
+#### Grounded retrieval checkpoint
+
+Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.
+
+**Deliverables**
+
+- Runnable project and reproducible input fixtures
+- README, results and decision notes
+- Failure evidence and clean-start instructions
+
+**Completion checks**
+
+- [ ] Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.
+- [ ] Explain the code and results without relying on an AI-generated summary.
+- [ ] A teammate can reproduce the demo without paid credentials.
+
+#### Ten project recommendations
+
+### Chunking experiment arena
+
+A builder needs evidence for choosing chunk size and overlap.
+
+**Data:** Write six documents with headings, lists and answers crossing boundaries. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A chunking benchmark and source-offset viewer.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Grounded retrieval checkpoint:** Extend the project with Grounded retrieval checkpoint in Chunking experiment arena. Adapt this focused lab to the project data: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A chunking benchmark and source-offset viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded retrieval checkpoint: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compare retrieval on identical queries and preserve exact source spans.
+- [ ] Grounded retrieval checkpoint: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Citation integrity checker
+
+A reviewer needs to catch answers citing the wrong source.
+
+**Data:** Write 30 claims, source passages and deliberately incorrect citations. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A citation validation report and abstention interface.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Grounded retrieval checkpoint:** Extend the project with Grounded retrieval checkpoint in Citation integrity checker. Adapt this focused lab to the project data: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A citation validation report and abstention interface. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded retrieval checkpoint: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Flag missing IDs and unsupported spans; do not equate a valid link with support.
+- [ ] Grounded retrieval checkpoint: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Embedding retrieval scorecard
+
+A builder needs to choose representations for a small corpus.
+
+**Data:** Use local notes and labeled paraphrases; TF-IDF is the offline baseline. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A representation comparison with dimension and latency reports.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Grounded retrieval checkpoint:** Extend the project with Grounded retrieval checkpoint in Embedding retrieval scorecard. Adapt this focused lab to the project data: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A representation comparison with dimension and latency reports. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded retrieval checkpoint: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Keep evaluation queries separate and identify model download requirements.
+- [ ] Grounded retrieval checkpoint: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Concept relationship explorer
+
+A learner needs to navigate relationships between study notes.
+
+**Data:** Author 25 concepts and 40 typed relationships in JSON. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A graph traversal and provenance viewer.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Grounded retrieval checkpoint:** Extend the project with Grounded retrieval checkpoint in Concept relationship explorer. Adapt this focused lab to the project data: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A graph traversal and provenance viewer. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded retrieval checkpoint: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Handle cycles and distinguish authored edges from inferred hypotheses.
+- [ ] Grounded retrieval checkpoint: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Hybrid retrieval benchmark
+
+An analyst needs both exact-code and paraphrase retrieval.
+
+**Data:** Generate 80 catalog entries with product codes and prose descriptions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A lexical/vector fusion and reranking comparison.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Grounded retrieval checkpoint:** Extend the project with Grounded retrieval checkpoint in Hybrid retrieval benchmark. Adapt this focused lab to the project data: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A lexical/vector fusion and reranking comparison. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded retrieval checkpoint: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Measure exact-code and paraphrase slices separately.
+- [ ] Grounded retrieval checkpoint: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Incremental document index
+
+A librarian needs updated documents without stale duplicate chunks.
+
+**Data:** Create 20 versioned local documents with additions and deletions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An idempotent ingestion and deletion workflow.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Grounded retrieval checkpoint:** Extend the project with Grounded retrieval checkpoint in Incremental document index. Adapt this focused lab to the project data: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An idempotent ingestion and deletion workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded retrieval checkpoint: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Re-ingest twice, delete a source and prove its chunks disappear.
+- [ ] Grounded retrieval checkpoint: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Personal notes retrieval desk
+
+A student needs answers traceable to their own notes.
+
+**Data:** Create ten Markdown notes and 20 query/relevance judgments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A local search interface with passage IDs and citations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Grounded retrieval checkpoint:** Extend the project with Grounded retrieval checkpoint in Personal notes retrieval desk. Adapt this focused lab to the project data: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A local search interface with passage IDs and citations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded retrieval checkpoint: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report recall at five and refuse unsupported answers.
+- [ ] Grounded retrieval checkpoint: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Permission-aware team search
+
+A team needs retrieval that respects document access rights.
+
+**Data:** Generate three fictional roles and 30 access-labeled documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval filter and adversarial permission test set.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Grounded retrieval checkpoint:** Extend the project with Grounded retrieval checkpoint in Permission-aware team search. Adapt this focused lab to the project data: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval filter and adversarial permission test set. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded retrieval checkpoint: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Unauthorized passages never enter the retrieved context.
+- [ ] Grounded retrieval checkpoint: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Retrieval failure diagnosis bench
+
+A maintainer needs to separate retrieval and answer failures.
+
+**Data:** Write 25 questions including missing evidence and conflicting passages. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A retrieval/answer error taxonomy and regression report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Grounded retrieval checkpoint:** Extend the project with Grounded retrieval checkpoint in Retrieval failure diagnosis bench. Adapt this focused lab to the project data: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A retrieval/answer error taxonomy and regression report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded retrieval checkpoint: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Measure retrieval recall separately from answer faithfulness.
+- [ ] Grounded retrieval checkpoint: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Read-only SQL evidence assistant
+
+An analyst needs answers grounded in tabular records.
+
+**Data:** Use a local SQLite database of fictional orders and customers. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A whitelisted query workflow with rows cited as evidence.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Grounded retrieval checkpoint:** Extend the project with Grounded retrieval checkpoint in Read-only SQL evidence assistant. Adapt this focused lab to the project data: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A whitelisted query workflow with rows cited as evidence. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Grounded retrieval checkpoint: Grounded retrieval checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject writes, bound row counts and verify join totals.
+- [ ] Grounded retrieval checkpoint: Index ten source-controlled documents, evaluate twenty labeled queries and return traceable citations. Demonstrate source updates, deletion, permission filtering and abstention when evidence is missing.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

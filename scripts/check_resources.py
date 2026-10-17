@@ -4,6 +4,10 @@ root = pathlib.Path(__file__).resolve().parents[1]
 catalog = json.loads((root / 'src/data/catalog.json').read_text(encoding='utf-8'))
 urls = {r['url']:r['title'] for l in catalog['lessons'] for r in l['resources']}
 urls.update({v['source']:v['title']+' — publisher verification' for v in catalog['videos'].values()})
+project_catalog = root / 'src/data/project-library.json'
+if project_catalog.exists():
+    projects = json.loads(project_catalog.read_text(encoding='utf-8'))['projects']
+    urls.update({r['url']:r['title'] for p in projects for r in p.get('resources', [])})
 def check(item):
     url,title = item
     try:

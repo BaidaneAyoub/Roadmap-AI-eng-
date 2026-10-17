@@ -2,13 +2,13 @@
 
 Build useful products and document only what guides real decisions.
 
-## Main route · Step 8 of 8
+## Main route · Step 13 of 13
 
 **Goal:** Deliver a useful AI product with evidence, feedback and maintainable documentation.
 
 **Stage checkpoint:** Ship a small capstone with requirements, architecture, evaluation, deployment instructions and a runbook.
 
-Deliver a capstone with user feedback and documentation. Start user discovery from day one and revisit it here.
+Deliver a user-tested application capstone with requirements and operational evidence.
 
 Follow the modules and lessons below at your pace. Finish each exercise, save your evidence and self-assessment, then continue. Completed and Already known count as completed; Skipped is reported separately. You can move ahead at any time.
 
@@ -22,7 +22,7 @@ Follow the modules and lessons below at your pace. Finish each exercise, save yo
 
 Decide whether AI adds value before selecting a model.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Complexity, code structure and testing](engineering.md#engineering-design) Navigation is unrestricted.
 
@@ -85,292 +85,292 @@ Interview two teammates, write a problem statement and concise BRD, and compare 
 
 #### Ten project recommendations
 
-### Learning gap coach
+### Feedback prioritization board
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A maintainer needs to turn messy feedback into testable changes.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Write 40 fictional feedback notes with conflicting requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Users, problems, discovery and product decisions:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Users, problems, discovery and product decisions, explicitly apply Discovery, AI suitability, BRD and stakeholders.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Users, problems, discovery and product decisions: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Users, problems, discovery and product decisions: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Users, problems, discovery and product decisions:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Users, problems, discovery and product decisions, explicitly apply Discovery, AI suitability, BRD and stakeholders.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Users, problems, discovery and product decisions: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Users, problems, discovery and product decisions: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A categorized backlog with evidence and experiment plans.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Users, problems, discovery and product decisions:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Users, problems, discovery and product decisions, explicitly apply Discovery, AI suitability, BRD and stakeholders.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
+- **Users, problems, discovery and product decisions:** Implement Users, problems, discovery and product decisions in Feedback prioritization board. Adapt this focused lab to the project data: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.  Required concepts: Discovery, AI suitability, BRD and stakeholders.
+  - Deliverable: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Users, problems, discovery and product decisions: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A categorized backlog with evidence and experiment plans. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Users, problems, discovery and product decisions: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Users, problems, discovery and product decisions: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
+- [ ] Deduplicate reports while retaining disagreement and define a test per priority.
+- [ ] Users, problems, discovery and product decisions: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Learning problem discovery kit
 
-Find unusual stock movements and explain which records need investigation.
+A builder needs evidence that a study tool solves a real problem.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Use consented teammate interviews or clearly labeled fictional interviews. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Users, problems, discovery and product decisions:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Users, problems, discovery and product decisions, explicitly apply Discovery, AI suitability, BRD and stakeholders.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Users, problems, discovery and product decisions: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Users, problems, discovery and product decisions: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Users, problems, discovery and product decisions:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Users, problems, discovery and product decisions, explicitly apply Discovery, AI suitability, BRD and stakeholders.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Users, problems, discovery and product decisions: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Users, problems, discovery and product decisions: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Users, problems, discovery and product decisions:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Users, problems, discovery and product decisions, explicitly apply Discovery, AI suitability, BRD and stakeholders.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Users, problems, discovery and product decisions: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Users, problems, discovery and product decisions: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Users, problems, discovery and product decisions:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Users, problems, discovery and product decisions, explicitly apply Discovery, AI suitability, BRD and stakeholders.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Users, problems, discovery and product decisions: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Users, problems, discovery and product decisions: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A problem statement, journey and ranked assumptions.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Users, problems, discovery and product decisions:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Users, problems, discovery and product decisions, explicitly apply Discovery, AI suitability, BRD and stakeholders.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
+- **Users, problems, discovery and product decisions:** Implement Users, problems, discovery and product decisions in Learning problem discovery kit. Adapt this focused lab to the project data: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.  Required concepts: Discovery, AI suitability, BRD and stakeholders.
+  - Deliverable: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Users, problems, discovery and product decisions: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A problem statement, journey and ranked assumptions. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Users, problems, discovery and product decisions: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Users, problems, discovery and product decisions: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
+- [ ] Separate observations from guesses and identify a falsifiable success metric.
+- [ ] Users, problems, discovery and product decisions: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Architecture decision dossier
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A team needs a traceable choice between two local designs.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Compare SQLite and PostgreSQL for a fictional notes service. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** An architecture diagram and ADR with a small reproducible experiment.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Users, problems, discovery and product decisions:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Users, problems, discovery and product decisions, explicitly apply Discovery, AI suitability, BRD and stakeholders.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
+- **Users, problems, discovery and product decisions:** Extend the project with Users, problems, discovery and product decisions in Architecture decision dossier. Adapt this focused lab to the project data: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.  Required concepts: Discovery, AI suitability, BRD and stakeholders.
+  - Deliverable: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Users, problems, discovery and product decisions: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An architecture diagram and ADR with a small reproducible experiment. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Users, problems, discovery and product decisions: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Users, problems, discovery and product decisions: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
+- [ ] Tie the decision to constraints and document when to revisit it.
+- [ ] Users, problems, discovery and product decisions: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Project delivery documentation pack
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A team needs a handoff that survives the original developer leaving.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use a fictional AI search service with example requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** Requirements, architecture, API spec, evaluation and deployment handoff.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Users, problems, discovery and product decisions:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Users, problems, discovery and product decisions, explicitly apply Discovery, AI suitability, BRD and stakeholders.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
+- **Users, problems, discovery and product decisions:** Extend the project with Users, problems, discovery and product decisions in Project delivery documentation pack. Adapt this focused lab to the project data: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.  Required concepts: Discovery, AI suitability, BRD and stakeholders.
+  - Deliverable: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Users, problems, discovery and product decisions: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Requirements, architecture, API spec, evaluation and deployment handoff. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Users, problems, discovery and product decisions: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Users, problems, discovery and product decisions: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.
+- [ ] A reviewer can trace one user scenario through every document.
+- [ ] Users, problems, discovery and product decisions: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Product outcome measurement tree
+
+A builder needs metrics that connect usage to learning outcomes.
+
+**Data:** Generate fictional sessions, completed exercises and feedback. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A metric tree and instrumentation contract.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Users, problems, discovery and product decisions:** Extend the project with Users, problems, discovery and product decisions in Product outcome measurement tree. Adapt this focused lab to the project data: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.  Required concepts: Discovery, AI suitability, BRD and stakeholders.
+  - Deliverable: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A metric tree and instrumentation contract. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Users, problems, discovery and product decisions: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Distinguish activity from learning and specify denominator and time window.
+- [ ] Users, problems, discovery and product decisions: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Educational model card studio
+
+A learner needs to communicate limits of a toy classifier.
+
+**Data:** Use bundled digits and a small baseline evaluation. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A model card, dataset description and failure examples.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Users, problems, discovery and product decisions:** Extend the project with Users, problems, discovery and product decisions in Educational model card studio. Adapt this focused lab to the project data: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.  Required concepts: Discovery, AI suitability, BRD and stakeholders.
+  - Deliverable: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A model card, dataset description and failure examples. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Users, problems, discovery and product decisions: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] State intended use, split, metrics and unsupported use cases.
+- [ ] Users, problems, discovery and product decisions: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### AI feature MVP scoping desk
+
+A team needs a feasible first version of a document helper.
+
+**Data:** Use ten fictional user requests and effort estimates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A PRD with MVP, exclusions and acceptance scenarios.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Users, problems, discovery and product decisions:** Extend the project with Users, problems, discovery and product decisions in AI feature MVP scoping desk. Adapt this focused lab to the project data: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.  Required concepts: Discovery, AI suitability, BRD and stakeholders.
+  - Deliverable: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A PRD with MVP, exclusions and acceptance scenarios. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Users, problems, discovery and product decisions: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Every included feature supports a named user need and measurable outcome.
+- [ ] Users, problems, discovery and product decisions: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Search UX prototype study
+
+A designer needs to learn whether users can find evidence.
+
+**Data:** Use a static prototype and ten fictional documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A task-based usability test and revised prototype.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Users, problems, discovery and product decisions:** Extend the project with Users, problems, discovery and product decisions in Search UX prototype study. Adapt this focused lab to the project data: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.  Required concepts: Discovery, AI suitability, BRD and stakeholders.
+  - Deliverable: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A task-based usability test and revised prototype. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Users, problems, discovery and product decisions: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Record task completion and confusion points without claiming statistical significance.
+- [ ] Users, problems, discovery and product decisions: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Incident runbook rehearsal
+
+A teammate needs usable recovery instructions for a local service.
+
+**Data:** Create missing-config, unavailable-store and corrupted-input incidents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A runbook with diagnosis, recovery and evidence capture.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Users, problems, discovery and product decisions:** Extend the project with Users, problems, discovery and product decisions in Incident runbook rehearsal. Adapt this focused lab to the project data: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.  Required concepts: Discovery, AI suitability, BRD and stakeholders.
+  - Deliverable: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A runbook with diagnosis, recovery and evidence capture. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Users, problems, discovery and product decisions: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A teammate follows the steps and restores service without undocumented knowledge.
+- [ ] Users, problems, discovery and product decisions: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### AI feature value calculator
+
+A founder needs transparent assumptions about time saved.
+
+**Data:** Generate fictional task volumes, review times and failure rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A sensitivity analysis comparing manual and assisted workflows.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Users, problems, discovery and product decisions:** Extend the project with Users, problems, discovery and product decisions in AI feature value calculator. Adapt this focused lab to the project data: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.  Required concepts: Discovery, AI suitability, BRD and stakeholders.
+  - Deliverable: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A sensitivity analysis comparing manual and assisted workflows. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Users, problems, discovery and product decisions: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show break-even assumptions and include human review cost.
+- [ ] Users, problems, discovery and product decisions: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -384,7 +384,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Translate a product idea into behavior that can be accepted or rejected.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Users, problems, discovery and product decisions](product.md#product-discovery) Navigation is unrestricted.
 
@@ -470,292 +470,292 @@ Write a short PRD, SRS and AI use-case specification for a document assistant wi
 
 #### Ten project recommendations
 
-### Learning gap coach
+### AI feature MVP scoping desk
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A team needs a feasible first version of a document helper.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Use ten fictional user requests and effort estimates. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **PRD, SRS, use cases and success metrics:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For PRD, SRS, use cases and success metrics, explicitly apply PRD, SRS, AI use-case specification.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] PRD, SRS, use cases and success metrics: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] PRD, SRS, use cases and success metrics: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **PRD, SRS, use cases and success metrics:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For PRD, SRS, use cases and success metrics, explicitly apply PRD, SRS, AI use-case specification.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] PRD, SRS, use cases and success metrics: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] PRD, SRS, use cases and success metrics: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A PRD with MVP, exclusions and acceptance scenarios.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **PRD, SRS, use cases and success metrics:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For PRD, SRS, use cases and success metrics, explicitly apply PRD, SRS, AI use-case specification.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
+- **PRD, SRS, use cases and success metrics:** Implement PRD, SRS, use cases and success metrics in AI feature MVP scoping desk. Adapt this focused lab to the project data: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.  Required concepts: PRD, SRS, AI use-case specification.
+  - Deliverable: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] PRD, SRS, use cases and success metrics: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A PRD with MVP, exclusions and acceptance scenarios. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · PRD, SRS, use cases and success metrics: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] PRD, SRS, use cases and success metrics: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
+- [ ] Every included feature supports a named user need and measurable outcome.
+- [ ] PRD, SRS, use cases and success metrics: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Architecture decision dossier
 
-Find unusual stock movements and explain which records need investigation.
+A team needs a traceable choice between two local designs.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Compare SQLite and PostgreSQL for a fictional notes service. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **PRD, SRS, use cases and success metrics:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For PRD, SRS, use cases and success metrics, explicitly apply PRD, SRS, AI use-case specification.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] PRD, SRS, use cases and success metrics: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] PRD, SRS, use cases and success metrics: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **PRD, SRS, use cases and success metrics:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For PRD, SRS, use cases and success metrics, explicitly apply PRD, SRS, AI use-case specification.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] PRD, SRS, use cases and success metrics: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] PRD, SRS, use cases and success metrics: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **PRD, SRS, use cases and success metrics:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For PRD, SRS, use cases and success metrics, explicitly apply PRD, SRS, AI use-case specification.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] PRD, SRS, use cases and success metrics: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] PRD, SRS, use cases and success metrics: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **PRD, SRS, use cases and success metrics:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For PRD, SRS, use cases and success metrics, explicitly apply PRD, SRS, AI use-case specification.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] PRD, SRS, use cases and success metrics: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] PRD, SRS, use cases and success metrics: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** An architecture diagram and ADR with a small reproducible experiment.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **PRD, SRS, use cases and success metrics:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For PRD, SRS, use cases and success metrics, explicitly apply PRD, SRS, AI use-case specification.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
+- **PRD, SRS, use cases and success metrics:** Extend the project with PRD, SRS, use cases and success metrics in Architecture decision dossier. Adapt this focused lab to the project data: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.  Required concepts: PRD, SRS, AI use-case specification.
+  - Deliverable: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] PRD, SRS, use cases and success metrics: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An architecture diagram and ADR with a small reproducible experiment. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · PRD, SRS, use cases and success metrics: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] PRD, SRS, use cases and success metrics: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
+- [ ] Tie the decision to constraints and document when to revisit it.
+- [ ] PRD, SRS, use cases and success metrics: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Project delivery documentation pack
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A team needs a handoff that survives the original developer leaving.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use a fictional AI search service with example requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** Requirements, architecture, API spec, evaluation and deployment handoff.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **PRD, SRS, use cases and success metrics:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For PRD, SRS, use cases and success metrics, explicitly apply PRD, SRS, AI use-case specification.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
+- **PRD, SRS, use cases and success metrics:** Extend the project with PRD, SRS, use cases and success metrics in Project delivery documentation pack. Adapt this focused lab to the project data: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.  Required concepts: PRD, SRS, AI use-case specification.
+  - Deliverable: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] PRD, SRS, use cases and success metrics: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Requirements, architecture, API spec, evaluation and deployment handoff. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · PRD, SRS, use cases and success metrics: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] PRD, SRS, use cases and success metrics: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
+- [ ] A reviewer can trace one user scenario through every document.
+- [ ] PRD, SRS, use cases and success metrics: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Feedback prioritization board
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A maintainer needs to turn messy feedback into testable changes.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Write 40 fictional feedback notes with conflicting requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A categorized backlog with evidence and experiment plans.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **PRD, SRS, use cases and success metrics:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For PRD, SRS, use cases and success metrics, explicitly apply PRD, SRS, AI use-case specification.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
+- **PRD, SRS, use cases and success metrics:** Extend the project with PRD, SRS, use cases and success metrics in Feedback prioritization board. Adapt this focused lab to the project data: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.  Required concepts: PRD, SRS, AI use-case specification.
+  - Deliverable: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] PRD, SRS, use cases and success metrics: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A categorized backlog with evidence and experiment plans. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · PRD, SRS, use cases and success metrics: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] PRD, SRS, use cases and success metrics: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.
+- [ ] Deduplicate reports while retaining disagreement and define a test per priority.
+- [ ] PRD, SRS, use cases and success metrics: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Product outcome measurement tree
+
+A builder needs metrics that connect usage to learning outcomes.
+
+**Data:** Generate fictional sessions, completed exercises and feedback. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A metric tree and instrumentation contract.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **PRD, SRS, use cases and success metrics:** Extend the project with PRD, SRS, use cases and success metrics in Product outcome measurement tree. Adapt this focused lab to the project data: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.  Required concepts: PRD, SRS, AI use-case specification.
+  - Deliverable: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A metric tree and instrumentation contract. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · PRD, SRS, use cases and success metrics: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Distinguish activity from learning and specify denominator and time window.
+- [ ] PRD, SRS, use cases and success metrics: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Educational model card studio
+
+A learner needs to communicate limits of a toy classifier.
+
+**Data:** Use bundled digits and a small baseline evaluation. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A model card, dataset description and failure examples.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **PRD, SRS, use cases and success metrics:** Extend the project with PRD, SRS, use cases and success metrics in Educational model card studio. Adapt this focused lab to the project data: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.  Required concepts: PRD, SRS, AI use-case specification.
+  - Deliverable: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A model card, dataset description and failure examples. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · PRD, SRS, use cases and success metrics: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] State intended use, split, metrics and unsupported use cases.
+- [ ] PRD, SRS, use cases and success metrics: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Learning problem discovery kit
+
+A builder needs evidence that a study tool solves a real problem.
+
+**Data:** Use consented teammate interviews or clearly labeled fictional interviews. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A problem statement, journey and ranked assumptions.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **PRD, SRS, use cases and success metrics:** Extend the project with PRD, SRS, use cases and success metrics in Learning problem discovery kit. Adapt this focused lab to the project data: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.  Required concepts: PRD, SRS, AI use-case specification.
+  - Deliverable: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A problem statement, journey and ranked assumptions. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · PRD, SRS, use cases and success metrics: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Separate observations from guesses and identify a falsifiable success metric.
+- [ ] PRD, SRS, use cases and success metrics: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Search UX prototype study
+
+A designer needs to learn whether users can find evidence.
+
+**Data:** Use a static prototype and ten fictional documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A task-based usability test and revised prototype.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **PRD, SRS, use cases and success metrics:** Extend the project with PRD, SRS, use cases and success metrics in Search UX prototype study. Adapt this focused lab to the project data: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.  Required concepts: PRD, SRS, AI use-case specification.
+  - Deliverable: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A task-based usability test and revised prototype. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · PRD, SRS, use cases and success metrics: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Record task completion and confusion points without claiming statistical significance.
+- [ ] PRD, SRS, use cases and success metrics: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Incident runbook rehearsal
+
+A teammate needs usable recovery instructions for a local service.
+
+**Data:** Create missing-config, unavailable-store and corrupted-input incidents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A runbook with diagnosis, recovery and evidence capture.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **PRD, SRS, use cases and success metrics:** Extend the project with PRD, SRS, use cases and success metrics in Incident runbook rehearsal. Adapt this focused lab to the project data: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.  Required concepts: PRD, SRS, AI use-case specification.
+  - Deliverable: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A runbook with diagnosis, recovery and evidence capture. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · PRD, SRS, use cases and success metrics: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A teammate follows the steps and restores service without undocumented knowledge.
+- [ ] PRD, SRS, use cases and success metrics: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### AI feature value calculator
+
+A founder needs transparent assumptions about time saved.
+
+**Data:** Generate fictional task volumes, review times and failure rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A sensitivity analysis comparing manual and assisted workflows.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **PRD, SRS, use cases and success metrics:** Extend the project with PRD, SRS, use cases and success metrics in AI feature value calculator. Adapt this focused lab to the project data: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.  Required concepts: PRD, SRS, AI use-case specification.
+  - Deliverable: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A sensitivity analysis comparing manual and assisted workflows. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · PRD, SRS, use cases and success metrics: PRD, SRS, use cases and success metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show break-even assumptions and include human review cost.
+- [ ] PRD, SRS, use cases and success metrics: Write a short PRD, SRS and AI use-case specification for a document assistant with five functional checks and explicit safe-failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -769,7 +769,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Learn from real users with the smallest useful product.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [PRD, SRS, use cases and success metrics](product.md#product-requirements) Navigation is unrestricted.
 
@@ -841,292 +841,292 @@ Test a small prototype with two teammates, record task completion and feedback, 
 
 #### Ten project recommendations
 
-### Learning gap coach
+### Feedback prioritization board
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A maintainer needs to turn messy feedback into testable changes.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Write 40 fictional feedback notes with conflicting requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Prototypes, MVPs, UX, feedback and A/B testing:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prototypes, MVPs, UX, feedback and A/B testing, explicitly apply Build loop, UX and limitations, Experiments and business value.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Prototypes, MVPs, UX, feedback and A/B testing:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prototypes, MVPs, UX, feedback and A/B testing, explicitly apply Build loop, UX and limitations, Experiments and business value.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A categorized backlog with evidence and experiment plans.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Prototypes, MVPs, UX, feedback and A/B testing:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prototypes, MVPs, UX, feedback and A/B testing, explicitly apply Build loop, UX and limitations, Experiments and business value.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
+- **Prototypes, MVPs, UX, feedback and A/B testing:** Implement Prototypes, MVPs, UX, feedback and A/B testing in Feedback prioritization board. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A categorized backlog with evidence and experiment plans. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
+- [ ] Deduplicate reports while retaining disagreement and define a test per priority.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Search UX prototype study
 
-Find unusual stock movements and explain which records need investigation.
+A designer needs to learn whether users can find evidence.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Use a static prototype and ten fictional documents. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Prototypes, MVPs, UX, feedback and A/B testing:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prototypes, MVPs, UX, feedback and A/B testing, explicitly apply Build loop, UX and limitations, Experiments and business value.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Prototypes, MVPs, UX, feedback and A/B testing:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prototypes, MVPs, UX, feedback and A/B testing, explicitly apply Build loop, UX and limitations, Experiments and business value.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Prototypes, MVPs, UX, feedback and A/B testing:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prototypes, MVPs, UX, feedback and A/B testing, explicitly apply Build loop, UX and limitations, Experiments and business value.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Prototypes, MVPs, UX, feedback and A/B testing:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prototypes, MVPs, UX, feedback and A/B testing, explicitly apply Build loop, UX and limitations, Experiments and business value.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A task-based usability test and revised prototype.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Prototypes, MVPs, UX, feedback and A/B testing:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prototypes, MVPs, UX, feedback and A/B testing, explicitly apply Build loop, UX and limitations, Experiments and business value.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
+- **Prototypes, MVPs, UX, feedback and A/B testing:** Implement Prototypes, MVPs, UX, feedback and A/B testing in Search UX prototype study. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A task-based usability test and revised prototype. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
+- [ ] Record task completion and confusion points without claiming statistical significance.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Architecture decision dossier
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A team needs a traceable choice between two local designs.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Compare SQLite and PostgreSQL for a fictional notes service. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** An architecture diagram and ADR with a small reproducible experiment.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Prototypes, MVPs, UX, feedback and A/B testing:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prototypes, MVPs, UX, feedback and A/B testing, explicitly apply Build loop, UX and limitations, Experiments and business value.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
+- **Prototypes, MVPs, UX, feedback and A/B testing:** Extend the project with Prototypes, MVPs, UX, feedback and A/B testing in Architecture decision dossier. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An architecture diagram and ADR with a small reproducible experiment. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
+- [ ] Tie the decision to constraints and document when to revisit it.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Project delivery documentation pack
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A team needs a handoff that survives the original developer leaving.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use a fictional AI search service with example requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** Requirements, architecture, API spec, evaluation and deployment handoff.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Prototypes, MVPs, UX, feedback and A/B testing:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prototypes, MVPs, UX, feedback and A/B testing, explicitly apply Build loop, UX and limitations, Experiments and business value.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
+- **Prototypes, MVPs, UX, feedback and A/B testing:** Extend the project with Prototypes, MVPs, UX, feedback and A/B testing in Project delivery documentation pack. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Requirements, architecture, API spec, evaluation and deployment handoff. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
+- [ ] A reviewer can trace one user scenario through every document.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Product outcome measurement tree
+
+A builder needs metrics that connect usage to learning outcomes.
+
+**Data:** Generate fictional sessions, completed exercises and feedback. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A metric tree and instrumentation contract.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Prototypes, MVPs, UX, feedback and A/B testing:** Extend the project with Prototypes, MVPs, UX, feedback and A/B testing in Product outcome measurement tree. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A metric tree and instrumentation contract. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Distinguish activity from learning and specify denominator and time window.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Educational model card studio
+
+A learner needs to communicate limits of a toy classifier.
+
+**Data:** Use bundled digits and a small baseline evaluation. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A model card, dataset description and failure examples.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Prototypes, MVPs, UX, feedback and A/B testing:** Extend the project with Prototypes, MVPs, UX, feedback and A/B testing in Educational model card studio. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A model card, dataset description and failure examples. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] State intended use, split, metrics and unsupported use cases.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### AI feature MVP scoping desk
+
+A team needs a feasible first version of a document helper.
+
+**Data:** Use ten fictional user requests and effort estimates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A PRD with MVP, exclusions and acceptance scenarios.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Prototypes, MVPs, UX, feedback and A/B testing:** Extend the project with Prototypes, MVPs, UX, feedback and A/B testing in AI feature MVP scoping desk. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A PRD with MVP, exclusions and acceptance scenarios. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Every included feature supports a named user need and measurable outcome.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Learning problem discovery kit
+
+A builder needs evidence that a study tool solves a real problem.
+
+**Data:** Use consented teammate interviews or clearly labeled fictional interviews. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A problem statement, journey and ranked assumptions.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Prototypes, MVPs, UX, feedback and A/B testing:** Extend the project with Prototypes, MVPs, UX, feedback and A/B testing in Learning problem discovery kit. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A problem statement, journey and ranked assumptions. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Separate observations from guesses and identify a falsifiable success metric.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Incident runbook rehearsal
+
+A teammate needs usable recovery instructions for a local service.
+
+**Data:** Create missing-config, unavailable-store and corrupted-input incidents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A runbook with diagnosis, recovery and evidence capture.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Prototypes, MVPs, UX, feedback and A/B testing:** Extend the project with Prototypes, MVPs, UX, feedback and A/B testing in Incident runbook rehearsal. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A runbook with diagnosis, recovery and evidence capture. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A teammate follows the steps and restores service without undocumented knowledge.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### AI feature value calculator
+
+A founder needs transparent assumptions about time saved.
+
+**Data:** Generate fictional task volumes, review times and failure rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A sensitivity analysis comparing manual and assisted workflows.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Prototypes, MVPs, UX, feedback and A/B testing:** Extend the project with Prototypes, MVPs, UX, feedback and A/B testing in AI feature value calculator. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A sensitivity analysis comparing manual and assisted workflows. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show break-even assumptions and include human review cost.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1140,7 +1140,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Measure real value and take responsibility for outcomes beyond a successful demo.
 
-**Priority:** Useful next · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Prototypes, MVPs, UX, feedback and A/B testing](product.md#product-prototype) Navigation is unrestricted.
 
@@ -1208,292 +1208,292 @@ Create a spreadsheet or Python model using fictional costs and completion rates,
 
 #### Ten project recommendations
 
-### Learning gap coach
+### AI feature value calculator
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A founder needs transparent assumptions about time saved.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Generate fictional task volumes, review times and failure rates. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Business models, unit economics and high-agency ownership:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Business models, unit economics and high-agency ownership, explicitly apply Business model, Unit economics, High-agency ownership.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Business models, unit economics and high-agency ownership: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Business models, unit economics and high-agency ownership: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Business models, unit economics and high-agency ownership:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Business models, unit economics and high-agency ownership, explicitly apply Business model, Unit economics, High-agency ownership.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Business models, unit economics and high-agency ownership: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Business models, unit economics and high-agency ownership: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A sensitivity analysis comparing manual and assisted workflows.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Business models, unit economics and high-agency ownership:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Business models, unit economics and high-agency ownership, explicitly apply Business model, Unit economics, High-agency ownership.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
+- **Business models, unit economics and high-agency ownership:** Implement Business models, unit economics and high-agency ownership in AI feature value calculator. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Business models, unit economics and high-agency ownership: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A sensitivity analysis comparing manual and assisted workflows. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Business models, unit economics and high-agency ownership: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
+- [ ] Show break-even assumptions and include human review cost.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Workflow versus agent experiment
 
-Find unusual stock movements and explain which records need investigation.
+A product builder needs evidence that autonomy helps a task.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Use 20 document-routing cases and fixed decision fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
+**Output:** A deterministic workflow versus bounded-planner benchmark.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Business models, unit economics and high-agency ownership:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Business models, unit economics and high-agency ownership, explicitly apply Business model, Unit economics, High-agency ownership.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
+- **Business models, unit economics and high-agency ownership:** Implement Business models, unit economics and high-agency ownership in Workflow versus agent experiment. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Business models, unit economics and high-agency ownership: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A deterministic workflow versus bounded-planner benchmark. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Business models, unit economics and high-agency ownership: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
+- [ ] Compare task success, tool count and failure behavior under identical cases.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Architecture decision dossier
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A team needs a traceable choice between two local designs.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Compare SQLite and PostgreSQL for a fictional notes service. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Business models, unit economics and high-agency ownership:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Business models, unit economics and high-agency ownership, explicitly apply Business model, Unit economics, High-agency ownership.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Business models, unit economics and high-agency ownership: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Business models, unit economics and high-agency ownership: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Business models, unit economics and high-agency ownership:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Business models, unit economics and high-agency ownership, explicitly apply Business model, Unit economics, High-agency ownership.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Business models, unit economics and high-agency ownership: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Business models, unit economics and high-agency ownership: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Business models, unit economics and high-agency ownership:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Business models, unit economics and high-agency ownership, explicitly apply Business model, Unit economics, High-agency ownership.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Business models, unit economics and high-agency ownership: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Business models, unit economics and high-agency ownership: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** An architecture diagram and ADR with a small reproducible experiment.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Business models, unit economics and high-agency ownership:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Business models, unit economics and high-agency ownership, explicitly apply Business model, Unit economics, High-agency ownership.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
+- **Business models, unit economics and high-agency ownership:** Extend the project with Business models, unit economics and high-agency ownership in Architecture decision dossier. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Business models, unit economics and high-agency ownership: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An architecture diagram and ADR with a small reproducible experiment. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Business models, unit economics and high-agency ownership: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
+- [ ] Tie the decision to constraints and document when to revisit it.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Project delivery documentation pack
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A team needs a handoff that survives the original developer leaving.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use a fictional AI search service with example requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** Requirements, architecture, API spec, evaluation and deployment handoff.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Business models, unit economics and high-agency ownership:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Business models, unit economics and high-agency ownership, explicitly apply Business model, Unit economics, High-agency ownership.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
+- **Business models, unit economics and high-agency ownership:** Extend the project with Business models, unit economics and high-agency ownership in Project delivery documentation pack. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Business models, unit economics and high-agency ownership: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Requirements, architecture, API spec, evaluation and deployment handoff. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Business models, unit economics and high-agency ownership: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
+- [ ] A reviewer can trace one user scenario through every document.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Feedback prioritization board
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A maintainer needs to turn messy feedback into testable changes.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Write 40 fictional feedback notes with conflicting requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A categorized backlog with evidence and experiment plans.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Business models, unit economics and high-agency ownership:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Business models, unit economics and high-agency ownership, explicitly apply Business model, Unit economics, High-agency ownership.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
+- **Business models, unit economics and high-agency ownership:** Extend the project with Business models, unit economics and high-agency ownership in Feedback prioritization board. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Business models, unit economics and high-agency ownership: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A categorized backlog with evidence and experiment plans. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Business models, unit economics and high-agency ownership: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
+- [ ] Deduplicate reports while retaining disagreement and define a test per priority.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Product outcome measurement tree
+
+A builder needs metrics that connect usage to learning outcomes.
+
+**Data:** Generate fictional sessions, completed exercises and feedback. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A metric tree and instrumentation contract.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Business models, unit economics and high-agency ownership:** Extend the project with Business models, unit economics and high-agency ownership in Product outcome measurement tree. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A metric tree and instrumentation contract. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Distinguish activity from learning and specify denominator and time window.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Educational model card studio
+
+A learner needs to communicate limits of a toy classifier.
+
+**Data:** Use bundled digits and a small baseline evaluation. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A model card, dataset description and failure examples.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Business models, unit economics and high-agency ownership:** Extend the project with Business models, unit economics and high-agency ownership in Educational model card studio. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A model card, dataset description and failure examples. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] State intended use, split, metrics and unsupported use cases.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### AI feature MVP scoping desk
+
+A team needs a feasible first version of a document helper.
+
+**Data:** Use ten fictional user requests and effort estimates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A PRD with MVP, exclusions and acceptance scenarios.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Business models, unit economics and high-agency ownership:** Extend the project with Business models, unit economics and high-agency ownership in AI feature MVP scoping desk. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A PRD with MVP, exclusions and acceptance scenarios. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Every included feature supports a named user need and measurable outcome.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Learning problem discovery kit
+
+A builder needs evidence that a study tool solves a real problem.
+
+**Data:** Use consented teammate interviews or clearly labeled fictional interviews. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A problem statement, journey and ranked assumptions.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Business models, unit economics and high-agency ownership:** Extend the project with Business models, unit economics and high-agency ownership in Learning problem discovery kit. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A problem statement, journey and ranked assumptions. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Separate observations from guesses and identify a falsifiable success metric.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Search UX prototype study
+
+A designer needs to learn whether users can find evidence.
+
+**Data:** Use a static prototype and ten fictional documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A task-based usability test and revised prototype.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Business models, unit economics and high-agency ownership:** Extend the project with Business models, unit economics and high-agency ownership in Search UX prototype study. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A task-based usability test and revised prototype. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Record task completion and confusion points without claiming statistical significance.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1507,7 +1507,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Record system boundaries and the reasons behind consequential choices.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Business models, unit economics and high-agency ownership](product.md#product-economics) Navigation is unrestricted.
 
@@ -1598,292 +1598,292 @@ Write an architecture diagram, data schema and one ADR for a local RAG prototype
 
 #### Ten project recommendations
 
-### Learning gap coach
+### Architecture decision dossier
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A team needs a traceable choice between two local designs.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Compare SQLite and PostgreSQL for a fictional notes service. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Architecture, data requirements, schemas and ADRs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Architecture, data requirements, schemas and ADRs, explicitly apply Architecture and data flow, Data requirements, ADRs.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, data requirements, schemas and ADRs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Architecture, data requirements, schemas and ADRs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Architecture, data requirements, schemas and ADRs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Architecture, data requirements, schemas and ADRs, explicitly apply Architecture and data flow, Data requirements, ADRs.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, data requirements, schemas and ADRs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Architecture, data requirements, schemas and ADRs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** An architecture diagram and ADR with a small reproducible experiment.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Architecture, data requirements, schemas and ADRs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Architecture, data requirements, schemas and ADRs, explicitly apply Architecture and data flow, Data requirements, ADRs.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
+- **Architecture, data requirements, schemas and ADRs:** Implement Architecture, data requirements, schemas and ADRs in Architecture decision dossier. Adapt this focused lab to the project data: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.  Required concepts: Architecture and data flow, Data requirements, ADRs.
+  - Deliverable: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, data requirements, schemas and ADRs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An architecture diagram and ADR with a small reproducible experiment. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, data requirements, schemas and ADRs: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Architecture, data requirements, schemas and ADRs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
+- [ ] Tie the decision to constraints and document when to revisit it.
+- [ ] Architecture, data requirements, schemas and ADRs: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Project delivery documentation pack
 
-Find unusual stock movements and explain which records need investigation.
+A team needs a handoff that survives the original developer leaving.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Use a fictional AI search service with example requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Architecture, data requirements, schemas and ADRs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Architecture, data requirements, schemas and ADRs, explicitly apply Architecture and data flow, Data requirements, ADRs.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, data requirements, schemas and ADRs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Architecture, data requirements, schemas and ADRs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Architecture, data requirements, schemas and ADRs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Architecture, data requirements, schemas and ADRs, explicitly apply Architecture and data flow, Data requirements, ADRs.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, data requirements, schemas and ADRs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Architecture, data requirements, schemas and ADRs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Architecture, data requirements, schemas and ADRs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Architecture, data requirements, schemas and ADRs, explicitly apply Architecture and data flow, Data requirements, ADRs.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, data requirements, schemas and ADRs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Architecture, data requirements, schemas and ADRs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Architecture, data requirements, schemas and ADRs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Architecture, data requirements, schemas and ADRs, explicitly apply Architecture and data flow, Data requirements, ADRs.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, data requirements, schemas and ADRs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Architecture, data requirements, schemas and ADRs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** Requirements, architecture, API spec, evaluation and deployment handoff.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Architecture, data requirements, schemas and ADRs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Architecture, data requirements, schemas and ADRs, explicitly apply Architecture and data flow, Data requirements, ADRs.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
+- **Architecture, data requirements, schemas and ADRs:** Extend the project with Architecture, data requirements, schemas and ADRs in Project delivery documentation pack. Adapt this focused lab to the project data: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.  Required concepts: Architecture and data flow, Data requirements, ADRs.
+  - Deliverable: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, data requirements, schemas and ADRs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Requirements, architecture, API spec, evaluation and deployment handoff. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, data requirements, schemas and ADRs: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Architecture, data requirements, schemas and ADRs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
+- [ ] A reviewer can trace one user scenario through every document.
+- [ ] Architecture, data requirements, schemas and ADRs: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Feedback prioritization board
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A maintainer needs to turn messy feedback into testable changes.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Write 40 fictional feedback notes with conflicting requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A categorized backlog with evidence and experiment plans.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Architecture, data requirements, schemas and ADRs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Architecture, data requirements, schemas and ADRs, explicitly apply Architecture and data flow, Data requirements, ADRs.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
+- **Architecture, data requirements, schemas and ADRs:** Extend the project with Architecture, data requirements, schemas and ADRs in Feedback prioritization board. Adapt this focused lab to the project data: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.  Required concepts: Architecture and data flow, Data requirements, ADRs.
+  - Deliverable: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, data requirements, schemas and ADRs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A categorized backlog with evidence and experiment plans. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, data requirements, schemas and ADRs: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Architecture, data requirements, schemas and ADRs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
+- [ ] Deduplicate reports while retaining disagreement and define a test per priority.
+- [ ] Architecture, data requirements, schemas and ADRs: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Product outcome measurement tree
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A builder needs metrics that connect usage to learning outcomes.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Generate fictional sessions, completed exercises and feedback. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A metric tree and instrumentation contract.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Architecture, data requirements, schemas and ADRs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Architecture, data requirements, schemas and ADRs, explicitly apply Architecture and data flow, Data requirements, ADRs.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
+- **Architecture, data requirements, schemas and ADRs:** Extend the project with Architecture, data requirements, schemas and ADRs in Product outcome measurement tree. Adapt this focused lab to the project data: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.  Required concepts: Architecture and data flow, Data requirements, ADRs.
+  - Deliverable: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, data requirements, schemas and ADRs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A metric tree and instrumentation contract. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, data requirements, schemas and ADRs: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Architecture, data requirements, schemas and ADRs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.
+- [ ] Distinguish activity from learning and specify denominator and time window.
+- [ ] Architecture, data requirements, schemas and ADRs: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Educational model card studio
+
+A learner needs to communicate limits of a toy classifier.
+
+**Data:** Use bundled digits and a small baseline evaluation. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A model card, dataset description and failure examples.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Architecture, data requirements, schemas and ADRs:** Extend the project with Architecture, data requirements, schemas and ADRs in Educational model card studio. Adapt this focused lab to the project data: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.  Required concepts: Architecture and data flow, Data requirements, ADRs.
+  - Deliverable: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A model card, dataset description and failure examples. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, data requirements, schemas and ADRs: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] State intended use, split, metrics and unsupported use cases.
+- [ ] Architecture, data requirements, schemas and ADRs: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### AI feature MVP scoping desk
+
+A team needs a feasible first version of a document helper.
+
+**Data:** Use ten fictional user requests and effort estimates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A PRD with MVP, exclusions and acceptance scenarios.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Architecture, data requirements, schemas and ADRs:** Extend the project with Architecture, data requirements, schemas and ADRs in AI feature MVP scoping desk. Adapt this focused lab to the project data: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.  Required concepts: Architecture and data flow, Data requirements, ADRs.
+  - Deliverable: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A PRD with MVP, exclusions and acceptance scenarios. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, data requirements, schemas and ADRs: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Every included feature supports a named user need and measurable outcome.
+- [ ] Architecture, data requirements, schemas and ADRs: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Learning problem discovery kit
+
+A builder needs evidence that a study tool solves a real problem.
+
+**Data:** Use consented teammate interviews or clearly labeled fictional interviews. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A problem statement, journey and ranked assumptions.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Architecture, data requirements, schemas and ADRs:** Extend the project with Architecture, data requirements, schemas and ADRs in Learning problem discovery kit. Adapt this focused lab to the project data: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.  Required concepts: Architecture and data flow, Data requirements, ADRs.
+  - Deliverable: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A problem statement, journey and ranked assumptions. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, data requirements, schemas and ADRs: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Separate observations from guesses and identify a falsifiable success metric.
+- [ ] Architecture, data requirements, schemas and ADRs: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Search UX prototype study
+
+A designer needs to learn whether users can find evidence.
+
+**Data:** Use a static prototype and ten fictional documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A task-based usability test and revised prototype.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Architecture, data requirements, schemas and ADRs:** Extend the project with Architecture, data requirements, schemas and ADRs in Search UX prototype study. Adapt this focused lab to the project data: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.  Required concepts: Architecture and data flow, Data requirements, ADRs.
+  - Deliverable: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A task-based usability test and revised prototype. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, data requirements, schemas and ADRs: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Record task completion and confusion points without claiming statistical significance.
+- [ ] Architecture, data requirements, schemas and ADRs: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Incident runbook rehearsal
+
+A teammate needs usable recovery instructions for a local service.
+
+**Data:** Create missing-config, unavailable-store and corrupted-input incidents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A runbook with diagnosis, recovery and evidence capture.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Architecture, data requirements, schemas and ADRs:** Extend the project with Architecture, data requirements, schemas and ADRs in Incident runbook rehearsal. Adapt this focused lab to the project data: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.  Required concepts: Architecture and data flow, Data requirements, ADRs.
+  - Deliverable: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A runbook with diagnosis, recovery and evidence capture. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, data requirements, schemas and ADRs: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A teammate follows the steps and restores service without undocumented knowledge.
+- [ ] Architecture, data requirements, schemas and ADRs: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### AI feature value calculator
+
+A founder needs transparent assumptions about time saved.
+
+**Data:** Generate fictional task volumes, review times and failure rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A sensitivity analysis comparing manual and assisted workflows.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Architecture, data requirements, schemas and ADRs:** Extend the project with Architecture, data requirements, schemas and ADRs in AI feature value calculator. Adapt this focused lab to the project data: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.  Required concepts: Architecture and data flow, Data requirements, ADRs.
+  - Deliverable: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A sensitivity analysis comparing manual and assisted workflows. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, data requirements, schemas and ADRs: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show break-even assumptions and include human review cost.
+- [ ] Architecture, data requirements, schemas and ADRs: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1897,7 +1897,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Keep the contracts and quality criteria needed to reproduce AI behavior.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Architecture, data requirements, schemas and ADRs](product.md#docs-architecture) Navigation is unrestricted.
 
@@ -1988,292 +1988,292 @@ Document a prototype prompt/tool contract, model decision table, OpenAPI example
 
 #### Ten project recommendations
 
-### Learning gap coach
+### Educational model card studio
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A learner needs to communicate limits of a toy classifier.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Use bundled digits and a small baseline evaluation. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Prompt specs, model decisions, API specs and evaluation plans:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prompt specs, model decisions, API specs and evaluation plans, explicitly apply Prompt and agent specs, Model/provider decisions, API and evaluation plans.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Prompt specs, model decisions, API specs and evaluation plans:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prompt specs, model decisions, API specs and evaluation plans, explicitly apply Prompt and agent specs, Model/provider decisions, API and evaluation plans.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A model card, dataset description and failure examples.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Prompt specs, model decisions, API specs and evaluation plans:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prompt specs, model decisions, API specs and evaluation plans, explicitly apply Prompt and agent specs, Model/provider decisions, API and evaluation plans.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
+- **Prompt specs, model decisions, API specs and evaluation plans:** Implement Prompt specs, model decisions, API specs and evaluation plans in Educational model card studio. Adapt this focused lab to the project data: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.  Required concepts: Prompt and agent specs, Model/provider decisions, API and evaluation plans.
+  - Deliverable: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A model card, dataset description and failure examples. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt specs, model decisions, API specs and evaluation plans: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
+- [ ] State intended use, split, metrics and unsupported use cases.
+- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Architecture decision dossier
 
-Find unusual stock movements and explain which records need investigation.
+A team needs a traceable choice between two local designs.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Compare SQLite and PostgreSQL for a fictional notes service. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Prompt specs, model decisions, API specs and evaluation plans:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prompt specs, model decisions, API specs and evaluation plans, explicitly apply Prompt and agent specs, Model/provider decisions, API and evaluation plans.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Prompt specs, model decisions, API specs and evaluation plans:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prompt specs, model decisions, API specs and evaluation plans, explicitly apply Prompt and agent specs, Model/provider decisions, API and evaluation plans.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Prompt specs, model decisions, API specs and evaluation plans:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prompt specs, model decisions, API specs and evaluation plans, explicitly apply Prompt and agent specs, Model/provider decisions, API and evaluation plans.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Prompt specs, model decisions, API specs and evaluation plans:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prompt specs, model decisions, API specs and evaluation plans, explicitly apply Prompt and agent specs, Model/provider decisions, API and evaluation plans.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** An architecture diagram and ADR with a small reproducible experiment.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Prompt specs, model decisions, API specs and evaluation plans:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prompt specs, model decisions, API specs and evaluation plans, explicitly apply Prompt and agent specs, Model/provider decisions, API and evaluation plans.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
+- **Prompt specs, model decisions, API specs and evaluation plans:** Extend the project with Prompt specs, model decisions, API specs and evaluation plans in Architecture decision dossier. Adapt this focused lab to the project data: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.  Required concepts: Prompt and agent specs, Model/provider decisions, API and evaluation plans.
+  - Deliverable: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An architecture diagram and ADR with a small reproducible experiment. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt specs, model decisions, API specs and evaluation plans: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
+- [ ] Tie the decision to constraints and document when to revisit it.
+- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Project delivery documentation pack
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A team needs a handoff that survives the original developer leaving.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use a fictional AI search service with example requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** Requirements, architecture, API spec, evaluation and deployment handoff.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Prompt specs, model decisions, API specs and evaluation plans:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prompt specs, model decisions, API specs and evaluation plans, explicitly apply Prompt and agent specs, Model/provider decisions, API and evaluation plans.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
+- **Prompt specs, model decisions, API specs and evaluation plans:** Extend the project with Prompt specs, model decisions, API specs and evaluation plans in Project delivery documentation pack. Adapt this focused lab to the project data: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.  Required concepts: Prompt and agent specs, Model/provider decisions, API and evaluation plans.
+  - Deliverable: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Requirements, architecture, API spec, evaluation and deployment handoff. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt specs, model decisions, API specs and evaluation plans: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
+- [ ] A reviewer can trace one user scenario through every document.
+- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Feedback prioritization board
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A maintainer needs to turn messy feedback into testable changes.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Write 40 fictional feedback notes with conflicting requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A categorized backlog with evidence and experiment plans.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Prompt specs, model decisions, API specs and evaluation plans:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Prompt specs, model decisions, API specs and evaluation plans, explicitly apply Prompt and agent specs, Model/provider decisions, API and evaluation plans.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
+- **Prompt specs, model decisions, API specs and evaluation plans:** Extend the project with Prompt specs, model decisions, API specs and evaluation plans in Feedback prioritization board. Adapt this focused lab to the project data: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.  Required concepts: Prompt and agent specs, Model/provider decisions, API and evaluation plans.
+  - Deliverable: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A categorized backlog with evidence and experiment plans. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt specs, model decisions, API specs and evaluation plans: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.
+- [ ] Deduplicate reports while retaining disagreement and define a test per priority.
+- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Product outcome measurement tree
+
+A builder needs metrics that connect usage to learning outcomes.
+
+**Data:** Generate fictional sessions, completed exercises and feedback. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A metric tree and instrumentation contract.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Prompt specs, model decisions, API specs and evaluation plans:** Extend the project with Prompt specs, model decisions, API specs and evaluation plans in Product outcome measurement tree. Adapt this focused lab to the project data: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.  Required concepts: Prompt and agent specs, Model/provider decisions, API and evaluation plans.
+  - Deliverable: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A metric tree and instrumentation contract. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt specs, model decisions, API specs and evaluation plans: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Distinguish activity from learning and specify denominator and time window.
+- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### AI feature MVP scoping desk
+
+A team needs a feasible first version of a document helper.
+
+**Data:** Use ten fictional user requests and effort estimates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A PRD with MVP, exclusions and acceptance scenarios.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Prompt specs, model decisions, API specs and evaluation plans:** Extend the project with Prompt specs, model decisions, API specs and evaluation plans in AI feature MVP scoping desk. Adapt this focused lab to the project data: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.  Required concepts: Prompt and agent specs, Model/provider decisions, API and evaluation plans.
+  - Deliverable: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A PRD with MVP, exclusions and acceptance scenarios. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt specs, model decisions, API specs and evaluation plans: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Every included feature supports a named user need and measurable outcome.
+- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Learning problem discovery kit
+
+A builder needs evidence that a study tool solves a real problem.
+
+**Data:** Use consented teammate interviews or clearly labeled fictional interviews. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A problem statement, journey and ranked assumptions.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Prompt specs, model decisions, API specs and evaluation plans:** Extend the project with Prompt specs, model decisions, API specs and evaluation plans in Learning problem discovery kit. Adapt this focused lab to the project data: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.  Required concepts: Prompt and agent specs, Model/provider decisions, API and evaluation plans.
+  - Deliverable: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A problem statement, journey and ranked assumptions. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt specs, model decisions, API specs and evaluation plans: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Separate observations from guesses and identify a falsifiable success metric.
+- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Search UX prototype study
+
+A designer needs to learn whether users can find evidence.
+
+**Data:** Use a static prototype and ten fictional documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A task-based usability test and revised prototype.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Prompt specs, model decisions, API specs and evaluation plans:** Extend the project with Prompt specs, model decisions, API specs and evaluation plans in Search UX prototype study. Adapt this focused lab to the project data: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.  Required concepts: Prompt and agent specs, Model/provider decisions, API and evaluation plans.
+  - Deliverable: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A task-based usability test and revised prototype. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt specs, model decisions, API specs and evaluation plans: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Record task completion and confusion points without claiming statistical significance.
+- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Incident runbook rehearsal
+
+A teammate needs usable recovery instructions for a local service.
+
+**Data:** Create missing-config, unavailable-store and corrupted-input incidents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A runbook with diagnosis, recovery and evidence capture.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Prompt specs, model decisions, API specs and evaluation plans:** Extend the project with Prompt specs, model decisions, API specs and evaluation plans in Incident runbook rehearsal. Adapt this focused lab to the project data: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.  Required concepts: Prompt and agent specs, Model/provider decisions, API and evaluation plans.
+  - Deliverable: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A runbook with diagnosis, recovery and evidence capture. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt specs, model decisions, API specs and evaluation plans: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A teammate follows the steps and restores service without undocumented knowledge.
+- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### AI feature value calculator
+
+A founder needs transparent assumptions about time saved.
+
+**Data:** Generate fictional task volumes, review times and failure rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A sensitivity analysis comparing manual and assisted workflows.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Prompt specs, model decisions, API specs and evaluation plans:** Extend the project with Prompt specs, model decisions, API specs and evaluation plans in AI feature value calculator. Adapt this focused lab to the project data: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.  Required concepts: Prompt and agent specs, Model/provider decisions, API and evaluation plans.
+  - Deliverable: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A sensitivity analysis comparing manual and assisted workflows. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Prompt specs, model decisions, API specs and evaluation plans: Prompt specs, model decisions, API specs and evaluation plans: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show break-even assumptions and include human review cost.
+- [ ] Prompt specs, model decisions, API specs and evaluation plans: Document a prototype prompt/tool contract, model decision table, OpenAPI example and twenty-case evaluation plan; ensure they match the runnable demo.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2287,7 +2287,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Enable another teammate to run, diagnose and improve the system.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Prompt specs, model decisions, API specs and evaluation plans](product.md#docs-ai) Navigation is unrestricted.
 
@@ -2378,292 +2378,292 @@ Deliver a deployment guide, one incident runbook, model card and change log; hav
 
 #### Ten project recommendations
 
-### Learning gap coach
+### Incident runbook rehearsal
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A teammate needs usable recovery instructions for a local service.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Create missing-config, unavailable-store and corrupted-input incidents. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Deployment guides, runbooks, model cards and change logs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Deployment guides, runbooks, model cards and change logs, explicitly apply Deployment guide, Runbook and monitoring, Model card and change log.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Deployment guides, runbooks, model cards and change logs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Deployment guides, runbooks, model cards and change logs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Deployment guides, runbooks, model cards and change logs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Deployment guides, runbooks, model cards and change logs, explicitly apply Deployment guide, Runbook and monitoring, Model card and change log.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Deployment guides, runbooks, model cards and change logs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Deployment guides, runbooks, model cards and change logs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A runbook with diagnosis, recovery and evidence capture.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Deployment guides, runbooks, model cards and change logs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Deployment guides, runbooks, model cards and change logs, explicitly apply Deployment guide, Runbook and monitoring, Model card and change log.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
+- **Deployment guides, runbooks, model cards and change logs:** Implement Deployment guides, runbooks, model cards and change logs in Incident runbook rehearsal. Adapt this focused lab to the project data: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.  Required concepts: Deployment guide, Runbook and monitoring, Model card and change log.
+  - Deliverable: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Deployment guides, runbooks, model cards and change logs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A runbook with diagnosis, recovery and evidence capture. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Deployment guides, runbooks, model cards and change logs: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Deployment guides, runbooks, model cards and change logs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
+- [ ] A teammate follows the steps and restores service without undocumented knowledge.
+- [ ] Deployment guides, runbooks, model cards and change logs: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Architecture decision dossier
 
-Find unusual stock movements and explain which records need investigation.
+A team needs a traceable choice between two local designs.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Compare SQLite and PostgreSQL for a fictional notes service. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Deployment guides, runbooks, model cards and change logs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Deployment guides, runbooks, model cards and change logs, explicitly apply Deployment guide, Runbook and monitoring, Model card and change log.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Deployment guides, runbooks, model cards and change logs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Deployment guides, runbooks, model cards and change logs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Deployment guides, runbooks, model cards and change logs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Deployment guides, runbooks, model cards and change logs, explicitly apply Deployment guide, Runbook and monitoring, Model card and change log.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Deployment guides, runbooks, model cards and change logs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Deployment guides, runbooks, model cards and change logs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Deployment guides, runbooks, model cards and change logs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Deployment guides, runbooks, model cards and change logs, explicitly apply Deployment guide, Runbook and monitoring, Model card and change log.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Deployment guides, runbooks, model cards and change logs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Deployment guides, runbooks, model cards and change logs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Deployment guides, runbooks, model cards and change logs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Deployment guides, runbooks, model cards and change logs, explicitly apply Deployment guide, Runbook and monitoring, Model card and change log.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Deployment guides, runbooks, model cards and change logs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Deployment guides, runbooks, model cards and change logs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** An architecture diagram and ADR with a small reproducible experiment.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Deployment guides, runbooks, model cards and change logs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Deployment guides, runbooks, model cards and change logs, explicitly apply Deployment guide, Runbook and monitoring, Model card and change log.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
+- **Deployment guides, runbooks, model cards and change logs:** Extend the project with Deployment guides, runbooks, model cards and change logs in Architecture decision dossier. Adapt this focused lab to the project data: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.  Required concepts: Deployment guide, Runbook and monitoring, Model card and change log.
+  - Deliverable: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Deployment guides, runbooks, model cards and change logs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An architecture diagram and ADR with a small reproducible experiment. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Deployment guides, runbooks, model cards and change logs: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Deployment guides, runbooks, model cards and change logs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
+- [ ] Tie the decision to constraints and document when to revisit it.
+- [ ] Deployment guides, runbooks, model cards and change logs: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Project delivery documentation pack
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A team needs a handoff that survives the original developer leaving.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use a fictional AI search service with example requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** Requirements, architecture, API spec, evaluation and deployment handoff.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Deployment guides, runbooks, model cards and change logs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Deployment guides, runbooks, model cards and change logs, explicitly apply Deployment guide, Runbook and monitoring, Model card and change log.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
+- **Deployment guides, runbooks, model cards and change logs:** Extend the project with Deployment guides, runbooks, model cards and change logs in Project delivery documentation pack. Adapt this focused lab to the project data: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.  Required concepts: Deployment guide, Runbook and monitoring, Model card and change log.
+  - Deliverable: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Deployment guides, runbooks, model cards and change logs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Requirements, architecture, API spec, evaluation and deployment handoff. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Deployment guides, runbooks, model cards and change logs: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Deployment guides, runbooks, model cards and change logs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
+- [ ] A reviewer can trace one user scenario through every document.
+- [ ] Deployment guides, runbooks, model cards and change logs: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Feedback prioritization board
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A maintainer needs to turn messy feedback into testable changes.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Write 40 fictional feedback notes with conflicting requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A categorized backlog with evidence and experiment plans.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Deployment guides, runbooks, model cards and change logs:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Deployment guides, runbooks, model cards and change logs, explicitly apply Deployment guide, Runbook and monitoring, Model card and change log.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
+- **Deployment guides, runbooks, model cards and change logs:** Extend the project with Deployment guides, runbooks, model cards and change logs in Feedback prioritization board. Adapt this focused lab to the project data: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.  Required concepts: Deployment guide, Runbook and monitoring, Model card and change log.
+  - Deliverable: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Deployment guides, runbooks, model cards and change logs: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A categorized backlog with evidence and experiment plans. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Deployment guides, runbooks, model cards and change logs: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Deployment guides, runbooks, model cards and change logs: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.
+- [ ] Deduplicate reports while retaining disagreement and define a test per priority.
+- [ ] Deployment guides, runbooks, model cards and change logs: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Product outcome measurement tree
+
+A builder needs metrics that connect usage to learning outcomes.
+
+**Data:** Generate fictional sessions, completed exercises and feedback. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A metric tree and instrumentation contract.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Deployment guides, runbooks, model cards and change logs:** Extend the project with Deployment guides, runbooks, model cards and change logs in Product outcome measurement tree. Adapt this focused lab to the project data: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.  Required concepts: Deployment guide, Runbook and monitoring, Model card and change log.
+  - Deliverable: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A metric tree and instrumentation contract. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Deployment guides, runbooks, model cards and change logs: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Distinguish activity from learning and specify denominator and time window.
+- [ ] Deployment guides, runbooks, model cards and change logs: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Educational model card studio
+
+A learner needs to communicate limits of a toy classifier.
+
+**Data:** Use bundled digits and a small baseline evaluation. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A model card, dataset description and failure examples.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Deployment guides, runbooks, model cards and change logs:** Extend the project with Deployment guides, runbooks, model cards and change logs in Educational model card studio. Adapt this focused lab to the project data: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.  Required concepts: Deployment guide, Runbook and monitoring, Model card and change log.
+  - Deliverable: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A model card, dataset description and failure examples. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Deployment guides, runbooks, model cards and change logs: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] State intended use, split, metrics and unsupported use cases.
+- [ ] Deployment guides, runbooks, model cards and change logs: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### AI feature MVP scoping desk
+
+A team needs a feasible first version of a document helper.
+
+**Data:** Use ten fictional user requests and effort estimates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A PRD with MVP, exclusions and acceptance scenarios.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Deployment guides, runbooks, model cards and change logs:** Extend the project with Deployment guides, runbooks, model cards and change logs in AI feature MVP scoping desk. Adapt this focused lab to the project data: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.  Required concepts: Deployment guide, Runbook and monitoring, Model card and change log.
+  - Deliverable: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A PRD with MVP, exclusions and acceptance scenarios. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Deployment guides, runbooks, model cards and change logs: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Every included feature supports a named user need and measurable outcome.
+- [ ] Deployment guides, runbooks, model cards and change logs: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Learning problem discovery kit
+
+A builder needs evidence that a study tool solves a real problem.
+
+**Data:** Use consented teammate interviews or clearly labeled fictional interviews. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A problem statement, journey and ranked assumptions.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Deployment guides, runbooks, model cards and change logs:** Extend the project with Deployment guides, runbooks, model cards and change logs in Learning problem discovery kit. Adapt this focused lab to the project data: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.  Required concepts: Deployment guide, Runbook and monitoring, Model card and change log.
+  - Deliverable: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A problem statement, journey and ranked assumptions. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Deployment guides, runbooks, model cards and change logs: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Separate observations from guesses and identify a falsifiable success metric.
+- [ ] Deployment guides, runbooks, model cards and change logs: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Search UX prototype study
+
+A designer needs to learn whether users can find evidence.
+
+**Data:** Use a static prototype and ten fictional documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A task-based usability test and revised prototype.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Deployment guides, runbooks, model cards and change logs:** Extend the project with Deployment guides, runbooks, model cards and change logs in Search UX prototype study. Adapt this focused lab to the project data: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.  Required concepts: Deployment guide, Runbook and monitoring, Model card and change log.
+  - Deliverable: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A task-based usability test and revised prototype. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Deployment guides, runbooks, model cards and change logs: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Record task completion and confusion points without claiming statistical significance.
+- [ ] Deployment guides, runbooks, model cards and change logs: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### AI feature value calculator
+
+A founder needs transparent assumptions about time saved.
+
+**Data:** Generate fictional task volumes, review times and failure rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A sensitivity analysis comparing manual and assisted workflows.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Deployment guides, runbooks, model cards and change logs:** Extend the project with Deployment guides, runbooks, model cards and change logs in AI feature value calculator. Adapt this focused lab to the project data: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.  Required concepts: Deployment guide, Runbook and monitoring, Model card and change log.
+  - Deliverable: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A sensitivity analysis comparing manual and assisted workflows. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Deployment guides, runbooks, model cards and change logs: Deployment guides, runbooks, model cards and change logs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show break-even assumptions and include human review cost.
+- [ ] Deployment guides, runbooks, model cards and change logs: Deliver a deployment guide, one incident runbook, model card and change log; have a teammate follow the setup without extra verbal instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2677,7 +2677,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Choose a problem and success measure before assuming a model or autonomous workflow is the solution.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Essential · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [Users, problems, discovery and product decisions](product.md#product-discovery) Navigation is unrestricted.
 
@@ -2763,292 +2763,292 @@ Interview two teammates about a real document workflow, define one measurable ou
 
 #### Ten project recommendations
 
-### Learning gap coach
+### Product outcome measurement tree
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A builder needs metrics that connect usage to learning outcomes.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Generate fictional sessions, completed exercises and feedback. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **User interviews, baselines and measurable AI value:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For User interviews, baselines and measurable AI value, explicitly apply Problem interviews, Non-AI baseline, Outcome and guardrail metrics.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] User interviews, baselines and measurable AI value: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] User interviews, baselines and measurable AI value: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **User interviews, baselines and measurable AI value:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For User interviews, baselines and measurable AI value, explicitly apply Problem interviews, Non-AI baseline, Outcome and guardrail metrics.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] User interviews, baselines and measurable AI value: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] User interviews, baselines and measurable AI value: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A metric tree and instrumentation contract.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **User interviews, baselines and measurable AI value:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For User interviews, baselines and measurable AI value, explicitly apply Problem interviews, Non-AI baseline, Outcome and guardrail metrics.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
+- **User interviews, baselines and measurable AI value:** Implement User interviews, baselines and measurable AI value in Product outcome measurement tree. Adapt this focused lab to the project data: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.  Required concepts: Problem interviews, Non-AI baseline, Outcome and guardrail metrics, Prototype learning goals, Feedback interpretation.
+  - Deliverable: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] User interviews, baselines and measurable AI value: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A metric tree and instrumentation contract. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · User interviews, baselines and measurable AI value: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] User interviews, baselines and measurable AI value: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
+- [ ] Distinguish activity from learning and specify denominator and time window.
+- [ ] User interviews, baselines and measurable AI value: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Architecture decision dossier
 
-Find unusual stock movements and explain which records need investigation.
+A team needs a traceable choice between two local designs.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Compare SQLite and PostgreSQL for a fictional notes service. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **User interviews, baselines and measurable AI value:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For User interviews, baselines and measurable AI value, explicitly apply Problem interviews, Non-AI baseline, Outcome and guardrail metrics.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] User interviews, baselines and measurable AI value: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] User interviews, baselines and measurable AI value: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **User interviews, baselines and measurable AI value:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For User interviews, baselines and measurable AI value, explicitly apply Problem interviews, Non-AI baseline, Outcome and guardrail metrics.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] User interviews, baselines and measurable AI value: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] User interviews, baselines and measurable AI value: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **User interviews, baselines and measurable AI value:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For User interviews, baselines and measurable AI value, explicitly apply Problem interviews, Non-AI baseline, Outcome and guardrail metrics.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] User interviews, baselines and measurable AI value: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] User interviews, baselines and measurable AI value: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **User interviews, baselines and measurable AI value:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For User interviews, baselines and measurable AI value, explicitly apply Problem interviews, Non-AI baseline, Outcome and guardrail metrics.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] User interviews, baselines and measurable AI value: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] User interviews, baselines and measurable AI value: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** An architecture diagram and ADR with a small reproducible experiment.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **User interviews, baselines and measurable AI value:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For User interviews, baselines and measurable AI value, explicitly apply Problem interviews, Non-AI baseline, Outcome and guardrail metrics.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
+- **User interviews, baselines and measurable AI value:** Extend the project with User interviews, baselines and measurable AI value in Architecture decision dossier. Adapt this focused lab to the project data: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.  Required concepts: Problem interviews, Non-AI baseline, Outcome and guardrail metrics, Prototype learning goals, Feedback interpretation.
+  - Deliverable: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] User interviews, baselines and measurable AI value: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An architecture diagram and ADR with a small reproducible experiment. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · User interviews, baselines and measurable AI value: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] User interviews, baselines and measurable AI value: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
+- [ ] Tie the decision to constraints and document when to revisit it.
+- [ ] User interviews, baselines and measurable AI value: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Project delivery documentation pack
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A team needs a handoff that survives the original developer leaving.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use a fictional AI search service with example requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** Requirements, architecture, API spec, evaluation and deployment handoff.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **User interviews, baselines and measurable AI value:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For User interviews, baselines and measurable AI value, explicitly apply Problem interviews, Non-AI baseline, Outcome and guardrail metrics.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
+- **User interviews, baselines and measurable AI value:** Extend the project with User interviews, baselines and measurable AI value in Project delivery documentation pack. Adapt this focused lab to the project data: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.  Required concepts: Problem interviews, Non-AI baseline, Outcome and guardrail metrics, Prototype learning goals, Feedback interpretation.
+  - Deliverable: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] User interviews, baselines and measurable AI value: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Requirements, architecture, API spec, evaluation and deployment handoff. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · User interviews, baselines and measurable AI value: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] User interviews, baselines and measurable AI value: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
+- [ ] A reviewer can trace one user scenario through every document.
+- [ ] User interviews, baselines and measurable AI value: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Feedback prioritization board
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A maintainer needs to turn messy feedback into testable changes.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Write 40 fictional feedback notes with conflicting requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A categorized backlog with evidence and experiment plans.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **User interviews, baselines and measurable AI value:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For User interviews, baselines and measurable AI value, explicitly apply Problem interviews, Non-AI baseline, Outcome and guardrail metrics.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
+- **User interviews, baselines and measurable AI value:** Extend the project with User interviews, baselines and measurable AI value in Feedback prioritization board. Adapt this focused lab to the project data: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.  Required concepts: Problem interviews, Non-AI baseline, Outcome and guardrail metrics, Prototype learning goals, Feedback interpretation.
+  - Deliverable: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] User interviews, baselines and measurable AI value: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A categorized backlog with evidence and experiment plans. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · User interviews, baselines and measurable AI value: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] User interviews, baselines and measurable AI value: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.
+- [ ] Deduplicate reports while retaining disagreement and define a test per priority.
+- [ ] User interviews, baselines and measurable AI value: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Educational model card studio
+
+A learner needs to communicate limits of a toy classifier.
+
+**Data:** Use bundled digits and a small baseline evaluation. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A model card, dataset description and failure examples.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **User interviews, baselines and measurable AI value:** Extend the project with User interviews, baselines and measurable AI value in Educational model card studio. Adapt this focused lab to the project data: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.  Required concepts: Problem interviews, Non-AI baseline, Outcome and guardrail metrics, Prototype learning goals, Feedback interpretation.
+  - Deliverable: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A model card, dataset description and failure examples. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · User interviews, baselines and measurable AI value: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] State intended use, split, metrics and unsupported use cases.
+- [ ] User interviews, baselines and measurable AI value: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### AI feature MVP scoping desk
+
+A team needs a feasible first version of a document helper.
+
+**Data:** Use ten fictional user requests and effort estimates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A PRD with MVP, exclusions and acceptance scenarios.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **User interviews, baselines and measurable AI value:** Extend the project with User interviews, baselines and measurable AI value in AI feature MVP scoping desk. Adapt this focused lab to the project data: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.  Required concepts: Problem interviews, Non-AI baseline, Outcome and guardrail metrics, Prototype learning goals, Feedback interpretation.
+  - Deliverable: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A PRD with MVP, exclusions and acceptance scenarios. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · User interviews, baselines and measurable AI value: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Every included feature supports a named user need and measurable outcome.
+- [ ] User interviews, baselines and measurable AI value: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Learning problem discovery kit
+
+A builder needs evidence that a study tool solves a real problem.
+
+**Data:** Use consented teammate interviews or clearly labeled fictional interviews. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A problem statement, journey and ranked assumptions.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **User interviews, baselines and measurable AI value:** Extend the project with User interviews, baselines and measurable AI value in Learning problem discovery kit. Adapt this focused lab to the project data: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.  Required concepts: Problem interviews, Non-AI baseline, Outcome and guardrail metrics, Prototype learning goals, Feedback interpretation.
+  - Deliverable: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A problem statement, journey and ranked assumptions. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · User interviews, baselines and measurable AI value: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Separate observations from guesses and identify a falsifiable success metric.
+- [ ] User interviews, baselines and measurable AI value: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Search UX prototype study
+
+A designer needs to learn whether users can find evidence.
+
+**Data:** Use a static prototype and ten fictional documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A task-based usability test and revised prototype.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **User interviews, baselines and measurable AI value:** Extend the project with User interviews, baselines and measurable AI value in Search UX prototype study. Adapt this focused lab to the project data: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.  Required concepts: Problem interviews, Non-AI baseline, Outcome and guardrail metrics, Prototype learning goals, Feedback interpretation.
+  - Deliverable: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A task-based usability test and revised prototype. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · User interviews, baselines and measurable AI value: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Record task completion and confusion points without claiming statistical significance.
+- [ ] User interviews, baselines and measurable AI value: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Incident runbook rehearsal
+
+A teammate needs usable recovery instructions for a local service.
+
+**Data:** Create missing-config, unavailable-store and corrupted-input incidents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A runbook with diagnosis, recovery and evidence capture.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **User interviews, baselines and measurable AI value:** Extend the project with User interviews, baselines and measurable AI value in Incident runbook rehearsal. Adapt this focused lab to the project data: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.  Required concepts: Problem interviews, Non-AI baseline, Outcome and guardrail metrics, Prototype learning goals, Feedback interpretation.
+  - Deliverable: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A runbook with diagnosis, recovery and evidence capture. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · User interviews, baselines and measurable AI value: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A teammate follows the steps and restores service without undocumented knowledge.
+- [ ] User interviews, baselines and measurable AI value: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### AI feature value calculator
+
+A founder needs transparent assumptions about time saved.
+
+**Data:** Generate fictional task volumes, review times and failure rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A sensitivity analysis comparing manual and assisted workflows.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **User interviews, baselines and measurable AI value:** Extend the project with User interviews, baselines and measurable AI value in AI feature value calculator. Adapt this focused lab to the project data: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.  Required concepts: Problem interviews, Non-AI baseline, Outcome and guardrail metrics, Prototype learning goals, Feedback interpretation.
+  - Deliverable: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A sensitivity analysis comparing manual and assisted workflows. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · User interviews, baselines and measurable AI value: User interviews, baselines and measurable AI value: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show break-even assumptions and include human review cost.
+- [ ] User interviews, baselines and measurable AI value: Interview two teammates about a real document workflow, define one measurable outcome and two guardrails, and compare a non-AI baseline with a recorded-answer prototype. Write the evidence and limitations in a short product brief.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -3062,7 +3062,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Document the actual assumptions needed to reproduce and operate an AI feature after its original developer leaves.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Essential · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [Prompt specs, model decisions, API specs and evaluation plans](product.md#docs-ai) Navigation is unrestricted.
 
@@ -3183,292 +3183,714 @@ Prepare a handover pack for one existing mini-project: requirements-to-test tabl
 
 #### Ten project recommendations
 
-### Learning gap coach
+### Project delivery documentation pack
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A team needs a handoff that survives the original developer leaving.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Use a fictional AI search service with example requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Data cards, evaluation plans and operational handover:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Data cards, evaluation plans and operational handover, explicitly apply Requirements traceability, Dataset and source provenance, Evaluation plan.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Data cards, evaluation plans and operational handover: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Data cards, evaluation plans and operational handover: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Data cards, evaluation plans and operational handover:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Data cards, evaluation plans and operational handover, explicitly apply Requirements traceability, Dataset and source provenance, Evaluation plan.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Data cards, evaluation plans and operational handover: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Data cards, evaluation plans and operational handover: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** Requirements, architecture, API spec, evaluation and deployment handoff.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Data cards, evaluation plans and operational handover:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Data cards, evaluation plans and operational handover, explicitly apply Requirements traceability, Dataset and source provenance, Evaluation plan.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
+- **Data cards, evaluation plans and operational handover:** Implement Data cards, evaluation plans and operational handover in Project delivery documentation pack. Adapt this focused lab to the project data: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.  Required concepts: Requirements traceability, Dataset and source provenance, Evaluation plan, Model and prompt version contracts, Runbook ownership.
+  - Deliverable: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Data cards, evaluation plans and operational handover: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Requirements, architecture, API spec, evaluation and deployment handoff. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Data cards, evaluation plans and operational handover: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Data cards, evaluation plans and operational handover: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
+- [ ] A reviewer can trace one user scenario through every document.
+- [ ] Data cards, evaluation plans and operational handover: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Architecture decision dossier
 
-Find unusual stock movements and explain which records need investigation.
+A team needs a traceable choice between two local designs.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Compare SQLite and PostgreSQL for a fictional notes service. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Data cards, evaluation plans and operational handover:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Data cards, evaluation plans and operational handover, explicitly apply Requirements traceability, Dataset and source provenance, Evaluation plan.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Data cards, evaluation plans and operational handover: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Data cards, evaluation plans and operational handover: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Data cards, evaluation plans and operational handover:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Data cards, evaluation plans and operational handover, explicitly apply Requirements traceability, Dataset and source provenance, Evaluation plan.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Data cards, evaluation plans and operational handover: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Data cards, evaluation plans and operational handover: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Data cards, evaluation plans and operational handover:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Data cards, evaluation plans and operational handover, explicitly apply Requirements traceability, Dataset and source provenance, Evaluation plan.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Data cards, evaluation plans and operational handover: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Data cards, evaluation plans and operational handover: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Data cards, evaluation plans and operational handover:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Data cards, evaluation plans and operational handover, explicitly apply Requirements traceability, Dataset and source provenance, Evaluation plan.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Data cards, evaluation plans and operational handover: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Data cards, evaluation plans and operational handover: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** An architecture diagram and ADR with a small reproducible experiment.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Data cards, evaluation plans and operational handover:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Data cards, evaluation plans and operational handover, explicitly apply Requirements traceability, Dataset and source provenance, Evaluation plan.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
+- **Data cards, evaluation plans and operational handover:** Extend the project with Data cards, evaluation plans and operational handover in Architecture decision dossier. Adapt this focused lab to the project data: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.  Required concepts: Requirements traceability, Dataset and source provenance, Evaluation plan, Model and prompt version contracts, Runbook ownership.
+  - Deliverable: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Data cards, evaluation plans and operational handover: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An architecture diagram and ADR with a small reproducible experiment. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Data cards, evaluation plans and operational handover: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Data cards, evaluation plans and operational handover: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
+- [ ] Tie the decision to constraints and document when to revisit it.
+- [ ] Data cards, evaluation plans and operational handover: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Feedback prioritization board
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A maintainer needs to turn messy feedback into testable changes.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Write 40 fictional feedback notes with conflicting requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A categorized backlog with evidence and experiment plans.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Data cards, evaluation plans and operational handover:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Data cards, evaluation plans and operational handover, explicitly apply Requirements traceability, Dataset and source provenance, Evaluation plan.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
+- **Data cards, evaluation plans and operational handover:** Extend the project with Data cards, evaluation plans and operational handover in Feedback prioritization board. Adapt this focused lab to the project data: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.  Required concepts: Requirements traceability, Dataset and source provenance, Evaluation plan, Model and prompt version contracts, Runbook ownership.
+  - Deliverable: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Data cards, evaluation plans and operational handover: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A categorized backlog with evidence and experiment plans. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Data cards, evaluation plans and operational handover: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Data cards, evaluation plans and operational handover: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
+- [ ] Deduplicate reports while retaining disagreement and define a test per priority.
+- [ ] Data cards, evaluation plans and operational handover: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Product outcome measurement tree
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A builder needs metrics that connect usage to learning outcomes.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Generate fictional sessions, completed exercises and feedback. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A metric tree and instrumentation contract.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Data cards, evaluation plans and operational handover:** Interview a teammate, define the workflow and success metric, and scope a useful prototype.  For Data cards, evaluation plans and operational handover, explicitly apply Requirements traceability, Dataset and source provenance, Evaluation plan.
-  - Deliverable: A concise PRD/ADR, user feedback and project documentation
-  - Check: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
+- **Data cards, evaluation plans and operational handover:** Extend the project with Data cards, evaluation plans and operational handover in Product outcome measurement tree. Adapt this focused lab to the project data: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.  Required concepts: Requirements traceability, Dataset and source provenance, Evaluation plan, Model and prompt version contracts, Runbook ownership.
+  - Deliverable: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Data cards, evaluation plans and operational handover: A concise PRD/ADR, user feedback and project documentation
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A metric tree and instrumentation contract. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Data cards, evaluation plans and operational handover: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Data cards, evaluation plans and operational handover: Document requirements, architecture, evaluation and limitations; test the prototype with a user. Adapt the lesson lab: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.
+- [ ] Distinguish activity from learning and specify denominator and time window.
+- [ ] Data cards, evaluation plans and operational handover: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Educational model card studio
+
+A learner needs to communicate limits of a toy classifier.
+
+**Data:** Use bundled digits and a small baseline evaluation. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A model card, dataset description and failure examples.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Data cards, evaluation plans and operational handover:** Extend the project with Data cards, evaluation plans and operational handover in Educational model card studio. Adapt this focused lab to the project data: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.  Required concepts: Requirements traceability, Dataset and source provenance, Evaluation plan, Model and prompt version contracts, Runbook ownership.
+  - Deliverable: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A model card, dataset description and failure examples. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Data cards, evaluation plans and operational handover: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] State intended use, split, metrics and unsupported use cases.
+- [ ] Data cards, evaluation plans and operational handover: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### AI feature MVP scoping desk
+
+A team needs a feasible first version of a document helper.
+
+**Data:** Use ten fictional user requests and effort estimates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A PRD with MVP, exclusions and acceptance scenarios.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Data cards, evaluation plans and operational handover:** Extend the project with Data cards, evaluation plans and operational handover in AI feature MVP scoping desk. Adapt this focused lab to the project data: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.  Required concepts: Requirements traceability, Dataset and source provenance, Evaluation plan, Model and prompt version contracts, Runbook ownership.
+  - Deliverable: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A PRD with MVP, exclusions and acceptance scenarios. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Data cards, evaluation plans and operational handover: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Every included feature supports a named user need and measurable outcome.
+- [ ] Data cards, evaluation plans and operational handover: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Learning problem discovery kit
+
+A builder needs evidence that a study tool solves a real problem.
+
+**Data:** Use consented teammate interviews or clearly labeled fictional interviews. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A problem statement, journey and ranked assumptions.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Data cards, evaluation plans and operational handover:** Extend the project with Data cards, evaluation plans and operational handover in Learning problem discovery kit. Adapt this focused lab to the project data: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.  Required concepts: Requirements traceability, Dataset and source provenance, Evaluation plan, Model and prompt version contracts, Runbook ownership.
+  - Deliverable: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A problem statement, journey and ranked assumptions. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Data cards, evaluation plans and operational handover: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Separate observations from guesses and identify a falsifiable success metric.
+- [ ] Data cards, evaluation plans and operational handover: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Search UX prototype study
+
+A designer needs to learn whether users can find evidence.
+
+**Data:** Use a static prototype and ten fictional documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A task-based usability test and revised prototype.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Data cards, evaluation plans and operational handover:** Extend the project with Data cards, evaluation plans and operational handover in Search UX prototype study. Adapt this focused lab to the project data: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.  Required concepts: Requirements traceability, Dataset and source provenance, Evaluation plan, Model and prompt version contracts, Runbook ownership.
+  - Deliverable: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A task-based usability test and revised prototype. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Data cards, evaluation plans and operational handover: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Record task completion and confusion points without claiming statistical significance.
+- [ ] Data cards, evaluation plans and operational handover: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Incident runbook rehearsal
+
+A teammate needs usable recovery instructions for a local service.
+
+**Data:** Create missing-config, unavailable-store and corrupted-input incidents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A runbook with diagnosis, recovery and evidence capture.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Data cards, evaluation plans and operational handover:** Extend the project with Data cards, evaluation plans and operational handover in Incident runbook rehearsal. Adapt this focused lab to the project data: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.  Required concepts: Requirements traceability, Dataset and source provenance, Evaluation plan, Model and prompt version contracts, Runbook ownership.
+  - Deliverable: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A runbook with diagnosis, recovery and evidence capture. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Data cards, evaluation plans and operational handover: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A teammate follows the steps and restores service without undocumented knowledge.
+- [ ] Data cards, evaluation plans and operational handover: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### AI feature value calculator
+
+A founder needs transparent assumptions about time saved.
+
+**Data:** Generate fictional task volumes, review times and failure rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A sensitivity analysis comparing manual and assisted workflows.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Data cards, evaluation plans and operational handover:** Extend the project with Data cards, evaluation plans and operational handover in AI feature value calculator. Adapt this focused lab to the project data: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.  Required concepts: Requirements traceability, Dataset and source provenance, Evaluation plan, Model and prompt version contracts, Runbook ownership.
+  - Deliverable: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A sensitivity analysis comparing manual and assisted workflows. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Data cards, evaluation plans and operational handover: Data cards, evaluation plans and operational handover: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show break-even assumptions and include human review cost.
+- [ ] Data cards, evaluation plans and operational handover: Prepare a handover pack for one existing mini-project: requirements-to-test table, synthetic-data card, evaluation plan, version manifest and runbook. Ask a teammate to reproduce the project using only the pack and record missing instructions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Stage checkpoint
+
+<a id="checkpoint-product"></a>
+
+### Application capstone: evidence-grounded AI service
+
+Demonstrate readiness through a reproducible practical handoff. Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.
+
+**Priority:** Essential · **Study:** 1h · **Practice:** 18h
+
+**Prerequisites:** [Users, problems, discovery and product decisions](product.md#product-discovery), [PRD, SRS, use cases and success metrics](product.md#product-requirements), [Prototypes, MVPs, UX, feedback and A/B testing](product.md#product-prototype), [Business models, unit economics and high-agency ownership](product.md#product-economics), [Architecture, data requirements, schemas and ADRs](product.md#docs-architecture), [Prompt specs, model decisions, API specs and evaluation plans](product.md#docs-ai), [Deployment guides, runbooks, model cards and change logs](product.md#docs-operations), [User interviews, baselines and measurable AI value](product.md#product-discovery-metrics), [Data cards, evaluation plans and operational handover](product.md#docs-delivery-contracts) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Define the success contract:** Write observable checks before implementation so success is not just a plausible demonstration.
+  - Example: Turn this task into a numbered acceptance checklist: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.
+  - Videos:
+    - [API documentation best practices](https://www.youtube.com/watch?v=0CSyIBHQy9g) · freeCodeCamp · Documentation course
+      - Explains: Documenting API behavior and making developer-facing instructions usable.
+      - Useful because: Document your actual contracts and a reproducible example instead of generic prose.
+      - Watch for: Focus on define the success contract. Then reproduce the lesson example: Turn this task into a numbered acceptance checklist: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/api-documentation-best-practices-course/
+    - [Building faster with AI](https://www.youtube.com/watch?v=RNJCfif1dPY) · Andrew Ng · Product/engineering talk
+      - Explains: How faster development changes the role of product judgment and ownership.
+      - Useful because: Frame a real user problem and feedback loop before adding more features.
+      - Watch for: Focus on define the success contract. Then reproduce the lesson example: Turn this task into a numbered acceptance checklist: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=RNJCfif1dPY
+- [ ] **Reproduce the baseline:** Keep a simple reference output and deterministic inputs so changes can be compared honestly.
+  - Example: Run a fixed input twice and compare saved outputs with the documented baseline.
+  - Videos:
+    - [API documentation best practices](https://www.youtube.com/watch?v=0CSyIBHQy9g) · freeCodeCamp · Documentation course
+      - Explains: Documenting API behavior and making developer-facing instructions usable.
+      - Useful because: Document your actual contracts and a reproducible example instead of generic prose.
+      - Watch for: Focus on reproduce the baseline. Then reproduce the lesson example: Run a fixed input twice and compare saved outputs with the documented baseline.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/api-documentation-best-practices-course/
+    - [Building faster with AI](https://www.youtube.com/watch?v=RNJCfif1dPY) · Andrew Ng · Product/engineering talk
+      - Explains: How faster development changes the role of product judgment and ownership.
+      - Useful because: Frame a real user problem and feedback loop before adding more features.
+      - Watch for: Focus on reproduce the baseline. Then reproduce the lesson example: Run a fixed input twice and compare saved outputs with the documented baseline.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=RNJCfif1dPY
+- [ ] **Test a failure boundary:** A working happy path does not establish robustness to malformed data or dependency failures.
+  - Example: Inject one malformed input and one controlled failure, then record the resulting state.
+  - Videos:
+    - [API documentation best practices](https://www.youtube.com/watch?v=0CSyIBHQy9g) · freeCodeCamp · Documentation course
+      - Explains: Documenting API behavior and making developer-facing instructions usable.
+      - Useful because: Document your actual contracts and a reproducible example instead of generic prose.
+      - Watch for: Focus on test a failure boundary. Then reproduce the lesson example: Inject one malformed input and one controlled failure, then record the resulting state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/api-documentation-best-practices-course/
+    - [Building faster with AI](https://www.youtube.com/watch?v=RNJCfif1dPY) · Andrew Ng · Product/engineering talk
+      - Explains: How faster development changes the role of product judgment and ownership.
+      - Useful because: Frame a real user problem and feedback loop before adding more features.
+      - Watch for: Focus on test a failure boundary. Then reproduce the lesson example: Inject one malformed input and one controlled failure, then record the resulting state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=RNJCfif1dPY
+- [ ] **Explain the decisions:** Describe why each technique was chosen and what evidence would make you choose differently.
+  - Example: Write a short decision note comparing the chosen approach with one simpler alternative.
+  - Videos:
+    - [API documentation best practices](https://www.youtube.com/watch?v=0CSyIBHQy9g) · freeCodeCamp · Documentation course
+      - Explains: Documenting API behavior and making developer-facing instructions usable.
+      - Useful because: Document your actual contracts and a reproducible example instead of generic prose.
+      - Watch for: Focus on explain the decisions. Then reproduce the lesson example: Write a short decision note comparing the chosen approach with one simpler alternative.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/api-documentation-best-practices-course/
+    - [Building faster with AI](https://www.youtube.com/watch?v=RNJCfif1dPY) · Andrew Ng · Product/engineering talk
+      - Explains: How faster development changes the role of product judgment and ownership.
+      - Useful because: Frame a real user problem and feedback loop before adding more features.
+      - Watch for: Focus on explain the decisions. Then reproduce the lesson example: Write a short decision note comparing the chosen approach with one simpler alternative.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=RNJCfif1dPY
+- [ ] **Hand off the evidence:** Another learner must be able to reproduce the result from your instructions and supplied inputs.
+  - Example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+  - Videos:
+    - [API documentation best practices](https://www.youtube.com/watch?v=0CSyIBHQy9g) · freeCodeCamp · Documentation course
+      - Explains: Documenting API behavior and making developer-facing instructions usable.
+      - Useful because: Document your actual contracts and a reproducible example instead of generic prose.
+      - Watch for: Focus on hand off the evidence. Then reproduce the lesson example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/api-documentation-best-practices-course/
+    - [Building faster with AI](https://www.youtube.com/watch?v=RNJCfif1dPY) · Andrew Ng · Product/engineering talk
+      - Explains: How faster development changes the role of product judgment and ownership.
+      - Useful because: Frame a real user problem and feedback loop before adding more features.
+      - Watch for: Focus on hand off the evidence. Then reproduce the lesson example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=RNJCfif1dPY
+
+#### YouTube: focused explanations and full courses
+
+- [API documentation best practices](https://www.youtube.com/watch?v=0CSyIBHQy9g) · freeCodeCamp · Documentation course
+  - Explains: Documenting API behavior and making developer-facing instructions usable.
+  - Useful because: Document your actual contracts and a reproducible example instead of generic prose.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/api-documentation-best-practices-course/
+- [Incident management: SRE implements DevOps](https://www.youtube.com/watch?v=n4y9dwinPBQ) · Google Cloud Tech · Focused lecture
+  - Explains: Incident roles, response process and learning after failures.
+  - Useful because: Rehearse your runbook on a local outage and document what changed.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=n4y9dwinPBQ
+- [Building faster with AI](https://www.youtube.com/watch?v=RNJCfif1dPY) · Andrew Ng · Product/engineering talk
+  - Explains: How faster development changes the role of product judgment and ownership.
+  - Useful because: Frame a real user problem and feedback loop before adding more features.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=RNJCfif1dPY
+
+#### Free written resources
+
+1. [Google: technical writing one](https://developers.google.com/tech-writing/one) — Free; no registration required. No paid materials required.
+2. [Google SRE: incident management](https://sre.google/sre-book/managing-incidents/) — Free; no registration required. No paid materials required.
+
+#### Application capstone: evidence-grounded AI service
+
+Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.
+
+**Deliverables**
+
+- Runnable project and reproducible input fixtures
+- README, results and decision notes
+- Failure evidence and clean-start instructions
+
+**Completion checks**
+
+- [ ] Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.
+- [ ] Explain the code and results without relying on an AI-generated summary.
+- [ ] A teammate can reproduce the demo without paid credentials.
+
+#### Ten project recommendations
+
+### Architecture decision dossier
+
+A team needs a traceable choice between two local designs.
+
+**Data:** Compare SQLite and PostgreSQL for a fictional notes service. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An architecture diagram and ADR with a small reproducible experiment.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Application capstone: evidence-grounded AI service:** Extend the project with Application capstone: evidence-grounded AI service in Architecture decision dossier. Adapt this focused lab to the project data: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An architecture diagram and ADR with a small reproducible experiment. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Application capstone: evidence-grounded AI service: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Tie the decision to constraints and document when to revisit it.
+- [ ] Application capstone: evidence-grounded AI service: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Project delivery documentation pack
+
+A team needs a handoff that survives the original developer leaving.
+
+**Data:** Use a fictional AI search service with example requests. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Requirements, architecture, API spec, evaluation and deployment handoff.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Application capstone: evidence-grounded AI service:** Extend the project with Application capstone: evidence-grounded AI service in Project delivery documentation pack. Adapt this focused lab to the project data: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Requirements, architecture, API spec, evaluation and deployment handoff. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Application capstone: evidence-grounded AI service: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A reviewer can trace one user scenario through every document.
+- [ ] Application capstone: evidence-grounded AI service: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Feedback prioritization board
+
+A maintainer needs to turn messy feedback into testable changes.
+
+**Data:** Write 40 fictional feedback notes with conflicting requests. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A categorized backlog with evidence and experiment plans.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Application capstone: evidence-grounded AI service:** Extend the project with Application capstone: evidence-grounded AI service in Feedback prioritization board. Adapt this focused lab to the project data: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A categorized backlog with evidence and experiment plans. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Application capstone: evidence-grounded AI service: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Deduplicate reports while retaining disagreement and define a test per priority.
+- [ ] Application capstone: evidence-grounded AI service: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Product outcome measurement tree
+
+A builder needs metrics that connect usage to learning outcomes.
+
+**Data:** Generate fictional sessions, completed exercises and feedback. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A metric tree and instrumentation contract.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Application capstone: evidence-grounded AI service:** Extend the project with Application capstone: evidence-grounded AI service in Product outcome measurement tree. Adapt this focused lab to the project data: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A metric tree and instrumentation contract. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Application capstone: evidence-grounded AI service: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Distinguish activity from learning and specify denominator and time window.
+- [ ] Application capstone: evidence-grounded AI service: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Educational model card studio
+
+A learner needs to communicate limits of a toy classifier.
+
+**Data:** Use bundled digits and a small baseline evaluation. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A model card, dataset description and failure examples.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Application capstone: evidence-grounded AI service:** Extend the project with Application capstone: evidence-grounded AI service in Educational model card studio. Adapt this focused lab to the project data: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A model card, dataset description and failure examples. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Application capstone: evidence-grounded AI service: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] State intended use, split, metrics and unsupported use cases.
+- [ ] Application capstone: evidence-grounded AI service: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### AI feature MVP scoping desk
+
+A team needs a feasible first version of a document helper.
+
+**Data:** Use ten fictional user requests and effort estimates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A PRD with MVP, exclusions and acceptance scenarios.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Application capstone: evidence-grounded AI service:** Extend the project with Application capstone: evidence-grounded AI service in AI feature MVP scoping desk. Adapt this focused lab to the project data: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A PRD with MVP, exclusions and acceptance scenarios. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Application capstone: evidence-grounded AI service: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Every included feature supports a named user need and measurable outcome.
+- [ ] Application capstone: evidence-grounded AI service: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Learning problem discovery kit
+
+A builder needs evidence that a study tool solves a real problem.
+
+**Data:** Use consented teammate interviews or clearly labeled fictional interviews. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A problem statement, journey and ranked assumptions.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Application capstone: evidence-grounded AI service:** Extend the project with Application capstone: evidence-grounded AI service in Learning problem discovery kit. Adapt this focused lab to the project data: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A problem statement, journey and ranked assumptions. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Application capstone: evidence-grounded AI service: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Separate observations from guesses and identify a falsifiable success metric.
+- [ ] Application capstone: evidence-grounded AI service: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Search UX prototype study
+
+A designer needs to learn whether users can find evidence.
+
+**Data:** Use a static prototype and ten fictional documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A task-based usability test and revised prototype.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Application capstone: evidence-grounded AI service:** Extend the project with Application capstone: evidence-grounded AI service in Search UX prototype study. Adapt this focused lab to the project data: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A task-based usability test and revised prototype. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Application capstone: evidence-grounded AI service: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Record task completion and confusion points without claiming statistical significance.
+- [ ] Application capstone: evidence-grounded AI service: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Incident runbook rehearsal
+
+A teammate needs usable recovery instructions for a local service.
+
+**Data:** Create missing-config, unavailable-store and corrupted-input incidents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A runbook with diagnosis, recovery and evidence capture.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Application capstone: evidence-grounded AI service:** Extend the project with Application capstone: evidence-grounded AI service in Incident runbook rehearsal. Adapt this focused lab to the project data: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A runbook with diagnosis, recovery and evidence capture. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Application capstone: evidence-grounded AI service: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A teammate follows the steps and restores service without undocumented knowledge.
+- [ ] Application capstone: evidence-grounded AI service: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### AI feature value calculator
+
+A founder needs transparent assumptions about time saved.
+
+**Data:** Generate fictional task volumes, review times and failure rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A sensitivity analysis comparing manual and assisted workflows.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Application capstone: evidence-grounded AI service:** Extend the project with Application capstone: evidence-grounded AI service in AI feature value calculator. Adapt this focused lab to the project data: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A sensitivity analysis comparing manual and assisted workflows. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Application capstone: evidence-grounded AI service: Application capstone: evidence-grounded AI service: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show break-even assumptions and include human review cost.
+- [ ] Application capstone: evidence-grounded AI service: Deliver the local assistant with source citations, validated API, permissions, quality and security evaluation, and Docker startup. Include user-task feedback, requirements, architecture, API contract, measured results, limitations and an operational runbook.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

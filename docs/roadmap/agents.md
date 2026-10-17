@@ -2,17 +2,17 @@
 
 Build bounded tool workflows before increasing autonomy.
 
-## Optional branch
+## Main route · Step 10 of 13
 
 **Goal:** Build bounded tool workflows with state, recovery and human approval.
 
 **Stage checkpoint:** Implement a tool workflow with an MCP connection, approval for sensitive actions and recovery tests.
 
-Explore this branch when it helps your goal. Return to the main route at any time; completion is not a gate.
+Use bounded tool workflows and versioned MCP contracts with explicit permissions.
 
 Follow the modules and lessons below at your pace. Finish each exercise, save your evidence and self-assessment, then continue. Completed and Already known count as completed; Skipped is reported separately. You can move ahead at any time.
 
-[Full pipeline](../PIPELINE.md) · [Return to main route: Evaluation and security](eval-security.md)
+[Full pipeline](../PIPELINE.md) · [Next step: Coding agents](coding-agents.md)
 
 ## Orchestration
 
@@ -22,7 +22,7 @@ Follow the modules and lessons below at your pace. Finish each exercise, save yo
 
 Distinguish fixed control flow from model-directed decisions and bound execution.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Tool calling, streaming and multimodal AI](llm.md#llm-tools) Navigation is unrestricted.
 
@@ -85,292 +85,292 @@ Build a deterministic fixture-driven tool loop with maximum steps, typed state a
 
 #### Ten project recommendations
 
-### Service incident investigation board
+### Bounded research workflow
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A learner needs an assistant that can search and stop predictably.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Use ten local notes and recorded planning outputs. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** A stateful search, summarize and review loop.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Workflows, agent loops, planning and state:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Workflows, agent loops, planning and state, explicitly apply Workflows versus agents, Planning and loops, State and memory.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- **Workflows, agent loops, planning and state:** Implement Workflows, agent loops, planning and state in Bounded research workflow. Adapt this focused lab to the project data: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.  Required concepts: Workflows versus agents, Planning and loops, State and memory.
+  - Deliverable: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Workflows, agent loops, planning and state: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A stateful search, summarize and review loop. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Workflows, agent loops, planning and state: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Workflows, agent loops, planning and state: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- [ ] Stop at the step budget and cite only retrieved sources.
+- [ ] Workflows, agent loops, planning and state: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Support ticket triage desk
+### Independent review coordinator
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A team needs independent checks before combining conclusions.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Use three deterministic reviewers for schema, evidence and policy. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
+**Output:** A coordinator with separate review results and conflict handling.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Workflows, agent loops, planning and state:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Workflows, agent loops, planning and state, explicitly apply Workflows versus agents, Planning and loops, State and memory.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- **Workflows, agent loops, planning and state:** Implement Workflows, agent loops, planning and state in Independent review coordinator. Adapt this focused lab to the project data: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.  Required concepts: Workflows versus agents, Planning and loops, State and memory.
+  - Deliverable: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Workflows, agent loops, planning and state: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A coordinator with separate review results and conflict handling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Workflows, agent loops, planning and state: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Workflows, agent loops, planning and state: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- [ ] Keep dissent visible and enforce a timeout per reviewer.
+- [ ] Workflows, agent loops, planning and state: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Research library navigator
+### Workflow versus agent experiment
 
-Help a learner find relevant passages in a small technical reading collection.
+A product builder needs evidence that autonomy helps a task.
 
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
+**Data:** Use 20 document-routing cases and fixed decision fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A deterministic workflow versus bounded-planner benchmark.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Workflows, agent loops, planning and state:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Workflows, agent loops, planning and state, explicitly apply Workflows versus agents, Planning and loops, State and memory.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- **Workflows, agent loops, planning and state:** Implement Workflows, agent loops, planning and state in Workflow versus agent experiment. Adapt this focused lab to the project data: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.  Required concepts: Workflows versus agents, Planning and loops, State and memory.
+  - Deliverable: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Workflows, agent loops, planning and state: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A deterministic workflow versus bounded-planner benchmark. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Workflows, agent loops, planning and state: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Workflows, agent loops, planning and state: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- [ ] Compare task success, tool count and failure behavior under identical cases.
+- [ ] Workflows, agent loops, planning and state: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Human review state machine
 
-Find unusual stock movements and explain which records need investigation.
+A reviewer needs risky actions paused until a decision is recorded.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Use fictional content-publication requests and reviewer decisions. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
+**Output:** A draft, review, approved and rejected workflow.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Workflows, agent loops, planning and state:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Workflows, agent loops, planning and state, explicitly apply Workflows versus agents, Planning and loops, State and memory.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- **Workflows, agent loops, planning and state:** Extend the project with Workflows, agent loops, planning and state in Human review state machine. Adapt this focused lab to the project data: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.  Required concepts: Workflows versus agents, Planning and loops, State and memory.
+  - Deliverable: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Workflows, agent loops, planning and state: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A draft, review, approved and rejected workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Workflows, agent loops, planning and state: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Workflows, agent loops, planning and state: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- [ ] Reject invalid transitions and stale approvals after draft changes.
+- [ ] Workflows, agent loops, planning and state: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Agent failure replay studio
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A maintainer needs reproducible debugging of tool errors.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Record 12 tool traces with timeouts, malformed outputs and retryable errors. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
+**Output:** A deterministic replay and failure classification tool.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Workflows, agent loops, planning and state:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Workflows, agent loops, planning and state, explicitly apply Workflows versus agents, Planning and loops, State and memory.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- **Workflows, agent loops, planning and state:** Extend the project with Workflows, agent loops, planning and state in Agent failure replay studio. Adapt this focused lab to the project data: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.  Required concepts: Workflows versus agents, Planning and loops, State and memory.
+  - Deliverable: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Workflows, agent loops, planning and state: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A deterministic replay and failure classification tool. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Workflows, agent loops, planning and state: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Workflows, agent loops, planning and state: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- [ ] Replay without external side effects and cap retries.
+- [ ] Workflows, agent loops, planning and state: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Learning gap coach
+### MCP client capability explorer
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A learner needs to inspect and call server tools safely.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Use a local deterministic MCP test server. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A capability browser and bounded tool caller.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Workflows, agent loops, planning and state:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Workflows, agent loops, planning and state, explicitly apply Workflows versus agents, Planning and loops, State and memory.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- **Workflows, agent loops, planning and state:** Extend the project with Workflows, agent loops, planning and state in MCP client capability explorer. Adapt this focused lab to the project data: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.  Required concepts: Workflows versus agents, Planning and loops, State and memory.
+  - Deliverable: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Workflows, agent loops, planning and state: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A capability browser and bounded tool caller. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Workflows, agent loops, planning and state: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Workflows, agent loops, planning and state: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- [ ] Handle server disconnects and unsupported capabilities explicitly.
+- [ ] Workflows, agent loops, planning and state: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Read-only notes MCP server
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A learner needs a small MCP server with useful contracts.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use ten local text notes with stable IDs. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A search/read server and an example client transcript.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Workflows, agent loops, planning and state:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Workflows, agent loops, planning and state, explicitly apply Workflows versus agents, Planning and loops, State and memory.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- **Workflows, agent loops, planning and state:** Extend the project with Workflows, agent loops, planning and state in Read-only notes MCP server. Adapt this focused lab to the project data: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.  Required concepts: Workflows versus agents, Planning and loops, State and memory.
+  - Deliverable: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Workflows, agent loops, planning and state: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A search/read server and an example client transcript. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Workflows, agent loops, planning and state: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Workflows, agent loops, planning and state: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- [ ] Validate arguments, reject path traversal and test unknown tool errors.
+- [ ] Workflows, agent loops, planning and state: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Catalog search and ranking workbench
+### Agent memory provenance ledger
 
-Compare ranking approaches and explain which item best matches a query.
+A learner needs to distinguish trusted facts from conversation summaries.
 
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
+**Data:** Create 30 events with sources, timestamps and corrections. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A scoped memory store with expiration and correction history.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Workflows, agent loops, planning and state:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Workflows, agent loops, planning and state, explicitly apply Workflows versus agents, Planning and loops, State and memory.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- **Workflows, agent loops, planning and state:** Extend the project with Workflows, agent loops, planning and state in Agent memory provenance ledger. Adapt this focused lab to the project data: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.  Required concepts: Workflows versus agents, Planning and loops, State and memory.
+  - Deliverable: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Workflows, agent loops, planning and state: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A scoped memory store with expiration and correction history. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Workflows, agent loops, planning and state: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Workflows, agent loops, planning and state: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- [ ] Expired or cross-user entries cannot be retrieved.
+- [ ] Workflows, agent loops, planning and state: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Checkpoint recovery runner
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+An operator needs to resume failed multi-step jobs safely.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Create five deterministic tasks and inject failures after checkpoints. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A durable local state machine with replay.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Workflows, agent loops, planning and state:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Workflows, agent loops, planning and state, explicitly apply Workflows versus agents, Planning and loops, State and memory.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- **Workflows, agent loops, planning and state:** Extend the project with Workflows, agent loops, planning and state in Checkpoint recovery runner. Adapt this focused lab to the project data: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.  Required concepts: Workflows versus agents, Planning and loops, State and memory.
+  - Deliverable: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Workflows, agent loops, planning and state: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A durable local state machine with replay. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Workflows, agent loops, planning and state: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Workflows, agent loops, planning and state: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- [ ] Resume without duplicating completed side effects.
+- [ ] Workflows, agent loops, planning and state: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Tool permission gateway
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A developer needs a clear boundary between proposals and execution.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Create read, write and delete tool fixtures on a temporary folder. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A policy gate with dry-run and approval states.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Workflows, agent loops, planning and state:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Workflows, agent loops, planning and state, explicitly apply Workflows versus agents, Planning and loops, State and memory.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- **Workflows, agent loops, planning and state:** Extend the project with Workflows, agent loops, planning and state in Tool permission gateway. Adapt this focused lab to the project data: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.  Required concepts: Workflows versus agents, Planning and loops, State and memory.
+  - Deliverable: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Workflows, agent loops, planning and state: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A policy gate with dry-run and approval states. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Workflows, agent loops, planning and state: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Workflows, agent loops, planning and state: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.
+- [ ] Denied calls produce no side effects; approval is bound to exact arguments.
+- [ ] Workflows, agent loops, planning and state: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -384,7 +384,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Treat every tool argument as untrusted input and limit what an agent may change.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Workflows, agent loops, planning and state](agents.md#agents-loops) Navigation is unrestricted.
 
@@ -452,292 +452,292 @@ Implement read-only file search and a draft-change tool in a temporary directory
 
 #### Ten project recommendations
 
-### Service incident investigation board
+### Agent memory provenance ledger
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A learner needs to distinguish trusted facts from conversation summaries.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Create 30 events with sources, timestamps and corrections. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** A scoped memory store with expiration and correction history.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Tools, APIs, permissions and sandboxing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Tools, APIs, permissions and sandboxing, explicitly apply Tool schemas, Permissions and approval, Sandboxing.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- **Tools, APIs, permissions and sandboxing:** Implement Tools, APIs, permissions and sandboxing in Agent memory provenance ledger. Adapt this focused lab to the project data: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.  Required concepts: Tool schemas, Permissions and approval, Sandboxing.
+  - Deliverable: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Tools, APIs, permissions and sandboxing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A scoped memory store with expiration and correction history. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tools, APIs, permissions and sandboxing: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Tools, APIs, permissions and sandboxing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- [ ] Expired or cross-user entries cannot be retrieved.
+- [ ] Tools, APIs, permissions and sandboxing: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Support ticket triage desk
+### Tool permission gateway
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A developer needs a clear boundary between proposals and execution.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Create read, write and delete tool fixtures on a temporary folder. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
+**Output:** A policy gate with dry-run and approval states.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Tools, APIs, permissions and sandboxing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Tools, APIs, permissions and sandboxing, explicitly apply Tool schemas, Permissions and approval, Sandboxing.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- **Tools, APIs, permissions and sandboxing:** Implement Tools, APIs, permissions and sandboxing in Tool permission gateway. Adapt this focused lab to the project data: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.  Required concepts: Tool schemas, Permissions and approval, Sandboxing.
+  - Deliverable: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Tools, APIs, permissions and sandboxing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A policy gate with dry-run and approval states. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tools, APIs, permissions and sandboxing: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Tools, APIs, permissions and sandboxing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- [ ] Denied calls produce no side effects; approval is bound to exact arguments.
+- [ ] Tools, APIs, permissions and sandboxing: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Research library navigator
+### Human review state machine
 
-Help a learner find relevant passages in a small technical reading collection.
+A reviewer needs risky actions paused until a decision is recorded.
 
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
+**Data:** Use fictional content-publication requests and reviewer decisions. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A draft, review, approved and rejected workflow.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Tools, APIs, permissions and sandboxing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Tools, APIs, permissions and sandboxing, explicitly apply Tool schemas, Permissions and approval, Sandboxing.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- **Tools, APIs, permissions and sandboxing:** Extend the project with Tools, APIs, permissions and sandboxing in Human review state machine. Adapt this focused lab to the project data: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.  Required concepts: Tool schemas, Permissions and approval, Sandboxing.
+  - Deliverable: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Tools, APIs, permissions and sandboxing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A draft, review, approved and rejected workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tools, APIs, permissions and sandboxing: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Tools, APIs, permissions and sandboxing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- [ ] Reject invalid transitions and stale approvals after draft changes.
+- [ ] Tools, APIs, permissions and sandboxing: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Bounded research workflow
 
-Find unusual stock movements and explain which records need investigation.
+A learner needs an assistant that can search and stop predictably.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Use ten local notes and recorded planning outputs. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
+**Output:** A stateful search, summarize and review loop.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Tools, APIs, permissions and sandboxing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Tools, APIs, permissions and sandboxing, explicitly apply Tool schemas, Permissions and approval, Sandboxing.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- **Tools, APIs, permissions and sandboxing:** Extend the project with Tools, APIs, permissions and sandboxing in Bounded research workflow. Adapt this focused lab to the project data: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.  Required concepts: Tool schemas, Permissions and approval, Sandboxing.
+  - Deliverable: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Tools, APIs, permissions and sandboxing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A stateful search, summarize and review loop. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tools, APIs, permissions and sandboxing: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Tools, APIs, permissions and sandboxing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- [ ] Stop at the step budget and cite only retrieved sources.
+- [ ] Tools, APIs, permissions and sandboxing: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Agent failure replay studio
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A maintainer needs reproducible debugging of tool errors.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Record 12 tool traces with timeouts, malformed outputs and retryable errors. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
+**Output:** A deterministic replay and failure classification tool.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Tools, APIs, permissions and sandboxing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Tools, APIs, permissions and sandboxing, explicitly apply Tool schemas, Permissions and approval, Sandboxing.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- **Tools, APIs, permissions and sandboxing:** Extend the project with Tools, APIs, permissions and sandboxing in Agent failure replay studio. Adapt this focused lab to the project data: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.  Required concepts: Tool schemas, Permissions and approval, Sandboxing.
+  - Deliverable: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Tools, APIs, permissions and sandboxing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A deterministic replay and failure classification tool. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tools, APIs, permissions and sandboxing: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Tools, APIs, permissions and sandboxing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- [ ] Replay without external side effects and cap retries.
+- [ ] Tools, APIs, permissions and sandboxing: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Learning gap coach
+### MCP client capability explorer
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A learner needs to inspect and call server tools safely.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Use a local deterministic MCP test server. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A capability browser and bounded tool caller.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Tools, APIs, permissions and sandboxing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Tools, APIs, permissions and sandboxing, explicitly apply Tool schemas, Permissions and approval, Sandboxing.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- **Tools, APIs, permissions and sandboxing:** Extend the project with Tools, APIs, permissions and sandboxing in MCP client capability explorer. Adapt this focused lab to the project data: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.  Required concepts: Tool schemas, Permissions and approval, Sandboxing.
+  - Deliverable: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Tools, APIs, permissions and sandboxing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A capability browser and bounded tool caller. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tools, APIs, permissions and sandboxing: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Tools, APIs, permissions and sandboxing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- [ ] Handle server disconnects and unsupported capabilities explicitly.
+- [ ] Tools, APIs, permissions and sandboxing: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Read-only notes MCP server
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A learner needs a small MCP server with useful contracts.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use ten local text notes with stable IDs. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A search/read server and an example client transcript.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Tools, APIs, permissions and sandboxing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Tools, APIs, permissions and sandboxing, explicitly apply Tool schemas, Permissions and approval, Sandboxing.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- **Tools, APIs, permissions and sandboxing:** Extend the project with Tools, APIs, permissions and sandboxing in Read-only notes MCP server. Adapt this focused lab to the project data: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.  Required concepts: Tool schemas, Permissions and approval, Sandboxing.
+  - Deliverable: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Tools, APIs, permissions and sandboxing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A search/read server and an example client transcript. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tools, APIs, permissions and sandboxing: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Tools, APIs, permissions and sandboxing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- [ ] Validate arguments, reject path traversal and test unknown tool errors.
+- [ ] Tools, APIs, permissions and sandboxing: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Catalog search and ranking workbench
+### Independent review coordinator
 
-Compare ranking approaches and explain which item best matches a query.
+A team needs independent checks before combining conclusions.
 
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
+**Data:** Use three deterministic reviewers for schema, evidence and policy. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A coordinator with separate review results and conflict handling.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Tools, APIs, permissions and sandboxing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Tools, APIs, permissions and sandboxing, explicitly apply Tool schemas, Permissions and approval, Sandboxing.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- **Tools, APIs, permissions and sandboxing:** Extend the project with Tools, APIs, permissions and sandboxing in Independent review coordinator. Adapt this focused lab to the project data: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.  Required concepts: Tool schemas, Permissions and approval, Sandboxing.
+  - Deliverable: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Tools, APIs, permissions and sandboxing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A coordinator with separate review results and conflict handling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tools, APIs, permissions and sandboxing: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Tools, APIs, permissions and sandboxing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- [ ] Keep dissent visible and enforce a timeout per reviewer.
+- [ ] Tools, APIs, permissions and sandboxing: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Checkpoint recovery runner
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+An operator needs to resume failed multi-step jobs safely.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Create five deterministic tasks and inject failures after checkpoints. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A durable local state machine with replay.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Tools, APIs, permissions and sandboxing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Tools, APIs, permissions and sandboxing, explicitly apply Tool schemas, Permissions and approval, Sandboxing.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- **Tools, APIs, permissions and sandboxing:** Extend the project with Tools, APIs, permissions and sandboxing in Checkpoint recovery runner. Adapt this focused lab to the project data: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.  Required concepts: Tool schemas, Permissions and approval, Sandboxing.
+  - Deliverable: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Tools, APIs, permissions and sandboxing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A durable local state machine with replay. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tools, APIs, permissions and sandboxing: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Tools, APIs, permissions and sandboxing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- [ ] Resume without duplicating completed side effects.
+- [ ] Tools, APIs, permissions and sandboxing: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Workflow versus agent experiment
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A product builder needs evidence that autonomy helps a task.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use 20 document-routing cases and fixed decision fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A deterministic workflow versus bounded-planner benchmark.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Tools, APIs, permissions and sandboxing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Tools, APIs, permissions and sandboxing, explicitly apply Tool schemas, Permissions and approval, Sandboxing.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- **Tools, APIs, permissions and sandboxing:** Extend the project with Tools, APIs, permissions and sandboxing in Workflow versus agent experiment. Adapt this focused lab to the project data: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.  Required concepts: Tool schemas, Permissions and approval, Sandboxing.
+  - Deliverable: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Tools, APIs, permissions and sandboxing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A deterministic workflow versus bounded-planner benchmark. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tools, APIs, permissions and sandboxing: Tools, APIs, permissions and sandboxing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Tools, APIs, permissions and sandboxing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.
+- [ ] Compare task success, tool count and failure behavior under identical cases.
+- [ ] Tools, APIs, permissions and sandboxing: Implement read-only file search and a draft-change tool in a temporary directory; reject traversal, unauthorized writes and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -751,7 +751,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Make coordination explicit and preserve useful work when dependencies fail.
 
-**Priority:** Useful next · **Study:** 2h · **Practice:** 3h
+**Priority:** Specialization · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Tools, APIs, permissions and sandboxing](agents.md#agents-tools) Navigation is unrestricted.
 
@@ -814,292 +814,292 @@ Implement a two-role research/verifier workflow with deterministic fixtures, che
 
 #### Ten project recommendations
 
-### Service incident investigation board
+### Agent failure replay studio
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A maintainer needs reproducible debugging of tool errors.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Record 12 tool traces with timeouts, malformed outputs and retryable errors. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** A deterministic replay and failure classification tool.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **LangGraph, multi-agent coordination and failure recovery:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For LangGraph, multi-agent coordination and failure recovery, explicitly apply Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- **LangGraph, multi-agent coordination and failure recovery:** Implement LangGraph, multi-agent coordination and failure recovery in Agent failure replay studio. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] LangGraph, multi-agent coordination and failure recovery: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A deterministic replay and failure classification tool. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- [ ] Replay without external side effects and cap retries.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Support ticket triage desk
+### Checkpoint recovery runner
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+An operator needs to resume failed multi-step jobs safely.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Create five deterministic tasks and inject failures after checkpoints. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
+**Output:** A durable local state machine with replay.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **LangGraph, multi-agent coordination and failure recovery:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For LangGraph, multi-agent coordination and failure recovery, explicitly apply Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- **LangGraph, multi-agent coordination and failure recovery:** Implement LangGraph, multi-agent coordination and failure recovery in Checkpoint recovery runner. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] LangGraph, multi-agent coordination and failure recovery: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A durable local state machine with replay. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- [ ] Resume without duplicating completed side effects.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Research library navigator
+### Human review state machine
 
-Help a learner find relevant passages in a small technical reading collection.
+A reviewer needs risky actions paused until a decision is recorded.
 
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
+**Data:** Use fictional content-publication requests and reviewer decisions. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A draft, review, approved and rejected workflow.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **LangGraph, multi-agent coordination and failure recovery:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For LangGraph, multi-agent coordination and failure recovery, explicitly apply Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- **LangGraph, multi-agent coordination and failure recovery:** Extend the project with LangGraph, multi-agent coordination and failure recovery in Human review state machine. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] LangGraph, multi-agent coordination and failure recovery: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A draft, review, approved and rejected workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- [ ] Reject invalid transitions and stale approvals after draft changes.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Bounded research workflow
 
-Find unusual stock movements and explain which records need investigation.
+A learner needs an assistant that can search and stop predictably.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Use ten local notes and recorded planning outputs. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
+**Output:** A stateful search, summarize and review loop.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **LangGraph, multi-agent coordination and failure recovery:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For LangGraph, multi-agent coordination and failure recovery, explicitly apply Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- **LangGraph, multi-agent coordination and failure recovery:** Extend the project with LangGraph, multi-agent coordination and failure recovery in Bounded research workflow. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] LangGraph, multi-agent coordination and failure recovery: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A stateful search, summarize and review loop. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- [ ] Stop at the step budget and cite only retrieved sources.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### MCP client capability explorer
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A learner needs to inspect and call server tools safely.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Use a local deterministic MCP test server. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
+**Output:** A capability browser and bounded tool caller.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **LangGraph, multi-agent coordination and failure recovery:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For LangGraph, multi-agent coordination and failure recovery, explicitly apply Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- **LangGraph, multi-agent coordination and failure recovery:** Extend the project with LangGraph, multi-agent coordination and failure recovery in MCP client capability explorer. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] LangGraph, multi-agent coordination and failure recovery: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A capability browser and bounded tool caller. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- [ ] Handle server disconnects and unsupported capabilities explicitly.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Learning gap coach
+### Read-only notes MCP server
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A learner needs a small MCP server with useful contracts.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Use ten local text notes with stable IDs. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A search/read server and an example client transcript.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **LangGraph, multi-agent coordination and failure recovery:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For LangGraph, multi-agent coordination and failure recovery, explicitly apply Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- **LangGraph, multi-agent coordination and failure recovery:** Extend the project with LangGraph, multi-agent coordination and failure recovery in Read-only notes MCP server. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] LangGraph, multi-agent coordination and failure recovery: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A search/read server and an example client transcript. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- [ ] Validate arguments, reject path traversal and test unknown tool errors.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Agent memory provenance ledger
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A learner needs to distinguish trusted facts from conversation summaries.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Create 30 events with sources, timestamps and corrections. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A scoped memory store with expiration and correction history.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **LangGraph, multi-agent coordination and failure recovery:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For LangGraph, multi-agent coordination and failure recovery, explicitly apply Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- **LangGraph, multi-agent coordination and failure recovery:** Extend the project with LangGraph, multi-agent coordination and failure recovery in Agent memory provenance ledger. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] LangGraph, multi-agent coordination and failure recovery: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A scoped memory store with expiration and correction history. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- [ ] Expired or cross-user entries cannot be retrieved.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Catalog search and ranking workbench
+### Independent review coordinator
 
-Compare ranking approaches and explain which item best matches a query.
+A team needs independent checks before combining conclusions.
 
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
+**Data:** Use three deterministic reviewers for schema, evidence and policy. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A coordinator with separate review results and conflict handling.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **LangGraph, multi-agent coordination and failure recovery:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For LangGraph, multi-agent coordination and failure recovery, explicitly apply Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- **LangGraph, multi-agent coordination and failure recovery:** Extend the project with LangGraph, multi-agent coordination and failure recovery in Independent review coordinator. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] LangGraph, multi-agent coordination and failure recovery: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A coordinator with separate review results and conflict handling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- [ ] Keep dissent visible and enforce a timeout per reviewer.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Tool permission gateway
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A developer needs a clear boundary between proposals and execution.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Create read, write and delete tool fixtures on a temporary folder. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A policy gate with dry-run and approval states.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **LangGraph, multi-agent coordination and failure recovery:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For LangGraph, multi-agent coordination and failure recovery, explicitly apply Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- **LangGraph, multi-agent coordination and failure recovery:** Extend the project with LangGraph, multi-agent coordination and failure recovery in Tool permission gateway. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] LangGraph, multi-agent coordination and failure recovery: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A policy gate with dry-run and approval states. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- [ ] Denied calls produce no side effects; approval is bound to exact arguments.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Workflow versus agent experiment
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A product builder needs evidence that autonomy helps a task.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use 20 document-routing cases and fixed decision fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A deterministic workflow versus bounded-planner benchmark.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **LangGraph, multi-agent coordination and failure recovery:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For LangGraph, multi-agent coordination and failure recovery, explicitly apply Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- **LangGraph, multi-agent coordination and failure recovery:** Extend the project with LangGraph, multi-agent coordination and failure recovery in Workflow versus agent experiment. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] LangGraph, multi-agent coordination and failure recovery: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A deterministic workflow versus bounded-planner benchmark. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
+- [ ] Compare task success, tool count and failure behavior under identical cases.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1113,7 +1113,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Understand the protocol boundary independently of any coding assistant vendor.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [LangGraph, multi-agent coordination and failure recovery](agents.md#agents-recovery) Navigation is unrestricted.
 
@@ -1199,292 +1199,292 @@ Create a local MCP server with one read-only tool and resource, connect a test c
 
 #### Ten project recommendations
 
-### Service incident investigation board
+### Read-only notes MCP server
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A learner needs a small MCP server with useful contracts.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Use ten local text notes with stable IDs. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** A search/read server and an example client transcript.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP host, client, server and transports:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP host, client, server and transports, explicitly apply Roles, Capabilities, Transports.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- **MCP host, client, server and transports:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Read-only notes MCP server: A search/read server and an example client transcript. Focus: Roles, Capabilities, Transports.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP host, client, server and transports: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A search/read server and an example client transcript. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP host, client, server and transports: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] MCP host, client, server and transports: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- [ ] Validate arguments, reject path traversal and test unknown tool errors.
+- [ ] MCP host, client, server and transports: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Support ticket triage desk
+### Human review state machine
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A reviewer needs risky actions paused until a decision is recorded.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Use fictional content-publication requests and reviewer decisions. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
+**Output:** A draft, review, approved and rejected workflow.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP host, client, server and transports:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP host, client, server and transports, explicitly apply Roles, Capabilities, Transports.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- **MCP host, client, server and transports:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Human review state machine: A draft, review, approved and rejected workflow. Focus: Roles, Capabilities, Transports.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP host, client, server and transports: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A draft, review, approved and rejected workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP host, client, server and transports: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] MCP host, client, server and transports: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- [ ] Reject invalid transitions and stale approvals after draft changes.
+- [ ] MCP host, client, server and transports: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Research library navigator
+### Bounded research workflow
 
-Help a learner find relevant passages in a small technical reading collection.
+A learner needs an assistant that can search and stop predictably.
 
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
+**Data:** Use ten local notes and recorded planning outputs. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A stateful search, summarize and review loop.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP host, client, server and transports:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP host, client, server and transports, explicitly apply Roles, Capabilities, Transports.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- **MCP host, client, server and transports:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Bounded research workflow: A stateful search, summarize and review loop. Focus: Roles, Capabilities, Transports.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP host, client, server and transports: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A stateful search, summarize and review loop. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP host, client, server and transports: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] MCP host, client, server and transports: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- [ ] Stop at the step budget and cite only retrieved sources.
+- [ ] MCP host, client, server and transports: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Agent failure replay studio
 
-Find unusual stock movements and explain which records need investigation.
+A maintainer needs reproducible debugging of tool errors.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Record 12 tool traces with timeouts, malformed outputs and retryable errors. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
+**Output:** A deterministic replay and failure classification tool.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP host, client, server and transports:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP host, client, server and transports, explicitly apply Roles, Capabilities, Transports.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- **MCP host, client, server and transports:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Agent failure replay studio: A deterministic replay and failure classification tool. Focus: Roles, Capabilities, Transports.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP host, client, server and transports: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A deterministic replay and failure classification tool. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP host, client, server and transports: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] MCP host, client, server and transports: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- [ ] Replay without external side effects and cap retries.
+- [ ] MCP host, client, server and transports: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### MCP client capability explorer
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A learner needs to inspect and call server tools safely.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Use a local deterministic MCP test server. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
+**Output:** A capability browser and bounded tool caller.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP host, client, server and transports:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP host, client, server and transports, explicitly apply Roles, Capabilities, Transports.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- **MCP host, client, server and transports:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to MCP client capability explorer: A capability browser and bounded tool caller. Focus: Roles, Capabilities, Transports.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP host, client, server and transports: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A capability browser and bounded tool caller. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP host, client, server and transports: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] MCP host, client, server and transports: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- [ ] Handle server disconnects and unsupported capabilities explicitly.
+- [ ] MCP host, client, server and transports: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Learning gap coach
+### Agent memory provenance ledger
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A learner needs to distinguish trusted facts from conversation summaries.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Create 30 events with sources, timestamps and corrections. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A scoped memory store with expiration and correction history.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP host, client, server and transports:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP host, client, server and transports, explicitly apply Roles, Capabilities, Transports.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- **MCP host, client, server and transports:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Agent memory provenance ledger: A scoped memory store with expiration and correction history. Focus: Roles, Capabilities, Transports.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP host, client, server and transports: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A scoped memory store with expiration and correction history. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP host, client, server and transports: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] MCP host, client, server and transports: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- [ ] Expired or cross-user entries cannot be retrieved.
+- [ ] MCP host, client, server and transports: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Independent review coordinator
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A team needs independent checks before combining conclusions.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use three deterministic reviewers for schema, evidence and policy. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A coordinator with separate review results and conflict handling.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP host, client, server and transports:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP host, client, server and transports, explicitly apply Roles, Capabilities, Transports.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- **MCP host, client, server and transports:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Independent review coordinator: A coordinator with separate review results and conflict handling. Focus: Roles, Capabilities, Transports.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP host, client, server and transports: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A coordinator with separate review results and conflict handling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP host, client, server and transports: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] MCP host, client, server and transports: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- [ ] Keep dissent visible and enforce a timeout per reviewer.
+- [ ] MCP host, client, server and transports: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Catalog search and ranking workbench
+### Checkpoint recovery runner
 
-Compare ranking approaches and explain which item best matches a query.
+An operator needs to resume failed multi-step jobs safely.
 
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
+**Data:** Create five deterministic tasks and inject failures after checkpoints. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A durable local state machine with replay.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP host, client, server and transports:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP host, client, server and transports, explicitly apply Roles, Capabilities, Transports.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- **MCP host, client, server and transports:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Checkpoint recovery runner: A durable local state machine with replay. Focus: Roles, Capabilities, Transports.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP host, client, server and transports: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A durable local state machine with replay. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP host, client, server and transports: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] MCP host, client, server and transports: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- [ ] Resume without duplicating completed side effects.
+- [ ] MCP host, client, server and transports: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Tool permission gateway
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A developer needs a clear boundary between proposals and execution.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Create read, write and delete tool fixtures on a temporary folder. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A policy gate with dry-run and approval states.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP host, client, server and transports:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP host, client, server and transports, explicitly apply Roles, Capabilities, Transports.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- **MCP host, client, server and transports:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Tool permission gateway: A policy gate with dry-run and approval states. Focus: Roles, Capabilities, Transports.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP host, client, server and transports: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A policy gate with dry-run and approval states. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP host, client, server and transports: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] MCP host, client, server and transports: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- [ ] Denied calls produce no side effects; approval is bound to exact arguments.
+- [ ] MCP host, client, server and transports: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Workflow versus agent experiment
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A product builder needs evidence that autonomy helps a task.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use 20 document-routing cases and fixed decision fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A deterministic workflow versus bounded-planner benchmark.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP host, client, server and transports:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP host, client, server and transports, explicitly apply Roles, Capabilities, Transports.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- **MCP host, client, server and transports:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Workflow versus agent experiment: A deterministic workflow versus bounded-planner benchmark. Focus: Roles, Capabilities, Transports.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP host, client, server and transports: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A deterministic workflow versus bounded-planner benchmark. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP host, client, server and transports: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] MCP host, client, server and transports: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.
+- [ ] Compare task success, tool count and failure behavior under identical cases.
+- [ ] MCP host, client, server and transports: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local MCP server with one read-only tool and resource, connect a test client and document permissions and transport; remote access is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1498,7 +1498,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Prevent remote tool descriptions or results from overriding application policy.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [MCP host, client, server and transports](agents.md#agents-mcp) Navigation is unrestricted.
 
@@ -1589,292 +1589,292 @@ Connect a local test client to the previous server; inject a malicious tool resu
 
 #### Ten project recommendations
 
-### Service incident investigation board
+### MCP client capability explorer
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A learner needs to inspect and call server tools safely.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Use a local deterministic MCP test server. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** A capability browser and bounded tool caller.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP client connections, context security and testing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP client connections, context security and testing, explicitly apply Connections, Context security, Protocol tests.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- **MCP client connections, context security and testing:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to MCP client capability explorer: A capability browser and bounded tool caller. Focus: Connections, Context security, Protocol tests.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP client connections, context security and testing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A capability browser and bounded tool caller. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP client connections, context security and testing: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] MCP client connections, context security and testing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- [ ] Handle server disconnects and unsupported capabilities explicitly.
+- [ ] MCP client connections, context security and testing: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Support ticket triage desk
+### Human review state machine
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A reviewer needs risky actions paused until a decision is recorded.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Use fictional content-publication requests and reviewer decisions. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
+**Output:** A draft, review, approved and rejected workflow.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP client connections, context security and testing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP client connections, context security and testing, explicitly apply Connections, Context security, Protocol tests.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- **MCP client connections, context security and testing:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Human review state machine: A draft, review, approved and rejected workflow. Focus: Connections, Context security, Protocol tests.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP client connections, context security and testing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A draft, review, approved and rejected workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP client connections, context security and testing: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] MCP client connections, context security and testing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- [ ] Reject invalid transitions and stale approvals after draft changes.
+- [ ] MCP client connections, context security and testing: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Research library navigator
+### Bounded research workflow
 
-Help a learner find relevant passages in a small technical reading collection.
+A learner needs an assistant that can search and stop predictably.
 
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
+**Data:** Use ten local notes and recorded planning outputs. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A stateful search, summarize and review loop.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP client connections, context security and testing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP client connections, context security and testing, explicitly apply Connections, Context security, Protocol tests.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- **MCP client connections, context security and testing:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Bounded research workflow: A stateful search, summarize and review loop. Focus: Connections, Context security, Protocol tests.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP client connections, context security and testing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A stateful search, summarize and review loop. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP client connections, context security and testing: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] MCP client connections, context security and testing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- [ ] Stop at the step budget and cite only retrieved sources.
+- [ ] MCP client connections, context security and testing: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Agent failure replay studio
 
-Find unusual stock movements and explain which records need investigation.
+A maintainer needs reproducible debugging of tool errors.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Record 12 tool traces with timeouts, malformed outputs and retryable errors. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
+**Output:** A deterministic replay and failure classification tool.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP client connections, context security and testing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP client connections, context security and testing, explicitly apply Connections, Context security, Protocol tests.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- **MCP client connections, context security and testing:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Agent failure replay studio: A deterministic replay and failure classification tool. Focus: Connections, Context security, Protocol tests.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP client connections, context security and testing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A deterministic replay and failure classification tool. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP client connections, context security and testing: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] MCP client connections, context security and testing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- [ ] Replay without external side effects and cap retries.
+- [ ] MCP client connections, context security and testing: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Read-only notes MCP server
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A learner needs a small MCP server with useful contracts.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Use ten local text notes with stable IDs. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
+**Output:** A search/read server and an example client transcript.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP client connections, context security and testing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP client connections, context security and testing, explicitly apply Connections, Context security, Protocol tests.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- **MCP client connections, context security and testing:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Read-only notes MCP server: A search/read server and an example client transcript. Focus: Connections, Context security, Protocol tests.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP client connections, context security and testing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A search/read server and an example client transcript. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP client connections, context security and testing: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] MCP client connections, context security and testing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- [ ] Validate arguments, reject path traversal and test unknown tool errors.
+- [ ] MCP client connections, context security and testing: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Learning gap coach
+### Agent memory provenance ledger
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A learner needs to distinguish trusted facts from conversation summaries.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Create 30 events with sources, timestamps and corrections. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A scoped memory store with expiration and correction history.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP client connections, context security and testing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP client connections, context security and testing, explicitly apply Connections, Context security, Protocol tests.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- **MCP client connections, context security and testing:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Agent memory provenance ledger: A scoped memory store with expiration and correction history. Focus: Connections, Context security, Protocol tests.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP client connections, context security and testing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A scoped memory store with expiration and correction history. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP client connections, context security and testing: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] MCP client connections, context security and testing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- [ ] Expired or cross-user entries cannot be retrieved.
+- [ ] MCP client connections, context security and testing: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Independent review coordinator
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A team needs independent checks before combining conclusions.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use three deterministic reviewers for schema, evidence and policy. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A coordinator with separate review results and conflict handling.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP client connections, context security and testing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP client connections, context security and testing, explicitly apply Connections, Context security, Protocol tests.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- **MCP client connections, context security and testing:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Independent review coordinator: A coordinator with separate review results and conflict handling. Focus: Connections, Context security, Protocol tests.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP client connections, context security and testing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A coordinator with separate review results and conflict handling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP client connections, context security and testing: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] MCP client connections, context security and testing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- [ ] Keep dissent visible and enforce a timeout per reviewer.
+- [ ] MCP client connections, context security and testing: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Catalog search and ranking workbench
+### Checkpoint recovery runner
 
-Compare ranking approaches and explain which item best matches a query.
+An operator needs to resume failed multi-step jobs safely.
 
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
+**Data:** Create five deterministic tasks and inject failures after checkpoints. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A durable local state machine with replay.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP client connections, context security and testing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP client connections, context security and testing, explicitly apply Connections, Context security, Protocol tests.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- **MCP client connections, context security and testing:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Checkpoint recovery runner: A durable local state machine with replay. Focus: Connections, Context security, Protocol tests.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP client connections, context security and testing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A durable local state machine with replay. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP client connections, context security and testing: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] MCP client connections, context security and testing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- [ ] Resume without duplicating completed side effects.
+- [ ] MCP client connections, context security and testing: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Tool permission gateway
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A developer needs a clear boundary between proposals and execution.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Create read, write and delete tool fixtures on a temporary folder. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A policy gate with dry-run and approval states.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP client connections, context security and testing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP client connections, context security and testing, explicitly apply Connections, Context security, Protocol tests.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- **MCP client connections, context security and testing:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Tool permission gateway: A policy gate with dry-run and approval states. Focus: Connections, Context security, Protocol tests.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP client connections, context security and testing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A policy gate with dry-run and approval states. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP client connections, context security and testing: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] MCP client connections, context security and testing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- [ ] Denied calls produce no side effects; approval is bound to exact arguments.
+- [ ] MCP client connections, context security and testing: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Workflow versus agent experiment
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A product builder needs evidence that autonomy helps a task.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use 20 document-routing cases and fixed decision fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A deterministic workflow versus bounded-planner benchmark.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP client connections, context security and testing:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP client connections, context security and testing, explicitly apply Connections, Context security, Protocol tests.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- **MCP client connections, context security and testing:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Workflow versus agent experiment: A deterministic workflow versus bounded-planner benchmark. Focus: Connections, Context security, Protocol tests.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP client connections, context security and testing: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A deterministic workflow versus bounded-planner benchmark. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP client connections, context security and testing: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] MCP client connections, context security and testing: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.
+- [ ] Compare task success, tool count and failure behavior under identical cases.
+- [ ] MCP client connections, context security and testing: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Connect a local test client to the previous server; inject a malicious tool result, malformed response and disconnect, and verify safe failure behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1888,7 +1888,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Keep multi-step workflows inspectable and resumable without relying on an unconstrained agent conversation.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Essential · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [Workflows, agent loops, planning and state](agents.md#agents-loops) Navigation is unrestricted.
 
@@ -1974,292 +1974,292 @@ Implement a deterministic Python workflow graph with a fake planner, evidence lo
 
 #### Ten project recommendations
 
-### Service incident investigation board
+### Human review state machine
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A reviewer needs risky actions paused until a decision is recorded.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Use fictional content-publication requests and reviewer decisions. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** A draft, review, approved and rejected workflow.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Typed state, checkpoints and bounded execution graphs:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Typed state, checkpoints and bounded execution graphs, explicitly apply State schema, Nodes, edges and routing, Reducers and concurrent updates.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- **Typed state, checkpoints and bounded execution graphs:** Implement Typed state, checkpoints and bounded execution graphs in Human review state machine. Adapt this focused lab to the project data: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.  Required concepts: State schema, Nodes, edges and routing, Reducers and concurrent updates, Checkpoints and replay, Budgets and terminal states.
+  - Deliverable: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Typed state, checkpoints and bounded execution graphs: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A draft, review, approved and rejected workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Typed state, checkpoints and bounded execution graphs: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Typed state, checkpoints and bounded execution graphs: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- [ ] Reject invalid transitions and stale approvals after draft changes.
+- [ ] Typed state, checkpoints and bounded execution graphs: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Support ticket triage desk
+### Checkpoint recovery runner
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+An operator needs to resume failed multi-step jobs safely.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Create five deterministic tasks and inject failures after checkpoints. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
+**Output:** A durable local state machine with replay.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Typed state, checkpoints and bounded execution graphs:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Typed state, checkpoints and bounded execution graphs, explicitly apply State schema, Nodes, edges and routing, Reducers and concurrent updates.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- **Typed state, checkpoints and bounded execution graphs:** Implement Typed state, checkpoints and bounded execution graphs in Checkpoint recovery runner. Adapt this focused lab to the project data: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.  Required concepts: State schema, Nodes, edges and routing, Reducers and concurrent updates, Checkpoints and replay, Budgets and terminal states.
+  - Deliverable: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Typed state, checkpoints and bounded execution graphs: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A durable local state machine with replay. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Typed state, checkpoints and bounded execution graphs: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Typed state, checkpoints and bounded execution graphs: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- [ ] Resume without duplicating completed side effects.
+- [ ] Typed state, checkpoints and bounded execution graphs: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Research library navigator
+### Bounded research workflow
 
-Help a learner find relevant passages in a small technical reading collection.
+A learner needs an assistant that can search and stop predictably.
 
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
+**Data:** Use ten local notes and recorded planning outputs. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A stateful search, summarize and review loop.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Typed state, checkpoints and bounded execution graphs:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Typed state, checkpoints and bounded execution graphs, explicitly apply State schema, Nodes, edges and routing, Reducers and concurrent updates.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- **Typed state, checkpoints and bounded execution graphs:** Extend the project with Typed state, checkpoints and bounded execution graphs in Bounded research workflow. Adapt this focused lab to the project data: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.  Required concepts: State schema, Nodes, edges and routing, Reducers and concurrent updates, Checkpoints and replay, Budgets and terminal states.
+  - Deliverable: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Typed state, checkpoints and bounded execution graphs: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A stateful search, summarize and review loop. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Typed state, checkpoints and bounded execution graphs: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Typed state, checkpoints and bounded execution graphs: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- [ ] Stop at the step budget and cite only retrieved sources.
+- [ ] Typed state, checkpoints and bounded execution graphs: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Agent failure replay studio
 
-Find unusual stock movements and explain which records need investigation.
+A maintainer needs reproducible debugging of tool errors.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Record 12 tool traces with timeouts, malformed outputs and retryable errors. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
+**Output:** A deterministic replay and failure classification tool.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Typed state, checkpoints and bounded execution graphs:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Typed state, checkpoints and bounded execution graphs, explicitly apply State schema, Nodes, edges and routing, Reducers and concurrent updates.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- **Typed state, checkpoints and bounded execution graphs:** Extend the project with Typed state, checkpoints and bounded execution graphs in Agent failure replay studio. Adapt this focused lab to the project data: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.  Required concepts: State schema, Nodes, edges and routing, Reducers and concurrent updates, Checkpoints and replay, Budgets and terminal states.
+  - Deliverable: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Typed state, checkpoints and bounded execution graphs: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A deterministic replay and failure classification tool. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Typed state, checkpoints and bounded execution graphs: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Typed state, checkpoints and bounded execution graphs: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- [ ] Replay without external side effects and cap retries.
+- [ ] Typed state, checkpoints and bounded execution graphs: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### MCP client capability explorer
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A learner needs to inspect and call server tools safely.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Use a local deterministic MCP test server. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
+**Output:** A capability browser and bounded tool caller.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Typed state, checkpoints and bounded execution graphs:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Typed state, checkpoints and bounded execution graphs, explicitly apply State schema, Nodes, edges and routing, Reducers and concurrent updates.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- **Typed state, checkpoints and bounded execution graphs:** Extend the project with Typed state, checkpoints and bounded execution graphs in MCP client capability explorer. Adapt this focused lab to the project data: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.  Required concepts: State schema, Nodes, edges and routing, Reducers and concurrent updates, Checkpoints and replay, Budgets and terminal states.
+  - Deliverable: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Typed state, checkpoints and bounded execution graphs: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A capability browser and bounded tool caller. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Typed state, checkpoints and bounded execution graphs: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Typed state, checkpoints and bounded execution graphs: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- [ ] Handle server disconnects and unsupported capabilities explicitly.
+- [ ] Typed state, checkpoints and bounded execution graphs: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Learning gap coach
+### Read-only notes MCP server
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A learner needs a small MCP server with useful contracts.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Use ten local text notes with stable IDs. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A search/read server and an example client transcript.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Typed state, checkpoints and bounded execution graphs:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Typed state, checkpoints and bounded execution graphs, explicitly apply State schema, Nodes, edges and routing, Reducers and concurrent updates.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- **Typed state, checkpoints and bounded execution graphs:** Extend the project with Typed state, checkpoints and bounded execution graphs in Read-only notes MCP server. Adapt this focused lab to the project data: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.  Required concepts: State schema, Nodes, edges and routing, Reducers and concurrent updates, Checkpoints and replay, Budgets and terminal states.
+  - Deliverable: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Typed state, checkpoints and bounded execution graphs: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A search/read server and an example client transcript. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Typed state, checkpoints and bounded execution graphs: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Typed state, checkpoints and bounded execution graphs: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- [ ] Validate arguments, reject path traversal and test unknown tool errors.
+- [ ] Typed state, checkpoints and bounded execution graphs: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Agent memory provenance ledger
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A learner needs to distinguish trusted facts from conversation summaries.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Create 30 events with sources, timestamps and corrections. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A scoped memory store with expiration and correction history.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Typed state, checkpoints and bounded execution graphs:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Typed state, checkpoints and bounded execution graphs, explicitly apply State schema, Nodes, edges and routing, Reducers and concurrent updates.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- **Typed state, checkpoints and bounded execution graphs:** Extend the project with Typed state, checkpoints and bounded execution graphs in Agent memory provenance ledger. Adapt this focused lab to the project data: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.  Required concepts: State schema, Nodes, edges and routing, Reducers and concurrent updates, Checkpoints and replay, Budgets and terminal states.
+  - Deliverable: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Typed state, checkpoints and bounded execution graphs: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A scoped memory store with expiration and correction history. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Typed state, checkpoints and bounded execution graphs: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Typed state, checkpoints and bounded execution graphs: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- [ ] Expired or cross-user entries cannot be retrieved.
+- [ ] Typed state, checkpoints and bounded execution graphs: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Catalog search and ranking workbench
+### Independent review coordinator
 
-Compare ranking approaches and explain which item best matches a query.
+A team needs independent checks before combining conclusions.
 
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
+**Data:** Use three deterministic reviewers for schema, evidence and policy. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A coordinator with separate review results and conflict handling.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Typed state, checkpoints and bounded execution graphs:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Typed state, checkpoints and bounded execution graphs, explicitly apply State schema, Nodes, edges and routing, Reducers and concurrent updates.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- **Typed state, checkpoints and bounded execution graphs:** Extend the project with Typed state, checkpoints and bounded execution graphs in Independent review coordinator. Adapt this focused lab to the project data: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.  Required concepts: State schema, Nodes, edges and routing, Reducers and concurrent updates, Checkpoints and replay, Budgets and terminal states.
+  - Deliverable: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Typed state, checkpoints and bounded execution graphs: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A coordinator with separate review results and conflict handling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Typed state, checkpoints and bounded execution graphs: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Typed state, checkpoints and bounded execution graphs: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- [ ] Keep dissent visible and enforce a timeout per reviewer.
+- [ ] Typed state, checkpoints and bounded execution graphs: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Tool permission gateway
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A developer needs a clear boundary between proposals and execution.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Create read, write and delete tool fixtures on a temporary folder. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A policy gate with dry-run and approval states.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Typed state, checkpoints and bounded execution graphs:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Typed state, checkpoints and bounded execution graphs, explicitly apply State schema, Nodes, edges and routing, Reducers and concurrent updates.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- **Typed state, checkpoints and bounded execution graphs:** Extend the project with Typed state, checkpoints and bounded execution graphs in Tool permission gateway. Adapt this focused lab to the project data: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.  Required concepts: State schema, Nodes, edges and routing, Reducers and concurrent updates, Checkpoints and replay, Budgets and terminal states.
+  - Deliverable: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Typed state, checkpoints and bounded execution graphs: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A policy gate with dry-run and approval states. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Typed state, checkpoints and bounded execution graphs: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Typed state, checkpoints and bounded execution graphs: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- [ ] Denied calls produce no side effects; approval is bound to exact arguments.
+- [ ] Typed state, checkpoints and bounded execution graphs: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Workflow versus agent experiment
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A product builder needs evidence that autonomy helps a task.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use 20 document-routing cases and fixed decision fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A deterministic workflow versus bounded-planner benchmark.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Typed state, checkpoints and bounded execution graphs:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For Typed state, checkpoints and bounded execution graphs, explicitly apply State schema, Nodes, edges and routing, Reducers and concurrent updates.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- **Typed state, checkpoints and bounded execution graphs:** Extend the project with Typed state, checkpoints and bounded execution graphs in Workflow versus agent experiment. Adapt this focused lab to the project data: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.  Required concepts: State schema, Nodes, edges and routing, Reducers and concurrent updates, Checkpoints and replay, Budgets and terminal states.
+  - Deliverable: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Typed state, checkpoints and bounded execution graphs: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A deterministic workflow versus bounded-planner benchmark. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Typed state, checkpoints and bounded execution graphs: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Typed state, checkpoints and bounded execution graphs: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.
+- [ ] Compare task success, tool count and failure behavior under identical cases.
+- [ ] Typed state, checkpoints and bounded execution graphs: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2273,7 +2273,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Separate protocol discovery from authorisation so a reachable tool does not automatically become an allowed action.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Essential · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [MCP client connections, context security and testing](agents.md#agents-mcp-client) Navigation is unrestricted.
 
@@ -2394,292 +2394,1134 @@ Create a local toy MCP-style tool boundary or use an official local SDK with a r
 
 #### Ten project recommendations
 
-### Service incident investigation board
+### Read-only notes MCP server
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A learner needs a small MCP server with useful contracts.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Use ten local text notes with stable IDs. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** A search/read server and an example client transcript.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP tool schemas, transport lifecycle and permission checks:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP tool schemas, transport lifecycle and permission checks, explicitly apply Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- **MCP tool schemas, transport lifecycle and permission checks:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Read-only notes MCP server: A search/read server and an example client transcript. Focus: Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools, Authorisation per operation, Approval and audit context.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP tool schemas, transport lifecycle and permission checks: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A search/read server and an example client transcript. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP tool schemas, transport lifecycle and permission checks: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] MCP tool schemas, transport lifecycle and permission checks: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- [ ] Validate arguments, reject path traversal and test unknown tool errors.
+- [ ] MCP tool schemas, transport lifecycle and permission checks: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Support ticket triage desk
+### Human review state machine
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A reviewer needs risky actions paused until a decision is recorded.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Use fictional content-publication requests and reviewer decisions. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
+**Output:** A draft, review, approved and rejected workflow.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP tool schemas, transport lifecycle and permission checks:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP tool schemas, transport lifecycle and permission checks, explicitly apply Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- **MCP tool schemas, transport lifecycle and permission checks:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Human review state machine: A draft, review, approved and rejected workflow. Focus: Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools, Authorisation per operation, Approval and audit context.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP tool schemas, transport lifecycle and permission checks: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A draft, review, approved and rejected workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP tool schemas, transport lifecycle and permission checks: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] MCP tool schemas, transport lifecycle and permission checks: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- [ ] Reject invalid transitions and stale approvals after draft changes.
+- [ ] MCP tool schemas, transport lifecycle and permission checks: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Research library navigator
+### Bounded research workflow
 
-Help a learner find relevant passages in a small technical reading collection.
+A learner needs an assistant that can search and stop predictably.
 
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
+**Data:** Use ten local notes and recorded planning outputs. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A stateful search, summarize and review loop.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP tool schemas, transport lifecycle and permission checks:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP tool schemas, transport lifecycle and permission checks, explicitly apply Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- **MCP tool schemas, transport lifecycle and permission checks:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Bounded research workflow: A stateful search, summarize and review loop. Focus: Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools, Authorisation per operation, Approval and audit context.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP tool schemas, transport lifecycle and permission checks: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A stateful search, summarize and review loop. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP tool schemas, transport lifecycle and permission checks: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] MCP tool schemas, transport lifecycle and permission checks: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- [ ] Stop at the step budget and cite only retrieved sources.
+- [ ] MCP tool schemas, transport lifecycle and permission checks: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Agent failure replay studio
 
-Find unusual stock movements and explain which records need investigation.
+A maintainer needs reproducible debugging of tool errors.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Record 12 tool traces with timeouts, malformed outputs and retryable errors. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
+**Output:** A deterministic replay and failure classification tool.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP tool schemas, transport lifecycle and permission checks:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP tool schemas, transport lifecycle and permission checks, explicitly apply Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- **MCP tool schemas, transport lifecycle and permission checks:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Agent failure replay studio: A deterministic replay and failure classification tool. Focus: Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools, Authorisation per operation, Approval and audit context.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP tool schemas, transport lifecycle and permission checks: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A deterministic replay and failure classification tool. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP tool schemas, transport lifecycle and permission checks: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] MCP tool schemas, transport lifecycle and permission checks: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- [ ] Replay without external side effects and cap retries.
+- [ ] MCP tool schemas, transport lifecycle and permission checks: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### MCP client capability explorer
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A learner needs to inspect and call server tools safely.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Use a local deterministic MCP test server. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
+**Output:** A capability browser and bounded tool caller.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP tool schemas, transport lifecycle and permission checks:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP tool schemas, transport lifecycle and permission checks, explicitly apply Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- **MCP tool schemas, transport lifecycle and permission checks:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to MCP client capability explorer: A capability browser and bounded tool caller. Focus: Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools, Authorisation per operation, Approval and audit context.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP tool schemas, transport lifecycle and permission checks: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A capability browser and bounded tool caller. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP tool schemas, transport lifecycle and permission checks: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] MCP tool schemas, transport lifecycle and permission checks: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- [ ] Handle server disconnects and unsupported capabilities explicitly.
+- [ ] MCP tool schemas, transport lifecycle and permission checks: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Learning gap coach
+### Agent memory provenance ledger
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+A learner needs to distinguish trusted facts from conversation summaries.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
+**Data:** Create 30 events with sources, timestamps and corrections. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A scoped memory store with expiration and correction history.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP tool schemas, transport lifecycle and permission checks:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP tool schemas, transport lifecycle and permission checks, explicitly apply Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- **MCP tool schemas, transport lifecycle and permission checks:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Agent memory provenance ledger: A scoped memory store with expiration and correction history. Focus: Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools, Authorisation per operation, Approval and audit context.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP tool schemas, transport lifecycle and permission checks: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A scoped memory store with expiration and correction history. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP tool schemas, transport lifecycle and permission checks: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] MCP tool schemas, transport lifecycle and permission checks: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- [ ] Expired or cross-user entries cannot be retrieved.
+- [ ] MCP tool schemas, transport lifecycle and permission checks: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Independent review coordinator
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A team needs independent checks before combining conclusions.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use three deterministic reviewers for schema, evidence and policy. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A coordinator with separate review results and conflict handling.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP tool schemas, transport lifecycle and permission checks:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP tool schemas, transport lifecycle and permission checks, explicitly apply Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- **MCP tool schemas, transport lifecycle and permission checks:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Independent review coordinator: A coordinator with separate review results and conflict handling. Focus: Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools, Authorisation per operation, Approval and audit context.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP tool schemas, transport lifecycle and permission checks: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A coordinator with separate review results and conflict handling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP tool schemas, transport lifecycle and permission checks: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] MCP tool schemas, transport lifecycle and permission checks: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- [ ] Keep dissent visible and enforce a timeout per reviewer.
+- [ ] MCP tool schemas, transport lifecycle and permission checks: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Catalog search and ranking workbench
+### Checkpoint recovery runner
 
-Compare ranking approaches and explain which item best matches a query.
+An operator needs to resume failed multi-step jobs safely.
 
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
+**Data:** Create five deterministic tasks and inject failures after checkpoints. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A durable local state machine with replay.
 
-**Effort:** 10h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP tool schemas, transport lifecycle and permission checks:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP tool schemas, transport lifecycle and permission checks, explicitly apply Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- **MCP tool schemas, transport lifecycle and permission checks:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Checkpoint recovery runner: A durable local state machine with replay. Focus: Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools, Authorisation per operation, Approval and audit context.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP tool schemas, transport lifecycle and permission checks: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A durable local state machine with replay. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP tool schemas, transport lifecycle and permission checks: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] MCP tool schemas, transport lifecycle and permission checks: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- [ ] Resume without duplicating completed side effects.
+- [ ] MCP tool schemas, transport lifecycle and permission checks: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Tool permission gateway
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A developer needs a clear boundary between proposals and execution.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Create read, write and delete tool fixtures on a temporary folder. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A policy gate with dry-run and approval states.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP tool schemas, transport lifecycle and permission checks:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP tool schemas, transport lifecycle and permission checks, explicitly apply Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- **MCP tool schemas, transport lifecycle and permission checks:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Tool permission gateway: A policy gate with dry-run and approval states. Focus: Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools, Authorisation per operation, Approval and audit context.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP tool schemas, transport lifecycle and permission checks: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A policy gate with dry-run and approval states. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP tool schemas, transport lifecycle and permission checks: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] MCP tool schemas, transport lifecycle and permission checks: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- [ ] Denied calls produce no side effects; approval is bound to exact arguments.
+- [ ] MCP tool schemas, transport lifecycle and permission checks: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Workflow versus agent experiment
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A product builder needs evidence that autonomy helps a task.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use 20 document-routing cases and fixed decision fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A deterministic workflow versus bounded-planner benchmark.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **MCP tool schemas, transport lifecycle and permission checks:** Orchestrate retrieval, analysis and review with bounded tools and checkpointed state.  For MCP tool schemas, transport lifecycle and permission checks, explicitly apply Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools.
-  - Deliverable: A bounded workflow, local MCP endpoint and recovery evidence
-  - Check: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- **MCP tool schemas, transport lifecycle and permission checks:** Expose or consume a read-only project capability through an MCP server/client with a documented tool schema and bounded responses. Apply this to Workflow versus agent experiment: A deterministic workflow versus bounded-planner benchmark. Focus: Tool discovery and schemas, Transport lifecycle, Resources, prompts and tools, Authorisation per operation, Approval and audit context.
+  - Deliverable: Local MCP server/client, schema and example transcript
+  - Check: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] MCP tool schemas, transport lifecycle and permission checks: A bounded workflow, local MCP endpoint and recovery evidence
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A deterministic workflow versus bounded-planner benchmark. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP tool schemas, transport lifecycle and permission checks: Local MCP server/client, schema and example transcript
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] MCP tool schemas, transport lifecycle and permission checks: Expose a read-only MCP tool; test tool failure, malicious input and a loop limit. Adapt the lesson lab: Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.
+- [ ] Compare task success, tool count and failure behavior under identical cases.
+- [ ] MCP tool schemas, transport lifecycle and permission checks: Test invalid arguments, unknown tools, disconnects and path traversal; reject calls outside the allowed scope. Create a local toy MCP-style tool boundary or use an official local SDK with a read-only note tool. Test schema rejection, object-level permissions, shutdown and exact-payload approval for an optional simulated write.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## MCP versions, discovery and authorization boundaries
+
+<a id="agents-mcp-versioning"></a>
+
+### MCP versions, discovery and authorization boundaries
+
+MCP versions, discovery and authorization boundaries helps you make explainable engineering decisions and test failure cases. Build the experiment below before relying on the concept in an AI system.
+
+**Priority:** Essential · **Study:** 4h · **Practice:** 5h
+
+**Prerequisites:** [MCP host, client, server and transports](agents.md#agents-mcp) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Version pinning:** Protocol examples must match a specific specification and SDK version; older tutorials may describe a different lifecycle.
+  - Example: Record the official 2026-07-28 specification and the installed SDK's advertised support.
+  - Videos:
+    - [RAG and MCP fundamentals — hands-on course](https://www.youtube.com/watch?v=I7_WXKhyGms) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Retrieval, MCP coordination and caching integration.
+      - Useful because: Connect knowledge retrieval with tool access while keeping permission checks in software.
+      - Watch for: Focus on version pinning. Then reproduce the lesson example: Record the official 2026-07-28 specification and the installed SDK's advertised support.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-and-mcp-fundamentals/
+    - [LangGraph — complete course for beginners](https://www.youtube.com/watch?v=jGg_1h0qzaM) · freeCodeCamp · Full tool course
+      - Explains: Graph state, nodes, workflows and agent applications.
+      - Useful because: Use it to understand orchestration; replace paid provider calls with local/recorded responses.
+      - Watch for: Focus on version pinning. Then reproduce the lesson example: Record the official 2026-07-28 specification and the installed SDK's advertised support.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-langgraph-and-build-conversational-ai-with-python/
+- [ ] **Capability discovery:** The current specification describes server/discover and per-request metadata; implementations must be checked against their supported version.
+  - Example: Create discovery request and response fixtures with advertised tool capabilities.
+  - Videos:
+    - [RAG and MCP fundamentals — hands-on course](https://www.youtube.com/watch?v=I7_WXKhyGms) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Retrieval, MCP coordination and caching integration.
+      - Useful because: Connect knowledge retrieval with tool access while keeping permission checks in software.
+      - Watch for: Focus on capability discovery. Then reproduce the lesson example: Create discovery request and response fixtures with advertised tool capabilities.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-and-mcp-fundamentals/
+    - [LangGraph — complete course for beginners](https://www.youtube.com/watch?v=jGg_1h0qzaM) · freeCodeCamp · Full tool course
+      - Explains: Graph state, nodes, workflows and agent applications.
+      - Useful because: Use it to understand orchestration; replace paid provider calls with local/recorded responses.
+      - Watch for: Focus on capability discovery. Then reproduce the lesson example: Create discovery request and response fixtures with advertised tool capabilities.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-langgraph-and-build-conversational-ai-with-python/
+- [ ] **Transport boundaries:** Local stdio and remote Streamable HTTP have different process and network trust boundaries.
+  - Example: Document a local child process versus an HTTP service boundary.
+  - Videos:
+    - [RAG and MCP fundamentals — hands-on course](https://www.youtube.com/watch?v=I7_WXKhyGms) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Retrieval, MCP coordination and caching integration.
+      - Useful because: Connect knowledge retrieval with tool access while keeping permission checks in software.
+      - Watch for: Focus on transport boundaries. Then reproduce the lesson example: Document a local child process versus an HTTP service boundary.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-and-mcp-fundamentals/
+    - [LangGraph — complete course for beginners](https://www.youtube.com/watch?v=jGg_1h0qzaM) · freeCodeCamp · Full tool course
+      - Explains: Graph state, nodes, workflows and agent applications.
+      - Useful because: Use it to understand orchestration; replace paid provider calls with local/recorded responses.
+      - Watch for: Focus on transport boundaries. Then reproduce the lesson example: Document a local child process versus an HTTP service boundary.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-langgraph-and-build-conversational-ai-with-python/
+- [ ] **Authorization:** A discovered tool schema is not permission to call it; trusted authorization remains necessary.
+  - Example: Reject a read request for another user's document before invoking the tool.
+  - Videos:
+    - [RAG and MCP fundamentals — hands-on course](https://www.youtube.com/watch?v=I7_WXKhyGms) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Retrieval, MCP coordination and caching integration.
+      - Useful because: Connect knowledge retrieval with tool access while keeping permission checks in software.
+      - Watch for: Focus on authorization. Then reproduce the lesson example: Reject a read request for another user's document before invoking the tool.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-and-mcp-fundamentals/
+    - [LangGraph — complete course for beginners](https://www.youtube.com/watch?v=jGg_1h0qzaM) · freeCodeCamp · Full tool course
+      - Explains: Graph state, nodes, workflows and agent applications.
+      - Useful because: Use it to understand orchestration; replace paid provider calls with local/recorded responses.
+      - Watch for: Focus on authorization. Then reproduce the lesson example: Reject a read request for another user's document before invoking the tool.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-langgraph-and-build-conversational-ai-with-python/
+- [ ] **Compatibility failures:** Unsupported versions and capabilities should fail explicitly rather than silently changing semantics.
+  - Example: Return a documented failure for an unsupported request version in a stub.
+  - Videos:
+    - [RAG and MCP fundamentals — hands-on course](https://www.youtube.com/watch?v=I7_WXKhyGms) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Retrieval, MCP coordination and caching integration.
+      - Useful because: Connect knowledge retrieval with tool access while keeping permission checks in software.
+      - Watch for: Focus on compatibility failures. Then reproduce the lesson example: Return a documented failure for an unsupported request version in a stub.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-and-mcp-fundamentals/
+    - [LangGraph — complete course for beginners](https://www.youtube.com/watch?v=jGg_1h0qzaM) · freeCodeCamp · Full tool course
+      - Explains: Graph state, nodes, workflows and agent applications.
+      - Useful because: Use it to understand orchestration; replace paid provider calls with local/recorded responses.
+      - Watch for: Focus on compatibility failures. Then reproduce the lesson example: Return a documented failure for an unsupported request version in a stub.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-langgraph-and-build-conversational-ai-with-python/
+
+#### YouTube: focused explanations and full courses
+
+- [RAG and MCP fundamentals — hands-on course](https://www.youtube.com/watch?v=I7_WXKhyGms) · freeCodeCamp · Full course · approximately 2h
+  - Explains: Retrieval, MCP coordination and caching integration.
+  - Useful because: Connect knowledge retrieval with tool access while keeping permission checks in software.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-rag-and-mcp-fundamentals/
+- [OWASP LLM01 — prompt injection](https://www.youtube.com/watch?v=dq5jD_qE1Cg) · Vandana Verma · Security explanation
+  - Explains: Direct/indirect prompt injection and application trust boundaries.
+  - Useful because: Design malicious-input tests rather than assuming a prompt alone enforces permissions.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=dq5jD_qE1Cg
+- [LangGraph — complete course for beginners](https://www.youtube.com/watch?v=jGg_1h0qzaM) · freeCodeCamp · Full tool course
+  - Explains: Graph state, nodes, workflows and agent applications.
+  - Useful because: Use it to understand orchestration; replace paid provider calls with local/recorded responses.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-langgraph-and-build-conversational-ai-with-python/
+
+#### Free written resources
+
+1. [Official reference: MCP versions, discovery and authorization boundaries](https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+2. [MCP: architecture](https://modelcontextprotocol.io/docs/learn/architecture) — Free; no registration required. No paid materials required.
+
+#### Lab: MCP versions, discovery and authorization boundaries
+
+Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.
+
+**Deliverables**
+
+- Runnable CPU notebook or script with deterministic fixtures
+- Measured outputs, failure cases and a README explaining decisions
+
+**Completion checks**
+
+- [ ] Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.
+- [ ] Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+#### Ten project recommendations
+
+### Human review state machine
+
+A reviewer needs risky actions paused until a decision is recorded.
+
+**Data:** Use fictional content-publication requests and reviewer decisions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A draft, review, approved and rejected workflow.
+
+**Effort:** 16h · Intermediate
+
+- **MCP versions, discovery and authorization boundaries:** Extend the project with MCP versions, discovery and authorization boundaries in Human review state machine. Adapt this focused lab to the project data: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.  Required concepts: Version pinning, Capability discovery, Transport boundaries, Authorization, Compatibility failures.
+  - Deliverable: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A draft, review, approved and rejected workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP versions, discovery and authorization boundaries: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject invalid transitions and stale approvals after draft changes.
+- [ ] MCP versions, discovery and authorization boundaries: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Bounded research workflow
+
+A learner needs an assistant that can search and stop predictably.
+
+**Data:** Use ten local notes and recorded planning outputs. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A stateful search, summarize and review loop.
+
+**Effort:** 16h · Intermediate
+
+- **MCP versions, discovery and authorization boundaries:** Extend the project with MCP versions, discovery and authorization boundaries in Bounded research workflow. Adapt this focused lab to the project data: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.  Required concepts: Version pinning, Capability discovery, Transport boundaries, Authorization, Compatibility failures.
+  - Deliverable: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A stateful search, summarize and review loop. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP versions, discovery and authorization boundaries: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Stop at the step budget and cite only retrieved sources.
+- [ ] MCP versions, discovery and authorization boundaries: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Agent failure replay studio
+
+A maintainer needs reproducible debugging of tool errors.
+
+**Data:** Record 12 tool traces with timeouts, malformed outputs and retryable errors. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A deterministic replay and failure classification tool.
+
+**Effort:** 16h · Intermediate
+
+- **MCP versions, discovery and authorization boundaries:** Extend the project with MCP versions, discovery and authorization boundaries in Agent failure replay studio. Adapt this focused lab to the project data: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.  Required concepts: Version pinning, Capability discovery, Transport boundaries, Authorization, Compatibility failures.
+  - Deliverable: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A deterministic replay and failure classification tool. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP versions, discovery and authorization boundaries: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Replay without external side effects and cap retries.
+- [ ] MCP versions, discovery and authorization boundaries: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### MCP client capability explorer
+
+A learner needs to inspect and call server tools safely.
+
+**Data:** Use a local deterministic MCP test server. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A capability browser and bounded tool caller.
+
+**Effort:** 16h · Intermediate
+
+- **MCP versions, discovery and authorization boundaries:** Extend the project with MCP versions, discovery and authorization boundaries in MCP client capability explorer. Adapt this focused lab to the project data: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.  Required concepts: Version pinning, Capability discovery, Transport boundaries, Authorization, Compatibility failures.
+  - Deliverable: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A capability browser and bounded tool caller. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP versions, discovery and authorization boundaries: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Handle server disconnects and unsupported capabilities explicitly.
+- [ ] MCP versions, discovery and authorization boundaries: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Read-only notes MCP server
+
+A learner needs a small MCP server with useful contracts.
+
+**Data:** Use ten local text notes with stable IDs. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A search/read server and an example client transcript.
+
+**Effort:** 16h · Intermediate
+
+- **MCP versions, discovery and authorization boundaries:** Extend the project with MCP versions, discovery and authorization boundaries in Read-only notes MCP server. Adapt this focused lab to the project data: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.  Required concepts: Version pinning, Capability discovery, Transport boundaries, Authorization, Compatibility failures.
+  - Deliverable: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A search/read server and an example client transcript. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP versions, discovery and authorization boundaries: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Validate arguments, reject path traversal and test unknown tool errors.
+- [ ] MCP versions, discovery and authorization boundaries: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Agent memory provenance ledger
+
+A learner needs to distinguish trusted facts from conversation summaries.
+
+**Data:** Create 30 events with sources, timestamps and corrections. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A scoped memory store with expiration and correction history.
+
+**Effort:** 16h · Intermediate
+
+- **MCP versions, discovery and authorization boundaries:** Extend the project with MCP versions, discovery and authorization boundaries in Agent memory provenance ledger. Adapt this focused lab to the project data: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.  Required concepts: Version pinning, Capability discovery, Transport boundaries, Authorization, Compatibility failures.
+  - Deliverable: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A scoped memory store with expiration and correction history. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP versions, discovery and authorization boundaries: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Expired or cross-user entries cannot be retrieved.
+- [ ] MCP versions, discovery and authorization boundaries: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Independent review coordinator
+
+A team needs independent checks before combining conclusions.
+
+**Data:** Use three deterministic reviewers for schema, evidence and policy. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A coordinator with separate review results and conflict handling.
+
+**Effort:** 16h · Intermediate
+
+- **MCP versions, discovery and authorization boundaries:** Extend the project with MCP versions, discovery and authorization boundaries in Independent review coordinator. Adapt this focused lab to the project data: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.  Required concepts: Version pinning, Capability discovery, Transport boundaries, Authorization, Compatibility failures.
+  - Deliverable: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A coordinator with separate review results and conflict handling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP versions, discovery and authorization boundaries: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Keep dissent visible and enforce a timeout per reviewer.
+- [ ] MCP versions, discovery and authorization boundaries: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Checkpoint recovery runner
+
+An operator needs to resume failed multi-step jobs safely.
+
+**Data:** Create five deterministic tasks and inject failures after checkpoints. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A durable local state machine with replay.
+
+**Effort:** 16h · Intermediate
+
+- **MCP versions, discovery and authorization boundaries:** Extend the project with MCP versions, discovery and authorization boundaries in Checkpoint recovery runner. Adapt this focused lab to the project data: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.  Required concepts: Version pinning, Capability discovery, Transport boundaries, Authorization, Compatibility failures.
+  - Deliverable: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A durable local state machine with replay. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP versions, discovery and authorization boundaries: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Resume without duplicating completed side effects.
+- [ ] MCP versions, discovery and authorization boundaries: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Tool permission gateway
+
+A developer needs a clear boundary between proposals and execution.
+
+**Data:** Create read, write and delete tool fixtures on a temporary folder. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A policy gate with dry-run and approval states.
+
+**Effort:** 16h · Intermediate
+
+- **MCP versions, discovery and authorization boundaries:** Extend the project with MCP versions, discovery and authorization boundaries in Tool permission gateway. Adapt this focused lab to the project data: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.  Required concepts: Version pinning, Capability discovery, Transport boundaries, Authorization, Compatibility failures.
+  - Deliverable: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A policy gate with dry-run and approval states. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP versions, discovery and authorization boundaries: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Denied calls produce no side effects; approval is bound to exact arguments.
+- [ ] MCP versions, discovery and authorization boundaries: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Workflow versus agent experiment
+
+A product builder needs evidence that autonomy helps a task.
+
+**Data:** Use 20 document-routing cases and fixed decision fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A deterministic workflow versus bounded-planner benchmark.
+
+**Effort:** 16h · Intermediate
+
+- **MCP versions, discovery and authorization boundaries:** Extend the project with MCP versions, discovery and authorization boundaries in Workflow versus agent experiment. Adapt this focused lab to the project data: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.  Required concepts: Version pinning, Capability discovery, Transport boundaries, Authorization, Compatibility failures.
+  - Deliverable: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A deterministic workflow versus bounded-planner benchmark. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · MCP versions, discovery and authorization boundaries: MCP versions, discovery and authorization boundaries: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compare task success, tool count and failure behavior under identical cases.
+- [ ] MCP versions, discovery and authorization boundaries: Compare the current official MCP specification with the SDK version you use. Build recorded request/response contract tests for discovery, version mismatch, invalid arguments and denied authorization; document the exact supported version.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Stage checkpoint
+
+<a id="checkpoint-agents"></a>
+
+### Bounded tools checkpoint
+
+Demonstrate readiness through a reproducible practical handoff. Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.
+
+**Priority:** Essential · **Study:** 1h · **Practice:** 6h
+
+**Prerequisites:** [Workflows, agent loops, planning and state](agents.md#agents-loops), [Tools, APIs, permissions and sandboxing](agents.md#agents-tools), [MCP host, client, server and transports](agents.md#agents-mcp), [MCP client connections, context security and testing](agents.md#agents-mcp-client), [Typed state, checkpoints and bounded execution graphs](agents.md#agents-state-machines), [MCP tool schemas, transport lifecycle and permission checks](agents.md#agents-mcp-contracts), [MCP versions, discovery and authorization boundaries](agents.md#agents-mcp-versioning) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Define the success contract:** Write observable checks before implementation so success is not just a plausible demonstration.
+  - Example: Turn this task into a numbered acceptance checklist: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.
+  - Videos:
+    - [RAG and MCP fundamentals — hands-on course](https://www.youtube.com/watch?v=I7_WXKhyGms) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Retrieval, MCP coordination and caching integration.
+      - Useful because: Connect knowledge retrieval with tool access while keeping permission checks in software.
+      - Watch for: Focus on define the success contract. Then reproduce the lesson example: Turn this task into a numbered acceptance checklist: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-and-mcp-fundamentals/
+    - [LangGraph — complete course for beginners](https://www.youtube.com/watch?v=jGg_1h0qzaM) · freeCodeCamp · Full tool course
+      - Explains: Graph state, nodes, workflows and agent applications.
+      - Useful because: Use it to understand orchestration; replace paid provider calls with local/recorded responses.
+      - Watch for: Focus on define the success contract. Then reproduce the lesson example: Turn this task into a numbered acceptance checklist: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-langgraph-and-build-conversational-ai-with-python/
+- [ ] **Reproduce the baseline:** Keep a simple reference output and deterministic inputs so changes can be compared honestly.
+  - Example: Run a fixed input twice and compare saved outputs with the documented baseline.
+  - Videos:
+    - [RAG and MCP fundamentals — hands-on course](https://www.youtube.com/watch?v=I7_WXKhyGms) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Retrieval, MCP coordination and caching integration.
+      - Useful because: Connect knowledge retrieval with tool access while keeping permission checks in software.
+      - Watch for: Focus on reproduce the baseline. Then reproduce the lesson example: Run a fixed input twice and compare saved outputs with the documented baseline.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-and-mcp-fundamentals/
+    - [LangGraph — complete course for beginners](https://www.youtube.com/watch?v=jGg_1h0qzaM) · freeCodeCamp · Full tool course
+      - Explains: Graph state, nodes, workflows and agent applications.
+      - Useful because: Use it to understand orchestration; replace paid provider calls with local/recorded responses.
+      - Watch for: Focus on reproduce the baseline. Then reproduce the lesson example: Run a fixed input twice and compare saved outputs with the documented baseline.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-langgraph-and-build-conversational-ai-with-python/
+- [ ] **Test a failure boundary:** A working happy path does not establish robustness to malformed data or dependency failures.
+  - Example: Inject one malformed input and one controlled failure, then record the resulting state.
+  - Videos:
+    - [RAG and MCP fundamentals — hands-on course](https://www.youtube.com/watch?v=I7_WXKhyGms) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Retrieval, MCP coordination and caching integration.
+      - Useful because: Connect knowledge retrieval with tool access while keeping permission checks in software.
+      - Watch for: Focus on test a failure boundary. Then reproduce the lesson example: Inject one malformed input and one controlled failure, then record the resulting state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-and-mcp-fundamentals/
+    - [LangGraph — complete course for beginners](https://www.youtube.com/watch?v=jGg_1h0qzaM) · freeCodeCamp · Full tool course
+      - Explains: Graph state, nodes, workflows and agent applications.
+      - Useful because: Use it to understand orchestration; replace paid provider calls with local/recorded responses.
+      - Watch for: Focus on test a failure boundary. Then reproduce the lesson example: Inject one malformed input and one controlled failure, then record the resulting state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-langgraph-and-build-conversational-ai-with-python/
+- [ ] **Explain the decisions:** Describe why each technique was chosen and what evidence would make you choose differently.
+  - Example: Write a short decision note comparing the chosen approach with one simpler alternative.
+  - Videos:
+    - [RAG and MCP fundamentals — hands-on course](https://www.youtube.com/watch?v=I7_WXKhyGms) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Retrieval, MCP coordination and caching integration.
+      - Useful because: Connect knowledge retrieval with tool access while keeping permission checks in software.
+      - Watch for: Focus on explain the decisions. Then reproduce the lesson example: Write a short decision note comparing the chosen approach with one simpler alternative.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-and-mcp-fundamentals/
+    - [LangGraph — complete course for beginners](https://www.youtube.com/watch?v=jGg_1h0qzaM) · freeCodeCamp · Full tool course
+      - Explains: Graph state, nodes, workflows and agent applications.
+      - Useful because: Use it to understand orchestration; replace paid provider calls with local/recorded responses.
+      - Watch for: Focus on explain the decisions. Then reproduce the lesson example: Write a short decision note comparing the chosen approach with one simpler alternative.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-langgraph-and-build-conversational-ai-with-python/
+- [ ] **Hand off the evidence:** Another learner must be able to reproduce the result from your instructions and supplied inputs.
+  - Example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+  - Videos:
+    - [RAG and MCP fundamentals — hands-on course](https://www.youtube.com/watch?v=I7_WXKhyGms) · freeCodeCamp · Full course · approximately 2h
+      - Explains: Retrieval, MCP coordination and caching integration.
+      - Useful because: Connect knowledge retrieval with tool access while keeping permission checks in software.
+      - Watch for: Focus on hand off the evidence. Then reproduce the lesson example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-rag-and-mcp-fundamentals/
+    - [LangGraph — complete course for beginners](https://www.youtube.com/watch?v=jGg_1h0qzaM) · freeCodeCamp · Full tool course
+      - Explains: Graph state, nodes, workflows and agent applications.
+      - Useful because: Use it to understand orchestration; replace paid provider calls with local/recorded responses.
+      - Watch for: Focus on hand off the evidence. Then reproduce the lesson example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-langgraph-and-build-conversational-ai-with-python/
+
+#### YouTube: focused explanations and full courses
+
+- [RAG and MCP fundamentals — hands-on course](https://www.youtube.com/watch?v=I7_WXKhyGms) · freeCodeCamp · Full course · approximately 2h
+  - Explains: Retrieval, MCP coordination and caching integration.
+  - Useful because: Connect knowledge retrieval with tool access while keeping permission checks in software.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-rag-and-mcp-fundamentals/
+- [OWASP LLM01 — prompt injection](https://www.youtube.com/watch?v=dq5jD_qE1Cg) · Vandana Verma · Security explanation
+  - Explains: Direct/indirect prompt injection and application trust boundaries.
+  - Useful because: Design malicious-input tests rather than assuming a prompt alone enforces permissions.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=dq5jD_qE1Cg
+- [LangGraph — complete course for beginners](https://www.youtube.com/watch?v=jGg_1h0qzaM) · freeCodeCamp · Full tool course
+  - Explains: Graph state, nodes, workflows and agent applications.
+  - Useful because: Use it to understand orchestration; replace paid provider calls with local/recorded responses.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-langgraph-and-build-conversational-ai-with-python/
+
+#### Free written resources
+
+1. [Official reference: MCP versions, discovery and authorization boundaries](https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+2. [MCP: architecture](https://modelcontextprotocol.io/docs/learn/architecture) — Free; no registration required. No paid materials required.
+
+#### Bounded tools checkpoint
+
+Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.
+
+**Deliverables**
+
+- Runnable project and reproducible input fixtures
+- README, results and decision notes
+- Failure evidence and clean-start instructions
+
+**Completion checks**
+
+- [ ] Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.
+- [ ] Explain the code and results without relying on an AI-generated summary.
+- [ ] A teammate can reproduce the demo without paid credentials.
+
+#### Ten project recommendations
+
+### Human review state machine
+
+A reviewer needs risky actions paused until a decision is recorded.
+
+**Data:** Use fictional content-publication requests and reviewer decisions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A draft, review, approved and rejected workflow.
+
+**Effort:** 16h · Intermediate
+
+- **Bounded tools checkpoint:** Extend the project with Bounded tools checkpoint in Human review state machine. Adapt this focused lab to the project data: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A draft, review, approved and rejected workflow. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bounded tools checkpoint: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject invalid transitions and stale approvals after draft changes.
+- [ ] Bounded tools checkpoint: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Bounded research workflow
+
+A learner needs an assistant that can search and stop predictably.
+
+**Data:** Use ten local notes and recorded planning outputs. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A stateful search, summarize and review loop.
+
+**Effort:** 16h · Intermediate
+
+- **Bounded tools checkpoint:** Extend the project with Bounded tools checkpoint in Bounded research workflow. Adapt this focused lab to the project data: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A stateful search, summarize and review loop. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bounded tools checkpoint: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Stop at the step budget and cite only retrieved sources.
+- [ ] Bounded tools checkpoint: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Agent failure replay studio
+
+A maintainer needs reproducible debugging of tool errors.
+
+**Data:** Record 12 tool traces with timeouts, malformed outputs and retryable errors. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A deterministic replay and failure classification tool.
+
+**Effort:** 16h · Intermediate
+
+- **Bounded tools checkpoint:** Extend the project with Bounded tools checkpoint in Agent failure replay studio. Adapt this focused lab to the project data: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A deterministic replay and failure classification tool. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bounded tools checkpoint: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Replay without external side effects and cap retries.
+- [ ] Bounded tools checkpoint: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### MCP client capability explorer
+
+A learner needs to inspect and call server tools safely.
+
+**Data:** Use a local deterministic MCP test server. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A capability browser and bounded tool caller.
+
+**Effort:** 16h · Intermediate
+
+- **Bounded tools checkpoint:** Extend the project with Bounded tools checkpoint in MCP client capability explorer. Adapt this focused lab to the project data: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A capability browser and bounded tool caller. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bounded tools checkpoint: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Handle server disconnects and unsupported capabilities explicitly.
+- [ ] Bounded tools checkpoint: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Read-only notes MCP server
+
+A learner needs a small MCP server with useful contracts.
+
+**Data:** Use ten local text notes with stable IDs. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A search/read server and an example client transcript.
+
+**Effort:** 16h · Intermediate
+
+- **Bounded tools checkpoint:** Extend the project with Bounded tools checkpoint in Read-only notes MCP server. Adapt this focused lab to the project data: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A search/read server and an example client transcript. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bounded tools checkpoint: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Validate arguments, reject path traversal and test unknown tool errors.
+- [ ] Bounded tools checkpoint: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Agent memory provenance ledger
+
+A learner needs to distinguish trusted facts from conversation summaries.
+
+**Data:** Create 30 events with sources, timestamps and corrections. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A scoped memory store with expiration and correction history.
+
+**Effort:** 16h · Intermediate
+
+- **Bounded tools checkpoint:** Extend the project with Bounded tools checkpoint in Agent memory provenance ledger. Adapt this focused lab to the project data: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A scoped memory store with expiration and correction history. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bounded tools checkpoint: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Expired or cross-user entries cannot be retrieved.
+- [ ] Bounded tools checkpoint: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Independent review coordinator
+
+A team needs independent checks before combining conclusions.
+
+**Data:** Use three deterministic reviewers for schema, evidence and policy. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A coordinator with separate review results and conflict handling.
+
+**Effort:** 16h · Intermediate
+
+- **Bounded tools checkpoint:** Extend the project with Bounded tools checkpoint in Independent review coordinator. Adapt this focused lab to the project data: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A coordinator with separate review results and conflict handling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bounded tools checkpoint: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Keep dissent visible and enforce a timeout per reviewer.
+- [ ] Bounded tools checkpoint: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Checkpoint recovery runner
+
+An operator needs to resume failed multi-step jobs safely.
+
+**Data:** Create five deterministic tasks and inject failures after checkpoints. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A durable local state machine with replay.
+
+**Effort:** 16h · Intermediate
+
+- **Bounded tools checkpoint:** Extend the project with Bounded tools checkpoint in Checkpoint recovery runner. Adapt this focused lab to the project data: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A durable local state machine with replay. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bounded tools checkpoint: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Resume without duplicating completed side effects.
+- [ ] Bounded tools checkpoint: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Tool permission gateway
+
+A developer needs a clear boundary between proposals and execution.
+
+**Data:** Create read, write and delete tool fixtures on a temporary folder. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A policy gate with dry-run and approval states.
+
+**Effort:** 16h · Intermediate
+
+- **Bounded tools checkpoint:** Extend the project with Bounded tools checkpoint in Tool permission gateway. Adapt this focused lab to the project data: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A policy gate with dry-run and approval states. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bounded tools checkpoint: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Denied calls produce no side effects; approval is bound to exact arguments.
+- [ ] Bounded tools checkpoint: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Workflow versus agent experiment
+
+A product builder needs evidence that autonomy helps a task.
+
+**Data:** Use 20 document-routing cases and fixed decision fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A deterministic workflow versus bounded-planner benchmark.
+
+**Effort:** 16h · Intermediate
+
+- **Bounded tools checkpoint:** Extend the project with Bounded tools checkpoint in Workflow versus agent experiment. Adapt this focused lab to the project data: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A deterministic workflow versus bounded-planner benchmark. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bounded tools checkpoint: Bounded tools checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compare task success, tool count and failure behavior under identical cases.
+- [ ] Bounded tools checkpoint: Create a read-only tool workflow with typed arguments, a call budget, authorization, recovery and a human review state. Pin the supported MCP version and test discovery and invalid-request contracts.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

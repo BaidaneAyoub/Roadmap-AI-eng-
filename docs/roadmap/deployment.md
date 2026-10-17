@@ -2,13 +2,13 @@
 
 Release reproducible services and observe their real behavior.
 
-## Main route · Step 7 of 8
+## Main route · Step 12 of 13
 
 **Goal:** Package and operate an AI service reliably within a small budget.
 
 **Stage checkpoint:** Run the API in Docker Compose with health checks, timeouts, logs and a documented rollback.
 
-Containerise the service, monitor failures and document rollback. Coding agents can help throughout the build.
+Containerize, monitor, recover and restore a reproducible local application.
 
 Follow the modules and lessons below at your pace. Finish each exercise, save your evidence and self-assessment, then continue. Completed and Already known count as completed; Skipped is reported separately. You can move ahead at any time.
 
@@ -22,7 +22,7 @@ Follow the modules and lessons below at your pace. Finish each exercise, save yo
 
 Package a service so its runtime can be reproduced on another machine.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [FastAPI routes, validation and OpenAPI](backend.md#fastapi), [Git, branches and pull requests](engineering.md#engineering-git) Navigation is unrestricted.
 
@@ -85,292 +85,292 @@ Containerize a local FastAPI health/prediction service, run as non-root and prov
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Reproducible inference container
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A teammate needs to start the same API on another machine.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Use a tiny local FastAPI app and generated request fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Docker images, containers and Dockerfiles:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Docker images, containers and Dockerfiles, explicitly apply Images and containers, Dockerfile, Runtime configuration.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Docker images, containers and Dockerfiles: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Docker images, containers and Dockerfiles: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Docker images, containers and Dockerfiles:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Docker images, containers and Dockerfiles, explicitly apply Images and containers, Dockerfile, Runtime configuration.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Docker images, containers and Dockerfiles: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Docker images, containers and Dockerfiles: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Docker images, containers and Dockerfiles:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Docker images, containers and Dockerfiles, explicitly apply Images and containers, Dockerfile, Runtime configuration.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Docker images, containers and Dockerfiles: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Docker images, containers and Dockerfiles: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A non-root Docker image with health check and smoke test.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Docker images, containers and Dockerfiles:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Docker images, containers and Dockerfiles, explicitly apply Images and containers, Dockerfile, Runtime configuration.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
+- **Docker images, containers and Dockerfiles:** Package the runnable project in Docker; define configuration, non-root execution and a health or CLI smoke check. Apply this to Reproducible inference container: A non-root Docker image with health check and smoke test. Focus: Images and containers, Dockerfile, Runtime configuration.
+  - Deliverable: Dockerfile, .dockerignore and reproducible run command
+  - Check: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Docker images, containers and Dockerfiles: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A non-root Docker image with health check and smoke test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Docker images, containers and Dockerfiles: Dockerfile, .dockerignore and reproducible run command
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Docker images, containers and Dockerfiles: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
+- [ ] Build cleanly, start on a configurable port and stop gracefully.
+- [ ] Docker images, containers and Dockerfiles: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Release rollback rehearsal
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A maintainer needs a tested escape from a broken release.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Build two local image versions, one with a failing health endpoint. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Docker images, containers and Dockerfiles:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Docker images, containers and Dockerfiles, explicitly apply Images and containers, Dockerfile, Runtime configuration.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Docker images, containers and Dockerfiles: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Docker images, containers and Dockerfiles: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A rollout checklist and executable local rollback drill.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Docker images, containers and Dockerfiles:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Docker images, containers and Dockerfiles, explicitly apply Images and containers, Dockerfile, Runtime configuration.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
+- **Docker images, containers and Dockerfiles:** Package the runnable project in Docker; define configuration, non-root execution and a health or CLI smoke check. Apply this to Release rollback rehearsal: A rollout checklist and executable local rollback drill. Focus: Images and containers, Dockerfile, Runtime configuration.
+  - Deliverable: Dockerfile, .dockerignore and reproducible run command
+  - Check: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Docker images, containers and Dockerfiles: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A rollout checklist and executable local rollback drill. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Docker images, containers and Dockerfiles: Dockerfile, .dockerignore and reproducible run command
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Docker images, containers and Dockerfiles: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
+- [ ] Restore healthy traffic and verify data compatibility after rollback.
+- [ ] Docker images, containers and Dockerfiles: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Validated prediction API
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A model builder needs a reliable inference boundary.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use bundled digits and a small saved baseline or deterministic test predictor. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Docker images, containers and Dockerfiles:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Docker images, containers and Dockerfiles, explicitly apply Images and containers, Dockerfile, Runtime configuration.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Docker images, containers and Dockerfiles: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Docker images, containers and Dockerfiles: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A FastAPI service with request/response schemas and health endpoint.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Docker images, containers and Dockerfiles:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Docker images, containers and Dockerfiles, explicitly apply Images and containers, Dockerfile, Runtime configuration.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
+- **Docker images, containers and Dockerfiles:** Package the runnable project in Docker; define configuration, non-root execution and a health or CLI smoke check. Apply this to Validated prediction API: A FastAPI service with request/response schemas and health endpoint. Focus: Images and containers, Dockerfile, Runtime configuration.
+  - Deliverable: Dockerfile, .dockerignore and reproducible run command
+  - Check: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Docker images, containers and Dockerfiles: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A FastAPI service with request/response schemas and health endpoint. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Docker images, containers and Dockerfiles: Dockerfile, .dockerignore and reproducible run command
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Docker images, containers and Dockerfiles: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
+- [ ] Reject bad shapes and test successful inference plus unavailable-model errors.
+- [ ] Docker images, containers and Dockerfiles: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Tiny digit recognition service
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A learner needs to compare classical and neural classification end to end.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use scikit-learn bundled 8 by 8 digits; no download needed. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A linear baseline, small PyTorch MLP, inference endpoint and container when selected.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Docker images, containers and Dockerfiles:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Docker images, containers and Dockerfiles, explicitly apply Images and containers, Dockerfile, Runtime configuration.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
+- **Docker images, containers and Dockerfiles:** Package the runnable project in Docker; define configuration, non-root execution and a health or CLI smoke check. Apply this to Tiny digit recognition service: A linear baseline, small PyTorch MLP, inference endpoint and container when selected. Focus: Images and containers, Dockerfile, Runtime configuration.
+  - Deliverable: Dockerfile, .dockerignore and reproducible run command
+  - Check: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Docker images, containers and Dockerfiles: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A linear baseline, small PyTorch MLP, inference endpoint and container when selected. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Docker images, containers and Dockerfiles: Dockerfile, .dockerignore and reproducible run command
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Docker images, containers and Dockerfiles: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
+- [ ] Report held-out accuracy, confusion matrix and CPU latency for both models.
+- [ ] Docker images, containers and Dockerfiles: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Support ticket model comparison
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A support lead needs category suggestions with human review for ambiguity.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Generate 180 labeled login, billing and setup tickets with paraphrases. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A classifier comparison, error slices and a review threshold.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Docker images, containers and Dockerfiles:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Docker images, containers and Dockerfiles, explicitly apply Images and containers, Dockerfile, Runtime configuration.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
+- **Docker images, containers and Dockerfiles:** Package the runnable project in Docker; define configuration, non-root execution and a health or CLI smoke check. Apply this to Support ticket model comparison: A classifier comparison, error slices and a review threshold. Focus: Images and containers, Dockerfile, Runtime configuration.
+  - Deliverable: Dockerfile, .dockerignore and reproducible run command
+  - Check: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Docker images, containers and Dockerfiles: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A classifier comparison, error slices and a review threshold. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Docker images, containers and Dockerfiles: Dockerfile, .dockerignore and reproducible run command
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Docker images, containers and Dockerfiles: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.
+- [ ] Hold out templates, compare a dummy baseline and report macro F1.
+- [ ] Docker images, containers and Dockerfiles: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Offline quality pipeline
+
+A team needs a repeatable test gate before packaging.
+
+**Data:** Use a small project with one deliberately failing test. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A CI configuration with local equivalent commands.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Docker images, containers and Dockerfiles:** Package the runnable project in Docker; define configuration, non-root execution and a health or CLI smoke check. Apply this to Offline quality pipeline: A CI configuration with local equivalent commands. Focus: Images and containers, Dockerfile, Runtime configuration.
+  - Deliverable: Dockerfile, .dockerignore and reproducible run command
+  - Check: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A CI configuration with local equivalent commands. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Docker images, containers and Dockerfiles: Dockerfile, .dockerignore and reproducible run command
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] The gate fails on the broken test and produces a versioned artifact only on success.
+- [ ] Docker images, containers and Dockerfiles: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### API and database Compose lab
+
+A developer needs reproducible service networking and persistence.
+
+**Data:** Seed a local PostgreSQL database with fictional tasks. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A Compose stack with isolated services and persistent data.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Docker images, containers and Dockerfiles:** Package the runnable project in Docker; define configuration, non-root execution and a health or CLI smoke check. Apply this to API and database Compose lab: A Compose stack with isolated services and persistent data. Focus: Images and containers, Dockerfile, Runtime configuration.
+  - Deliverable: Dockerfile, .dockerignore and reproducible run command
+  - Check: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A Compose stack with isolated services and persistent data. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Docker images, containers and Dockerfiles: Dockerfile, .dockerignore and reproducible run command
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Restart containers without losing rows; API connects by service name.
+- [ ] Docker images, containers and Dockerfiles: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Local inference efficiency ledger
+
+A learner needs to compare caching and batching tradeoffs.
+
+**Data:** Use repeated generated requests and a tiny CPU model. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A benchmark of cached, uncached and batched inference.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Docker images, containers and Dockerfiles:** Package the runnable project in Docker; define configuration, non-root execution and a health or CLI smoke check. Apply this to Local inference efficiency ledger: A benchmark of cached, uncached and batched inference. Focus: Images and containers, Dockerfile, Runtime configuration.
+  - Deliverable: Dockerfile, .dockerignore and reproducible run command
+  - Check: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A benchmark of cached, uncached and batched inference. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Docker images, containers and Dockerfiles: Dockerfile, .dockerignore and reproducible run command
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report cache hit rate, memory and latency; verify outputs remain equivalent.
+- [ ] Docker images, containers and Dockerfiles: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Service capacity envelope
+
+A builder needs to understand throughput on their own machine.
+
+**Data:** Use a deterministic local endpoint and bounded load generator. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A latency/throughput curve and saturation report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Docker images, containers and Dockerfiles:** Package the runnable project in Docker; define configuration, non-root execution and a health or CLI smoke check. Apply this to Service capacity envelope: A latency/throughput curve and saturation report. Focus: Images and containers, Dockerfile, Runtime configuration.
+  - Deliverable: Dockerfile, .dockerignore and reproducible run command
+  - Check: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A latency/throughput curve and saturation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Docker images, containers and Dockerfiles: Dockerfile, .dockerignore and reproducible run command
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report p50/p95, errors and machine specs without generalizing to production.
+- [ ] Docker images, containers and Dockerfiles: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Idempotent background worker
+
+An operator needs safe retry of failed jobs.
+
+**Data:** Generate 50 local jobs and injected transient failures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A queue worker with bounded retries and dead-letter records.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Docker images, containers and Dockerfiles:** Package the runnable project in Docker; define configuration, non-root execution and a health or CLI smoke check. Apply this to Idempotent background worker: A queue worker with bounded retries and dead-letter records. Focus: Images and containers, Dockerfile, Runtime configuration.
+  - Deliverable: Dockerfile, .dockerignore and reproducible run command
+  - Check: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A queue worker with bounded retries and dead-letter records. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Docker images, containers and Dockerfiles: Dockerfile, .dockerignore and reproducible run command
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Duplicate delivery never duplicates the final output.
+- [ ] Docker images, containers and Dockerfiles: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -384,7 +384,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Connect services while preserving data across container replacement.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Docker images, containers and Dockerfiles](deployment.md#docker) Navigation is unrestricted.
 
@@ -447,292 +447,292 @@ Create a Compose API/database setup with a named volume and health checks; verif
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### API and database Compose lab
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A developer needs reproducible service networking and persistence.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Seed a local PostgreSQL database with fictional tasks. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Volumes, networks and Docker Compose:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Volumes, networks and Docker Compose, explicitly apply Volumes, Networks, Compose.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Volumes, networks and Docker Compose: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Volumes, networks and Docker Compose: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Volumes, networks and Docker Compose:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Volumes, networks and Docker Compose, explicitly apply Volumes, Networks, Compose.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Volumes, networks and Docker Compose: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Volumes, networks and Docker Compose: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Volumes, networks and Docker Compose:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Volumes, networks and Docker Compose, explicitly apply Volumes, Networks, Compose.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Volumes, networks and Docker Compose: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Volumes, networks and Docker Compose: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A Compose stack with isolated services and persistent data.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Volumes, networks and Docker Compose:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Volumes, networks and Docker Compose, explicitly apply Volumes, Networks, Compose.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
+- **Volumes, networks and Docker Compose:** Connect the project service and its local dependency through Docker Compose with service-name networking and persistent volumes. Apply this to API and database Compose lab: A Compose stack with isolated services and persistent data. Focus: Volumes, Networks, Compose.
+  - Deliverable: Compose file, seed command and operational README
+  - Check: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Volumes, networks and Docker Compose: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A Compose stack with isolated services and persistent data. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Volumes, networks and Docker Compose: Compose file, seed command and operational README
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Volumes, networks and Docker Compose: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
+- [ ] Restart containers without losing rows; API connects by service name.
+- [ ] Volumes, networks and Docker Compose: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Offline quality pipeline
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A team needs a repeatable test gate before packaging.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Use a small project with one deliberately failing test. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Volumes, networks and Docker Compose:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Volumes, networks and Docker Compose, explicitly apply Volumes, Networks, Compose.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Volumes, networks and Docker Compose: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Volumes, networks and Docker Compose: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A CI configuration with local equivalent commands.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Volumes, networks and Docker Compose:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Volumes, networks and Docker Compose, explicitly apply Volumes, Networks, Compose.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
+- **Volumes, networks and Docker Compose:** Connect the project service and its local dependency through Docker Compose with service-name networking and persistent volumes. Apply this to Offline quality pipeline: A CI configuration with local equivalent commands. Focus: Volumes, Networks, Compose.
+  - Deliverable: Compose file, seed command and operational README
+  - Check: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Volumes, networks and Docker Compose: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A CI configuration with local equivalent commands. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Volumes, networks and Docker Compose: Compose file, seed command and operational README
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Volumes, networks and Docker Compose: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
+- [ ] The gate fails on the broken test and produces a versioned artifact only on success.
+- [ ] Volumes, networks and Docker Compose: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Reproducible inference container
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A teammate needs to start the same API on another machine.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use a tiny local FastAPI app and generated request fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Volumes, networks and Docker Compose:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Volumes, networks and Docker Compose, explicitly apply Volumes, Networks, Compose.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Volumes, networks and Docker Compose: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Volumes, networks and Docker Compose: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A non-root Docker image with health check and smoke test.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Volumes, networks and Docker Compose:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Volumes, networks and Docker Compose, explicitly apply Volumes, Networks, Compose.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
+- **Volumes, networks and Docker Compose:** Connect the project service and its local dependency through Docker Compose with service-name networking and persistent volumes. Apply this to Reproducible inference container: A non-root Docker image with health check and smoke test. Focus: Volumes, Networks, Compose.
+  - Deliverable: Compose file, seed command and operational README
+  - Check: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Volumes, networks and Docker Compose: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A non-root Docker image with health check and smoke test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Volumes, networks and Docker Compose: Compose file, seed command and operational README
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Volumes, networks and Docker Compose: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
+- [ ] Build cleanly, start on a configurable port and stop gracefully.
+- [ ] Volumes, networks and Docker Compose: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Local inference efficiency ledger
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A learner needs to compare caching and batching tradeoffs.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use repeated generated requests and a tiny CPU model. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A benchmark of cached, uncached and batched inference.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Volumes, networks and Docker Compose:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Volumes, networks and Docker Compose, explicitly apply Volumes, Networks, Compose.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
+- **Volumes, networks and Docker Compose:** Connect the project service and its local dependency through Docker Compose with service-name networking and persistent volumes. Apply this to Local inference efficiency ledger: A benchmark of cached, uncached and batched inference. Focus: Volumes, Networks, Compose.
+  - Deliverable: Compose file, seed command and operational README
+  - Check: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Volumes, networks and Docker Compose: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A benchmark of cached, uncached and batched inference. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Volumes, networks and Docker Compose: Compose file, seed command and operational README
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Volumes, networks and Docker Compose: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
+- [ ] Report cache hit rate, memory and latency; verify outputs remain equivalent.
+- [ ] Volumes, networks and Docker Compose: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Service capacity envelope
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A builder needs to understand throughput on their own machine.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use a deterministic local endpoint and bounded load generator. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A latency/throughput curve and saturation report.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Volumes, networks and Docker Compose:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Volumes, networks and Docker Compose, explicitly apply Volumes, Networks, Compose.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
+- **Volumes, networks and Docker Compose:** Connect the project service and its local dependency through Docker Compose with service-name networking and persistent volumes. Apply this to Service capacity envelope: A latency/throughput curve and saturation report. Focus: Volumes, Networks, Compose.
+  - Deliverable: Compose file, seed command and operational README
+  - Check: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Volumes, networks and Docker Compose: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A latency/throughput curve and saturation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Volumes, networks and Docker Compose: Compose file, seed command and operational README
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Volumes, networks and Docker Compose: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.
+- [ ] Report p50/p95, errors and machine specs without generalizing to production.
+- [ ] Volumes, networks and Docker Compose: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Idempotent background worker
+
+An operator needs safe retry of failed jobs.
+
+**Data:** Generate 50 local jobs and injected transient failures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A queue worker with bounded retries and dead-letter records.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Volumes, networks and Docker Compose:** Connect the project service and its local dependency through Docker Compose with service-name networking and persistent volumes. Apply this to Idempotent background worker: A queue worker with bounded retries and dead-letter records. Focus: Volumes, Networks, Compose.
+  - Deliverable: Compose file, seed command and operational README
+  - Check: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A queue worker with bounded retries and dead-letter records. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Volumes, networks and Docker Compose: Compose file, seed command and operational README
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Duplicate delivery never duplicates the final output.
+- [ ] Volumes, networks and Docker Compose: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Release rollback rehearsal
+
+A maintainer needs a tested escape from a broken release.
+
+**Data:** Build two local image versions, one with a failing health endpoint. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A rollout checklist and executable local rollback drill.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Volumes, networks and Docker Compose:** Connect the project service and its local dependency through Docker Compose with service-name networking and persistent volumes. Apply this to Release rollback rehearsal: A rollout checklist and executable local rollback drill. Focus: Volumes, Networks, Compose.
+  - Deliverable: Compose file, seed command and operational README
+  - Check: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A rollout checklist and executable local rollback drill. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Volumes, networks and Docker Compose: Compose file, seed command and operational README
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Restore healthy traffic and verify data compatibility after rollback.
+- [ ] Volumes, networks and Docker Compose: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Reliability budget dashboard
+
+An operator needs meaningful availability and latency indicators.
+
+**Data:** Generate one day of synthetic request metrics with an outage. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SLO report with burn-rate alerts and investigation notes.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Volumes, networks and Docker Compose:** Connect the project service and its local dependency through Docker Compose with service-name networking and persistent volumes. Apply this to Reliability budget dashboard: An SLO report with burn-rate alerts and investigation notes. Focus: Volumes, Networks, Compose.
+  - Deliverable: Compose file, seed command and operational README
+  - Check: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SLO report with burn-rate alerts and investigation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Volumes, networks and Docker Compose: Compose file, seed command and operational README
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compute error budget correctly and distinguish missing telemetry from success.
+- [ ] Volumes, networks and Docker Compose: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Timeout budget simulator
+
+An engineer needs to prevent retry storms across dependent calls.
+
+**Data:** Create three local stubs with controllable delay and failure rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A timeout/retry budget experiment.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Volumes, networks and Docker Compose:** Connect the project service and its local dependency through Docker Compose with service-name networking and persistent volumes. Apply this to Timeout budget simulator: A timeout/retry budget experiment. Focus: Volumes, Networks, Compose.
+  - Deliverable: Compose file, seed command and operational README
+  - Check: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A timeout/retry budget experiment. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Volumes, networks and Docker Compose: Compose file, seed command and operational README
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Total request duration stays bounded and attempts stay below the configured cap.
+- [ ] Volumes, networks and Docker Compose: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Request trace investigation
+
+A maintainer needs to follow one request across components.
+
+**Data:** Generate requests with correlation IDs and seeded slow dependencies. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Structured logs and a local trace report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Volumes, networks and Docker Compose:** Connect the project service and its local dependency through Docker Compose with service-name networking and persistent volumes. Apply this to Request trace investigation: Structured logs and a local trace report. Focus: Volumes, Networks, Compose.
+  - Deliverable: Compose file, seed command and operational README
+  - Check: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Structured logs and a local trace report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Volumes, networks and Docker Compose: Compose file, seed command and operational README
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Trace each request end to end without logging secrets or full private payloads.
+- [ ] Volumes, networks and Docker Compose: Restart the stack without losing persisted records and test dependency unavailability. Create a Compose API/database setup with a named volume and health checks; verify data persistence and document a safe teardown that preserves the volume.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -746,7 +746,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Automate checks and preserve a safe path back to a working release.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Volumes, networks and Docker Compose](deployment.md#docker-compose) Navigation is unrestricted.
 
@@ -837,292 +837,292 @@ Write a GitHub Actions test/build workflow and rehearse two versioned local rele
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Offline quality pipeline
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A team needs a repeatable test gate before packaging.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Use a small project with one deliberately failing test. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **CI/CD, cloud deployment and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For CI/CD, cloud deployment and rollback, explicitly apply CI/CD, Cloud and infrastructure, Rollback and migrations.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD, cloud deployment and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] CI/CD, cloud deployment and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **CI/CD, cloud deployment and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For CI/CD, cloud deployment and rollback, explicitly apply CI/CD, Cloud and infrastructure, Rollback and migrations.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD, cloud deployment and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] CI/CD, cloud deployment and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **CI/CD, cloud deployment and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For CI/CD, cloud deployment and rollback, explicitly apply CI/CD, Cloud and infrastructure, Rollback and migrations.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD, cloud deployment and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] CI/CD, cloud deployment and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A CI configuration with local equivalent commands.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **CI/CD, cloud deployment and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For CI/CD, cloud deployment and rollback, explicitly apply CI/CD, Cloud and infrastructure, Rollback and migrations.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
+- **CI/CD, cloud deployment and rollback:** Implement CI/CD, cloud deployment and rollback in Offline quality pipeline. Adapt this focused lab to the project data: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.  Required concepts: CI/CD, Cloud and infrastructure, Rollback and migrations.
+  - Deliverable: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD, cloud deployment and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A CI configuration with local equivalent commands. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD, cloud deployment and rollback: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] CI/CD, cloud deployment and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
+- [ ] The gate fails on the broken test and produces a versioned artifact only on success.
+- [ ] CI/CD, cloud deployment and rollback: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Release rollback rehearsal
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A maintainer needs a tested escape from a broken release.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Build two local image versions, one with a failing health endpoint. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **CI/CD, cloud deployment and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For CI/CD, cloud deployment and rollback, explicitly apply CI/CD, Cloud and infrastructure, Rollback and migrations.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD, cloud deployment and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] CI/CD, cloud deployment and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A rollout checklist and executable local rollback drill.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **CI/CD, cloud deployment and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For CI/CD, cloud deployment and rollback, explicitly apply CI/CD, Cloud and infrastructure, Rollback and migrations.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
+- **CI/CD, cloud deployment and rollback:** Implement CI/CD, cloud deployment and rollback in Release rollback rehearsal. Adapt this focused lab to the project data: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.  Required concepts: CI/CD, Cloud and infrastructure, Rollback and migrations.
+  - Deliverable: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD, cloud deployment and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A rollout checklist and executable local rollback drill. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD, cloud deployment and rollback: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] CI/CD, cloud deployment and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
+- [ ] Restore healthy traffic and verify data compatibility after rollback.
+- [ ] CI/CD, cloud deployment and rollback: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### API and database Compose lab
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A developer needs reproducible service networking and persistence.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Seed a local PostgreSQL database with fictional tasks. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **CI/CD, cloud deployment and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For CI/CD, cloud deployment and rollback, explicitly apply CI/CD, Cloud and infrastructure, Rollback and migrations.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD, cloud deployment and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] CI/CD, cloud deployment and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A Compose stack with isolated services and persistent data.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **CI/CD, cloud deployment and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For CI/CD, cloud deployment and rollback, explicitly apply CI/CD, Cloud and infrastructure, Rollback and migrations.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
+- **CI/CD, cloud deployment and rollback:** Extend the project with CI/CD, cloud deployment and rollback in API and database Compose lab. Adapt this focused lab to the project data: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.  Required concepts: CI/CD, Cloud and infrastructure, Rollback and migrations.
+  - Deliverable: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD, cloud deployment and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A Compose stack with isolated services and persistent data. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD, cloud deployment and rollback: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] CI/CD, cloud deployment and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
+- [ ] Restart containers without losing rows; API connects by service name.
+- [ ] CI/CD, cloud deployment and rollback: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Reproducible inference container
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A teammate needs to start the same API on another machine.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use a tiny local FastAPI app and generated request fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A non-root Docker image with health check and smoke test.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **CI/CD, cloud deployment and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For CI/CD, cloud deployment and rollback, explicitly apply CI/CD, Cloud and infrastructure, Rollback and migrations.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
+- **CI/CD, cloud deployment and rollback:** Extend the project with CI/CD, cloud deployment and rollback in Reproducible inference container. Adapt this focused lab to the project data: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.  Required concepts: CI/CD, Cloud and infrastructure, Rollback and migrations.
+  - Deliverable: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD, cloud deployment and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A non-root Docker image with health check and smoke test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD, cloud deployment and rollback: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] CI/CD, cloud deployment and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
+- [ ] Build cleanly, start on a configurable port and stop gracefully.
+- [ ] CI/CD, cloud deployment and rollback: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Local inference efficiency ledger
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A learner needs to compare caching and batching tradeoffs.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use repeated generated requests and a tiny CPU model. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A benchmark of cached, uncached and batched inference.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **CI/CD, cloud deployment and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For CI/CD, cloud deployment and rollback, explicitly apply CI/CD, Cloud and infrastructure, Rollback and migrations.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
+- **CI/CD, cloud deployment and rollback:** Extend the project with CI/CD, cloud deployment and rollback in Local inference efficiency ledger. Adapt this focused lab to the project data: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.  Required concepts: CI/CD, Cloud and infrastructure, Rollback and migrations.
+  - Deliverable: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] CI/CD, cloud deployment and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A benchmark of cached, uncached and batched inference. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD, cloud deployment and rollback: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] CI/CD, cloud deployment and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.
+- [ ] Report cache hit rate, memory and latency; verify outputs remain equivalent.
+- [ ] CI/CD, cloud deployment and rollback: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Service capacity envelope
+
+A builder needs to understand throughput on their own machine.
+
+**Data:** Use a deterministic local endpoint and bounded load generator. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A latency/throughput curve and saturation report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **CI/CD, cloud deployment and rollback:** Extend the project with CI/CD, cloud deployment and rollback in Service capacity envelope. Adapt this focused lab to the project data: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.  Required concepts: CI/CD, Cloud and infrastructure, Rollback and migrations.
+  - Deliverable: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A latency/throughput curve and saturation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD, cloud deployment and rollback: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report p50/p95, errors and machine specs without generalizing to production.
+- [ ] CI/CD, cloud deployment and rollback: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Idempotent background worker
+
+An operator needs safe retry of failed jobs.
+
+**Data:** Generate 50 local jobs and injected transient failures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A queue worker with bounded retries and dead-letter records.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **CI/CD, cloud deployment and rollback:** Extend the project with CI/CD, cloud deployment and rollback in Idempotent background worker. Adapt this focused lab to the project data: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.  Required concepts: CI/CD, Cloud and infrastructure, Rollback and migrations.
+  - Deliverable: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A queue worker with bounded retries and dead-letter records. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD, cloud deployment and rollback: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Duplicate delivery never duplicates the final output.
+- [ ] CI/CD, cloud deployment and rollback: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Reliability budget dashboard
+
+An operator needs meaningful availability and latency indicators.
+
+**Data:** Generate one day of synthetic request metrics with an outage. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SLO report with burn-rate alerts and investigation notes.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **CI/CD, cloud deployment and rollback:** Extend the project with CI/CD, cloud deployment and rollback in Reliability budget dashboard. Adapt this focused lab to the project data: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.  Required concepts: CI/CD, Cloud and infrastructure, Rollback and migrations.
+  - Deliverable: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SLO report with burn-rate alerts and investigation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD, cloud deployment and rollback: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compute error budget correctly and distinguish missing telemetry from success.
+- [ ] CI/CD, cloud deployment and rollback: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Timeout budget simulator
+
+An engineer needs to prevent retry storms across dependent calls.
+
+**Data:** Create three local stubs with controllable delay and failure rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A timeout/retry budget experiment.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **CI/CD, cloud deployment and rollback:** Extend the project with CI/CD, cloud deployment and rollback in Timeout budget simulator. Adapt this focused lab to the project data: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.  Required concepts: CI/CD, Cloud and infrastructure, Rollback and migrations.
+  - Deliverable: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A timeout/retry budget experiment. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD, cloud deployment and rollback: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Total request duration stays bounded and attempts stay below the configured cap.
+- [ ] CI/CD, cloud deployment and rollback: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Request trace investigation
+
+A maintainer needs to follow one request across components.
+
+**Data:** Generate requests with correlation IDs and seeded slow dependencies. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Structured logs and a local trace report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **CI/CD, cloud deployment and rollback:** Extend the project with CI/CD, cloud deployment and rollback in Request trace investigation. Adapt this focused lab to the project data: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.  Required concepts: CI/CD, Cloud and infrastructure, Rollback and migrations.
+  - Deliverable: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Structured logs and a local trace report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · CI/CD, cloud deployment and rollback: CI/CD, cloud deployment and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Trace each request end to end without logging secrets or full private payloads.
+- [ ] CI/CD, cloud deployment and rollback: Write a GitHub Actions test/build workflow and rehearse two versioned local releases with a rollback; document free-tier deployment settings without opening a paid subscription.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1136,7 +1136,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Handle slow jobs and unreliable dependencies without duplicate work.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [CI/CD, cloud deployment and rollback](deployment.md#deployment-cicd) Navigation is unrestricted.
 
@@ -1227,292 +1227,292 @@ Implement a local SQLite-backed job queue with one worker, bounded retries, time
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Timeout budget simulator
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+An engineer needs to prevent retry storms across dependent calls.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Create three local stubs with controllable delay and failure rates. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Queues, async processing, retries and timeouts:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Queues, async processing, retries and timeouts, explicitly apply Queues, Retries and idempotency, Timeouts and caching.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Queues, async processing, retries and timeouts: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Queues, async processing, retries and timeouts: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Queues, async processing, retries and timeouts:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Queues, async processing, retries and timeouts, explicitly apply Queues, Retries and idempotency, Timeouts and caching.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Queues, async processing, retries and timeouts: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Queues, async processing, retries and timeouts: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Queues, async processing, retries and timeouts:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Queues, async processing, retries and timeouts, explicitly apply Queues, Retries and idempotency, Timeouts and caching.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Queues, async processing, retries and timeouts: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Queues, async processing, retries and timeouts: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A timeout/retry budget experiment.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Queues, async processing, retries and timeouts:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Queues, async processing, retries and timeouts, explicitly apply Queues, Retries and idempotency, Timeouts and caching.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
+- **Queues, async processing, retries and timeouts:** Implement Queues, async processing, retries and timeouts in Timeout budget simulator. Adapt this focused lab to the project data: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.  Required concepts: Queues, Retries and idempotency, Timeouts and caching.
+  - Deliverable: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Queues, async processing, retries and timeouts: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A timeout/retry budget experiment. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Queues, async processing, retries and timeouts: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Queues, async processing, retries and timeouts: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
+- [ ] Total request duration stays bounded and attempts stay below the configured cap.
+- [ ] Queues, async processing, retries and timeouts: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Offline quality pipeline
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A team needs a repeatable test gate before packaging.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Use a small project with one deliberately failing test. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Queues, async processing, retries and timeouts:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Queues, async processing, retries and timeouts, explicitly apply Queues, Retries and idempotency, Timeouts and caching.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Queues, async processing, retries and timeouts: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Queues, async processing, retries and timeouts: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A CI configuration with local equivalent commands.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Queues, async processing, retries and timeouts:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Queues, async processing, retries and timeouts, explicitly apply Queues, Retries and idempotency, Timeouts and caching.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
+- **Queues, async processing, retries and timeouts:** Extend the project with Queues, async processing, retries and timeouts in Offline quality pipeline. Adapt this focused lab to the project data: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.  Required concepts: Queues, Retries and idempotency, Timeouts and caching.
+  - Deliverable: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Queues, async processing, retries and timeouts: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A CI configuration with local equivalent commands. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Queues, async processing, retries and timeouts: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Queues, async processing, retries and timeouts: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
+- [ ] The gate fails on the broken test and produces a versioned artifact only on success.
+- [ ] Queues, async processing, retries and timeouts: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### API and database Compose lab
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A developer needs reproducible service networking and persistence.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Seed a local PostgreSQL database with fictional tasks. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Queues, async processing, retries and timeouts:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Queues, async processing, retries and timeouts, explicitly apply Queues, Retries and idempotency, Timeouts and caching.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Queues, async processing, retries and timeouts: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Queues, async processing, retries and timeouts: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A Compose stack with isolated services and persistent data.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Queues, async processing, retries and timeouts:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Queues, async processing, retries and timeouts, explicitly apply Queues, Retries and idempotency, Timeouts and caching.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
+- **Queues, async processing, retries and timeouts:** Extend the project with Queues, async processing, retries and timeouts in API and database Compose lab. Adapt this focused lab to the project data: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.  Required concepts: Queues, Retries and idempotency, Timeouts and caching.
+  - Deliverable: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Queues, async processing, retries and timeouts: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A Compose stack with isolated services and persistent data. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Queues, async processing, retries and timeouts: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Queues, async processing, retries and timeouts: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
+- [ ] Restart containers without losing rows; API connects by service name.
+- [ ] Queues, async processing, retries and timeouts: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Reproducible inference container
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A teammate needs to start the same API on another machine.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use a tiny local FastAPI app and generated request fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A non-root Docker image with health check and smoke test.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Queues, async processing, retries and timeouts:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Queues, async processing, retries and timeouts, explicitly apply Queues, Retries and idempotency, Timeouts and caching.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
+- **Queues, async processing, retries and timeouts:** Extend the project with Queues, async processing, retries and timeouts in Reproducible inference container. Adapt this focused lab to the project data: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.  Required concepts: Queues, Retries and idempotency, Timeouts and caching.
+  - Deliverable: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Queues, async processing, retries and timeouts: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A non-root Docker image with health check and smoke test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Queues, async processing, retries and timeouts: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Queues, async processing, retries and timeouts: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
+- [ ] Build cleanly, start on a configurable port and stop gracefully.
+- [ ] Queues, async processing, retries and timeouts: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Local inference efficiency ledger
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A learner needs to compare caching and batching tradeoffs.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use repeated generated requests and a tiny CPU model. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A benchmark of cached, uncached and batched inference.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Queues, async processing, retries and timeouts:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Queues, async processing, retries and timeouts, explicitly apply Queues, Retries and idempotency, Timeouts and caching.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
+- **Queues, async processing, retries and timeouts:** Extend the project with Queues, async processing, retries and timeouts in Local inference efficiency ledger. Adapt this focused lab to the project data: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.  Required concepts: Queues, Retries and idempotency, Timeouts and caching.
+  - Deliverable: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Queues, async processing, retries and timeouts: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A benchmark of cached, uncached and batched inference. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Queues, async processing, retries and timeouts: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Queues, async processing, retries and timeouts: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.
+- [ ] Report cache hit rate, memory and latency; verify outputs remain equivalent.
+- [ ] Queues, async processing, retries and timeouts: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Service capacity envelope
+
+A builder needs to understand throughput on their own machine.
+
+**Data:** Use a deterministic local endpoint and bounded load generator. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A latency/throughput curve and saturation report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Queues, async processing, retries and timeouts:** Extend the project with Queues, async processing, retries and timeouts in Service capacity envelope. Adapt this focused lab to the project data: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.  Required concepts: Queues, Retries and idempotency, Timeouts and caching.
+  - Deliverable: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A latency/throughput curve and saturation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Queues, async processing, retries and timeouts: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report p50/p95, errors and machine specs without generalizing to production.
+- [ ] Queues, async processing, retries and timeouts: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Idempotent background worker
+
+An operator needs safe retry of failed jobs.
+
+**Data:** Generate 50 local jobs and injected transient failures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A queue worker with bounded retries and dead-letter records.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Queues, async processing, retries and timeouts:** Extend the project with Queues, async processing, retries and timeouts in Idempotent background worker. Adapt this focused lab to the project data: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.  Required concepts: Queues, Retries and idempotency, Timeouts and caching.
+  - Deliverable: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A queue worker with bounded retries and dead-letter records. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Queues, async processing, retries and timeouts: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Duplicate delivery never duplicates the final output.
+- [ ] Queues, async processing, retries and timeouts: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Release rollback rehearsal
+
+A maintainer needs a tested escape from a broken release.
+
+**Data:** Build two local image versions, one with a failing health endpoint. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A rollout checklist and executable local rollback drill.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Queues, async processing, retries and timeouts:** Extend the project with Queues, async processing, retries and timeouts in Release rollback rehearsal. Adapt this focused lab to the project data: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.  Required concepts: Queues, Retries and idempotency, Timeouts and caching.
+  - Deliverable: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A rollout checklist and executable local rollback drill. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Queues, async processing, retries and timeouts: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Restore healthy traffic and verify data compatibility after rollback.
+- [ ] Queues, async processing, retries and timeouts: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Reliability budget dashboard
+
+An operator needs meaningful availability and latency indicators.
+
+**Data:** Generate one day of synthetic request metrics with an outage. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SLO report with burn-rate alerts and investigation notes.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Queues, async processing, retries and timeouts:** Extend the project with Queues, async processing, retries and timeouts in Reliability budget dashboard. Adapt this focused lab to the project data: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.  Required concepts: Queues, Retries and idempotency, Timeouts and caching.
+  - Deliverable: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SLO report with burn-rate alerts and investigation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Queues, async processing, retries and timeouts: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compute error budget correctly and distinguish missing telemetry from success.
+- [ ] Queues, async processing, retries and timeouts: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Request trace investigation
+
+A maintainer needs to follow one request across components.
+
+**Data:** Generate requests with correlation IDs and seeded slow dependencies. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Structured logs and a local trace report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Queues, async processing, retries and timeouts:** Extend the project with Queues, async processing, retries and timeouts in Request trace investigation. Adapt this focused lab to the project data: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.  Required concepts: Queues, Retries and idempotency, Timeouts and caching.
+  - Deliverable: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Structured logs and a local trace report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Queues, async processing, retries and timeouts: Queues, async processing, retries and timeouts: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Trace each request end to end without logging secrets or full private payloads.
+- [ ] Queues, async processing, retries and timeouts: Implement a local SQLite-backed job queue with one worker, bounded retries, timeout handling and idempotent document processing; inject a worker restart.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1526,7 +1526,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Find failures using evidence and define actionable recovery steps.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Queues, async processing, retries and timeouts](deployment.md#deployment-queues) Navigation is unrestricted.
 
@@ -1617,292 +1617,292 @@ Instrument a local service with structured logs and latency counters; simulate a
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Request trace investigation
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A maintainer needs to follow one request across components.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Generate requests with correlation IDs and seeded slow dependencies. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Logging, tracing, monitoring, alerts and incidents:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Logging, tracing, monitoring, alerts and incidents, explicitly apply Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Logging, tracing, monitoring, alerts and incidents: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Logging, tracing, monitoring, alerts and incidents:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Logging, tracing, monitoring, alerts and incidents, explicitly apply Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Logging, tracing, monitoring, alerts and incidents: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Logging, tracing, monitoring, alerts and incidents:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Logging, tracing, monitoring, alerts and incidents, explicitly apply Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Logging, tracing, monitoring, alerts and incidents: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** Structured logs and a local trace report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Logging, tracing, monitoring, alerts and incidents:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Logging, tracing, monitoring, alerts and incidents, explicitly apply Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
+- **Logging, tracing, monitoring, alerts and incidents:** Implement Logging, tracing, monitoring, alerts and incidents in Request trace investigation. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Logging, tracing, monitoring, alerts and incidents: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Structured logs and a local trace report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
+- [ ] Trace each request end to end without logging secrets or full private payloads.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Offline quality pipeline
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A team needs a repeatable test gate before packaging.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Use a small project with one deliberately failing test. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Logging, tracing, monitoring, alerts and incidents:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Logging, tracing, monitoring, alerts and incidents, explicitly apply Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Logging, tracing, monitoring, alerts and incidents: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A CI configuration with local equivalent commands.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Logging, tracing, monitoring, alerts and incidents:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Logging, tracing, monitoring, alerts and incidents, explicitly apply Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
+- **Logging, tracing, monitoring, alerts and incidents:** Extend the project with Logging, tracing, monitoring, alerts and incidents in Offline quality pipeline. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Logging, tracing, monitoring, alerts and incidents: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A CI configuration with local equivalent commands. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
+- [ ] The gate fails on the broken test and produces a versioned artifact only on success.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### API and database Compose lab
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A developer needs reproducible service networking and persistence.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Seed a local PostgreSQL database with fictional tasks. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Logging, tracing, monitoring, alerts and incidents:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Logging, tracing, monitoring, alerts and incidents, explicitly apply Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Logging, tracing, monitoring, alerts and incidents: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A Compose stack with isolated services and persistent data.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Logging, tracing, monitoring, alerts and incidents:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Logging, tracing, monitoring, alerts and incidents, explicitly apply Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
+- **Logging, tracing, monitoring, alerts and incidents:** Extend the project with Logging, tracing, monitoring, alerts and incidents in API and database Compose lab. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Logging, tracing, monitoring, alerts and incidents: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A Compose stack with isolated services and persistent data. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
+- [ ] Restart containers without losing rows; API connects by service name.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Reproducible inference container
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A teammate needs to start the same API on another machine.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use a tiny local FastAPI app and generated request fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A non-root Docker image with health check and smoke test.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Logging, tracing, monitoring, alerts and incidents:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Logging, tracing, monitoring, alerts and incidents, explicitly apply Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
+- **Logging, tracing, monitoring, alerts and incidents:** Extend the project with Logging, tracing, monitoring, alerts and incidents in Reproducible inference container. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Logging, tracing, monitoring, alerts and incidents: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A non-root Docker image with health check and smoke test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
+- [ ] Build cleanly, start on a configurable port and stop gracefully.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Local inference efficiency ledger
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A learner needs to compare caching and batching tradeoffs.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use repeated generated requests and a tiny CPU model. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A benchmark of cached, uncached and batched inference.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Logging, tracing, monitoring, alerts and incidents:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Logging, tracing, monitoring, alerts and incidents, explicitly apply Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
+- **Logging, tracing, monitoring, alerts and incidents:** Extend the project with Logging, tracing, monitoring, alerts and incidents in Local inference efficiency ledger. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Logging, tracing, monitoring, alerts and incidents: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A benchmark of cached, uncached and batched inference. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
+- [ ] Report cache hit rate, memory and latency; verify outputs remain equivalent.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Service capacity envelope
+
+A builder needs to understand throughput on their own machine.
+
+**Data:** Use a deterministic local endpoint and bounded load generator. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A latency/throughput curve and saturation report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Logging, tracing, monitoring, alerts and incidents:** Extend the project with Logging, tracing, monitoring, alerts and incidents in Service capacity envelope. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A latency/throughput curve and saturation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report p50/p95, errors and machine specs without generalizing to production.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Idempotent background worker
+
+An operator needs safe retry of failed jobs.
+
+**Data:** Generate 50 local jobs and injected transient failures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A queue worker with bounded retries and dead-letter records.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Logging, tracing, monitoring, alerts and incidents:** Extend the project with Logging, tracing, monitoring, alerts and incidents in Idempotent background worker. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A queue worker with bounded retries and dead-letter records. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Duplicate delivery never duplicates the final output.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Release rollback rehearsal
+
+A maintainer needs a tested escape from a broken release.
+
+**Data:** Build two local image versions, one with a failing health endpoint. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A rollout checklist and executable local rollback drill.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Logging, tracing, monitoring, alerts and incidents:** Extend the project with Logging, tracing, monitoring, alerts and incidents in Release rollback rehearsal. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A rollout checklist and executable local rollback drill. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Restore healthy traffic and verify data compatibility after rollback.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Reliability budget dashboard
+
+An operator needs meaningful availability and latency indicators.
+
+**Data:** Generate one day of synthetic request metrics with an outage. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SLO report with burn-rate alerts and investigation notes.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Logging, tracing, monitoring, alerts and incidents:** Extend the project with Logging, tracing, monitoring, alerts and incidents in Reliability budget dashboard. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SLO report with burn-rate alerts and investigation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compute error budget correctly and distinguish missing telemetry from success.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Timeout budget simulator
+
+An engineer needs to prevent retry storms across dependent calls.
+
+**Data:** Create three local stubs with controllable delay and failure rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A timeout/retry budget experiment.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Logging, tracing, monitoring, alerts and incidents:** Extend the project with Logging, tracing, monitoring, alerts and incidents in Timeout budget simulator. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A timeout/retry budget experiment. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Total request duration stays bounded and attempts stay below the configured cap.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1916,7 +1916,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Measure system limits before adding complexity or expensive infrastructure.
 
-**Priority:** Useful next · **Study:** 2h · **Practice:** 3h
+**Priority:** Specialization · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Logging, tracing, monitoring, alerts and incidents](deployment.md#deployment-monitoring) Navigation is unrestricted.
 
@@ -2007,292 +2007,292 @@ Run a bounded local load test, identify the first bottleneck and compare one mea
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Local inference efficiency ledger
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A learner needs to compare caching and batching tradeoffs.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Use repeated generated requests and a tiny CPU model. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Architecture, load balancing, scalability and cost/latency:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Architecture, load balancing, scalability and cost/latency, explicitly apply Architecture and microservices, Load and scalability, Optimization and economics.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, load balancing, scalability and cost/latency: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Architecture, load balancing, scalability and cost/latency: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Architecture, load balancing, scalability and cost/latency:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Architecture, load balancing, scalability and cost/latency, explicitly apply Architecture and microservices, Load and scalability, Optimization and economics.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, load balancing, scalability and cost/latency: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Architecture, load balancing, scalability and cost/latency: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Architecture, load balancing, scalability and cost/latency:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Architecture, load balancing, scalability and cost/latency, explicitly apply Architecture and microservices, Load and scalability, Optimization and economics.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, load balancing, scalability and cost/latency: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Architecture, load balancing, scalability and cost/latency: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A benchmark of cached, uncached and batched inference.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Architecture, load balancing, scalability and cost/latency:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Architecture, load balancing, scalability and cost/latency, explicitly apply Architecture and microservices, Load and scalability, Optimization and economics.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
+- **Architecture, load balancing, scalability and cost/latency:** Implement Architecture, load balancing, scalability and cost/latency in Local inference efficiency ledger. Adapt this focused lab to the project data: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.  Required concepts: Architecture and microservices, Load and scalability, Optimization and economics.
+  - Deliverable: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, load balancing, scalability and cost/latency: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A benchmark of cached, uncached and batched inference. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, load balancing, scalability and cost/latency: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Architecture, load balancing, scalability and cost/latency: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
+- [ ] Report cache hit rate, memory and latency; verify outputs remain equivalent.
+- [ ] Architecture, load balancing, scalability and cost/latency: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Service capacity envelope
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A builder needs to understand throughput on their own machine.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Use a deterministic local endpoint and bounded load generator. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Architecture, load balancing, scalability and cost/latency:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Architecture, load balancing, scalability and cost/latency, explicitly apply Architecture and microservices, Load and scalability, Optimization and economics.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, load balancing, scalability and cost/latency: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Architecture, load balancing, scalability and cost/latency: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A latency/throughput curve and saturation report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Architecture, load balancing, scalability and cost/latency:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Architecture, load balancing, scalability and cost/latency, explicitly apply Architecture and microservices, Load and scalability, Optimization and economics.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
+- **Architecture, load balancing, scalability and cost/latency:** Implement Architecture, load balancing, scalability and cost/latency in Service capacity envelope. Adapt this focused lab to the project data: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.  Required concepts: Architecture and microservices, Load and scalability, Optimization and economics.
+  - Deliverable: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, load balancing, scalability and cost/latency: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A latency/throughput curve and saturation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, load balancing, scalability and cost/latency: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Architecture, load balancing, scalability and cost/latency: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
+- [ ] Report p50/p95, errors and machine specs without generalizing to production.
+- [ ] Architecture, load balancing, scalability and cost/latency: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Offline quality pipeline
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A team needs a repeatable test gate before packaging.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use a small project with one deliberately failing test. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Architecture, load balancing, scalability and cost/latency:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Architecture, load balancing, scalability and cost/latency, explicitly apply Architecture and microservices, Load and scalability, Optimization and economics.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, load balancing, scalability and cost/latency: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Architecture, load balancing, scalability and cost/latency: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A CI configuration with local equivalent commands.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Architecture, load balancing, scalability and cost/latency:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Architecture, load balancing, scalability and cost/latency, explicitly apply Architecture and microservices, Load and scalability, Optimization and economics.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
+- **Architecture, load balancing, scalability and cost/latency:** Extend the project with Architecture, load balancing, scalability and cost/latency in Offline quality pipeline. Adapt this focused lab to the project data: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.  Required concepts: Architecture and microservices, Load and scalability, Optimization and economics.
+  - Deliverable: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, load balancing, scalability and cost/latency: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A CI configuration with local equivalent commands. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, load balancing, scalability and cost/latency: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Architecture, load balancing, scalability and cost/latency: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
+- [ ] The gate fails on the broken test and produces a versioned artifact only on success.
+- [ ] Architecture, load balancing, scalability and cost/latency: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### API and database Compose lab
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A developer needs reproducible service networking and persistence.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Seed a local PostgreSQL database with fictional tasks. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A Compose stack with isolated services and persistent data.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Architecture, load balancing, scalability and cost/latency:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Architecture, load balancing, scalability and cost/latency, explicitly apply Architecture and microservices, Load and scalability, Optimization and economics.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
+- **Architecture, load balancing, scalability and cost/latency:** Extend the project with Architecture, load balancing, scalability and cost/latency in API and database Compose lab. Adapt this focused lab to the project data: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.  Required concepts: Architecture and microservices, Load and scalability, Optimization and economics.
+  - Deliverable: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, load balancing, scalability and cost/latency: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A Compose stack with isolated services and persistent data. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, load balancing, scalability and cost/latency: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Architecture, load balancing, scalability and cost/latency: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
+- [ ] Restart containers without losing rows; API connects by service name.
+- [ ] Architecture, load balancing, scalability and cost/latency: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Reproducible inference container
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A teammate needs to start the same API on another machine.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use a tiny local FastAPI app and generated request fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A non-root Docker image with health check and smoke test.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Architecture, load balancing, scalability and cost/latency:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Architecture, load balancing, scalability and cost/latency, explicitly apply Architecture and microservices, Load and scalability, Optimization and economics.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
+- **Architecture, load balancing, scalability and cost/latency:** Extend the project with Architecture, load balancing, scalability and cost/latency in Reproducible inference container. Adapt this focused lab to the project data: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.  Required concepts: Architecture and microservices, Load and scalability, Optimization and economics.
+  - Deliverable: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Architecture, load balancing, scalability and cost/latency: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A non-root Docker image with health check and smoke test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, load balancing, scalability and cost/latency: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Architecture, load balancing, scalability and cost/latency: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.
+- [ ] Build cleanly, start on a configurable port and stop gracefully.
+- [ ] Architecture, load balancing, scalability and cost/latency: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Idempotent background worker
+
+An operator needs safe retry of failed jobs.
+
+**Data:** Generate 50 local jobs and injected transient failures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A queue worker with bounded retries and dead-letter records.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Architecture, load balancing, scalability and cost/latency:** Extend the project with Architecture, load balancing, scalability and cost/latency in Idempotent background worker. Adapt this focused lab to the project data: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.  Required concepts: Architecture and microservices, Load and scalability, Optimization and economics.
+  - Deliverable: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A queue worker with bounded retries and dead-letter records. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, load balancing, scalability and cost/latency: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Duplicate delivery never duplicates the final output.
+- [ ] Architecture, load balancing, scalability and cost/latency: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Release rollback rehearsal
+
+A maintainer needs a tested escape from a broken release.
+
+**Data:** Build two local image versions, one with a failing health endpoint. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A rollout checklist and executable local rollback drill.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Architecture, load balancing, scalability and cost/latency:** Extend the project with Architecture, load balancing, scalability and cost/latency in Release rollback rehearsal. Adapt this focused lab to the project data: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.  Required concepts: Architecture and microservices, Load and scalability, Optimization and economics.
+  - Deliverable: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A rollout checklist and executable local rollback drill. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, load balancing, scalability and cost/latency: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Restore healthy traffic and verify data compatibility after rollback.
+- [ ] Architecture, load balancing, scalability and cost/latency: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Reliability budget dashboard
+
+An operator needs meaningful availability and latency indicators.
+
+**Data:** Generate one day of synthetic request metrics with an outage. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SLO report with burn-rate alerts and investigation notes.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Architecture, load balancing, scalability and cost/latency:** Extend the project with Architecture, load balancing, scalability and cost/latency in Reliability budget dashboard. Adapt this focused lab to the project data: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.  Required concepts: Architecture and microservices, Load and scalability, Optimization and economics.
+  - Deliverable: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SLO report with burn-rate alerts and investigation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, load balancing, scalability and cost/latency: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compute error budget correctly and distinguish missing telemetry from success.
+- [ ] Architecture, load balancing, scalability and cost/latency: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Timeout budget simulator
+
+An engineer needs to prevent retry storms across dependent calls.
+
+**Data:** Create three local stubs with controllable delay and failure rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A timeout/retry budget experiment.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Architecture, load balancing, scalability and cost/latency:** Extend the project with Architecture, load balancing, scalability and cost/latency in Timeout budget simulator. Adapt this focused lab to the project data: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.  Required concepts: Architecture and microservices, Load and scalability, Optimization and economics.
+  - Deliverable: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A timeout/retry budget experiment. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, load balancing, scalability and cost/latency: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Total request duration stays bounded and attempts stay below the configured cap.
+- [ ] Architecture, load balancing, scalability and cost/latency: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Request trace investigation
+
+A maintainer needs to follow one request across components.
+
+**Data:** Generate requests with correlation IDs and seeded slow dependencies. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Structured logs and a local trace report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Architecture, load balancing, scalability and cost/latency:** Extend the project with Architecture, load balancing, scalability and cost/latency in Request trace investigation. Adapt this focused lab to the project data: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.  Required concepts: Architecture and microservices, Load and scalability, Optimization and economics.
+  - Deliverable: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Structured logs and a local trace report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, load balancing, scalability and cost/latency: Architecture, load balancing, scalability and cost/latency: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Trace each request end to end without logging secrets or full private payloads.
+- [ ] Architecture, load balancing, scalability and cost/latency: Run a bounded local load test, identify the first bottleneck and compare one measured optimization; record p50/p95, errors and resource limits in an ADR.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2306,7 +2306,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Make background ingestion recover from retries without duplicate effects or unlimited work.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Essential · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [Queues, async processing, retries and timeouts](deployment.md#deployment-queues) Navigation is unrestricted.
 
@@ -2427,292 +2427,292 @@ Build a CPU worker using a local SQLite job table or a bounded Python queue. Inj
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Idempotent background worker
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+An operator needs safe retry of failed jobs.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Generate 50 local jobs and injected transient failures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Durable jobs, backoff, deduplication and overload:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Durable jobs, backoff, deduplication and overload, explicitly apply At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Durable jobs, backoff, deduplication and overload: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Durable jobs, backoff, deduplication and overload: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Durable jobs, backoff, deduplication and overload:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Durable jobs, backoff, deduplication and overload, explicitly apply At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Durable jobs, backoff, deduplication and overload: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Durable jobs, backoff, deduplication and overload: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Durable jobs, backoff, deduplication and overload:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Durable jobs, backoff, deduplication and overload, explicitly apply At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Durable jobs, backoff, deduplication and overload: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Durable jobs, backoff, deduplication and overload: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A queue worker with bounded retries and dead-letter records.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Durable jobs, backoff, deduplication and overload:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Durable jobs, backoff, deduplication and overload, explicitly apply At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
+- **Durable jobs, backoff, deduplication and overload:** Implement Durable jobs, backoff, deduplication and overload in Idempotent background worker. Adapt this focused lab to the project data: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.  Required concepts: At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors, Deduplication transaction, Backpressure and capacity.
+  - Deliverable: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Durable jobs, backoff, deduplication and overload: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A queue worker with bounded retries and dead-letter records. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Durable jobs, backoff, deduplication and overload: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Durable jobs, backoff, deduplication and overload: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
+- [ ] Duplicate delivery never duplicates the final output.
+- [ ] Durable jobs, backoff, deduplication and overload: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Offline quality pipeline
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A team needs a repeatable test gate before packaging.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Use a small project with one deliberately failing test. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Durable jobs, backoff, deduplication and overload:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Durable jobs, backoff, deduplication and overload, explicitly apply At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Durable jobs, backoff, deduplication and overload: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Durable jobs, backoff, deduplication and overload: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A CI configuration with local equivalent commands.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Durable jobs, backoff, deduplication and overload:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Durable jobs, backoff, deduplication and overload, explicitly apply At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
+- **Durable jobs, backoff, deduplication and overload:** Extend the project with Durable jobs, backoff, deduplication and overload in Offline quality pipeline. Adapt this focused lab to the project data: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.  Required concepts: At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors, Deduplication transaction, Backpressure and capacity.
+  - Deliverable: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Durable jobs, backoff, deduplication and overload: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A CI configuration with local equivalent commands. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Durable jobs, backoff, deduplication and overload: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Durable jobs, backoff, deduplication and overload: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
+- [ ] The gate fails on the broken test and produces a versioned artifact only on success.
+- [ ] Durable jobs, backoff, deduplication and overload: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### API and database Compose lab
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A developer needs reproducible service networking and persistence.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Seed a local PostgreSQL database with fictional tasks. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Durable jobs, backoff, deduplication and overload:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Durable jobs, backoff, deduplication and overload, explicitly apply At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Durable jobs, backoff, deduplication and overload: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Durable jobs, backoff, deduplication and overload: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A Compose stack with isolated services and persistent data.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Durable jobs, backoff, deduplication and overload:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Durable jobs, backoff, deduplication and overload, explicitly apply At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
+- **Durable jobs, backoff, deduplication and overload:** Extend the project with Durable jobs, backoff, deduplication and overload in API and database Compose lab. Adapt this focused lab to the project data: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.  Required concepts: At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors, Deduplication transaction, Backpressure and capacity.
+  - Deliverable: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Durable jobs, backoff, deduplication and overload: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A Compose stack with isolated services and persistent data. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Durable jobs, backoff, deduplication and overload: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Durable jobs, backoff, deduplication and overload: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
+- [ ] Restart containers without losing rows; API connects by service name.
+- [ ] Durable jobs, backoff, deduplication and overload: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Reproducible inference container
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A teammate needs to start the same API on another machine.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use a tiny local FastAPI app and generated request fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A non-root Docker image with health check and smoke test.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Durable jobs, backoff, deduplication and overload:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Durable jobs, backoff, deduplication and overload, explicitly apply At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
+- **Durable jobs, backoff, deduplication and overload:** Extend the project with Durable jobs, backoff, deduplication and overload in Reproducible inference container. Adapt this focused lab to the project data: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.  Required concepts: At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors, Deduplication transaction, Backpressure and capacity.
+  - Deliverable: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Durable jobs, backoff, deduplication and overload: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A non-root Docker image with health check and smoke test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Durable jobs, backoff, deduplication and overload: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Durable jobs, backoff, deduplication and overload: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
+- [ ] Build cleanly, start on a configurable port and stop gracefully.
+- [ ] Durable jobs, backoff, deduplication and overload: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Local inference efficiency ledger
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A learner needs to compare caching and batching tradeoffs.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use repeated generated requests and a tiny CPU model. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A benchmark of cached, uncached and batched inference.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Durable jobs, backoff, deduplication and overload:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Durable jobs, backoff, deduplication and overload, explicitly apply At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
+- **Durable jobs, backoff, deduplication and overload:** Extend the project with Durable jobs, backoff, deduplication and overload in Local inference efficiency ledger. Adapt this focused lab to the project data: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.  Required concepts: At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors, Deduplication transaction, Backpressure and capacity.
+  - Deliverable: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Durable jobs, backoff, deduplication and overload: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A benchmark of cached, uncached and batched inference. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Durable jobs, backoff, deduplication and overload: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Durable jobs, backoff, deduplication and overload: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.
+- [ ] Report cache hit rate, memory and latency; verify outputs remain equivalent.
+- [ ] Durable jobs, backoff, deduplication and overload: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Service capacity envelope
+
+A builder needs to understand throughput on their own machine.
+
+**Data:** Use a deterministic local endpoint and bounded load generator. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A latency/throughput curve and saturation report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Durable jobs, backoff, deduplication and overload:** Extend the project with Durable jobs, backoff, deduplication and overload in Service capacity envelope. Adapt this focused lab to the project data: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.  Required concepts: At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors, Deduplication transaction, Backpressure and capacity.
+  - Deliverable: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A latency/throughput curve and saturation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Durable jobs, backoff, deduplication and overload: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report p50/p95, errors and machine specs without generalizing to production.
+- [ ] Durable jobs, backoff, deduplication and overload: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Release rollback rehearsal
+
+A maintainer needs a tested escape from a broken release.
+
+**Data:** Build two local image versions, one with a failing health endpoint. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A rollout checklist and executable local rollback drill.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Durable jobs, backoff, deduplication and overload:** Extend the project with Durable jobs, backoff, deduplication and overload in Release rollback rehearsal. Adapt this focused lab to the project data: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.  Required concepts: At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors, Deduplication transaction, Backpressure and capacity.
+  - Deliverable: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A rollout checklist and executable local rollback drill. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Durable jobs, backoff, deduplication and overload: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Restore healthy traffic and verify data compatibility after rollback.
+- [ ] Durable jobs, backoff, deduplication and overload: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Reliability budget dashboard
+
+An operator needs meaningful availability and latency indicators.
+
+**Data:** Generate one day of synthetic request metrics with an outage. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SLO report with burn-rate alerts and investigation notes.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Durable jobs, backoff, deduplication and overload:** Extend the project with Durable jobs, backoff, deduplication and overload in Reliability budget dashboard. Adapt this focused lab to the project data: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.  Required concepts: At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors, Deduplication transaction, Backpressure and capacity.
+  - Deliverable: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SLO report with burn-rate alerts and investigation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Durable jobs, backoff, deduplication and overload: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compute error budget correctly and distinguish missing telemetry from success.
+- [ ] Durable jobs, backoff, deduplication and overload: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Timeout budget simulator
+
+An engineer needs to prevent retry storms across dependent calls.
+
+**Data:** Create three local stubs with controllable delay and failure rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A timeout/retry budget experiment.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Durable jobs, backoff, deduplication and overload:** Extend the project with Durable jobs, backoff, deduplication and overload in Timeout budget simulator. Adapt this focused lab to the project data: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.  Required concepts: At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors, Deduplication transaction, Backpressure and capacity.
+  - Deliverable: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A timeout/retry budget experiment. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Durable jobs, backoff, deduplication and overload: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Total request duration stays bounded and attempts stay below the configured cap.
+- [ ] Durable jobs, backoff, deduplication and overload: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Request trace investigation
+
+A maintainer needs to follow one request across components.
+
+**Data:** Generate requests with correlation IDs and seeded slow dependencies. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Structured logs and a local trace report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Durable jobs, backoff, deduplication and overload:** Extend the project with Durable jobs, backoff, deduplication and overload in Request trace investigation. Adapt this focused lab to the project data: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.  Required concepts: At-least-once delivery, Exponential backoff and jitter, Transient versus permanent errors, Deduplication transaction, Backpressure and capacity.
+  - Deliverable: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Structured logs and a local trace report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Durable jobs, backoff, deduplication and overload: Durable jobs, backoff, deduplication and overload: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Trace each request end to end without logging secrets or full private payloads.
+- [ ] Durable jobs, backoff, deduplication and overload: Build a CPU worker using a local SQLite job table or a bounded Python queue. Inject duplicate deliveries, transient failures and a crash; record retry delays and prove that one ingestion key produces one logical result.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2726,7 +2726,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Turn operational telemetry into concrete user-facing reliability decisions rather than collecting logs without a purpose.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Essential · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [Logging, tracing, monitoring, alerts and incidents](deployment.md#deployment-monitoring) Navigation is unrestricted.
 
@@ -2847,292 +2847,1134 @@ Instrument a local fake inference service with request IDs, stage timings and er
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Reliability budget dashboard
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+An operator needs meaningful availability and latency indicators.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Generate one day of synthetic request metrics with an outage. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Service objectives, traces, latency percentiles and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Service objectives, traces, latency percentiles and rollback, explicitly apply SLI versus SLO, Latency percentiles, Trace correlation.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Service objectives, traces, latency percentiles and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Service objectives, traces, latency percentiles and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Service objectives, traces, latency percentiles and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Service objectives, traces, latency percentiles and rollback, explicitly apply SLI versus SLO, Latency percentiles, Trace correlation.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Service objectives, traces, latency percentiles and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Service objectives, traces, latency percentiles and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Service objectives, traces, latency percentiles and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Service objectives, traces, latency percentiles and rollback, explicitly apply SLI versus SLO, Latency percentiles, Trace correlation.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Service objectives, traces, latency percentiles and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Service objectives, traces, latency percentiles and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** An SLO report with burn-rate alerts and investigation notes.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Service objectives, traces, latency percentiles and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Service objectives, traces, latency percentiles and rollback, explicitly apply SLI versus SLO, Latency percentiles, Trace correlation.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
+- **Service objectives, traces, latency percentiles and rollback:** Implement Service objectives, traces, latency percentiles and rollback in Reliability budget dashboard. Adapt this focused lab to the project data: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.  Required concepts: SLI versus SLO, Latency percentiles, Trace correlation, Low-cardinality labels, Release and rollback criteria.
+  - Deliverable: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Service objectives, traces, latency percentiles and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An SLO report with burn-rate alerts and investigation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Service objectives, traces, latency percentiles and rollback: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Service objectives, traces, latency percentiles and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
+- [ ] Compute error budget correctly and distinguish missing telemetry from success.
+- [ ] Service objectives, traces, latency percentiles and rollback: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Offline quality pipeline
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A team needs a repeatable test gate before packaging.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Use a small project with one deliberately failing test. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Service objectives, traces, latency percentiles and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Service objectives, traces, latency percentiles and rollback, explicitly apply SLI versus SLO, Latency percentiles, Trace correlation.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Service objectives, traces, latency percentiles and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Service objectives, traces, latency percentiles and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A CI configuration with local equivalent commands.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Service objectives, traces, latency percentiles and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Service objectives, traces, latency percentiles and rollback, explicitly apply SLI versus SLO, Latency percentiles, Trace correlation.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
+- **Service objectives, traces, latency percentiles and rollback:** Extend the project with Service objectives, traces, latency percentiles and rollback in Offline quality pipeline. Adapt this focused lab to the project data: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.  Required concepts: SLI versus SLO, Latency percentiles, Trace correlation, Low-cardinality labels, Release and rollback criteria.
+  - Deliverable: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Service objectives, traces, latency percentiles and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A CI configuration with local equivalent commands. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Service objectives, traces, latency percentiles and rollback: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Service objectives, traces, latency percentiles and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
+- [ ] The gate fails on the broken test and produces a versioned artifact only on success.
+- [ ] Service objectives, traces, latency percentiles and rollback: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### API and database Compose lab
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A developer needs reproducible service networking and persistence.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Seed a local PostgreSQL database with fictional tasks. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Service objectives, traces, latency percentiles and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Service objectives, traces, latency percentiles and rollback, explicitly apply SLI versus SLO, Latency percentiles, Trace correlation.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Service objectives, traces, latency percentiles and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Service objectives, traces, latency percentiles and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A Compose stack with isolated services and persistent data.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Service objectives, traces, latency percentiles and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Service objectives, traces, latency percentiles and rollback, explicitly apply SLI versus SLO, Latency percentiles, Trace correlation.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
+- **Service objectives, traces, latency percentiles and rollback:** Extend the project with Service objectives, traces, latency percentiles and rollback in API and database Compose lab. Adapt this focused lab to the project data: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.  Required concepts: SLI versus SLO, Latency percentiles, Trace correlation, Low-cardinality labels, Release and rollback criteria.
+  - Deliverable: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Service objectives, traces, latency percentiles and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A Compose stack with isolated services and persistent data. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Service objectives, traces, latency percentiles and rollback: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Service objectives, traces, latency percentiles and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
+- [ ] Restart containers without losing rows; API connects by service name.
+- [ ] Service objectives, traces, latency percentiles and rollback: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Reproducible inference container
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A teammate needs to start the same API on another machine.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use a tiny local FastAPI app and generated request fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A non-root Docker image with health check and smoke test.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Service objectives, traces, latency percentiles and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Service objectives, traces, latency percentiles and rollback, explicitly apply SLI versus SLO, Latency percentiles, Trace correlation.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
+- **Service objectives, traces, latency percentiles and rollback:** Extend the project with Service objectives, traces, latency percentiles and rollback in Reproducible inference container. Adapt this focused lab to the project data: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.  Required concepts: SLI versus SLO, Latency percentiles, Trace correlation, Low-cardinality labels, Release and rollback criteria.
+  - Deliverable: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Service objectives, traces, latency percentiles and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A non-root Docker image with health check and smoke test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Service objectives, traces, latency percentiles and rollback: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Service objectives, traces, latency percentiles and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
+- [ ] Build cleanly, start on a configurable port and stop gracefully.
+- [ ] Service objectives, traces, latency percentiles and rollback: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Local inference efficiency ledger
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A learner needs to compare caching and batching tradeoffs.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use repeated generated requests and a tiny CPU model. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A benchmark of cached, uncached and batched inference.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Service objectives, traces, latency percentiles and rollback:** Package the project’s runnable API/worker in Docker with explicit configuration.  For Service objectives, traces, latency percentiles and rollback, explicitly apply SLI versus SLO, Latency percentiles, Trace correlation.
-  - Deliverable: A Dockerfile/Compose setup, health check and deployment runbook
-  - Check: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
+- **Service objectives, traces, latency percentiles and rollback:** Extend the project with Service objectives, traces, latency percentiles and rollback in Local inference efficiency ledger. Adapt this focused lab to the project data: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.  Required concepts: SLI versus SLO, Latency percentiles, Trace correlation, Low-cardinality labels, Release and rollback criteria.
+  - Deliverable: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Service objectives, traces, latency percentiles and rollback: A Dockerfile/Compose setup, health check and deployment runbook
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A benchmark of cached, uncached and batched inference. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Service objectives, traces, latency percentiles and rollback: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Service objectives, traces, latency percentiles and rollback: Use non-root execution, persist necessary data, add health checks and rehearse rollback. Adapt the lesson lab: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.
+- [ ] Report cache hit rate, memory and latency; verify outputs remain equivalent.
+- [ ] Service objectives, traces, latency percentiles and rollback: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Service capacity envelope
+
+A builder needs to understand throughput on their own machine.
+
+**Data:** Use a deterministic local endpoint and bounded load generator. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A latency/throughput curve and saturation report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Service objectives, traces, latency percentiles and rollback:** Extend the project with Service objectives, traces, latency percentiles and rollback in Service capacity envelope. Adapt this focused lab to the project data: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.  Required concepts: SLI versus SLO, Latency percentiles, Trace correlation, Low-cardinality labels, Release and rollback criteria.
+  - Deliverable: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A latency/throughput curve and saturation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Service objectives, traces, latency percentiles and rollback: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report p50/p95, errors and machine specs without generalizing to production.
+- [ ] Service objectives, traces, latency percentiles and rollback: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Idempotent background worker
+
+An operator needs safe retry of failed jobs.
+
+**Data:** Generate 50 local jobs and injected transient failures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A queue worker with bounded retries and dead-letter records.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Service objectives, traces, latency percentiles and rollback:** Extend the project with Service objectives, traces, latency percentiles and rollback in Idempotent background worker. Adapt this focused lab to the project data: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.  Required concepts: SLI versus SLO, Latency percentiles, Trace correlation, Low-cardinality labels, Release and rollback criteria.
+  - Deliverable: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A queue worker with bounded retries and dead-letter records. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Service objectives, traces, latency percentiles and rollback: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Duplicate delivery never duplicates the final output.
+- [ ] Service objectives, traces, latency percentiles and rollback: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Release rollback rehearsal
+
+A maintainer needs a tested escape from a broken release.
+
+**Data:** Build two local image versions, one with a failing health endpoint. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A rollout checklist and executable local rollback drill.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Service objectives, traces, latency percentiles and rollback:** Extend the project with Service objectives, traces, latency percentiles and rollback in Release rollback rehearsal. Adapt this focused lab to the project data: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.  Required concepts: SLI versus SLO, Latency percentiles, Trace correlation, Low-cardinality labels, Release and rollback criteria.
+  - Deliverable: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A rollout checklist and executable local rollback drill. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Service objectives, traces, latency percentiles and rollback: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Restore healthy traffic and verify data compatibility after rollback.
+- [ ] Service objectives, traces, latency percentiles and rollback: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Timeout budget simulator
+
+An engineer needs to prevent retry storms across dependent calls.
+
+**Data:** Create three local stubs with controllable delay and failure rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A timeout/retry budget experiment.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Service objectives, traces, latency percentiles and rollback:** Extend the project with Service objectives, traces, latency percentiles and rollback in Timeout budget simulator. Adapt this focused lab to the project data: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.  Required concepts: SLI versus SLO, Latency percentiles, Trace correlation, Low-cardinality labels, Release and rollback criteria.
+  - Deliverable: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A timeout/retry budget experiment. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Service objectives, traces, latency percentiles and rollback: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Total request duration stays bounded and attempts stay below the configured cap.
+- [ ] Service objectives, traces, latency percentiles and rollback: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Request trace investigation
+
+A maintainer needs to follow one request across components.
+
+**Data:** Generate requests with correlation IDs and seeded slow dependencies. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Structured logs and a local trace report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Service objectives, traces, latency percentiles and rollback:** Extend the project with Service objectives, traces, latency percentiles and rollback in Request trace investigation. Adapt this focused lab to the project data: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.  Required concepts: SLI versus SLO, Latency percentiles, Trace correlation, Low-cardinality labels, Release and rollback criteria.
+  - Deliverable: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Structured logs and a local trace report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Service objectives, traces, latency percentiles and rollback: Service objectives, traces, latency percentiles and rollback: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Trace each request end to end without logging secrets or full private payloads.
+- [ ] Service objectives, traces, latency percentiles and rollback: Instrument a local fake inference service with request IDs, stage timings and error counters. Analyse generated latency records, define an SLO with clear scope and write a tested rollback decision using recorded release metrics.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Backup, restore and data recovery drills
+
+<a id="deployment-backup-restore"></a>
+
+### Backup, restore and data recovery drills
+
+Backup, restore and data recovery drills helps you make explainable engineering decisions and test failure cases. Build the experiment below before relying on the concept in an AI system.
+
+**Priority:** Essential · **Study:** 4h · **Practice:** 5h
+
+**Prerequisites:** [Volumes, networks and Docker Compose](deployment.md#docker-compose) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Recovery point objective:** RPO describes the tolerated loss window, not the time needed to restart a process.
+  - Example: Compare hourly and daily backups against a two-hour loss tolerance.
+  - Videos:
+    - [Incident management: SRE implements DevOps](https://www.youtube.com/watch?v=n4y9dwinPBQ) · Google Cloud Tech · Focused lecture
+      - Explains: Incident roles, response process and learning after failures.
+      - Useful because: Rehearse your runbook on a local outage and document what changed.
+      - Watch for: Focus on recovery point objective. Then reproduce the lesson example: Compare hourly and daily backups against a two-hour loss tolerance.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=n4y9dwinPBQ
+    - [Docker — full DevOps course](https://www.youtube.com/watch?v=rjjES5IsPdg) · freeCodeCamp · Long tool course · approximately 8h
+      - Explains: Images, containers, Dockerfiles and deploying containerized applications.
+      - Useful because: Package the exact service you tested; keep cloud purchases optional.
+      - Watch for: Focus on recovery point objective. Then reproduce the lesson example: Compare hourly and daily backups against a two-hour loss tolerance.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/docker-full-course/
+- [ ] **Recovery time objective:** RTO bounds acceptable restoration duration including validation.
+  - Example: Time a restore into a clean local database and run a query smoke test.
+  - Videos:
+    - [Incident management: SRE implements DevOps](https://www.youtube.com/watch?v=n4y9dwinPBQ) · Google Cloud Tech · Focused lecture
+      - Explains: Incident roles, response process and learning after failures.
+      - Useful because: Rehearse your runbook on a local outage and document what changed.
+      - Watch for: Focus on recovery time objective. Then reproduce the lesson example: Time a restore into a clean local database and run a query smoke test.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=n4y9dwinPBQ
+    - [Docker — full DevOps course](https://www.youtube.com/watch?v=rjjES5IsPdg) · freeCodeCamp · Long tool course · approximately 8h
+      - Explains: Images, containers, Dockerfiles and deploying containerized applications.
+      - Useful because: Package the exact service you tested; keep cloud purchases optional.
+      - Watch for: Focus on recovery time objective. Then reproduce the lesson example: Time a restore into a clean local database and run a query smoke test.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/docker-full-course/
+- [ ] **Consistent backups:** A backup must represent a recoverable database state rather than an arbitrary copy during writes.
+  - Example: Use the database backup mechanism and compare with a naive live file copy.
+  - Videos:
+    - [Incident management: SRE implements DevOps](https://www.youtube.com/watch?v=n4y9dwinPBQ) · Google Cloud Tech · Focused lecture
+      - Explains: Incident roles, response process and learning after failures.
+      - Useful because: Rehearse your runbook on a local outage and document what changed.
+      - Watch for: Focus on consistent backups. Then reproduce the lesson example: Use the database backup mechanism and compare with a naive live file copy.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=n4y9dwinPBQ
+    - [Docker — full DevOps course](https://www.youtube.com/watch?v=rjjES5IsPdg) · freeCodeCamp · Long tool course · approximately 8h
+      - Explains: Images, containers, Dockerfiles and deploying containerized applications.
+      - Useful because: Package the exact service you tested; keep cloud purchases optional.
+      - Watch for: Focus on consistent backups. Then reproduce the lesson example: Use the database backup mechanism and compare with a naive live file copy.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/docker-full-course/
+- [ ] **Restore verification:** A backup is useful only if it can be restored and checked.
+  - Example: Verify expected rows, constraints and application queries after restoration.
+  - Videos:
+    - [Incident management: SRE implements DevOps](https://www.youtube.com/watch?v=n4y9dwinPBQ) · Google Cloud Tech · Focused lecture
+      - Explains: Incident roles, response process and learning after failures.
+      - Useful because: Rehearse your runbook on a local outage and document what changed.
+      - Watch for: Focus on restore verification. Then reproduce the lesson example: Verify expected rows, constraints and application queries after restoration.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=n4y9dwinPBQ
+    - [Docker — full DevOps course](https://www.youtube.com/watch?v=rjjES5IsPdg) · freeCodeCamp · Long tool course · approximately 8h
+      - Explains: Images, containers, Dockerfiles and deploying containerized applications.
+      - Useful because: Package the exact service you tested; keep cloud purchases optional.
+      - Watch for: Focus on restore verification. Then reproduce the lesson example: Verify expected rows, constraints and application queries after restoration.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/docker-full-course/
+- [ ] **Retention and access:** Backup retention and permissions should match data sensitivity and recovery needs.
+  - Example: Keep two disposable generations and restrict access to the test backup folder.
+  - Videos:
+    - [Incident management: SRE implements DevOps](https://www.youtube.com/watch?v=n4y9dwinPBQ) · Google Cloud Tech · Focused lecture
+      - Explains: Incident roles, response process and learning after failures.
+      - Useful because: Rehearse your runbook on a local outage and document what changed.
+      - Watch for: Focus on retention and access. Then reproduce the lesson example: Keep two disposable generations and restrict access to the test backup folder.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=n4y9dwinPBQ
+    - [Docker — full DevOps course](https://www.youtube.com/watch?v=rjjES5IsPdg) · freeCodeCamp · Long tool course · approximately 8h
+      - Explains: Images, containers, Dockerfiles and deploying containerized applications.
+      - Useful because: Package the exact service you tested; keep cloud purchases optional.
+      - Watch for: Focus on retention and access. Then reproduce the lesson example: Keep two disposable generations and restrict access to the test backup folder.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/docker-full-course/
+
+#### YouTube: focused explanations and full courses
+
+- [Incident management: SRE implements DevOps](https://www.youtube.com/watch?v=n4y9dwinPBQ) · Google Cloud Tech · Focused lecture
+  - Explains: Incident roles, response process and learning after failures.
+  - Useful because: Rehearse your runbook on a local outage and document what changed.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=n4y9dwinPBQ
+- [Site reliability engineering fundamentals](https://www.youtube.com/watch?v=eopc_ijIfLg) · Google Cloud Events · Technical session
+  - Explains: Service objectives, error budgets, monitoring, alerting and emergency response.
+  - Useful because: Write actionable monitoring and recovery steps instead of collecting logs without a plan.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=eopc_ijIfLg
+- [Docker — full DevOps course](https://www.youtube.com/watch?v=rjjES5IsPdg) · freeCodeCamp · Long tool course · approximately 8h
+  - Explains: Images, containers, Dockerfiles and deploying containerized applications.
+  - Useful because: Package the exact service you tested; keep cloud purchases optional.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/docker-full-course/
+
+#### Free written resources
+
+1. [Official reference: Backup, restore and data recovery drills](https://www.postgresql.org/docs/current/backup.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+2. [Docker: Compose getting started](https://docs.docker.com/compose/gettingstarted/) — Free; no registration required. No paid materials required.
+
+#### Lab: Backup, restore and data recovery drills
+
+Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.
+
+**Deliverables**
+
+- Runnable CPU notebook or script with deterministic fixtures
+- Measured outputs, failure cases and a README explaining decisions
+
+**Completion checks**
+
+- [ ] Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.
+- [ ] Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+#### Ten project recommendations
+
+### Offline quality pipeline
+
+A team needs a repeatable test gate before packaging.
+
+**Data:** Use a small project with one deliberately failing test. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A CI configuration with local equivalent commands.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backup, restore and data recovery drills:** Extend the project with Backup, restore and data recovery drills in Offline quality pipeline. Adapt this focused lab to the project data: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.  Required concepts: Recovery point objective, Recovery time objective, Consistent backups, Restore verification, Retention and access.
+  - Deliverable: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A CI configuration with local equivalent commands. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backup, restore and data recovery drills: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] The gate fails on the broken test and produces a versioned artifact only on success.
+- [ ] Backup, restore and data recovery drills: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### API and database Compose lab
+
+A developer needs reproducible service networking and persistence.
+
+**Data:** Seed a local PostgreSQL database with fictional tasks. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A Compose stack with isolated services and persistent data.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backup, restore and data recovery drills:** Extend the project with Backup, restore and data recovery drills in API and database Compose lab. Adapt this focused lab to the project data: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.  Required concepts: Recovery point objective, Recovery time objective, Consistent backups, Restore verification, Retention and access.
+  - Deliverable: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A Compose stack with isolated services and persistent data. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backup, restore and data recovery drills: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Restart containers without losing rows; API connects by service name.
+- [ ] Backup, restore and data recovery drills: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Reproducible inference container
+
+A teammate needs to start the same API on another machine.
+
+**Data:** Use a tiny local FastAPI app and generated request fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A non-root Docker image with health check and smoke test.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backup, restore and data recovery drills:** Extend the project with Backup, restore and data recovery drills in Reproducible inference container. Adapt this focused lab to the project data: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.  Required concepts: Recovery point objective, Recovery time objective, Consistent backups, Restore verification, Retention and access.
+  - Deliverable: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A non-root Docker image with health check and smoke test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backup, restore and data recovery drills: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Build cleanly, start on a configurable port and stop gracefully.
+- [ ] Backup, restore and data recovery drills: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Local inference efficiency ledger
+
+A learner needs to compare caching and batching tradeoffs.
+
+**Data:** Use repeated generated requests and a tiny CPU model. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A benchmark of cached, uncached and batched inference.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backup, restore and data recovery drills:** Extend the project with Backup, restore and data recovery drills in Local inference efficiency ledger. Adapt this focused lab to the project data: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.  Required concepts: Recovery point objective, Recovery time objective, Consistent backups, Restore verification, Retention and access.
+  - Deliverable: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A benchmark of cached, uncached and batched inference. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backup, restore and data recovery drills: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report cache hit rate, memory and latency; verify outputs remain equivalent.
+- [ ] Backup, restore and data recovery drills: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Service capacity envelope
+
+A builder needs to understand throughput on their own machine.
+
+**Data:** Use a deterministic local endpoint and bounded load generator. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A latency/throughput curve and saturation report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backup, restore and data recovery drills:** Extend the project with Backup, restore and data recovery drills in Service capacity envelope. Adapt this focused lab to the project data: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.  Required concepts: Recovery point objective, Recovery time objective, Consistent backups, Restore verification, Retention and access.
+  - Deliverable: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A latency/throughput curve and saturation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backup, restore and data recovery drills: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report p50/p95, errors and machine specs without generalizing to production.
+- [ ] Backup, restore and data recovery drills: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Idempotent background worker
+
+An operator needs safe retry of failed jobs.
+
+**Data:** Generate 50 local jobs and injected transient failures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A queue worker with bounded retries and dead-letter records.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backup, restore and data recovery drills:** Extend the project with Backup, restore and data recovery drills in Idempotent background worker. Adapt this focused lab to the project data: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.  Required concepts: Recovery point objective, Recovery time objective, Consistent backups, Restore verification, Retention and access.
+  - Deliverable: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A queue worker with bounded retries and dead-letter records. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backup, restore and data recovery drills: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Duplicate delivery never duplicates the final output.
+- [ ] Backup, restore and data recovery drills: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Release rollback rehearsal
+
+A maintainer needs a tested escape from a broken release.
+
+**Data:** Build two local image versions, one with a failing health endpoint. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A rollout checklist and executable local rollback drill.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backup, restore and data recovery drills:** Extend the project with Backup, restore and data recovery drills in Release rollback rehearsal. Adapt this focused lab to the project data: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.  Required concepts: Recovery point objective, Recovery time objective, Consistent backups, Restore verification, Retention and access.
+  - Deliverable: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A rollout checklist and executable local rollback drill. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backup, restore and data recovery drills: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Restore healthy traffic and verify data compatibility after rollback.
+- [ ] Backup, restore and data recovery drills: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Reliability budget dashboard
+
+An operator needs meaningful availability and latency indicators.
+
+**Data:** Generate one day of synthetic request metrics with an outage. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SLO report with burn-rate alerts and investigation notes.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backup, restore and data recovery drills:** Extend the project with Backup, restore and data recovery drills in Reliability budget dashboard. Adapt this focused lab to the project data: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.  Required concepts: Recovery point objective, Recovery time objective, Consistent backups, Restore verification, Retention and access.
+  - Deliverable: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SLO report with burn-rate alerts and investigation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backup, restore and data recovery drills: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compute error budget correctly and distinguish missing telemetry from success.
+- [ ] Backup, restore and data recovery drills: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Timeout budget simulator
+
+An engineer needs to prevent retry storms across dependent calls.
+
+**Data:** Create three local stubs with controllable delay and failure rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A timeout/retry budget experiment.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backup, restore and data recovery drills:** Extend the project with Backup, restore and data recovery drills in Timeout budget simulator. Adapt this focused lab to the project data: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.  Required concepts: Recovery point objective, Recovery time objective, Consistent backups, Restore verification, Retention and access.
+  - Deliverable: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A timeout/retry budget experiment. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backup, restore and data recovery drills: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Total request duration stays bounded and attempts stay below the configured cap.
+- [ ] Backup, restore and data recovery drills: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Request trace investigation
+
+A maintainer needs to follow one request across components.
+
+**Data:** Generate requests with correlation IDs and seeded slow dependencies. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Structured logs and a local trace report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backup, restore and data recovery drills:** Extend the project with Backup, restore and data recovery drills in Request trace investigation. Adapt this focused lab to the project data: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.  Required concepts: Recovery point objective, Recovery time objective, Consistent backups, Restore verification, Retention and access.
+  - Deliverable: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Structured logs and a local trace report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backup, restore and data recovery drills: Backup, restore and data recovery drills: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Trace each request end to end without logging secrets or full private payloads.
+- [ ] Backup, restore and data recovery drills: Back up a small local database, deliberately remove a disposable copy, restore into a fresh instance and verify row counts plus checksums. Record recovery time and the maximum tolerable data-loss window.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Stage checkpoint
+
+<a id="checkpoint-deployment"></a>
+
+### Operations checkpoint
+
+Demonstrate readiness through a reproducible practical handoff. Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.
+
+**Priority:** Essential · **Study:** 1h · **Practice:** 6h
+
+**Prerequisites:** [Docker images, containers and Dockerfiles](deployment.md#docker), [Volumes, networks and Docker Compose](deployment.md#docker-compose), [CI/CD, cloud deployment and rollback](deployment.md#deployment-cicd), [Queues, async processing, retries and timeouts](deployment.md#deployment-queues), [Logging, tracing, monitoring, alerts and incidents](deployment.md#deployment-monitoring), [Durable jobs, backoff, deduplication and overload](deployment.md#deployment-jobs-retries), [Service objectives, traces, latency percentiles and rollback](deployment.md#deployment-observability-slos), [Backup, restore and data recovery drills](deployment.md#deployment-backup-restore) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Define the success contract:** Write observable checks before implementation so success is not just a plausible demonstration.
+  - Example: Turn this task into a numbered acceptance checklist: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.
+  - Videos:
+    - [Incident management: SRE implements DevOps](https://www.youtube.com/watch?v=n4y9dwinPBQ) · Google Cloud Tech · Focused lecture
+      - Explains: Incident roles, response process and learning after failures.
+      - Useful because: Rehearse your runbook on a local outage and document what changed.
+      - Watch for: Focus on define the success contract. Then reproduce the lesson example: Turn this task into a numbered acceptance checklist: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=n4y9dwinPBQ
+    - [Docker — full DevOps course](https://www.youtube.com/watch?v=rjjES5IsPdg) · freeCodeCamp · Long tool course · approximately 8h
+      - Explains: Images, containers, Dockerfiles and deploying containerized applications.
+      - Useful because: Package the exact service you tested; keep cloud purchases optional.
+      - Watch for: Focus on define the success contract. Then reproduce the lesson example: Turn this task into a numbered acceptance checklist: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/docker-full-course/
+- [ ] **Reproduce the baseline:** Keep a simple reference output and deterministic inputs so changes can be compared honestly.
+  - Example: Run a fixed input twice and compare saved outputs with the documented baseline.
+  - Videos:
+    - [Incident management: SRE implements DevOps](https://www.youtube.com/watch?v=n4y9dwinPBQ) · Google Cloud Tech · Focused lecture
+      - Explains: Incident roles, response process and learning after failures.
+      - Useful because: Rehearse your runbook on a local outage and document what changed.
+      - Watch for: Focus on reproduce the baseline. Then reproduce the lesson example: Run a fixed input twice and compare saved outputs with the documented baseline.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=n4y9dwinPBQ
+    - [Docker — full DevOps course](https://www.youtube.com/watch?v=rjjES5IsPdg) · freeCodeCamp · Long tool course · approximately 8h
+      - Explains: Images, containers, Dockerfiles and deploying containerized applications.
+      - Useful because: Package the exact service you tested; keep cloud purchases optional.
+      - Watch for: Focus on reproduce the baseline. Then reproduce the lesson example: Run a fixed input twice and compare saved outputs with the documented baseline.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/docker-full-course/
+- [ ] **Test a failure boundary:** A working happy path does not establish robustness to malformed data or dependency failures.
+  - Example: Inject one malformed input and one controlled failure, then record the resulting state.
+  - Videos:
+    - [Incident management: SRE implements DevOps](https://www.youtube.com/watch?v=n4y9dwinPBQ) · Google Cloud Tech · Focused lecture
+      - Explains: Incident roles, response process and learning after failures.
+      - Useful because: Rehearse your runbook on a local outage and document what changed.
+      - Watch for: Focus on test a failure boundary. Then reproduce the lesson example: Inject one malformed input and one controlled failure, then record the resulting state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=n4y9dwinPBQ
+    - [Docker — full DevOps course](https://www.youtube.com/watch?v=rjjES5IsPdg) · freeCodeCamp · Long tool course · approximately 8h
+      - Explains: Images, containers, Dockerfiles and deploying containerized applications.
+      - Useful because: Package the exact service you tested; keep cloud purchases optional.
+      - Watch for: Focus on test a failure boundary. Then reproduce the lesson example: Inject one malformed input and one controlled failure, then record the resulting state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/docker-full-course/
+- [ ] **Explain the decisions:** Describe why each technique was chosen and what evidence would make you choose differently.
+  - Example: Write a short decision note comparing the chosen approach with one simpler alternative.
+  - Videos:
+    - [Incident management: SRE implements DevOps](https://www.youtube.com/watch?v=n4y9dwinPBQ) · Google Cloud Tech · Focused lecture
+      - Explains: Incident roles, response process and learning after failures.
+      - Useful because: Rehearse your runbook on a local outage and document what changed.
+      - Watch for: Focus on explain the decisions. Then reproduce the lesson example: Write a short decision note comparing the chosen approach with one simpler alternative.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=n4y9dwinPBQ
+    - [Docker — full DevOps course](https://www.youtube.com/watch?v=rjjES5IsPdg) · freeCodeCamp · Long tool course · approximately 8h
+      - Explains: Images, containers, Dockerfiles and deploying containerized applications.
+      - Useful because: Package the exact service you tested; keep cloud purchases optional.
+      - Watch for: Focus on explain the decisions. Then reproduce the lesson example: Write a short decision note comparing the chosen approach with one simpler alternative.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/docker-full-course/
+- [ ] **Hand off the evidence:** Another learner must be able to reproduce the result from your instructions and supplied inputs.
+  - Example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+  - Videos:
+    - [Incident management: SRE implements DevOps](https://www.youtube.com/watch?v=n4y9dwinPBQ) · Google Cloud Tech · Focused lecture
+      - Explains: Incident roles, response process and learning after failures.
+      - Useful because: Rehearse your runbook on a local outage and document what changed.
+      - Watch for: Focus on hand off the evidence. Then reproduce the lesson example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.youtube.com/watch?v=n4y9dwinPBQ
+    - [Docker — full DevOps course](https://www.youtube.com/watch?v=rjjES5IsPdg) · freeCodeCamp · Long tool course · approximately 8h
+      - Explains: Images, containers, Dockerfiles and deploying containerized applications.
+      - Useful because: Package the exact service you tested; keep cloud purchases optional.
+      - Watch for: Focus on hand off the evidence. Then reproduce the lesson example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/docker-full-course/
+
+#### YouTube: focused explanations and full courses
+
+- [Incident management: SRE implements DevOps](https://www.youtube.com/watch?v=n4y9dwinPBQ) · Google Cloud Tech · Focused lecture
+  - Explains: Incident roles, response process and learning after failures.
+  - Useful because: Rehearse your runbook on a local outage and document what changed.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=n4y9dwinPBQ
+- [Site reliability engineering fundamentals](https://www.youtube.com/watch?v=eopc_ijIfLg) · Google Cloud Events · Technical session
+  - Explains: Service objectives, error budgets, monitoring, alerting and emergency response.
+  - Useful because: Write actionable monitoring and recovery steps instead of collecting logs without a plan.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=eopc_ijIfLg
+- [Docker — full DevOps course](https://www.youtube.com/watch?v=rjjES5IsPdg) · freeCodeCamp · Long tool course · approximately 8h
+  - Explains: Images, containers, Dockerfiles and deploying containerized applications.
+  - Useful because: Package the exact service you tested; keep cloud purchases optional.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/docker-full-course/
+
+#### Free written resources
+
+1. [Official reference: Backup, restore and data recovery drills](https://www.postgresql.org/docs/current/backup.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+2. [Docker: Compose getting started](https://docs.docker.com/compose/gettingstarted/) — Free; no registration required. No paid materials required.
+
+#### Operations checkpoint
+
+Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.
+
+**Deliverables**
+
+- Runnable project and reproducible input fixtures
+- README, results and decision notes
+- Failure evidence and clean-start instructions
+
+**Completion checks**
+
+- [ ] Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.
+- [ ] Explain the code and results without relying on an AI-generated summary.
+- [ ] A teammate can reproduce the demo without paid credentials.
+
+#### Ten project recommendations
+
+### Offline quality pipeline
+
+A team needs a repeatable test gate before packaging.
+
+**Data:** Use a small project with one deliberately failing test. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A CI configuration with local equivalent commands.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Operations checkpoint:** Extend the project with Operations checkpoint in Offline quality pipeline. Adapt this focused lab to the project data: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A CI configuration with local equivalent commands. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Operations checkpoint: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] The gate fails on the broken test and produces a versioned artifact only on success.
+- [ ] Operations checkpoint: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### API and database Compose lab
+
+A developer needs reproducible service networking and persistence.
+
+**Data:** Seed a local PostgreSQL database with fictional tasks. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A Compose stack with isolated services and persistent data.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Operations checkpoint:** Extend the project with Operations checkpoint in API and database Compose lab. Adapt this focused lab to the project data: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A Compose stack with isolated services and persistent data. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Operations checkpoint: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Restart containers without losing rows; API connects by service name.
+- [ ] Operations checkpoint: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Reproducible inference container
+
+A teammate needs to start the same API on another machine.
+
+**Data:** Use a tiny local FastAPI app and generated request fixtures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A non-root Docker image with health check and smoke test.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Operations checkpoint:** Extend the project with Operations checkpoint in Reproducible inference container. Adapt this focused lab to the project data: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A non-root Docker image with health check and smoke test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Operations checkpoint: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Build cleanly, start on a configurable port and stop gracefully.
+- [ ] Operations checkpoint: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Local inference efficiency ledger
+
+A learner needs to compare caching and batching tradeoffs.
+
+**Data:** Use repeated generated requests and a tiny CPU model. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A benchmark of cached, uncached and batched inference.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Operations checkpoint:** Extend the project with Operations checkpoint in Local inference efficiency ledger. Adapt this focused lab to the project data: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A benchmark of cached, uncached and batched inference. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Operations checkpoint: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report cache hit rate, memory and latency; verify outputs remain equivalent.
+- [ ] Operations checkpoint: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Service capacity envelope
+
+A builder needs to understand throughput on their own machine.
+
+**Data:** Use a deterministic local endpoint and bounded load generator. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A latency/throughput curve and saturation report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Operations checkpoint:** Extend the project with Operations checkpoint in Service capacity envelope. Adapt this focused lab to the project data: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A latency/throughput curve and saturation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Operations checkpoint: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report p50/p95, errors and machine specs without generalizing to production.
+- [ ] Operations checkpoint: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Idempotent background worker
+
+An operator needs safe retry of failed jobs.
+
+**Data:** Generate 50 local jobs and injected transient failures. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A queue worker with bounded retries and dead-letter records.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Operations checkpoint:** Extend the project with Operations checkpoint in Idempotent background worker. Adapt this focused lab to the project data: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A queue worker with bounded retries and dead-letter records. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Operations checkpoint: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Duplicate delivery never duplicates the final output.
+- [ ] Operations checkpoint: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Release rollback rehearsal
+
+A maintainer needs a tested escape from a broken release.
+
+**Data:** Build two local image versions, one with a failing health endpoint. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A rollout checklist and executable local rollback drill.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Operations checkpoint:** Extend the project with Operations checkpoint in Release rollback rehearsal. Adapt this focused lab to the project data: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A rollout checklist and executable local rollback drill. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Operations checkpoint: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Restore healthy traffic and verify data compatibility after rollback.
+- [ ] Operations checkpoint: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Reliability budget dashboard
+
+An operator needs meaningful availability and latency indicators.
+
+**Data:** Generate one day of synthetic request metrics with an outage. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SLO report with burn-rate alerts and investigation notes.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Operations checkpoint:** Extend the project with Operations checkpoint in Reliability budget dashboard. Adapt this focused lab to the project data: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SLO report with burn-rate alerts and investigation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Operations checkpoint: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compute error budget correctly and distinguish missing telemetry from success.
+- [ ] Operations checkpoint: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Timeout budget simulator
+
+An engineer needs to prevent retry storms across dependent calls.
+
+**Data:** Create three local stubs with controllable delay and failure rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A timeout/retry budget experiment.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Operations checkpoint:** Extend the project with Operations checkpoint in Timeout budget simulator. Adapt this focused lab to the project data: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A timeout/retry budget experiment. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Operations checkpoint: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Total request duration stays bounded and attempts stay below the configured cap.
+- [ ] Operations checkpoint: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Request trace investigation
+
+A maintainer needs to follow one request across components.
+
+**Data:** Generate requests with correlation IDs and seeded slow dependencies. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Structured logs and a local trace report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Operations checkpoint:** Extend the project with Operations checkpoint in Request trace investigation. Adapt this focused lab to the project data: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Structured logs and a local trace report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Operations checkpoint: Operations checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Trace each request end to end without logging secrets or full private payloads.
+- [ ] Operations checkpoint: Run the assistant and its data store locally using Docker Compose. Demonstrate health checks, bounded retries, correlated logs, a rollback and a tested database restore; document how a teammate repeats each drill.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

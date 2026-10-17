@@ -9,9 +9,10 @@ const server = await createServer({
   appType: "custom",
 });
 after(() => server.close());
-const { LessonPage, Roadmap, Dashboard } =
+const { LessonPage, Roadmap, Dashboard, ProjectBuilder, BriefDetail } =
   await server.ssrLoadModule("/src/App.tsx");
 const { catalog } = await server.ssrLoadModule("/src/catalog.ts");
+const { recommend } = await server.ssrLoadModule("/src/recommendations.mjs");
 const user = {
   id: "learner",
   displayName: "Learner",
@@ -30,6 +31,54 @@ const state = {
   projects: [],
   team: null,
 };
+
+test("Project builder shows the first ten ideas, provenance and the next batch control", () => {
+  const html = renderToStaticMarkup(
+    createElement(ProjectBuilder, {
+      state,
+      user,
+      run: async () => {},
+      busy: false,
+      initialSkill: "python",
+    }),
+  );
+  assert.equal((html.match(/class="panel project-card"/g) ?? []).length, 10);
+  assert(
+    html.includes("Show more") &&
+      html.includes("Curated match") &&
+      html.includes("130 authored projects"),
+  );
+});
+
+test("Project details expose the learning handoff and preserve legacy brief rendering", () => {
+  const brief = recommend([catalog.lessons.find((l) => l.id === "fastapi")])[0];
+  const html = renderToStaticMarkup(createElement(BriefDetail, { brief }));
+  for (const label of [
+    "What you will learn",
+    "Architecture and data flow",
+    "Copy mentor prompt",
+    "Download .md",
+    "Preview prompt",
+    "Private notes",
+  ])
+    assert(html.includes(label), label);
+  const legacy = { ...brief };
+  for (const key of [
+    "audience",
+    "learningGoals",
+    "boundaries",
+    "dataFlow",
+    "stages",
+    "resources",
+    "source",
+  ])
+    delete legacy[key];
+  assert(
+    renderToStaticMarkup(
+      createElement(BriefDetail, { brief: legacy }),
+    ).includes("Copy mentor prompt"),
+  );
+});
 
 test("Simplified lesson keeps every concept, video and exercise available with separate progress controls", () => {
   const lesson = catalog.lessons.find((l) => l.id === "dl-tensors");

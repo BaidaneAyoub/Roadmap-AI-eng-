@@ -1,12 +1,12 @@
 {
-  "checkedAt": "2026-10-15T17:29:24.955498+00:00",
+  "checkedAt": "2026-10-15T17:56:47.049106+00:00",
   "results": [
     {
       "url": "https://cs50.harvard.edu/python/2022/weeks/0/",
-      "title": "CS50P 0 \u2014 Functions and variables \u2014 publisher verification",
+      "title": "CS50P: variables and functions",
       "status": 200,
       "finalUrl": "https://cs50.harvard.edu/python/weeks/0/",
-      "containsTitle": false
+      "containsTitle": true
     },
     {
       "url": "https://docs.python.org/3/tutorial/datastructures.html",
@@ -17,10 +17,10 @@
     },
     {
       "url": "https://cs50.harvard.edu/python/2022/weeks/1/",
-      "title": "CS50P 1 \u2014 Conditionals \u2014 publisher verification",
+      "title": "CS50P: conditionals",
       "status": 200,
       "finalUrl": "https://cs50.harvard.edu/python/weeks/1/",
-      "containsTitle": false
+      "containsTitle": true
     },
     {
       "url": "https://docs.python.org/3/tutorial/controlflow.html",
@@ -31,10 +31,10 @@
     },
     {
       "url": "https://cs50.harvard.edu/python/2022/weeks/6/",
-      "title": "CS50P 6 \u2014 File I/O \u2014 publisher verification",
+      "title": "CS50P: file I/O",
       "status": 200,
       "finalUrl": "https://cs50.harvard.edu/python/weeks/6/",
-      "containsTitle": false
+      "containsTitle": true
     },
     {
       "url": "https://docs.python.org/3/tutorial/inputoutput.html",
@@ -122,10 +122,10 @@
     },
     {
       "url": "https://missing.csail.mit.edu/2020/course-shell/",
-      "title": "Missing Semester \u2014 shell and terminal introduction \u2014 publisher verification",
+      "title": "The Missing Semester: shell tools",
       "status": 200,
       "finalUrl": "https://missing.csail.mit.edu/2020/course-shell/",
-      "containsTitle": false
+      "containsTitle": true
     },
     {
       "url": "https://missing.csail.mit.edu/2020/shell-tools/",
@@ -227,7 +227,7 @@
     },
     {
       "url": "https://numpy.org/doc/stable/user/absolute_beginners.html",
-      "title": "NumPy absolute beginners",
+      "title": "math-data implementation reference",
       "status": 200,
       "finalUrl": "https://numpy.org/doc/stable/user/absolute_beginners.html",
       "containsTitle": false
@@ -990,7 +990,7 @@
     },
     {
       "url": "https://huggingface.co/learn/llm-course/chapter1/1",
-      "title": "Hugging Face LLM course",
+      "title": "llm implementation reference",
       "status": 200,
       "finalUrl": "https://huggingface.co/learn/llm-course/chapter1/1",
       "containsTitle": false
@@ -1048,7 +1048,7 @@
       "url": "https://huggingface.co/docs/transformers/task_summary",
       "title": "Hugging Face: tasks",
       "status": 200,
-      "finalUrl": "https://huggingface.co/docs/transformers/v5.19.0/pipeline_tutorial",
+      "finalUrl": "https://huggingface.co/docs/transformers/v5.20.0/pipeline_tutorial",
       "containsTitle": true
     },
     {
@@ -1186,10 +1186,10 @@
     },
     {
       "url": "https://pair.withgoogle.com/guidebook/chapters/user-needs/",
-      "title": "Google PAIR: user needs",
+      "title": "PAIR: user needs and success",
       "status": 200,
       "finalUrl": "https://pair.withgoogle.com/guidebook/chapters/user-needs/",
-      "containsTitle": false
+      "containsTitle": true
     },
     {
       "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
@@ -1277,10 +1277,10 @@
     },
     {
       "url": "https://modelcontextprotocol.io/docs/develop/build-server",
-      "title": "MCP: build a server",
+      "title": "agents implementation reference",
       "status": 200,
       "finalUrl": "https://modelcontextprotocol.io/docs/2026-07-28/develop/build-server",
-      "containsTitle": true
+      "containsTitle": false
     },
     {
       "url": "https://modelcontextprotocol.io/docs/develop/build-client",
@@ -1354,7 +1354,7 @@
     },
     {
       "url": "https://sre.google/sre-book/managing-incidents/",
-      "title": "Google SRE: incident management",
+      "title": "Google SRE: managing incidents",
       "status": 200,
       "finalUrl": "https://sre.google/sre-book/managing-incidents/",
       "containsTitle": true
@@ -1431,10 +1431,10 @@
     },
     {
       "url": "https://pair.withgoogle.com/guidebook/chapters/feedback-controls/",
-      "title": "Google PAIR: feedback and control",
+      "title": "PAIR: feedback and control",
       "status": 200,
       "finalUrl": "https://pair.withgoogle.com/guidebook/chapters/feedback-controls/",
-      "containsTitle": false
+      "containsTitle": true
     },
     {
       "url": "https://sre.google/sre-book/embracing-risk/",
@@ -1833,6 +1833,62 @@
       "title": "Architecture decision records: when and how to use them \u2014 publisher verification",
       "status": 200,
       "finalUrl": "https://www.youtube.com/watch?v=GhB7vz3sg-0",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.python.org/3/tutorial/",
+      "title": "python implementation reference",
+      "status": 200,
+      "finalUrl": "https://docs.python.org/3/tutorial/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://git-scm.com/book/en/v2",
+      "title": "engineering implementation reference",
+      "status": 200,
+      "finalUrl": "https://git-scm.com/book/en/v2",
+      "containsTitle": false
+    },
+    {
+      "url": "https://scikit-learn.org/stable/datasets/toy_dataset.html",
+      "title": "ml implementation reference",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/datasets/toy_dataset.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.pytorch.org/tutorials/beginner/basics/intro.html",
+      "title": "dl implementation reference",
+      "status": 200,
+      "finalUrl": "https://docs.pytorch.org/tutorials/beginner/basics/intro.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/feature_extraction.html",
+      "title": "rag implementation reference",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/feature_extraction.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.docker.com/get-started/",
+      "title": "deployment implementation reference",
+      "status": 200,
+      "finalUrl": "https://docs.docker.com/get-started/",
+      "containsTitle": false
+    },
+    {
+      "url": "https://docs.pytest.org/en/stable/how-to/assert.html",
+      "title": "coding-agents implementation reference",
+      "status": 200,
+      "finalUrl": "https://docs.pytest.org/en/stable/how-to/assert.html",
+      "containsTitle": false
+    },
+    {
+      "url": "https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works",
+      "title": "product implementation reference",
+      "status": 200,
+      "finalUrl": "https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works",
       "containsTitle": false
     }
   ]

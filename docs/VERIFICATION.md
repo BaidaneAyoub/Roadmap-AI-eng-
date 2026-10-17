@@ -19,6 +19,16 @@ GitHub OAuth, hosted Supabase/PostgREST/Realtime behavior, two-device cloud sync
 Videos were curated from creator/publisher pages and available metadata. The complete duration of every course was not watched. Topic guidance and official written resources accompany long courses; no unverified timestamps are supplied.
 
 Local-mode notes/progress are stored in one browser and are accessible to anyone who can use that browser profile. Online note privacy is enforced in a separate database table. Export local backups before clearing browser storage; keep source IDs stable when editing the curriculum.
+# Project library and AI mentor update · 2026-10-15
+
+Added 130 distinct authored project briefs, ten per domain, with exact tool roles, optional preparation, deterministic ranking and non-repeating batches. Combined ML/DL projects are restricted to authored prediction targets; alternatives have comparison checks and larger selections include extension stages. Existing v1 project snapshots remain readable without changing IDs, participants or milestone state.
+
+English mentor prompts include the selected brief, self-reported learning signals, prerequisite gaps, exercises and acceptance checks. They instruct an external AI to teach one step at a time and wait for the learner's attempt. Notes, evidence links and profile/team details are excluded. Copy failures return a manual-copy state; Markdown downloads use the same prompt generator.
+
+Production build and 34 automated checks passed, covering library coverage, exact/adapted ranking, pagination, multi-tool integration, mapped and unknown custom topics, prompt privacy, clipboard success/failure, download content, legacy snapshot compatibility, generated-data parity and server-rendered UI controls. The running Vite server served the new interface and all 130 generated project briefs. Resource verification checked 270 unique URLs with zero HTTP failures; this does not prove every exercise has been implemented or every model combination benchmarked.
+
+Browser clicks, actual system clipboard/file-download behavior and desktop/mobile pixels were not rechecked because the earlier browser URL security-policy block remains unresolved. Hosted authentication and cross-device synchronization remain unconfigured. No deployment, AI request or GitHub push was performed for this update.
+
 # Guided roadmap update
 
 ## Expanded curriculum · 2026-10-15

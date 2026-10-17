@@ -5,6 +5,7 @@ type CompactLesson = Omit<Lesson, "videos" | "concepts"> & {
   concepts: (Omit<Concept, "videos"> & { videoUrls: string[] })[];
 };
 type Serialized = {
+  stages: Catalog['stages'];
   version: number;
   pipeline: Catalog["pipeline"];
   domains: {
@@ -30,6 +31,7 @@ const lessons: Lesson[] = serialized.lessons.map((l) => ({
   })),
 }));
 export const catalog: Catalog = {
+  stages: serialized.stages,
   version: serialized.version,
   pipeline: serialized.pipeline,
   lessons,

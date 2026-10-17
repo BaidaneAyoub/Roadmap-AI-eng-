@@ -1,14 +1,14 @@
 # Resource verification
 
-Checked 2026-10-15T17:29:24.955498+00:00. HTTP reachability is separate from relevance and access terms. Bot blocks/timeouts are reported for manual review; they do not establish that a page is unavailable to people. YouTube video provenance is recorded in VIDEOS.md and content/video-research.json; direct YouTube requests may be rate-limited. No transcripts or video media are downloaded.
+Checked 2026-10-15T17:56:47.049106+00:00. HTTP reachability is separate from relevance and access terms. Bot blocks/timeouts are reported for manual review; they do not establish that a page is unavailable to people. YouTube video provenance is recorded in VIDEOS.md and content/video-research.json; direct YouTube requests may be rate-limited. No transcripts or video media are downloaded.
 
 | Resource | HTTP | Final URL / note |
 |---|---|---|
-| [CS50P 0 — Functions and variables — publisher verification](https://cs50.harvard.edu/python/2022/weeks/0/) | 200 | https://cs50.harvard.edu/python/weeks/0/ |
+| [CS50P: variables and functions](https://cs50.harvard.edu/python/2022/weeks/0/) | 200 | https://cs50.harvard.edu/python/weeks/0/ |
 | [Python: data structures](https://docs.python.org/3/tutorial/datastructures.html) | 200 | https://docs.python.org/3/tutorial/datastructures.html |
-| [CS50P 1 — Conditionals — publisher verification](https://cs50.harvard.edu/python/2022/weeks/1/) | 200 | https://cs50.harvard.edu/python/weeks/1/ |
+| [CS50P: conditionals](https://cs50.harvard.edu/python/2022/weeks/1/) | 200 | https://cs50.harvard.edu/python/weeks/1/ |
 | [Python: control flow](https://docs.python.org/3/tutorial/controlflow.html) | 200 | https://docs.python.org/3/tutorial/controlflow.html |
-| [CS50P 6 — File I/O — publisher verification](https://cs50.harvard.edu/python/2022/weeks/6/) | 200 | https://cs50.harvard.edu/python/weeks/6/ |
+| [CS50P: file I/O](https://cs50.harvard.edu/python/2022/weeks/6/) | 200 | https://cs50.harvard.edu/python/weeks/6/ |
 | [Python: input and output](https://docs.python.org/3/tutorial/inputoutput.html) | 200 | https://docs.python.org/3/tutorial/inputoutput.html |
 | [Python: modules](https://docs.python.org/3/tutorial/modules.html) | 200 | https://docs.python.org/3/tutorial/modules.html |
 | [Python: virtual environments](https://docs.python.org/3/tutorial/venv.html) | 200 | https://docs.python.org/3/tutorial/venv.html |
@@ -21,7 +21,7 @@ Checked 2026-10-15T17:29:24.955498+00:00. HTTP reachability is separate from rel
 | [Python: reading and writing files](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files) | 200 | https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files |
 | [Python: pathlib](https://docs.python.org/3/library/pathlib.html) | 200 | https://docs.python.org/3/library/pathlib.html |
 | [pytest: monkeypatching](https://docs.pytest.org/en/stable/how-to/monkeypatch.html) | 200 | https://docs.pytest.org/en/stable/how-to/monkeypatch.html |
-| [Missing Semester — shell and terminal introduction — publisher verification](https://missing.csail.mit.edu/2020/course-shell/) | 200 | https://missing.csail.mit.edu/2020/course-shell/ |
+| [The Missing Semester: shell tools](https://missing.csail.mit.edu/2020/course-shell/) | 200 | https://missing.csail.mit.edu/2020/course-shell/ |
 | [Missing Semester: shell tools and scripting](https://missing.csail.mit.edu/2020/shell-tools/) | 200 | https://missing.csail.mit.edu/2020/shell-tools/ |
 | [Pro Git: basic branching and merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) | 200 | https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging |
 | [Pro Git: recording changes](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) | 200 | https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository |
@@ -36,7 +36,7 @@ Checked 2026-10-15T17:29:24.955498+00:00. HTTP reachability is separate from rel
 | [D2L: automatic differentiation](https://d2l.ai/chapter_preliminaries/autograd.html) | 200 | https://d2l.ai/chapter_preliminaries/autograd.html |
 | [D2L: probability and statistics](https://d2l.ai/chapter_preliminaries/probability.html) | 200 | https://d2l.ai/chapter_preliminaries/probability.html |
 | [Neural Networks Part 11: Word Embedding and Word2Vec — publisher verification](https://statquest.org/video_index.html) | 200 | https://statquest.org/video_index.html |
-| [NumPy absolute beginners](https://numpy.org/doc/stable/user/absolute_beginners.html) | 200 | https://numpy.org/doc/stable/user/absolute_beginners.html |
+| [math-data implementation reference](https://numpy.org/doc/stable/user/absolute_beginners.html) | 200 | https://numpy.org/doc/stable/user/absolute_beginners.html |
 | [NumPy: broadcasting rules](https://numpy.org/doc/stable/user/basics.broadcasting.html) | 200 | https://numpy.org/doc/stable/user/basics.broadcasting.html |
 | [pandas getting started tutorials](https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html) | 200 | https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html |
 | [pandas missing data guide](https://pandas.pydata.org/docs/user_guide/missing_data.html) | 200 | https://pandas.pydata.org/docs/user_guide/missing_data.html |
@@ -145,7 +145,7 @@ Checked 2026-10-15T17:29:24.955498+00:00. HTTP reachability is separate from rel
 | [librosa: mel spectrogram](https://librosa.org/doc/0.11.0/generated/librosa.feature.melspectrogram.html) | 200 | https://librosa.org/doc/0.11.0/generated/librosa.feature.melspectrogram.html |
 | [D2L: Markov decision processes](https://d2l.ai/chapter_reinforcement-learning/mdp.html) | 200 | https://d2l.ai/chapter_reinforcement-learning/mdp.html |
 | [Hugging Face: deep reinforcement learning introduction](https://huggingface.co/learn/deep-rl-course/unit1/introduction) | 200 | https://huggingface.co/learn/deep-rl-course/unit1/introduction |
-| [Hugging Face LLM course](https://huggingface.co/learn/llm-course/chapter1/1) | 200 | https://huggingface.co/learn/llm-course/chapter1/1 |
+| [llm implementation reference](https://huggingface.co/learn/llm-course/chapter1/1) | 200 | https://huggingface.co/learn/llm-course/chapter1/1 |
 | [Hugging Face: using transformers](https://huggingface.co/learn/llm-course/chapter2/1) | 200 | https://huggingface.co/learn/llm-course/chapter2/1 |
 | [Ollama documentation](https://docs.ollama.com/) | 200 | https://docs.ollama.com/ |
 | [Hugging Face: generation strategies](https://huggingface.co/docs/transformers/generation_strategies) | 200 | https://huggingface.co/docs/transformers/generation_strategies |
@@ -153,7 +153,7 @@ Checked 2026-10-15T17:29:24.955498+00:00. HTTP reachability is separate from rel
 | [Hugging Face: messages and special tokens](https://huggingface.co/learn/agents-course/unit1/messages-and-special-tokens) | 200 | https://huggingface.co/learn/agents-course/unit1/messages-and-special-tokens |
 | [Hugging Face: KV cache strategies](https://huggingface.co/docs/transformers/kv_cache) | 200 | https://huggingface.co/docs/transformers/kv_cache |
 | [Hugging Face: tools](https://huggingface.co/learn/agents-course/unit1/tools) | 200 | https://huggingface.co/learn/agents-course/unit1/tools |
-| [Hugging Face: tasks](https://huggingface.co/docs/transformers/task_summary) | 200 | https://huggingface.co/docs/transformers/v5.19.0/pipeline_tutorial |
+| [Hugging Face: tasks](https://huggingface.co/docs/transformers/task_summary) | 200 | https://huggingface.co/docs/transformers/v5.20.0/pipeline_tutorial |
 | [Hugging Face PEFT: LoRA](https://huggingface.co/docs/peft/conceptual_guides/lora) | 200 | https://huggingface.co/docs/peft/conceptual_guides/lora |
 | [Hugging Face: quantisation overview](https://huggingface.co/docs/transformers/quantization/overview) | 200 | https://huggingface.co/docs/transformers/quantization/overview |
 | [Hugging Face: generation configuration](https://huggingface.co/docs/transformers/main_classes/text_generation) | 200 | https://huggingface.co/docs/transformers/main_classes/text_generation |
@@ -173,7 +173,7 @@ Checked 2026-10-15T17:29:24.955498+00:00. HTTP reachability is separate from rel
 | [Sentence Transformers: retrieve and rerank](https://sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html) | 200 | https://sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html |
 | [Hugging Face: evaluate a RAG system](https://huggingface.co/learn/cookbook/rag_evaluation) | 200 | https://huggingface.co/learn/cookbook/rag_evaluation |
 | [PAIR: explainability and trust](https://pair.withgoogle.com/guidebook/chapters/explainability-trust/) | 200 | https://pair.withgoogle.com/guidebook/chapters/explainability-trust/ |
-| [Google PAIR: user needs](https://pair.withgoogle.com/guidebook/chapters/user-needs/) | 200 | https://pair.withgoogle.com/guidebook/chapters/user-needs/ |
+| [PAIR: user needs and success](https://pair.withgoogle.com/guidebook/chapters/user-needs/) | 200 | https://pair.withgoogle.com/guidebook/chapters/user-needs/ |
 | [Google SRE: monitoring distributed systems](https://sre.google/sre-book/monitoring-distributed-systems/) | 200 | https://sre.google/sre-book/monitoring-distributed-systems/ |
 | [OWASP Top 10 for LLM applications](https://genai.owasp.org/llm-top-10/) | 200 | https://genai.owasp.org/llm-top-10/ |
 | [MCP: security best practices](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices) | 200 | https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices |
@@ -186,7 +186,7 @@ Checked 2026-10-15T17:29:24.955498+00:00. HTTP reachability is separate from rel
 | [LangGraph: persistence](https://docs.langchain.com/oss/python/langgraph/persistence) | 200 | https://docs.langchain.com/oss/python/langgraph/persistence |
 | [LangGraph: workflows and agents](https://docs.langchain.com/oss/python/langgraph/workflows-agents) | 200 | https://docs.langchain.com/oss/python/langgraph/workflows-agents |
 | [MCP: architecture](https://modelcontextprotocol.io/docs/learn/architecture) | 200 | https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture |
-| [MCP: build a server](https://modelcontextprotocol.io/docs/develop/build-server) | 200 | https://modelcontextprotocol.io/docs/2026-07-28/develop/build-server |
+| [agents implementation reference](https://modelcontextprotocol.io/docs/develop/build-server) | 200 | https://modelcontextprotocol.io/docs/2026-07-28/develop/build-server |
 | [MCP: build a client](https://modelcontextprotocol.io/docs/develop/build-client) | 200 | https://modelcontextprotocol.io/docs/2026-07-28/develop/build-client |
 | [LangGraph: graph API](https://docs.langchain.com/oss/python/langgraph/graph-api) | 200 | https://docs.langchain.com/oss/python/langgraph/graph-api |
 | [Docker: run a container](https://docs.docker.com/get-started/tutorials/run-an-app/) | 200 | https://docs.docker.com/get-started/tutorials/run-an-app/ |
@@ -197,7 +197,7 @@ Checked 2026-10-15T17:29:24.955498+00:00. HTTP reachability is separate from rel
 | [Google SRE: release engineering](https://sre.google/sre-book/release-engineering/) | 200 | https://sre.google/sre-book/release-engineering/ |
 | [Google SRE: handling overload](https://sre.google/sre-book/handling-overload/) | 200 | https://sre.google/sre-book/handling-overload/ |
 | [asyncio: queues](https://docs.python.org/3/library/asyncio-queue.html) | 200 | https://docs.python.org/3/library/asyncio-queue.html |
-| [Google SRE: incident management](https://sre.google/sre-book/managing-incidents/) | 200 | https://sre.google/sre-book/managing-incidents/ |
+| [Google SRE: managing incidents](https://sre.google/sre-book/managing-incidents/) | 200 | https://sre.google/sre-book/managing-incidents/ |
 | [Google SRE: load balancing at the frontend](https://sre.google/sre-book/load-balancing-frontend/) | 200 | https://sre.google/sre-book/load-balancing-frontend/ |
 | [Google SRE: addressing cascading failures](https://sre.google/sre-book/addressing-cascading-failures/) | 200 | https://sre.google/sre-book/addressing-cascading-failures/ |
 | [AWS Builders Library: timeouts, retries and jitter](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/) | 200 | https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter |
@@ -208,7 +208,7 @@ Checked 2026-10-15T17:29:24.955498+00:00. HTTP reachability is separate from rel
 | [GitHub: responsible use of coding assistants](https://docs.github.com/en/copilot/responsible-use/copilot-code-completion) | 200 | https://docs.github.com/en/copilot/responsible-use/inline-suggestions |
 | [pytest: good integration practices](https://docs.pytest.org/en/stable/explanation/goodpractices.html) | 200 | https://docs.pytest.org/en/stable/explanation/goodpractices.html |
 | [PAIR: mental models](https://pair.withgoogle.com/guidebook/chapters/mental-models/) | 200 | https://pair.withgoogle.com/guidebook/chapters/mental-models/ |
-| [Google PAIR: feedback and control](https://pair.withgoogle.com/guidebook/chapters/feedback-controls/) | 200 | https://pair.withgoogle.com/guidebook/chapters/feedback-controls/ |
+| [PAIR: feedback and control](https://pair.withgoogle.com/guidebook/chapters/feedback-controls/) | 200 | https://pair.withgoogle.com/guidebook/chapters/feedback-controls/ |
 | [Google SRE: embracing risk](https://sre.google/sre-book/embracing-risk/) | 200 | https://sre.google/sre-book/embracing-risk/ |
 | [Architecture Decision Records](https://adr.github.io/) | 200 | https://adr.github.io/ |
 | [CS50P 2 — Loops — publisher verification](https://cs50.harvard.edu/python/2022/weeks/2/) | 200 | https://cs50.harvard.edu/python/weeks/2/ |
@@ -266,3 +266,11 @@ Checked 2026-10-15T17:29:24.955498+00:00. HTTP reachability is separate from rel
 | [Software requirements specification — worked tutorial — publisher verification](https://www.youtube.com/watch?v=M5DY3eTyhUA) | 200 | https://www.youtube.com/watch?v=M5DY3eTyhUA |
 | [Building faster with AI — publisher verification](https://www.youtube.com/watch?v=RNJCfif1dPY) | 200 | https://www.youtube.com/watch?v=RNJCfif1dPY |
 | [Architecture decision records: when and how to use them — publisher verification](https://www.youtube.com/watch?v=GhB7vz3sg-0) | 200 | https://www.youtube.com/watch?v=GhB7vz3sg-0 |
+| [python implementation reference](https://docs.python.org/3/tutorial/) | 200 | https://docs.python.org/3/tutorial/ |
+| [engineering implementation reference](https://git-scm.com/book/en/v2) | 200 | https://git-scm.com/book/en/v2 |
+| [ml implementation reference](https://scikit-learn.org/stable/datasets/toy_dataset.html) | 200 | https://scikit-learn.org/stable/datasets/toy_dataset.html |
+| [dl implementation reference](https://docs.pytorch.org/tutorials/beginner/basics/intro.html) | 200 | https://docs.pytorch.org/tutorials/beginner/basics/intro.html |
+| [rag implementation reference](https://scikit-learn.org/stable/modules/feature_extraction.html) | 200 | https://scikit-learn.org/stable/modules/feature_extraction.html |
+| [deployment implementation reference](https://docs.docker.com/get-started/) | 200 | https://docs.docker.com/get-started/ |
+| [coding-agents implementation reference](https://docs.pytest.org/en/stable/how-to/assert.html) | 200 | https://docs.pytest.org/en/stable/how-to/assert.html |
+| [product implementation reference](https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works) | 200 | https://www.gov.uk/service-manual/agile-delivery/how-the-discovery-phase-works |

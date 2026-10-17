@@ -2,17 +2,17 @@
 
 Expose reliable APIs and protect shared application state.
 
-## Main route · Step 3 of 8
+## Main route · Step 7 of 13
 
 **Goal:** Build the API and database layer that an AI application needs.
 
 **Stage checkpoint:** Build a FastAPI service with validated inputs, a SQL query and API tests.
 
-Create a validated API and store its data. Take the data branch when your project needs it.
+Expose validated APIs with authorization, relational data and transaction checks.
 
 Follow the modules and lessons below at your pace. Finish each exercise, save your evidence and self-assessment, then continue. Completed and Already known count as completed; Skipped is reported separately. You can move ahead at any time.
 
-[Full pipeline](../PIPELINE.md) · [Next step: LLM engineering](llm.md)
+[Full pipeline](../PIPELINE.md) · [Next step: Retrieval and RAG](rag.md)
 
 ## FastAPI and full-stack contracts
 
@@ -22,7 +22,7 @@ Follow the modules and lessons below at your pace. Finish each exercise, save yo
 
 Understand the browser side of a full-stack AI product instead of treating it as an afterthought.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [HTTP, APIs and JSON contracts](engineering.md#engineering-http) Navigation is unrestricted.
 
@@ -108,292 +108,292 @@ Build a plain HTML/JavaScript page that calls a local mock prediction API, retai
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### API explorer frontend
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A learner needs to connect form state to typed API responses.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Use a local fictional catalog with 30 items. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Frontend essentials, state and accessible UX:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend essentials, state and accessible UX, explicitly apply HTML and CSS, Browser state, API integration and accessibility.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend essentials, state and accessible UX: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Frontend essentials, state and accessible UX: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A searchable browser UI connected to FastAPI.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Frontend essentials, state and accessible UX:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend essentials, state and accessible UX, explicitly apply HTML and CSS, Browser state, API integration and accessibility.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
+- **Frontend essentials, state and accessible UX:** Implement Frontend essentials, state and accessible UX in API explorer frontend. Adapt this focused lab to the project data: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.  Required concepts: HTML and CSS, Browser state, API integration and accessibility.
+  - Deliverable: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend essentials, state and accessible UX: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A searchable browser UI connected to FastAPI. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend essentials, state and accessible UX: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Frontend essentials, state and accessible UX: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
+- [ ] Show loading, empty, validation and server-failure states.
+- [ ] Frontend essentials, state and accessible UX: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Async request boundary lab
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A developer needs responsive APIs when one dependency stalls.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use a local delayed stub service and concurrent requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Frontend essentials, state and accessible UX:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend essentials, state and accessible UX, explicitly apply HTML and CSS, Browser state, API integration and accessibility.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend essentials, state and accessible UX: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Frontend essentials, state and accessible UX: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Frontend essentials, state and accessible UX:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend essentials, state and accessible UX, explicitly apply HTML and CSS, Browser state, API integration and accessibility.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend essentials, state and accessible UX: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Frontend essentials, state and accessible UX: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Frontend essentials, state and accessible UX:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend essentials, state and accessible UX, explicitly apply HTML and CSS, Browser state, API integration and accessibility.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend essentials, state and accessible UX: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Frontend essentials, state and accessible UX: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A FastAPI client with timeouts and bounded work.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Frontend essentials, state and accessible UX:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend essentials, state and accessible UX, explicitly apply HTML and CSS, Browser state, API integration and accessibility.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
+- **Frontend essentials, state and accessible UX:** Extend the project with Frontend essentials, state and accessible UX in Async request boundary lab. Adapt this focused lab to the project data: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.  Required concepts: HTML and CSS, Browser state, API integration and accessibility.
+  - Deliverable: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend essentials, state and accessible UX: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A FastAPI client with timeouts and bounded work. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend essentials, state and accessible UX: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Frontend essentials, state and accessible UX: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
+- [ ] A slow dependency does not block independent health requests.
+- [ ] Frontend essentials, state and accessible UX: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Database index benchmark
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A developer needs to diagnose slow queries with evidence.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Generate 10000 fictional events in local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Frontend essentials, state and accessible UX:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend essentials, state and accessible UX, explicitly apply HTML and CSS, Browser state, API integration and accessibility.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend essentials, state and accessible UX: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Frontend essentials, state and accessible UX: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** An EXPLAIN comparison and minimal index migration.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Frontend essentials, state and accessible UX:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend essentials, state and accessible UX, explicitly apply HTML and CSS, Browser state, API integration and accessibility.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
+- **Frontend essentials, state and accessible UX:** Extend the project with Frontend essentials, state and accessible UX in Database index benchmark. Adapt this focused lab to the project data: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.  Required concepts: HTML and CSS, Browser state, API integration and accessibility.
+  - Deliverable: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend essentials, state and accessible UX: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An EXPLAIN comparison and minimal index migration. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend essentials, state and accessible UX: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Frontend essentials, state and accessible UX: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
+- [ ] Compare plans before/after indexing and measure write overhead.
+- [ ] Frontend essentials, state and accessible UX: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Private notes authorization lab
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A team needs each user to access only their own notes.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use three fictional users and 15 local notes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A local authenticated CRUD API with ownership checks.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Frontend essentials, state and accessible UX:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend essentials, state and accessible UX, explicitly apply HTML and CSS, Browser state, API integration and accessibility.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
+- **Frontend essentials, state and accessible UX:** Extend the project with Frontend essentials, state and accessible UX in Private notes authorization lab. Adapt this focused lab to the project data: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.  Required concepts: HTML and CSS, Browser state, API integration and accessibility.
+  - Deliverable: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend essentials, state and accessible UX: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A local authenticated CRUD API with ownership checks. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend essentials, state and accessible UX: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Frontend essentials, state and accessible UX: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
+- [ ] Test every cross-user read and write; no client-supplied owner override.
+- [ ] Frontend essentials, state and accessible UX: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Order analytics query lab
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+An analyst needs correct reports over relational data.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Generate customers, orders and line items in SQLite or local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A schema, joins and reconciled analytics report.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Frontend essentials, state and accessible UX:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend essentials, state and accessible UX, explicitly apply HTML and CSS, Browser state, API integration and accessibility.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
+- **Frontend essentials, state and accessible UX:** Extend the project with Frontend essentials, state and accessible UX in Order analytics query lab. Adapt this focused lab to the project data: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.  Required concepts: HTML and CSS, Browser state, API integration and accessibility.
+  - Deliverable: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend essentials, state and accessible UX: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A schema, joins and reconciled analytics report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend essentials, state and accessible UX: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Frontend essentials, state and accessible UX: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.
+- [ ] Prove totals survive joins and explain null and duplicate-key behavior.
+- [ ] Frontend essentials, state and accessible UX: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Validated prediction API
+
+A model builder needs a reliable inference boundary.
+
+**Data:** Use bundled digits and a small saved baseline or deterministic test predictor. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A FastAPI service with request/response schemas and health endpoint.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Frontend essentials, state and accessible UX:** Extend the project with Frontend essentials, state and accessible UX in Validated prediction API. Adapt this focused lab to the project data: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.  Required concepts: HTML and CSS, Browser state, API integration and accessibility.
+  - Deliverable: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A FastAPI service with request/response schemas and health endpoint. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend essentials, state and accessible UX: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject bad shapes and test successful inference plus unavailable-model errors.
+- [ ] Frontend essentials, state and accessible UX: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Safe schema evolution exercise
+
+A maintainer needs to change data shape without losing records.
+
+**Data:** Seed a local notes database with an old author-name field. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Forward/backward migrations and compatibility tests.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Frontend essentials, state and accessible UX:** Extend the project with Frontend essentials, state and accessible UX in Safe schema evolution exercise. Adapt this focused lab to the project data: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.  Required concepts: HTML and CSS, Browser state, API integration and accessibility.
+  - Deliverable: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Forward/backward migrations and compatibility tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend essentials, state and accessible UX: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Preserve seeded records and document irreversible transformations.
+- [ ] Frontend essentials, state and accessible UX: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Concurrent stock reservation
+
+A shop simulator needs to avoid selling more stock than exists.
+
+**Data:** Seed ten products with five units each in local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A transactional reservation endpoint and concurrency test.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Frontend essentials, state and accessible UX:** Extend the project with Frontend essentials, state and accessible UX in Concurrent stock reservation. Adapt this focused lab to the project data: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.  Required concepts: HTML and CSS, Browser state, API integration and accessibility.
+  - Deliverable: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A transactional reservation endpoint and concurrency test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend essentials, state and accessible UX: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Concurrent requests never make inventory negative and retries remain idempotent.
+- [ ] Frontend essentials, state and accessible UX: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Relational versus document store trial
+
+A designer needs evidence for choosing a storage model.
+
+**Data:** Represent the same 40 products and tags in SQL and JSON documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Two query implementations and a tradeoff report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Frontend essentials, state and accessible UX:** Extend the project with Frontend essentials, state and accessible UX in Relational versus document store trial. Adapt this focused lab to the project data: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.  Required concepts: HTML and CSS, Browser state, API integration and accessibility.
+  - Deliverable: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Two query implementations and a tradeoff report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend essentials, state and accessible UX: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match query results and demonstrate update consistency differences.
+- [ ] Frontend essentials, state and accessible UX: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Vector lookup service
+
+A search builder needs predictable similarity queries and filters.
+
+**Data:** Generate 100 normalized vectors with source and role metadata. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A local vector search API and metadata filter tests.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Frontend essentials, state and accessible UX:** Extend the project with Frontend essentials, state and accessible UX in Vector lookup service. Adapt this focused lab to the project data: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.  Required concepts: HTML and CSS, Browser state, API integration and accessibility.
+  - Deliverable: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A local vector search API and metadata filter tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend essentials, state and accessible UX: Frontend essentials, state and accessible UX: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compare with brute-force scores and reject unauthorized IDs.
+- [ ] Frontend essentials, state and accessible UX: Build a plain HTML/JavaScript page that calls a local mock prediction API, retains drafts on failure and works with keyboard-only navigation at mobile width.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -407,7 +407,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Build a model API with predictable input/output shapes and inspectable documentation.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Frontend essentials, state and accessible UX](backend.md#backend-frontend) Navigation is unrestricted.
 
@@ -482,292 +482,292 @@ Build a local FastAPI classifier endpoint using a small model or mock, schema va
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Private notes authorization lab
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A team needs each user to access only their own notes.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Use three fictional users and 15 local notes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **FastAPI routes, validation and OpenAPI:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI routes, validation and OpenAPI, explicitly apply Routes and models, Dependencies and async, OpenAPI and errors.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI routes, validation and OpenAPI: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] FastAPI routes, validation and OpenAPI: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A local authenticated CRUD API with ownership checks.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **FastAPI routes, validation and OpenAPI:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI routes, validation and OpenAPI, explicitly apply Routes and models, Dependencies and async, OpenAPI and errors.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
+- **FastAPI routes, validation and OpenAPI:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Private notes authorization lab: A local authenticated CRUD API with ownership checks. Focus: Routes and models, Dependencies and async, OpenAPI and errors.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI routes, validation and OpenAPI: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A local authenticated CRUD API with ownership checks. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI routes, validation and OpenAPI: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] FastAPI routes, validation and OpenAPI: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
+- [ ] Test every cross-user read and write; no client-supplied owner override.
+- [ ] FastAPI routes, validation and OpenAPI: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Validated prediction API
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A model builder needs a reliable inference boundary.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use bundled digits and a small saved baseline or deterministic test predictor. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **FastAPI routes, validation and OpenAPI:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI routes, validation and OpenAPI, explicitly apply Routes and models, Dependencies and async, OpenAPI and errors.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI routes, validation and OpenAPI: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] FastAPI routes, validation and OpenAPI: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **FastAPI routes, validation and OpenAPI:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI routes, validation and OpenAPI, explicitly apply Routes and models, Dependencies and async, OpenAPI and errors.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI routes, validation and OpenAPI: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] FastAPI routes, validation and OpenAPI: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **FastAPI routes, validation and OpenAPI:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI routes, validation and OpenAPI, explicitly apply Routes and models, Dependencies and async, OpenAPI and errors.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI routes, validation and OpenAPI: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] FastAPI routes, validation and OpenAPI: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A FastAPI service with request/response schemas and health endpoint.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **FastAPI routes, validation and OpenAPI:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI routes, validation and OpenAPI, explicitly apply Routes and models, Dependencies and async, OpenAPI and errors.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
+- **FastAPI routes, validation and OpenAPI:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Validated prediction API: A FastAPI service with request/response schemas and health endpoint. Focus: Routes and models, Dependencies and async, OpenAPI and errors.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI routes, validation and OpenAPI: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A FastAPI service with request/response schemas and health endpoint. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI routes, validation and OpenAPI: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] FastAPI routes, validation and OpenAPI: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
+- [ ] Reject bad shapes and test successful inference plus unavailable-model errors.
+- [ ] FastAPI routes, validation and OpenAPI: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Concurrent stock reservation
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A shop simulator needs to avoid selling more stock than exists.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Seed ten products with five units each in local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **FastAPI routes, validation and OpenAPI:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI routes, validation and OpenAPI, explicitly apply Routes and models, Dependencies and async, OpenAPI and errors.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI routes, validation and OpenAPI: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] FastAPI routes, validation and OpenAPI: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A transactional reservation endpoint and concurrency test.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **FastAPI routes, validation and OpenAPI:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI routes, validation and OpenAPI, explicitly apply Routes and models, Dependencies and async, OpenAPI and errors.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
+- **FastAPI routes, validation and OpenAPI:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Concurrent stock reservation: A transactional reservation endpoint and concurrency test. Focus: Routes and models, Dependencies and async, OpenAPI and errors.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI routes, validation and OpenAPI: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A transactional reservation endpoint and concurrency test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI routes, validation and OpenAPI: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] FastAPI routes, validation and OpenAPI: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
+- [ ] Concurrent requests never make inventory negative and retries remain idempotent.
+- [ ] FastAPI routes, validation and OpenAPI: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### API explorer frontend
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A learner needs to connect form state to typed API responses.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use a local fictional catalog with 30 items. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A searchable browser UI connected to FastAPI.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **FastAPI routes, validation and OpenAPI:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI routes, validation and OpenAPI, explicitly apply Routes and models, Dependencies and async, OpenAPI and errors.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
+- **FastAPI routes, validation and OpenAPI:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to API explorer frontend: A searchable browser UI connected to FastAPI. Focus: Routes and models, Dependencies and async, OpenAPI and errors.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI routes, validation and OpenAPI: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A searchable browser UI connected to FastAPI. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI routes, validation and OpenAPI: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] FastAPI routes, validation and OpenAPI: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
+- [ ] Show loading, empty, validation and server-failure states.
+- [ ] FastAPI routes, validation and OpenAPI: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Reproducible inference container
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A teammate needs to start the same API on another machine.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use a tiny local FastAPI app and generated request fixtures. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A non-root Docker image with health check and smoke test.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **FastAPI routes, validation and OpenAPI:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI routes, validation and OpenAPI, explicitly apply Routes and models, Dependencies and async, OpenAPI and errors.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
+- **FastAPI routes, validation and OpenAPI:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Reproducible inference container: A non-root Docker image with health check and smoke test. Focus: Routes and models, Dependencies and async, OpenAPI and errors.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI routes, validation and OpenAPI: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A non-root Docker image with health check and smoke test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI routes, validation and OpenAPI: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] FastAPI routes, validation and OpenAPI: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.
+- [ ] Build cleanly, start on a configurable port and stop gracefully.
+- [ ] FastAPI routes, validation and OpenAPI: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Tiny digit recognition service
+
+A learner needs to compare classical and neural classification end to end.
+
+**Data:** Use scikit-learn bundled 8 by 8 digits; no download needed. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A linear baseline, small PyTorch MLP, inference endpoint and container when selected.
+
+**Effort:** 16h · Intermediate
+
+- **FastAPI routes, validation and OpenAPI:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Tiny digit recognition service: A linear baseline, small PyTorch MLP, inference endpoint and container when selected. Focus: Routes and models, Dependencies and async, OpenAPI and errors.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A linear baseline, small PyTorch MLP, inference endpoint and container when selected. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI routes, validation and OpenAPI: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report held-out accuracy, confusion matrix and CPU latency for both models.
+- [ ] FastAPI routes, validation and OpenAPI: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Streaming response assembler
+
+An interface builder needs correct partial structured-response handling.
+
+**Data:** Create fixtures of chunked JSON and text with disconnects. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A stream assembler and cancellation demo.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **FastAPI routes, validation and OpenAPI:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Streaming response assembler: A stream assembler and cancellation demo. Focus: Routes and models, Dependencies and async, OpenAPI and errors.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A stream assembler and cancellation demo. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI routes, validation and OpenAPI: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Never parse incomplete JSON as final; recover cleanly from a dropped stream.
+- [ ] FastAPI routes, validation and OpenAPI: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Nearest example explanation service
+
+A learner needs predictions with inspectable reference examples.
+
+**Data:** Use scikit-learn digits with a fixed train/test split. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A kNN classifier that returns neighbors and distance explanations.
+
+**Effort:** 16h · Intermediate
+
+- **FastAPI routes, validation and OpenAPI:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Nearest example explanation service: A kNN classifier that returns neighbors and distance explanations. Focus: Routes and models, Dependencies and async, OpenAPI and errors.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A kNN classifier that returns neighbors and distance explanations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI routes, validation and OpenAPI: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Test scaling, ties and out-of-distribution inputs; record latency.
+- [ ] FastAPI routes, validation and OpenAPI: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Support ticket model comparison
+
+A support lead needs category suggestions with human review for ambiguity.
+
+**Data:** Generate 180 labeled login, billing and setup tickets with paraphrases. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A classifier comparison, error slices and a review threshold.
+
+**Effort:** 16h · Intermediate
+
+- **FastAPI routes, validation and OpenAPI:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Support ticket model comparison: A classifier comparison, error slices and a review threshold. Focus: Routes and models, Dependencies and async, OpenAPI and errors.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A classifier comparison, error slices and a review threshold. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI routes, validation and OpenAPI: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Hold out templates, compare a dummy baseline and report macro F1.
+- [ ] FastAPI routes, validation and OpenAPI: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Personal notes retrieval desk
+
+A student needs answers traceable to their own notes.
+
+**Data:** Create ten Markdown notes and 20 query/relevance judgments. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A local search interface with passage IDs and citations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **FastAPI routes, validation and OpenAPI:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Personal notes retrieval desk: A local search interface with passage IDs and citations. Focus: Routes and models, Dependencies and async, OpenAPI and errors.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A local search interface with passage IDs and citations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI routes, validation and OpenAPI: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report recall at five and refuse unsupported answers.
+- [ ] FastAPI routes, validation and OpenAPI: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -781,7 +781,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Connect a browser to an API while enforcing access on the trusted side.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [FastAPI routes, validation and OpenAPI](backend.md#fastapi) Navigation is unrestricted.
 
@@ -844,292 +844,292 @@ Build a two-user local API fixture with owner-only record updates; demonstrate u
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Private notes authorization lab
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A team needs each user to access only their own notes.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Use three fictional users and 15 local notes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Frontend, authentication, authorization and sessions:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend, authentication, authorization and sessions, explicitly apply Frontend and API state, Authentication versus authorization, Sessions and secrets.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend, authentication, authorization and sessions: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Frontend, authentication, authorization and sessions: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A local authenticated CRUD API with ownership checks.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Frontend, authentication, authorization and sessions:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend, authentication, authorization and sessions, explicitly apply Frontend and API state, Authentication versus authorization, Sessions and secrets.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
+- **Frontend, authentication, authorization and sessions:** Implement Frontend, authentication, authorization and sessions in Private notes authorization lab. Adapt this focused lab to the project data: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.  Required concepts: Frontend and API state, Authentication versus authorization, Sessions and secrets.
+  - Deliverable: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend, authentication, authorization and sessions: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A local authenticated CRUD API with ownership checks. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend, authentication, authorization and sessions: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Frontend, authentication, authorization and sessions: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
+- [ ] Test every cross-user read and write; no client-supplied owner override.
+- [ ] Frontend, authentication, authorization and sessions: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Agent memory provenance ledger
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A learner needs to distinguish trusted facts from conversation summaries.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Create 30 events with sources, timestamps and corrections. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A scoped memory store with expiration and correction history.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 16h · Intermediate
 
-- **Frontend, authentication, authorization and sessions:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend, authentication, authorization and sessions, explicitly apply Frontend and API state, Authentication versus authorization, Sessions and secrets.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
+- **Frontend, authentication, authorization and sessions:** Implement Frontend, authentication, authorization and sessions in Agent memory provenance ledger. Adapt this focused lab to the project data: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.  Required concepts: Frontend and API state, Authentication versus authorization, Sessions and secrets.
+  - Deliverable: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend, authentication, authorization and sessions: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A scoped memory store with expiration and correction history. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend, authentication, authorization and sessions: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Frontend, authentication, authorization and sessions: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
+- [ ] Expired or cross-user entries cannot be retrieved.
+- [ ] Frontend, authentication, authorization and sessions: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Permission-aware team search
 
-Find unusual stock movements and explain which records need investigation.
+A team needs retrieval that respects document access rights.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Generate three fictional roles and 30 access-labeled documents. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Frontend, authentication, authorization and sessions:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend, authentication, authorization and sessions, explicitly apply Frontend and API state, Authentication versus authorization, Sessions and secrets.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend, authentication, authorization and sessions: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Frontend, authentication, authorization and sessions: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Frontend, authentication, authorization and sessions:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend, authentication, authorization and sessions, explicitly apply Frontend and API state, Authentication versus authorization, Sessions and secrets.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend, authentication, authorization and sessions: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Frontend, authentication, authorization and sessions: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A retrieval filter and adversarial permission test set.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Frontend, authentication, authorization and sessions:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend, authentication, authorization and sessions, explicitly apply Frontend and API state, Authentication versus authorization, Sessions and secrets.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
+- **Frontend, authentication, authorization and sessions:** Implement Frontend, authentication, authorization and sessions in Permission-aware team search. Adapt this focused lab to the project data: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.  Required concepts: Frontend and API state, Authentication versus authorization, Sessions and secrets.
+  - Deliverable: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend, authentication, authorization and sessions: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A retrieval filter and adversarial permission test set. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend, authentication, authorization and sessions: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Frontend, authentication, authorization and sessions: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
+- [ ] Unauthorized passages never enter the retrieved context.
+- [ ] Frontend, authentication, authorization and sessions: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Async request boundary lab
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A developer needs responsive APIs when one dependency stalls.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Use a local delayed stub service and concurrent requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Frontend, authentication, authorization and sessions:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend, authentication, authorization and sessions, explicitly apply Frontend and API state, Authentication versus authorization, Sessions and secrets.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend, authentication, authorization and sessions: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Frontend, authentication, authorization and sessions: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A FastAPI client with timeouts and bounded work.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Frontend, authentication, authorization and sessions:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend, authentication, authorization and sessions, explicitly apply Frontend and API state, Authentication versus authorization, Sessions and secrets.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
+- **Frontend, authentication, authorization and sessions:** Extend the project with Frontend, authentication, authorization and sessions in Async request boundary lab. Adapt this focused lab to the project data: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.  Required concepts: Frontend and API state, Authentication versus authorization, Sessions and secrets.
+  - Deliverable: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend, authentication, authorization and sessions: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A FastAPI client with timeouts and bounded work. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend, authentication, authorization and sessions: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Frontend, authentication, authorization and sessions: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
+- [ ] A slow dependency does not block independent health requests.
+- [ ] Frontend, authentication, authorization and sessions: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Database index benchmark
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A developer needs to diagnose slow queries with evidence.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Generate 10000 fictional events in local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** An EXPLAIN comparison and minimal index migration.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Frontend, authentication, authorization and sessions:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend, authentication, authorization and sessions, explicitly apply Frontend and API state, Authentication versus authorization, Sessions and secrets.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
+- **Frontend, authentication, authorization and sessions:** Extend the project with Frontend, authentication, authorization and sessions in Database index benchmark. Adapt this focused lab to the project data: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.  Required concepts: Frontend and API state, Authentication versus authorization, Sessions and secrets.
+  - Deliverable: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend, authentication, authorization and sessions: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An EXPLAIN comparison and minimal index migration. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend, authentication, authorization and sessions: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Frontend, authentication, authorization and sessions: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
+- [ ] Compare plans before/after indexing and measure write overhead.
+- [ ] Frontend, authentication, authorization and sessions: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Order analytics query lab
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+An analyst needs correct reports over relational data.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Generate customers, orders and line items in SQLite or local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A schema, joins and reconciled analytics report.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Frontend, authentication, authorization and sessions:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Frontend, authentication, authorization and sessions, explicitly apply Frontend and API state, Authentication versus authorization, Sessions and secrets.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
+- **Frontend, authentication, authorization and sessions:** Extend the project with Frontend, authentication, authorization and sessions in Order analytics query lab. Adapt this focused lab to the project data: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.  Required concepts: Frontend and API state, Authentication versus authorization, Sessions and secrets.
+  - Deliverable: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Frontend, authentication, authorization and sessions: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A schema, joins and reconciled analytics report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend, authentication, authorization and sessions: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Frontend, authentication, authorization and sessions: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.
+- [ ] Prove totals survive joins and explain null and duplicate-key behavior.
+- [ ] Frontend, authentication, authorization and sessions: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Validated prediction API
+
+A model builder needs a reliable inference boundary.
+
+**Data:** Use bundled digits and a small saved baseline or deterministic test predictor. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A FastAPI service with request/response schemas and health endpoint.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Frontend, authentication, authorization and sessions:** Extend the project with Frontend, authentication, authorization and sessions in Validated prediction API. Adapt this focused lab to the project data: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.  Required concepts: Frontend and API state, Authentication versus authorization, Sessions and secrets.
+  - Deliverable: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A FastAPI service with request/response schemas and health endpoint. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend, authentication, authorization and sessions: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject bad shapes and test successful inference plus unavailable-model errors.
+- [ ] Frontend, authentication, authorization and sessions: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Safe schema evolution exercise
+
+A maintainer needs to change data shape without losing records.
+
+**Data:** Seed a local notes database with an old author-name field. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Forward/backward migrations and compatibility tests.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Frontend, authentication, authorization and sessions:** Extend the project with Frontend, authentication, authorization and sessions in Safe schema evolution exercise. Adapt this focused lab to the project data: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.  Required concepts: Frontend and API state, Authentication versus authorization, Sessions and secrets.
+  - Deliverable: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Forward/backward migrations and compatibility tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend, authentication, authorization and sessions: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Preserve seeded records and document irreversible transformations.
+- [ ] Frontend, authentication, authorization and sessions: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Concurrent stock reservation
+
+A shop simulator needs to avoid selling more stock than exists.
+
+**Data:** Seed ten products with five units each in local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A transactional reservation endpoint and concurrency test.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Frontend, authentication, authorization and sessions:** Extend the project with Frontend, authentication, authorization and sessions in Concurrent stock reservation. Adapt this focused lab to the project data: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.  Required concepts: Frontend and API state, Authentication versus authorization, Sessions and secrets.
+  - Deliverable: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A transactional reservation endpoint and concurrency test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend, authentication, authorization and sessions: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Concurrent requests never make inventory negative and retries remain idempotent.
+- [ ] Frontend, authentication, authorization and sessions: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Relational versus document store trial
+
+A designer needs evidence for choosing a storage model.
+
+**Data:** Represent the same 40 products and tags in SQL and JSON documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Two query implementations and a tradeoff report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Frontend, authentication, authorization and sessions:** Extend the project with Frontend, authentication, authorization and sessions in Relational versus document store trial. Adapt this focused lab to the project data: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.  Required concepts: Frontend and API state, Authentication versus authorization, Sessions and secrets.
+  - Deliverable: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Two query implementations and a tradeoff report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Frontend, authentication, authorization and sessions: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match query results and demonstrate update consistency differences.
+- [ ] Frontend, authentication, authorization and sessions: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1143,7 +1143,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Model relationships and inspect query performance before adding infrastructure.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Frontend, authentication, authorization and sessions](backend.md#backend-auth) Navigation is unrestricted.
 
@@ -1229,292 +1229,292 @@ Create a local SQLite schema for users, lessons and progress; write joins, add a
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Order analytics query lab
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+An analyst needs correct reports over relational data.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Generate customers, orders and line items in SQLite or local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **SQL, PostgreSQL, joins and indexes:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL, PostgreSQL, joins and indexes, explicitly apply SQL and joins, Indexes, Schemas and migrations.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] SQL, PostgreSQL, joins and indexes: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] SQL, PostgreSQL, joins and indexes: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A schema, joins and reconciled analytics report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **SQL, PostgreSQL, joins and indexes:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL, PostgreSQL, joins and indexes, explicitly apply SQL and joins, Indexes, Schemas and migrations.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
+- **SQL, PostgreSQL, joins and indexes:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Order analytics query lab: A schema, joins and reconciled analytics report. Focus: SQL and joins, Indexes, Schemas and migrations.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] SQL, PostgreSQL, joins and indexes: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A schema, joins and reconciled analytics report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL, PostgreSQL, joins and indexes: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] SQL, PostgreSQL, joins and indexes: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
+- [ ] Prove totals survive joins and explain null and duplicate-key behavior.
+- [ ] SQL, PostgreSQL, joins and indexes: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### API and database Compose lab
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A developer needs reproducible service networking and persistence.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Seed a local PostgreSQL database with fictional tasks. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **SQL, PostgreSQL, joins and indexes:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL, PostgreSQL, joins and indexes, explicitly apply SQL and joins, Indexes, Schemas and migrations.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] SQL, PostgreSQL, joins and indexes: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] SQL, PostgreSQL, joins and indexes: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **SQL, PostgreSQL, joins and indexes:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL, PostgreSQL, joins and indexes, explicitly apply SQL and joins, Indexes, Schemas and migrations.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] SQL, PostgreSQL, joins and indexes: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] SQL, PostgreSQL, joins and indexes: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **SQL, PostgreSQL, joins and indexes:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL, PostgreSQL, joins and indexes, explicitly apply SQL and joins, Indexes, Schemas and migrations.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] SQL, PostgreSQL, joins and indexes: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] SQL, PostgreSQL, joins and indexes: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A Compose stack with isolated services and persistent data.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **SQL, PostgreSQL, joins and indexes:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL, PostgreSQL, joins and indexes, explicitly apply SQL and joins, Indexes, Schemas and migrations.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
+- **SQL, PostgreSQL, joins and indexes:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to API and database Compose lab: A Compose stack with isolated services and persistent data. Focus: SQL and joins, Indexes, Schemas and migrations.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] SQL, PostgreSQL, joins and indexes: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A Compose stack with isolated services and persistent data. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL, PostgreSQL, joins and indexes: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] SQL, PostgreSQL, joins and indexes: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
+- [ ] Restart containers without losing rows; API connects by service name.
+- [ ] SQL, PostgreSQL, joins and indexes: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Read-only SQL evidence assistant
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+An analyst needs answers grounded in tabular records.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Use a local SQLite database of fictional orders and customers. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **SQL, PostgreSQL, joins and indexes:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL, PostgreSQL, joins and indexes, explicitly apply SQL and joins, Indexes, Schemas and migrations.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] SQL, PostgreSQL, joins and indexes: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] SQL, PostgreSQL, joins and indexes: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A whitelisted query workflow with rows cited as evidence.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **SQL, PostgreSQL, joins and indexes:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL, PostgreSQL, joins and indexes, explicitly apply SQL and joins, Indexes, Schemas and migrations.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
+- **SQL, PostgreSQL, joins and indexes:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Read-only SQL evidence assistant: A whitelisted query workflow with rows cited as evidence. Focus: SQL and joins, Indexes, Schemas and migrations.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] SQL, PostgreSQL, joins and indexes: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A whitelisted query workflow with rows cited as evidence. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL, PostgreSQL, joins and indexes: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] SQL, PostgreSQL, joins and indexes: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
+- [ ] Reject writes, bound row counts and verify join totals.
+- [ ] SQL, PostgreSQL, joins and indexes: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Async request boundary lab
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A developer needs responsive APIs when one dependency stalls.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Use a local delayed stub service and concurrent requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A FastAPI client with timeouts and bounded work.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **SQL, PostgreSQL, joins and indexes:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL, PostgreSQL, joins and indexes, explicitly apply SQL and joins, Indexes, Schemas and migrations.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
+- **SQL, PostgreSQL, joins and indexes:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Async request boundary lab: A FastAPI client with timeouts and bounded work. Focus: SQL and joins, Indexes, Schemas and migrations.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] SQL, PostgreSQL, joins and indexes: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A FastAPI client with timeouts and bounded work. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL, PostgreSQL, joins and indexes: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] SQL, PostgreSQL, joins and indexes: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
+- [ ] A slow dependency does not block independent health requests.
+- [ ] SQL, PostgreSQL, joins and indexes: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Database index benchmark
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A developer needs to diagnose slow queries with evidence.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Generate 10000 fictional events in local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** An EXPLAIN comparison and minimal index migration.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **SQL, PostgreSQL, joins and indexes:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL, PostgreSQL, joins and indexes, explicitly apply SQL and joins, Indexes, Schemas and migrations.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
+- **SQL, PostgreSQL, joins and indexes:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Database index benchmark: An EXPLAIN comparison and minimal index migration. Focus: SQL and joins, Indexes, Schemas and migrations.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] SQL, PostgreSQL, joins and indexes: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An EXPLAIN comparison and minimal index migration. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL, PostgreSQL, joins and indexes: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] SQL, PostgreSQL, joins and indexes: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.
+- [ ] Compare plans before/after indexing and measure write overhead.
+- [ ] SQL, PostgreSQL, joins and indexes: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Private notes authorization lab
+
+A team needs each user to access only their own notes.
+
+**Data:** Use three fictional users and 15 local notes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A local authenticated CRUD API with ownership checks.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **SQL, PostgreSQL, joins and indexes:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Private notes authorization lab: A local authenticated CRUD API with ownership checks. Focus: SQL and joins, Indexes, Schemas and migrations.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A local authenticated CRUD API with ownership checks. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL, PostgreSQL, joins and indexes: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Test every cross-user read and write; no client-supplied owner override.
+- [ ] SQL, PostgreSQL, joins and indexes: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Validated prediction API
+
+A model builder needs a reliable inference boundary.
+
+**Data:** Use bundled digits and a small saved baseline or deterministic test predictor. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A FastAPI service with request/response schemas and health endpoint.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **SQL, PostgreSQL, joins and indexes:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Validated prediction API: A FastAPI service with request/response schemas and health endpoint. Focus: SQL and joins, Indexes, Schemas and migrations.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A FastAPI service with request/response schemas and health endpoint. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL, PostgreSQL, joins and indexes: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject bad shapes and test successful inference plus unavailable-model errors.
+- [ ] SQL, PostgreSQL, joins and indexes: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Safe schema evolution exercise
+
+A maintainer needs to change data shape without losing records.
+
+**Data:** Seed a local notes database with an old author-name field. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Forward/backward migrations and compatibility tests.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **SQL, PostgreSQL, joins and indexes:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Safe schema evolution exercise: Forward/backward migrations and compatibility tests. Focus: SQL and joins, Indexes, Schemas and migrations.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Forward/backward migrations and compatibility tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL, PostgreSQL, joins and indexes: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Preserve seeded records and document irreversible transformations.
+- [ ] SQL, PostgreSQL, joins and indexes: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Concurrent stock reservation
+
+A shop simulator needs to avoid selling more stock than exists.
+
+**Data:** Seed ten products with five units each in local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A transactional reservation endpoint and concurrency test.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **SQL, PostgreSQL, joins and indexes:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Concurrent stock reservation: A transactional reservation endpoint and concurrency test. Focus: SQL and joins, Indexes, Schemas and migrations.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A transactional reservation endpoint and concurrency test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL, PostgreSQL, joins and indexes: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Concurrent requests never make inventory negative and retries remain idempotent.
+- [ ] SQL, PostgreSQL, joins and indexes: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Relational versus document store trial
+
+A designer needs evidence for choosing a storage model.
+
+**Data:** Represent the same 40 products and tags in SQL and JSON documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Two query implementations and a tradeoff report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **SQL, PostgreSQL, joins and indexes:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Relational versus document store trial: Two query implementations and a tradeoff report. Focus: SQL and joins, Indexes, Schemas and migrations.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Two query implementations and a tradeoff report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL, PostgreSQL, joins and indexes: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match query results and demonstrate update consistency differences.
+- [ ] SQL, PostgreSQL, joins and indexes: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Create a local SQLite schema for users, lessons and progress; write joins, add a composite unique key and inspect a query plan. Include a PostgreSQL version of the schema.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1528,7 +1528,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Prevent races and partial updates in multi-user applications.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Essential · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [SQL, PostgreSQL, joins and indexes](backend.md#backend-sql) Navigation is unrestricted.
 
@@ -1619,292 +1619,292 @@ Simulate concurrent membership inserts, verify unique constraints and rollback o
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Safe schema evolution exercise
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A maintainer needs to change data shape without losing records.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Seed a local notes database with an old author-name field. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Transactions, concurrency and data quality:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Transactions, concurrency and data quality, explicitly apply Transactions, Concurrency, Data quality and privacy.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Transactions, concurrency and data quality: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Transactions, concurrency and data quality: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** Forward/backward migrations and compatibility tests.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Transactions, concurrency and data quality:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Transactions, concurrency and data quality, explicitly apply Transactions, Concurrency, Data quality and privacy.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
+- **Transactions, concurrency and data quality:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Safe schema evolution exercise: Forward/backward migrations and compatibility tests. Focus: Transactions, Concurrency, Data quality and privacy.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Transactions, concurrency and data quality: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Forward/backward migrations and compatibility tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Transactions, concurrency and data quality: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Transactions, concurrency and data quality: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
+- [ ] Preserve seeded records and document irreversible transformations.
+- [ ] Transactions, concurrency and data quality: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Concurrent stock reservation
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A shop simulator needs to avoid selling more stock than exists.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Seed ten products with five units each in local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Transactions, concurrency and data quality:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Transactions, concurrency and data quality, explicitly apply Transactions, Concurrency, Data quality and privacy.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Transactions, concurrency and data quality: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Transactions, concurrency and data quality: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Transactions, concurrency and data quality:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Transactions, concurrency and data quality, explicitly apply Transactions, Concurrency, Data quality and privacy.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Transactions, concurrency and data quality: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Transactions, concurrency and data quality: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Transactions, concurrency and data quality:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Transactions, concurrency and data quality, explicitly apply Transactions, Concurrency, Data quality and privacy.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Transactions, concurrency and data quality: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Transactions, concurrency and data quality: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A transactional reservation endpoint and concurrency test.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Transactions, concurrency and data quality:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Transactions, concurrency and data quality, explicitly apply Transactions, Concurrency, Data quality and privacy.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
+- **Transactions, concurrency and data quality:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Concurrent stock reservation: A transactional reservation endpoint and concurrency test. Focus: Transactions, Concurrency, Data quality and privacy.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Transactions, concurrency and data quality: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A transactional reservation endpoint and concurrency test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Transactions, concurrency and data quality: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Transactions, concurrency and data quality: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
+- [ ] Concurrent requests never make inventory negative and retries remain idempotent.
+- [ ] Transactions, concurrency and data quality: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Async request boundary lab
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A developer needs responsive APIs when one dependency stalls.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Use a local delayed stub service and concurrent requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Transactions, concurrency and data quality:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Transactions, concurrency and data quality, explicitly apply Transactions, Concurrency, Data quality and privacy.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Transactions, concurrency and data quality: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Transactions, concurrency and data quality: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A FastAPI client with timeouts and bounded work.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Transactions, concurrency and data quality:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Transactions, concurrency and data quality, explicitly apply Transactions, Concurrency, Data quality and privacy.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
+- **Transactions, concurrency and data quality:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Async request boundary lab: A FastAPI client with timeouts and bounded work. Focus: Transactions, Concurrency, Data quality and privacy.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Transactions, concurrency and data quality: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A FastAPI client with timeouts and bounded work. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Transactions, concurrency and data quality: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Transactions, concurrency and data quality: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
+- [ ] A slow dependency does not block independent health requests.
+- [ ] Transactions, concurrency and data quality: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Database index benchmark
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A developer needs to diagnose slow queries with evidence.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Generate 10000 fictional events in local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** An EXPLAIN comparison and minimal index migration.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Transactions, concurrency and data quality:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Transactions, concurrency and data quality, explicitly apply Transactions, Concurrency, Data quality and privacy.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
+- **Transactions, concurrency and data quality:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Database index benchmark: An EXPLAIN comparison and minimal index migration. Focus: Transactions, Concurrency, Data quality and privacy.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Transactions, concurrency and data quality: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An EXPLAIN comparison and minimal index migration. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Transactions, concurrency and data quality: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Transactions, concurrency and data quality: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
+- [ ] Compare plans before/after indexing and measure write overhead.
+- [ ] Transactions, concurrency and data quality: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Private notes authorization lab
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A team needs each user to access only their own notes.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use three fictional users and 15 local notes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A local authenticated CRUD API with ownership checks.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Transactions, concurrency and data quality:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Transactions, concurrency and data quality, explicitly apply Transactions, Concurrency, Data quality and privacy.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
+- **Transactions, concurrency and data quality:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Private notes authorization lab: A local authenticated CRUD API with ownership checks. Focus: Transactions, Concurrency, Data quality and privacy.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Transactions, concurrency and data quality: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A local authenticated CRUD API with ownership checks. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Transactions, concurrency and data quality: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Transactions, concurrency and data quality: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.
+- [ ] Test every cross-user read and write; no client-supplied owner override.
+- [ ] Transactions, concurrency and data quality: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Order analytics query lab
+
+An analyst needs correct reports over relational data.
+
+**Data:** Generate customers, orders and line items in SQLite or local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A schema, joins and reconciled analytics report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Transactions, concurrency and data quality:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Order analytics query lab: A schema, joins and reconciled analytics report. Focus: Transactions, Concurrency, Data quality and privacy.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A schema, joins and reconciled analytics report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Transactions, concurrency and data quality: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Prove totals survive joins and explain null and duplicate-key behavior.
+- [ ] Transactions, concurrency and data quality: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Validated prediction API
+
+A model builder needs a reliable inference boundary.
+
+**Data:** Use bundled digits and a small saved baseline or deterministic test predictor. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A FastAPI service with request/response schemas and health endpoint.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Transactions, concurrency and data quality:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Validated prediction API: A FastAPI service with request/response schemas and health endpoint. Focus: Transactions, Concurrency, Data quality and privacy.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A FastAPI service with request/response schemas and health endpoint. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Transactions, concurrency and data quality: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject bad shapes and test successful inference plus unavailable-model errors.
+- [ ] Transactions, concurrency and data quality: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Relational versus document store trial
+
+A designer needs evidence for choosing a storage model.
+
+**Data:** Represent the same 40 products and tags in SQL and JSON documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Two query implementations and a tradeoff report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Transactions, concurrency and data quality:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Relational versus document store trial: Two query implementations and a tradeoff report. Focus: Transactions, Concurrency, Data quality and privacy.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Two query implementations and a tradeoff report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Transactions, concurrency and data quality: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match query results and demonstrate update consistency differences.
+- [ ] Transactions, concurrency and data quality: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### API explorer frontend
+
+A learner needs to connect form state to typed API responses.
+
+**Data:** Use a local fictional catalog with 30 items. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A searchable browser UI connected to FastAPI.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Transactions, concurrency and data quality:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to API explorer frontend: A searchable browser UI connected to FastAPI. Focus: Transactions, Concurrency, Data quality and privacy.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A searchable browser UI connected to FastAPI. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Transactions, concurrency and data quality: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show loading, empty, validation and server-failure states.
+- [ ] Transactions, concurrency and data quality: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Vector lookup service
+
+A search builder needs predictable similarity queries and filters.
+
+**Data:** Generate 100 normalized vectors with source and role metadata. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A local vector search API and metadata filter tests.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Transactions, concurrency and data quality:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Vector lookup service: A local vector search API and metadata filter tests. Focus: Transactions, Concurrency, Data quality and privacy.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A local vector search API and metadata filter tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Transactions, concurrency and data quality: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compare with brute-force scores and reject unauthorized IDs.
+- [ ] Transactions, concurrency and data quality: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Simulate concurrent membership inserts, verify unique constraints and rollback on a failing second write, and define which fields teammates can read.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1918,7 +1918,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Choose the simplest store that supports your access patterns.
 
-**Priority:** Useful next · **Study:** 2h · **Practice:** 3h
+**Priority:** Specialization · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Transactions, concurrency and data quality](backend.md#backend-transactions) Navigation is unrestricted.
 
@@ -2014,292 +2014,292 @@ Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory gr
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Relational versus document store trial
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A designer needs evidence for choosing a storage model.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Represent the same 40 products and tags in SQL and JSON documents. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Vector, NoSQL and graph database tradeoffs:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Vector, NoSQL and graph database tradeoffs, explicitly apply Vector storage, NoSQL, Graph storage.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Vector, NoSQL and graph database tradeoffs: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Vector, NoSQL and graph database tradeoffs: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** Two query implementations and a tradeoff report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Vector, NoSQL and graph database tradeoffs:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Vector, NoSQL and graph database tradeoffs, explicitly apply Vector storage, NoSQL, Graph storage.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
+- **Vector, NoSQL and graph database tradeoffs:** Implement Vector, NoSQL and graph database tradeoffs in Relational versus document store trial. Adapt this focused lab to the project data: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.  Required concepts: Vector storage, NoSQL, Graph storage.
+  - Deliverable: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Vector, NoSQL and graph database tradeoffs: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Two query implementations and a tradeoff report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vector, NoSQL and graph database tradeoffs: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Vector, NoSQL and graph database tradeoffs: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
+- [ ] Match query results and demonstrate update consistency differences.
+- [ ] Vector, NoSQL and graph database tradeoffs: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Vector lookup service
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A search builder needs predictable similarity queries and filters.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Generate 100 normalized vectors with source and role metadata. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Vector, NoSQL and graph database tradeoffs:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Vector, NoSQL and graph database tradeoffs, explicitly apply Vector storage, NoSQL, Graph storage.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Vector, NoSQL and graph database tradeoffs: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Vector, NoSQL and graph database tradeoffs: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Vector, NoSQL and graph database tradeoffs:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Vector, NoSQL and graph database tradeoffs, explicitly apply Vector storage, NoSQL, Graph storage.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Vector, NoSQL and graph database tradeoffs: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Vector, NoSQL and graph database tradeoffs: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Vector, NoSQL and graph database tradeoffs:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Vector, NoSQL and graph database tradeoffs, explicitly apply Vector storage, NoSQL, Graph storage.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Vector, NoSQL and graph database tradeoffs: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Vector, NoSQL and graph database tradeoffs: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A local vector search API and metadata filter tests.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Vector, NoSQL and graph database tradeoffs:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Vector, NoSQL and graph database tradeoffs, explicitly apply Vector storage, NoSQL, Graph storage.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
+- **Vector, NoSQL and graph database tradeoffs:** Implement Vector, NoSQL and graph database tradeoffs in Vector lookup service. Adapt this focused lab to the project data: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.  Required concepts: Vector storage, NoSQL, Graph storage.
+  - Deliverable: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Vector, NoSQL and graph database tradeoffs: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A local vector search API and metadata filter tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vector, NoSQL and graph database tradeoffs: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Vector, NoSQL and graph database tradeoffs: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
+- [ ] Compare with brute-force scores and reject unauthorized IDs.
+- [ ] Vector, NoSQL and graph database tradeoffs: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Async request boundary lab
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A developer needs responsive APIs when one dependency stalls.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Use a local delayed stub service and concurrent requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Vector, NoSQL and graph database tradeoffs:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Vector, NoSQL and graph database tradeoffs, explicitly apply Vector storage, NoSQL, Graph storage.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Vector, NoSQL and graph database tradeoffs: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Vector, NoSQL and graph database tradeoffs: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A FastAPI client with timeouts and bounded work.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Vector, NoSQL and graph database tradeoffs:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Vector, NoSQL and graph database tradeoffs, explicitly apply Vector storage, NoSQL, Graph storage.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
+- **Vector, NoSQL and graph database tradeoffs:** Extend the project with Vector, NoSQL and graph database tradeoffs in Async request boundary lab. Adapt this focused lab to the project data: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.  Required concepts: Vector storage, NoSQL, Graph storage.
+  - Deliverable: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Vector, NoSQL and graph database tradeoffs: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A FastAPI client with timeouts and bounded work. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vector, NoSQL and graph database tradeoffs: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Vector, NoSQL and graph database tradeoffs: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
+- [ ] A slow dependency does not block independent health requests.
+- [ ] Vector, NoSQL and graph database tradeoffs: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Database index benchmark
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A developer needs to diagnose slow queries with evidence.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Generate 10000 fictional events in local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** An EXPLAIN comparison and minimal index migration.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Vector, NoSQL and graph database tradeoffs:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Vector, NoSQL and graph database tradeoffs, explicitly apply Vector storage, NoSQL, Graph storage.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
+- **Vector, NoSQL and graph database tradeoffs:** Extend the project with Vector, NoSQL and graph database tradeoffs in Database index benchmark. Adapt this focused lab to the project data: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.  Required concepts: Vector storage, NoSQL, Graph storage.
+  - Deliverable: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Vector, NoSQL and graph database tradeoffs: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An EXPLAIN comparison and minimal index migration. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vector, NoSQL and graph database tradeoffs: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Vector, NoSQL and graph database tradeoffs: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
+- [ ] Compare plans before/after indexing and measure write overhead.
+- [ ] Vector, NoSQL and graph database tradeoffs: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Private notes authorization lab
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A team needs each user to access only their own notes.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use three fictional users and 15 local notes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A local authenticated CRUD API with ownership checks.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Vector, NoSQL and graph database tradeoffs:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For Vector, NoSQL and graph database tradeoffs, explicitly apply Vector storage, NoSQL, Graph storage.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
+- **Vector, NoSQL and graph database tradeoffs:** Extend the project with Vector, NoSQL and graph database tradeoffs in Private notes authorization lab. Adapt this focused lab to the project data: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.  Required concepts: Vector storage, NoSQL, Graph storage.
+  - Deliverable: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Vector, NoSQL and graph database tradeoffs: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A local authenticated CRUD API with ownership checks. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vector, NoSQL and graph database tradeoffs: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Vector, NoSQL and graph database tradeoffs: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.
+- [ ] Test every cross-user read and write; no client-supplied owner override.
+- [ ] Vector, NoSQL and graph database tradeoffs: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Order analytics query lab
+
+An analyst needs correct reports over relational data.
+
+**Data:** Generate customers, orders and line items in SQLite or local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A schema, joins and reconciled analytics report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Vector, NoSQL and graph database tradeoffs:** Extend the project with Vector, NoSQL and graph database tradeoffs in Order analytics query lab. Adapt this focused lab to the project data: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.  Required concepts: Vector storage, NoSQL, Graph storage.
+  - Deliverable: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A schema, joins and reconciled analytics report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vector, NoSQL and graph database tradeoffs: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Prove totals survive joins and explain null and duplicate-key behavior.
+- [ ] Vector, NoSQL and graph database tradeoffs: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Validated prediction API
+
+A model builder needs a reliable inference boundary.
+
+**Data:** Use bundled digits and a small saved baseline or deterministic test predictor. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A FastAPI service with request/response schemas and health endpoint.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Vector, NoSQL and graph database tradeoffs:** Extend the project with Vector, NoSQL and graph database tradeoffs in Validated prediction API. Adapt this focused lab to the project data: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.  Required concepts: Vector storage, NoSQL, Graph storage.
+  - Deliverable: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A FastAPI service with request/response schemas and health endpoint. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vector, NoSQL and graph database tradeoffs: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject bad shapes and test successful inference plus unavailable-model errors.
+- [ ] Vector, NoSQL and graph database tradeoffs: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Safe schema evolution exercise
+
+A maintainer needs to change data shape without losing records.
+
+**Data:** Seed a local notes database with an old author-name field. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Forward/backward migrations and compatibility tests.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Vector, NoSQL and graph database tradeoffs:** Extend the project with Vector, NoSQL and graph database tradeoffs in Safe schema evolution exercise. Adapt this focused lab to the project data: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.  Required concepts: Vector storage, NoSQL, Graph storage.
+  - Deliverable: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Forward/backward migrations and compatibility tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vector, NoSQL and graph database tradeoffs: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Preserve seeded records and document irreversible transformations.
+- [ ] Vector, NoSQL and graph database tradeoffs: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Concurrent stock reservation
+
+A shop simulator needs to avoid selling more stock than exists.
+
+**Data:** Seed ten products with five units each in local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A transactional reservation endpoint and concurrency test.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Vector, NoSQL and graph database tradeoffs:** Extend the project with Vector, NoSQL and graph database tradeoffs in Concurrent stock reservation. Adapt this focused lab to the project data: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.  Required concepts: Vector storage, NoSQL, Graph storage.
+  - Deliverable: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A transactional reservation endpoint and concurrency test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vector, NoSQL and graph database tradeoffs: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Concurrent requests never make inventory negative and retries remain idempotent.
+- [ ] Vector, NoSQL and graph database tradeoffs: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### API explorer frontend
+
+A learner needs to connect form state to typed API responses.
+
+**Data:** Use a local fictional catalog with 30 items. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A searchable browser UI connected to FastAPI.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Vector, NoSQL and graph database tradeoffs:** Extend the project with Vector, NoSQL and graph database tradeoffs in API explorer frontend. Adapt this focused lab to the project data: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.  Required concepts: Vector storage, NoSQL, Graph storage.
+  - Deliverable: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A searchable browser UI connected to FastAPI. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vector, NoSQL and graph database tradeoffs: Vector, NoSQL and graph database tradeoffs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show loading, empty, validation and server-failure states.
+- [ ] Vector, NoSQL and graph database tradeoffs: Write an ADR comparing PostgreSQL/pgvector, a document store and an in-memory graph for a small RAG app; implement the simplest viable schema and sample queries.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2313,7 +2313,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Keep model calls replaceable and validate both inputs and outputs at the API boundary.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Essential · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [FastAPI routes, validation and OpenAPI](backend.md#fastapi) Navigation is unrestricted.
 
@@ -2399,292 +2399,292 @@ Build a local FastAPI inference endpoint with separate request/response models a
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Async request boundary lab
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A developer needs responsive APIs when one dependency stalls.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Use a local delayed stub service and concurrent requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **FastAPI dependencies, schemas and testable error boundaries:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI dependencies, schemas and testable error boundaries, explicitly apply Request versus response schema, Dependency injection, Validation versus upstream failure.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI dependencies, schemas and testable error boundaries: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] FastAPI dependencies, schemas and testable error boundaries: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A FastAPI client with timeouts and bounded work.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **FastAPI dependencies, schemas and testable error boundaries:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI dependencies, schemas and testable error boundaries, explicitly apply Request versus response schema, Dependency injection, Validation versus upstream failure.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
+- **FastAPI dependencies, schemas and testable error boundaries:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Async request boundary lab: A FastAPI client with timeouts and bounded work. Focus: Request versus response schema, Dependency injection, Validation versus upstream failure, Sync versus async boundaries, Dependency overrides in tests.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI dependencies, schemas and testable error boundaries: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A FastAPI client with timeouts and bounded work. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI dependencies, schemas and testable error boundaries: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] FastAPI dependencies, schemas and testable error boundaries: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
+- [ ] A slow dependency does not block independent health requests.
+- [ ] FastAPI dependencies, schemas and testable error boundaries: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Database index benchmark
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A developer needs to diagnose slow queries with evidence.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Generate 10000 fictional events in local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **FastAPI dependencies, schemas and testable error boundaries:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI dependencies, schemas and testable error boundaries, explicitly apply Request versus response schema, Dependency injection, Validation versus upstream failure.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI dependencies, schemas and testable error boundaries: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] FastAPI dependencies, schemas and testable error boundaries: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **FastAPI dependencies, schemas and testable error boundaries:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI dependencies, schemas and testable error boundaries, explicitly apply Request versus response schema, Dependency injection, Validation versus upstream failure.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI dependencies, schemas and testable error boundaries: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] FastAPI dependencies, schemas and testable error boundaries: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **FastAPI dependencies, schemas and testable error boundaries:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI dependencies, schemas and testable error boundaries, explicitly apply Request versus response schema, Dependency injection, Validation versus upstream failure.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI dependencies, schemas and testable error boundaries: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] FastAPI dependencies, schemas and testable error boundaries: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** An EXPLAIN comparison and minimal index migration.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **FastAPI dependencies, schemas and testable error boundaries:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI dependencies, schemas and testable error boundaries, explicitly apply Request versus response schema, Dependency injection, Validation versus upstream failure.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
+- **FastAPI dependencies, schemas and testable error boundaries:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Database index benchmark: An EXPLAIN comparison and minimal index migration. Focus: Request versus response schema, Dependency injection, Validation versus upstream failure, Sync versus async boundaries, Dependency overrides in tests.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI dependencies, schemas and testable error boundaries: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An EXPLAIN comparison and minimal index migration. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI dependencies, schemas and testable error boundaries: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] FastAPI dependencies, schemas and testable error boundaries: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
+- [ ] Compare plans before/after indexing and measure write overhead.
+- [ ] FastAPI dependencies, schemas and testable error boundaries: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Private notes authorization lab
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A team needs each user to access only their own notes.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Use three fictional users and 15 local notes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **FastAPI dependencies, schemas and testable error boundaries:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI dependencies, schemas and testable error boundaries, explicitly apply Request versus response schema, Dependency injection, Validation versus upstream failure.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI dependencies, schemas and testable error boundaries: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] FastAPI dependencies, schemas and testable error boundaries: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A local authenticated CRUD API with ownership checks.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **FastAPI dependencies, schemas and testable error boundaries:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI dependencies, schemas and testable error boundaries, explicitly apply Request versus response schema, Dependency injection, Validation versus upstream failure.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
+- **FastAPI dependencies, schemas and testable error boundaries:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Private notes authorization lab: A local authenticated CRUD API with ownership checks. Focus: Request versus response schema, Dependency injection, Validation versus upstream failure, Sync versus async boundaries, Dependency overrides in tests.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI dependencies, schemas and testable error boundaries: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A local authenticated CRUD API with ownership checks. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI dependencies, schemas and testable error boundaries: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] FastAPI dependencies, schemas and testable error boundaries: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
+- [ ] Test every cross-user read and write; no client-supplied owner override.
+- [ ] FastAPI dependencies, schemas and testable error boundaries: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Order analytics query lab
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+An analyst needs correct reports over relational data.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Generate customers, orders and line items in SQLite or local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A schema, joins and reconciled analytics report.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **FastAPI dependencies, schemas and testable error boundaries:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI dependencies, schemas and testable error boundaries, explicitly apply Request versus response schema, Dependency injection, Validation versus upstream failure.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
+- **FastAPI dependencies, schemas and testable error boundaries:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Order analytics query lab: A schema, joins and reconciled analytics report. Focus: Request versus response schema, Dependency injection, Validation versus upstream failure, Sync versus async boundaries, Dependency overrides in tests.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI dependencies, schemas and testable error boundaries: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A schema, joins and reconciled analytics report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI dependencies, schemas and testable error boundaries: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] FastAPI dependencies, schemas and testable error boundaries: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
+- [ ] Prove totals survive joins and explain null and duplicate-key behavior.
+- [ ] FastAPI dependencies, schemas and testable error boundaries: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Validated prediction API
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A model builder needs a reliable inference boundary.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use bundled digits and a small saved baseline or deterministic test predictor. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A FastAPI service with request/response schemas and health endpoint.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **FastAPI dependencies, schemas and testable error boundaries:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For FastAPI dependencies, schemas and testable error boundaries, explicitly apply Request versus response schema, Dependency injection, Validation versus upstream failure.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
+- **FastAPI dependencies, schemas and testable error boundaries:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Validated prediction API: A FastAPI service with request/response schemas and health endpoint. Focus: Request versus response schema, Dependency injection, Validation versus upstream failure, Sync versus async boundaries, Dependency overrides in tests.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] FastAPI dependencies, schemas and testable error boundaries: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A FastAPI service with request/response schemas and health endpoint. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI dependencies, schemas and testable error boundaries: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] FastAPI dependencies, schemas and testable error boundaries: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.
+- [ ] Reject bad shapes and test successful inference plus unavailable-model errors.
+- [ ] FastAPI dependencies, schemas and testable error boundaries: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Safe schema evolution exercise
+
+A maintainer needs to change data shape without losing records.
+
+**Data:** Seed a local notes database with an old author-name field. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Forward/backward migrations and compatibility tests.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **FastAPI dependencies, schemas and testable error boundaries:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Safe schema evolution exercise: Forward/backward migrations and compatibility tests. Focus: Request versus response schema, Dependency injection, Validation versus upstream failure, Sync versus async boundaries, Dependency overrides in tests.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Forward/backward migrations and compatibility tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI dependencies, schemas and testable error boundaries: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Preserve seeded records and document irreversible transformations.
+- [ ] FastAPI dependencies, schemas and testable error boundaries: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Concurrent stock reservation
+
+A shop simulator needs to avoid selling more stock than exists.
+
+**Data:** Seed ten products with five units each in local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A transactional reservation endpoint and concurrency test.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **FastAPI dependencies, schemas and testable error boundaries:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Concurrent stock reservation: A transactional reservation endpoint and concurrency test. Focus: Request versus response schema, Dependency injection, Validation versus upstream failure, Sync versus async boundaries, Dependency overrides in tests.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A transactional reservation endpoint and concurrency test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI dependencies, schemas and testable error boundaries: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Concurrent requests never make inventory negative and retries remain idempotent.
+- [ ] FastAPI dependencies, schemas and testable error boundaries: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Relational versus document store trial
+
+A designer needs evidence for choosing a storage model.
+
+**Data:** Represent the same 40 products and tags in SQL and JSON documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Two query implementations and a tradeoff report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **FastAPI dependencies, schemas and testable error boundaries:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Relational versus document store trial: Two query implementations and a tradeoff report. Focus: Request versus response schema, Dependency injection, Validation versus upstream failure, Sync versus async boundaries, Dependency overrides in tests.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Two query implementations and a tradeoff report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI dependencies, schemas and testable error boundaries: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match query results and demonstrate update consistency differences.
+- [ ] FastAPI dependencies, schemas and testable error boundaries: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### API explorer frontend
+
+A learner needs to connect form state to typed API responses.
+
+**Data:** Use a local fictional catalog with 30 items. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A searchable browser UI connected to FastAPI.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **FastAPI dependencies, schemas and testable error boundaries:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to API explorer frontend: A searchable browser UI connected to FastAPI. Focus: Request versus response schema, Dependency injection, Validation versus upstream failure, Sync versus async boundaries, Dependency overrides in tests.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A searchable browser UI connected to FastAPI. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI dependencies, schemas and testable error boundaries: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show loading, empty, validation and server-failure states.
+- [ ] FastAPI dependencies, schemas and testable error boundaries: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Vector lookup service
+
+A search builder needs predictable similarity queries and filters.
+
+**Data:** Generate 100 normalized vectors with source and role metadata. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A local vector search API and metadata filter tests.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **FastAPI dependencies, schemas and testable error boundaries:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Vector lookup service: A local vector search API and metadata filter tests. Focus: Request versus response schema, Dependency injection, Validation versus upstream failure, Sync versus async boundaries, Dependency overrides in tests.
+  - Deliverable: API routes, OpenAPI examples and integration tests
+  - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A local vector search API and metadata filter tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · FastAPI dependencies, schemas and testable error boundaries: API routes, OpenAPI examples and integration tests
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compare with brute-force scores and reject unauthorized IDs.
+- [ ] FastAPI dependencies, schemas and testable error boundaries: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI inference endpoint with separate request/response models and injected fake predictor. Test invalid input, unauthorised access, malformed output and timeout handling without a paid model API.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2698,7 +2698,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Recognise database bottlenecks and correctness failures before they become unexplained API behaviour.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Essential · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [Transactions, concurrency and data quality](backend.md#backend-transactions) Navigation is unrestricted.
 
@@ -2819,292 +2819,714 @@ Use a local PostgreSQL instance or SQLite for the required transaction/revision 
 
 #### Ten project recommendations
 
-### Support ticket triage desk
+### Database index benchmark
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A developer needs to diagnose slow queries with evidence.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
+**Data:** Generate 10000 fictional events in local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **SQL query plans, transaction races and migrations:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL query plans, transaction races and migrations, explicitly apply Indexes and predicates, Query plans, Lost updates and conditional writes.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] SQL query plans, transaction races and migrations: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] SQL query plans, transaction races and migrations: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** An EXPLAIN comparison and minimal index migration.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **SQL query plans, transaction races and migrations:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL query plans, transaction races and migrations, explicitly apply Indexes and predicates, Query plans, Lost updates and conditional writes.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
+- **SQL query plans, transaction races and migrations:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Database index benchmark: An EXPLAIN comparison and minimal index migration. Focus: Indexes and predicates, Query plans, Lost updates and conditional writes, Transactions and invariants, Migration compatibility.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] SQL query plans, transaction races and migrations: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An EXPLAIN comparison and minimal index migration. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL query plans, transaction races and migrations: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] SQL query plans, transaction races and migrations: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
+- [ ] Compare plans before/after indexing and measure write overhead.
+- [ ] SQL query plans, transaction races and migrations: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Async request boundary lab
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A developer needs responsive APIs when one dependency stalls.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Use a local delayed stub service and concurrent requests. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **SQL query plans, transaction races and migrations:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL query plans, transaction races and migrations, explicitly apply Indexes and predicates, Query plans, Lost updates and conditional writes.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] SQL query plans, transaction races and migrations: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] SQL query plans, transaction races and migrations: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **SQL query plans, transaction races and migrations:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL query plans, transaction races and migrations, explicitly apply Indexes and predicates, Query plans, Lost updates and conditional writes.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] SQL query plans, transaction races and migrations: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] SQL query plans, transaction races and migrations: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **SQL query plans, transaction races and migrations:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL query plans, transaction races and migrations, explicitly apply Indexes and predicates, Query plans, Lost updates and conditional writes.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] SQL query plans, transaction races and migrations: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] SQL query plans, transaction races and migrations: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A FastAPI client with timeouts and bounded work.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **SQL query plans, transaction races and migrations:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL query plans, transaction races and migrations, explicitly apply Indexes and predicates, Query plans, Lost updates and conditional writes.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
+- **SQL query plans, transaction races and migrations:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Async request boundary lab: A FastAPI client with timeouts and bounded work. Focus: Indexes and predicates, Query plans, Lost updates and conditional writes, Transactions and invariants, Migration compatibility.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] SQL query plans, transaction races and migrations: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A FastAPI client with timeouts and bounded work. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL query plans, transaction races and migrations: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] SQL query plans, transaction races and migrations: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
+- [ ] A slow dependency does not block independent health requests.
+- [ ] SQL query plans, transaction races and migrations: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Private notes authorization lab
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A team needs each user to access only their own notes.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Use three fictional users and 15 local notes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **SQL query plans, transaction races and migrations:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL query plans, transaction races and migrations, explicitly apply Indexes and predicates, Query plans, Lost updates and conditional writes.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] SQL query plans, transaction races and migrations: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] SQL query plans, transaction races and migrations: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A local authenticated CRUD API with ownership checks.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **SQL query plans, transaction races and migrations:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL query plans, transaction races and migrations, explicitly apply Indexes and predicates, Query plans, Lost updates and conditional writes.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
+- **SQL query plans, transaction races and migrations:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Private notes authorization lab: A local authenticated CRUD API with ownership checks. Focus: Indexes and predicates, Query plans, Lost updates and conditional writes, Transactions and invariants, Migration compatibility.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] SQL query plans, transaction races and migrations: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A local authenticated CRUD API with ownership checks. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL query plans, transaction races and migrations: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] SQL query plans, transaction races and migrations: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
+- [ ] Test every cross-user read and write; no client-supplied owner override.
+- [ ] SQL query plans, transaction races and migrations: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Order analytics query lab
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+An analyst needs correct reports over relational data.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Generate customers, orders and line items in SQLite or local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
+**Output:** A schema, joins and reconciled analytics report.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **SQL query plans, transaction races and migrations:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL query plans, transaction races and migrations, explicitly apply Indexes and predicates, Query plans, Lost updates and conditional writes.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
+- **SQL query plans, transaction races and migrations:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Order analytics query lab: A schema, joins and reconciled analytics report. Focus: Indexes and predicates, Query plans, Lost updates and conditional writes, Transactions and invariants, Migration compatibility.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] SQL query plans, transaction races and migrations: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A schema, joins and reconciled analytics report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL query plans, transaction races and migrations: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] SQL query plans, transaction races and migrations: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
+- [ ] Prove totals survive joins and explain null and duplicate-key behavior.
+- [ ] SQL query plans, transaction races and migrations: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Validated prediction API
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A model builder needs a reliable inference boundary.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Use bundled digits and a small saved baseline or deterministic test predictor. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A FastAPI service with request/response schemas and health endpoint.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **SQL query plans, transaction races and migrations:** Expose project-specific records, predictions or analysis through validated FastAPI routes.  For SQL query plans, transaction races and migrations, explicitly apply Indexes and predicates, Query plans, Lost updates and conditional writes.
-  - Deliverable: An OpenAPI contract, API checks and a browser/API interaction
-  - Check: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
+- **SQL query plans, transaction races and migrations:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Validated prediction API: A FastAPI service with request/response schemas and health endpoint. Focus: Indexes and predicates, Query plans, Lost updates and conditional writes, Transactions and invariants, Migration compatibility.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] SQL query plans, transaction races and migrations: An OpenAPI contract, API checks and a browser/API interaction
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A FastAPI service with request/response schemas and health endpoint. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL query plans, transaction races and migrations: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] SQL query plans, transaction races and migrations: Keep user authorization in trusted code and test invalid input and cross-user access. Adapt the lesson lab: Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.
+- [ ] Reject bad shapes and test successful inference plus unavailable-model errors.
+- [ ] SQL query plans, transaction races and migrations: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Safe schema evolution exercise
+
+A maintainer needs to change data shape without losing records.
+
+**Data:** Seed a local notes database with an old author-name field. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Forward/backward migrations and compatibility tests.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **SQL query plans, transaction races and migrations:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Safe schema evolution exercise: Forward/backward migrations and compatibility tests. Focus: Indexes and predicates, Query plans, Lost updates and conditional writes, Transactions and invariants, Migration compatibility.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Forward/backward migrations and compatibility tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL query plans, transaction races and migrations: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Preserve seeded records and document irreversible transformations.
+- [ ] SQL query plans, transaction races and migrations: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Concurrent stock reservation
+
+A shop simulator needs to avoid selling more stock than exists.
+
+**Data:** Seed ten products with five units each in local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A transactional reservation endpoint and concurrency test.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **SQL query plans, transaction races and migrations:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Concurrent stock reservation: A transactional reservation endpoint and concurrency test. Focus: Indexes and predicates, Query plans, Lost updates and conditional writes, Transactions and invariants, Migration compatibility.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A transactional reservation endpoint and concurrency test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL query plans, transaction races and migrations: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Concurrent requests never make inventory negative and retries remain idempotent.
+- [ ] SQL query plans, transaction races and migrations: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Relational versus document store trial
+
+A designer needs evidence for choosing a storage model.
+
+**Data:** Represent the same 40 products and tags in SQL and JSON documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Two query implementations and a tradeoff report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **SQL query plans, transaction races and migrations:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Relational versus document store trial: Two query implementations and a tradeoff report. Focus: Indexes and predicates, Query plans, Lost updates and conditional writes, Transactions and invariants, Migration compatibility.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Two query implementations and a tradeoff report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL query plans, transaction races and migrations: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match query results and demonstrate update consistency differences.
+- [ ] SQL query plans, transaction races and migrations: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### API explorer frontend
+
+A learner needs to connect form state to typed API responses.
+
+**Data:** Use a local fictional catalog with 30 items. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A searchable browser UI connected to FastAPI.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **SQL query plans, transaction races and migrations:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to API explorer frontend: A searchable browser UI connected to FastAPI. Focus: Indexes and predicates, Query plans, Lost updates and conditional writes, Transactions and invariants, Migration compatibility.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A searchable browser UI connected to FastAPI. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL query plans, transaction races and migrations: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show loading, empty, validation and server-failure states.
+- [ ] SQL query plans, transaction races and migrations: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Vector lookup service
+
+A search builder needs predictable similarity queries and filters.
+
+**Data:** Generate 100 normalized vectors with source and role metadata. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A local vector search API and metadata filter tests.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **SQL query plans, transaction races and migrations:** Persist source records and results in a relational schema; use SQL joins, constraints and transactions rather than an in-memory replacement. Apply this to Vector lookup service: A local vector search API and metadata filter tests. Focus: Indexes and predicates, Query plans, Lost updates and conditional writes, Transactions and invariants, Migration compatibility.
+  - Deliverable: Schema, seed script, queries and rollback-safe migration
+  - Check: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A local vector search API and metadata filter tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · SQL query plans, transaction races and migrations: Schema, seed script, queries and rollback-safe migration
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compare with brute-force scores and reject unauthorized IDs.
+- [ ] SQL query plans, transaction races and migrations: Verify foreign keys, duplicate rejection, join totals and rollback after a failed write. Use a local PostgreSQL instance or SQLite for the required transaction/revision exercise. Generate rows, inspect a query plan, demonstrate a stale-write rejection and document which PostgreSQL-specific observations need PostgreSQL.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Stage checkpoint
+
+<a id="checkpoint-backend"></a>
+
+### Backend and data checkpoint
+
+Demonstrate readiness through a reproducible practical handoff. Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.
+
+**Priority:** Essential · **Study:** 1h · **Practice:** 6h
+
+**Prerequisites:** [Frontend essentials, state and accessible UX](backend.md#backend-frontend), [FastAPI routes, validation and OpenAPI](backend.md#fastapi), [Frontend, authentication, authorization and sessions](backend.md#backend-auth), [SQL, PostgreSQL, joins and indexes](backend.md#backend-sql), [Transactions, concurrency and data quality](backend.md#backend-transactions), [FastAPI dependencies, schemas and testable error boundaries](backend.md#backend-fastapi-boundaries), [SQL query plans, transaction races and migrations](backend.md#backend-sql-performance) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Define the success contract:** Write observable checks before implementation so success is not just a plausible demonstration.
+  - Example: Turn this task into a numbered acceptance checklist: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.
+  - Videos:
+    - [PostgreSQL — course for beginners](https://www.youtube.com/watch?v=SpfIwlAYaKk) · freeCodeCamp · Full tool course
+      - Explains: SQL tables, querying and PostgreSQL fundamentals.
+      - Useful because: Use local PostgreSQL/SQLite practice rather than a paid database service.
+      - Watch for: Focus on define the success contract. Then reproduce the lesson example: Turn this task into a numbered acceptance checklist: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/posgresql-course-for-beginners/
+    - [Python API development — comprehensive course](https://www.youtube.com/watch?v=0sOvCWFmrtA) · freeCodeCamp · Sanjeev Thiyagarajan · Long course · approximately 19h
+      - Explains: FastAPI, validation, SQL persistence, authentication, testing and deployment.
+      - Useful because: Follow one stage at a time and consult current FastAPI docs for version changes.
+      - Watch for: Focus on define the success contract. Then reproduce the lesson example: Turn this task into a numbered acceptance checklist: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/
+- [ ] **Reproduce the baseline:** Keep a simple reference output and deterministic inputs so changes can be compared honestly.
+  - Example: Run a fixed input twice and compare saved outputs with the documented baseline.
+  - Videos:
+    - [PostgreSQL — course for beginners](https://www.youtube.com/watch?v=SpfIwlAYaKk) · freeCodeCamp · Full tool course
+      - Explains: SQL tables, querying and PostgreSQL fundamentals.
+      - Useful because: Use local PostgreSQL/SQLite practice rather than a paid database service.
+      - Watch for: Focus on reproduce the baseline. Then reproduce the lesson example: Run a fixed input twice and compare saved outputs with the documented baseline.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/posgresql-course-for-beginners/
+    - [Python API development — comprehensive course](https://www.youtube.com/watch?v=0sOvCWFmrtA) · freeCodeCamp · Sanjeev Thiyagarajan · Long course · approximately 19h
+      - Explains: FastAPI, validation, SQL persistence, authentication, testing and deployment.
+      - Useful because: Follow one stage at a time and consult current FastAPI docs for version changes.
+      - Watch for: Focus on reproduce the baseline. Then reproduce the lesson example: Run a fixed input twice and compare saved outputs with the documented baseline.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/
+- [ ] **Test a failure boundary:** A working happy path does not establish robustness to malformed data or dependency failures.
+  - Example: Inject one malformed input and one controlled failure, then record the resulting state.
+  - Videos:
+    - [PostgreSQL — course for beginners](https://www.youtube.com/watch?v=SpfIwlAYaKk) · freeCodeCamp · Full tool course
+      - Explains: SQL tables, querying and PostgreSQL fundamentals.
+      - Useful because: Use local PostgreSQL/SQLite practice rather than a paid database service.
+      - Watch for: Focus on test a failure boundary. Then reproduce the lesson example: Inject one malformed input and one controlled failure, then record the resulting state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/posgresql-course-for-beginners/
+    - [Python API development — comprehensive course](https://www.youtube.com/watch?v=0sOvCWFmrtA) · freeCodeCamp · Sanjeev Thiyagarajan · Long course · approximately 19h
+      - Explains: FastAPI, validation, SQL persistence, authentication, testing and deployment.
+      - Useful because: Follow one stage at a time and consult current FastAPI docs for version changes.
+      - Watch for: Focus on test a failure boundary. Then reproduce the lesson example: Inject one malformed input and one controlled failure, then record the resulting state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/
+- [ ] **Explain the decisions:** Describe why each technique was chosen and what evidence would make you choose differently.
+  - Example: Write a short decision note comparing the chosen approach with one simpler alternative.
+  - Videos:
+    - [PostgreSQL — course for beginners](https://www.youtube.com/watch?v=SpfIwlAYaKk) · freeCodeCamp · Full tool course
+      - Explains: SQL tables, querying and PostgreSQL fundamentals.
+      - Useful because: Use local PostgreSQL/SQLite practice rather than a paid database service.
+      - Watch for: Focus on explain the decisions. Then reproduce the lesson example: Write a short decision note comparing the chosen approach with one simpler alternative.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/posgresql-course-for-beginners/
+    - [Python API development — comprehensive course](https://www.youtube.com/watch?v=0sOvCWFmrtA) · freeCodeCamp · Sanjeev Thiyagarajan · Long course · approximately 19h
+      - Explains: FastAPI, validation, SQL persistence, authentication, testing and deployment.
+      - Useful because: Follow one stage at a time and consult current FastAPI docs for version changes.
+      - Watch for: Focus on explain the decisions. Then reproduce the lesson example: Write a short decision note comparing the chosen approach with one simpler alternative.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/
+- [ ] **Hand off the evidence:** Another learner must be able to reproduce the result from your instructions and supplied inputs.
+  - Example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+  - Videos:
+    - [PostgreSQL — course for beginners](https://www.youtube.com/watch?v=SpfIwlAYaKk) · freeCodeCamp · Full tool course
+      - Explains: SQL tables, querying and PostgreSQL fundamentals.
+      - Useful because: Use local PostgreSQL/SQLite practice rather than a paid database service.
+      - Watch for: Focus on hand off the evidence. Then reproduce the lesson example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/posgresql-course-for-beginners/
+    - [Python API development — comprehensive course](https://www.youtube.com/watch?v=0sOvCWFmrtA) · freeCodeCamp · Sanjeev Thiyagarajan · Long course · approximately 19h
+      - Explains: FastAPI, validation, SQL persistence, authentication, testing and deployment.
+      - Useful because: Follow one stage at a time and consult current FastAPI docs for version changes.
+      - Watch for: Focus on hand off the evidence. Then reproduce the lesson example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/
+
+#### YouTube: focused explanations and full courses
+
+- [PostgreSQL — course for beginners](https://www.youtube.com/watch?v=SpfIwlAYaKk) · freeCodeCamp · Full tool course
+  - Explains: SQL tables, querying and PostgreSQL fundamentals.
+  - Useful because: Use local PostgreSQL/SQLite practice rather than a paid database service.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/posgresql-course-for-beginners/
+- [System design concepts — complete course](https://www.youtube.com/watch?v=F2FmTdLtb_4) · freeCodeCamp · Full course
+  - Explains: Scalability, reliability, storage and architecture tradeoffs.
+  - Useful because: Explain why a queue, index or cache is useful before adding one.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.youtube.com/watch?v=F2FmTdLtb_4
+- [Python API development — comprehensive course](https://www.youtube.com/watch?v=0sOvCWFmrtA) · freeCodeCamp · Sanjeev Thiyagarajan · Long course · approximately 19h
+  - Explains: FastAPI, validation, SQL persistence, authentication, testing and deployment.
+  - Useful because: Follow one stage at a time and consult current FastAPI docs for version changes.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/
+
+#### Free written resources
+
+1. [PostgreSQL: using EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) — Free; no registration required. No paid materials required.
+2. [PostgreSQL: concurrency control](https://www.postgresql.org/docs/current/mvcc.html) — Free; no registration required. No paid materials required.
+
+#### Backend and data checkpoint
+
+Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.
+
+**Deliverables**
+
+- Runnable project and reproducible input fixtures
+- README, results and decision notes
+- Failure evidence and clean-start instructions
+
+**Completion checks**
+
+- [ ] Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.
+- [ ] Explain the code and results without relying on an AI-generated summary.
+- [ ] A teammate can reproduce the demo without paid credentials.
+
+#### Ten project recommendations
+
+### Async request boundary lab
+
+A developer needs responsive APIs when one dependency stalls.
+
+**Data:** Use a local delayed stub service and concurrent requests. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A FastAPI client with timeouts and bounded work.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backend and data checkpoint:** Extend the project with Backend and data checkpoint in Async request boundary lab. Adapt this focused lab to the project data: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A FastAPI client with timeouts and bounded work. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backend and data checkpoint: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] A slow dependency does not block independent health requests.
+- [ ] Backend and data checkpoint: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Database index benchmark
+
+A developer needs to diagnose slow queries with evidence.
+
+**Data:** Generate 10000 fictional events in local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An EXPLAIN comparison and minimal index migration.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backend and data checkpoint:** Extend the project with Backend and data checkpoint in Database index benchmark. Adapt this focused lab to the project data: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An EXPLAIN comparison and minimal index migration. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backend and data checkpoint: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compare plans before/after indexing and measure write overhead.
+- [ ] Backend and data checkpoint: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Private notes authorization lab
+
+A team needs each user to access only their own notes.
+
+**Data:** Use three fictional users and 15 local notes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A local authenticated CRUD API with ownership checks.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backend and data checkpoint:** Extend the project with Backend and data checkpoint in Private notes authorization lab. Adapt this focused lab to the project data: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A local authenticated CRUD API with ownership checks. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backend and data checkpoint: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Test every cross-user read and write; no client-supplied owner override.
+- [ ] Backend and data checkpoint: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Order analytics query lab
+
+An analyst needs correct reports over relational data.
+
+**Data:** Generate customers, orders and line items in SQLite or local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A schema, joins and reconciled analytics report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backend and data checkpoint:** Extend the project with Backend and data checkpoint in Order analytics query lab. Adapt this focused lab to the project data: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A schema, joins and reconciled analytics report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backend and data checkpoint: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Prove totals survive joins and explain null and duplicate-key behavior.
+- [ ] Backend and data checkpoint: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Validated prediction API
+
+A model builder needs a reliable inference boundary.
+
+**Data:** Use bundled digits and a small saved baseline or deterministic test predictor. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A FastAPI service with request/response schemas and health endpoint.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backend and data checkpoint:** Extend the project with Backend and data checkpoint in Validated prediction API. Adapt this focused lab to the project data: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A FastAPI service with request/response schemas and health endpoint. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backend and data checkpoint: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Reject bad shapes and test successful inference plus unavailable-model errors.
+- [ ] Backend and data checkpoint: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Safe schema evolution exercise
+
+A maintainer needs to change data shape without losing records.
+
+**Data:** Seed a local notes database with an old author-name field. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Forward/backward migrations and compatibility tests.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backend and data checkpoint:** Extend the project with Backend and data checkpoint in Safe schema evolution exercise. Adapt this focused lab to the project data: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Forward/backward migrations and compatibility tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backend and data checkpoint: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Preserve seeded records and document irreversible transformations.
+- [ ] Backend and data checkpoint: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Concurrent stock reservation
+
+A shop simulator needs to avoid selling more stock than exists.
+
+**Data:** Seed ten products with five units each in local PostgreSQL. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A transactional reservation endpoint and concurrency test.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backend and data checkpoint:** Extend the project with Backend and data checkpoint in Concurrent stock reservation. Adapt this focused lab to the project data: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A transactional reservation endpoint and concurrency test. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backend and data checkpoint: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Concurrent requests never make inventory negative and retries remain idempotent.
+- [ ] Backend and data checkpoint: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Relational versus document store trial
+
+A designer needs evidence for choosing a storage model.
+
+**Data:** Represent the same 40 products and tags in SQL and JSON documents. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Two query implementations and a tradeoff report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backend and data checkpoint:** Extend the project with Backend and data checkpoint in Relational versus document store trial. Adapt this focused lab to the project data: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Two query implementations and a tradeoff report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backend and data checkpoint: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match query results and demonstrate update consistency differences.
+- [ ] Backend and data checkpoint: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### API explorer frontend
+
+A learner needs to connect form state to typed API responses.
+
+**Data:** Use a local fictional catalog with 30 items. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A searchable browser UI connected to FastAPI.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backend and data checkpoint:** Extend the project with Backend and data checkpoint in API explorer frontend. Adapt this focused lab to the project data: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A searchable browser UI connected to FastAPI. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backend and data checkpoint: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show loading, empty, validation and server-failure states.
+- [ ] Backend and data checkpoint: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Vector lookup service
+
+A search builder needs predictable similarity queries and filters.
+
+**Data:** Generate 100 normalized vectors with source and role metadata. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A local vector search API and metadata filter tests.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Backend and data checkpoint:** Extend the project with Backend and data checkpoint in Vector lookup service. Adapt this focused lab to the project data: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A local vector search API and metadata filter tests. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Backend and data checkpoint: Backend and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compare with brute-force scores and reject unauthorized IDs.
+- [ ] Backend and data checkpoint: Expose a validated FastAPI endpoint with ownership checks and SQL persistence. Demonstrate invalid input, unauthorized access, transaction rollback and an idempotent retry using fictional records.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

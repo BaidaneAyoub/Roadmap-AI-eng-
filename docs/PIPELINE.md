@@ -2,83 +2,107 @@
 
 The supplied Andrew skills map is the framework, supplemented by [roadmap.sh](https://roadmap.sh/ai-engineer). Follow this suggested application-building route; branches add depth when your project needs them. They are never completion gates. Start with a real user problem and revisit product discovery throughout.
 
-## 1. Start from zero
+## 1. python
 
 [Python](roadmap/python.md)
 
-Write and test a small Python program.
+Write reliable Python with validation, explicit state and reproducible tests.
 
 ↓ [Next: Engineering foundations](roadmap/engineering.md)
 
-## 2. Work like an engineer
+## 2. engineering
 
 [Engineering foundations](roadmap/engineering.md)
 
-Put your program in Git and understand HTTP + JSON.
+Use Git, HTTP contracts and layered tests to deliver reviewable software.
 
-↓ [Next: Backend and databases](roadmap/backend.md)
+↓ [Next: Mathematics and data](roadmap/math-data.md)
 
-## 3. Build the application shell
+## 3. math data
 
-[Backend and databases](roadmap/backend.md)
+[Mathematics and data](roadmap/math-data.md)
 
-Create a validated API and store its data. Take the data branch when your project needs it.
+Clean data and explain linear algebra, gradients, probability and uncertainty.
 
-**Optional branches:** [Mathematics and data](roadmap/math-data.md)
+↓ [Next: Machine learning](roadmap/ml.md)
 
-These branches return to the main route; you do not need to finish them to continue.
+## 4. ml
+
+[Machine learning](roadmap/ml.md)
+
+Compare classical models with leakage-safe evaluation and reproducible inference.
+
+↓ [Next: Deep learning](roadmap/dl.md)
+
+## 5. dl
+
+[Deep learning](roadmap/dl.md)
+
+Train and diagnose neural models; complete the scientific foundation capstone.
 
 ↓ [Next: LLM engineering](roadmap/llm.md)
 
-## 4. Choose and use an AI model
+## 6. llm
 
 [LLM engineering](roadmap/llm.md)
 
-Build a small assistant with a pretrained model. ML and DL are deeper branches for training and understanding models; they are not gates for this route.
+Integrate a model with bounded context, structured outputs and measured limitations.
 
-**Optional branches:** [Machine learning](roadmap/ml.md) · [Deep learning](roadmap/dl.md)
+↓ [Next: Backend and databases](roadmap/backend.md)
 
-These branches return to the main route; you do not need to finish them to continue.
+## 7. backend
+
+[Backend and databases](roadmap/backend.md)
+
+Expose validated APIs with authorization, relational data and transaction checks.
 
 ↓ [Next: Retrieval and RAG](roadmap/rag.md)
 
-## 5. Ground answers in your data
+## 8. rag
 
 [Retrieval and RAG](roadmap/rag.md)
 
-Add document retrieval and citations when the application needs external knowledge.
+Retrieve evidence, preserve citations and abstain when reliable support is missing.
 
 ↓ [Next: Evaluation and security](roadmap/eval-security.md)
 
-## 6. Measure quality before autonomy
+## 9. eval security
 
 [Evaluation and security](roadmap/eval-security.md)
 
-Test quality, privacy and hostile inputs. Add agents only when tools and multi-step workflows serve the problem.
+Measure quality and enforce security boundaries before introducing autonomy.
 
-**Optional branches:** [Agents and MCP](roadmap/agents.md)
+↓ [Next: Agents and MCP](roadmap/agents.md)
 
-These branches return to the main route; you do not need to finish them to continue.
+## 10. agents
+
+[Agents and MCP](roadmap/agents.md)
+
+Use bounded tool workflows and versioned MCP contracts with explicit permissions.
+
+↓ [Next: Coding agents](roadmap/coding-agents.md)
+
+## 11. coding agents
+
+[Coding agents](roadmap/coding-agents.md)
+
+Direct coding agents through specifications, code review and verified outcomes.
 
 ↓ [Next: Deployment and operations](roadmap/deployment.md)
 
-## 7. Deploy and operate
+## 12. deployment
 
 [Deployment and operations](roadmap/deployment.md)
 
-Containerise the service, monitor failures and document rollback. Coding agents can help throughout the build.
-
-**Optional branches:** [Coding agents](roadmap/coding-agents.md)
-
-These branches return to the main route; you do not need to finish them to continue.
+Containerize, monitor, recover and restore a reproducible local application.
 
 ↓ [Next: Product and documentation](roadmap/product.md)
 
-## 8. Ship a useful product
+## 13. product
 
 [Product and documentation](roadmap/product.md)
 
-Deliver a capstone with user feedback and documentation. Start user discovery from day one and revisit it here.
+Deliver a user-tested application capstone with requirements and operational evidence.
 
 [Choose a capstone](PROJECTS.md)
 

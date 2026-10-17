@@ -1,83 +1,21 @@
-export const domainOrder = [
-  "python",
-  "engineering",
-  "math-data",
-  "backend",
-  "ml",
-  "dl",
-  "llm",
-  "rag",
-  "eval-security",
-  "agents",
-  "deployment",
-  "coding-agents",
-  "product",
+import { routeOrder } from './deep-route.mjs';
+export const domainOrder = [...routeOrder];
+const outcomes = [
+'Write reliable Python with validation, explicit state and reproducible tests.',
+'Use Git, HTTP contracts and layered tests to deliver reviewable software.',
+'Clean data and explain linear algebra, gradients, probability and uncertainty.',
+'Compare classical models with leakage-safe evaluation and reproducible inference.',
+'Train and diagnose neural models; complete the scientific foundation capstone.',
+'Integrate a model with bounded context, structured outputs and measured limitations.',
+'Expose validated APIs with authorization, relational data and transaction checks.',
+'Retrieve evidence, preserve citations and abstain when reliable support is missing.',
+'Measure quality and enforce security boundaries before introducing autonomy.',
+'Use bounded tool workflows and versioned MCP contracts with explicit permissions.',
+'Direct coding agents through specifications, code review and verified outcomes.',
+'Containerize, monitor, recover and restore a reproducible local application.',
+'Deliver a user-tested application capstone with requirements and operational evidence.'
 ];
-
-export const pipeline = [
-  {
-    id: "code",
-    title: "Start from zero",
-    domain: "python",
-    choices: [],
-    outcome: "Write and test a small Python program.",
-  },
-  {
-    id: "engineering",
-    title: "Work like an engineer",
-    domain: "engineering",
-    choices: [],
-    outcome: "Put your program in Git and understand HTTP + JSON.",
-  },
-  {
-    id: "service",
-    title: "Build the application shell",
-    domain: "backend",
-    choices: ["math-data"],
-    outcome:
-      "Create a validated API and store its data. Take the data branch when your project needs it.",
-  },
-  {
-    id: "models",
-    title: "Choose and use an AI model",
-    domain: "llm",
-    choices: ["ml", "dl"],
-    outcome:
-      "Build a small assistant with a pretrained model. ML and DL are deeper branches for training and understanding models; they are not gates for this route.",
-  },
-  {
-    id: "knowledge",
-    title: "Ground answers in your data",
-    domain: "rag",
-    choices: [],
-    outcome:
-      "Add document retrieval and citations when the application needs external knowledge.",
-  },
-  {
-    id: "quality",
-    title: "Measure quality before autonomy",
-    domain: "eval-security",
-    choices: ["agents"],
-    outcome:
-      "Test quality, privacy and hostile inputs. Add agents only when tools and multi-step workflows serve the problem.",
-  },
-  {
-    id: "ship",
-    title: "Deploy and operate",
-    domain: "deployment",
-    choices: ["coding-agents"],
-    outcome:
-      "Containerise the service, monitor failures and document rollback. Coding agents can help throughout the build.",
-  },
-  {
-    id: "product",
-    title: "Ship a useful product",
-    domain: "product",
-    choices: [],
-    outcome:
-      "Deliver a capstone with user feedback and documentation. Start user discovery from day one and revisit it here.",
-  },
-];
+export const pipeline = routeOrder.map((domain,i)=>({id:domain,title:domain.replaceAll('-',' '),domain,choices:[],outcome:outcomes[i]}));
 
 // The teaching sequence is authored for this team; source maps describe skills, not a mandatory syllabus.
 export const stageGuides = {

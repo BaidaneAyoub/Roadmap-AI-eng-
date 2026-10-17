@@ -746,3 +746,63 @@ main {
     scroll-behavior: auto !important;
   }
 }
+/* Project details reuse the workspace palette and progressively reveal long handoffs. */
+.mentor-panel {
+  margin-top: 28px;
+  padding: 24px;
+  border: 1px solid #477b71;
+  border-radius: 16px;
+  background: #152825;
+}
+.mentor-panel h4 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+.mentor-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.mentor-actions button {
+  min-height: 44px;
+}
+.mentor-preview {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+.mentor-preview textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 320px;
+  resize: vertical;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.project-flow {
+  margin: 20px 0;
+}
+.brief-detail summary {
+  cursor: pointer;
+  padding: 12px 0;
+  min-height: 44px;
+  box-sizing: border-box;
+  font-weight: 600;
+}
+.brief-detail summary:focus-visible {
+  outline: 2px solid #73dfbe;
+  outline-offset: 4px;
+}
+.project-flow li {
+  padding: 6px 0;
+}
+@media (max-width: 600px) {
+  .mentor-panel {
+    padding: 16px;
+  }
+  .mentor-actions > button {
+    width: 100%;
+  }
+}

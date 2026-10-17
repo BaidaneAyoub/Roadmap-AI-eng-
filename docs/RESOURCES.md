@@ -10,7 +10,7 @@ Links are per lesson and include specific chapters where available. Optional hos
 - [Python: input and output](https://docs.python.org/3/tutorial/inputoutput.html) — Free; no registration required. No paid materials required.
 - [Python: modules](https://docs.python.org/3/tutorial/modules.html) — Free; no registration required. No paid materials required.
 - [Python: virtual environments](https://docs.python.org/3/tutorial/venv.html) — Free; no registration required. No paid materials required.
-- [Python: classes](https://docs.python.org/3/tutorial/classes.html) — Free; no registration required. No paid materials required.
+- [Official reference: Mutability, copying, scope and function contracts](https://docs.python.org/3/tutorial/classes.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
 - [CS50P: object-oriented programming](https://cs50.harvard.edu/python/2022/weeks/8/) — Free OpenCourseWare; account optional for submissions. Certificates on external platforms may cost money.
 - [Python: generators](https://docs.python.org/3/tutorial/classes.html#generators) — Free; no registration required. No paid materials required.
 - [itertools recipes](https://docs.python.org/3/library/itertools.html#itertools-recipes) — Free; no registration required. No paid materials required.
@@ -44,21 +44,10 @@ Links are per lesson and include specific chapters where available. Optional hos
 - [scikit-learn: PCA](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html) — Free; no registration required. No paid materials required.
 - [pandas: merge and join](https://pandas.pydata.org/docs/user_guide/merging.html) — Free; no registration required. No paid materials required.
 - [NumPy: random sampling](https://numpy.org/doc/stable/reference/random/index.html) — Free; no registration required. No paid materials required.
-- [MDN: your first website](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website) — Free; no registration required. No paid materials required.
-- [MDN: using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) — Free; no registration required. No paid materials required.
-- [FastAPI tutorial](https://fastapi.tiangolo.com/tutorial/) — Free; no registration required. No paid materials required.
-- [FastAPI: request bodies](https://fastapi.tiangolo.com/tutorial/body/) — Free; no registration required. No paid materials required.
-- [FastAPI: security introduction](https://fastapi.tiangolo.com/tutorial/security/) — Free; no registration required. No paid materials required.
-- [MDN: client-side web APIs](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction) — Free; no registration required. No paid materials required.
-- [PostgreSQL: joins](https://www.postgresql.org/docs/current/tutorial-join.html) — Free; no registration required. No paid materials required.
-- [PostgreSQL: indexes](https://www.postgresql.org/docs/current/indexes.html) — Free; no registration required. No paid materials required.
-- [PostgreSQL: transactions](https://www.postgresql.org/docs/current/tutorial-transactions.html) — Free; no registration required. No paid materials required.
-- [PostgreSQL: concurrency control](https://www.postgresql.org/docs/current/mvcc.html) — Free; no registration required. No paid materials required.
-- [pgvector: PostgreSQL vector extension](https://github.com/pgvector/pgvector) — Free; no registration required. No paid materials required.
-- [Neo4j: graph database concepts](https://neo4j.com/docs/getting-started/appendix/graphdb-concepts/) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
-- [FastAPI: dependencies](https://fastapi.tiangolo.com/tutorial/dependencies/) — Free; no registration required. No paid materials required.
-- [FastAPI: testing](https://fastapi.tiangolo.com/tutorial/testing/) — Free; no registration required. No paid materials required.
-- [PostgreSQL: using EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) — Free; no registration required. No paid materials required.
+- [Official reference: Bayes, likelihood and decision uncertainty](https://seeing-theory.brown.edu/bayesian-inference/index.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+- [Official reference: Entropy, cross-entropy and KL divergence](https://d2l.ai/chapter_preliminaries/information-theory.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+- [Official reference: Partial derivatives, Jacobians and vector gradients](https://docs.pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+- [Official reference: Confidence intervals, bootstrap and causal limits](https://seeing-theory.brown.edu/frequentist-inference/index.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
 - [Inria: predictive modeling pipeline](https://inria.github.io/scikit-learn-mooc/python_scripts/02_numerical_pipeline_introduction.html) — Free; no registration required. No paid materials required.
 - [scikit-learn: dummy estimators](https://scikit-learn.org/stable/modules/model_evaluation.html#dummy-estimators) — Free; no registration required. No paid materials required.
 - [scikit-learn: cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html) — Free; no registration required. No paid materials required.
@@ -68,10 +57,10 @@ Links are per lesson and include specific chapters where available. Optional hos
 - [scikit-learn: linear models](https://scikit-learn.org/stable/modules/linear_model.html) — Free; no registration required. No paid materials required.
 - [D2L: linear regression from scratch](https://d2l.ai/chapter_linear-regression/linear-regression-scratch.html) — Free; no registration required. No paid materials required.
 - [scikit-learn: decision trees](https://scikit-learn.org/stable/modules/tree.html) — Free; no registration required. No paid materials required.
-- [scikit-learn: ensembles](https://scikit-learn.org/stable/modules/ensemble.html) — Free; no registration required. No paid materials required.
+- [Official reference: Decision trees, bagging and boosting mechanisms](https://scikit-learn.org/stable/modules/ensemble.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
 - [scikit-learn: neighbors](https://scikit-learn.org/stable/modules/neighbors.html) — Free; no registration required. No paid materials required.
 - [scikit-learn: clustering](https://scikit-learn.org/stable/modules/clustering.html) — Free; no registration required. No paid materials required.
-- [scikit-learn: PCA](https://scikit-learn.org/stable/modules/decomposition.html#pca) — Free; no registration required. No paid materials required.
+- [Official reference: PCA, explained variance and reconstruction](https://scikit-learn.org/stable/modules/decomposition.html#pca) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
 - [scikit-learn: validation curves](https://scikit-learn.org/stable/modules/learning_curve.html) — Free; no registration required. No paid materials required.
 - [scikit-learn: tuning estimator parameters](https://scikit-learn.org/stable/modules/grid_search.html) — Free; no registration required. No paid materials required.
 - [scikit-learn: model evaluation](https://scikit-learn.org/stable/modules/model_evaluation.html) — Free; no registration required. No paid materials required.
@@ -143,6 +132,7 @@ Links are per lesson and include specific chapters where available. Optional hos
 - [librosa: mel spectrogram](https://librosa.org/doc/0.11.0/generated/librosa.feature.melspectrogram.html) — Free; no registration required. No paid materials required.
 - [D2L: Markov decision processes](https://d2l.ai/chapter_reinforcement-learning/mdp.html) — Free; no registration required. No paid materials required.
 - [Hugging Face: deep reinforcement learning introduction](https://huggingface.co/learn/deep-rl-course/unit1/introduction) — Free; no registration required. No paid materials required.
+- [Official reference: Distributed training: ranks, synchronization and effective batches](https://docs.pytorch.org/tutorials/intermediate/ddp_tutorial.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
 - [Hugging Face LLM course](https://huggingface.co/learn/llm-course/chapter1/1) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 - [Hugging Face: using transformers](https://huggingface.co/learn/llm-course/chapter2/1) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 - [Ollama documentation](https://docs.ollama.com/) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
@@ -158,6 +148,25 @@ Links are per lesson and include specific chapters where available. Optional hos
 - [Hugging Face LLM course: byte-pair encoding](https://huggingface.co/learn/llm-course/chapter6/5) — Free; no registration required. No paid materials required.
 - [Python: Unicode HOWTO](https://docs.python.org/3/howto/unicode.html) — Free; no registration required. No paid materials required.
 - [Hugging Face TRL: supervised fine-tuning](https://huggingface.co/docs/trl/sft_trainer) — Free; no registration required. No paid materials required.
+- [Official reference: Model cards, licences and reproducible model selection](https://huggingface.co/docs/hub/model-cards) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+- [Official reference: Structured output, streaming and cancellation contracts](https://docs.pydantic.dev/latest/concepts/json/) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+- [Official reference: Preference data, DPO and post-training evaluation](https://huggingface.co/docs/trl/dpo_trainer) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+- [Official reference: Multimodal input contracts and uncertainty](https://huggingface.co/docs/transformers/tasks/image_text_to_text) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+- [MDN: your first website](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website) — Free; no registration required. No paid materials required.
+- [MDN: using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) — Free; no registration required. No paid materials required.
+- [FastAPI tutorial](https://fastapi.tiangolo.com/tutorial/) — Free; no registration required. No paid materials required.
+- [FastAPI: request bodies](https://fastapi.tiangolo.com/tutorial/body/) — Free; no registration required. No paid materials required.
+- [FastAPI: security introduction](https://fastapi.tiangolo.com/tutorial/security/) — Free; no registration required. No paid materials required.
+- [MDN: client-side web APIs](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction) — Free; no registration required. No paid materials required.
+- [PostgreSQL: joins](https://www.postgresql.org/docs/current/tutorial-join.html) — Free; no registration required. No paid materials required.
+- [PostgreSQL: indexes](https://www.postgresql.org/docs/current/indexes.html) — Free; no registration required. No paid materials required.
+- [PostgreSQL: transactions](https://www.postgresql.org/docs/current/tutorial-transactions.html) — Free; no registration required. No paid materials required.
+- [PostgreSQL: concurrency control](https://www.postgresql.org/docs/current/mvcc.html) — Free; no registration required. No paid materials required.
+- [pgvector: PostgreSQL vector extension](https://github.com/pgvector/pgvector) — Free; no registration required. No paid materials required.
+- [Neo4j: graph database concepts](https://neo4j.com/docs/getting-started/appendix/graphdb-concepts/) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
+- [FastAPI: dependencies](https://fastapi.tiangolo.com/tutorial/dependencies/) — Free; no registration required. No paid materials required.
+- [FastAPI: testing](https://fastapi.tiangolo.com/tutorial/testing/) — Free; no registration required. No paid materials required.
+- [PostgreSQL: using EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) — Free; no registration required. No paid materials required.
 - [Sentence Transformers: semantic search](https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 - [Haystack: document splitters](https://docs.haystack.deepset.ai/docs/documentsplitter) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 - [FAISS: getting started](https://github.com/facebookresearch/faiss/wiki/Getting-started) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
@@ -171,6 +180,9 @@ Links are per lesson and include specific chapters where available. Optional hos
 - [Sentence Transformers: retrieve and rerank](https://sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html) — Free; no registration required. No paid materials required.
 - [Hugging Face: evaluate a RAG system](https://huggingface.co/learn/cookbook/rag_evaluation) — Free; no registration required. No paid materials required.
 - [PAIR: explainability and trust](https://pair.withgoogle.com/guidebook/chapters/explainability-trust/) — Free; no registration required. No paid materials required.
+- [Official reference: Document parsing, OCR limits and source provenance](https://pymupdf.readthedocs.io/en/latest/recipes-text.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+- [Official reference: Approximate nearest neighbors and index tradeoffs](https://github.com/facebookresearch/faiss/wiki) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+- [Official reference: Graph-grounded retrieval and GraphRAG limits](https://microsoft.github.io/graphrag/) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
 - [Google PAIR: user needs](https://pair.withgoogle.com/guidebook/chapters/user-needs/) — Free; no registration required. No paid materials required.
 - [Google SRE: monitoring distributed systems](https://sre.google/sre-book/monitoring-distributed-systems/) — Free; no registration required. No paid materials required.
 - [OWASP Top 10 for LLM applications](https://genai.owasp.org/llm-top-10/) — Free; no registration required. No paid materials required.
@@ -187,11 +199,15 @@ Links are per lesson and include specific chapters where available. Optional hos
 - [MCP: build a server](https://modelcontextprotocol.io/docs/develop/build-server) — Free; no registration required. No paid materials required.
 - [MCP: build a client](https://modelcontextprotocol.io/docs/develop/build-client) — Free; no registration required. No paid materials required.
 - [LangGraph: graph API](https://docs.langchain.com/oss/python/langgraph/graph-api) — Free; no registration required. No paid materials required.
+- [Official reference: MCP versions, discovery and authorization boundaries](https://modelcontextprotocol.io/docs/2026-07-28/learn/architecture) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+- [Google: technical writing one](https://developers.google.com/tech-writing/one) — Free; no registration required. No paid materials required.
+- [GitHub: responsible use of coding assistants](https://docs.github.com/en/copilot/responsible-use/copilot-code-completion) — Free; no registration required. No paid materials required.
+- [GitHub Actions: Python build and test](https://docs.github.com/en/actions/tutorials/build-and-test-code/python) — Free; no registration required. No paid materials required.
+- [pytest: good integration practices](https://docs.pytest.org/en/stable/explanation/goodpractices.html) — Free; no registration required. No paid materials required.
 - [Docker: run a container](https://docs.docker.com/get-started/tutorials/run-an-app/) — Free; no registration required. No paid materials required.
 - [Docker: writing a Dockerfile](https://docs.docker.com/get-started/docker-concepts/building-images/writing-a-dockerfile/) — Free; no registration required. No paid materials required.
 - [Docker: Compose getting started](https://docs.docker.com/compose/gettingstarted/) — Free; no registration required. No paid materials required.
 - [Docker: volumes](https://docs.docker.com/engine/storage/volumes/) — Free; no registration required. No paid materials required.
-- [GitHub Actions: Python build and test](https://docs.github.com/en/actions/tutorials/build-and-test-code/python) — Free; no registration required. No paid materials required.
 - [Google SRE: release engineering](https://sre.google/sre-book/release-engineering/) — Free; no registration required. No paid materials required.
 - [Google SRE: handling overload](https://sre.google/sre-book/handling-overload/) — Free; no registration required. No paid materials required.
 - [asyncio: queues](https://docs.python.org/3/library/asyncio-queue.html) — Free; no registration required. No paid materials required.
@@ -202,9 +218,7 @@ Links are per lesson and include specific chapters where available. Optional hos
 - [Python: queue](https://docs.python.org/3/library/queue.html) — Free; no registration required. No paid materials required.
 - [Google SRE: service level objectives](https://sre.google/sre-book/service-level-objectives/) — Free; no registration required. No paid materials required.
 - [OpenTelemetry: signals](https://opentelemetry.io/docs/concepts/signals/) — Free; no registration required. No paid materials required.
-- [Google: technical writing one](https://developers.google.com/tech-writing/one) — Free; no registration required. No paid materials required.
-- [GitHub: responsible use of coding assistants](https://docs.github.com/en/copilot/responsible-use/copilot-code-completion) — Free; no registration required. No paid materials required.
-- [pytest: good integration practices](https://docs.pytest.org/en/stable/explanation/goodpractices.html) — Free; no registration required. No paid materials required.
+- [Official reference: Backup, restore and data recovery drills](https://www.postgresql.org/docs/current/backup.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
 - [PAIR: mental models](https://pair.withgoogle.com/guidebook/chapters/mental-models/) — Free; no registration required. No paid materials required.
 - [Google PAIR: feedback and control](https://pair.withgoogle.com/guidebook/chapters/feedback-controls/) — Free; no registration required. No paid materials required.
 - [Google SRE: embracing risk](https://sre.google/sre-book/embracing-risk/) — Free; no registration required. No paid materials required.

@@ -2,17 +2,17 @@
 
 Understand the operations and data quality behind model behavior.
 
-## Optional branch
+## Main route · Step 3 of 13
 
 **Goal:** Understand the data, shapes, gradients and statistics behind AI.
 
 **Stage checkpoint:** Clean a small dataset, plot its distributions and explain a dot product and gradient calculation.
 
-Explore this branch when it helps your goal. Return to the main route at any time; completion is not a gate.
+Clean data and explain linear algebra, gradients, probability and uncertainty.
 
 Follow the modules and lessons below at your pace. Finish each exercise, save your evidence and self-assessment, then continue. Completed and Already known count as completed; Skipped is reported separately. You can move ahead at any time.
 
-[Full pipeline](../PIPELINE.md) · [Return to main route: Backend and databases](backend.md)
+[Full pipeline](../PIPELINE.md) · [Next step: Machine learning](ml.md)
 
 ## Mathematical intuition
 
@@ -22,7 +22,7 @@ Follow the modules and lessons below at your pace. Finish each exercise, save yo
 
 Track shapes and understand features, embeddings and dense layers.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Foundation · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Types and collections](python.md#python-values) Navigation is unrestricted.
 
@@ -108,292 +108,292 @@ Implement a linear scoring function and cosine similarity in NumPy; verify shape
 
 #### Ten project recommendations
 
-### Inventory exception monitor
+### Feature scaling geometry
 
-Find unusual stock movements and explain which records need investigation.
+A model builder needs to understand units before measuring distance.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Generate height/income features with very different scales. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Vectors, matrices and dot products:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Vectors, matrices and dot products, explicitly apply Vectors and matrices, Dot products, Norms and cosine similarity.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Vectors, matrices and dot products: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Vectors, matrices and dot products: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A NumPy study of standard, robust and min-max scaling.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Vectors, matrices and dot products:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Vectors, matrices and dot products, explicitly apply Vectors and matrices, Dot products, Norms and cosine similarity.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
+- **Vectors, matrices and dot products:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Feature scaling geometry: A NumPy study of standard, robust and min-max scaling. Focus: Vectors and matrices, Dot products, Norms and cosine similarity.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Vectors, matrices and dot products: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A NumPy study of standard, robust and min-max scaling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vectors, matrices and dot products: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Vectors, matrices and dot products: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
+- [ ] Fit scaling on training rows only and compare neighbor identities.
+- [ ] Vectors, matrices and dot products: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Geometric similarity explorer
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A learner needs to understand why vector scaling changes retrieval.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Generate 60 two-dimensional points with three labeled groups. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Vectors, matrices and dot products:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Vectors, matrices and dot products, explicitly apply Vectors and matrices, Dot products, Norms and cosine similarity.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Vectors, matrices and dot products: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Vectors, matrices and dot products: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Vectors, matrices and dot products:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Vectors, matrices and dot products, explicitly apply Vectors and matrices, Dot products, Norms and cosine similarity.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Vectors, matrices and dot products: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Vectors, matrices and dot products: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A notebook comparing dot product, cosine and Euclidean rankings.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Vectors, matrices and dot products:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Vectors, matrices and dot products, explicitly apply Vectors and matrices, Dot products, Norms and cosine similarity.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
+- **Vectors, matrices and dot products:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Geometric similarity explorer: A notebook comparing dot product, cosine and Euclidean rankings. Focus: Vectors and matrices, Dot products, Norms and cosine similarity.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Vectors, matrices and dot products: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A notebook comparing dot product, cosine and Euclidean rankings. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vectors, matrices and dot products: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Vectors, matrices and dot products: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
+- [ ] Verify hand-calculated examples and explain ranking changes after scaling.
+- [ ] Vectors, matrices and dot products: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Conditional probability simulator
 
-Summarize themes and surface potentially misleading or contradictory review records.
+An analyst needs to distinguish test accuracy from posterior probability.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Simulate 10000 fictional cases at three base rates. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Vectors, matrices and dot products:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Vectors, matrices and dot products, explicitly apply Vectors and matrices, Dot products, Norms and cosine similarity.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Vectors, matrices and dot products: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Vectors, matrices and dot products: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A contingency table and Bayes-rule calculator.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Vectors, matrices and dot products:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Vectors, matrices and dot products, explicitly apply Vectors and matrices, Dot products, Norms and cosine similarity.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
+- **Vectors, matrices and dot products:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Conditional probability simulator: A contingency table and Bayes-rule calculator. Focus: Vectors and matrices, Dot products, Norms and cosine similarity.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Vectors, matrices and dot products: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A contingency table and Bayes-rule calculator. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vectors, matrices and dot products: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Vectors, matrices and dot products: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
+- [ ] Match analytical posterior values within stated simulation tolerance.
+- [ ] Vectors, matrices and dot products: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Bootstrap uncertainty studio
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A product analyst needs uncertainty around a small sample mean.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Generate 80 session lengths with a skewed distribution. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A bootstrap interval report with reproducible resampling.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Vectors, matrices and dot products:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Vectors, matrices and dot products, explicitly apply Vectors and matrices, Dot products, Norms and cosine similarity.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
+- **Vectors, matrices and dot products:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Bootstrap uncertainty studio: A bootstrap interval report with reproducible resampling. Focus: Vectors and matrices, Dot products, Norms and cosine similarity.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Vectors, matrices and dot products: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A bootstrap interval report with reproducible resampling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vectors, matrices and dot products: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Vectors, matrices and dot products: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
+- [ ] Compare percentile intervals with a normal approximation and discuss limits.
+- [ ] Vectors, matrices and dot products: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Misleading chart repair desk
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A report author needs honest charts for comparing groups.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Create four group distributions with outliers and unequal sizes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** Before/after charts with labeled axes and interpretation notes.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Vectors, matrices and dot products:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Vectors, matrices and dot products, explicitly apply Vectors and matrices, Dot products, Norms and cosine similarity.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
+- **Vectors, matrices and dot products:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Misleading chart repair desk: Before/after charts with labeled axes and interpretation notes. Focus: Vectors and matrices, Dot products, Norms and cosine similarity.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Vectors, matrices and dot products: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Before/after charts with labeled axes and interpretation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vectors, matrices and dot products: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Vectors, matrices and dot products: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
+- [ ] Show sample counts and uncertainty; avoid hiding outliers or truncating a bar axis.
+- [ ] Vectors, matrices and dot products: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Distribution shift notebook
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A team needs to notice changing input distributions.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Generate reference and shifted sensor batches with known mean and variance changes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** Histograms, summary statistics and a shift investigation report.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Vectors, matrices and dot products:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Vectors, matrices and dot products, explicitly apply Vectors and matrices, Dot products, Norms and cosine similarity.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
+- **Vectors, matrices and dot products:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Distribution shift notebook: Histograms, summary statistics and a shift investigation report. Focus: Vectors and matrices, Dot products, Norms and cosine similarity.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Vectors, matrices and dot products: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Histograms, summary statistics and a shift investigation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vectors, matrices and dot products: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Vectors, matrices and dot products: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.
+- [ ] Detect the seeded shift and explain why detection does not identify its cause.
+- [ ] Vectors, matrices and dot products: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Finite difference microscope
+
+A learner needs to verify derivatives used in optimization.
+
+**Data:** Generate a 30-row quadratic regression problem. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A notebook comparing analytical and numerical gradients.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Vectors, matrices and dot products:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Finite difference microscope: A notebook comparing analytical and numerical gradients. Focus: Vectors and matrices, Dot products, Norms and cosine similarity.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A notebook comparing analytical and numerical gradients. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vectors, matrices and dot products: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report relative error for multiple step sizes and explain cancellation.
+- [ ] Vectors, matrices and dot products: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data join integrity checker
+
+An analyst needs to detect duplicated rows caused by joins.
+
+**Data:** Create customer and order CSV files with missing and duplicated keys. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A pandas join audit with rejected records and row-count explanations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Vectors, matrices and dot products:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Data join integrity checker: A pandas join audit with rejected records and row-count explanations. Focus: Vectors and matrices, Dot products, Norms and cosine similarity.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A pandas join audit with rejected records and row-count explanations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vectors, matrices and dot products: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect many-to-many expansion and reconcile order totals.
+- [ ] Vectors, matrices and dot products: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Missing value investigation
+
+A researcher needs to understand how missingness alters summaries.
+
+**Data:** Generate 200 survey rows with random and income-dependent missingness. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A cleaning notebook comparing deletion and imputation.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Vectors, matrices and dot products:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Missing value investigation: A cleaning notebook comparing deletion and imputation. Focus: Vectors and matrices, Dot products, Norms and cosine similarity.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A cleaning notebook comparing deletion and imputation. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vectors, matrices and dot products: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Quantify bias under each missingness mechanism without claiming causality.
+- [ ] Vectors, matrices and dot products: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Matrix compression explorer
+
+A learner needs to see the accuracy/storage tradeoff in low-rank approximation.
+
+**Data:** Generate a 64 by 64 grayscale pattern with noise. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SVD reconstruction notebook with rank slider or rank table.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Vectors, matrices and dot products:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Matrix compression explorer: An SVD reconstruction notebook with rank slider or rank table. Focus: Vectors and matrices, Dot products, Norms and cosine similarity.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SVD reconstruction notebook with rank slider or rank table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Vectors, matrices and dot products: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify error decreases with rank and report retained storage.
+- [ ] Vectors, matrices and dot products: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Implement a linear scoring function and cosine similarity in NumPy; verify shapes and handle a zero vector without division by zero.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -407,7 +407,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Explain how an optimizer changes weights to reduce a loss.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Foundation · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Vectors, matrices and dot products](math-data.md#math-linear) Navigation is unrestricted.
 
@@ -498,292 +498,292 @@ Derive gradients for one-variable linear regression, compare with finite differe
 
 #### Ten project recommendations
 
-### Inventory exception monitor
+### Finite difference microscope
 
-Find unusual stock movements and explain which records need investigation.
+A learner needs to verify derivatives used in optimization.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Generate a 30-row quadratic regression problem. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Derivatives, chain rule and gradients:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Derivatives, chain rule and gradients, explicitly apply Derivatives, Chain rule, Gradients.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Derivatives, chain rule and gradients: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Derivatives, chain rule and gradients: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A notebook comparing analytical and numerical gradients.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Derivatives, chain rule and gradients:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Derivatives, chain rule and gradients, explicitly apply Derivatives, Chain rule, Gradients.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
+- **Derivatives, chain rule and gradients:** Implement Derivatives, chain rule and gradients in Finite difference microscope. Adapt this focused lab to the project data: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.  Required concepts: Derivatives, Chain rule, Gradients.
+  - Deliverable: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Derivatives, chain rule and gradients: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A notebook comparing analytical and numerical gradients. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Derivatives, chain rule and gradients: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Derivatives, chain rule and gradients: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
+- [ ] Report relative error for multiple step sizes and explain cancellation.
+- [ ] Derivatives, chain rule and gradients: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Conditional probability simulator
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+An analyst needs to distinguish test accuracy from posterior probability.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Simulate 10000 fictional cases at three base rates. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Derivatives, chain rule and gradients:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Derivatives, chain rule and gradients, explicitly apply Derivatives, Chain rule, Gradients.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Derivatives, chain rule and gradients: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Derivatives, chain rule and gradients: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Derivatives, chain rule and gradients:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Derivatives, chain rule and gradients, explicitly apply Derivatives, Chain rule, Gradients.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Derivatives, chain rule and gradients: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Derivatives, chain rule and gradients: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A contingency table and Bayes-rule calculator.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Derivatives, chain rule and gradients:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Derivatives, chain rule and gradients, explicitly apply Derivatives, Chain rule, Gradients.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
+- **Derivatives, chain rule and gradients:** Extend the project with Derivatives, chain rule and gradients in Conditional probability simulator. Adapt this focused lab to the project data: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.  Required concepts: Derivatives, Chain rule, Gradients.
+  - Deliverable: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Derivatives, chain rule and gradients: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A contingency table and Bayes-rule calculator. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Derivatives, chain rule and gradients: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Derivatives, chain rule and gradients: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
+- [ ] Match analytical posterior values within stated simulation tolerance.
+- [ ] Derivatives, chain rule and gradients: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Bootstrap uncertainty studio
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A product analyst needs uncertainty around a small sample mean.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Generate 80 session lengths with a skewed distribution. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Derivatives, chain rule and gradients:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Derivatives, chain rule and gradients, explicitly apply Derivatives, Chain rule, Gradients.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Derivatives, chain rule and gradients: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Derivatives, chain rule and gradients: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A bootstrap interval report with reproducible resampling.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Derivatives, chain rule and gradients:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Derivatives, chain rule and gradients, explicitly apply Derivatives, Chain rule, Gradients.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
+- **Derivatives, chain rule and gradients:** Extend the project with Derivatives, chain rule and gradients in Bootstrap uncertainty studio. Adapt this focused lab to the project data: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.  Required concepts: Derivatives, Chain rule, Gradients.
+  - Deliverable: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Derivatives, chain rule and gradients: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A bootstrap interval report with reproducible resampling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Derivatives, chain rule and gradients: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Derivatives, chain rule and gradients: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
+- [ ] Compare percentile intervals with a normal approximation and discuss limits.
+- [ ] Derivatives, chain rule and gradients: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Misleading chart repair desk
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A report author needs honest charts for comparing groups.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Create four group distributions with outliers and unequal sizes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** Before/after charts with labeled axes and interpretation notes.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Derivatives, chain rule and gradients:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Derivatives, chain rule and gradients, explicitly apply Derivatives, Chain rule, Gradients.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
+- **Derivatives, chain rule and gradients:** Extend the project with Derivatives, chain rule and gradients in Misleading chart repair desk. Adapt this focused lab to the project data: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.  Required concepts: Derivatives, Chain rule, Gradients.
+  - Deliverable: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Derivatives, chain rule and gradients: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Before/after charts with labeled axes and interpretation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Derivatives, chain rule and gradients: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Derivatives, chain rule and gradients: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
+- [ ] Show sample counts and uncertainty; avoid hiding outliers or truncating a bar axis.
+- [ ] Derivatives, chain rule and gradients: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Distribution shift notebook
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A team needs to notice changing input distributions.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Generate reference and shifted sensor batches with known mean and variance changes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** Histograms, summary statistics and a shift investigation report.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Derivatives, chain rule and gradients:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Derivatives, chain rule and gradients, explicitly apply Derivatives, Chain rule, Gradients.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
+- **Derivatives, chain rule and gradients:** Extend the project with Derivatives, chain rule and gradients in Distribution shift notebook. Adapt this focused lab to the project data: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.  Required concepts: Derivatives, Chain rule, Gradients.
+  - Deliverable: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Derivatives, chain rule and gradients: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Histograms, summary statistics and a shift investigation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Derivatives, chain rule and gradients: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Derivatives, chain rule and gradients: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
+- [ ] Detect the seeded shift and explain why detection does not identify its cause.
+- [ ] Derivatives, chain rule and gradients: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Data join integrity checker
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+An analyst needs to detect duplicated rows caused by joins.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Create customer and order CSV files with missing and duplicated keys. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A pandas join audit with rejected records and row-count explanations.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Derivatives, chain rule and gradients:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Derivatives, chain rule and gradients, explicitly apply Derivatives, Chain rule, Gradients.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
+- **Derivatives, chain rule and gradients:** Extend the project with Derivatives, chain rule and gradients in Data join integrity checker. Adapt this focused lab to the project data: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.  Required concepts: Derivatives, Chain rule, Gradients.
+  - Deliverable: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Derivatives, chain rule and gradients: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A pandas join audit with rejected records and row-count explanations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Derivatives, chain rule and gradients: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Derivatives, chain rule and gradients: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.
+- [ ] Detect many-to-many expansion and reconcile order totals.
+- [ ] Derivatives, chain rule and gradients: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Missing value investigation
+
+A researcher needs to understand how missingness alters summaries.
+
+**Data:** Generate 200 survey rows with random and income-dependent missingness. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A cleaning notebook comparing deletion and imputation.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Derivatives, chain rule and gradients:** Extend the project with Derivatives, chain rule and gradients in Missing value investigation. Adapt this focused lab to the project data: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.  Required concepts: Derivatives, Chain rule, Gradients.
+  - Deliverable: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A cleaning notebook comparing deletion and imputation. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Derivatives, chain rule and gradients: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Quantify bias under each missingness mechanism without claiming causality.
+- [ ] Derivatives, chain rule and gradients: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Feature scaling geometry
+
+A model builder needs to understand units before measuring distance.
+
+**Data:** Generate height/income features with very different scales. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A NumPy study of standard, robust and min-max scaling.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Derivatives, chain rule and gradients:** Extend the project with Derivatives, chain rule and gradients in Feature scaling geometry. Adapt this focused lab to the project data: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.  Required concepts: Derivatives, Chain rule, Gradients.
+  - Deliverable: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A NumPy study of standard, robust and min-max scaling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Derivatives, chain rule and gradients: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Fit scaling on training rows only and compare neighbor identities.
+- [ ] Derivatives, chain rule and gradients: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Matrix compression explorer
+
+A learner needs to see the accuracy/storage tradeoff in low-rank approximation.
+
+**Data:** Generate a 64 by 64 grayscale pattern with noise. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SVD reconstruction notebook with rank slider or rank table.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Derivatives, chain rule and gradients:** Extend the project with Derivatives, chain rule and gradients in Matrix compression explorer. Adapt this focused lab to the project data: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.  Required concepts: Derivatives, Chain rule, Gradients.
+  - Deliverable: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SVD reconstruction notebook with rank slider or rank table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Derivatives, chain rule and gradients: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify error decreases with rank and report retained storage.
+- [ ] Derivatives, chain rule and gradients: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Geometric similarity explorer
+
+A learner needs to understand why vector scaling changes retrieval.
+
+**Data:** Generate 60 two-dimensional points with three labeled groups. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A notebook comparing dot product, cosine and Euclidean rankings.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Derivatives, chain rule and gradients:** Extend the project with Derivatives, chain rule and gradients in Geometric similarity explorer. Adapt this focused lab to the project data: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.  Required concepts: Derivatives, Chain rule, Gradients.
+  - Deliverable: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A notebook comparing dot product, cosine and Euclidean rankings. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Derivatives, chain rule and gradients: Derivatives, chain rule and gradients: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify hand-calculated examples and explain ranking changes after scaling.
+- [ ] Derivatives, chain rule and gradients: Derive gradients for one-variable linear regression, compare with finite differences and demonstrate decreasing loss for a small step size.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -797,7 +797,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Interpret predictions and uncertainty without confusing confidence with correctness.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Foundation · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Derivatives, chain rule and gradients](math-data.md#math-calculus) Navigation is unrestricted.
 
@@ -883,292 +883,292 @@ Simulate an imbalanced binary dataset; calculate conditional probabilities and b
 
 #### Ten project recommendations
 
-### Inventory exception monitor
+### Conditional probability simulator
 
-Find unusual stock movements and explain which records need investigation.
+An analyst needs to distinguish test accuracy from posterior probability.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Simulate 10000 fictional cases at three base rates. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Probability, distributions and statistics:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Probability, distributions and statistics, explicitly apply Conditional probability, Distributions, Statistics.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Probability, distributions and statistics: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Probability, distributions and statistics: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A contingency table and Bayes-rule calculator.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Probability, distributions and statistics:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Probability, distributions and statistics, explicitly apply Conditional probability, Distributions, Statistics.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
+- **Probability, distributions and statistics:** Implement Probability, distributions and statistics in Conditional probability simulator. Adapt this focused lab to the project data: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.  Required concepts: Conditional probability, Distributions, Statistics.
+  - Deliverable: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Probability, distributions and statistics: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A contingency table and Bayes-rule calculator. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Probability, distributions and statistics: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Probability, distributions and statistics: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
+- [ ] Match analytical posterior values within stated simulation tolerance.
+- [ ] Probability, distributions and statistics: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Distribution shift notebook
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A team needs to notice changing input distributions.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Generate reference and shifted sensor batches with known mean and variance changes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Probability, distributions and statistics:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Probability, distributions and statistics, explicitly apply Conditional probability, Distributions, Statistics.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Probability, distributions and statistics: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Probability, distributions and statistics: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Probability, distributions and statistics:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Probability, distributions and statistics, explicitly apply Conditional probability, Distributions, Statistics.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Probability, distributions and statistics: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Probability, distributions and statistics: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** Histograms, summary statistics and a shift investigation report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Probability, distributions and statistics:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Probability, distributions and statistics, explicitly apply Conditional probability, Distributions, Statistics.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
+- **Probability, distributions and statistics:** Implement Probability, distributions and statistics in Distribution shift notebook. Adapt this focused lab to the project data: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.  Required concepts: Conditional probability, Distributions, Statistics.
+  - Deliverable: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Probability, distributions and statistics: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Histograms, summary statistics and a shift investigation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Probability, distributions and statistics: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Probability, distributions and statistics: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
+- [ ] Detect the seeded shift and explain why detection does not identify its cause.
+- [ ] Probability, distributions and statistics: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Bootstrap uncertainty studio
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A product analyst needs uncertainty around a small sample mean.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Generate 80 session lengths with a skewed distribution. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Probability, distributions and statistics:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Probability, distributions and statistics, explicitly apply Conditional probability, Distributions, Statistics.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Probability, distributions and statistics: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Probability, distributions and statistics: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A bootstrap interval report with reproducible resampling.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Probability, distributions and statistics:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Probability, distributions and statistics, explicitly apply Conditional probability, Distributions, Statistics.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
+- **Probability, distributions and statistics:** Extend the project with Probability, distributions and statistics in Bootstrap uncertainty studio. Adapt this focused lab to the project data: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.  Required concepts: Conditional probability, Distributions, Statistics.
+  - Deliverable: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Probability, distributions and statistics: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A bootstrap interval report with reproducible resampling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Probability, distributions and statistics: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Probability, distributions and statistics: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
+- [ ] Compare percentile intervals with a normal approximation and discuss limits.
+- [ ] Probability, distributions and statistics: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Misleading chart repair desk
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A report author needs honest charts for comparing groups.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Create four group distributions with outliers and unequal sizes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** Before/after charts with labeled axes and interpretation notes.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Probability, distributions and statistics:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Probability, distributions and statistics, explicitly apply Conditional probability, Distributions, Statistics.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
+- **Probability, distributions and statistics:** Extend the project with Probability, distributions and statistics in Misleading chart repair desk. Adapt this focused lab to the project data: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.  Required concepts: Conditional probability, Distributions, Statistics.
+  - Deliverable: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Probability, distributions and statistics: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Before/after charts with labeled axes and interpretation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Probability, distributions and statistics: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Probability, distributions and statistics: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
+- [ ] Show sample counts and uncertainty; avoid hiding outliers or truncating a bar axis.
+- [ ] Probability, distributions and statistics: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Finite difference microscope
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A learner needs to verify derivatives used in optimization.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Generate a 30-row quadratic regression problem. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** A notebook comparing analytical and numerical gradients.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Probability, distributions and statistics:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Probability, distributions and statistics, explicitly apply Conditional probability, Distributions, Statistics.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
+- **Probability, distributions and statistics:** Extend the project with Probability, distributions and statistics in Finite difference microscope. Adapt this focused lab to the project data: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.  Required concepts: Conditional probability, Distributions, Statistics.
+  - Deliverable: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Probability, distributions and statistics: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A notebook comparing analytical and numerical gradients. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Probability, distributions and statistics: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Probability, distributions and statistics: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
+- [ ] Report relative error for multiple step sizes and explain cancellation.
+- [ ] Probability, distributions and statistics: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Data join integrity checker
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+An analyst needs to detect duplicated rows caused by joins.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Create customer and order CSV files with missing and duplicated keys. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A pandas join audit with rejected records and row-count explanations.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Probability, distributions and statistics:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Probability, distributions and statistics, explicitly apply Conditional probability, Distributions, Statistics.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
+- **Probability, distributions and statistics:** Extend the project with Probability, distributions and statistics in Data join integrity checker. Adapt this focused lab to the project data: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.  Required concepts: Conditional probability, Distributions, Statistics.
+  - Deliverable: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Probability, distributions and statistics: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A pandas join audit with rejected records and row-count explanations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Probability, distributions and statistics: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Probability, distributions and statistics: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.
+- [ ] Detect many-to-many expansion and reconcile order totals.
+- [ ] Probability, distributions and statistics: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Missing value investigation
+
+A researcher needs to understand how missingness alters summaries.
+
+**Data:** Generate 200 survey rows with random and income-dependent missingness. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A cleaning notebook comparing deletion and imputation.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Probability, distributions and statistics:** Extend the project with Probability, distributions and statistics in Missing value investigation. Adapt this focused lab to the project data: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.  Required concepts: Conditional probability, Distributions, Statistics.
+  - Deliverable: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A cleaning notebook comparing deletion and imputation. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Probability, distributions and statistics: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Quantify bias under each missingness mechanism without claiming causality.
+- [ ] Probability, distributions and statistics: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Feature scaling geometry
+
+A model builder needs to understand units before measuring distance.
+
+**Data:** Generate height/income features with very different scales. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A NumPy study of standard, robust and min-max scaling.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Probability, distributions and statistics:** Extend the project with Probability, distributions and statistics in Feature scaling geometry. Adapt this focused lab to the project data: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.  Required concepts: Conditional probability, Distributions, Statistics.
+  - Deliverable: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A NumPy study of standard, robust and min-max scaling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Probability, distributions and statistics: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Fit scaling on training rows only and compare neighbor identities.
+- [ ] Probability, distributions and statistics: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Matrix compression explorer
+
+A learner needs to see the accuracy/storage tradeoff in low-rank approximation.
+
+**Data:** Generate a 64 by 64 grayscale pattern with noise. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SVD reconstruction notebook with rank slider or rank table.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Probability, distributions and statistics:** Extend the project with Probability, distributions and statistics in Matrix compression explorer. Adapt this focused lab to the project data: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.  Required concepts: Conditional probability, Distributions, Statistics.
+  - Deliverable: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SVD reconstruction notebook with rank slider or rank table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Probability, distributions and statistics: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify error decreases with rank and report retained storage.
+- [ ] Probability, distributions and statistics: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Geometric similarity explorer
+
+A learner needs to understand why vector scaling changes retrieval.
+
+**Data:** Generate 60 two-dimensional points with three labeled groups. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A notebook comparing dot product, cosine and Euclidean rankings.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Probability, distributions and statistics:** Extend the project with Probability, distributions and statistics in Geometric similarity explorer. Adapt this focused lab to the project data: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.  Required concepts: Conditional probability, Distributions, Statistics.
+  - Deliverable: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A notebook comparing dot product, cosine and Euclidean rankings. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Probability, distributions and statistics: Probability, distributions and statistics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify hand-calculated examples and explain ranking changes after scaling.
+- [ ] Probability, distributions and statistics: Simulate an imbalanced binary dataset; calculate conditional probabilities and bootstrap an accuracy interval with a fixed seed.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1182,7 +1182,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Use vectorized transformations while detecting silent shape mistakes.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Foundation · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [Probability, distributions and statistics](math-data.md#math-probability) Navigation is unrestricted.
 
@@ -1245,292 +1245,292 @@ Standardize an array column-wise and compare to a loop implementation; assert th
 
 #### Ten project recommendations
 
-### Inventory exception monitor
+### Finite difference microscope
 
-Find unusual stock movements and explain which records need investigation.
+A learner needs to verify derivatives used in optimization.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Generate a 30-row quadratic regression problem. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **NumPy arrays, shapes and broadcasting:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For NumPy arrays, shapes and broadcasting, explicitly apply Array axes, Broadcasting, Vectorization.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] NumPy arrays, shapes and broadcasting: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] NumPy arrays, shapes and broadcasting: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A notebook comparing analytical and numerical gradients.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **NumPy arrays, shapes and broadcasting:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For NumPy arrays, shapes and broadcasting, explicitly apply Array axes, Broadcasting, Vectorization.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
+- **NumPy arrays, shapes and broadcasting:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Finite difference microscope: A notebook comparing analytical and numerical gradients. Focus: Array axes, Broadcasting, Vectorization.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] NumPy arrays, shapes and broadcasting: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A notebook comparing analytical and numerical gradients. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · NumPy arrays, shapes and broadcasting: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] NumPy arrays, shapes and broadcasting: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
+- [ ] Report relative error for multiple step sizes and explain cancellation.
+- [ ] NumPy arrays, shapes and broadcasting: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Feature scaling geometry
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A model builder needs to understand units before measuring distance.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Generate height/income features with very different scales. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **NumPy arrays, shapes and broadcasting:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For NumPy arrays, shapes and broadcasting, explicitly apply Array axes, Broadcasting, Vectorization.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] NumPy arrays, shapes and broadcasting: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] NumPy arrays, shapes and broadcasting: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **NumPy arrays, shapes and broadcasting:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For NumPy arrays, shapes and broadcasting, explicitly apply Array axes, Broadcasting, Vectorization.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] NumPy arrays, shapes and broadcasting: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] NumPy arrays, shapes and broadcasting: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A NumPy study of standard, robust and min-max scaling.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **NumPy arrays, shapes and broadcasting:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For NumPy arrays, shapes and broadcasting, explicitly apply Array axes, Broadcasting, Vectorization.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
+- **NumPy arrays, shapes and broadcasting:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Feature scaling geometry: A NumPy study of standard, robust and min-max scaling. Focus: Array axes, Broadcasting, Vectorization.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] NumPy arrays, shapes and broadcasting: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A NumPy study of standard, robust and min-max scaling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · NumPy arrays, shapes and broadcasting: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] NumPy arrays, shapes and broadcasting: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
+- [ ] Fit scaling on training rows only and compare neighbor identities.
+- [ ] NumPy arrays, shapes and broadcasting: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Geometric similarity explorer
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A learner needs to understand why vector scaling changes retrieval.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Generate 60 two-dimensional points with three labeled groups. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **NumPy arrays, shapes and broadcasting:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For NumPy arrays, shapes and broadcasting, explicitly apply Array axes, Broadcasting, Vectorization.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] NumPy arrays, shapes and broadcasting: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] NumPy arrays, shapes and broadcasting: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A notebook comparing dot product, cosine and Euclidean rankings.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **NumPy arrays, shapes and broadcasting:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For NumPy arrays, shapes and broadcasting, explicitly apply Array axes, Broadcasting, Vectorization.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
+- **NumPy arrays, shapes and broadcasting:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Geometric similarity explorer: A notebook comparing dot product, cosine and Euclidean rankings. Focus: Array axes, Broadcasting, Vectorization.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] NumPy arrays, shapes and broadcasting: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A notebook comparing dot product, cosine and Euclidean rankings. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · NumPy arrays, shapes and broadcasting: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] NumPy arrays, shapes and broadcasting: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
+- [ ] Verify hand-calculated examples and explain ranking changes after scaling.
+- [ ] NumPy arrays, shapes and broadcasting: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Conditional probability simulator
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+An analyst needs to distinguish test accuracy from posterior probability.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Simulate 10000 fictional cases at three base rates. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A contingency table and Bayes-rule calculator.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **NumPy arrays, shapes and broadcasting:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For NumPy arrays, shapes and broadcasting, explicitly apply Array axes, Broadcasting, Vectorization.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
+- **NumPy arrays, shapes and broadcasting:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Conditional probability simulator: A contingency table and Bayes-rule calculator. Focus: Array axes, Broadcasting, Vectorization.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] NumPy arrays, shapes and broadcasting: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A contingency table and Bayes-rule calculator. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · NumPy arrays, shapes and broadcasting: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] NumPy arrays, shapes and broadcasting: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
+- [ ] Match analytical posterior values within stated simulation tolerance.
+- [ ] NumPy arrays, shapes and broadcasting: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Bootstrap uncertainty studio
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A product analyst needs uncertainty around a small sample mean.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Generate 80 session lengths with a skewed distribution. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** A bootstrap interval report with reproducible resampling.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **NumPy arrays, shapes and broadcasting:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For NumPy arrays, shapes and broadcasting, explicitly apply Array axes, Broadcasting, Vectorization.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
+- **NumPy arrays, shapes and broadcasting:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Bootstrap uncertainty studio: A bootstrap interval report with reproducible resampling. Focus: Array axes, Broadcasting, Vectorization.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] NumPy arrays, shapes and broadcasting: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A bootstrap interval report with reproducible resampling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · NumPy arrays, shapes and broadcasting: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] NumPy arrays, shapes and broadcasting: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
+- [ ] Compare percentile intervals with a normal approximation and discuss limits.
+- [ ] NumPy arrays, shapes and broadcasting: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Misleading chart repair desk
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A report author needs honest charts for comparing groups.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Create four group distributions with outliers and unequal sizes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** Before/after charts with labeled axes and interpretation notes.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **NumPy arrays, shapes and broadcasting:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For NumPy arrays, shapes and broadcasting, explicitly apply Array axes, Broadcasting, Vectorization.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
+- **NumPy arrays, shapes and broadcasting:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Misleading chart repair desk: Before/after charts with labeled axes and interpretation notes. Focus: Array axes, Broadcasting, Vectorization.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] NumPy arrays, shapes and broadcasting: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Before/after charts with labeled axes and interpretation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · NumPy arrays, shapes and broadcasting: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] NumPy arrays, shapes and broadcasting: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.
+- [ ] Show sample counts and uncertainty; avoid hiding outliers or truncating a bar axis.
+- [ ] NumPy arrays, shapes and broadcasting: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Distribution shift notebook
+
+A team needs to notice changing input distributions.
+
+**Data:** Generate reference and shifted sensor batches with known mean and variance changes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Histograms, summary statistics and a shift investigation report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **NumPy arrays, shapes and broadcasting:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Distribution shift notebook: Histograms, summary statistics and a shift investigation report. Focus: Array axes, Broadcasting, Vectorization.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Histograms, summary statistics and a shift investigation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · NumPy arrays, shapes and broadcasting: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect the seeded shift and explain why detection does not identify its cause.
+- [ ] NumPy arrays, shapes and broadcasting: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data join integrity checker
+
+An analyst needs to detect duplicated rows caused by joins.
+
+**Data:** Create customer and order CSV files with missing and duplicated keys. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A pandas join audit with rejected records and row-count explanations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **NumPy arrays, shapes and broadcasting:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Data join integrity checker: A pandas join audit with rejected records and row-count explanations. Focus: Array axes, Broadcasting, Vectorization.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A pandas join audit with rejected records and row-count explanations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · NumPy arrays, shapes and broadcasting: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect many-to-many expansion and reconcile order totals.
+- [ ] NumPy arrays, shapes and broadcasting: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Missing value investigation
+
+A researcher needs to understand how missingness alters summaries.
+
+**Data:** Generate 200 survey rows with random and income-dependent missingness. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A cleaning notebook comparing deletion and imputation.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **NumPy arrays, shapes and broadcasting:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Missing value investigation: A cleaning notebook comparing deletion and imputation. Focus: Array axes, Broadcasting, Vectorization.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A cleaning notebook comparing deletion and imputation. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · NumPy arrays, shapes and broadcasting: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Quantify bias under each missingness mechanism without claiming causality.
+- [ ] NumPy arrays, shapes and broadcasting: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Matrix compression explorer
+
+A learner needs to see the accuracy/storage tradeoff in low-rank approximation.
+
+**Data:** Generate a 64 by 64 grayscale pattern with noise. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SVD reconstruction notebook with rank slider or rank table.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **NumPy arrays, shapes and broadcasting:** Implement the project numeric transformations with explicit NumPy shapes and vectorized operations; explain the relevant matrix calculations. Apply this to Matrix compression explorer: An SVD reconstruction notebook with rank slider or rank table. Focus: Array axes, Broadcasting, Vectorization.
+  - Deliverable: Array transformation module and hand-calculated examples
+  - Check: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SVD reconstruction notebook with rank slider or rank table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · NumPy arrays, shapes and broadcasting: Array transformation module and hand-calculated examples
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify error decreases with rank and report retained storage.
+- [ ] NumPy arrays, shapes and broadcasting: Compare vectorized results with a simple reference loop and test empty and incompatible shapes. Standardize an array column-wise and compare to a loop implementation; assert the output shape and behavior for constant columns.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1544,7 +1544,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Build trustworthy datasets and record what preprocessing changed.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Foundation · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [NumPy arrays, shapes and broadcasting](math-data.md#data-numpy) Navigation is unrestricted.
 
@@ -1607,292 +1607,292 @@ Audit a small CSV with duplicates, missing values and inconsistent labels; save 
 
 #### Ten project recommendations
 
-### Inventory exception monitor
+### Data join integrity checker
 
-Find unusual stock movements and explain which records need investigation.
+An analyst needs to detect duplicated rows caused by joins.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Create customer and order CSV files with missing and duplicated keys. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **pandas, cleaning and missing values:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For pandas, cleaning and missing values, explicitly apply DataFrames, Missing and duplicate data, Data quality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] pandas, cleaning and missing values: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] pandas, cleaning and missing values: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A pandas join audit with rejected records and row-count explanations.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **pandas, cleaning and missing values:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For pandas, cleaning and missing values, explicitly apply DataFrames, Missing and duplicate data, Data quality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
+- **pandas, cleaning and missing values:** Load and clean project tables with explicit dtypes, missing-value rules, duplicate checks and validated joins. Apply this to Data join integrity checker: A pandas join audit with rejected records and row-count explanations. Focus: DataFrames, Missing and duplicate data, Data quality.
+  - Deliverable: Reproducible cleaning pipeline and rejected-row report
+  - Check: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] pandas, cleaning and missing values: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A pandas join audit with rejected records and row-count explanations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · pandas, cleaning and missing values: Reproducible cleaning pipeline and rejected-row report
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] pandas, cleaning and missing values: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
+- [ ] Detect many-to-many expansion and reconcile order totals.
+- [ ] pandas, cleaning and missing values: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Missing value investigation
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A researcher needs to understand how missingness alters summaries.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Generate 200 survey rows with random and income-dependent missingness. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **pandas, cleaning and missing values:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For pandas, cleaning and missing values, explicitly apply DataFrames, Missing and duplicate data, Data quality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] pandas, cleaning and missing values: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] pandas, cleaning and missing values: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **pandas, cleaning and missing values:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For pandas, cleaning and missing values, explicitly apply DataFrames, Missing and duplicate data, Data quality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] pandas, cleaning and missing values: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] pandas, cleaning and missing values: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A cleaning notebook comparing deletion and imputation.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **pandas, cleaning and missing values:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For pandas, cleaning and missing values, explicitly apply DataFrames, Missing and duplicate data, Data quality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
+- **pandas, cleaning and missing values:** Load and clean project tables with explicit dtypes, missing-value rules, duplicate checks and validated joins. Apply this to Missing value investigation: A cleaning notebook comparing deletion and imputation. Focus: DataFrames, Missing and duplicate data, Data quality.
+  - Deliverable: Reproducible cleaning pipeline and rejected-row report
+  - Check: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] pandas, cleaning and missing values: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A cleaning notebook comparing deletion and imputation. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · pandas, cleaning and missing values: Reproducible cleaning pipeline and rejected-row report
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] pandas, cleaning and missing values: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
+- [ ] Quantify bias under each missingness mechanism without claiming causality.
+- [ ] pandas, cleaning and missing values: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Conditional probability simulator
 
-Summarize themes and surface potentially misleading or contradictory review records.
+An analyst needs to distinguish test accuracy from posterior probability.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Simulate 10000 fictional cases at three base rates. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **pandas, cleaning and missing values:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For pandas, cleaning and missing values, explicitly apply DataFrames, Missing and duplicate data, Data quality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] pandas, cleaning and missing values: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] pandas, cleaning and missing values: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A contingency table and Bayes-rule calculator.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **pandas, cleaning and missing values:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For pandas, cleaning and missing values, explicitly apply DataFrames, Missing and duplicate data, Data quality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
+- **pandas, cleaning and missing values:** Load and clean project tables with explicit dtypes, missing-value rules, duplicate checks and validated joins. Apply this to Conditional probability simulator: A contingency table and Bayes-rule calculator. Focus: DataFrames, Missing and duplicate data, Data quality.
+  - Deliverable: Reproducible cleaning pipeline and rejected-row report
+  - Check: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] pandas, cleaning and missing values: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A contingency table and Bayes-rule calculator. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · pandas, cleaning and missing values: Reproducible cleaning pipeline and rejected-row report
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] pandas, cleaning and missing values: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
+- [ ] Match analytical posterior values within stated simulation tolerance.
+- [ ] pandas, cleaning and missing values: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Bootstrap uncertainty studio
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A product analyst needs uncertainty around a small sample mean.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Generate 80 session lengths with a skewed distribution. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A bootstrap interval report with reproducible resampling.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **pandas, cleaning and missing values:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For pandas, cleaning and missing values, explicitly apply DataFrames, Missing and duplicate data, Data quality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
+- **pandas, cleaning and missing values:** Load and clean project tables with explicit dtypes, missing-value rules, duplicate checks and validated joins. Apply this to Bootstrap uncertainty studio: A bootstrap interval report with reproducible resampling. Focus: DataFrames, Missing and duplicate data, Data quality.
+  - Deliverable: Reproducible cleaning pipeline and rejected-row report
+  - Check: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] pandas, cleaning and missing values: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A bootstrap interval report with reproducible resampling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · pandas, cleaning and missing values: Reproducible cleaning pipeline and rejected-row report
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] pandas, cleaning and missing values: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
+- [ ] Compare percentile intervals with a normal approximation and discuss limits.
+- [ ] pandas, cleaning and missing values: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Misleading chart repair desk
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A report author needs honest charts for comparing groups.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Create four group distributions with outliers and unequal sizes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** Before/after charts with labeled axes and interpretation notes.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **pandas, cleaning and missing values:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For pandas, cleaning and missing values, explicitly apply DataFrames, Missing and duplicate data, Data quality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
+- **pandas, cleaning and missing values:** Load and clean project tables with explicit dtypes, missing-value rules, duplicate checks and validated joins. Apply this to Misleading chart repair desk: Before/after charts with labeled axes and interpretation notes. Focus: DataFrames, Missing and duplicate data, Data quality.
+  - Deliverable: Reproducible cleaning pipeline and rejected-row report
+  - Check: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] pandas, cleaning and missing values: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Before/after charts with labeled axes and interpretation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · pandas, cleaning and missing values: Reproducible cleaning pipeline and rejected-row report
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] pandas, cleaning and missing values: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
+- [ ] Show sample counts and uncertainty; avoid hiding outliers or truncating a bar axis.
+- [ ] pandas, cleaning and missing values: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Distribution shift notebook
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A team needs to notice changing input distributions.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Generate reference and shifted sensor batches with known mean and variance changes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** Histograms, summary statistics and a shift investigation report.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **pandas, cleaning and missing values:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For pandas, cleaning and missing values, explicitly apply DataFrames, Missing and duplicate data, Data quality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
+- **pandas, cleaning and missing values:** Load and clean project tables with explicit dtypes, missing-value rules, duplicate checks and validated joins. Apply this to Distribution shift notebook: Histograms, summary statistics and a shift investigation report. Focus: DataFrames, Missing and duplicate data, Data quality.
+  - Deliverable: Reproducible cleaning pipeline and rejected-row report
+  - Check: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] pandas, cleaning and missing values: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Histograms, summary statistics and a shift investigation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · pandas, cleaning and missing values: Reproducible cleaning pipeline and rejected-row report
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] pandas, cleaning and missing values: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.
+- [ ] Detect the seeded shift and explain why detection does not identify its cause.
+- [ ] pandas, cleaning and missing values: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Finite difference microscope
+
+A learner needs to verify derivatives used in optimization.
+
+**Data:** Generate a 30-row quadratic regression problem. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A notebook comparing analytical and numerical gradients.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **pandas, cleaning and missing values:** Load and clean project tables with explicit dtypes, missing-value rules, duplicate checks and validated joins. Apply this to Finite difference microscope: A notebook comparing analytical and numerical gradients. Focus: DataFrames, Missing and duplicate data, Data quality.
+  - Deliverable: Reproducible cleaning pipeline and rejected-row report
+  - Check: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A notebook comparing analytical and numerical gradients. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · pandas, cleaning and missing values: Reproducible cleaning pipeline and rejected-row report
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report relative error for multiple step sizes and explain cancellation.
+- [ ] pandas, cleaning and missing values: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Feature scaling geometry
+
+A model builder needs to understand units before measuring distance.
+
+**Data:** Generate height/income features with very different scales. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A NumPy study of standard, robust and min-max scaling.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **pandas, cleaning and missing values:** Load and clean project tables with explicit dtypes, missing-value rules, duplicate checks and validated joins. Apply this to Feature scaling geometry: A NumPy study of standard, robust and min-max scaling. Focus: DataFrames, Missing and duplicate data, Data quality.
+  - Deliverable: Reproducible cleaning pipeline and rejected-row report
+  - Check: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A NumPy study of standard, robust and min-max scaling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · pandas, cleaning and missing values: Reproducible cleaning pipeline and rejected-row report
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Fit scaling on training rows only and compare neighbor identities.
+- [ ] pandas, cleaning and missing values: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Matrix compression explorer
+
+A learner needs to see the accuracy/storage tradeoff in low-rank approximation.
+
+**Data:** Generate a 64 by 64 grayscale pattern with noise. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SVD reconstruction notebook with rank slider or rank table.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **pandas, cleaning and missing values:** Load and clean project tables with explicit dtypes, missing-value rules, duplicate checks and validated joins. Apply this to Matrix compression explorer: An SVD reconstruction notebook with rank slider or rank table. Focus: DataFrames, Missing and duplicate data, Data quality.
+  - Deliverable: Reproducible cleaning pipeline and rejected-row report
+  - Check: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SVD reconstruction notebook with rank slider or rank table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · pandas, cleaning and missing values: Reproducible cleaning pipeline and rejected-row report
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify error decreases with rank and report retained storage.
+- [ ] pandas, cleaning and missing values: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Geometric similarity explorer
+
+A learner needs to understand why vector scaling changes retrieval.
+
+**Data:** Generate 60 two-dimensional points with three labeled groups. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A notebook comparing dot product, cosine and Euclidean rankings.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **pandas, cleaning and missing values:** Load and clean project tables with explicit dtypes, missing-value rules, duplicate checks and validated joins. Apply this to Geometric similarity explorer: A notebook comparing dot product, cosine and Euclidean rankings. Focus: DataFrames, Missing and duplicate data, Data quality.
+  - Deliverable: Reproducible cleaning pipeline and rejected-row report
+  - Check: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A notebook comparing dot product, cosine and Euclidean rankings. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · pandas, cleaning and missing values: Reproducible cleaning pipeline and rejected-row report
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify hand-calculated examples and explain ranking changes after scaling.
+- [ ] pandas, cleaning and missing values: Reconcile row counts and totals and verify repeated cleaning is idempotent. Audit a small CSV with duplicates, missing values and inconsistent labels; save a quality report and a cleaned copy while preserving the raw file.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1906,7 +1906,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Detect imbalance, outliers and misleading aggregates before training.
 
-**Priority:** Core · **Study:** 2h · **Practice:** 3h
+**Priority:** Foundation · **Study:** 2h · **Practice:** 3h
 
 **Prerequisites:** [pandas, cleaning and missing values](math-data.md#data-pandas) Navigation is unrestricted.
 
@@ -1969,292 +1969,292 @@ Produce a three-chart dataset report with missingness, class counts and a featur
 
 #### Ten project recommendations
 
-### Inventory exception monitor
+### Misleading chart repair desk
 
-Find unusual stock movements and explain which records need investigation.
+A report author needs honest charts for comparing groups.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Create four group distributions with outliers and unequal sizes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Visualization and exploratory analysis:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Visualization and exploratory analysis, explicitly apply Distributions, Relationships, Communication.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Visualization and exploratory analysis: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Visualization and exploratory analysis: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** Before/after charts with labeled axes and interpretation notes.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Visualization and exploratory analysis:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Visualization and exploratory analysis, explicitly apply Distributions, Relationships, Communication.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
+- **Visualization and exploratory analysis:** Implement Visualization and exploratory analysis in Misleading chart repair desk. Adapt this focused lab to the project data: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.  Required concepts: Distributions, Relationships, Communication.
+  - Deliverable: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Visualization and exploratory analysis: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Before/after charts with labeled axes and interpretation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Visualization and exploratory analysis: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Visualization and exploratory analysis: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
+- [ ] Show sample counts and uncertainty; avoid hiding outliers or truncating a bar axis.
+- [ ] Visualization and exploratory analysis: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Distribution shift notebook
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A team needs to notice changing input distributions.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Generate reference and shifted sensor batches with known mean and variance changes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Visualization and exploratory analysis:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Visualization and exploratory analysis, explicitly apply Distributions, Relationships, Communication.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Visualization and exploratory analysis: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Visualization and exploratory analysis: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Visualization and exploratory analysis:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Visualization and exploratory analysis, explicitly apply Distributions, Relationships, Communication.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Visualization and exploratory analysis: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Visualization and exploratory analysis: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** Histograms, summary statistics and a shift investigation report.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Visualization and exploratory analysis:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Visualization and exploratory analysis, explicitly apply Distributions, Relationships, Communication.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
+- **Visualization and exploratory analysis:** Implement Visualization and exploratory analysis in Distribution shift notebook. Adapt this focused lab to the project data: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.  Required concepts: Distributions, Relationships, Communication.
+  - Deliverable: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Visualization and exploratory analysis: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Histograms, summary statistics and a shift investigation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Visualization and exploratory analysis: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Visualization and exploratory analysis: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
+- [ ] Detect the seeded shift and explain why detection does not identify its cause.
+- [ ] Visualization and exploratory analysis: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Conditional probability simulator
 
-Summarize themes and surface potentially misleading or contradictory review records.
+An analyst needs to distinguish test accuracy from posterior probability.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Simulate 10000 fictional cases at three base rates. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Visualization and exploratory analysis:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Visualization and exploratory analysis, explicitly apply Distributions, Relationships, Communication.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Visualization and exploratory analysis: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Visualization and exploratory analysis: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A contingency table and Bayes-rule calculator.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Visualization and exploratory analysis:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Visualization and exploratory analysis, explicitly apply Distributions, Relationships, Communication.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
+- **Visualization and exploratory analysis:** Extend the project with Visualization and exploratory analysis in Conditional probability simulator. Adapt this focused lab to the project data: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.  Required concepts: Distributions, Relationships, Communication.
+  - Deliverable: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Visualization and exploratory analysis: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A contingency table and Bayes-rule calculator. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Visualization and exploratory analysis: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Visualization and exploratory analysis: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
+- [ ] Match analytical posterior values within stated simulation tolerance.
+- [ ] Visualization and exploratory analysis: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Bootstrap uncertainty studio
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A product analyst needs uncertainty around a small sample mean.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Generate 80 session lengths with a skewed distribution. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** A bootstrap interval report with reproducible resampling.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Visualization and exploratory analysis:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Visualization and exploratory analysis, explicitly apply Distributions, Relationships, Communication.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
+- **Visualization and exploratory analysis:** Extend the project with Visualization and exploratory analysis in Bootstrap uncertainty studio. Adapt this focused lab to the project data: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.  Required concepts: Distributions, Relationships, Communication.
+  - Deliverable: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Visualization and exploratory analysis: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A bootstrap interval report with reproducible resampling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Visualization and exploratory analysis: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Visualization and exploratory analysis: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
+- [ ] Compare percentile intervals with a normal approximation and discuss limits.
+- [ ] Visualization and exploratory analysis: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Finite difference microscope
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A learner needs to verify derivatives used in optimization.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Generate a 30-row quadratic regression problem. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** A notebook comparing analytical and numerical gradients.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Visualization and exploratory analysis:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Visualization and exploratory analysis, explicitly apply Distributions, Relationships, Communication.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
+- **Visualization and exploratory analysis:** Extend the project with Visualization and exploratory analysis in Finite difference microscope. Adapt this focused lab to the project data: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.  Required concepts: Distributions, Relationships, Communication.
+  - Deliverable: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Visualization and exploratory analysis: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A notebook comparing analytical and numerical gradients. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Visualization and exploratory analysis: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Visualization and exploratory analysis: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
+- [ ] Report relative error for multiple step sizes and explain cancellation.
+- [ ] Visualization and exploratory analysis: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Data join integrity checker
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+An analyst needs to detect duplicated rows caused by joins.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Create customer and order CSV files with missing and duplicated keys. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A pandas join audit with rejected records and row-count explanations.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Visualization and exploratory analysis:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Visualization and exploratory analysis, explicitly apply Distributions, Relationships, Communication.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
+- **Visualization and exploratory analysis:** Extend the project with Visualization and exploratory analysis in Data join integrity checker. Adapt this focused lab to the project data: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.  Required concepts: Distributions, Relationships, Communication.
+  - Deliverable: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Visualization and exploratory analysis: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A pandas join audit with rejected records and row-count explanations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Visualization and exploratory analysis: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Visualization and exploratory analysis: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.
+- [ ] Detect many-to-many expansion and reconcile order totals.
+- [ ] Visualization and exploratory analysis: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Missing value investigation
+
+A researcher needs to understand how missingness alters summaries.
+
+**Data:** Generate 200 survey rows with random and income-dependent missingness. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A cleaning notebook comparing deletion and imputation.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Visualization and exploratory analysis:** Extend the project with Visualization and exploratory analysis in Missing value investigation. Adapt this focused lab to the project data: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.  Required concepts: Distributions, Relationships, Communication.
+  - Deliverable: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A cleaning notebook comparing deletion and imputation. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Visualization and exploratory analysis: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Quantify bias under each missingness mechanism without claiming causality.
+- [ ] Visualization and exploratory analysis: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Feature scaling geometry
+
+A model builder needs to understand units before measuring distance.
+
+**Data:** Generate height/income features with very different scales. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A NumPy study of standard, robust and min-max scaling.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Visualization and exploratory analysis:** Extend the project with Visualization and exploratory analysis in Feature scaling geometry. Adapt this focused lab to the project data: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.  Required concepts: Distributions, Relationships, Communication.
+  - Deliverable: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A NumPy study of standard, robust and min-max scaling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Visualization and exploratory analysis: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Fit scaling on training rows only and compare neighbor identities.
+- [ ] Visualization and exploratory analysis: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Matrix compression explorer
+
+A learner needs to see the accuracy/storage tradeoff in low-rank approximation.
+
+**Data:** Generate a 64 by 64 grayscale pattern with noise. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SVD reconstruction notebook with rank slider or rank table.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Visualization and exploratory analysis:** Extend the project with Visualization and exploratory analysis in Matrix compression explorer. Adapt this focused lab to the project data: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.  Required concepts: Distributions, Relationships, Communication.
+  - Deliverable: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SVD reconstruction notebook with rank slider or rank table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Visualization and exploratory analysis: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify error decreases with rank and report retained storage.
+- [ ] Visualization and exploratory analysis: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Geometric similarity explorer
+
+A learner needs to understand why vector scaling changes retrieval.
+
+**Data:** Generate 60 two-dimensional points with three labeled groups. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A notebook comparing dot product, cosine and Euclidean rankings.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Visualization and exploratory analysis:** Extend the project with Visualization and exploratory analysis in Geometric similarity explorer. Adapt this focused lab to the project data: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.  Required concepts: Distributions, Relationships, Communication.
+  - Deliverable: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A notebook comparing dot product, cosine and Euclidean rankings. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Visualization and exploratory analysis: Visualization and exploratory analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify hand-calculated examples and explain ranking changes after scaling.
+- [ ] Visualization and exploratory analysis: Produce a three-chart dataset report with missingness, class counts and a feature distribution; state two hypotheses and one limitation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2268,7 +2268,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Connect vector operations to embeddings, dimensionality reduction and stable numerical code.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Foundation · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [Vectors, matrices and dot products](math-data.md#math-linear) Navigation is unrestricted.
 
@@ -2389,292 +2389,292 @@ Make a NumPy geometry notebook with projections, zero-safe normalisation and ran
 
 #### Ten project recommendations
 
-### Inventory exception monitor
+### Matrix compression explorer
 
-Find unusual stock movements and explain which records need investigation.
+A learner needs to see the accuracy/storage tradeoff in low-rank approximation.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Generate a 64 by 64 grayscale pattern with noise. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Norms, projections, eigenvectors and SVD intuition:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Norms, projections, eigenvectors and SVD intuition, explicitly apply Vector norms, Projection geometry, Eigenvector intuition.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Norms, projections, eigenvectors and SVD intuition: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Norms, projections, eigenvectors and SVD intuition: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** An SVD reconstruction notebook with rank slider or rank table.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Norms, projections, eigenvectors and SVD intuition:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Norms, projections, eigenvectors and SVD intuition, explicitly apply Vector norms, Projection geometry, Eigenvector intuition.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
+- **Norms, projections, eigenvectors and SVD intuition:** Implement Norms, projections, eigenvectors and SVD intuition in Matrix compression explorer. Adapt this focused lab to the project data: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.  Required concepts: Vector norms, Projection geometry, Eigenvector intuition, SVD and low rank, Numerical conditioning.
+  - Deliverable: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Norms, projections, eigenvectors and SVD intuition: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: An SVD reconstruction notebook with rank slider or rank table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Norms, projections, eigenvectors and SVD intuition: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Norms, projections, eigenvectors and SVD intuition: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
+- [ ] Verify error decreases with rank and report retained storage.
+- [ ] Norms, projections, eigenvectors and SVD intuition: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Conditional probability simulator
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+An analyst needs to distinguish test accuracy from posterior probability.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Simulate 10000 fictional cases at three base rates. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Norms, projections, eigenvectors and SVD intuition:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Norms, projections, eigenvectors and SVD intuition, explicitly apply Vector norms, Projection geometry, Eigenvector intuition.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Norms, projections, eigenvectors and SVD intuition: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Norms, projections, eigenvectors and SVD intuition: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Norms, projections, eigenvectors and SVD intuition:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Norms, projections, eigenvectors and SVD intuition, explicitly apply Vector norms, Projection geometry, Eigenvector intuition.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Norms, projections, eigenvectors and SVD intuition: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Norms, projections, eigenvectors and SVD intuition: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A contingency table and Bayes-rule calculator.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Norms, projections, eigenvectors and SVD intuition:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Norms, projections, eigenvectors and SVD intuition, explicitly apply Vector norms, Projection geometry, Eigenvector intuition.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
+- **Norms, projections, eigenvectors and SVD intuition:** Extend the project with Norms, projections, eigenvectors and SVD intuition in Conditional probability simulator. Adapt this focused lab to the project data: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.  Required concepts: Vector norms, Projection geometry, Eigenvector intuition, SVD and low rank, Numerical conditioning.
+  - Deliverable: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Norms, projections, eigenvectors and SVD intuition: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A contingency table and Bayes-rule calculator. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Norms, projections, eigenvectors and SVD intuition: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Norms, projections, eigenvectors and SVD intuition: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
+- [ ] Match analytical posterior values within stated simulation tolerance.
+- [ ] Norms, projections, eigenvectors and SVD intuition: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Bootstrap uncertainty studio
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A product analyst needs uncertainty around a small sample mean.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Generate 80 session lengths with a skewed distribution. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Norms, projections, eigenvectors and SVD intuition:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Norms, projections, eigenvectors and SVD intuition, explicitly apply Vector norms, Projection geometry, Eigenvector intuition.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Norms, projections, eigenvectors and SVD intuition: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Norms, projections, eigenvectors and SVD intuition: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A bootstrap interval report with reproducible resampling.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Norms, projections, eigenvectors and SVD intuition:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Norms, projections, eigenvectors and SVD intuition, explicitly apply Vector norms, Projection geometry, Eigenvector intuition.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
+- **Norms, projections, eigenvectors and SVD intuition:** Extend the project with Norms, projections, eigenvectors and SVD intuition in Bootstrap uncertainty studio. Adapt this focused lab to the project data: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.  Required concepts: Vector norms, Projection geometry, Eigenvector intuition, SVD and low rank, Numerical conditioning.
+  - Deliverable: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Norms, projections, eigenvectors and SVD intuition: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A bootstrap interval report with reproducible resampling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Norms, projections, eigenvectors and SVD intuition: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Norms, projections, eigenvectors and SVD intuition: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
+- [ ] Compare percentile intervals with a normal approximation and discuss limits.
+- [ ] Norms, projections, eigenvectors and SVD intuition: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Misleading chart repair desk
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A report author needs honest charts for comparing groups.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Create four group distributions with outliers and unequal sizes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** Before/after charts with labeled axes and interpretation notes.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Norms, projections, eigenvectors and SVD intuition:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Norms, projections, eigenvectors and SVD intuition, explicitly apply Vector norms, Projection geometry, Eigenvector intuition.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
+- **Norms, projections, eigenvectors and SVD intuition:** Extend the project with Norms, projections, eigenvectors and SVD intuition in Misleading chart repair desk. Adapt this focused lab to the project data: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.  Required concepts: Vector norms, Projection geometry, Eigenvector intuition, SVD and low rank, Numerical conditioning.
+  - Deliverable: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Norms, projections, eigenvectors and SVD intuition: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Before/after charts with labeled axes and interpretation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Norms, projections, eigenvectors and SVD intuition: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Norms, projections, eigenvectors and SVD intuition: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
+- [ ] Show sample counts and uncertainty; avoid hiding outliers or truncating a bar axis.
+- [ ] Norms, projections, eigenvectors and SVD intuition: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Distribution shift notebook
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A team needs to notice changing input distributions.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Generate reference and shifted sensor batches with known mean and variance changes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** Histograms, summary statistics and a shift investigation report.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Norms, projections, eigenvectors and SVD intuition:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Norms, projections, eigenvectors and SVD intuition, explicitly apply Vector norms, Projection geometry, Eigenvector intuition.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
+- **Norms, projections, eigenvectors and SVD intuition:** Extend the project with Norms, projections, eigenvectors and SVD intuition in Distribution shift notebook. Adapt this focused lab to the project data: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.  Required concepts: Vector norms, Projection geometry, Eigenvector intuition, SVD and low rank, Numerical conditioning.
+  - Deliverable: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Norms, projections, eigenvectors and SVD intuition: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Histograms, summary statistics and a shift investigation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Norms, projections, eigenvectors and SVD intuition: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Norms, projections, eigenvectors and SVD intuition: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
+- [ ] Detect the seeded shift and explain why detection does not identify its cause.
+- [ ] Norms, projections, eigenvectors and SVD intuition: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Finite difference microscope
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A learner needs to verify derivatives used in optimization.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Generate a 30-row quadratic regression problem. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A notebook comparing analytical and numerical gradients.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Norms, projections, eigenvectors and SVD intuition:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Norms, projections, eigenvectors and SVD intuition, explicitly apply Vector norms, Projection geometry, Eigenvector intuition.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
+- **Norms, projections, eigenvectors and SVD intuition:** Extend the project with Norms, projections, eigenvectors and SVD intuition in Finite difference microscope. Adapt this focused lab to the project data: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.  Required concepts: Vector norms, Projection geometry, Eigenvector intuition, SVD and low rank, Numerical conditioning.
+  - Deliverable: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Norms, projections, eigenvectors and SVD intuition: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A notebook comparing analytical and numerical gradients. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Norms, projections, eigenvectors and SVD intuition: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Norms, projections, eigenvectors and SVD intuition: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.
+- [ ] Report relative error for multiple step sizes and explain cancellation.
+- [ ] Norms, projections, eigenvectors and SVD intuition: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data join integrity checker
+
+An analyst needs to detect duplicated rows caused by joins.
+
+**Data:** Create customer and order CSV files with missing and duplicated keys. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A pandas join audit with rejected records and row-count explanations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Norms, projections, eigenvectors and SVD intuition:** Extend the project with Norms, projections, eigenvectors and SVD intuition in Data join integrity checker. Adapt this focused lab to the project data: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.  Required concepts: Vector norms, Projection geometry, Eigenvector intuition, SVD and low rank, Numerical conditioning.
+  - Deliverable: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A pandas join audit with rejected records and row-count explanations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Norms, projections, eigenvectors and SVD intuition: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect many-to-many expansion and reconcile order totals.
+- [ ] Norms, projections, eigenvectors and SVD intuition: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Missing value investigation
+
+A researcher needs to understand how missingness alters summaries.
+
+**Data:** Generate 200 survey rows with random and income-dependent missingness. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A cleaning notebook comparing deletion and imputation.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Norms, projections, eigenvectors and SVD intuition:** Extend the project with Norms, projections, eigenvectors and SVD intuition in Missing value investigation. Adapt this focused lab to the project data: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.  Required concepts: Vector norms, Projection geometry, Eigenvector intuition, SVD and low rank, Numerical conditioning.
+  - Deliverable: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A cleaning notebook comparing deletion and imputation. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Norms, projections, eigenvectors and SVD intuition: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Quantify bias under each missingness mechanism without claiming causality.
+- [ ] Norms, projections, eigenvectors and SVD intuition: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Feature scaling geometry
+
+A model builder needs to understand units before measuring distance.
+
+**Data:** Generate height/income features with very different scales. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A NumPy study of standard, robust and min-max scaling.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Norms, projections, eigenvectors and SVD intuition:** Extend the project with Norms, projections, eigenvectors and SVD intuition in Feature scaling geometry. Adapt this focused lab to the project data: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.  Required concepts: Vector norms, Projection geometry, Eigenvector intuition, SVD and low rank, Numerical conditioning.
+  - Deliverable: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A NumPy study of standard, robust and min-max scaling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Norms, projections, eigenvectors and SVD intuition: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Fit scaling on training rows only and compare neighbor identities.
+- [ ] Norms, projections, eigenvectors and SVD intuition: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Geometric similarity explorer
+
+A learner needs to understand why vector scaling changes retrieval.
+
+**Data:** Generate 60 two-dimensional points with three labeled groups. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A notebook comparing dot product, cosine and Euclidean rankings.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Norms, projections, eigenvectors and SVD intuition:** Extend the project with Norms, projections, eigenvectors and SVD intuition in Geometric similarity explorer. Adapt this focused lab to the project data: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.  Required concepts: Vector norms, Projection geometry, Eigenvector intuition, SVD and low rank, Numerical conditioning.
+  - Deliverable: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A notebook comparing dot product, cosine and Euclidean rankings. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Norms, projections, eigenvectors and SVD intuition: Norms, projections, eigenvectors and SVD intuition: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify hand-calculated examples and explain ranking changes after scaling.
+- [ ] Norms, projections, eigenvectors and SVD intuition: Make a NumPy geometry notebook with projections, zero-safe normalisation and rank-one reconstruction. Include a PCA-style plot of generated points and a numerical-conditioning example with explicit tolerances.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2688,7 +2688,7 @@ Audit data quality and model behavior so a teammate can reproduce the findings.
 
 Recognise misleading metrics and data transformations before fitting an AI model.
 
-**Priority:** Useful next · **Study:** 3h · **Practice:** 4h
+**Priority:** Foundation · **Study:** 3h · **Practice:** 4h
 
 **Prerequisites:** [pandas, cleaning and missing values](math-data.md#data-pandas) Navigation is unrestricted.
 
@@ -2804,292 +2804,2379 @@ Generate customer/event tables with duplicate keys, missing values and a unit er
 
 #### Ten project recommendations
 
-### Inventory exception monitor
+### Bootstrap uncertainty studio
 
-Find unusual stock movements and explain which records need investigation.
+A product analyst needs uncertainty around a small sample mean.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies. Label or derive the target: whether a stock movement is an injected anomaly. Start with explicit quantity limits and rolling statistics.
+**Data:** Generate 80 session lengths with a skewed distribution. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Sampling, uncertainty, joins and dataset validation:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Sampling, uncertainty, joins and dataset validation, explicitly apply Sampling unit, Bootstrap intervals, Join cardinality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Sampling, uncertainty, joins and dataset validation: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Sampling, uncertainty, joins and dataset validation: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries. Label or derive the target: query/item relevance. Start with keyword search and a simple ranker.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
+**Output:** A bootstrap interval report with reproducible resampling.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Sampling, uncertainty, joins and dataset validation:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Sampling, uncertainty, joins and dataset validation, explicitly apply Sampling unit, Bootstrap intervals, Join cardinality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
+- **Sampling, uncertainty, joins and dataset validation:** Implement Sampling, uncertainty, joins and dataset validation in Bootstrap uncertainty studio. Adapt this focused lab to the project data: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.  Required concepts: Sampling unit, Bootstrap intervals, Join cardinality, Schema and range checks, Missingness and provenance.
+  - Deliverable: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Sampling, uncertainty, joins and dataset validation: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A bootstrap interval report with reproducible resampling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Sampling, uncertainty, joins and dataset validation: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
-- [ ] Sampling, uncertainty, joins and dataset validation: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
+- [ ] Compare percentile intervals with a normal approximation and discuss limits.
+- [ ] Sampling, uncertainty, joins and dataset validation: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Workload forecast and planning desk
+### Missing value investigation
 
-Estimate upcoming task volume and make uncertainty visible to planners.
+A researcher needs to understand how missingness alters summaries.
 
-**Data:** Generate 180 days of task counts with weekly seasonality and one distribution change. Label or derive the target: next-day task count. Start with the count on the same weekday in the previous week.
+**Data:** Generate 200 survey rows with random and income-dependent missingness. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A forecast report with prediction intervals and a planning recommendation.
-
-**Effort:** 11h · Beginner → intermediate
-
-- **Sampling, uncertainty, joins and dataset validation:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Sampling, uncertainty, joins and dataset validation, explicitly apply Sampling unit, Bootstrap intervals, Join cardinality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Sampling, uncertainty, joins and dataset validation: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Use chronological validation, compare with a last-week baseline and report error before/after the distribution shift.
-- [ ] Sampling, uncertainty, joins and dataset validation: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket triage desk
-
-Route incoming support tickets to the right category and show the evidence behind each decision.
-
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42. Label or derive the target: ticket category: login, billing or account setup. Start with a majority-class predictor and keyword rules.
-
-**Output:** A review queue with categories, confidence, evidence and correction controls.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Sampling, uncertainty, joins and dataset validation:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Sampling, uncertainty, joins and dataset validation, explicitly apply Sampling unit, Bootstrap intervals, Join cardinality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Sampling, uncertainty, joins and dataset validation: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Sampling, uncertainty, joins and dataset validation: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings. Label or derive the target: whether a query/passage pair is relevant. Start with keyword overlap and a TF-IDF retriever.
-
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A cleaning notebook comparing deletion and imputation.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Sampling, uncertainty, joins and dataset validation:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Sampling, uncertainty, joins and dataset validation, explicitly apply Sampling unit, Bootstrap intervals, Join cardinality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
+- **Sampling, uncertainty, joins and dataset validation:** Implement Sampling, uncertainty, joins and dataset validation in Missing value investigation. Adapt this focused lab to the project data: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.  Required concepts: Sampling unit, Bootstrap intervals, Join cardinality, Schema and range checks, Missingness and provenance.
+  - Deliverable: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Sampling, uncertainty, joins and dataset validation: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A cleaning notebook comparing deletion and imputation. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Sampling, uncertainty, joins and dataset validation: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Sampling, uncertainty, joins and dataset validation: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
+- [ ] Quantify bias under each missingness mechanism without claiming causality.
+- [ ] Sampling, uncertainty, joins and dataset validation: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Conditional probability simulator
 
-Summarize themes and surface potentially misleading or contradictory review records.
+An analyst needs to distinguish test accuracy from posterior probability.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples. Label or derive the target: the review topic and rating-consistency flag. Start with topic keywords and explicit rating rules.
+**Data:** Simulate 10000 fictional cases at three base rates. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 9h · Beginner → intermediate
-
-- **Sampling, uncertainty, joins and dataset validation:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Sampling, uncertainty, joins and dataset validation, explicitly apply Sampling unit, Bootstrap intervals, Join cardinality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
-
-**Milestones**
-
-- [ ] Define the problem, schema and baseline
-- [ ] Sampling, uncertainty, joins and dataset validation: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Sampling, uncertainty, joins and dataset validation: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships. Label or derive the target: the next weak concept requiring practice. Start with the lowest-score eligible prerequisite-aware concept.
-
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A contingency table and Bayes-rule calculator.
 
 **Effort:** 10h · Beginner → intermediate
 
-- **Sampling, uncertainty, joins and dataset validation:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Sampling, uncertainty, joins and dataset validation, explicitly apply Sampling unit, Bootstrap intervals, Join cardinality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
+- **Sampling, uncertainty, joins and dataset validation:** Extend the project with Sampling, uncertainty, joins and dataset validation in Conditional probability simulator. Adapt this focused lab to the project data: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.  Required concepts: Sampling unit, Bootstrap intervals, Join cardinality, Schema and range checks, Missingness and provenance.
+  - Deliverable: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Sampling, uncertainty, joins and dataset validation: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A contingency table and Bayes-rule calculator. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Sampling, uncertainty, joins and dataset validation: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Sampling, uncertainty, joins and dataset validation: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
+- [ ] Match analytical posterior values within stated simulation tolerance.
+- [ ] Sampling, uncertainty, joins and dataset validation: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Document intake and validation pipeline
+### Misleading chart repair desk
 
-Convert incoming documents into validated records and flag what cannot be trusted.
+A report author needs honest charts for comparing groups.
 
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates. Label or derive the target: validity of a document record. Start with a deterministic schema validator; keep it authoritative.
+**Data:** Create four group distributions with outliers and unequal sizes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible ingestion pipeline and a rejection report.
+**Output:** Before/after charts with labeled axes and interpretation notes.
 
-**Effort:** 11h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Sampling, uncertainty, joins and dataset validation:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Sampling, uncertainty, joins and dataset validation, explicitly apply Sampling unit, Bootstrap intervals, Join cardinality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
+- **Sampling, uncertainty, joins and dataset validation:** Extend the project with Sampling, uncertainty, joins and dataset validation in Misleading chart repair desk. Adapt this focused lab to the project data: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.  Required concepts: Sampling unit, Bootstrap intervals, Join cardinality, Schema and range checks, Missingness and provenance.
+  - Deliverable: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Sampling, uncertainty, joins and dataset validation: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Before/after charts with labeled axes and interpretation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Sampling, uncertainty, joins and dataset validation: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Sampling, uncertainty, joins and dataset validation: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
+- [ ] Show sample counts and uncertainty; avoid hiding outliers or truncating a bar axis.
+- [ ] Sampling, uncertainty, joins and dataset validation: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Service incident investigation board
+### Distribution shift notebook
 
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
+A team needs to notice changing input distributions.
 
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios. Label or derive the target: the incident category/severity from a log window. Start with error counts and a keyword-to-runbook mapping.
+**Data:** Generate reference and shifted sensor batches with known mean and variance changes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An incident timeline with linked evidence and runbook actions.
+**Output:** Histograms, summary statistics and a shift investigation report.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Sampling, uncertainty, joins and dataset validation:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Sampling, uncertainty, joins and dataset validation, explicitly apply Sampling unit, Bootstrap intervals, Join cardinality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
+- **Sampling, uncertainty, joins and dataset validation:** Extend the project with Sampling, uncertainty, joins and dataset validation in Distribution shift notebook. Adapt this focused lab to the project data: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.  Required concepts: Sampling unit, Bootstrap intervals, Join cardinality, Schema and range checks, Missingness and provenance.
+  - Deliverable: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Sampling, uncertainty, joins and dataset validation: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: Histograms, summary statistics and a shift investigation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Sampling, uncertainty, joins and dataset validation: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Sampling, uncertainty, joins and dataset validation: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
+- [ ] Detect the seeded shift and explain why detection does not identify its cause.
+- [ ] Sampling, uncertainty, joins and dataset validation: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Dataset and model audit studio
+### Finite difference microscope
 
-Audit data quality and model behavior so a teammate can reproduce the findings.
+A learner needs to verify derivatives used in optimization.
 
-**Data:** Use scikit-learn built-in digits or a generated 200-row labeled dataset; keep downloads optional. Label or derive the target: the digit class or generated dataset label. Start with a dummy predictor and a simple fitted estimator.
+**Data:** Generate a 30-row quadratic regression problem. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A reproducible audit report with slices, evidence and a model card.
+**Output:** A notebook comparing analytical and numerical gradients.
 
-**Effort:** 9h · Beginner → intermediate
+**Effort:** 10h · Beginner → intermediate
 
-- **Sampling, uncertainty, joins and dataset validation:** Analyze feature shapes, distributions, missingness and similarity where relevant.  For Sampling, uncertainty, joins and dataset validation, explicitly apply Sampling unit, Bootstrap intervals, Join cardinality.
-  - Deliverable: A reproducible data audit notebook with mathematical explanations
-  - Check: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
+- **Sampling, uncertainty, joins and dataset validation:** Extend the project with Sampling, uncertainty, joins and dataset validation in Finite difference microscope. Adapt this focused lab to the project data: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.  Required concepts: Sampling unit, Bootstrap intervals, Join cardinality, Schema and range checks, Missingness and provenance.
+  - Deliverable: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] Define the problem, schema and baseline
-- [ ] Sampling, uncertainty, joins and dataset validation: A reproducible data audit notebook with mathematical explanations
-- [ ] Integrate the components and run acceptance checks
-- [ ] Document results and demonstrate to a teammate
+- [ ] MVP · problem and reproducible baseline: A notebook comparing analytical and numerical gradients. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Sampling, uncertainty, joins and dataset validation: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Include schema failures, class imbalance, one failure slice and a clean-run reproduction; state educational-use limitations.
-- [ ] Sampling, uncertainty, joins and dataset validation: Create numeric sanity checks and a labeled three-chart data report. Adapt the lesson lab: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.
+- [ ] Report relative error for multiple step sizes and explain cancellation.
+- [ ] Sampling, uncertainty, joins and dataset validation: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data join integrity checker
+
+An analyst needs to detect duplicated rows caused by joins.
+
+**Data:** Create customer and order CSV files with missing and duplicated keys. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A pandas join audit with rejected records and row-count explanations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Sampling, uncertainty, joins and dataset validation:** Extend the project with Sampling, uncertainty, joins and dataset validation in Data join integrity checker. Adapt this focused lab to the project data: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.  Required concepts: Sampling unit, Bootstrap intervals, Join cardinality, Schema and range checks, Missingness and provenance.
+  - Deliverable: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A pandas join audit with rejected records and row-count explanations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Sampling, uncertainty, joins and dataset validation: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect many-to-many expansion and reconcile order totals.
+- [ ] Sampling, uncertainty, joins and dataset validation: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Feature scaling geometry
+
+A model builder needs to understand units before measuring distance.
+
+**Data:** Generate height/income features with very different scales. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A NumPy study of standard, robust and min-max scaling.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Sampling, uncertainty, joins and dataset validation:** Extend the project with Sampling, uncertainty, joins and dataset validation in Feature scaling geometry. Adapt this focused lab to the project data: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.  Required concepts: Sampling unit, Bootstrap intervals, Join cardinality, Schema and range checks, Missingness and provenance.
+  - Deliverable: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A NumPy study of standard, robust and min-max scaling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Sampling, uncertainty, joins and dataset validation: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Fit scaling on training rows only and compare neighbor identities.
+- [ ] Sampling, uncertainty, joins and dataset validation: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Matrix compression explorer
+
+A learner needs to see the accuracy/storage tradeoff in low-rank approximation.
+
+**Data:** Generate a 64 by 64 grayscale pattern with noise. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SVD reconstruction notebook with rank slider or rank table.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Sampling, uncertainty, joins and dataset validation:** Extend the project with Sampling, uncertainty, joins and dataset validation in Matrix compression explorer. Adapt this focused lab to the project data: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.  Required concepts: Sampling unit, Bootstrap intervals, Join cardinality, Schema and range checks, Missingness and provenance.
+  - Deliverable: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SVD reconstruction notebook with rank slider or rank table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Sampling, uncertainty, joins and dataset validation: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify error decreases with rank and report retained storage.
+- [ ] Sampling, uncertainty, joins and dataset validation: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Geometric similarity explorer
+
+A learner needs to understand why vector scaling changes retrieval.
+
+**Data:** Generate 60 two-dimensional points with three labeled groups. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A notebook comparing dot product, cosine and Euclidean rankings.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Sampling, uncertainty, joins and dataset validation:** Extend the project with Sampling, uncertainty, joins and dataset validation in Geometric similarity explorer. Adapt this focused lab to the project data: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.  Required concepts: Sampling unit, Bootstrap intervals, Join cardinality, Schema and range checks, Missingness and provenance.
+  - Deliverable: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A notebook comparing dot product, cosine and Euclidean rankings. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Sampling, uncertainty, joins and dataset validation: Sampling, uncertainty, joins and dataset validation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify hand-calculated examples and explain ranking changes after scaling.
+- [ ] Sampling, uncertainty, joins and dataset validation: Generate customer/event tables with duplicate keys, missing values and a unit error. Build a validation report, test join cardinality and calculate a bootstrap interval while documenting the independent sampling unit.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Bayes, likelihood and decision uncertainty
+
+<a id="math-bayes-likelihood"></a>
+
+### Bayes, likelihood and decision uncertainty
+
+Bayes, likelihood and decision uncertainty helps you make explainable engineering decisions and test failure cases. Build the experiment below before relying on the concept in an AI system.
+
+**Priority:** Foundation · **Study:** 4h · **Practice:** 5h
+
+**Prerequisites:** [Probability, distributions and statistics](math-data.md#math-probability) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Conditional probability:** P(A given B) restricts the denominator to cases where B occurred.
+  - Example: Use 1000 fictional cases with 10 positives and calculate precision from the confusion table.
+  - Videos:
+    - [College statistics — full course](https://www.youtube.com/watch?v=xxpc-HPKN28) · freeCodeCamp · Full course · approximately 8h
+      - Explains: Descriptive statistics, probability, distributions and statistical reasoning.
+      - Useful because: Learn to interpret dataset summaries and uncertainty instead of trusting one metric.
+      - Watch for: Focus on conditional probability. Then reproduce the lesson example: Use 1000 fictional cases with 10 positives and calculate precision from the confusion table.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/free-statistics-course/
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on conditional probability. Then reproduce the lesson example: Use 1000 fictional cases with 10 positives and calculate precision from the confusion table.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **Bayes rule:** A posterior combines the prior with a likelihood and normalizes over competing explanations.
+  - Example: Compare a detector at 1 percent and 20 percent prevalence with unchanged sensitivity.
+  - Videos:
+    - [College statistics — full course](https://www.youtube.com/watch?v=xxpc-HPKN28) · freeCodeCamp · Full course · approximately 8h
+      - Explains: Descriptive statistics, probability, distributions and statistical reasoning.
+      - Useful because: Learn to interpret dataset summaries and uncertainty instead of trusting one metric.
+      - Watch for: Focus on bayes rule. Then reproduce the lesson example: Compare a detector at 1 percent and 20 percent prevalence with unchanged sensitivity.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/free-statistics-course/
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on bayes rule. Then reproduce the lesson example: Compare a detector at 1 percent and 20 percent prevalence with unchanged sensitivity.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **Likelihood versus probability:** Likelihood evaluates parameter choices against fixed observed data; it is not a probability distribution over parameters by itself.
+  - Example: Compare the likelihood of eight heads in ten tosses under p=.5 and p=.8.
+  - Videos:
+    - [College statistics — full course](https://www.youtube.com/watch?v=xxpc-HPKN28) · freeCodeCamp · Full course · approximately 8h
+      - Explains: Descriptive statistics, probability, distributions and statistical reasoning.
+      - Useful because: Learn to interpret dataset summaries and uncertainty instead of trusting one metric.
+      - Watch for: Focus on likelihood versus probability. Then reproduce the lesson example: Compare the likelihood of eight heads in ten tosses under p=.5 and p=.8.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/free-statistics-course/
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on likelihood versus probability. Then reproduce the lesson example: Compare the likelihood of eight heads in ten tosses under p=.5 and p=.8.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **Expectation and variance:** Expectation averages outcomes weighted by probability; variance measures spread around that mean.
+  - Example: Compute the mean and variance of a three-outcome discrete variable.
+  - Videos:
+    - [College statistics — full course](https://www.youtube.com/watch?v=xxpc-HPKN28) · freeCodeCamp · Full course · approximately 8h
+      - Explains: Descriptive statistics, probability, distributions and statistical reasoning.
+      - Useful because: Learn to interpret dataset summaries and uncertainty instead of trusting one metric.
+      - Watch for: Focus on expectation and variance. Then reproduce the lesson example: Compute the mean and variance of a three-outcome discrete variable.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/free-statistics-course/
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on expectation and variance. Then reproduce the lesson example: Compute the mean and variance of a three-outcome discrete variable.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **Decision costs:** A decision threshold depends on false-positive and false-negative consequences, not just the largest predicted probability.
+  - Example: Compare expected costs of reviewing or accepting a fictional alert.
+  - Videos:
+    - [College statistics — full course](https://www.youtube.com/watch?v=xxpc-HPKN28) · freeCodeCamp · Full course · approximately 8h
+      - Explains: Descriptive statistics, probability, distributions and statistical reasoning.
+      - Useful because: Learn to interpret dataset summaries and uncertainty instead of trusting one metric.
+      - Watch for: Focus on decision costs. Then reproduce the lesson example: Compare expected costs of reviewing or accepting a fictional alert.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/free-statistics-course/
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on decision costs. Then reproduce the lesson example: Compare expected costs of reviewing or accepting a fictional alert.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+
+#### YouTube: focused explanations and full courses
+
+- [College statistics — full course](https://www.youtube.com/watch?v=xxpc-HPKN28) · freeCodeCamp · Full course · approximately 8h
+  - Explains: Descriptive statistics, probability, distributions and statistical reasoning.
+  - Useful because: Learn to interpret dataset summaries and uncertainty instead of trusting one metric.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/free-statistics-course/
+- [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+  - Explains: NumPy, pandas, cleaning and exploring data with Python.
+  - Useful because: Work through real data transformations before building training pipelines.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+
+#### Free written resources
+
+1. [Official reference: Bayes, likelihood and decision uncertainty](https://seeing-theory.brown.edu/bayesian-inference/index.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+2. [D2L: probability and statistics](https://d2l.ai/chapter_preliminaries/probability.html) — Free; no registration required. No paid materials required.
+
+#### Lab: Bayes, likelihood and decision uncertainty
+
+Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.
+
+**Deliverables**
+
+- Runnable CPU notebook or script with deterministic fixtures
+- Measured outputs, failure cases and a README explaining decisions
+
+**Completion checks**
+
+- [ ] Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.
+- [ ] Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+#### Ten project recommendations
+
+### Conditional probability simulator
+
+An analyst needs to distinguish test accuracy from posterior probability.
+
+**Data:** Simulate 10000 fictional cases at three base rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A contingency table and Bayes-rule calculator.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Bayes, likelihood and decision uncertainty:** Extend the project with Bayes, likelihood and decision uncertainty in Conditional probability simulator. Adapt this focused lab to the project data: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.  Required concepts: Conditional probability, Bayes rule, Likelihood versus probability, Expectation and variance, Decision costs.
+  - Deliverable: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A contingency table and Bayes-rule calculator. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bayes, likelihood and decision uncertainty: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match analytical posterior values within stated simulation tolerance.
+- [ ] Bayes, likelihood and decision uncertainty: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Bootstrap uncertainty studio
+
+A product analyst needs uncertainty around a small sample mean.
+
+**Data:** Generate 80 session lengths with a skewed distribution. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A bootstrap interval report with reproducible resampling.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Bayes, likelihood and decision uncertainty:** Extend the project with Bayes, likelihood and decision uncertainty in Bootstrap uncertainty studio. Adapt this focused lab to the project data: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.  Required concepts: Conditional probability, Bayes rule, Likelihood versus probability, Expectation and variance, Decision costs.
+  - Deliverable: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A bootstrap interval report with reproducible resampling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bayes, likelihood and decision uncertainty: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compare percentile intervals with a normal approximation and discuss limits.
+- [ ] Bayes, likelihood and decision uncertainty: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Misleading chart repair desk
+
+A report author needs honest charts for comparing groups.
+
+**Data:** Create four group distributions with outliers and unequal sizes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Before/after charts with labeled axes and interpretation notes.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Bayes, likelihood and decision uncertainty:** Extend the project with Bayes, likelihood and decision uncertainty in Misleading chart repair desk. Adapt this focused lab to the project data: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.  Required concepts: Conditional probability, Bayes rule, Likelihood versus probability, Expectation and variance, Decision costs.
+  - Deliverable: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Before/after charts with labeled axes and interpretation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bayes, likelihood and decision uncertainty: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show sample counts and uncertainty; avoid hiding outliers or truncating a bar axis.
+- [ ] Bayes, likelihood and decision uncertainty: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Distribution shift notebook
+
+A team needs to notice changing input distributions.
+
+**Data:** Generate reference and shifted sensor batches with known mean and variance changes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Histograms, summary statistics and a shift investigation report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Bayes, likelihood and decision uncertainty:** Extend the project with Bayes, likelihood and decision uncertainty in Distribution shift notebook. Adapt this focused lab to the project data: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.  Required concepts: Conditional probability, Bayes rule, Likelihood versus probability, Expectation and variance, Decision costs.
+  - Deliverable: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Histograms, summary statistics and a shift investigation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bayes, likelihood and decision uncertainty: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect the seeded shift and explain why detection does not identify its cause.
+- [ ] Bayes, likelihood and decision uncertainty: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Finite difference microscope
+
+A learner needs to verify derivatives used in optimization.
+
+**Data:** Generate a 30-row quadratic regression problem. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A notebook comparing analytical and numerical gradients.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Bayes, likelihood and decision uncertainty:** Extend the project with Bayes, likelihood and decision uncertainty in Finite difference microscope. Adapt this focused lab to the project data: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.  Required concepts: Conditional probability, Bayes rule, Likelihood versus probability, Expectation and variance, Decision costs.
+  - Deliverable: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A notebook comparing analytical and numerical gradients. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bayes, likelihood and decision uncertainty: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report relative error for multiple step sizes and explain cancellation.
+- [ ] Bayes, likelihood and decision uncertainty: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data join integrity checker
+
+An analyst needs to detect duplicated rows caused by joins.
+
+**Data:** Create customer and order CSV files with missing and duplicated keys. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A pandas join audit with rejected records and row-count explanations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Bayes, likelihood and decision uncertainty:** Extend the project with Bayes, likelihood and decision uncertainty in Data join integrity checker. Adapt this focused lab to the project data: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.  Required concepts: Conditional probability, Bayes rule, Likelihood versus probability, Expectation and variance, Decision costs.
+  - Deliverable: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A pandas join audit with rejected records and row-count explanations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bayes, likelihood and decision uncertainty: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect many-to-many expansion and reconcile order totals.
+- [ ] Bayes, likelihood and decision uncertainty: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Missing value investigation
+
+A researcher needs to understand how missingness alters summaries.
+
+**Data:** Generate 200 survey rows with random and income-dependent missingness. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A cleaning notebook comparing deletion and imputation.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Bayes, likelihood and decision uncertainty:** Extend the project with Bayes, likelihood and decision uncertainty in Missing value investigation. Adapt this focused lab to the project data: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.  Required concepts: Conditional probability, Bayes rule, Likelihood versus probability, Expectation and variance, Decision costs.
+  - Deliverable: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A cleaning notebook comparing deletion and imputation. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bayes, likelihood and decision uncertainty: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Quantify bias under each missingness mechanism without claiming causality.
+- [ ] Bayes, likelihood and decision uncertainty: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Feature scaling geometry
+
+A model builder needs to understand units before measuring distance.
+
+**Data:** Generate height/income features with very different scales. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A NumPy study of standard, robust and min-max scaling.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Bayes, likelihood and decision uncertainty:** Extend the project with Bayes, likelihood and decision uncertainty in Feature scaling geometry. Adapt this focused lab to the project data: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.  Required concepts: Conditional probability, Bayes rule, Likelihood versus probability, Expectation and variance, Decision costs.
+  - Deliverable: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A NumPy study of standard, robust and min-max scaling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bayes, likelihood and decision uncertainty: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Fit scaling on training rows only and compare neighbor identities.
+- [ ] Bayes, likelihood and decision uncertainty: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Matrix compression explorer
+
+A learner needs to see the accuracy/storage tradeoff in low-rank approximation.
+
+**Data:** Generate a 64 by 64 grayscale pattern with noise. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SVD reconstruction notebook with rank slider or rank table.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Bayes, likelihood and decision uncertainty:** Extend the project with Bayes, likelihood and decision uncertainty in Matrix compression explorer. Adapt this focused lab to the project data: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.  Required concepts: Conditional probability, Bayes rule, Likelihood versus probability, Expectation and variance, Decision costs.
+  - Deliverable: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SVD reconstruction notebook with rank slider or rank table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bayes, likelihood and decision uncertainty: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify error decreases with rank and report retained storage.
+- [ ] Bayes, likelihood and decision uncertainty: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Geometric similarity explorer
+
+A learner needs to understand why vector scaling changes retrieval.
+
+**Data:** Generate 60 two-dimensional points with three labeled groups. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A notebook comparing dot product, cosine and Euclidean rankings.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Bayes, likelihood and decision uncertainty:** Extend the project with Bayes, likelihood and decision uncertainty in Geometric similarity explorer. Adapt this focused lab to the project data: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.  Required concepts: Conditional probability, Bayes rule, Likelihood versus probability, Expectation and variance, Decision costs.
+  - Deliverable: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A notebook comparing dot product, cosine and Euclidean rankings. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Bayes, likelihood and decision uncertainty: Bayes, likelihood and decision uncertainty: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify hand-calculated examples and explain ranking changes after scaling.
+- [ ] Bayes, likelihood and decision uncertainty: Simulate a binary detector at three prevalence levels. Compute joint tables and posterior probabilities by hand and code; report false positives and explain why accuracy alone hides the change.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Entropy, cross-entropy and KL divergence
+
+<a id="math-information"></a>
+
+### Entropy, cross-entropy and KL divergence
+
+Entropy, cross-entropy and KL divergence helps you make explainable engineering decisions and test failure cases. Build the experiment below before relying on the concept in an AI system.
+
+**Priority:** Foundation · **Study:** 4h · **Practice:** 5h
+
+**Prerequisites:** [Probability, distributions and statistics](math-data.md#math-probability) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Surprisal:** Negative log probability measures how surprising an observed outcome is under a distribution.
+  - Example: Compare -log(.9) and -log(.01) for the correct class.
+  - Videos:
+    - [Neural Networks Part 6: Cross Entropy](https://www.youtube.com/watch?v=6ArSys5qHAU) · StatQuest · Josh Starmer · Focused explanation
+      - Explains: A visual, step-by-step explanation of the topic named in the title.
+      - Useful because: Use the worked intuition before writing the corresponding small experiment.
+      - Watch for: Focus on surprisal. Then reproduce the lesson example: Compare -log(.9) and -log(.01) for the correct class.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://statquest.org/video_index.html
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on surprisal. Then reproduce the lesson example: Compare -log(.9) and -log(.01) for the correct class.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **Entropy:** Entropy is expected surprisal under the true distribution and measures uncertainty.
+  - Example: Compare [0.5,0.5] with [0.99,0.01] using the same logarithm base.
+  - Videos:
+    - [Neural Networks Part 6: Cross Entropy](https://www.youtube.com/watch?v=6ArSys5qHAU) · StatQuest · Josh Starmer · Focused explanation
+      - Explains: A visual, step-by-step explanation of the topic named in the title.
+      - Useful because: Use the worked intuition before writing the corresponding small experiment.
+      - Watch for: Focus on entropy. Then reproduce the lesson example: Compare [0.5,0.5] with [0.99,0.01] using the same logarithm base.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://statquest.org/video_index.html
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on entropy. Then reproduce the lesson example: Compare [0.5,0.5] with [0.99,0.01] using the same logarithm base.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **Cross-entropy:** Cross-entropy measures expected log loss when q models outcomes drawn from p.
+  - Example: Compute loss for a one-hot class target and predicted probabilities.
+  - Videos:
+    - [Neural Networks Part 6: Cross Entropy](https://www.youtube.com/watch?v=6ArSys5qHAU) · StatQuest · Josh Starmer · Focused explanation
+      - Explains: A visual, step-by-step explanation of the topic named in the title.
+      - Useful because: Use the worked intuition before writing the corresponding small experiment.
+      - Watch for: Focus on cross-entropy. Then reproduce the lesson example: Compute loss for a one-hot class target and predicted probabilities.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://statquest.org/video_index.html
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on cross-entropy. Then reproduce the lesson example: Compute loss for a one-hot class target and predicted probabilities.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **KL divergence:** KL compares distributions directionally and is zero when they match on their support.
+  - Example: Compute both KL(p||q) and KL(q||p) for unequal binary distributions.
+  - Videos:
+    - [Neural Networks Part 6: Cross Entropy](https://www.youtube.com/watch?v=6ArSys5qHAU) · StatQuest · Josh Starmer · Focused explanation
+      - Explains: A visual, step-by-step explanation of the topic named in the title.
+      - Useful because: Use the worked intuition before writing the corresponding small experiment.
+      - Watch for: Focus on kl divergence. Then reproduce the lesson example: Compute both KL(p||q) and KL(q||p) for unequal binary distributions.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://statquest.org/video_index.html
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on kl divergence. Then reproduce the lesson example: Compute both KL(p||q) and KL(q||p) for unequal binary distributions.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **Numerical stability:** Log-sum-exp computes normalization without exponentiating very large logits directly.
+  - Example: Subtract the maximum from logits [1000,1001] before exponentiation.
+  - Videos:
+    - [Neural Networks Part 6: Cross Entropy](https://www.youtube.com/watch?v=6ArSys5qHAU) · StatQuest · Josh Starmer · Focused explanation
+      - Explains: A visual, step-by-step explanation of the topic named in the title.
+      - Useful because: Use the worked intuition before writing the corresponding small experiment.
+      - Watch for: Focus on numerical stability. Then reproduce the lesson example: Subtract the maximum from logits [1000,1001] before exponentiation.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://statquest.org/video_index.html
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on numerical stability. Then reproduce the lesson example: Subtract the maximum from logits [1000,1001] before exponentiation.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+
+#### YouTube: focused explanations and full courses
+
+- [Neural Networks Part 6: Cross Entropy](https://www.youtube.com/watch?v=6ArSys5qHAU) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Neural Networks Part 5: ArgMax and SoftMax](https://www.youtube.com/watch?v=KpKog-L9veg) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+  - Explains: NumPy, pandas, cleaning and exploring data with Python.
+  - Useful because: Work through real data transformations before building training pipelines.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+
+#### Free written resources
+
+1. [Official reference: Entropy, cross-entropy and KL divergence](https://d2l.ai/chapter_preliminaries/information-theory.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+2. [D2L: probability and statistics](https://d2l.ai/chapter_preliminaries/probability.html) — Free; no registration required. No paid materials required.
+
+#### Lab: Entropy, cross-entropy and KL divergence
+
+Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.
+
+**Deliverables**
+
+- Runnable CPU notebook or script with deterministic fixtures
+- Measured outputs, failure cases and a README explaining decisions
+
+**Completion checks**
+
+- [ ] Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.
+- [ ] Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+#### Ten project recommendations
+
+### Conditional probability simulator
+
+An analyst needs to distinguish test accuracy from posterior probability.
+
+**Data:** Simulate 10000 fictional cases at three base rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A contingency table and Bayes-rule calculator.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Entropy, cross-entropy and KL divergence:** Extend the project with Entropy, cross-entropy and KL divergence in Conditional probability simulator. Adapt this focused lab to the project data: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.  Required concepts: Surprisal, Entropy, Cross-entropy, KL divergence, Numerical stability.
+  - Deliverable: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A contingency table and Bayes-rule calculator. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Entropy, cross-entropy and KL divergence: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match analytical posterior values within stated simulation tolerance.
+- [ ] Entropy, cross-entropy and KL divergence: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Bootstrap uncertainty studio
+
+A product analyst needs uncertainty around a small sample mean.
+
+**Data:** Generate 80 session lengths with a skewed distribution. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A bootstrap interval report with reproducible resampling.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Entropy, cross-entropy and KL divergence:** Extend the project with Entropy, cross-entropy and KL divergence in Bootstrap uncertainty studio. Adapt this focused lab to the project data: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.  Required concepts: Surprisal, Entropy, Cross-entropy, KL divergence, Numerical stability.
+  - Deliverable: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A bootstrap interval report with reproducible resampling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Entropy, cross-entropy and KL divergence: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compare percentile intervals with a normal approximation and discuss limits.
+- [ ] Entropy, cross-entropy and KL divergence: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Misleading chart repair desk
+
+A report author needs honest charts for comparing groups.
+
+**Data:** Create four group distributions with outliers and unequal sizes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Before/after charts with labeled axes and interpretation notes.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Entropy, cross-entropy and KL divergence:** Extend the project with Entropy, cross-entropy and KL divergence in Misleading chart repair desk. Adapt this focused lab to the project data: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.  Required concepts: Surprisal, Entropy, Cross-entropy, KL divergence, Numerical stability.
+  - Deliverable: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Before/after charts with labeled axes and interpretation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Entropy, cross-entropy and KL divergence: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show sample counts and uncertainty; avoid hiding outliers or truncating a bar axis.
+- [ ] Entropy, cross-entropy and KL divergence: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Distribution shift notebook
+
+A team needs to notice changing input distributions.
+
+**Data:** Generate reference and shifted sensor batches with known mean and variance changes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Histograms, summary statistics and a shift investigation report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Entropy, cross-entropy and KL divergence:** Extend the project with Entropy, cross-entropy and KL divergence in Distribution shift notebook. Adapt this focused lab to the project data: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.  Required concepts: Surprisal, Entropy, Cross-entropy, KL divergence, Numerical stability.
+  - Deliverable: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Histograms, summary statistics and a shift investigation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Entropy, cross-entropy and KL divergence: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect the seeded shift and explain why detection does not identify its cause.
+- [ ] Entropy, cross-entropy and KL divergence: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Finite difference microscope
+
+A learner needs to verify derivatives used in optimization.
+
+**Data:** Generate a 30-row quadratic regression problem. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A notebook comparing analytical and numerical gradients.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Entropy, cross-entropy and KL divergence:** Extend the project with Entropy, cross-entropy and KL divergence in Finite difference microscope. Adapt this focused lab to the project data: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.  Required concepts: Surprisal, Entropy, Cross-entropy, KL divergence, Numerical stability.
+  - Deliverable: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A notebook comparing analytical and numerical gradients. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Entropy, cross-entropy and KL divergence: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report relative error for multiple step sizes and explain cancellation.
+- [ ] Entropy, cross-entropy and KL divergence: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data join integrity checker
+
+An analyst needs to detect duplicated rows caused by joins.
+
+**Data:** Create customer and order CSV files with missing and duplicated keys. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A pandas join audit with rejected records and row-count explanations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Entropy, cross-entropy and KL divergence:** Extend the project with Entropy, cross-entropy and KL divergence in Data join integrity checker. Adapt this focused lab to the project data: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.  Required concepts: Surprisal, Entropy, Cross-entropy, KL divergence, Numerical stability.
+  - Deliverable: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A pandas join audit with rejected records and row-count explanations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Entropy, cross-entropy and KL divergence: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect many-to-many expansion and reconcile order totals.
+- [ ] Entropy, cross-entropy and KL divergence: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Missing value investigation
+
+A researcher needs to understand how missingness alters summaries.
+
+**Data:** Generate 200 survey rows with random and income-dependent missingness. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A cleaning notebook comparing deletion and imputation.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Entropy, cross-entropy and KL divergence:** Extend the project with Entropy, cross-entropy and KL divergence in Missing value investigation. Adapt this focused lab to the project data: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.  Required concepts: Surprisal, Entropy, Cross-entropy, KL divergence, Numerical stability.
+  - Deliverable: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A cleaning notebook comparing deletion and imputation. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Entropy, cross-entropy and KL divergence: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Quantify bias under each missingness mechanism without claiming causality.
+- [ ] Entropy, cross-entropy and KL divergence: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Feature scaling geometry
+
+A model builder needs to understand units before measuring distance.
+
+**Data:** Generate height/income features with very different scales. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A NumPy study of standard, robust and min-max scaling.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Entropy, cross-entropy and KL divergence:** Extend the project with Entropy, cross-entropy and KL divergence in Feature scaling geometry. Adapt this focused lab to the project data: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.  Required concepts: Surprisal, Entropy, Cross-entropy, KL divergence, Numerical stability.
+  - Deliverable: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A NumPy study of standard, robust and min-max scaling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Entropy, cross-entropy and KL divergence: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Fit scaling on training rows only and compare neighbor identities.
+- [ ] Entropy, cross-entropy and KL divergence: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Matrix compression explorer
+
+A learner needs to see the accuracy/storage tradeoff in low-rank approximation.
+
+**Data:** Generate a 64 by 64 grayscale pattern with noise. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SVD reconstruction notebook with rank slider or rank table.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Entropy, cross-entropy and KL divergence:** Extend the project with Entropy, cross-entropy and KL divergence in Matrix compression explorer. Adapt this focused lab to the project data: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.  Required concepts: Surprisal, Entropy, Cross-entropy, KL divergence, Numerical stability.
+  - Deliverable: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SVD reconstruction notebook with rank slider or rank table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Entropy, cross-entropy and KL divergence: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify error decreases with rank and report retained storage.
+- [ ] Entropy, cross-entropy and KL divergence: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Geometric similarity explorer
+
+A learner needs to understand why vector scaling changes retrieval.
+
+**Data:** Generate 60 two-dimensional points with three labeled groups. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A notebook comparing dot product, cosine and Euclidean rankings.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Entropy, cross-entropy and KL divergence:** Extend the project with Entropy, cross-entropy and KL divergence in Geometric similarity explorer. Adapt this focused lab to the project data: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.  Required concepts: Surprisal, Entropy, Cross-entropy, KL divergence, Numerical stability.
+  - Deliverable: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A notebook comparing dot product, cosine and Euclidean rankings. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Entropy, cross-entropy and KL divergence: Entropy, cross-entropy and KL divergence: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify hand-calculated examples and explain ranking changes after scaling.
+- [ ] Entropy, cross-entropy and KL divergence: Implement entropy, cross-entropy and KL for small probability vectors using NumPy. Verify H(p,q)=H(p)+KL(p||q), test zero probabilities and explain why confidently wrong predictions are costly.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Partial derivatives, Jacobians and vector gradients
+
+<a id="math-jacobians"></a>
+
+### Partial derivatives, Jacobians and vector gradients
+
+Partial derivatives, Jacobians and vector gradients helps you make explainable engineering decisions and test failure cases. Build the experiment below before relying on the concept in an AI system.
+
+**Priority:** Foundation · **Study:** 4h · **Practice:** 5h
+
+**Prerequisites:** [Derivatives, chain rule and gradients](math-data.md#math-calculus) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Partial derivatives:** A partial derivative changes one input while holding the others fixed.
+  - Example: For f(x,y)=x*y+x*x evaluate both partial derivatives at (2,3).
+  - Videos:
+    - [The Chain Rule](https://www.youtube.com/watch?v=wl1myxrtQHQ) · StatQuest · Josh Starmer · Focused explanation
+      - Explains: A visual, step-by-step explanation of the topic named in the title.
+      - Useful because: Use the worked intuition before writing the corresponding small experiment.
+      - Watch for: Focus on partial derivatives. Then reproduce the lesson example: For f(x,y)=x*y+x*x evaluate both partial derivatives at (2,3).
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://statquest.org/video_index.html
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on partial derivatives. Then reproduce the lesson example: For f(x,y)=x*y+x*x evaluate both partial derivatives at (2,3).
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **Gradient direction:** The gradient points toward fastest local increase under the Euclidean norm.
+  - Example: Take a small negative-gradient step on x squared plus four y squared.
+  - Videos:
+    - [The Chain Rule](https://www.youtube.com/watch?v=wl1myxrtQHQ) · StatQuest · Josh Starmer · Focused explanation
+      - Explains: A visual, step-by-step explanation of the topic named in the title.
+      - Useful because: Use the worked intuition before writing the corresponding small experiment.
+      - Watch for: Focus on gradient direction. Then reproduce the lesson example: Take a small negative-gradient step on x squared plus four y squared.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://statquest.org/video_index.html
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on gradient direction. Then reproduce the lesson example: Take a small negative-gradient step on x squared plus four y squared.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **Jacobian shape:** A Jacobian has one row per output and one column per input under the stated convention.
+  - Example: Write the 2 by 2 Jacobian for (x*y,x+y).
+  - Videos:
+    - [The Chain Rule](https://www.youtube.com/watch?v=wl1myxrtQHQ) · StatQuest · Josh Starmer · Focused explanation
+      - Explains: A visual, step-by-step explanation of the topic named in the title.
+      - Useful because: Use the worked intuition before writing the corresponding small experiment.
+      - Watch for: Focus on jacobian shape. Then reproduce the lesson example: Write the 2 by 2 Jacobian for (x*y,x+y).
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://statquest.org/video_index.html
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on jacobian shape. Then reproduce the lesson example: Write the 2 by 2 Jacobian for (x*y,x+y).
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **Chain rule composition:** The derivative of composed maps combines their local derivatives in the correct order.
+  - Example: Compose a linear map with a sigmoid and compare the matrix product with autograd.
+  - Videos:
+    - [The Chain Rule](https://www.youtube.com/watch?v=wl1myxrtQHQ) · StatQuest · Josh Starmer · Focused explanation
+      - Explains: A visual, step-by-step explanation of the topic named in the title.
+      - Useful because: Use the worked intuition before writing the corresponding small experiment.
+      - Watch for: Focus on chain rule composition. Then reproduce the lesson example: Compose a linear map with a sigmoid and compare the matrix product with autograd.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://statquest.org/video_index.html
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on chain rule composition. Then reproduce the lesson example: Compose a linear map with a sigmoid and compare the matrix product with autograd.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **Vector-Jacobian products:** Reverse-mode differentiation propagates an output-weighted gradient without materializing the full Jacobian.
+  - Example: Differentiate a weighted sum of two outputs and compare with a manual product.
+  - Videos:
+    - [The Chain Rule](https://www.youtube.com/watch?v=wl1myxrtQHQ) · StatQuest · Josh Starmer · Focused explanation
+      - Explains: A visual, step-by-step explanation of the topic named in the title.
+      - Useful because: Use the worked intuition before writing the corresponding small experiment.
+      - Watch for: Focus on vector-jacobian products. Then reproduce the lesson example: Differentiate a weighted sum of two outputs and compare with a manual product.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://statquest.org/video_index.html
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on vector-jacobian products. Then reproduce the lesson example: Differentiate a weighted sum of two outputs and compare with a manual product.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+
+#### YouTube: focused explanations and full courses
+
+- [The Chain Rule](https://www.youtube.com/watch?v=wl1myxrtQHQ) · StatQuest · Josh Starmer · Focused explanation
+  - Explains: A visual, step-by-step explanation of the topic named in the title.
+  - Useful because: Use the worked intuition before writing the corresponding small experiment.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://statquest.org/video_index.html
+- [Gradient descent: how neural networks learn](https://www.youtube.com/watch?v=IHZwWFHWa-w) · 3Blue1Brown · Visual explanation
+  - Explains: Loss landscapes, gradients and weight updates.
+  - Useful because: Explain why a learning rate changes training stability.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.3blue1brown.com/lessons/gradient-descent
+- [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+  - Explains: NumPy, pandas, cleaning and exploring data with Python.
+  - Useful because: Work through real data transformations before building training pipelines.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+
+#### Free written resources
+
+1. [Official reference: Partial derivatives, Jacobians and vector gradients](https://docs.pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+2. [D2L: calculus](https://d2l.ai/chapter_preliminaries/calculus.html) — Free; no registration required. No paid materials required.
+
+#### Lab: Partial derivatives, Jacobians and vector gradients
+
+Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.
+
+**Deliverables**
+
+- Runnable CPU notebook or script with deterministic fixtures
+- Measured outputs, failure cases and a README explaining decisions
+
+**Completion checks**
+
+- [ ] Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.
+- [ ] Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+#### Ten project recommendations
+
+### Conditional probability simulator
+
+An analyst needs to distinguish test accuracy from posterior probability.
+
+**Data:** Simulate 10000 fictional cases at three base rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A contingency table and Bayes-rule calculator.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Partial derivatives, Jacobians and vector gradients:** Extend the project with Partial derivatives, Jacobians and vector gradients in Conditional probability simulator. Adapt this focused lab to the project data: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.  Required concepts: Partial derivatives, Gradient direction, Jacobian shape, Chain rule composition, Vector-Jacobian products.
+  - Deliverable: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A contingency table and Bayes-rule calculator. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Partial derivatives, Jacobians and vector gradients: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match analytical posterior values within stated simulation tolerance.
+- [ ] Partial derivatives, Jacobians and vector gradients: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Bootstrap uncertainty studio
+
+A product analyst needs uncertainty around a small sample mean.
+
+**Data:** Generate 80 session lengths with a skewed distribution. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A bootstrap interval report with reproducible resampling.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Partial derivatives, Jacobians and vector gradients:** Extend the project with Partial derivatives, Jacobians and vector gradients in Bootstrap uncertainty studio. Adapt this focused lab to the project data: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.  Required concepts: Partial derivatives, Gradient direction, Jacobian shape, Chain rule composition, Vector-Jacobian products.
+  - Deliverable: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A bootstrap interval report with reproducible resampling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Partial derivatives, Jacobians and vector gradients: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compare percentile intervals with a normal approximation and discuss limits.
+- [ ] Partial derivatives, Jacobians and vector gradients: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Misleading chart repair desk
+
+A report author needs honest charts for comparing groups.
+
+**Data:** Create four group distributions with outliers and unequal sizes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Before/after charts with labeled axes and interpretation notes.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Partial derivatives, Jacobians and vector gradients:** Extend the project with Partial derivatives, Jacobians and vector gradients in Misleading chart repair desk. Adapt this focused lab to the project data: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.  Required concepts: Partial derivatives, Gradient direction, Jacobian shape, Chain rule composition, Vector-Jacobian products.
+  - Deliverable: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Before/after charts with labeled axes and interpretation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Partial derivatives, Jacobians and vector gradients: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show sample counts and uncertainty; avoid hiding outliers or truncating a bar axis.
+- [ ] Partial derivatives, Jacobians and vector gradients: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Distribution shift notebook
+
+A team needs to notice changing input distributions.
+
+**Data:** Generate reference and shifted sensor batches with known mean and variance changes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Histograms, summary statistics and a shift investigation report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Partial derivatives, Jacobians and vector gradients:** Extend the project with Partial derivatives, Jacobians and vector gradients in Distribution shift notebook. Adapt this focused lab to the project data: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.  Required concepts: Partial derivatives, Gradient direction, Jacobian shape, Chain rule composition, Vector-Jacobian products.
+  - Deliverable: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Histograms, summary statistics and a shift investigation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Partial derivatives, Jacobians and vector gradients: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect the seeded shift and explain why detection does not identify its cause.
+- [ ] Partial derivatives, Jacobians and vector gradients: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Finite difference microscope
+
+A learner needs to verify derivatives used in optimization.
+
+**Data:** Generate a 30-row quadratic regression problem. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A notebook comparing analytical and numerical gradients.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Partial derivatives, Jacobians and vector gradients:** Extend the project with Partial derivatives, Jacobians and vector gradients in Finite difference microscope. Adapt this focused lab to the project data: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.  Required concepts: Partial derivatives, Gradient direction, Jacobian shape, Chain rule composition, Vector-Jacobian products.
+  - Deliverable: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A notebook comparing analytical and numerical gradients. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Partial derivatives, Jacobians and vector gradients: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report relative error for multiple step sizes and explain cancellation.
+- [ ] Partial derivatives, Jacobians and vector gradients: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data join integrity checker
+
+An analyst needs to detect duplicated rows caused by joins.
+
+**Data:** Create customer and order CSV files with missing and duplicated keys. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A pandas join audit with rejected records and row-count explanations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Partial derivatives, Jacobians and vector gradients:** Extend the project with Partial derivatives, Jacobians and vector gradients in Data join integrity checker. Adapt this focused lab to the project data: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.  Required concepts: Partial derivatives, Gradient direction, Jacobian shape, Chain rule composition, Vector-Jacobian products.
+  - Deliverable: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A pandas join audit with rejected records and row-count explanations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Partial derivatives, Jacobians and vector gradients: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect many-to-many expansion and reconcile order totals.
+- [ ] Partial derivatives, Jacobians and vector gradients: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Missing value investigation
+
+A researcher needs to understand how missingness alters summaries.
+
+**Data:** Generate 200 survey rows with random and income-dependent missingness. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A cleaning notebook comparing deletion and imputation.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Partial derivatives, Jacobians and vector gradients:** Extend the project with Partial derivatives, Jacobians and vector gradients in Missing value investigation. Adapt this focused lab to the project data: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.  Required concepts: Partial derivatives, Gradient direction, Jacobian shape, Chain rule composition, Vector-Jacobian products.
+  - Deliverable: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A cleaning notebook comparing deletion and imputation. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Partial derivatives, Jacobians and vector gradients: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Quantify bias under each missingness mechanism without claiming causality.
+- [ ] Partial derivatives, Jacobians and vector gradients: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Feature scaling geometry
+
+A model builder needs to understand units before measuring distance.
+
+**Data:** Generate height/income features with very different scales. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A NumPy study of standard, robust and min-max scaling.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Partial derivatives, Jacobians and vector gradients:** Extend the project with Partial derivatives, Jacobians and vector gradients in Feature scaling geometry. Adapt this focused lab to the project data: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.  Required concepts: Partial derivatives, Gradient direction, Jacobian shape, Chain rule composition, Vector-Jacobian products.
+  - Deliverable: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A NumPy study of standard, robust and min-max scaling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Partial derivatives, Jacobians and vector gradients: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Fit scaling on training rows only and compare neighbor identities.
+- [ ] Partial derivatives, Jacobians and vector gradients: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Matrix compression explorer
+
+A learner needs to see the accuracy/storage tradeoff in low-rank approximation.
+
+**Data:** Generate a 64 by 64 grayscale pattern with noise. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SVD reconstruction notebook with rank slider or rank table.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Partial derivatives, Jacobians and vector gradients:** Extend the project with Partial derivatives, Jacobians and vector gradients in Matrix compression explorer. Adapt this focused lab to the project data: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.  Required concepts: Partial derivatives, Gradient direction, Jacobian shape, Chain rule composition, Vector-Jacobian products.
+  - Deliverable: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SVD reconstruction notebook with rank slider or rank table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Partial derivatives, Jacobians and vector gradients: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify error decreases with rank and report retained storage.
+- [ ] Partial derivatives, Jacobians and vector gradients: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Geometric similarity explorer
+
+A learner needs to understand why vector scaling changes retrieval.
+
+**Data:** Generate 60 two-dimensional points with three labeled groups. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A notebook comparing dot product, cosine and Euclidean rankings.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Partial derivatives, Jacobians and vector gradients:** Extend the project with Partial derivatives, Jacobians and vector gradients in Geometric similarity explorer. Adapt this focused lab to the project data: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.  Required concepts: Partial derivatives, Gradient direction, Jacobian shape, Chain rule composition, Vector-Jacobian products.
+  - Deliverable: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A notebook comparing dot product, cosine and Euclidean rankings. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Partial derivatives, Jacobians and vector gradients: Partial derivatives, Jacobians and vector gradients: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify hand-calculated examples and explain ranking changes after scaling.
+- [ ] Partial derivatives, Jacobians and vector gradients: Differentiate a two-input, two-output function analytically, with finite differences and PyTorch autograd. Check Jacobian shapes and a vector-Jacobian product in float64.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Confidence intervals, bootstrap and causal limits
+
+<a id="data-inference-causality"></a>
+
+### Confidence intervals, bootstrap and causal limits
+
+Confidence intervals, bootstrap and causal limits helps you make explainable engineering decisions and test failure cases. Build the experiment below before relying on the concept in an AI system.
+
+**Priority:** Foundation · **Study:** 4h · **Practice:** 5h
+
+**Prerequisites:** [Sampling, uncertainty, joins and dataset validation](math-data.md#data-statistics-validation) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Sampling unit:** Independent sampling units determine the meaning of uncertainty estimates.
+  - Example: Group repeated sessions by fictional user before splitting and resampling.
+  - Videos:
+    - [College statistics — full course](https://www.youtube.com/watch?v=xxpc-HPKN28) · freeCodeCamp · Full course · approximately 8h
+      - Explains: Descriptive statistics, probability, distributions and statistical reasoning.
+      - Useful because: Learn to interpret dataset summaries and uncertainty instead of trusting one metric.
+      - Watch for: Focus on sampling unit. Then reproduce the lesson example: Group repeated sessions by fictional user before splitting and resampling.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/free-statistics-course/
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on sampling unit. Then reproduce the lesson example: Group repeated sessions by fictional user before splitting and resampling.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **Standard error:** The standard error describes variability of an estimator across samples, not variability of individual observations.
+  - Example: Compare sample standard deviation with estimated standard error of the mean.
+  - Videos:
+    - [College statistics — full course](https://www.youtube.com/watch?v=xxpc-HPKN28) · freeCodeCamp · Full course · approximately 8h
+      - Explains: Descriptive statistics, probability, distributions and statistical reasoning.
+      - Useful because: Learn to interpret dataset summaries and uncertainty instead of trusting one metric.
+      - Watch for: Focus on standard error. Then reproduce the lesson example: Compare sample standard deviation with estimated standard error of the mean.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/free-statistics-course/
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on standard error. Then reproduce the lesson example: Compare sample standard deviation with estimated standard error of the mean.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **Bootstrap:** Resampling observed units approximates the sampling distribution under assumptions about representativeness.
+  - Example: Draw 1000 seeded bootstrap samples of 80 users and form a percentile interval.
+  - Videos:
+    - [College statistics — full course](https://www.youtube.com/watch?v=xxpc-HPKN28) · freeCodeCamp · Full course · approximately 8h
+      - Explains: Descriptive statistics, probability, distributions and statistical reasoning.
+      - Useful because: Learn to interpret dataset summaries and uncertainty instead of trusting one metric.
+      - Watch for: Focus on bootstrap. Then reproduce the lesson example: Draw 1000 seeded bootstrap samples of 80 users and form a percentile interval.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/free-statistics-course/
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on bootstrap. Then reproduce the lesson example: Draw 1000 seeded bootstrap samples of 80 users and form a percentile interval.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **Confidence interpretation:** A confidence procedure has long-run coverage under its assumptions; an individual fixed interval is not a probability distribution over a fixed parameter.
+  - Example: Compare coverage over 200 simulated datasets with a known mean.
+  - Videos:
+    - [College statistics — full course](https://www.youtube.com/watch?v=xxpc-HPKN28) · freeCodeCamp · Full course · approximately 8h
+      - Explains: Descriptive statistics, probability, distributions and statistical reasoning.
+      - Useful because: Learn to interpret dataset summaries and uncertainty instead of trusting one metric.
+      - Watch for: Focus on confidence interpretation. Then reproduce the lesson example: Compare coverage over 200 simulated datasets with a known mean.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/free-statistics-course/
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on confidence interpretation. Then reproduce the lesson example: Compare coverage over 200 simulated datasets with a known mean.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **Confounding:** A shared cause can produce an association without a causal effect.
+  - Example: Generate different device mixes across groups and compare pooled and stratified means.
+  - Videos:
+    - [College statistics — full course](https://www.youtube.com/watch?v=xxpc-HPKN28) · freeCodeCamp · Full course · approximately 8h
+      - Explains: Descriptive statistics, probability, distributions and statistical reasoning.
+      - Useful because: Learn to interpret dataset summaries and uncertainty instead of trusting one metric.
+      - Watch for: Focus on confounding. Then reproduce the lesson example: Generate different device mixes across groups and compare pooled and stratified means.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/free-statistics-course/
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on confounding. Then reproduce the lesson example: Generate different device mixes across groups and compare pooled and stratified means.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+
+#### YouTube: focused explanations and full courses
+
+- [College statistics — full course](https://www.youtube.com/watch?v=xxpc-HPKN28) · freeCodeCamp · Full course · approximately 8h
+  - Explains: Descriptive statistics, probability, distributions and statistical reasoning.
+  - Useful because: Learn to interpret dataset summaries and uncertainty instead of trusting one metric.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/free-statistics-course/
+- [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+  - Explains: NumPy, pandas, cleaning and exploring data with Python.
+  - Useful because: Work through real data transformations before building training pipelines.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+
+#### Free written resources
+
+1. [Official reference: Confidence intervals, bootstrap and causal limits](https://seeing-theory.brown.edu/frequentist-inference/index.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+2. [pandas: merge and join](https://pandas.pydata.org/docs/user_guide/merging.html) — Free; no registration required. No paid materials required.
+
+#### Lab: Confidence intervals, bootstrap and causal limits
+
+Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.
+
+**Deliverables**
+
+- Runnable CPU notebook or script with deterministic fixtures
+- Measured outputs, failure cases and a README explaining decisions
+
+**Completion checks**
+
+- [ ] Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.
+- [ ] Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+#### Ten project recommendations
+
+### Conditional probability simulator
+
+An analyst needs to distinguish test accuracy from posterior probability.
+
+**Data:** Simulate 10000 fictional cases at three base rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A contingency table and Bayes-rule calculator.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Confidence intervals, bootstrap and causal limits:** Extend the project with Confidence intervals, bootstrap and causal limits in Conditional probability simulator. Adapt this focused lab to the project data: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.  Required concepts: Sampling unit, Standard error, Bootstrap, Confidence interpretation, Confounding.
+  - Deliverable: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A contingency table and Bayes-rule calculator. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Confidence intervals, bootstrap and causal limits: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match analytical posterior values within stated simulation tolerance.
+- [ ] Confidence intervals, bootstrap and causal limits: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Bootstrap uncertainty studio
+
+A product analyst needs uncertainty around a small sample mean.
+
+**Data:** Generate 80 session lengths with a skewed distribution. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A bootstrap interval report with reproducible resampling.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Confidence intervals, bootstrap and causal limits:** Extend the project with Confidence intervals, bootstrap and causal limits in Bootstrap uncertainty studio. Adapt this focused lab to the project data: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.  Required concepts: Sampling unit, Standard error, Bootstrap, Confidence interpretation, Confounding.
+  - Deliverable: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A bootstrap interval report with reproducible resampling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Confidence intervals, bootstrap and causal limits: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compare percentile intervals with a normal approximation and discuss limits.
+- [ ] Confidence intervals, bootstrap and causal limits: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Misleading chart repair desk
+
+A report author needs honest charts for comparing groups.
+
+**Data:** Create four group distributions with outliers and unequal sizes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Before/after charts with labeled axes and interpretation notes.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Confidence intervals, bootstrap and causal limits:** Extend the project with Confidence intervals, bootstrap and causal limits in Misleading chart repair desk. Adapt this focused lab to the project data: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.  Required concepts: Sampling unit, Standard error, Bootstrap, Confidence interpretation, Confounding.
+  - Deliverable: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Before/after charts with labeled axes and interpretation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Confidence intervals, bootstrap and causal limits: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show sample counts and uncertainty; avoid hiding outliers or truncating a bar axis.
+- [ ] Confidence intervals, bootstrap and causal limits: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Distribution shift notebook
+
+A team needs to notice changing input distributions.
+
+**Data:** Generate reference and shifted sensor batches with known mean and variance changes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Histograms, summary statistics and a shift investigation report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Confidence intervals, bootstrap and causal limits:** Extend the project with Confidence intervals, bootstrap and causal limits in Distribution shift notebook. Adapt this focused lab to the project data: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.  Required concepts: Sampling unit, Standard error, Bootstrap, Confidence interpretation, Confounding.
+  - Deliverable: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Histograms, summary statistics and a shift investigation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Confidence intervals, bootstrap and causal limits: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect the seeded shift and explain why detection does not identify its cause.
+- [ ] Confidence intervals, bootstrap and causal limits: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Finite difference microscope
+
+A learner needs to verify derivatives used in optimization.
+
+**Data:** Generate a 30-row quadratic regression problem. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A notebook comparing analytical and numerical gradients.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Confidence intervals, bootstrap and causal limits:** Extend the project with Confidence intervals, bootstrap and causal limits in Finite difference microscope. Adapt this focused lab to the project data: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.  Required concepts: Sampling unit, Standard error, Bootstrap, Confidence interpretation, Confounding.
+  - Deliverable: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A notebook comparing analytical and numerical gradients. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Confidence intervals, bootstrap and causal limits: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report relative error for multiple step sizes and explain cancellation.
+- [ ] Confidence intervals, bootstrap and causal limits: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data join integrity checker
+
+An analyst needs to detect duplicated rows caused by joins.
+
+**Data:** Create customer and order CSV files with missing and duplicated keys. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A pandas join audit with rejected records and row-count explanations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Confidence intervals, bootstrap and causal limits:** Extend the project with Confidence intervals, bootstrap and causal limits in Data join integrity checker. Adapt this focused lab to the project data: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.  Required concepts: Sampling unit, Standard error, Bootstrap, Confidence interpretation, Confounding.
+  - Deliverable: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A pandas join audit with rejected records and row-count explanations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Confidence intervals, bootstrap and causal limits: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect many-to-many expansion and reconcile order totals.
+- [ ] Confidence intervals, bootstrap and causal limits: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Missing value investigation
+
+A researcher needs to understand how missingness alters summaries.
+
+**Data:** Generate 200 survey rows with random and income-dependent missingness. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A cleaning notebook comparing deletion and imputation.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Confidence intervals, bootstrap and causal limits:** Extend the project with Confidence intervals, bootstrap and causal limits in Missing value investigation. Adapt this focused lab to the project data: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.  Required concepts: Sampling unit, Standard error, Bootstrap, Confidence interpretation, Confounding.
+  - Deliverable: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A cleaning notebook comparing deletion and imputation. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Confidence intervals, bootstrap and causal limits: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Quantify bias under each missingness mechanism without claiming causality.
+- [ ] Confidence intervals, bootstrap and causal limits: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Feature scaling geometry
+
+A model builder needs to understand units before measuring distance.
+
+**Data:** Generate height/income features with very different scales. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A NumPy study of standard, robust and min-max scaling.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Confidence intervals, bootstrap and causal limits:** Extend the project with Confidence intervals, bootstrap and causal limits in Feature scaling geometry. Adapt this focused lab to the project data: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.  Required concepts: Sampling unit, Standard error, Bootstrap, Confidence interpretation, Confounding.
+  - Deliverable: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A NumPy study of standard, robust and min-max scaling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Confidence intervals, bootstrap and causal limits: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Fit scaling on training rows only and compare neighbor identities.
+- [ ] Confidence intervals, bootstrap and causal limits: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Matrix compression explorer
+
+A learner needs to see the accuracy/storage tradeoff in low-rank approximation.
+
+**Data:** Generate a 64 by 64 grayscale pattern with noise. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SVD reconstruction notebook with rank slider or rank table.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Confidence intervals, bootstrap and causal limits:** Extend the project with Confidence intervals, bootstrap and causal limits in Matrix compression explorer. Adapt this focused lab to the project data: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.  Required concepts: Sampling unit, Standard error, Bootstrap, Confidence interpretation, Confounding.
+  - Deliverable: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SVD reconstruction notebook with rank slider or rank table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Confidence intervals, bootstrap and causal limits: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify error decreases with rank and report retained storage.
+- [ ] Confidence intervals, bootstrap and causal limits: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Geometric similarity explorer
+
+A learner needs to understand why vector scaling changes retrieval.
+
+**Data:** Generate 60 two-dimensional points with three labeled groups. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A notebook comparing dot product, cosine and Euclidean rankings.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Confidence intervals, bootstrap and causal limits:** Extend the project with Confidence intervals, bootstrap and causal limits in Geometric similarity explorer. Adapt this focused lab to the project data: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.  Required concepts: Sampling unit, Standard error, Bootstrap, Confidence interpretation, Confounding.
+  - Deliverable: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+  - Check: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A notebook comparing dot product, cosine and Euclidean rankings. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Confidence intervals, bootstrap and causal limits: Confidence intervals, bootstrap and causal limits: Runnable CPU notebook or script with deterministic fixtures; Measured outputs, failure cases and a README explaining decisions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify hand-calculated examples and explain ranking changes after scaling.
+- [ ] Confidence intervals, bootstrap and causal limits: Generate skewed session lengths and a confounded two-group comparison. Bootstrap the mean, plot uncertainty and explain why an observed difference is not automatically a treatment effect.; Run the example plus an edge case, explain the result, and distinguish measured evidence from assumptions.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+
+## Stage checkpoint
+
+<a id="checkpoint-math-data"></a>
+
+### Mathematics and data checkpoint
+
+Demonstrate readiness through a reproducible practical handoff. Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.
+
+**Priority:** Foundation · **Study:** 1h · **Practice:** 6h
+
+**Prerequisites:** [Vectors, matrices and dot products](math-data.md#math-linear), [Derivatives, chain rule and gradients](math-data.md#math-calculus), [Probability, distributions and statistics](math-data.md#math-probability), [NumPy arrays, shapes and broadcasting](math-data.md#data-numpy), [pandas, cleaning and missing values](math-data.md#data-pandas), [Visualization and exploratory analysis](math-data.md#data-visualization), [Norms, projections, eigenvectors and SVD intuition](math-data.md#math-linear-decompositions), [Sampling, uncertainty, joins and dataset validation](math-data.md#data-statistics-validation), [Bayes, likelihood and decision uncertainty](math-data.md#math-bayes-likelihood), [Entropy, cross-entropy and KL divergence](math-data.md#math-information), [Partial derivatives, Jacobians and vector gradients](math-data.md#math-jacobians), [Confidence intervals, bootstrap and causal limits](math-data.md#data-inference-causality) Navigation is unrestricted.
+
+#### Concepts
+
+- [ ] **Define the success contract:** Write observable checks before implementation so success is not just a plausible demonstration.
+  - Example: Turn this task into a numbered acceptance checklist: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.
+  - Videos:
+    - [College statistics — full course](https://www.youtube.com/watch?v=xxpc-HPKN28) · freeCodeCamp · Full course · approximately 8h
+      - Explains: Descriptive statistics, probability, distributions and statistical reasoning.
+      - Useful because: Learn to interpret dataset summaries and uncertainty instead of trusting one metric.
+      - Watch for: Focus on define the success contract. Then reproduce the lesson example: Turn this task into a numbered acceptance checklist: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/free-statistics-course/
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on define the success contract. Then reproduce the lesson example: Turn this task into a numbered acceptance checklist: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **Reproduce the baseline:** Keep a simple reference output and deterministic inputs so changes can be compared honestly.
+  - Example: Run a fixed input twice and compare saved outputs with the documented baseline.
+  - Videos:
+    - [College statistics — full course](https://www.youtube.com/watch?v=xxpc-HPKN28) · freeCodeCamp · Full course · approximately 8h
+      - Explains: Descriptive statistics, probability, distributions and statistical reasoning.
+      - Useful because: Learn to interpret dataset summaries and uncertainty instead of trusting one metric.
+      - Watch for: Focus on reproduce the baseline. Then reproduce the lesson example: Run a fixed input twice and compare saved outputs with the documented baseline.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/free-statistics-course/
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on reproduce the baseline. Then reproduce the lesson example: Run a fixed input twice and compare saved outputs with the documented baseline.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **Test a failure boundary:** A working happy path does not establish robustness to malformed data or dependency failures.
+  - Example: Inject one malformed input and one controlled failure, then record the resulting state.
+  - Videos:
+    - [College statistics — full course](https://www.youtube.com/watch?v=xxpc-HPKN28) · freeCodeCamp · Full course · approximately 8h
+      - Explains: Descriptive statistics, probability, distributions and statistical reasoning.
+      - Useful because: Learn to interpret dataset summaries and uncertainty instead of trusting one metric.
+      - Watch for: Focus on test a failure boundary. Then reproduce the lesson example: Inject one malformed input and one controlled failure, then record the resulting state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/free-statistics-course/
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on test a failure boundary. Then reproduce the lesson example: Inject one malformed input and one controlled failure, then record the resulting state.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **Explain the decisions:** Describe why each technique was chosen and what evidence would make you choose differently.
+  - Example: Write a short decision note comparing the chosen approach with one simpler alternative.
+  - Videos:
+    - [College statistics — full course](https://www.youtube.com/watch?v=xxpc-HPKN28) · freeCodeCamp · Full course · approximately 8h
+      - Explains: Descriptive statistics, probability, distributions and statistical reasoning.
+      - Useful because: Learn to interpret dataset summaries and uncertainty instead of trusting one metric.
+      - Watch for: Focus on explain the decisions. Then reproduce the lesson example: Write a short decision note comparing the chosen approach with one simpler alternative.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/free-statistics-course/
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on explain the decisions. Then reproduce the lesson example: Write a short decision note comparing the chosen approach with one simpler alternative.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+- [ ] **Hand off the evidence:** Another learner must be able to reproduce the result from your instructions and supplied inputs.
+  - Example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+  - Videos:
+    - [College statistics — full course](https://www.youtube.com/watch?v=xxpc-HPKN28) · freeCodeCamp · Full course · approximately 8h
+      - Explains: Descriptive statistics, probability, distributions and statistical reasoning.
+      - Useful because: Learn to interpret dataset summaries and uncertainty instead of trusting one metric.
+      - Watch for: Focus on hand off the evidence. Then reproduce the lesson example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/free-statistics-course/
+    - [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+      - Explains: NumPy, pandas, cleaning and exploring data with Python.
+      - Useful because: Work through real data transformations before building training pipelines.
+      - Watch for: Focus on hand off the evidence. Then reproduce the lesson example: Ask a teammate to run the README commands in a clean environment and record missing steps.
+      - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+      - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+
+#### YouTube: focused explanations and full courses
+
+- [College statistics — full course](https://www.youtube.com/watch?v=xxpc-HPKN28) · freeCodeCamp · Full course · approximately 8h
+  - Explains: Descriptive statistics, probability, distributions and statistical reasoning.
+  - Useful because: Learn to interpret dataset summaries and uncertainty instead of trusting one metric.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/free-statistics-course/
+- [Data analysis with Python — full course](https://www.youtube.com/watch?v=r-uOLxNrNk8) · freeCodeCamp · Full course · approximately 4h
+  - Explains: NumPy, pandas, cleaning and exploring data with Python.
+  - Useful because: Work through real data transformations before building training pipelines.
+  - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
+  - Verification source: https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/
+
+#### Free written resources
+
+1. [Official reference: Confidence intervals, bootstrap and causal limits](https://seeing-theory.brown.edu/frequentist-inference/index.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+2. [pandas: merge and join](https://pandas.pydata.org/docs/user_guide/merging.html) — Free; no registration required. No paid materials required.
+
+#### Mathematics and data checkpoint
+
+Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.
+
+**Deliverables**
+
+- Runnable project and reproducible input fixtures
+- README, results and decision notes
+- Failure evidence and clean-start instructions
+
+**Completion checks**
+
+- [ ] Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.
+- [ ] Explain the code and results without relying on an AI-generated summary.
+- [ ] A teammate can reproduce the demo without paid credentials.
+
+#### Ten project recommendations
+
+### Conditional probability simulator
+
+An analyst needs to distinguish test accuracy from posterior probability.
+
+**Data:** Simulate 10000 fictional cases at three base rates. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A contingency table and Bayes-rule calculator.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mathematics and data checkpoint:** Extend the project with Mathematics and data checkpoint in Conditional probability simulator. Adapt this focused lab to the project data: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A contingency table and Bayes-rule calculator. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mathematics and data checkpoint: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Match analytical posterior values within stated simulation tolerance.
+- [ ] Mathematics and data checkpoint: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Bootstrap uncertainty studio
+
+A product analyst needs uncertainty around a small sample mean.
+
+**Data:** Generate 80 session lengths with a skewed distribution. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A bootstrap interval report with reproducible resampling.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mathematics and data checkpoint:** Extend the project with Mathematics and data checkpoint in Bootstrap uncertainty studio. Adapt this focused lab to the project data: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A bootstrap interval report with reproducible resampling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mathematics and data checkpoint: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compare percentile intervals with a normal approximation and discuss limits.
+- [ ] Mathematics and data checkpoint: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Misleading chart repair desk
+
+A report author needs honest charts for comparing groups.
+
+**Data:** Create four group distributions with outliers and unequal sizes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Before/after charts with labeled axes and interpretation notes.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mathematics and data checkpoint:** Extend the project with Mathematics and data checkpoint in Misleading chart repair desk. Adapt this focused lab to the project data: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Before/after charts with labeled axes and interpretation notes. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mathematics and data checkpoint: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show sample counts and uncertainty; avoid hiding outliers or truncating a bar axis.
+- [ ] Mathematics and data checkpoint: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Distribution shift notebook
+
+A team needs to notice changing input distributions.
+
+**Data:** Generate reference and shifted sensor batches with known mean and variance changes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** Histograms, summary statistics and a shift investigation report.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mathematics and data checkpoint:** Extend the project with Mathematics and data checkpoint in Distribution shift notebook. Adapt this focused lab to the project data: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: Histograms, summary statistics and a shift investigation report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mathematics and data checkpoint: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect the seeded shift and explain why detection does not identify its cause.
+- [ ] Mathematics and data checkpoint: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Finite difference microscope
+
+A learner needs to verify derivatives used in optimization.
+
+**Data:** Generate a 30-row quadratic regression problem. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A notebook comparing analytical and numerical gradients.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mathematics and data checkpoint:** Extend the project with Mathematics and data checkpoint in Finite difference microscope. Adapt this focused lab to the project data: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A notebook comparing analytical and numerical gradients. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mathematics and data checkpoint: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Report relative error for multiple step sizes and explain cancellation.
+- [ ] Mathematics and data checkpoint: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data join integrity checker
+
+An analyst needs to detect duplicated rows caused by joins.
+
+**Data:** Create customer and order CSV files with missing and duplicated keys. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A pandas join audit with rejected records and row-count explanations.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mathematics and data checkpoint:** Extend the project with Mathematics and data checkpoint in Data join integrity checker. Adapt this focused lab to the project data: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A pandas join audit with rejected records and row-count explanations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mathematics and data checkpoint: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Detect many-to-many expansion and reconcile order totals.
+- [ ] Mathematics and data checkpoint: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Missing value investigation
+
+A researcher needs to understand how missingness alters summaries.
+
+**Data:** Generate 200 survey rows with random and income-dependent missingness. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A cleaning notebook comparing deletion and imputation.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mathematics and data checkpoint:** Extend the project with Mathematics and data checkpoint in Missing value investigation. Adapt this focused lab to the project data: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A cleaning notebook comparing deletion and imputation. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mathematics and data checkpoint: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Quantify bias under each missingness mechanism without claiming causality.
+- [ ] Mathematics and data checkpoint: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Feature scaling geometry
+
+A model builder needs to understand units before measuring distance.
+
+**Data:** Generate height/income features with very different scales. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A NumPy study of standard, robust and min-max scaling.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mathematics and data checkpoint:** Extend the project with Mathematics and data checkpoint in Feature scaling geometry. Adapt this focused lab to the project data: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A NumPy study of standard, robust and min-max scaling. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mathematics and data checkpoint: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Fit scaling on training rows only and compare neighbor identities.
+- [ ] Mathematics and data checkpoint: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Matrix compression explorer
+
+A learner needs to see the accuracy/storage tradeoff in low-rank approximation.
+
+**Data:** Generate a 64 by 64 grayscale pattern with noise. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An SVD reconstruction notebook with rank slider or rank table.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mathematics and data checkpoint:** Extend the project with Mathematics and data checkpoint in Matrix compression explorer. Adapt this focused lab to the project data: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An SVD reconstruction notebook with rank slider or rank table. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mathematics and data checkpoint: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify error decreases with rank and report retained storage.
+- [ ] Mathematics and data checkpoint: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Geometric similarity explorer
+
+A learner needs to understand why vector scaling changes retrieval.
+
+**Data:** Generate 60 two-dimensional points with three labeled groups. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A notebook comparing dot product, cosine and Euclidean rankings.
+
+**Effort:** 10h · Beginner → intermediate
+
+- **Mathematics and data checkpoint:** Extend the project with Mathematics and data checkpoint in Geometric similarity explorer. Adapt this focused lab to the project data: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A notebook comparing dot product, cosine and Euclidean rankings. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Mathematics and data checkpoint: Mathematics and data checkpoint: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Verify hand-calculated examples and explain ranking changes after scaling.
+- [ ] Mathematics and data checkpoint: Clean a generated dataset, explain shapes and dot products, check a gradient numerically, compute a conditional probability and bootstrap a mean. Plot results and state the causal limits of an observed association.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

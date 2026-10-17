@@ -1,9 +1,12 @@
 import { domains as basics } from "../content/curriculum.mjs";
 import { advanced } from "../content/advanced.mjs";
 import { expandDomains } from "../content/details.mjs";
-import { recommend } from "../src/recommendations.mjs";
+import { recommend, libraryBrief } from "../src/recommendations.mjs";
+import { projectLibrary, projectLibraryVersion } from "../content/projects.mjs";
+import { mentorPrompt } from "../src/project-mentor.mjs";
 import { attachVideos } from "../content/videos.mjs";
 import { domainOrder, stageGuides, pipeline } from "../content/order.mjs";
+import { learningStages } from '../content/deep-route.mjs';
 import { mkdir, writeFile, readFile } from "node:fs/promises";
 import path from "node:path";
 const domains = attachVideos(
@@ -23,6 +26,7 @@ const allVideos = new Map(
 const catalog = {
   version: 1,
   pipeline,
+  stages: learningStages(domains),
   domains: domains.map((domain) => ({
     ...domain,
     modules: domain.modules.map((module) => ({
@@ -55,6 +59,42 @@ const projectMD = (p) =>
   `### ${p.title}\n\n${p.problem}\n\n**Data:** ${p.data}\n\n**Output:** ${p.output}\n\n**Effort:** ${p.hours}h · ${p.difficulty}\n\n${p.integration.map((i) => `- **${i.skillTitle}:** ${i.task}\n  - Deliverable: ${i.deliverable}\n  - Check: ${i.check}`).join("\n")}\n\n**Milestones**\n\n${p.milestones.map((x) => `- [ ] ${x}`).join("\n")}\n\n**Acceptance**\n\n${p.acceptance.map((x) => `- [ ] ${x}`).join("\n")}\n\n**Documentation:** ${p.documentation.join("; ")}.\n`;
 const links = new Map(
   lessons.flatMap((l) => l.resources.map((x) => [x.url, x])),
+);
+const libraryBriefs = projectLibrary.map((entry) =>
+  libraryBrief(
+    entry,
+    entry.nativeSkills.map(
+      (id) =>
+        lessons.find((l) => l.id === id) ?? domains.find((d) => d.id === id),
+    ),
+  ),
+);
+await writeFile(
+  "src/data/project-library.json",
+  JSON.stringify(
+    { version: projectLibraryVersion, projects: libraryBriefs },
+    null,
+    2,
+  ) + "\n",
+);
+await writeFile(
+  "docs/PROJECT_LIBRARY.md",
+  `# Project library · version ${projectLibraryVersion}\n\n${projectLibrary.length} authored projects across 13 domains. Each brief is generated from the same data and composer used by the app. These are educational specifications, not claims that every implementation has been executed.\n\n${domains.map((d) => `- [${d.title}](#${d.id})`).join("\n")}\n\n${domains
+    .map(
+      (d) =>
+        `<a id="${d.id}"></a>\n\n## ${d.title}\n\n${libraryBriefs
+          .filter(
+            (p) =>
+              projectLibrary.find((e) => e.id === p.patternId).domainId ===
+              d.id,
+          )
+          .map(
+            (p) =>
+              `${projectMD(p)}\n**Audience:** ${p.audience}\n\n**Learning objectives**\n\n${p.learningGoals.map((x) => `- ${x}`).join("\n")}\n\n**Data flow**\n\n${p.dataFlow.map((x, i) => `${i + 1}. ${x}`).join("\n")}\n\n**Free implementation references**\n\n${p.resources.map((r) => `- [${r.title}](${r.url}) — ${r.access}`).join("\n")}\n\n<details>\n<summary>English AI mentor prompt</summary>\n\n\`\`\`text\n${mentorPrompt(p)}\`\`\`\n\n</details>\n`,
+          )
+          .join("\n---\n")}`,
+    )
+    .join("\n\n")}`,
 );
 await writeFile(
   "docs/PIPELINE.md",
@@ -101,7 +141,7 @@ await writeFile(
 );
 await writeFile(
   "docs/PROJECTS.md",
-  `# Project catalog\n\nEvery lesson has ten project briefs in its domain document. The website uses the same deterministic composer for combinations, with a named task, deliverable and check for every selected skill. Unmapped custom topics are explicitly general practice.\n\n## Example: ML + DL + FastAPI + Docker\n\n${recommend(
+  `# Project catalog\n\nBrowse the [130-project library with English mentor prompts](PROJECT_LIBRARY.md). Every lesson has ten initial project briefs in its domain document. The website supports further batches without repeating ideas. The website uses the same deterministic composer for combinations, with a named task, deliverable and check for every selected skill. Unmapped custom topics are explicitly general practice.\n\n## Example: ML + DL + FastAPI + Docker\n\n${recommend(
     [
       domains.find((d) => d.id === "ml"),
       domains.find((d) => d.id === "dl"),

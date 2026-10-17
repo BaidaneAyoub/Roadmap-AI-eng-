@@ -1,3 +1,5 @@
+import { projectLibrary, predictionTargets } from "../content/projects.mjs";
+import { toolFor } from "../content/project-tools.mjs";
 // Authored project patterns and integration responsibilities; no model/API calls.
 export const patterns = [
   {
@@ -224,7 +226,7 @@ const scenarios = {
     skills: ["eval-security", "ml", "dl"],
   },
 };
-export function recommend(skills) {
+export function legacyRecommend(skills) {
   const unique = [...new Map(skills.map((s) => [s.id, s])).values()].sort(
     (a, b) => a.id.localeCompare(b.id),
   );
@@ -303,4 +305,292 @@ export function recommend(skills) {
       general: integration.some((x) => x.general),
     };
   });
+}
+
+const modelDomains = new Set(["ml", "dl"]);
+const domainOf = (s) => s.domainId ?? s.id;
+const canonical = (s) => s.mapping || s.id;
+const executionOrder = [
+  "product",
+  "coding-agents",
+  "engineering",
+  "python",
+  "math-data",
+  "ml",
+  "dl",
+  "rag",
+  "llm",
+  "agents",
+  "backend",
+  "eval-security",
+  "deployment",
+];
+
+export function libraryBrief(entry, skills) {
+  const selected = [...new Map(skills.map((s) => [s.id, s])).values()].sort(
+    (a, b) => a.id.localeCompare(b.id),
+  );
+  const integration = [...selected]
+    .sort(
+      (a, b) =>
+        executionOrder.indexOf(domainOf(a)) -
+          executionOrder.indexOf(domainOf(b)) || a.id.localeCompare(b.id),
+    )
+    .map((skill) => {
+      const tool = toolFor(skill);
+      const mapping = tasks[domainOf(skill)];
+      const conceptNames = skill.concepts?.map((c) => c.name).join(", ");
+      const native =
+        entry.nativeSkills.includes(canonical(skill)) ||
+        entry.domainId === canonical(skill);
+      const lab = skill.exercise;
+      const domainOverview =
+        selected.length === 1 && canonical(skill) === entry.domainId;
+      return {
+        skillId: skill.id,
+        skillTitle: skill.title,
+        catalogSkillId: canonical(skill),
+        task: domainOverview
+          ? `Build ${entry.output} Explain the ${skill.title} concepts actually used and reproduce the acceptance experiment: ${entry.check}`
+          : tool
+            ? `${tool.task} Apply this to ${entry.title}: ${entry.output} ${conceptNames ? `Focus: ${conceptNames}.` : ""}`
+            : mapping
+              ? `${native ? "Implement" : "Extend the project with"} ${skill.title} in ${entry.title}. ${lab ? `Adapt this focused lab to the project data: ${lab.brief}` : mapping[0]} ${predictionTargets[entry.id] && modelDomains.has(domainOf(skill)) ? `Predict ${predictionTargets[entry.id]}; keep the same target and splits across model comparisons.` : ""} ${conceptNames ? `Required concepts: ${conceptNames}.` : ""}`
+              : `General practice: investigate ${skill.title}, agree a testable role in ${entry.title}, and document assumptions before implementation.`,
+        deliverable: domainOverview
+          ? entry.output
+          : (tool?.deliverable ??
+            (lab
+              ? `${skill.title}: ${lab.deliverables.join("; ")}`
+              : (mapping?.[2] ??
+                `A worked ${skill.title} example and limitations note`))),
+        check: domainOverview
+          ? entry.check
+          : tool
+            ? `${tool.check} ${lab ? lab.acceptance.join("; ") : ""}`
+            : lab
+              ? lab.acceptance.join("; ")
+              : (mapping?.[1] ??
+                "Validate a worked example and edge case; this topic has no researched catalog mapping."),
+        general: !tool && !mapping,
+      };
+    });
+  for (const part of integration) {
+    part.task = part.task.trim();
+    part.check = part.check.trim();
+  }
+  const hasModels =
+    Boolean(predictionTargets[entry.id]) &&
+    selected.some((s) => modelDomains.has(domainOf(s)));
+  const bothModels = ["ml", "dl"].every((d) =>
+    selected.some((s) => domainOf(s) === d),
+  );
+  const comparisons = [
+    ["ml-linear", "ml-trees", "ml-neighbors", "ml-svm-kernels"],
+    ["backend-sql", "backend-stores"],
+    [
+      "dl-sequences",
+      "dl-recurrent-state",
+      "dl-causal-convolutions",
+      "dl-transformer-blocks",
+    ],
+  ]
+    .map((group) => selected.filter((s) => group.includes(canonical(s))))
+    .filter((group) => group.length > 1)
+    .map(
+      (group) =>
+        `Compare ${group.map((s) => s.title).join(" versus ")} on identical project inputs, with the same correctness/quality checks and measured latency. Document when each is appropriate.`,
+    );
+  const source = selected.every(
+    (s) =>
+      entry.nativeSkills.includes(canonical(s)) ||
+      entry.domainId === canonical(s),
+  )
+    ? "Curated match"
+    : "Adapted library project";
+  const stages = [
+    {
+      title: "MVP · problem and reproducible baseline",
+      deliverable: `${entry.output} Start with the smallest deterministic reference before adding extensions.`,
+      check: entry.check,
+    },
+    ...integration.map((i, index) => ({
+      title: `${index < 3 ? "MVP" : "Extension"} · ${i.skillTitle}`,
+      deliverable: i.deliverable,
+      check: i.check,
+    })),
+    ...comparisons.map((check) => ({
+      title: "Alternative-tool comparison",
+      deliverable: "Side-by-side results and an architecture decision",
+      check,
+    })),
+    {
+      title: "Integrated demonstration",
+      deliverable:
+        "One clean-start command, connected end-to-end example and evidence report",
+      check:
+        "Re-run the same input through all selected components and verify the final output against the source records.",
+    },
+    {
+      title: "Explain and hand off",
+      deliverable: "README, decision notes and recorded limitations",
+      check:
+        "A teammate reproduces the example and you explain each selected skill without reading generated code.",
+    },
+  ];
+  return {
+    id: `v2:${entry.id}:${selected.map((s) => s.id).join("+")}`,
+    patternId: entry.id,
+    catalogVersion: 2,
+    source,
+    title: entry.title,
+    problem: entry.problem,
+    audience: entry.audience,
+    data: `${entry.data} Use a fixed seed and keep evaluation cases separate.`,
+    output: entry.output,
+    resources: [
+      ...new Map(
+        [
+          ...(entry.resources ?? []),
+          ...selected.flatMap((s) => (s.resources ?? []).slice(0, 1)),
+        ].map((r) => [r.url, r]),
+      ).values(),
+    ],
+    learningGoals: [
+      ...entry.learningGoals,
+      ...selected.map(
+        (s) =>
+          `Explain the role, tradeoffs and failure modes of ${s.title} in the completed system.`,
+      ),
+    ],
+    boundaries: [
+      "Local educational prototype using fictional, generated or bundled data.",
+      "No paid credentials, production deployment or collection of private personal data required.",
+      "Large-model training is out of scope; use small CPU examples. Recorded responses test integration, not model quality.",
+    ],
+    skills: selected.map((s) => s.id),
+    integration,
+    general: integration.some((i) => i.general),
+    prerequisiteSkills: entry.nativeSkills.filter(
+      (id) =>
+        !selected.some(
+          (s) =>
+            canonical(s) === id ||
+            domainOf(s) === id ||
+            (canonical(s) === entry.domainId &&
+              id.startsWith(`${entry.domainId}-`)),
+        ),
+    ),
+    difficulty:
+      selected.length > 5
+        ? "Advanced integration · staged scope"
+        : entry.difficulty,
+    hours: entry.hours + Math.max(0, selected.length - 1) * 5,
+    components: integration.map((i) => `${i.skillTitle}: ${i.deliverable}`),
+    dataFlow: [
+      entry.data,
+      "Validate source records and preserve stable IDs.",
+      ...(hasModels
+        ? [
+            "Create a leakage-safe train/validation/test split and a simple reference predictor.",
+            bothModels
+              ? "Train the scikit-learn baseline and small PyTorch model on the same target and splits; compare quality and CPU latency."
+              : "Fit the selected model, evaluate on held-out data and persist inference artifacts.",
+          ]
+        : []),
+      ...integration
+        .filter(
+          (i) =>
+            !hasModels ||
+            !modelDomains.has(
+              domainOf(selected.find((s) => s.id === i.skillId)),
+            ),
+        )
+        .map(
+          (i) =>
+            `${i.skillTitle} consumes the project records/results and produces: ${i.deliverable}.`,
+        ),
+      entry.output,
+      entry.check,
+    ],
+    stages,
+    milestones: stages.map((s) => `${s.title}: ${s.deliverable}`),
+    acceptance: [
+      entry.check,
+      ...integration.map((i) => `${i.skillTitle}: ${i.check}`),
+      ...comparisons,
+      ...(bothModels
+        ? [
+            "Compare ML and DL on the same held-out target, metric and CPU latency benchmark.",
+          ]
+        : []),
+      "A teammate can reproduce the demo using the README without paid credentials.",
+    ],
+    documentation:
+      selected.length > 1
+        ? [
+            "README and worked example",
+            "Requirements and success metric",
+            "Architecture, data contracts and ADR",
+            "Evaluation and limitations",
+            "Local deployment guide and recovery runbook",
+          ]
+        : ["README: purpose, setup, worked example, checks and limitations"],
+  };
+}
+
+export function recommendAll(skills) {
+  const selected = [...new Map(skills.map((s) => [s.id, s])).values()].sort(
+    (a, b) => a.id.localeCompare(b.id),
+  );
+  if (!selected.length) return [];
+  const domains = [...new Set(selected.map(domainOf))];
+  // Only attach model training to authored prediction problems; do not invent labels for arbitrary workflows.
+  const model = domains.some((d) => modelDomains.has(d));
+  const crossDomainModel = model && (domains.length > 1 || selected.length > 1);
+  const candidates = projectLibrary.filter(
+    (p) =>
+      (domains.includes(p.domainId) ||
+        selected.some((s) => p.nativeSkills.includes(canonical(s)))) &&
+      (!crossDomainModel || predictionTargets[p.id]),
+  );
+  const score = (p) => {
+    const exact = selected.every(
+      (s) =>
+        p.nativeSkills.includes(canonical(s)) || p.domainId === canonical(s),
+    );
+    return (
+      (exact ? 10000 : 0) +
+      selected.filter((s) => p.nativeSkills.includes(canonical(s))).length *
+        100 +
+      (domains.includes(p.domainId) ? 10 : 0)
+    );
+  };
+  candidates.sort((a, b) => score(b) - score(a) || a.id.localeCompare(b.id));
+  const library = candidates.map((p) => libraryBrief(p, selected));
+  const composed = patterns.map((p) => {
+    const scenario = scenarios[p.id];
+    const entry = {
+      ...p,
+      id: `composed-${p.id}`,
+      domainId: "general",
+      nativeSkills: [],
+      data: `${p.data} ${model ? `For model experiments use the explicit target: ${scenario.target}; baseline: ${scenario.baseline}. Preserve deterministic validation as the authority for rule-based tasks.` : ""}`,
+      audience: "A learner building a local educational prototype",
+      learningGoals: [
+        `Connect the selected skills in ${p.title.toLowerCase()}.`,
+      ],
+      difficulty: "Intermediate",
+      hours: 12,
+    };
+    return {
+      ...libraryBrief(entry, selected),
+      source: "Composed practice pattern",
+    };
+  });
+  return [...library, ...composed];
+}
+
+export function recommend(skills, offset = 0) {
+  return recommendAll(skills).slice(offset, offset + 10);
 }

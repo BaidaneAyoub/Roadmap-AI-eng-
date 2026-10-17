@@ -13,6 +13,12 @@ npm run dev
 
 Local mode supports four independent profiles, chosen paths, known/skipped/completed lessons, notes/evidence, custom nested topics, ten project recommendations for any skill combination, joining projects and independent copies. Storage stays on the current browser. The UI labels that limit explicitly.
 
+The [project library](docs/PROJECT_LIBRARY.md) contains 130 authored briefs (ten per domain). Select skills in Project Builder: exact matches appear first, followed by adapted library projects and composed practice patterns. **Show more** reveals the next batch without repeating ideas. Each tool has a responsibility, deliverable and check; extra project background is disclosed. Broad selections become staged integration projects, and unknown custom topics are labeled general practice.
+
+Open **Read full brief → Your AI mentor handoff** to preview, copy or download an English prompt. It instructs your AI to diagnose your knowledge, give one exercise at a time, review your attempt and offer hints before solutions. Only selected learning statuses/confidence are included; notes, evidence links and team details are excluded. Clipboard failure exposes selectable text. Nothing is sent to an AI service by Forge.
+
+`content/projects.mjs` and `content/project-tools.mjs` contain the versioned project data and tool mappings. `npm run content` also generates `src/data/project-library.json` and the complete Markdown library from the same composer. Existing saved v1 project snapshots and IDs remain valid. No database migration is needed for the optional brief fields.
+
 The populated curriculum and Markdown exports share the same source. Begin with [the roadmap](docs/ROADMAP.md), [project examples](docs/PROJECTS.md), [source coverage](docs/COVERAGE.md), and [setup instructions](docs/SETUP.md).
 
 ```powershell

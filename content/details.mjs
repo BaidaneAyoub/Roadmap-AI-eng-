@@ -1,5 +1,6 @@
 import { l } from "./curriculum.mjs";
 import { resource } from "./resources.mjs";
+import { deepenDomains } from './deep-route.mjs';
 
 export const detailVideoKeys = {};
 const additions = [];
@@ -1359,5 +1360,5 @@ export function expandDomains(domains) {
     }
     module.lessons.push(structuredClone(lesson));
   }
-  return expanded;
+  return deepenDomains(expanded);
 }

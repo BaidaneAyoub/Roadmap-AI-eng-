@@ -1,5 +1,6 @@
 import research from "./video-research.json" with { type: "json" };
 import { detailVideoKeys } from "./details.mjs";
+import { routeVideoKeys } from './deep-route.mjs';
 // Durations are only supplied when the publisher documents them. No guessed timestamps.
 const video = (id, title, creator, format, explains, useful, source) => ({
   title,
@@ -859,7 +860,7 @@ export function attachVideos(domains) {
   for (const domain of domains)
     for (const module of domain.modules)
       for (const lesson of module.lessons) {
-        const keys = lessonVideoKeys[lesson.id];
+        const keys = routeVideoKeys[lesson.id] ?? lessonVideoKeys[lesson.id] ?? routeVideoKeys[lesson.videoBase] ?? lessonVideoKeys[lesson.videoBase];
         if (!keys) throw new Error(`Missing video curation: ${lesson.id}`);
         lesson.videos = [...new Set([...keys, fullCourses[domain.id]])].map(
           (k) => videos[k],
