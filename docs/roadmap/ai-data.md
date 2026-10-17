@@ -153,6 +153,64 @@ Build a reproducible local ML lifecycle using versioned features, a training pip
 
 #### Ten project recommendations
 
+### Nightly batch scoring job
+
+A retention team needs fresh risk scores each morning without a live API.
+
+**Data:** Generate a daily partition of fictional accounts and a registered model. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A Spark job that loads the registered model, scores the partition and writes to gold.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 1 · ML engineering and MLOps:** Implement Phase 1 · ML engineering and MLOps in Nightly batch scoring job. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.
+  - Deliverable: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A Spark job that loads the registered model, scores the partition and writes to gold. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 1 · ML engineering and MLOps: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Rerunning a night gives identical scores, and a schema-mismatched partition fails before anything is written.
+- [ ] Phase 1 · ML engineering and MLOps: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data drift retraining trigger
+
+An ML owner needs retraining only when input data really changes.
+
+**Data:** Generate twelve weekly batches with drift injected in weeks 8 and 11. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An orchestrated drift check that starts a tracked retraining run from its data snapshot.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 1 · ML engineering and MLOps:** Implement Phase 1 · ML engineering and MLOps in Data drift retraining trigger. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.
+  - Deliverable: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An orchestrated drift check that starts a tracked retraining run from its data snapshot. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 1 · ML engineering and MLOps: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Trigger exactly on the two drifted weeks and record which features moved and by how much.
+- [ ] Phase 1 · ML engineering and MLOps: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
 ### Feature store to prediction loop
 
 An analyst needs churn scores written back next to the source data.
@@ -177,6 +235,35 @@ An analyst needs churn scores written back next to the source data.
 **Acceptance**
 
 - [ ] Reproduce the run from its logged data snapshot and flag a simulated feature drift.
+- [ ] Phase 1 · ML engineering and MLOps: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Point-in-time feature builder
+
+A data scientist needs training features that never use data from after the prediction date.
+
+**Data:** Generate 1000 fictional accounts with timestamped events and a cancellation label. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A point-in-time correct feature table and a model trained on it.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 1 · ML engineering and MLOps:** Extend the project with Phase 1 · ML engineering and MLOps in Point-in-time feature builder. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.
+  - Deliverable: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A point-in-time correct feature table and a model trained on it. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 1 · ML engineering and MLOps: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show a leakage test where the as-of join excludes future events, then compare metrics against a naive join.
 - [ ] Phase 1 · ML engineering and MLOps: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -211,233 +298,146 @@ An on-call engineer needs cited answers about pipeline behavior.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Support ticket triage desk
+### LLM evaluation warehouse
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A team needs every assistant answer logged and comparable across prompt versions.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42.  Use a fixed seed and keep evaluation cases separate.
+**Data:** Record 200 fictional question, answer and citation runs across two prompt versions. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
+**Output:** A modeled evaluation table with per-version quality and latency views.
 
-**Effort:** 12h · Intermediate
+**Effort:** 16h · Intermediate
 
-- **Phase 1 · ML engineering and MLOps:** Extend the project with Phase 1 · ML engineering and MLOps in Support ticket triage desk. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.
+- **Phase 1 · ML engineering and MLOps:** Extend the project with Phase 1 · ML engineering and MLOps in LLM evaluation warehouse. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.
   - Deliverable: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] MVP · problem and reproducible baseline: A review queue with categories, confidence, evidence and correction controls. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · problem and reproducible baseline: A modeled evaluation table with per-version quality and latency views. Start with the smallest deterministic reference before adding extensions.
 - [ ] MVP · Phase 1 · ML engineering and MLOps: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
+- [ ] Compute groundedness and latency per version from the table and reproduce one regression found in it.
 - [ ] Phase 1 · ML engineering and MLOps: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Research library navigator
+### PII-safe training data gate
 
-Help a learner find relevant passages in a small technical reading collection.
+A data owner needs personal data removed before any model or LLM sees it.
 
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings.  Use a fixed seed and keep evaluation cases separate.
+**Data:** Generate 500 fictional support tickets with seeded emails, phone numbers and names. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A searchable library with grounded answers and source references.
+**Output:** A quality-gated redaction step between bronze and the training and embedding inputs.
 
-**Effort:** 12h · Intermediate
+**Effort:** 16h · Intermediate
 
-- **Phase 1 · ML engineering and MLOps:** Extend the project with Phase 1 · ML engineering and MLOps in Research library navigator. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.
+- **Phase 1 · ML engineering and MLOps:** Extend the project with Phase 1 · ML engineering and MLOps in PII-safe training data gate. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.
   - Deliverable: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] MVP · problem and reproducible baseline: A searchable library with grounded answers and source references. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · problem and reproducible baseline: A quality-gated redaction step between bronze and the training and embedding inputs. Start with the smallest deterministic reference before adding extensions.
 - [ ] MVP · Phase 1 · ML engineering and MLOps: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
+- [ ] No seeded identifier reaches the gold table or the vector index, and the gate fails on an unredacted batch.
 - [ ] Phase 1 · ML engineering and MLOps: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### AI data platform design review
 
-Find unusual stock movements and explain which records need investigation.
+A hiring panel needs a defensible end-to-end design for an ML and RAG platform.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies.  Use a fixed seed and keep evaluation cases separate.
+**Data:** Describe the platform built in the other AI + Data projects; no new data is required. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
+**Output:** An architecture document, ADRs and a capacity and cost estimate.
 
-**Effort:** 12h · Intermediate
+**Effort:** 16h · Intermediate
 
-- **Phase 1 · ML engineering and MLOps:** Extend the project with Phase 1 · ML engineering and MLOps in Inventory exception monitor. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.
+- **Phase 1 · ML engineering and MLOps:** Extend the project with Phase 1 · ML engineering and MLOps in AI data platform design review. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.
   - Deliverable: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] MVP · problem and reproducible baseline: An exception list with explanations and reproducible source records. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · problem and reproducible baseline: An architecture document, ADRs and a capacity and cost estimate. Start with the smallest deterministic reference before adding extensions.
 - [ ] MVP · Phase 1 · ML engineering and MLOps: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
+- [ ] Defend three failure scenarios with recovery steps and justify one trade-off against a simpler design.
 - [ ] Phase 1 · ML engineering and MLOps: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### CDC-fed retrieval index
 
-Summarize themes and surface potentially misleading or contradictory review records.
+A support assistant must stop citing help articles after they are edited or deleted.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples.  Use a fixed seed and keep evaluation cases separate.
+**Data:** Use a disposable PostgreSQL table of 30 help articles with scripted edits and deletes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
+**Output:** An incremental embedding index fed by CDC events, with citations.
 
-**Effort:** 12h · Intermediate
+**Effort:** 16h · Intermediate
 
-- **Phase 1 · ML engineering and MLOps:** Extend the project with Phase 1 · ML engineering and MLOps in Product review quality explorer. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.
+- **Phase 1 · ML engineering and MLOps:** Extend the project with Phase 1 · ML engineering and MLOps in CDC-fed retrieval index. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.
   - Deliverable: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] MVP · problem and reproducible baseline: A theme browser and an evidence-linked quality report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · problem and reproducible baseline: An incremental embedding index fed by CDC events, with citations. Start with the smallest deterministic reference before adding extensions.
 - [ ] MVP · Phase 1 · ML engineering and MLOps: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
+- [ ] After each edit or delete the next query cites only the current version and never a removed article.
 - [ ] Phase 1 · ML engineering and MLOps: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Learning gap coach
+### Governed text-to-SQL assistant
 
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
+An analyst needs warehouse answers without writing SQL or touching restricted columns.
 
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships.  Use a fixed seed and keep evaluation cases separate.
+**Data:** Use the star-schema tables from a dbt project with one column marked sensitive. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A next-step study planner with explainable recommendations.
+**Output:** A read-only SQL generation tool with schema context, query validation and an evaluation set.
 
-**Effort:** 12h · Intermediate
+**Effort:** 16h · Intermediate
 
-- **Phase 1 · ML engineering and MLOps:** Extend the project with Phase 1 · ML engineering and MLOps in Learning gap coach. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.
+- **Phase 1 · ML engineering and MLOps:** Extend the project with Phase 1 · ML engineering and MLOps in Governed text-to-SQL assistant. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.
   - Deliverable: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] MVP · problem and reproducible baseline: A next-step study planner with explainable recommendations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · problem and reproducible baseline: A read-only SQL generation tool with schema context, query validation and an evaluation set. Start with the smallest deterministic reference before adding extensions.
 - [ ] MVP · Phase 1 · ML engineering and MLOps: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Phase 1 · ML engineering and MLOps: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates.  Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 12h · Intermediate
-
-- **Phase 1 · ML engineering and MLOps:** Extend the project with Phase 1 · ML engineering and MLOps in Document intake and validation pipeline. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.
-  - Deliverable: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A reproducible ingestion pipeline and a rejection report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 1 · ML engineering and MLOps: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Phase 1 · ML engineering and MLOps: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios.  Use a fixed seed and keep evaluation cases separate.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 12h · Intermediate
-
-- **Phase 1 · ML engineering and MLOps:** Extend the project with Phase 1 · ML engineering and MLOps in Service incident investigation board. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.
-  - Deliverable: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: An incident timeline with linked evidence and runbook actions. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 1 · ML engineering and MLOps: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Phase 1 · ML engineering and MLOps: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries.  Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
-
-**Effort:** 12h · Intermediate
-
-- **Phase 1 · ML engineering and MLOps:** Extend the project with Phase 1 · ML engineering and MLOps in Catalog search and ranking workbench. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.
-  - Deliverable: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A side-by-side ranking interface with measurable relevance. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 1 · ML engineering and MLOps: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
+- [ ] Answer 20 labeled questions, reject every query on the sensitive column and never run a write statement.
 - [ ] Phase 1 · ML engineering and MLOps: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -612,6 +612,209 @@ An on-call engineer needs cited answers about pipeline behavior.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
+### PII-safe training data gate
+
+A data owner needs personal data removed before any model or LLM sees it.
+
+**Data:** Generate 500 fictional support tickets with seeded emails, phone numbers and names. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A quality-gated redaction step between bronze and the training and embedding inputs.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 2 · LLM and GenAI engineering:** Implement Phase 2 · LLM and GenAI engineering in PII-safe training data gate. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.
+  - Deliverable: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A quality-gated redaction step between bronze and the training and embedding inputs. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] No seeded identifier reaches the gold table or the vector index, and the gate fails on an unredacted batch.
+- [ ] Phase 2 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### CDC-fed retrieval index
+
+A support assistant must stop citing help articles after they are edited or deleted.
+
+**Data:** Use a disposable PostgreSQL table of 30 help articles with scripted edits and deletes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An incremental embedding index fed by CDC events, with citations.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 2 · LLM and GenAI engineering:** Implement Phase 2 · LLM and GenAI engineering in CDC-fed retrieval index. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.
+  - Deliverable: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An incremental embedding index fed by CDC events, with citations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] After each edit or delete the next query cites only the current version and never a removed article.
+- [ ] Phase 2 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Governed text-to-SQL assistant
+
+An analyst needs warehouse answers without writing SQL or touching restricted columns.
+
+**Data:** Use the star-schema tables from a dbt project with one column marked sensitive. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A read-only SQL generation tool with schema context, query validation and an evaluation set.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 2 · LLM and GenAI engineering:** Implement Phase 2 · LLM and GenAI engineering in Governed text-to-SQL assistant. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.
+  - Deliverable: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A read-only SQL generation tool with schema context, query validation and an evaluation set. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Answer 20 labeled questions, reject every query on the sensitive column and never run a write statement.
+- [ ] Phase 2 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Nightly batch scoring job
+
+A retention team needs fresh risk scores each morning without a live API.
+
+**Data:** Generate a daily partition of fictional accounts and a registered model. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A Spark job that loads the registered model, scores the partition and writes to gold.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 2 · LLM and GenAI engineering:** Extend the project with Phase 2 · LLM and GenAI engineering in Nightly batch scoring job. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.
+  - Deliverable: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A Spark job that loads the registered model, scores the partition and writes to gold. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Rerunning a night gives identical scores, and a schema-mismatched partition fails before anything is written.
+- [ ] Phase 2 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Point-in-time feature builder
+
+A data scientist needs training features that never use data from after the prediction date.
+
+**Data:** Generate 1000 fictional accounts with timestamped events and a cancellation label. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A point-in-time correct feature table and a model trained on it.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 2 · LLM and GenAI engineering:** Extend the project with Phase 2 · LLM and GenAI engineering in Point-in-time feature builder. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.
+  - Deliverable: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A point-in-time correct feature table and a model trained on it. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show a leakage test where the as-of join excludes future events, then compare metrics against a naive join.
+- [ ] Phase 2 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data drift retraining trigger
+
+An ML owner needs retraining only when input data really changes.
+
+**Data:** Generate twelve weekly batches with drift injected in weeks 8 and 11. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An orchestrated drift check that starts a tracked retraining run from its data snapshot.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 2 · LLM and GenAI engineering:** Extend the project with Phase 2 · LLM and GenAI engineering in Data drift retraining trigger. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.
+  - Deliverable: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An orchestrated drift check that starts a tracked retraining run from its data snapshot. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Trigger exactly on the two drifted weeks and record which features moved and by how much.
+- [ ] Phase 2 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### LLM evaluation warehouse
+
+A team needs every assistant answer logged and comparable across prompt versions.
+
+**Data:** Record 200 fictional question, answer and citation runs across two prompt versions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A modeled evaluation table with per-version quality and latency views.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 2 · LLM and GenAI engineering:** Extend the project with Phase 2 · LLM and GenAI engineering in LLM evaluation warehouse. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.
+  - Deliverable: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A modeled evaluation table with per-version quality and latency views. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compute groundedness and latency per version from the table and reproduce one regression found in it.
+- [ ] Phase 2 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
 ### Feature store to prediction loop
 
 An analyst needs churn scores written back next to the source data.
@@ -641,233 +844,30 @@ An analyst needs churn scores written back next to the source data.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Support ticket triage desk
+### AI data platform design review
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A hiring panel needs a defensible end-to-end design for an ML and RAG platform.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42.  Use a fixed seed and keep evaluation cases separate.
+**Data:** Describe the platform built in the other AI + Data projects; no new data is required. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
+**Output:** An architecture document, ADRs and a capacity and cost estimate.
 
-**Effort:** 12h · Intermediate
+**Effort:** 16h · Intermediate
 
-- **Phase 2 · LLM and GenAI engineering:** Extend the project with Phase 2 · LLM and GenAI engineering in Support ticket triage desk. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.
+- **Phase 2 · LLM and GenAI engineering:** Extend the project with Phase 2 · LLM and GenAI engineering in AI data platform design review. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.
   - Deliverable: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] MVP · problem and reproducible baseline: A review queue with categories, confidence, evidence and correction controls. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · problem and reproducible baseline: An architecture document, ADRs and a capacity and cost estimate. Start with the smallest deterministic reference before adding extensions.
 - [ ] MVP · Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
-- [ ] Phase 2 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Research library navigator
-
-Help a learner find relevant passages in a small technical reading collection.
-
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings.  Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A searchable library with grounded answers and source references.
-
-**Effort:** 12h · Intermediate
-
-- **Phase 2 · LLM and GenAI engineering:** Extend the project with Phase 2 · LLM and GenAI engineering in Research library navigator. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.
-  - Deliverable: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A searchable library with grounded answers and source references. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
-- [ ] Phase 2 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Inventory exception monitor
-
-Find unusual stock movements and explain which records need investigation.
-
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies.  Use a fixed seed and keep evaluation cases separate.
-
-**Output:** An exception list with explanations and reproducible source records.
-
-**Effort:** 12h · Intermediate
-
-- **Phase 2 · LLM and GenAI engineering:** Extend the project with Phase 2 · LLM and GenAI engineering in Inventory exception monitor. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.
-  - Deliverable: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: An exception list with explanations and reproducible source records. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Phase 2 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples.  Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 12h · Intermediate
-
-- **Phase 2 · LLM and GenAI engineering:** Extend the project with Phase 2 · LLM and GenAI engineering in Product review quality explorer. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.
-  - Deliverable: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A theme browser and an evidence-linked quality report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Phase 2 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships.  Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 12h · Intermediate
-
-- **Phase 2 · LLM and GenAI engineering:** Extend the project with Phase 2 · LLM and GenAI engineering in Learning gap coach. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.
-  - Deliverable: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A next-step study planner with explainable recommendations. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Phase 2 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates.  Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 12h · Intermediate
-
-- **Phase 2 · LLM and GenAI engineering:** Extend the project with Phase 2 · LLM and GenAI engineering in Document intake and validation pipeline. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.
-  - Deliverable: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A reproducible ingestion pipeline and a rejection report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Phase 2 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios.  Use a fixed seed and keep evaluation cases separate.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 12h · Intermediate
-
-- **Phase 2 · LLM and GenAI engineering:** Extend the project with Phase 2 · LLM and GenAI engineering in Service incident investigation board. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.
-  - Deliverable: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: An incident timeline with linked evidence and runbook actions. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Phase 2 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries.  Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
-
-**Effort:** 12h · Intermediate
-
-- **Phase 2 · LLM and GenAI engineering:** Extend the project with Phase 2 · LLM and GenAI engineering in Catalog search and ranking workbench. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.
-  - Deliverable: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A side-by-side ranking interface with measurable relevance. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
+- [ ] Defend three failure scenarios with recovery steps and justify one trade-off against a simpler design.
 - [ ] Phase 2 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -999,6 +999,93 @@ Present a capstone built from Phases 1–9, then complete a mock interview pack:
 
 #### Ten project recommendations
 
+### AI data platform design review
+
+A hiring panel needs a defensible end-to-end design for an ML and RAG platform.
+
+**Data:** Describe the platform built in the other AI + Data projects; no new data is required. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An architecture document, ADRs and a capacity and cost estimate.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 3 · System design and interview preparation:** Implement Phase 3 · System design and interview preparation in AI data platform design review. Adapt this focused lab to the project data: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.  Required concepts: System design framework, Case studies, Trade-off articulation, SQL interview fluency, Python interview fluency, Pipeline design coding, Behavioral preparation, Mock interviews, Company and role-specific preparation.
+  - Deliverable: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An architecture document, ADRs and a capacity and cost estimate. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 3 · System design and interview preparation: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Defend three failure scenarios with recovery steps and justify one trade-off against a simpler design.
+- [ ] Phase 3 · System design and interview preparation: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Nightly batch scoring job
+
+A retention team needs fresh risk scores each morning without a live API.
+
+**Data:** Generate a daily partition of fictional accounts and a registered model. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A Spark job that loads the registered model, scores the partition and writes to gold.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 3 · System design and interview preparation:** Extend the project with Phase 3 · System design and interview preparation in Nightly batch scoring job. Adapt this focused lab to the project data: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.  Required concepts: System design framework, Case studies, Trade-off articulation, SQL interview fluency, Python interview fluency, Pipeline design coding, Behavioral preparation, Mock interviews, Company and role-specific preparation.
+  - Deliverable: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A Spark job that loads the registered model, scores the partition and writes to gold. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 3 · System design and interview preparation: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Rerunning a night gives identical scores, and a schema-mismatched partition fails before anything is written.
+- [ ] Phase 3 · System design and interview preparation: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Point-in-time feature builder
+
+A data scientist needs training features that never use data from after the prediction date.
+
+**Data:** Generate 1000 fictional accounts with timestamped events and a cancellation label. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A point-in-time correct feature table and a model trained on it.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 3 · System design and interview preparation:** Extend the project with Phase 3 · System design and interview preparation in Point-in-time feature builder. Adapt this focused lab to the project data: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.  Required concepts: System design framework, Case studies, Trade-off articulation, SQL interview fluency, Python interview fluency, Pipeline design coding, Behavioral preparation, Mock interviews, Company and role-specific preparation.
+  - Deliverable: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A point-in-time correct feature table and a model trained on it. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 3 · System design and interview preparation: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show a leakage test where the as-of join excludes future events, then compare metrics against a naive join.
+- [ ] Phase 3 · System design and interview preparation: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
 ### Pipeline documentation assistant
 
 An on-call engineer needs cited answers about pipeline behavior.
@@ -1023,6 +1110,64 @@ An on-call engineer needs cited answers about pipeline behavior.
 **Acceptance**
 
 - [ ] Report recall@k on the question set and abstain on questions the docs do not answer.
+- [ ] Phase 3 · System design and interview preparation: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data drift retraining trigger
+
+An ML owner needs retraining only when input data really changes.
+
+**Data:** Generate twelve weekly batches with drift injected in weeks 8 and 11. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An orchestrated drift check that starts a tracked retraining run from its data snapshot.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 3 · System design and interview preparation:** Extend the project with Phase 3 · System design and interview preparation in Data drift retraining trigger. Adapt this focused lab to the project data: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.  Required concepts: System design framework, Case studies, Trade-off articulation, SQL interview fluency, Python interview fluency, Pipeline design coding, Behavioral preparation, Mock interviews, Company and role-specific preparation.
+  - Deliverable: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An orchestrated drift check that starts a tracked retraining run from its data snapshot. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 3 · System design and interview preparation: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Trigger exactly on the two drifted weeks and record which features moved and by how much.
+- [ ] Phase 3 · System design and interview preparation: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### LLM evaluation warehouse
+
+A team needs every assistant answer logged and comparable across prompt versions.
+
+**Data:** Record 200 fictional question, answer and citation runs across two prompt versions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A modeled evaluation table with per-version quality and latency views.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 3 · System design and interview preparation:** Extend the project with Phase 3 · System design and interview preparation in LLM evaluation warehouse. Adapt this focused lab to the project data: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.  Required concepts: System design framework, Case studies, Trade-off articulation, SQL interview fluency, Python interview fluency, Pipeline design coding, Behavioral preparation, Mock interviews, Company and role-specific preparation.
+  - Deliverable: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A modeled evaluation table with per-version quality and latency views. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 3 · System design and interview preparation: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compute groundedness and latency per version from the table and reproduce one regression found in it.
 - [ ] Phase 3 · System design and interview preparation: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -1057,233 +1202,88 @@ An analyst needs churn scores written back next to the source data.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Support ticket triage desk
+### PII-safe training data gate
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A data owner needs personal data removed before any model or LLM sees it.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42.  Use a fixed seed and keep evaluation cases separate.
+**Data:** Generate 500 fictional support tickets with seeded emails, phone numbers and names. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
+**Output:** A quality-gated redaction step between bronze and the training and embedding inputs.
 
-**Effort:** 12h · Intermediate
+**Effort:** 16h · Intermediate
 
-- **Phase 3 · System design and interview preparation:** Extend the project with Phase 3 · System design and interview preparation in Support ticket triage desk. Adapt this focused lab to the project data: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.  Required concepts: System design framework, Case studies, Trade-off articulation, SQL interview fluency, Python interview fluency, Pipeline design coding, Behavioral preparation, Mock interviews, Company and role-specific preparation.
+- **Phase 3 · System design and interview preparation:** Extend the project with Phase 3 · System design and interview preparation in PII-safe training data gate. Adapt this focused lab to the project data: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.  Required concepts: System design framework, Case studies, Trade-off articulation, SQL interview fluency, Python interview fluency, Pipeline design coding, Behavioral preparation, Mock interviews, Company and role-specific preparation.
   - Deliverable: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] MVP · problem and reproducible baseline: A review queue with categories, confidence, evidence and correction controls. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · problem and reproducible baseline: A quality-gated redaction step between bronze and the training and embedding inputs. Start with the smallest deterministic reference before adding extensions.
 - [ ] MVP · Phase 3 · System design and interview preparation: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
+- [ ] No seeded identifier reaches the gold table or the vector index, and the gate fails on an unredacted batch.
 - [ ] Phase 3 · System design and interview preparation: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Research library navigator
+### CDC-fed retrieval index
 
-Help a learner find relevant passages in a small technical reading collection.
+A support assistant must stop citing help articles after they are edited or deleted.
 
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings.  Use a fixed seed and keep evaluation cases separate.
+**Data:** Use a disposable PostgreSQL table of 30 help articles with scripted edits and deletes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A searchable library with grounded answers and source references.
+**Output:** An incremental embedding index fed by CDC events, with citations.
 
-**Effort:** 12h · Intermediate
+**Effort:** 16h · Intermediate
 
-- **Phase 3 · System design and interview preparation:** Extend the project with Phase 3 · System design and interview preparation in Research library navigator. Adapt this focused lab to the project data: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.  Required concepts: System design framework, Case studies, Trade-off articulation, SQL interview fluency, Python interview fluency, Pipeline design coding, Behavioral preparation, Mock interviews, Company and role-specific preparation.
+- **Phase 3 · System design and interview preparation:** Extend the project with Phase 3 · System design and interview preparation in CDC-fed retrieval index. Adapt this focused lab to the project data: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.  Required concepts: System design framework, Case studies, Trade-off articulation, SQL interview fluency, Python interview fluency, Pipeline design coding, Behavioral preparation, Mock interviews, Company and role-specific preparation.
   - Deliverable: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] MVP · problem and reproducible baseline: A searchable library with grounded answers and source references. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · problem and reproducible baseline: An incremental embedding index fed by CDC events, with citations. Start with the smallest deterministic reference before adding extensions.
 - [ ] MVP · Phase 3 · System design and interview preparation: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
+- [ ] After each edit or delete the next query cites only the current version and never a removed article.
 - [ ] Phase 3 · System design and interview preparation: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### Governed text-to-SQL assistant
 
-Find unusual stock movements and explain which records need investigation.
+An analyst needs warehouse answers without writing SQL or touching restricted columns.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies.  Use a fixed seed and keep evaluation cases separate.
+**Data:** Use the star-schema tables from a dbt project with one column marked sensitive. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
+**Output:** A read-only SQL generation tool with schema context, query validation and an evaluation set.
 
-**Effort:** 12h · Intermediate
+**Effort:** 16h · Intermediate
 
-- **Phase 3 · System design and interview preparation:** Extend the project with Phase 3 · System design and interview preparation in Inventory exception monitor. Adapt this focused lab to the project data: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.  Required concepts: System design framework, Case studies, Trade-off articulation, SQL interview fluency, Python interview fluency, Pipeline design coding, Behavioral preparation, Mock interviews, Company and role-specific preparation.
+- **Phase 3 · System design and interview preparation:** Extend the project with Phase 3 · System design and interview preparation in Governed text-to-SQL assistant. Adapt this focused lab to the project data: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.  Required concepts: System design framework, Case studies, Trade-off articulation, SQL interview fluency, Python interview fluency, Pipeline design coding, Behavioral preparation, Mock interviews, Company and role-specific preparation.
   - Deliverable: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 
 **Milestones**
 
-- [ ] MVP · problem and reproducible baseline: An exception list with explanations and reproducible source records. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · problem and reproducible baseline: A read-only SQL generation tool with schema context, query validation and an evaluation set. Start with the smallest deterministic reference before adding extensions.
 - [ ] MVP · Phase 3 · System design and interview preparation: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
-- [ ] Phase 3 · System design and interview preparation: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Product review quality explorer
-
-Summarize themes and surface potentially misleading or contradictory review records.
-
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples.  Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A theme browser and an evidence-linked quality report.
-
-**Effort:** 12h · Intermediate
-
-- **Phase 3 · System design and interview preparation:** Extend the project with Phase 3 · System design and interview preparation in Product review quality explorer. Adapt this focused lab to the project data: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.  Required concepts: System design framework, Case studies, Trade-off articulation, SQL interview fluency, Python interview fluency, Pipeline design coding, Behavioral preparation, Mock interviews, Company and role-specific preparation.
-  - Deliverable: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A theme browser and an evidence-linked quality report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 3 · System design and interview preparation: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] Phase 3 · System design and interview preparation: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships.  Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 12h · Intermediate
-
-- **Phase 3 · System design and interview preparation:** Extend the project with Phase 3 · System design and interview preparation in Learning gap coach. Adapt this focused lab to the project data: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.  Required concepts: System design framework, Case studies, Trade-off articulation, SQL interview fluency, Python interview fluency, Pipeline design coding, Behavioral preparation, Mock interviews, Company and role-specific preparation.
-  - Deliverable: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A next-step study planner with explainable recommendations. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 3 · System design and interview preparation: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] Phase 3 · System design and interview preparation: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates.  Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 12h · Intermediate
-
-- **Phase 3 · System design and interview preparation:** Extend the project with Phase 3 · System design and interview preparation in Document intake and validation pipeline. Adapt this focused lab to the project data: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.  Required concepts: System design framework, Case studies, Trade-off articulation, SQL interview fluency, Python interview fluency, Pipeline design coding, Behavioral preparation, Mock interviews, Company and role-specific preparation.
-  - Deliverable: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A reproducible ingestion pipeline and a rejection report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 3 · System design and interview preparation: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] Phase 3 · System design and interview preparation: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios.  Use a fixed seed and keep evaluation cases separate.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 12h · Intermediate
-
-- **Phase 3 · System design and interview preparation:** Extend the project with Phase 3 · System design and interview preparation in Service incident investigation board. Adapt this focused lab to the project data: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.  Required concepts: System design framework, Case studies, Trade-off articulation, SQL interview fluency, Python interview fluency, Pipeline design coding, Behavioral preparation, Mock interviews, Company and role-specific preparation.
-  - Deliverable: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: An incident timeline with linked evidence and runbook actions. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 3 · System design and interview preparation: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] Phase 3 · System design and interview preparation: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries.  Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
-
-**Effort:** 12h · Intermediate
-
-- **Phase 3 · System design and interview preparation:** Extend the project with Phase 3 · System design and interview preparation in Catalog search and ranking workbench. Adapt this focused lab to the project data: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.  Required concepts: System design framework, Case studies, Trade-off articulation, SQL interview fluency, Python interview fluency, Pipeline design coding, Behavioral preparation, Mock interviews, Company and role-specific preparation.
-  - Deliverable: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A side-by-side ranking interface with measurable relevance. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 3 · System design and interview preparation: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
+- [ ] Answer 20 labeled questions, reject every query on the sensitive column and never run a write statement.
 - [ ] Phase 3 · System design and interview preparation: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -1381,6 +1381,64 @@ Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve
 
 #### Ten project recommendations
 
+### Nightly batch scoring job
+
+A retention team needs fresh risk scores each morning without a live API.
+
+**Data:** Generate a daily partition of fictional accounts and a registered model. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A Spark job that loads the registered model, scores the partition and writes to gold.
+
+**Effort:** 16h · Intermediate
+
+- **AI + data capstone:** Extend the project with AI + data capstone in Nightly batch scoring job. Adapt this focused lab to the project data: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A Spark job that loads the registered model, scores the partition and writes to gold. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · AI + data capstone: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Rerunning a night gives identical scores, and a schema-mismatched partition fails before anything is written.
+- [ ] AI + data capstone: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Point-in-time feature builder
+
+A data scientist needs training features that never use data from after the prediction date.
+
+**Data:** Generate 1000 fictional accounts with timestamped events and a cancellation label. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A point-in-time correct feature table and a model trained on it.
+
+**Effort:** 16h · Intermediate
+
+- **AI + data capstone:** Extend the project with AI + data capstone in Point-in-time feature builder. Adapt this focused lab to the project data: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A point-in-time correct feature table and a model trained on it. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · AI + data capstone: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show a leakage test where the as-of join excludes future events, then compare metrics against a naive join.
+- [ ] AI + data capstone: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
 ### Pipeline documentation assistant
 
 An on-call engineer needs cited answers about pipeline behavior.
@@ -1405,6 +1463,64 @@ An on-call engineer needs cited answers about pipeline behavior.
 **Acceptance**
 
 - [ ] Report recall@k on the question set and abstain on questions the docs do not answer.
+- [ ] AI + data capstone: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data drift retraining trigger
+
+An ML owner needs retraining only when input data really changes.
+
+**Data:** Generate twelve weekly batches with drift injected in weeks 8 and 11. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An orchestrated drift check that starts a tracked retraining run from its data snapshot.
+
+**Effort:** 16h · Intermediate
+
+- **AI + data capstone:** Extend the project with AI + data capstone in Data drift retraining trigger. Adapt this focused lab to the project data: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An orchestrated drift check that starts a tracked retraining run from its data snapshot. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · AI + data capstone: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Trigger exactly on the two drifted weeks and record which features moved and by how much.
+- [ ] AI + data capstone: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### LLM evaluation warehouse
+
+A team needs every assistant answer logged and comparable across prompt versions.
+
+**Data:** Record 200 fictional question, answer and citation runs across two prompt versions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A modeled evaluation table with per-version quality and latency views.
+
+**Effort:** 16h · Intermediate
+
+- **AI + data capstone:** Extend the project with AI + data capstone in LLM evaluation warehouse. Adapt this focused lab to the project data: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+  - Deliverable: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+  - Check: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A modeled evaluation table with per-version quality and latency views. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · AI + data capstone: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compute groundedness and latency per version from the table and reproduce one regression found in it.
 - [ ] AI + data capstone: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -1439,233 +1555,117 @@ An analyst needs churn scores written back next to the source data.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Support ticket triage desk
+### PII-safe training data gate
 
-Route incoming support tickets to the right category and show the evidence behind each decision.
+A data owner needs personal data removed before any model or LLM sees it.
 
-**Data:** Generate 120 labeled tickets about login, billing and account setup with fixed seed 42.  Use a fixed seed and keep evaluation cases separate.
+**Data:** Generate 500 fictional support tickets with seeded emails, phone numbers and names. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A review queue with categories, confidence, evidence and correction controls.
+**Output:** A quality-gated redaction step between bronze and the training and embedding inputs.
 
-**Effort:** 12h · Intermediate
+**Effort:** 16h · Intermediate
 
-- **AI + data capstone:** Extend the project with AI + data capstone in Support ticket triage desk. Adapt this focused lab to the project data: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+- **AI + data capstone:** Extend the project with AI + data capstone in PII-safe training data gate. Adapt this focused lab to the project data: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
   - Deliverable: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
   - Check: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
 
 **Milestones**
 
-- [ ] MVP · problem and reproducible baseline: A review queue with categories, confidence, evidence and correction controls. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · problem and reproducible baseline: A quality-gated redaction step between bronze and the training and embedding inputs. Start with the smallest deterministic reference before adding extensions.
 - [ ] MVP · AI + data capstone: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Evaluate 24 held-out tickets and report per-category errors; ambiguous tickets must go to human review.
+- [ ] No seeded identifier reaches the gold table or the vector index, and the gate fails on an unredacted batch.
 - [ ] AI + data capstone: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Research library navigator
+### AI data platform design review
 
-Help a learner find relevant passages in a small technical reading collection.
+A hiring panel needs a defensible end-to-end design for an ML and RAG platform.
 
-**Data:** Use ten of your own Markdown notes with titles, source URLs and section headings.  Use a fixed seed and keep evaluation cases separate.
+**Data:** Describe the platform built in the other AI + Data projects; no new data is required. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A searchable library with grounded answers and source references.
+**Output:** An architecture document, ADRs and a capacity and cost estimate.
 
-**Effort:** 12h · Intermediate
+**Effort:** 16h · Intermediate
 
-- **AI + data capstone:** Extend the project with AI + data capstone in Research library navigator. Adapt this focused lab to the project data: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+- **AI + data capstone:** Extend the project with AI + data capstone in AI data platform design review. Adapt this focused lab to the project data: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
   - Deliverable: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
   - Check: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
 
 **Milestones**
 
-- [ ] MVP · problem and reproducible baseline: A searchable library with grounded answers and source references. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · problem and reproducible baseline: An architecture document, ADRs and a capacity and cost estimate. Start with the smallest deterministic reference before adding extensions.
 - [ ] MVP · AI + data capstone: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test twenty queries including exact names, paraphrases and five unsupported questions; no fabricated citations.
+- [ ] Defend three failure scenarios with recovery steps and justify one trade-off against a simpler design.
 - [ ] AI + data capstone: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Inventory exception monitor
+### CDC-fed retrieval index
 
-Find unusual stock movements and explain which records need investigation.
+A support assistant must stop citing help articles after they are edited or deleted.
 
-**Data:** Generate 200 inventory movements with dates, product IDs, quantities and injected anomalies.  Use a fixed seed and keep evaluation cases separate.
+**Data:** Use a disposable PostgreSQL table of 30 help articles with scripted edits and deletes. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** An exception list with explanations and reproducible source records.
+**Output:** An incremental embedding index fed by CDC events, with citations.
 
-**Effort:** 12h · Intermediate
+**Effort:** 16h · Intermediate
 
-- **AI + data capstone:** Extend the project with AI + data capstone in Inventory exception monitor. Adapt this focused lab to the project data: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+- **AI + data capstone:** Extend the project with AI + data capstone in CDC-fed retrieval index. Adapt this focused lab to the project data: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
   - Deliverable: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
   - Check: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
 
 **Milestones**
 
-- [ ] MVP · problem and reproducible baseline: An exception list with explanations and reproducible source records. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · problem and reproducible baseline: An incremental embedding index fed by CDC events, with citations. Start with the smallest deterministic reference before adding extensions.
 - [ ] MVP · AI + data capstone: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Keep future records out of training; measure anomaly recall and false alerts on a held-out time window.
+- [ ] After each edit or delete the next query cites only the current version and never a removed article.
 - [ ] AI + data capstone: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Product review quality explorer
+### Governed text-to-SQL assistant
 
-Summarize themes and surface potentially misleading or contradictory review records.
+An analyst needs warehouse answers without writing SQL or touching restricted columns.
 
-**Data:** Write or generate 100 fictional product reviews with ratings, topics and deliberately inconsistent examples.  Use a fixed seed and keep evaluation cases separate.
+**Data:** Use the star-schema tables from a dbt project with one column marked sensitive. Use a fixed seed and keep evaluation cases separate.
 
-**Output:** A theme browser and an evidence-linked quality report.
+**Output:** A read-only SQL generation tool with schema context, query validation and an evaluation set.
 
-**Effort:** 12h · Intermediate
+**Effort:** 16h · Intermediate
 
-- **AI + data capstone:** Extend the project with AI + data capstone in Product review quality explorer. Adapt this focused lab to the project data: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
+- **AI + data capstone:** Extend the project with AI + data capstone in Governed text-to-SQL assistant. Adapt this focused lab to the project data: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
   - Deliverable: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
   - Check: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
 
 **Milestones**
 
-- [ ] MVP · problem and reproducible baseline: A theme browser and an evidence-linked quality report. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · problem and reproducible baseline: A read-only SQL generation tool with schema context, query validation and an evaluation set. Start with the smallest deterministic reference before adding extensions.
 - [ ] MVP · AI + data capstone: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
-- [ ] Test contradictory reviews, missing ratings and duplicate records; report limitations and avoid labeling real people as fraudulent.
-- [ ] AI + data capstone: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Learning gap coach
-
-Turn a learner’s quiz results into a concrete next exercise with an explanation.
-
-**Data:** Create forty fictional learners, concept-level quiz scores and fifteen prerequisite relationships.  Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A next-step study planner with explainable recommendations.
-
-**Effort:** 12h · Intermediate
-
-- **AI + data capstone:** Extend the project with AI + data capstone in Learning gap coach. Adapt this focused lab to the project data: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
-  - Deliverable: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
-  - Check: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A next-step study planner with explainable recommendations. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · AI + data capstone: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Test a beginner, an advanced learner and conflicting prerequisites; recommendations must cite an actual weak concept.
-- [ ] AI + data capstone: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Document intake and validation pipeline
-
-Convert incoming documents into validated records and flag what cannot be trusted.
-
-**Data:** Create thirty local JSON/Markdown documents with schema variations, malformed values and duplicates.  Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A reproducible ingestion pipeline and a rejection report.
-
-**Effort:** 12h · Intermediate
-
-- **AI + data capstone:** Extend the project with AI + data capstone in Document intake and validation pipeline. Adapt this focused lab to the project data: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
-  - Deliverable: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
-  - Check: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A reproducible ingestion pipeline and a rejection report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · AI + data capstone: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Prove idempotent re-ingestion, preserve raw files and identify every deliberately malformed record.
-- [ ] AI + data capstone: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Service incident investigation board
-
-Connect incident symptoms to related logs and suggest a safe diagnostic next step.
-
-**Data:** Generate 300 sanitized log events with request IDs and five seeded incident scenarios.  Use a fixed seed and keep evaluation cases separate.
-
-**Output:** An incident timeline with linked evidence and runbook actions.
-
-**Effort:** 12h · Intermediate
-
-- **AI + data capstone:** Extend the project with AI + data capstone in Service incident investigation board. Adapt this focused lab to the project data: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
-  - Deliverable: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
-  - Check: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: An incident timeline with linked evidence and runbook actions. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · AI + data capstone: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Replay all five incidents; distinguish evidence from hypotheses and never execute destructive remediation automatically.
-- [ ] AI + data capstone: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Catalog search and ranking workbench
-
-Compare ranking approaches and explain which item best matches a query.
-
-**Data:** Generate eighty fictional catalog items with descriptions, categories and twenty relevance-labeled queries.  Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A side-by-side ranking interface with measurable relevance.
-
-**Effort:** 12h · Intermediate
-
-- **AI + data capstone:** Extend the project with AI + data capstone in Catalog search and ranking workbench. Adapt this focused lab to the project data: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.  Required concepts: Define the success contract, Reproduce the baseline, Test a failure boundary, Explain the decisions, Hand off the evidence.
-  - Deliverable: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
-  - Check: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A side-by-side ranking interface with measurable relevance. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · AI + data capstone: AI + data capstone: Runnable project and reproducible input fixtures; README, results and decision notes; Failure evidence and clean-start instructions
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Compare a simple baseline with the selected method using recall@5 and reciprocal rank on held-out queries.
+- [ ] Answer 20 labeled questions, reject every query on the sensitive column and never run a write statement.
 - [ ] AI + data capstone: Connect a gold-layer table to a tracked ML model or a cited RAG assistant, serve it locally and measure it against a baseline. Document the end-to-end system design, its failure recovery and the trade-offs you would defend in an interview.; Explain the code and results without relying on an AI-generated summary.; A teammate can reproduce the demo without paid credentials.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 

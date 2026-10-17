@@ -889,6 +889,35 @@ An analyst needs an educational estimate of likely account cancellation.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
+### Point-in-time feature builder
+
+A data scientist needs training features that never use data from after the prediction date.
+
+**Data:** Generate 1000 fictional accounts with timestamped events and a cancellation label. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A point-in-time correct feature table and a model trained on it.
+
+**Effort:** 16h · Intermediate
+
+- **Preprocessing and feature engineering:** Implement Preprocessing and feature engineering in Point-in-time feature builder. Adapt this focused lab to the project data: Train a mixed numeric/categorical Pipeline on a generated dataset with missing entries; prove an unseen category and a new record use the same transformation path. Predict fictional cancellation label; keep the same target and splits across model comparisons. Required concepts: Scaling and encoding, Feature engineering, Pipelines.
+  - Deliverable: Preprocessing and feature engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Train a mixed numeric/categorical Pipeline on a generated dataset with missing entries; prove an unseen category and a new record use the same transformation path.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A point-in-time correct feature table and a model trained on it. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Preprocessing and feature engineering: Preprocessing and feature engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show a leakage test where the as-of join excludes future events, then compare metrics against a naive join.
+- [ ] Preprocessing and feature engineering: Train a mixed numeric/categorical Pipeline on a generated dataset with missing entries; prove an unseen category and a new record use the same transformation path.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
 ### Customer behavior segmentation
 
 A researcher needs interpretable groups without invented ground truth.
@@ -1116,35 +1145,6 @@ An operator needs a controllable false-alert budget.
 **Acceptance**
 
 - [ ] Choose thresholds on validation only and publish confusion matrices.
-- [ ] Preprocessing and feature engineering: Train a mixed numeric/categorical Pipeline on a generated dataset with missing entries; prove an unseen category and a new record use the same transformation path.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket model comparison
-
-A support lead needs category suggestions with human review for ambiguity.
-
-**Data:** Generate 180 labeled login, billing and setup tickets with paraphrases. Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A classifier comparison, error slices and a review threshold.
-
-**Effort:** 16h · Intermediate
-
-- **Preprocessing and feature engineering:** Extend the project with Preprocessing and feature engineering in Support ticket model comparison. Adapt this focused lab to the project data: Train a mixed numeric/categorical Pipeline on a generated dataset with missing entries; prove an unseen category and a new record use the same transformation path. Predict ticket category (login, billing, setup); keep the same target and splits across model comparisons. Required concepts: Scaling and encoding, Feature engineering, Pipelines.
-  - Deliverable: Preprocessing and feature engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Train a mixed numeric/categorical Pipeline on a generated dataset with missing entries; prove an unseen category and a new record use the same transformation path.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A classifier comparison, error slices and a review threshold. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Preprocessing and feature engineering: Preprocessing and feature engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Hold out templates, compare a dummy baseline and report macro F1.
 - [ ] Preprocessing and feature engineering: Train a mixed numeric/categorical Pipeline on a generated dataset with missing entries; prove an unseen category and a new record use the same transformation path.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -2855,6 +2855,64 @@ An analyst needs an educational estimate of likely account cancellation.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
+### Point-in-time feature builder
+
+A data scientist needs training features that never use data from after the prediction date.
+
+**Data:** Generate 1000 fictional accounts with timestamped events and a cancellation label. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A point-in-time correct feature table and a model trained on it.
+
+**Effort:** 16h · Intermediate
+
+- **Imbalance, metrics, calibration and error analysis:** Implement Imbalance, metrics, calibration and error analysis in Point-in-time feature builder. Adapt this focused lab to the project data: Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement. Predict fictional cancellation label; keep the same target and splits across model comparisons. Required concepts: Classification metrics, Calibration and thresholds, Error analysis.
+  - Deliverable: Imbalance, metrics, calibration and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A point-in-time correct feature table and a model trained on it. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Imbalance, metrics, calibration and error analysis: Imbalance, metrics, calibration and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show a leakage test where the as-of join excludes future events, then compare metrics against a naive join.
+- [ ] Imbalance, metrics, calibration and error analysis: Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data drift retraining trigger
+
+An ML owner needs retraining only when input data really changes.
+
+**Data:** Generate twelve weekly batches with drift injected in weeks 8 and 11. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An orchestrated drift check that starts a tracked retraining run from its data snapshot.
+
+**Effort:** 16h · Intermediate
+
+- **Imbalance, metrics, calibration and error analysis:** Implement Imbalance, metrics, calibration and error analysis in Data drift retraining trigger. Adapt this focused lab to the project data: Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement. Predict fictional cancellation label on each weekly batch; keep the same target and splits across model comparisons. Required concepts: Classification metrics, Calibration and thresholds, Error analysis.
+  - Deliverable: Imbalance, metrics, calibration and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An orchestrated drift check that starts a tracked retraining run from its data snapshot. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Imbalance, metrics, calibration and error analysis: Imbalance, metrics, calibration and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Trigger exactly on the two drifted weeks and record which features moved and by how much.
+- [ ] Imbalance, metrics, calibration and error analysis: Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
 ### Customer behavior segmentation
 
 A researcher needs interpretable groups without invented ground truth.
@@ -3058,64 +3116,6 @@ A teammate needs to compare preprocessing and estimator choices fairly.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Rare event threshold workbench
-
-An operator needs a controllable false-alert budget.
-
-**Data:** Generate 1000 binary-labeled observations with 5 percent positives. Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A calibrated classifier and threshold tradeoff dashboard.
-
-**Effort:** 16h · Intermediate
-
-- **Imbalance, metrics, calibration and error analysis:** Extend the project with Imbalance, metrics, calibration and error analysis in Rare event threshold workbench. Adapt this focused lab to the project data: Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement. Predict rare event label; keep the same target and splits across model comparisons. Required concepts: Classification metrics, Calibration and thresholds, Error analysis.
-  - Deliverable: Imbalance, metrics, calibration and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A calibrated classifier and threshold tradeoff dashboard. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Imbalance, metrics, calibration and error analysis: Imbalance, metrics, calibration and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Choose thresholds on validation only and publish confusion matrices.
-- [ ] Imbalance, metrics, calibration and error analysis: Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket model comparison
-
-A support lead needs category suggestions with human review for ambiguity.
-
-**Data:** Generate 180 labeled login, billing and setup tickets with paraphrases. Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A classifier comparison, error slices and a review threshold.
-
-**Effort:** 16h · Intermediate
-
-- **Imbalance, metrics, calibration and error analysis:** Extend the project with Imbalance, metrics, calibration and error analysis in Support ticket model comparison. Adapt this focused lab to the project data: Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement. Predict ticket category (login, billing, setup); keep the same target and splits across model comparisons. Required concepts: Classification metrics, Calibration and thresholds, Error analysis.
-  - Deliverable: Imbalance, metrics, calibration and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A classifier comparison, error slices and a review threshold. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Imbalance, metrics, calibration and error analysis: Imbalance, metrics, calibration and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Hold out templates, compare a dummy baseline and report macro F1.
-- [ ] Imbalance, metrics, calibration and error analysis: Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
 
 ---
 
@@ -3235,6 +3235,35 @@ A teammate needs to compare preprocessing and estimator choices fairly.
 **Acceptance**
 
 - [ ] Keep the final holdout untouched until selection and reproduce predictions after reload.
+- [ ] Model persistence, inference and data drift: Save a fitted pipeline locally, load it in a separate process and verify identical predictions; create a schema check and a synthetic drift report.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Nightly batch scoring job
+
+A retention team needs fresh risk scores each morning without a live API.
+
+**Data:** Generate a daily partition of fictional accounts and a registered model. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A Spark job that loads the registered model, scores the partition and writes to gold.
+
+**Effort:** 16h · Intermediate
+
+- **Model persistence, inference and data drift:** Implement Model persistence, inference and data drift in Nightly batch scoring job. Adapt this focused lab to the project data: Save a fitted pipeline locally, load it in a separate process and verify identical predictions; create a schema check and a synthetic drift report. Predict next-month cancellation risk; keep the same target and splits across model comparisons. Required concepts: Persistence, Inference contracts, Drift.
+  - Deliverable: Model persistence, inference and data drift: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Save a fitted pipeline locally, load it in a separate process and verify identical predictions; create a schema check and a synthetic drift report.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A Spark job that loads the registered model, scores the partition and writes to gold. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Model persistence, inference and data drift: Model persistence, inference and data drift: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Rerunning a night gives identical scores, and a schema-mismatched partition fails before anything is written.
 - [ ] Model persistence, inference and data drift: Save a fitted pipeline locally, load it in a separate process and verify identical predictions; create a schema check and a synthetic drift report.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -3467,35 +3496,6 @@ An operator needs a controllable false-alert budget.
 **Acceptance**
 
 - [ ] Choose thresholds on validation only and publish confusion matrices.
-- [ ] Model persistence, inference and data drift: Save a fitted pipeline locally, load it in a separate process and verify identical predictions; create a schema check and a synthetic drift report.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Support ticket model comparison
-
-A support lead needs category suggestions with human review for ambiguity.
-
-**Data:** Generate 180 labeled login, billing and setup tickets with paraphrases. Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A classifier comparison, error slices and a review threshold.
-
-**Effort:** 16h · Intermediate
-
-- **Model persistence, inference and data drift:** Extend the project with Model persistence, inference and data drift in Support ticket model comparison. Adapt this focused lab to the project data: Save a fitted pipeline locally, load it in a separate process and verify identical predictions; create a schema check and a synthetic drift report. Predict ticket category (login, billing, setup); keep the same target and splits across model comparisons. Required concepts: Persistence, Inference contracts, Drift.
-  - Deliverable: Model persistence, inference and data drift: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Save a fitted pipeline locally, load it in a separate process and verify identical predictions; create a schema check and a synthetic drift report.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A classifier comparison, error slices and a review threshold. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Model persistence, inference and data drift: Model persistence, inference and data drift: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Hold out templates, compare a dummy baseline and report macro F1.
 - [ ] Model persistence, inference and data drift: Save a fitted pipeline locally, load it in a separate process and verify identical predictions; create a schema check and a synthetic drift report.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 

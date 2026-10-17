@@ -114,6 +114,35 @@ A librarian needs updated documents without stale duplicate chunks.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
+### CDC-fed retrieval index
+
+A support assistant must stop citing help articles after they are edited or deleted.
+
+**Data:** Use a disposable PostgreSQL table of 30 help articles with scripted edits and deletes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An incremental embedding index fed by CDC events, with citations.
+
+**Effort:** 16h · Intermediate
+
+- **Document parsing, chunking and metadata:** Implement Document parsing, chunking and metadata in CDC-fed retrieval index. Adapt this focused lab to the project data: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.  Required concepts: Parsing, Chunking, Metadata and refresh.
+  - Deliverable: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An incremental embedding index fed by CDC events, with citations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Document parsing, chunking and metadata: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] After each edit or delete the next query cites only the current version and never a removed article.
+- [ ] Document parsing, chunking and metadata: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
 ### Chunking experiment arena
 
 A builder needs evidence for choosing chunk size and overlap.
@@ -341,35 +370,6 @@ A maintainer needs to separate retrieval and answer failures.
 **Acceptance**
 
 - [ ] Measure retrieval recall separately from answer faithfulness.
-- [ ] Document parsing, chunking and metadata: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Read-only SQL evidence assistant
-
-An analyst needs answers grounded in tabular records.
-
-**Data:** Use a local SQLite database of fictional orders and customers. Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A whitelisted query workflow with rows cited as evidence.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Document parsing, chunking and metadata:** Extend the project with Document parsing, chunking and metadata in Read-only SQL evidence assistant. Adapt this focused lab to the project data: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.  Required concepts: Parsing, Chunking, Metadata and refresh.
-  - Deliverable: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A whitelisted query workflow with rows cited as evidence. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Document parsing, chunking and metadata: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Reject writes, bound row counts and verify join totals.
 - [ ] Document parsing, chunking and metadata: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -2773,6 +2773,35 @@ A reviewer needs to catch answers citing the wrong source.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
+### CDC-fed retrieval index
+
+A support assistant must stop citing help articles after they are edited or deleted.
+
+**Data:** Use a disposable PostgreSQL table of 30 help articles with scripted edits and deletes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An incremental embedding index fed by CDC events, with citations.
+
+**Effort:** 16h · Intermediate
+
+- **Evidence selection, citation validation and abstention:** Implement Evidence selection, citation validation and abstention in CDC-fed retrieval index. Adapt this focused lab to the project data: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.  Required concepts: Evidence budget, Claim-level support, Citation validity versus faithfulness, Conflicting or stale evidence, Abstention and escalation.
+  - Deliverable: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An incremental embedding index fed by CDC events, with citations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Evidence selection, citation validation and abstention: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] After each edit or delete the next query cites only the current version and never a removed article.
+- [ ] Evidence selection, citation validation and abstention: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
 ### Chunking experiment arena
 
 A builder needs evidence for choosing chunk size and overlap.
@@ -3000,35 +3029,6 @@ A maintainer needs to separate retrieval and answer failures.
 **Acceptance**
 
 - [ ] Measure retrieval recall separately from answer faithfulness.
-- [ ] Evidence selection, citation validation and abstention: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Read-only SQL evidence assistant
-
-An analyst needs answers grounded in tabular records.
-
-**Data:** Use a local SQLite database of fictional orders and customers. Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A whitelisted query workflow with rows cited as evidence.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Evidence selection, citation validation and abstention:** Extend the project with Evidence selection, citation validation and abstention in Read-only SQL evidence assistant. Adapt this focused lab to the project data: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.  Required concepts: Evidence budget, Claim-level support, Citation validity versus faithfulness, Conflicting or stale evidence, Abstention and escalation.
-  - Deliverable: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A whitelisted query workflow with rows cited as evidence. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Evidence selection, citation validation and abstention: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Reject writes, bound row counts and verify join totals.
 - [ ] Evidence selection, citation validation and abstention: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 

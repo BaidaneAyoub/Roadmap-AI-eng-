@@ -143,7 +143,7 @@ await writeFile(
 );
 await writeFile(
   "docs/PROJECTS.md",
-  `# Project catalog\n\nBrowse the [142-project library with English mentor prompts](PROJECT_LIBRARY.md). Every lesson has ten initial project briefs in its domain document. The website supports further batches without repeating ideas. The website uses the same deterministic composer for combinations, with a named task, deliverable and check for every selected skill. Unmapped custom topics are explicitly general practice.\n\n## Example: ML + DL + FastAPI + Docker\n\n${recommend(
+  `# Project catalog\n\nBrowse the [150-project library with English mentor prompts](PROJECT_LIBRARY.md). Every lesson has ten initial project briefs in its domain document. The website supports further batches without repeating ideas. The website uses the same deterministic composer for combinations, with a named task, deliverable and check for every selected skill. Unmapped custom topics are explicitly general practice.\n\n## Example: ML + DL + FastAPI + Docker\n\n${recommend(
     [
       domains.find((d) => d.id === "ml"),
       domains.find((d) => d.id === "dl"),

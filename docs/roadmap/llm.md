@@ -1751,6 +1751,35 @@ An app builder needs safe interpretation of proposed tool arguments.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
+### Governed text-to-SQL assistant
+
+An analyst needs warehouse answers without writing SQL or touching restricted columns.
+
+**Data:** Use the star-schema tables from a dbt project with one column marked sensitive. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A read-only SQL generation tool with schema context, query validation and an evaluation set.
+
+**Effort:** 16h · Intermediate
+
+- **Tool calling, streaming and multimodal AI:** Implement Tool calling, streaming and multimodal AI in Governed text-to-SQL assistant. Adapt this focused lab to the project data: Implement a fixture-driven assistant with one read-only search tool, streamed chunks and image/audio/video metadata inputs; test cancellation and invalid tool arguments.  Required concepts: Tool calling, Streaming, Multimodal tasks.
+  - Deliverable: Tool calling, streaming and multimodal AI: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a fixture-driven assistant with one read-only search tool, streamed chunks and image/audio/video metadata inputs; test cancellation and invalid tool arguments.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A read-only SQL generation tool with schema context, query validation and an evaluation set. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Tool calling, streaming and multimodal AI: Tool calling, streaming and multimodal AI: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Answer 20 labeled questions, reject every query on the sensitive column and never run a write statement.
+- [ ] Tool calling, streaming and multimodal AI: Implement a fixture-driven assistant with one read-only search tool, streamed chunks and image/audio/video metadata inputs; test cancellation and invalid tool arguments.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
 ### KV cache memory simulator
 
 A serving learner needs to understand cache growth and eviction.
@@ -1949,35 +1978,6 @@ A learner needs to understand temperature, top-k and top-p.
 **Acceptance**
 
 - [ ] Verify normalization, deterministic seed behavior and nucleus boundaries.
-- [ ] Tool calling, streaming and multimodal AI: Implement a fixture-driven assistant with one read-only search tool, streamed chunks and image/audio/video metadata inputs; test cancellation and invalid tool arguments.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Token budget planner
-
-An app builder needs to estimate what fits in a context window.
-
-**Data:** Use 20 local multilingual prompts and a downloadable small tokenizer or documented byte fallback. Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A tokenizer comparison and truncation report.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Tool calling, streaming and multimodal AI:** Extend the project with Tool calling, streaming and multimodal AI in Token budget planner. Adapt this focused lab to the project data: Implement a fixture-driven assistant with one read-only search tool, streamed chunks and image/audio/video metadata inputs; test cancellation and invalid tool arguments.  Required concepts: Tool calling, Streaming, Multimodal tasks.
-  - Deliverable: Tool calling, streaming and multimodal AI: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a fixture-driven assistant with one read-only search tool, streamed chunks and image/audio/video metadata inputs; test cancellation and invalid tool arguments.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A tokenizer comparison and truncation report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Tool calling, streaming and multimodal AI: Tool calling, streaming and multimodal AI: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Preserve required instructions and label byte estimates as estimates, not exact token counts.
 - [ ] Tool calling, streaming and multimodal AI: Implement a fixture-driven assistant with one read-only search tool, streamed chunks and image/audio/video metadata inputs; test cancellation and invalid tool arguments.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 

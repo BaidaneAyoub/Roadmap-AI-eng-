@@ -15773,6 +15773,1266 @@
       "documentation": [
         "README: purpose, setup, worked example, checks and limitations"
       ]
+    },
+    {
+      "id": "v2:ai-data-churn-features:de-lakehouse+ml-metrics+ml-preprocessing",
+      "patternId": "ai-data-churn-features",
+      "catalogVersion": 2,
+      "source": "Curated match",
+      "title": "Point-in-time feature builder",
+      "problem": "A data scientist needs training features that never use data from after the prediction date.",
+      "audience": "A data scientist",
+      "data": "Generate 1000 fictional accounts with timestamped events and a cancellation label. Use a fixed seed and keep evaluation cases separate.",
+      "output": "A point-in-time correct feature table and a model trained on it.",
+      "resources": [
+        {
+          "title": "ai-data implementation reference",
+          "url": "https://mlflow.org/docs/latest/index.html",
+          "access": "Free reading; no registration. Required data is generated locally or bundled; optional model downloads are labeled in the brief."
+        },
+        {
+          "title": "Apache Iceberg: documentation",
+          "url": "https://iceberg.apache.org/docs/latest/",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "scikit-learn: model evaluation",
+          "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "Inria: categorical variables",
+          "url": "https://inria.github.io/scikit-learn-mooc/python_scripts/03_categorical_pipeline.html",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        }
+      ],
+      "learningGoals": [
+        "Explain and implement point-in-time feature builder.",
+        "Demonstrate correctness: Show a leakage test where the as-of join excludes future events, then compare metrics against a naive join.",
+        "Explain the role, tradeoffs and failure modes of Phase 4 · Lakehouse formats and storage internals in the completed system.",
+        "Explain the role, tradeoffs and failure modes of Imbalance, metrics, calibration and error analysis in the completed system.",
+        "Explain the role, tradeoffs and failure modes of Preprocessing and feature engineering in the completed system."
+      ],
+      "boundaries": [
+        "Local educational prototype using fictional, generated or bundled data.",
+        "No paid credentials, production deployment or collection of private personal data required.",
+        "Large-model training is out of scope; use small CPU examples. Recorded responses test integration, not model quality."
+      ],
+      "skills": [
+        "de-lakehouse",
+        "ml-metrics",
+        "ml-preprocessing"
+      ],
+      "integration": [
+        {
+          "skillId": "de-lakehouse",
+          "skillTitle": "Phase 4 · Lakehouse formats and storage internals",
+          "catalogSkillId": "de-lakehouse",
+          "task": "Implement Phase 4 · Lakehouse formats and storage internals in Point-in-time feature builder. Adapt this focused lab to the project data: Build a medallion lakehouse over local sample data using Iceberg or Delta. Document file layout, schema evolution, time travel, compaction, catalog choice and the query evidence used to validate performance.  Required concepts: File formats, Why table formats matter, Iceberg and Delta internals, Table maintenance, Catalogs, Query engines, Lakehouse architecture, Operations and platform fluency.",
+          "deliverable": "Phase 4 · Lakehouse formats and storage internals: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a medallion lakehouse over local sample data using Iceberg or Delta. Document file layout, schema evolution, time travel, compaction, catalog choice and the query evidence used to validate performance.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        },
+        {
+          "skillId": "ml-metrics",
+          "skillTitle": "Imbalance, metrics, calibration and error analysis",
+          "catalogSkillId": "ml-metrics",
+          "task": "Implement Imbalance, metrics, calibration and error analysis in Point-in-time feature builder. Adapt this focused lab to the project data: Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement. Predict fictional cancellation label; keep the same target and splits across model comparisons. Required concepts: Classification metrics, Calibration and thresholds, Error analysis.",
+          "deliverable": "Imbalance, metrics, calibration and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        },
+        {
+          "skillId": "ml-preprocessing",
+          "skillTitle": "Preprocessing and feature engineering",
+          "catalogSkillId": "ml-preprocessing",
+          "task": "Implement Preprocessing and feature engineering in Point-in-time feature builder. Adapt this focused lab to the project data: Train a mixed numeric/categorical Pipeline on a generated dataset with missing entries; prove an unseen category and a new record use the same transformation path. Predict fictional cancellation label; keep the same target and splits across model comparisons. Required concepts: Scaling and encoding, Feature engineering, Pipelines.",
+          "deliverable": "Preprocessing and feature engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Train a mixed numeric/categorical Pipeline on a generated dataset with missing entries; prove an unseen category and a new record use the same transformation path.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        }
+      ],
+      "general": false,
+      "prerequisiteSkills": [],
+      "difficulty": "Intermediate",
+      "hours": 26,
+      "components": [
+        "Phase 4 · Lakehouse formats and storage internals: Phase 4 · Lakehouse formats and storage internals: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Imbalance, metrics, calibration and error analysis: Imbalance, metrics, calibration and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Preprocessing and feature engineering: Preprocessing and feature engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations"
+      ],
+      "dataFlow": [
+        "Generate 1000 fictional accounts with timestamped events and a cancellation label.",
+        "Validate source records and preserve stable IDs.",
+        "Create a leakage-safe train/validation/test split and a simple reference predictor.",
+        "Fit the selected model, evaluate on held-out data and persist inference artifacts.",
+        "Phase 4 · Lakehouse formats and storage internals consumes the project records/results and produces: Phase 4 · Lakehouse formats and storage internals: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "A point-in-time correct feature table and a model trained on it.",
+        "Show a leakage test where the as-of join excludes future events, then compare metrics against a naive join."
+      ],
+      "stages": [
+        {
+          "title": "MVP · problem and reproducible baseline",
+          "deliverable": "A point-in-time correct feature table and a model trained on it. Start with the smallest deterministic reference before adding extensions.",
+          "check": "Show a leakage test where the as-of join excludes future events, then compare metrics against a naive join."
+        },
+        {
+          "title": "MVP · Phase 4 · Lakehouse formats and storage internals",
+          "deliverable": "Phase 4 · Lakehouse formats and storage internals: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a medallion lakehouse over local sample data using Iceberg or Delta. Document file layout, schema evolution, time travel, compaction, catalog choice and the query evidence used to validate performance.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "MVP · Imbalance, metrics, calibration and error analysis",
+          "deliverable": "Imbalance, metrics, calibration and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "MVP · Preprocessing and feature engineering",
+          "deliverable": "Preprocessing and feature engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Train a mixed numeric/categorical Pipeline on a generated dataset with missing entries; prove an unseen category and a new record use the same transformation path.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "Integrated demonstration",
+          "deliverable": "One clean-start command, connected end-to-end example and evidence report",
+          "check": "Re-run the same input through all selected components and verify the final output against the source records."
+        },
+        {
+          "title": "Explain and hand off",
+          "deliverable": "README, decision notes and recorded limitations",
+          "check": "A teammate reproduces the example and you explain each selected skill without reading generated code."
+        }
+      ],
+      "milestones": [
+        "MVP · problem and reproducible baseline: A point-in-time correct feature table and a model trained on it. Start with the smallest deterministic reference before adding extensions.",
+        "MVP · Phase 4 · Lakehouse formats and storage internals: Phase 4 · Lakehouse formats and storage internals: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "MVP · Imbalance, metrics, calibration and error analysis: Imbalance, metrics, calibration and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "MVP · Preprocessing and feature engineering: Preprocessing and feature engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Integrated demonstration: One clean-start command, connected end-to-end example and evidence report",
+        "Explain and hand off: README, decision notes and recorded limitations"
+      ],
+      "acceptance": [
+        "Show a leakage test where the as-of join excludes future events, then compare metrics against a naive join.",
+        "Phase 4 · Lakehouse formats and storage internals: Build a medallion lakehouse over local sample data using Iceberg or Delta. Document file layout, schema evolution, time travel, compaction, catalog choice and the query evidence used to validate performance.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Imbalance, metrics, calibration and error analysis: Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Preprocessing and feature engineering: Train a mixed numeric/categorical Pipeline on a generated dataset with missing entries; prove an unseen category and a new record use the same transformation path.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "A teammate can reproduce the demo using the README without paid credentials."
+      ],
+      "documentation": [
+        "README and worked example",
+        "Requirements and success metric",
+        "Architecture, data contracts and ADR",
+        "Evaluation and limitations",
+        "Local deployment guide and recovery runbook"
+      ]
+    },
+    {
+      "id": "v2:ai-data-drift-retrain:de-airflow+de-mlops+ml-metrics",
+      "patternId": "ai-data-drift-retrain",
+      "catalogVersion": 2,
+      "source": "Curated match",
+      "title": "Data drift retraining trigger",
+      "problem": "An ML owner needs retraining only when input data really changes.",
+      "audience": "An ML owner",
+      "data": "Generate twelve weekly batches with drift injected in weeks 8 and 11. Use a fixed seed and keep evaluation cases separate.",
+      "output": "An orchestrated drift check that starts a tracked retraining run from its data snapshot.",
+      "resources": [
+        {
+          "title": "ai-data implementation reference",
+          "url": "https://mlflow.org/docs/latest/index.html",
+          "access": "Free reading; no registration. Required data is generated locally or bundled; optional model downloads are labeled in the brief."
+        },
+        {
+          "title": "Apache Airflow: core concepts",
+          "url": "https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/overview.html",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "MLflow: tracking",
+          "url": "https://mlflow.org/docs/latest/ml/tracking/",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "scikit-learn: model evaluation",
+          "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        }
+      ],
+      "learningGoals": [
+        "Explain and implement data drift retraining trigger.",
+        "Demonstrate correctness: Trigger exactly on the two drifted weeks and record which features moved and by how much.",
+        "Explain the role, tradeoffs and failure modes of Phase 2 · Orchestration mastery with Airflow in the completed system.",
+        "Explain the role, tradeoffs and failure modes of Phase 1 · ML engineering and MLOps in the completed system.",
+        "Explain the role, tradeoffs and failure modes of Imbalance, metrics, calibration and error analysis in the completed system."
+      ],
+      "boundaries": [
+        "Local educational prototype using fictional, generated or bundled data.",
+        "No paid credentials, production deployment or collection of private personal data required.",
+        "Large-model training is out of scope; use small CPU examples. Recorded responses test integration, not model quality."
+      ],
+      "skills": [
+        "de-airflow",
+        "de-mlops",
+        "ml-metrics"
+      ],
+      "integration": [
+        {
+          "skillId": "de-airflow",
+          "skillTitle": "Phase 2 · Orchestration mastery with Airflow",
+          "catalogSkillId": "de-airflow",
+          "task": "Implement Phase 2 · Orchestration mastery with Airflow in Data drift retraining trigger. Adapt this focused lab to the project data: Build and test an Airflow DAG that coordinates ingestion, dbt-style transformation and quality checks. Demonstrate idempotent retries, a branch, dynamic mapping, one integration, local debugging and CI DAG validation.  Required concepts: Airflow architecture, DAG configuration, TaskFlow, XCom and branching, Dynamic task mapping, Custom components, Reliability and production, DAG design patterns, Integrations, Deployment and configuration, Monitoring, debugging and testing.",
+          "deliverable": "Phase 2 · Orchestration mastery with Airflow: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build and test an Airflow DAG that coordinates ingestion, dbt-style transformation and quality checks. Demonstrate idempotent retries, a branch, dynamic mapping, one integration, local debugging and CI DAG validation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        },
+        {
+          "skillId": "de-mlops",
+          "skillTitle": "Phase 1 · ML engineering and MLOps",
+          "catalogSkillId": "de-mlops",
+          "task": "Implement Phase 1 · ML engineering and MLOps in Data drift retraining trigger. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.",
+          "deliverable": "Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        },
+        {
+          "skillId": "ml-metrics",
+          "skillTitle": "Imbalance, metrics, calibration and error analysis",
+          "catalogSkillId": "ml-metrics",
+          "task": "Implement Imbalance, metrics, calibration and error analysis in Data drift retraining trigger. Adapt this focused lab to the project data: Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement. Predict fictional cancellation label on each weekly batch; keep the same target and splits across model comparisons. Required concepts: Classification metrics, Calibration and thresholds, Error analysis.",
+          "deliverable": "Imbalance, metrics, calibration and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        }
+      ],
+      "general": false,
+      "prerequisiteSkills": [],
+      "difficulty": "Intermediate",
+      "hours": 26,
+      "components": [
+        "Phase 2 · Orchestration mastery with Airflow: Phase 2 · Orchestration mastery with Airflow: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Phase 1 · ML engineering and MLOps: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Imbalance, metrics, calibration and error analysis: Imbalance, metrics, calibration and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations"
+      ],
+      "dataFlow": [
+        "Generate twelve weekly batches with drift injected in weeks 8 and 11.",
+        "Validate source records and preserve stable IDs.",
+        "Create a leakage-safe train/validation/test split and a simple reference predictor.",
+        "Fit the selected model, evaluate on held-out data and persist inference artifacts.",
+        "Phase 2 · Orchestration mastery with Airflow consumes the project records/results and produces: Phase 2 · Orchestration mastery with Airflow: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "Phase 1 · ML engineering and MLOps consumes the project records/results and produces: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "An orchestrated drift check that starts a tracked retraining run from its data snapshot.",
+        "Trigger exactly on the two drifted weeks and record which features moved and by how much."
+      ],
+      "stages": [
+        {
+          "title": "MVP · problem and reproducible baseline",
+          "deliverable": "An orchestrated drift check that starts a tracked retraining run from its data snapshot. Start with the smallest deterministic reference before adding extensions.",
+          "check": "Trigger exactly on the two drifted weeks and record which features moved and by how much."
+        },
+        {
+          "title": "MVP · Phase 2 · Orchestration mastery with Airflow",
+          "deliverable": "Phase 2 · Orchestration mastery with Airflow: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build and test an Airflow DAG that coordinates ingestion, dbt-style transformation and quality checks. Demonstrate idempotent retries, a branch, dynamic mapping, one integration, local debugging and CI DAG validation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "MVP · Phase 1 · ML engineering and MLOps",
+          "deliverable": "Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "MVP · Imbalance, metrics, calibration and error analysis",
+          "deliverable": "Imbalance, metrics, calibration and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "Integrated demonstration",
+          "deliverable": "One clean-start command, connected end-to-end example and evidence report",
+          "check": "Re-run the same input through all selected components and verify the final output against the source records."
+        },
+        {
+          "title": "Explain and hand off",
+          "deliverable": "README, decision notes and recorded limitations",
+          "check": "A teammate reproduces the example and you explain each selected skill without reading generated code."
+        }
+      ],
+      "milestones": [
+        "MVP · problem and reproducible baseline: An orchestrated drift check that starts a tracked retraining run from its data snapshot. Start with the smallest deterministic reference before adding extensions.",
+        "MVP · Phase 2 · Orchestration mastery with Airflow: Phase 2 · Orchestration mastery with Airflow: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "MVP · Phase 1 · ML engineering and MLOps: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "MVP · Imbalance, metrics, calibration and error analysis: Imbalance, metrics, calibration and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Integrated demonstration: One clean-start command, connected end-to-end example and evidence report",
+        "Explain and hand off: README, decision notes and recorded limitations"
+      ],
+      "acceptance": [
+        "Trigger exactly on the two drifted weeks and record which features moved and by how much.",
+        "Phase 2 · Orchestration mastery with Airflow: Build and test an Airflow DAG that coordinates ingestion, dbt-style transformation and quality checks. Demonstrate idempotent retries, a branch, dynamic mapping, one integration, local debugging and CI DAG validation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Phase 1 · ML engineering and MLOps: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Imbalance, metrics, calibration and error analysis: Evaluate an imbalanced synthetic dataset with PR-AUC and a confusion matrix, plot calibration and inspect ten wrong predictions before choosing an improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "A teammate can reproduce the demo using the README without paid credentials."
+      ],
+      "documentation": [
+        "README and worked example",
+        "Requirements and success metric",
+        "Architecture, data contracts and ADR",
+        "Evaluation and limitations",
+        "Local deployment guide and recovery runbook"
+      ]
+    },
+    {
+      "id": "v2:ai-data-rag-freshness:de-kafka+de-llm-genai+rag-citations-abstention+rag-ingestion",
+      "patternId": "ai-data-rag-freshness",
+      "catalogVersion": 2,
+      "source": "Curated match",
+      "title": "CDC-fed retrieval index",
+      "problem": "A support assistant must stop citing help articles after they are edited or deleted.",
+      "audience": "A support assistant must stop citing help articles after they are edited or deleted.",
+      "data": "Use a disposable PostgreSQL table of 30 help articles with scripted edits and deletes. Use a fixed seed and keep evaluation cases separate.",
+      "output": "An incremental embedding index fed by CDC events, with citations.",
+      "resources": [
+        {
+          "title": "ai-data implementation reference",
+          "url": "https://mlflow.org/docs/latest/index.html",
+          "access": "Free reading; no registration. Required data is generated locally or bundled; optional model downloads are labeled in the brief."
+        },
+        {
+          "title": "Apache Kafka: introduction",
+          "url": "https://kafka.apache.org/documentation/#introduction",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "Hugging Face: LLM course",
+          "url": "https://huggingface.co/learn/llm-course/chapter1/1",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "Hugging Face: RAG evaluation",
+          "url": "https://huggingface.co/learn/cookbook/rag_evaluation",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "Sentence Transformers: semantic search",
+          "url": "https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html",
+          "access": "Free reading; Hugging Face account optional for sharing models",
+          "extras": "No paid materials required"
+        }
+      ],
+      "learningGoals": [
+        "Explain and implement cdc-fed retrieval index.",
+        "Demonstrate correctness: After each edit or delete the next query cites only the current version and never a removed article.",
+        "Explain the role, tradeoffs and failure modes of Phase 3 · Streaming and CDC with Kafka in the completed system.",
+        "Explain the role, tradeoffs and failure modes of Phase 2 · LLM and GenAI engineering in the completed system.",
+        "Explain the role, tradeoffs and failure modes of Evidence selection, citation validation and abstention in the completed system.",
+        "Explain the role, tradeoffs and failure modes of Document parsing, chunking and metadata in the completed system."
+      ],
+      "boundaries": [
+        "Local educational prototype using fictional, generated or bundled data.",
+        "No paid credentials, production deployment or collection of private personal data required.",
+        "Large-model training is out of scope; use small CPU examples. Recorded responses test integration, not model quality."
+      ],
+      "skills": [
+        "de-kafka",
+        "de-llm-genai",
+        "rag-citations-abstention",
+        "rag-ingestion"
+      ],
+      "integration": [
+        {
+          "skillId": "de-kafka",
+          "skillTitle": "Phase 3 · Streaming and CDC with Kafka",
+          "catalogSkillId": "de-kafka",
+          "task": "Implement Phase 3 · Streaming and CDC with Kafka in CDC-fed retrieval index. Adapt this focused lab to the project data: Build a local CDC demonstration from PostgreSQL through Kafka into a raw event sink. Show schema evolution, delete handling, lag monitoring, restart/replay behavior and a short architecture diagram.  Required concepts: Kafka foundations, Delivery semantics, Schema management, Change data capture, Kafka Connect, Stream processing, Architecture patterns, Operations and debugging.",
+          "deliverable": "Phase 3 · Streaming and CDC with Kafka: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a local CDC demonstration from PostgreSQL through Kafka into a raw event sink. Show schema evolution, delete handling, lag monitoring, restart/replay behavior and a short architecture diagram.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        },
+        {
+          "skillId": "de-llm-genai",
+          "skillTitle": "Phase 2 · LLM and GenAI engineering",
+          "catalogSkillId": "de-llm-genai",
+          "task": "Implement Phase 2 · LLM and GenAI engineering in CDC-fed retrieval index. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.",
+          "deliverable": "Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        },
+        {
+          "skillId": "rag-citations-abstention",
+          "skillTitle": "Evidence selection, citation validation and abstention",
+          "catalogSkillId": "rag-citations-abstention",
+          "task": "Implement Evidence selection, citation validation and abstention in CDC-fed retrieval index. Adapt this focused lab to the project data: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.  Required concepts: Evidence budget, Claim-level support, Citation validity versus faithfulness, Conflicting or stale evidence, Abstention and escalation.",
+          "deliverable": "Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        },
+        {
+          "skillId": "rag-ingestion",
+          "skillTitle": "Document parsing, chunking and metadata",
+          "catalogSkillId": "rag-ingestion",
+          "task": "Implement Document parsing, chunking and metadata in CDC-fed retrieval index. Adapt this focused lab to the project data: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.  Required concepts: Parsing, Chunking, Metadata and refresh.",
+          "deliverable": "Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        }
+      ],
+      "general": false,
+      "prerequisiteSkills": [],
+      "difficulty": "Intermediate",
+      "hours": 31,
+      "components": [
+        "Phase 3 · Streaming and CDC with Kafka: Phase 3 · Streaming and CDC with Kafka: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Evidence selection, citation validation and abstention: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Document parsing, chunking and metadata: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations"
+      ],
+      "dataFlow": [
+        "Use a disposable PostgreSQL table of 30 help articles with scripted edits and deletes.",
+        "Validate source records and preserve stable IDs.",
+        "Phase 3 · Streaming and CDC with Kafka consumes the project records/results and produces: Phase 3 · Streaming and CDC with Kafka: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "Phase 2 · LLM and GenAI engineering consumes the project records/results and produces: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "Evidence selection, citation validation and abstention consumes the project records/results and produces: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "Document parsing, chunking and metadata consumes the project records/results and produces: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "An incremental embedding index fed by CDC events, with citations.",
+        "After each edit or delete the next query cites only the current version and never a removed article."
+      ],
+      "stages": [
+        {
+          "title": "MVP · problem and reproducible baseline",
+          "deliverable": "An incremental embedding index fed by CDC events, with citations. Start with the smallest deterministic reference before adding extensions.",
+          "check": "After each edit or delete the next query cites only the current version and never a removed article."
+        },
+        {
+          "title": "MVP · Phase 3 · Streaming and CDC with Kafka",
+          "deliverable": "Phase 3 · Streaming and CDC with Kafka: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a local CDC demonstration from PostgreSQL through Kafka into a raw event sink. Show schema evolution, delete handling, lag monitoring, restart/replay behavior and a short architecture diagram.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "MVP · Phase 2 · LLM and GenAI engineering",
+          "deliverable": "Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "MVP · Evidence selection, citation validation and abstention",
+          "deliverable": "Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "Extension · Document parsing, chunking and metadata",
+          "deliverable": "Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "Integrated demonstration",
+          "deliverable": "One clean-start command, connected end-to-end example and evidence report",
+          "check": "Re-run the same input through all selected components and verify the final output against the source records."
+        },
+        {
+          "title": "Explain and hand off",
+          "deliverable": "README, decision notes and recorded limitations",
+          "check": "A teammate reproduces the example and you explain each selected skill without reading generated code."
+        }
+      ],
+      "milestones": [
+        "MVP · problem and reproducible baseline: An incremental embedding index fed by CDC events, with citations. Start with the smallest deterministic reference before adding extensions.",
+        "MVP · Phase 3 · Streaming and CDC with Kafka: Phase 3 · Streaming and CDC with Kafka: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "MVP · Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "MVP · Evidence selection, citation validation and abstention: Evidence selection, citation validation and abstention: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Extension · Document parsing, chunking and metadata: Document parsing, chunking and metadata: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Integrated demonstration: One clean-start command, connected end-to-end example and evidence report",
+        "Explain and hand off: README, decision notes and recorded limitations"
+      ],
+      "acceptance": [
+        "After each edit or delete the next query cites only the current version and never a removed article.",
+        "Phase 3 · Streaming and CDC with Kafka: Build a local CDC demonstration from PostgreSQL through Kafka into a raw event sink. Show schema evolution, delete handling, lag monitoring, restart/replay behavior and a short architecture diagram.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Phase 2 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Evidence selection, citation validation and abstention: Build an answer-validation harness using recorded answers over a small Markdown corpus. Check source existence, quoted support and stale versions; include answerable, conflicting and unanswerable questions with an explicit abstention rule.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Document parsing, chunking and metadata: Index ten local Markdown documents with heading-aware chunks, stable source IDs and versions; edit one document and prove old chunks disappear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "A teammate can reproduce the demo using the README without paid credentials."
+      ],
+      "documentation": [
+        "README and worked example",
+        "Requirements and success metric",
+        "Architecture, data contracts and ADR",
+        "Evaluation and limitations",
+        "Local deployment guide and recovery runbook"
+      ]
+    },
+    {
+      "id": "v2:ai-data-text-to-sql:de-dbt-kimball+de-llm-genai+llm-tools+security-guardrails",
+      "patternId": "ai-data-text-to-sql",
+      "catalogVersion": 2,
+      "source": "Curated match",
+      "title": "Governed text-to-SQL assistant",
+      "problem": "An analyst needs warehouse answers without writing SQL or touching restricted columns.",
+      "audience": "An analyst",
+      "data": "Use the star-schema tables from a dbt project with one column marked sensitive. Use a fixed seed and keep evaluation cases separate.",
+      "output": "A read-only SQL generation tool with schema context, query validation and an evaluation set.",
+      "resources": [
+        {
+          "title": "ai-data implementation reference",
+          "url": "https://mlflow.org/docs/latest/index.html",
+          "access": "Free reading; no registration. Required data is generated locally or bundled; optional model downloads are labeled in the brief."
+        },
+        {
+          "title": "dbt: build your first project",
+          "url": "https://docs.getdbt.com/docs/get-started-dbt",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "Hugging Face: LLM course",
+          "url": "https://huggingface.co/learn/llm-course/chapter1/1",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "Hugging Face: tools",
+          "url": "https://huggingface.co/learn/agents-course/unit1/tools",
+          "access": "Free reading; optional account for course activities",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "OWASP Top 10 for LLM applications",
+          "url": "https://genai.owasp.org/llm-top-10/",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        }
+      ],
+      "learningGoals": [
+        "Explain and implement governed text-to-sql assistant.",
+        "Demonstrate correctness: Answer 20 labeled questions, reject every query on the sensitive column and never run a write statement.",
+        "Explain the role, tradeoffs and failure modes of Phase 5 · Transformation and modeling with dbt + Kimball in the completed system.",
+        "Explain the role, tradeoffs and failure modes of Phase 2 · LLM and GenAI engineering in the completed system.",
+        "Explain the role, tradeoffs and failure modes of Tool calling, streaming and multimodal AI in the completed system.",
+        "Explain the role, tradeoffs and failure modes of Guardrails, secrets, bias/fairness and graceful failure in the completed system."
+      ],
+      "boundaries": [
+        "Local educational prototype using fictional, generated or bundled data.",
+        "No paid credentials, production deployment or collection of private personal data required.",
+        "Large-model training is out of scope; use small CPU examples. Recorded responses test integration, not model quality."
+      ],
+      "skills": [
+        "de-dbt-kimball",
+        "de-llm-genai",
+        "llm-tools",
+        "security-guardrails"
+      ],
+      "integration": [
+        {
+          "skillId": "de-dbt-kimball",
+          "skillTitle": "Phase 5 · Transformation and modeling with dbt + Kimball",
+          "catalogSkillId": "de-dbt-kimball",
+          "task": "Implement Phase 5 · Transformation and modeling with dbt + Kimball in Governed text-to-SQL assistant. Adapt this focused lab to the project data: Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.  Required concepts: dbt project and DAG, Incremental models, Snapshots and slowly changing dimensions, Testing, docs and exposures, Dimensional modeling, Consumer-focused contracts, Macros and reuse, Orchestration and CI.",
+          "deliverable": "Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        },
+        {
+          "skillId": "de-llm-genai",
+          "skillTitle": "Phase 2 · LLM and GenAI engineering",
+          "catalogSkillId": "de-llm-genai",
+          "task": "Implement Phase 2 · LLM and GenAI engineering in Governed text-to-SQL assistant. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.",
+          "deliverable": "Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        },
+        {
+          "skillId": "llm-tools",
+          "skillTitle": "Tool calling, streaming and multimodal AI",
+          "catalogSkillId": "llm-tools",
+          "task": "Implement Tool calling, streaming and multimodal AI in Governed text-to-SQL assistant. Adapt this focused lab to the project data: Implement a fixture-driven assistant with one read-only search tool, streamed chunks and image/audio/video metadata inputs; test cancellation and invalid tool arguments.  Required concepts: Tool calling, Streaming, Multimodal tasks.",
+          "deliverable": "Tool calling, streaming and multimodal AI: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Implement a fixture-driven assistant with one read-only search tool, streamed chunks and image/audio/video metadata inputs; test cancellation and invalid tool arguments.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        },
+        {
+          "skillId": "security-guardrails",
+          "skillTitle": "Guardrails, secrets, bias/fairness and graceful failure",
+          "catalogSkillId": "security-guardrails",
+          "task": "Implement Guardrails, secrets, bias/fairness and graceful failure in Governed text-to-SQL assistant. Adapt this focused lab to the project data: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.  Required concepts: Guardrails, Secrets and rate limits, Bias and fairness, Graceful failure.",
+          "deliverable": "Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        }
+      ],
+      "general": false,
+      "prerequisiteSkills": [],
+      "difficulty": "Intermediate",
+      "hours": 31,
+      "components": [
+        "Phase 5 · Transformation and modeling with dbt + Kimball: Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Tool calling, streaming and multimodal AI: Tool calling, streaming and multimodal AI: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Guardrails, secrets, bias/fairness and graceful failure: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations"
+      ],
+      "dataFlow": [
+        "Use the star-schema tables from a dbt project with one column marked sensitive.",
+        "Validate source records and preserve stable IDs.",
+        "Phase 5 · Transformation and modeling with dbt + Kimball consumes the project records/results and produces: Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "Phase 2 · LLM and GenAI engineering consumes the project records/results and produces: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "Tool calling, streaming and multimodal AI consumes the project records/results and produces: Tool calling, streaming and multimodal AI: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "Guardrails, secrets, bias/fairness and graceful failure consumes the project records/results and produces: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "A read-only SQL generation tool with schema context, query validation and an evaluation set.",
+        "Answer 20 labeled questions, reject every query on the sensitive column and never run a write statement."
+      ],
+      "stages": [
+        {
+          "title": "MVP · problem and reproducible baseline",
+          "deliverable": "A read-only SQL generation tool with schema context, query validation and an evaluation set. Start with the smallest deterministic reference before adding extensions.",
+          "check": "Answer 20 labeled questions, reject every query on the sensitive column and never run a write statement."
+        },
+        {
+          "title": "MVP · Phase 5 · Transformation and modeling with dbt + Kimball",
+          "deliverable": "Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "MVP · Phase 2 · LLM and GenAI engineering",
+          "deliverable": "Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "MVP · Tool calling, streaming and multimodal AI",
+          "deliverable": "Tool calling, streaming and multimodal AI: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Implement a fixture-driven assistant with one read-only search tool, streamed chunks and image/audio/video metadata inputs; test cancellation and invalid tool arguments.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "Extension · Guardrails, secrets, bias/fairness and graceful failure",
+          "deliverable": "Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "Integrated demonstration",
+          "deliverable": "One clean-start command, connected end-to-end example and evidence report",
+          "check": "Re-run the same input through all selected components and verify the final output against the source records."
+        },
+        {
+          "title": "Explain and hand off",
+          "deliverable": "README, decision notes and recorded limitations",
+          "check": "A teammate reproduces the example and you explain each selected skill without reading generated code."
+        }
+      ],
+      "milestones": [
+        "MVP · problem and reproducible baseline: A read-only SQL generation tool with schema context, query validation and an evaluation set. Start with the smallest deterministic reference before adding extensions.",
+        "MVP · Phase 5 · Transformation and modeling with dbt + Kimball: Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "MVP · Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "MVP · Tool calling, streaming and multimodal AI: Tool calling, streaming and multimodal AI: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Extension · Guardrails, secrets, bias/fairness and graceful failure: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Integrated demonstration: One clean-start command, connected end-to-end example and evidence report",
+        "Explain and hand off: README, decision notes and recorded limitations"
+      ],
+      "acceptance": [
+        "Answer 20 labeled questions, reject every query on the sensitive column and never run a write statement.",
+        "Phase 5 · Transformation and modeling with dbt + Kimball: Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Phase 2 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Tool calling, streaming and multimodal AI: Implement a fixture-driven assistant with one read-only search tool, streamed chunks and image/audio/video metadata inputs; test cancellation and invalid tool arguments.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Guardrails, secrets, bias/fairness and graceful failure: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "A teammate can reproduce the demo using the README without paid credentials."
+      ],
+      "documentation": [
+        "README and worked example",
+        "Requirements and success metric",
+        "Architecture, data contracts and ADR",
+        "Evaluation and limitations",
+        "Local deployment guide and recovery runbook"
+      ]
+    },
+    {
+      "id": "v2:ai-data-eval-warehouse:de-dbt-kimball+de-quality-observability+eval-datasets",
+      "patternId": "ai-data-eval-warehouse",
+      "catalogVersion": 2,
+      "source": "Curated match",
+      "title": "LLM evaluation warehouse",
+      "problem": "A team needs every assistant answer logged and comparable across prompt versions.",
+      "audience": "A team",
+      "data": "Record 200 fictional question, answer and citation runs across two prompt versions. Use a fixed seed and keep evaluation cases separate.",
+      "output": "A modeled evaluation table with per-version quality and latency views.",
+      "resources": [
+        {
+          "title": "ai-data implementation reference",
+          "url": "https://mlflow.org/docs/latest/index.html",
+          "access": "Free reading; no registration. Required data is generated locally or bundled; optional model downloads are labeled in the brief."
+        },
+        {
+          "title": "dbt: build your first project",
+          "url": "https://docs.getdbt.com/docs/get-started-dbt",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "Great Expectations: documentation",
+          "url": "https://docs.greatexpectations.io/docs/",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "Haystack: evaluation",
+          "url": "https://docs.haystack.deepset.ai/docs/evaluation",
+          "access": "Free reading; Hugging Face account optional for sharing models",
+          "extras": "No paid materials required"
+        }
+      ],
+      "learningGoals": [
+        "Explain and implement llm evaluation warehouse.",
+        "Demonstrate correctness: Compute groundedness and latency per version from the table and reproduce one regression found in it.",
+        "Explain the role, tradeoffs and failure modes of Phase 5 · Transformation and modeling with dbt + Kimball in the completed system.",
+        "Explain the role, tradeoffs and failure modes of Phase 6 · Data quality and observability in the completed system.",
+        "Explain the role, tradeoffs and failure modes of Golden datasets and deterministic regression evaluation in the completed system."
+      ],
+      "boundaries": [
+        "Local educational prototype using fictional, generated or bundled data.",
+        "No paid credentials, production deployment or collection of private personal data required.",
+        "Large-model training is out of scope; use small CPU examples. Recorded responses test integration, not model quality."
+      ],
+      "skills": [
+        "de-dbt-kimball",
+        "de-quality-observability",
+        "eval-datasets"
+      ],
+      "integration": [
+        {
+          "skillId": "de-dbt-kimball",
+          "skillTitle": "Phase 5 · Transformation and modeling with dbt + Kimball",
+          "catalogSkillId": "de-dbt-kimball",
+          "task": "Implement Phase 5 · Transformation and modeling with dbt + Kimball in LLM evaluation warehouse. Adapt this focused lab to the project data: Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.  Required concepts: dbt project and DAG, Incremental models, Snapshots and slowly changing dimensions, Testing, docs and exposures, Dimensional modeling, Consumer-focused contracts, Macros and reuse, Orchestration and CI.",
+          "deliverable": "Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        },
+        {
+          "skillId": "de-quality-observability",
+          "skillTitle": "Phase 6 · Data quality and observability",
+          "catalogSkillId": "de-quality-observability",
+          "task": "Implement Phase 6 · Data quality and observability in LLM evaluation warehouse. Adapt this focused lab to the project data: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.  Required concepts: Quality as a discipline, Quality dimensions, Great Expectations and alternatives, Data contracts, Lineage, Monitoring and alerting, Lightweight anomaly detection, Operational quality checks.",
+          "deliverable": "Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        },
+        {
+          "skillId": "eval-datasets",
+          "skillTitle": "Golden datasets and deterministic regression evaluation",
+          "catalogSkillId": "eval-datasets",
+          "task": "Implement Golden datasets and deterministic regression evaluation in LLM evaluation warehouse. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.",
+          "deliverable": "Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        }
+      ],
+      "general": false,
+      "prerequisiteSkills": [],
+      "difficulty": "Intermediate",
+      "hours": 26,
+      "components": [
+        "Phase 5 · Transformation and modeling with dbt + Kimball: Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Phase 6 · Data quality and observability: Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations"
+      ],
+      "dataFlow": [
+        "Record 200 fictional question, answer and citation runs across two prompt versions.",
+        "Validate source records and preserve stable IDs.",
+        "Phase 5 · Transformation and modeling with dbt + Kimball consumes the project records/results and produces: Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "Phase 6 · Data quality and observability consumes the project records/results and produces: Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "Golden datasets and deterministic regression evaluation consumes the project records/results and produces: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "A modeled evaluation table with per-version quality and latency views.",
+        "Compute groundedness and latency per version from the table and reproduce one regression found in it."
+      ],
+      "stages": [
+        {
+          "title": "MVP · problem and reproducible baseline",
+          "deliverable": "A modeled evaluation table with per-version quality and latency views. Start with the smallest deterministic reference before adding extensions.",
+          "check": "Compute groundedness and latency per version from the table and reproduce one regression found in it."
+        },
+        {
+          "title": "MVP · Phase 5 · Transformation and modeling with dbt + Kimball",
+          "deliverable": "Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "MVP · Phase 6 · Data quality and observability",
+          "deliverable": "Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "MVP · Golden datasets and deterministic regression evaluation",
+          "deliverable": "Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "Integrated demonstration",
+          "deliverable": "One clean-start command, connected end-to-end example and evidence report",
+          "check": "Re-run the same input through all selected components and verify the final output against the source records."
+        },
+        {
+          "title": "Explain and hand off",
+          "deliverable": "README, decision notes and recorded limitations",
+          "check": "A teammate reproduces the example and you explain each selected skill without reading generated code."
+        }
+      ],
+      "milestones": [
+        "MVP · problem and reproducible baseline: A modeled evaluation table with per-version quality and latency views. Start with the smallest deterministic reference before adding extensions.",
+        "MVP · Phase 5 · Transformation and modeling with dbt + Kimball: Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "MVP · Phase 6 · Data quality and observability: Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Integrated demonstration: One clean-start command, connected end-to-end example and evidence report",
+        "Explain and hand off: README, decision notes and recorded limitations"
+      ],
+      "acceptance": [
+        "Compute groundedness and latency per version from the table and reproduce one regression found in it.",
+        "Phase 5 · Transformation and modeling with dbt + Kimball: Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Phase 6 · Data quality and observability: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "A teammate can reproduce the demo using the README without paid credentials."
+      ],
+      "documentation": [
+        "README and worked example",
+        "Requirements and success metric",
+        "Architecture, data contracts and ADR",
+        "Evaluation and limitations",
+        "Local deployment guide and recovery runbook"
+      ]
+    },
+    {
+      "id": "v2:ai-data-batch-scoring:de-mlops+de-spark+ml-inference",
+      "patternId": "ai-data-batch-scoring",
+      "catalogVersion": 2,
+      "source": "Curated match",
+      "title": "Nightly batch scoring job",
+      "problem": "A retention team needs fresh risk scores each morning without a live API.",
+      "audience": "A retention team",
+      "data": "Generate a daily partition of fictional accounts and a registered model. Use a fixed seed and keep evaluation cases separate.",
+      "output": "A Spark job that loads the registered model, scores the partition and writes to gold.",
+      "resources": [
+        {
+          "title": "ai-data implementation reference",
+          "url": "https://mlflow.org/docs/latest/index.html",
+          "access": "Free reading; no registration. Required data is generated locally or bundled; optional model downloads are labeled in the brief."
+        },
+        {
+          "title": "MLflow: tracking",
+          "url": "https://mlflow.org/docs/latest/ml/tracking/",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "Apache Spark: PySpark overview",
+          "url": "https://spark.apache.org/docs/latest/api/python/getting_started/index.html",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "scikit-learn: model persistence",
+          "url": "https://scikit-learn.org/stable/model_persistence.html",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        }
+      ],
+      "learningGoals": [
+        "Explain and implement nightly batch scoring job.",
+        "Demonstrate correctness: Rerunning a night gives identical scores, and a schema-mismatched partition fails before anything is written.",
+        "Explain the role, tradeoffs and failure modes of Phase 1 · ML engineering and MLOps in the completed system.",
+        "Explain the role, tradeoffs and failure modes of Phase 1 · Distributed processing with Spark in the completed system.",
+        "Explain the role, tradeoffs and failure modes of Model persistence, inference and data drift in the completed system."
+      ],
+      "boundaries": [
+        "Local educational prototype using fictional, generated or bundled data.",
+        "No paid credentials, production deployment or collection of private personal data required.",
+        "Large-model training is out of scope; use small CPU examples. Recorded responses test integration, not model quality."
+      ],
+      "skills": [
+        "de-mlops",
+        "de-spark",
+        "ml-inference"
+      ],
+      "integration": [
+        {
+          "skillId": "de-mlops",
+          "skillTitle": "Phase 1 · ML engineering and MLOps",
+          "catalogSkillId": "de-mlops",
+          "task": "Implement Phase 1 · ML engineering and MLOps in Nightly batch scoring job. Adapt this focused lab to the project data: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.  Required concepts: Feature engineering pipelines, Model training pipelines, Experiment tracking and registry, Deployment patterns, Monitoring and drift, Integration back into DE.",
+          "deliverable": "Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        },
+        {
+          "skillId": "de-spark",
+          "skillTitle": "Phase 1 · Distributed processing with Spark",
+          "catalogSkillId": "de-spark",
+          "task": "Implement Phase 1 · Distributed processing with Spark in Nightly batch scoring job. Adapt this focused lab to the project data: Build a reproducible PySpark batch job over generated event data. Include SQL and DataFrame transformations, a skewed join diagnosis, an explain plan, a small streaming exercise, and a README with measured before/after tuning evidence.  Required concepts: Spark architecture and execution, Core APIs, Partitions, shuffles and skew, Join planning, Memory, caching and spill, Performance diagnosis, UDFs, Window functions, Structured Streaming introduction, Deployment and I/O, Debugging and observability.",
+          "deliverable": "Phase 1 · Distributed processing with Spark: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a reproducible PySpark batch job over generated event data. Include SQL and DataFrame transformations, a skewed join diagnosis, an explain plan, a small streaming exercise, and a README with measured before/after tuning evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        },
+        {
+          "skillId": "ml-inference",
+          "skillTitle": "Model persistence, inference and data drift",
+          "catalogSkillId": "ml-inference",
+          "task": "Implement Model persistence, inference and data drift in Nightly batch scoring job. Adapt this focused lab to the project data: Save a fitted pipeline locally, load it in a separate process and verify identical predictions; create a schema check and a synthetic drift report. Predict next-month cancellation risk; keep the same target and splits across model comparisons. Required concepts: Persistence, Inference contracts, Drift.",
+          "deliverable": "Model persistence, inference and data drift: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Save a fitted pipeline locally, load it in a separate process and verify identical predictions; create a schema check and a synthetic drift report.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        }
+      ],
+      "general": false,
+      "prerequisiteSkills": [],
+      "difficulty": "Intermediate",
+      "hours": 26,
+      "components": [
+        "Phase 1 · ML engineering and MLOps: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Phase 1 · Distributed processing with Spark: Phase 1 · Distributed processing with Spark: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Model persistence, inference and data drift: Model persistence, inference and data drift: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations"
+      ],
+      "dataFlow": [
+        "Generate a daily partition of fictional accounts and a registered model.",
+        "Validate source records and preserve stable IDs.",
+        "Create a leakage-safe train/validation/test split and a simple reference predictor.",
+        "Fit the selected model, evaluate on held-out data and persist inference artifacts.",
+        "Phase 1 · ML engineering and MLOps consumes the project records/results and produces: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "Phase 1 · Distributed processing with Spark consumes the project records/results and produces: Phase 1 · Distributed processing with Spark: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "A Spark job that loads the registered model, scores the partition and writes to gold.",
+        "Rerunning a night gives identical scores, and a schema-mismatched partition fails before anything is written."
+      ],
+      "stages": [
+        {
+          "title": "MVP · problem and reproducible baseline",
+          "deliverable": "A Spark job that loads the registered model, scores the partition and writes to gold. Start with the smallest deterministic reference before adding extensions.",
+          "check": "Rerunning a night gives identical scores, and a schema-mismatched partition fails before anything is written."
+        },
+        {
+          "title": "MVP · Phase 1 · ML engineering and MLOps",
+          "deliverable": "Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "MVP · Phase 1 · Distributed processing with Spark",
+          "deliverable": "Phase 1 · Distributed processing with Spark: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a reproducible PySpark batch job over generated event data. Include SQL and DataFrame transformations, a skewed join diagnosis, an explain plan, a small streaming exercise, and a README with measured before/after tuning evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "MVP · Model persistence, inference and data drift",
+          "deliverable": "Model persistence, inference and data drift: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Save a fitted pipeline locally, load it in a separate process and verify identical predictions; create a schema check and a synthetic drift report.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "Integrated demonstration",
+          "deliverable": "One clean-start command, connected end-to-end example and evidence report",
+          "check": "Re-run the same input through all selected components and verify the final output against the source records."
+        },
+        {
+          "title": "Explain and hand off",
+          "deliverable": "README, decision notes and recorded limitations",
+          "check": "A teammate reproduces the example and you explain each selected skill without reading generated code."
+        }
+      ],
+      "milestones": [
+        "MVP · problem and reproducible baseline: A Spark job that loads the registered model, scores the partition and writes to gold. Start with the smallest deterministic reference before adding extensions.",
+        "MVP · Phase 1 · ML engineering and MLOps: Phase 1 · ML engineering and MLOps: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "MVP · Phase 1 · Distributed processing with Spark: Phase 1 · Distributed processing with Spark: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "MVP · Model persistence, inference and data drift: Model persistence, inference and data drift: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Integrated demonstration: One clean-start command, connected end-to-end example and evidence report",
+        "Explain and hand off: README, decision notes and recorded limitations"
+      ],
+      "acceptance": [
+        "Rerunning a night gives identical scores, and a schema-mismatched partition fails before anything is written.",
+        "Phase 1 · ML engineering and MLOps: Build a reproducible local ML lifecycle using versioned features, a training pipeline, MLflow tracking, a FastAPI container, a simulated drift check and predictions written back to a gold-layer table. No hosted model or paid API is required.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Phase 1 · Distributed processing with Spark: Build a reproducible PySpark batch job over generated event data. Include SQL and DataFrame transformations, a skewed join diagnosis, an explain plan, a small streaming exercise, and a README with measured before/after tuning evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Model persistence, inference and data drift: Save a fitted pipeline locally, load it in a separate process and verify identical predictions; create a schema check and a synthetic drift report.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "A teammate can reproduce the demo using the README without paid credentials."
+      ],
+      "documentation": [
+        "README and worked example",
+        "Requirements and success metric",
+        "Architecture, data contracts and ADR",
+        "Evaluation and limitations",
+        "Local deployment guide and recovery runbook"
+      ]
+    },
+    {
+      "id": "v2:ai-data-pii-guard:de-llm-genai+de-quality-observability+security-guardrails",
+      "patternId": "ai-data-pii-guard",
+      "catalogVersion": 2,
+      "source": "Curated match",
+      "title": "PII-safe training data gate",
+      "problem": "A data owner needs personal data removed before any model or LLM sees it.",
+      "audience": "A data owner",
+      "data": "Generate 500 fictional support tickets with seeded emails, phone numbers and names. Use a fixed seed and keep evaluation cases separate.",
+      "output": "A quality-gated redaction step between bronze and the training and embedding inputs.",
+      "resources": [
+        {
+          "title": "ai-data implementation reference",
+          "url": "https://mlflow.org/docs/latest/index.html",
+          "access": "Free reading; no registration. Required data is generated locally or bundled; optional model downloads are labeled in the brief."
+        },
+        {
+          "title": "Hugging Face: LLM course",
+          "url": "https://huggingface.co/learn/llm-course/chapter1/1",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "Great Expectations: documentation",
+          "url": "https://docs.greatexpectations.io/docs/",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "OWASP Top 10 for LLM applications",
+          "url": "https://genai.owasp.org/llm-top-10/",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        }
+      ],
+      "learningGoals": [
+        "Explain and implement pii-safe training data gate.",
+        "Demonstrate correctness: No seeded identifier reaches the gold table or the vector index, and the gate fails on an unredacted batch.",
+        "Explain the role, tradeoffs and failure modes of Phase 2 · LLM and GenAI engineering in the completed system.",
+        "Explain the role, tradeoffs and failure modes of Phase 6 · Data quality and observability in the completed system.",
+        "Explain the role, tradeoffs and failure modes of Guardrails, secrets, bias/fairness and graceful failure in the completed system."
+      ],
+      "boundaries": [
+        "Local educational prototype using fictional, generated or bundled data.",
+        "No paid credentials, production deployment or collection of private personal data required.",
+        "Large-model training is out of scope; use small CPU examples. Recorded responses test integration, not model quality."
+      ],
+      "skills": [
+        "de-llm-genai",
+        "de-quality-observability",
+        "security-guardrails"
+      ],
+      "integration": [
+        {
+          "skillId": "de-llm-genai",
+          "skillTitle": "Phase 2 · LLM and GenAI engineering",
+          "catalogSkillId": "de-llm-genai",
+          "task": "Implement Phase 2 · LLM and GenAI engineering in PII-safe training data gate. Adapt this focused lab to the project data: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.  Required concepts: Deep learning foundations, Transformer architecture, LLM-specific skills, Evaluation and responsible AI, LLM and RAG stack, Agents, lighter touch.",
+          "deliverable": "Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        },
+        {
+          "skillId": "de-quality-observability",
+          "skillTitle": "Phase 6 · Data quality and observability",
+          "catalogSkillId": "de-quality-observability",
+          "task": "Implement Phase 6 · Data quality and observability in PII-safe training data gate. Adapt this focused lab to the project data: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.  Required concepts: Quality as a discipline, Quality dimensions, Great Expectations and alternatives, Data contracts, Lineage, Monitoring and alerting, Lightweight anomaly detection, Operational quality checks.",
+          "deliverable": "Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        },
+        {
+          "skillId": "security-guardrails",
+          "skillTitle": "Guardrails, secrets, bias/fairness and graceful failure",
+          "catalogSkillId": "security-guardrails",
+          "task": "Implement Guardrails, secrets, bias/fairness and graceful failure in PII-safe training data gate. Adapt this focused lab to the project data: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.  Required concepts: Guardrails, Secrets and rate limits, Bias and fairness, Graceful failure.",
+          "deliverable": "Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        }
+      ],
+      "general": false,
+      "prerequisiteSkills": [],
+      "difficulty": "Intermediate",
+      "hours": 26,
+      "components": [
+        "Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Phase 6 · Data quality and observability: Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Guardrails, secrets, bias/fairness and graceful failure: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations"
+      ],
+      "dataFlow": [
+        "Generate 500 fictional support tickets with seeded emails, phone numbers and names.",
+        "Validate source records and preserve stable IDs.",
+        "Phase 2 · LLM and GenAI engineering consumes the project records/results and produces: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "Phase 6 · Data quality and observability consumes the project records/results and produces: Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "Guardrails, secrets, bias/fairness and graceful failure consumes the project records/results and produces: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "A quality-gated redaction step between bronze and the training and embedding inputs.",
+        "No seeded identifier reaches the gold table or the vector index, and the gate fails on an unredacted batch."
+      ],
+      "stages": [
+        {
+          "title": "MVP · problem and reproducible baseline",
+          "deliverable": "A quality-gated redaction step between bronze and the training and embedding inputs. Start with the smallest deterministic reference before adding extensions.",
+          "check": "No seeded identifier reaches the gold table or the vector index, and the gate fails on an unredacted batch."
+        },
+        {
+          "title": "MVP · Phase 2 · LLM and GenAI engineering",
+          "deliverable": "Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "MVP · Phase 6 · Data quality and observability",
+          "deliverable": "Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "MVP · Guardrails, secrets, bias/fairness and graceful failure",
+          "deliverable": "Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "Integrated demonstration",
+          "deliverable": "One clean-start command, connected end-to-end example and evidence report",
+          "check": "Re-run the same input through all selected components and verify the final output against the source records."
+        },
+        {
+          "title": "Explain and hand off",
+          "deliverable": "README, decision notes and recorded limitations",
+          "check": "A teammate reproduces the example and you explain each selected skill without reading generated code."
+        }
+      ],
+      "milestones": [
+        "MVP · problem and reproducible baseline: A quality-gated redaction step between bronze and the training and embedding inputs. Start with the smallest deterministic reference before adding extensions.",
+        "MVP · Phase 2 · LLM and GenAI engineering: Phase 2 · LLM and GenAI engineering: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "MVP · Phase 6 · Data quality and observability: Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "MVP · Guardrails, secrets, bias/fairness and graceful failure: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Integrated demonstration: One clean-start command, connected end-to-end example and evidence report",
+        "Explain and hand off: README, decision notes and recorded limitations"
+      ],
+      "acceptance": [
+        "No seeded identifier reaches the gold table or the vector index, and the gate fails on an unredacted batch.",
+        "Phase 2 · LLM and GenAI engineering: Build a local RAG assistant over pipeline documentation, with citations, a retrieval evaluation set, structured output and one bounded read-only data tool. Record unsupported questions, model limitations and the conditions under which an agent should not be used.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Phase 6 · Data quality and observability: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Guardrails, secrets, bias/fairness and graceful failure: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "A teammate can reproduce the demo using the README without paid credentials."
+      ],
+      "documentation": [
+        "README and worked example",
+        "Requirements and success metric",
+        "Architecture, data contracts and ADR",
+        "Evaluation and limitations",
+        "Local deployment guide and recovery runbook"
+      ]
+    },
+    {
+      "id": "v2:ai-data-platform-design:de-system-design-interviews+docs-architecture",
+      "patternId": "ai-data-platform-design",
+      "catalogVersion": 2,
+      "source": "Curated match",
+      "title": "AI data platform design review",
+      "problem": "A hiring panel needs a defensible end-to-end design for an ML and RAG platform.",
+      "audience": "A hiring panel",
+      "data": "Describe the platform built in the other AI + Data projects; no new data is required. Use a fixed seed and keep evaluation cases separate.",
+      "output": "An architecture document, ADRs and a capacity and cost estimate.",
+      "resources": [
+        {
+          "title": "ai-data implementation reference",
+          "url": "https://mlflow.org/docs/latest/index.html",
+          "access": "Free reading; no registration. Required data is generated locally or bundled; optional model downloads are labeled in the brief."
+        },
+        {
+          "title": "System Design Primer",
+          "url": "https://github.com/donnemartin/system-design-primer",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "Architecture Decision Records",
+          "url": "https://adr.github.io/",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        }
+      ],
+      "learningGoals": [
+        "Explain and implement ai data platform design review.",
+        "Demonstrate correctness: Defend three failure scenarios with recovery steps and justify one trade-off against a simpler design.",
+        "Explain the role, tradeoffs and failure modes of Phase 3 · System design and interview preparation in the completed system.",
+        "Explain the role, tradeoffs and failure modes of Architecture, data requirements, schemas and ADRs in the completed system."
+      ],
+      "boundaries": [
+        "Local educational prototype using fictional, generated or bundled data.",
+        "No paid credentials, production deployment or collection of private personal data required.",
+        "Large-model training is out of scope; use small CPU examples. Recorded responses test integration, not model quality."
+      ],
+      "skills": [
+        "de-system-design-interviews",
+        "docs-architecture"
+      ],
+      "integration": [
+        {
+          "skillId": "de-system-design-interviews",
+          "skillTitle": "Phase 3 · System design and interview preparation",
+          "catalogSkillId": "de-system-design-interviews",
+          "task": "Implement Phase 3 · System design and interview preparation in AI data platform design review. Adapt this focused lab to the project data: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.  Required concepts: System design framework, Case studies, Trade-off articulation, SQL interview fluency, Python interview fluency, Pipeline design coding, Behavioral preparation, Mock interviews, Company and role-specific preparation.",
+          "deliverable": "Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        },
+        {
+          "skillId": "docs-architecture",
+          "skillTitle": "Architecture, data requirements, schemas and ADRs",
+          "catalogSkillId": "docs-architecture",
+          "task": "Implement Architecture, data requirements, schemas and ADRs in AI data platform design review. Adapt this focused lab to the project data: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.  Required concepts: Architecture and data flow, Data requirements, ADRs.",
+          "deliverable": "Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "general": false
+        }
+      ],
+      "general": false,
+      "prerequisiteSkills": [],
+      "difficulty": "Intermediate",
+      "hours": 21,
+      "components": [
+        "Phase 3 · System design and interview preparation: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Architecture, data requirements, schemas and ADRs: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations"
+      ],
+      "dataFlow": [
+        "Describe the platform built in the other AI + Data projects; no new data is required.",
+        "Validate source records and preserve stable IDs.",
+        "Phase 3 · System design and interview preparation consumes the project records/results and produces: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "Architecture, data requirements, schemas and ADRs consumes the project records/results and produces: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.",
+        "An architecture document, ADRs and a capacity and cost estimate.",
+        "Defend three failure scenarios with recovery steps and justify one trade-off against a simpler design."
+      ],
+      "stages": [
+        {
+          "title": "MVP · problem and reproducible baseline",
+          "deliverable": "An architecture document, ADRs and a capacity and cost estimate. Start with the smallest deterministic reference before adding extensions.",
+          "check": "Defend three failure scenarios with recovery steps and justify one trade-off against a simpler design."
+        },
+        {
+          "title": "MVP · Phase 3 · System design and interview preparation",
+          "deliverable": "Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "MVP · Architecture, data requirements, schemas and ADRs",
+          "deliverable": "Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+          "check": "Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+        },
+        {
+          "title": "Integrated demonstration",
+          "deliverable": "One clean-start command, connected end-to-end example and evidence report",
+          "check": "Re-run the same input through all selected components and verify the final output against the source records."
+        },
+        {
+          "title": "Explain and hand off",
+          "deliverable": "README, decision notes and recorded limitations",
+          "check": "A teammate reproduces the example and you explain each selected skill without reading generated code."
+        }
+      ],
+      "milestones": [
+        "MVP · problem and reproducible baseline: An architecture document, ADRs and a capacity and cost estimate. Start with the smallest deterministic reference before adding extensions.",
+        "MVP · Phase 3 · System design and interview preparation: Phase 3 · System design and interview preparation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "MVP · Architecture, data requirements, schemas and ADRs: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations",
+        "Integrated demonstration: One clean-start command, connected end-to-end example and evidence report",
+        "Explain and hand off: README, decision notes and recorded limitations"
+      ],
+      "acceptance": [
+        "Defend three failure scenarios with recovery steps and justify one trade-off against a simpler design.",
+        "Phase 3 · System design and interview preparation: Present a capstone built from Phases 1–9, then complete a mock interview pack: one SQL exercise, one Python ETL exercise, one CDC or warehouse design, three STAR stories and a role-specific skills map. Phase 10 is continuous—begin case studies and behavioral preparation once Phase 4 is solid.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "Architecture, data requirements, schemas and ADRs: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+        "A teammate can reproduce the demo using the README without paid credentials."
+      ],
+      "documentation": [
+        "README and worked example",
+        "Requirements and success metric",
+        "Architecture, data contracts and ADR",
+        "Evaluation and limitations",
+        "Local deployment guide and recovery runbook"
+      ]
     }
   ]
 }

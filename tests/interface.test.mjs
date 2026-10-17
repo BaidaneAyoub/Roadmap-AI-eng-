@@ -46,7 +46,7 @@ test("Project builder shows the first ten ideas, provenance and the next batch c
   assert(
     html.includes("Show more") &&
       html.includes("Curated match") &&
-      html.includes("142 authored projects"),
+      html.includes("150 authored projects"),
   );
 });
 

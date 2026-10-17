@@ -315,6 +315,35 @@ A product team needs per-minute order counts that stay correct when events arriv
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
+### Nightly batch scoring job
+
+A retention team needs fresh risk scores each morning without a live API.
+
+**Data:** Generate a daily partition of fictional accounts and a registered model. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A Spark job that loads the registered model, scores the partition and writes to gold.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 1 · Distributed processing with Spark:** Implement Phase 1 · Distributed processing with Spark in Nightly batch scoring job. Adapt this focused lab to the project data: Build a reproducible PySpark batch job over generated event data. Include SQL and DataFrame transformations, a skewed join diagnosis, an explain plan, a small streaming exercise, and a README with measured before/after tuning evidence.  Required concepts: Spark architecture and execution, Core APIs, Partitions, shuffles and skew, Join planning, Memory, caching and spill, Performance diagnosis, UDFs, Window functions, Structured Streaming introduction, Deployment and I/O, Debugging and observability.
+  - Deliverable: Phase 1 · Distributed processing with Spark: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a reproducible PySpark batch job over generated event data. Include SQL and DataFrame transformations, a skewed join diagnosis, an explain plan, a small streaming exercise, and a README with measured before/after tuning evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A Spark job that loads the registered model, scores the partition and writes to gold. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 1 · Distributed processing with Spark: Phase 1 · Distributed processing with Spark: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Rerunning a night gives identical scores, and a schema-mismatched partition fails before anything is written.
+- [ ] Phase 1 · Distributed processing with Spark: Build a reproducible PySpark batch job over generated event data. Include SQL and DataFrame transformations, a skewed join diagnosis, an explain plan, a small streaming exercise, and a README with measured before/after tuning evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
 ### Idempotent backfill orchestrator
 
 A data owner needs to reload a broken week without duplicating rows.
@@ -484,35 +513,6 @@ A manager needs consistent revenue numbers across reports.
 **Acceptance**
 
 - [ ] dbt tests pass, grain is documented and a changed customer keeps correct historical revenue.
-- [ ] Phase 1 · Distributed processing with Spark: Build a reproducible PySpark batch job over generated event data. Include SQL and DataFrame transformations, a skewed join diagnosis, an explain plan, a small streaming exercise, and a README with measured before/after tuning evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Lakehouse time-travel auditor
-
-An auditor needs to see what a table contained before a bad load.
-
-**Data:** Generate three loads into an Iceberg or Delta table, the last one faulty. Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A snapshot report, rollback procedure and compaction plan.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Phase 1 · Distributed processing with Spark:** Extend the project with Phase 1 · Distributed processing with Spark in Lakehouse time-travel auditor. Adapt this focused lab to the project data: Build a reproducible PySpark batch job over generated event data. Include SQL and DataFrame transformations, a skewed join diagnosis, an explain plan, a small streaming exercise, and a README with measured before/after tuning evidence.  Required concepts: Spark architecture and execution, Core APIs, Partitions, shuffles and skew, Join planning, Memory, caching and spill, Performance diagnosis, UDFs, Window functions, Structured Streaming introduction, Deployment and I/O, Debugging and observability.
-  - Deliverable: Phase 1 · Distributed processing with Spark: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a reproducible PySpark batch job over generated event data. Include SQL and DataFrame transformations, a skewed join diagnosis, an explain plan, a small streaming exercise, and a README with measured before/after tuning evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A snapshot report, rollback procedure and compaction plan. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 1 · Distributed processing with Spark: Phase 1 · Distributed processing with Spark: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Query the pre-fault snapshot, restore it and show file counts before and after compaction.
 - [ ] Phase 1 · Distributed processing with Spark: Build a reproducible PySpark batch job over generated event data. Include SQL and DataFrame transformations, a skewed join diagnosis, an explain plan, a small streaming exercise, and a README with measured before/after tuning evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -742,6 +742,35 @@ A data owner needs to reload a broken week without duplicating rows.
 **Acceptance**
 
 - [ ] Run the backfill twice and show unchanged row counts plus a DAG integrity test in CI.
+- [ ] Phase 2 · Orchestration mastery with Airflow: Build and test an Airflow DAG that coordinates ingestion, dbt-style transformation and quality checks. Demonstrate idempotent retries, a branch, dynamic mapping, one integration, local debugging and CI DAG validation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Data drift retraining trigger
+
+An ML owner needs retraining only when input data really changes.
+
+**Data:** Generate twelve weekly batches with drift injected in weeks 8 and 11. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An orchestrated drift check that starts a tracked retraining run from its data snapshot.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 2 · Orchestration mastery with Airflow:** Implement Phase 2 · Orchestration mastery with Airflow in Data drift retraining trigger. Adapt this focused lab to the project data: Build and test an Airflow DAG that coordinates ingestion, dbt-style transformation and quality checks. Demonstrate idempotent retries, a branch, dynamic mapping, one integration, local debugging and CI DAG validation.  Required concepts: Airflow architecture, DAG configuration, TaskFlow, XCom and branching, Dynamic task mapping, Custom components, Reliability and production, DAG design patterns, Integrations, Deployment and configuration, Monitoring, debugging and testing.
+  - Deliverable: Phase 2 · Orchestration mastery with Airflow: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build and test an Airflow DAG that coordinates ingestion, dbt-style transformation and quality checks. Demonstrate idempotent retries, a branch, dynamic mapping, one integration, local debugging and CI DAG validation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An orchestrated drift check that starts a tracked retraining run from its data snapshot. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 2 · Orchestration mastery with Airflow: Phase 2 · Orchestration mastery with Airflow: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Trigger exactly on the two drifted weeks and record which features moved and by how much.
 - [ ] Phase 2 · Orchestration mastery with Airflow: Build and test an Airflow DAG that coordinates ingestion, dbt-style transformation and quality checks. Demonstrate idempotent retries, a branch, dynamic mapping, one integration, local debugging and CI DAG validation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -979,35 +1008,6 @@ A product team needs per-minute order counts that stay correct when events arriv
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Lakehouse time-travel auditor
-
-An auditor needs to see what a table contained before a bad load.
-
-**Data:** Generate three loads into an Iceberg or Delta table, the last one faulty. Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A snapshot report, rollback procedure and compaction plan.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Phase 2 · Orchestration mastery with Airflow:** Extend the project with Phase 2 · Orchestration mastery with Airflow in Lakehouse time-travel auditor. Adapt this focused lab to the project data: Build and test an Airflow DAG that coordinates ingestion, dbt-style transformation and quality checks. Demonstrate idempotent retries, a branch, dynamic mapping, one integration, local debugging and CI DAG validation.  Required concepts: Airflow architecture, DAG configuration, TaskFlow, XCom and branching, Dynamic task mapping, Custom components, Reliability and production, DAG design patterns, Integrations, Deployment and configuration, Monitoring, debugging and testing.
-  - Deliverable: Phase 2 · Orchestration mastery with Airflow: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build and test an Airflow DAG that coordinates ingestion, dbt-style transformation and quality checks. Demonstrate idempotent retries, a branch, dynamic mapping, one integration, local debugging and CI DAG validation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A snapshot report, rollback procedure and compaction plan. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 2 · Orchestration mastery with Airflow: Phase 2 · Orchestration mastery with Airflow: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Query the pre-fault snapshot, restore it and show file counts before and after compaction.
-- [ ] Phase 2 · Orchestration mastery with Airflow: Build and test an Airflow DAG that coordinates ingestion, dbt-style transformation and quality checks. Demonstrate idempotent retries, a branch, dynamic mapping, one integration, local debugging and CI DAG validation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
 
 ## Phase 3
 
@@ -1212,6 +1212,35 @@ A product team needs per-minute order counts that stay correct when events arriv
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
+### CDC-fed retrieval index
+
+A support assistant must stop citing help articles after they are edited or deleted.
+
+**Data:** Use a disposable PostgreSQL table of 30 help articles with scripted edits and deletes. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An incremental embedding index fed by CDC events, with citations.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 3 · Streaming and CDC with Kafka:** Implement Phase 3 · Streaming and CDC with Kafka in CDC-fed retrieval index. Adapt this focused lab to the project data: Build a local CDC demonstration from PostgreSQL through Kafka into a raw event sink. Show schema evolution, delete handling, lag monitoring, restart/replay behavior and a short architecture diagram.  Required concepts: Kafka foundations, Delivery semantics, Schema management, Change data capture, Kafka Connect, Stream processing, Architecture patterns, Operations and debugging.
+  - Deliverable: Phase 3 · Streaming and CDC with Kafka: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a local CDC demonstration from PostgreSQL through Kafka into a raw event sink. Show schema evolution, delete handling, lag monitoring, restart/replay behavior and a short architecture diagram.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An incremental embedding index fed by CDC events, with citations. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 3 · Streaming and CDC with Kafka: Phase 3 · Streaming and CDC with Kafka: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] After each edit or delete the next query cites only the current version and never a removed article.
+- [ ] Phase 3 · Streaming and CDC with Kafka: Build a local CDC demonstration from PostgreSQL through Kafka into a raw event sink. Show schema evolution, delete handling, lag monitoring, restart/replay behavior and a short architecture diagram.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
 ### Idempotent backfill orchestrator
 
 A data owner needs to reload a broken week without duplicating rows.
@@ -1381,35 +1410,6 @@ A manager needs consistent revenue numbers across reports.
 **Acceptance**
 
 - [ ] dbt tests pass, grain is documented and a changed customer keeps correct historical revenue.
-- [ ] Phase 3 · Streaming and CDC with Kafka: Build a local CDC demonstration from PostgreSQL through Kafka into a raw event sink. Show schema evolution, delete handling, lag monitoring, restart/replay behavior and a short architecture diagram.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Lakehouse time-travel auditor
-
-An auditor needs to see what a table contained before a bad load.
-
-**Data:** Generate three loads into an Iceberg or Delta table, the last one faulty. Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A snapshot report, rollback procedure and compaction plan.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Phase 3 · Streaming and CDC with Kafka:** Extend the project with Phase 3 · Streaming and CDC with Kafka in Lakehouse time-travel auditor. Adapt this focused lab to the project data: Build a local CDC demonstration from PostgreSQL through Kafka into a raw event sink. Show schema evolution, delete handling, lag monitoring, restart/replay behavior and a short architecture diagram.  Required concepts: Kafka foundations, Delivery semantics, Schema management, Change data capture, Kafka Connect, Stream processing, Architecture patterns, Operations and debugging.
-  - Deliverable: Phase 3 · Streaming and CDC with Kafka: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a local CDC demonstration from PostgreSQL through Kafka into a raw event sink. Show schema evolution, delete handling, lag monitoring, restart/replay behavior and a short architecture diagram.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A snapshot report, rollback procedure and compaction plan. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 3 · Streaming and CDC with Kafka: Phase 3 · Streaming and CDC with Kafka: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Query the pre-fault snapshot, restore it and show file counts before and after compaction.
 - [ ] Phase 3 · Streaming and CDC with Kafka: Build a local CDC demonstration from PostgreSQL through Kafka into a raw event sink. Show schema evolution, delete handling, lag monitoring, restart/replay behavior and a short architecture diagram.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -1643,6 +1643,35 @@ An auditor needs to see what a table contained before a bad load.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
+### Point-in-time feature builder
+
+A data scientist needs training features that never use data from after the prediction date.
+
+**Data:** Generate 1000 fictional accounts with timestamped events and a cancellation label. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A point-in-time correct feature table and a model trained on it.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 4 · Lakehouse formats and storage internals:** Implement Phase 4 · Lakehouse formats and storage internals in Point-in-time feature builder. Adapt this focused lab to the project data: Build a medallion lakehouse over local sample data using Iceberg or Delta. Document file layout, schema evolution, time travel, compaction, catalog choice and the query evidence used to validate performance.  Required concepts: File formats, Why table formats matter, Iceberg and Delta internals, Table maintenance, Catalogs, Query engines, Lakehouse architecture, Operations and platform fluency.
+  - Deliverable: Phase 4 · Lakehouse formats and storage internals: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Build a medallion lakehouse over local sample data using Iceberg or Delta. Document file layout, schema evolution, time travel, compaction, catalog choice and the query evidence used to validate performance.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A point-in-time correct feature table and a model trained on it. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 4 · Lakehouse formats and storage internals: Phase 4 · Lakehouse formats and storage internals: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Show a leakage test where the as-of join excludes future events, then compare metrics against a naive join.
+- [ ] Phase 4 · Lakehouse formats and storage internals: Build a medallion lakehouse over local sample data using Iceberg or Delta. Document file layout, schema evolution, time travel, compaction, catalog choice and the query evidence used to validate performance.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
 ### Idempotent backfill orchestrator
 
 A data owner needs to reload a broken week without duplicating rows.
@@ -1846,35 +1875,6 @@ A manager needs consistent revenue numbers across reports.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Late-event window counter
-
-A product team needs per-minute order counts that stay correct when events arrive late.
-
-**Data:** Generate a seeded event stream with out-of-order and five-minute-late records. Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A Spark Structured Streaming or Flink job with event-time windows, a watermark and checkpointing.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Phase 4 · Lakehouse formats and storage internals:** Extend the project with Phase 4 · Lakehouse formats and storage internals in Late-event window counter. Adapt this focused lab to the project data: Build a medallion lakehouse over local sample data using Iceberg or Delta. Document file layout, schema evolution, time travel, compaction, catalog choice and the query evidence used to validate performance.  Required concepts: File formats, Why table formats matter, Iceberg and Delta internals, Table maintenance, Catalogs, Query engines, Lakehouse architecture, Operations and platform fluency.
-  - Deliverable: Phase 4 · Lakehouse formats and storage internals: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a medallion lakehouse over local sample data using Iceberg or Delta. Document file layout, schema evolution, time travel, compaction, catalog choice and the query evidence used to validate performance.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A Spark Structured Streaming or Flink job with event-time windows, a watermark and checkpointing. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 4 · Lakehouse formats and storage internals: Phase 4 · Lakehouse formats and storage internals: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Restart from the checkpoint and match a batch recount for every closed window.
-- [ ] Phase 4 · Lakehouse formats and storage internals: Build a medallion lakehouse over local sample data using Iceberg or Delta. Document file layout, schema evolution, time travel, compaction, catalog choice and the query evidence used to validate performance.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
 
 ## Phase 5
 
@@ -2069,6 +2069,64 @@ A manager needs consistent revenue numbers across reports.
 **Acceptance**
 
 - [ ] dbt tests pass, grain is documented and a changed customer keeps correct historical revenue.
+- [ ] Phase 5 · Transformation and modeling with dbt + Kimball: Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### LLM evaluation warehouse
+
+A team needs every assistant answer logged and comparable across prompt versions.
+
+**Data:** Record 200 fictional question, answer and citation runs across two prompt versions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A modeled evaluation table with per-version quality and latency views.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 5 · Transformation and modeling with dbt + Kimball:** Implement Phase 5 · Transformation and modeling with dbt + Kimball in LLM evaluation warehouse. Adapt this focused lab to the project data: Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.  Required concepts: dbt project and DAG, Incremental models, Snapshots and slowly changing dimensions, Testing, docs and exposures, Dimensional modeling, Consumer-focused contracts, Macros and reuse, Orchestration and CI.
+  - Deliverable: Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A modeled evaluation table with per-version quality and latency views. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 5 · Transformation and modeling with dbt + Kimball: Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compute groundedness and latency per version from the table and reproduce one regression found in it.
+- [ ] Phase 5 · Transformation and modeling with dbt + Kimball: Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Governed text-to-SQL assistant
+
+An analyst needs warehouse answers without writing SQL or touching restricted columns.
+
+**Data:** Use the star-schema tables from a dbt project with one column marked sensitive. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A read-only SQL generation tool with schema context, query validation and an evaluation set.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 5 · Transformation and modeling with dbt + Kimball:** Implement Phase 5 · Transformation and modeling with dbt + Kimball in Governed text-to-SQL assistant. Adapt this focused lab to the project data: Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.  Required concepts: dbt project and DAG, Incremental models, Snapshots and slowly changing dimensions, Testing, docs and exposures, Dimensional modeling, Consumer-focused contracts, Macros and reuse, Orchestration and CI.
+  - Deliverable: Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A read-only SQL generation tool with schema context, query validation and an evaluation set. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 5 · Transformation and modeling with dbt + Kimball: Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Answer 20 labeled questions, reject every query on the sensitive column and never run a write statement.
 - [ ] Phase 5 · Transformation and modeling with dbt + Kimball: Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -2277,64 +2335,6 @@ An analyst needs a slow daily aggregation to finish predictably.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
-### Late-event window counter
-
-A product team needs per-minute order counts that stay correct when events arrive late.
-
-**Data:** Generate a seeded event stream with out-of-order and five-minute-late records. Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A Spark Structured Streaming or Flink job with event-time windows, a watermark and checkpointing.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Phase 5 · Transformation and modeling with dbt + Kimball:** Extend the project with Phase 5 · Transformation and modeling with dbt + Kimball in Late-event window counter. Adapt this focused lab to the project data: Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.  Required concepts: dbt project and DAG, Incremental models, Snapshots and slowly changing dimensions, Testing, docs and exposures, Dimensional modeling, Consumer-focused contracts, Macros and reuse, Orchestration and CI.
-  - Deliverable: Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A Spark Structured Streaming or Flink job with event-time windows, a watermark and checkpointing. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 5 · Transformation and modeling with dbt + Kimball: Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Restart from the checkpoint and match a batch recount for every closed window.
-- [ ] Phase 5 · Transformation and modeling with dbt + Kimball: Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Lakehouse time-travel auditor
-
-An auditor needs to see what a table contained before a bad load.
-
-**Data:** Generate three loads into an Iceberg or Delta table, the last one faulty. Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A snapshot report, rollback procedure and compaction plan.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Phase 5 · Transformation and modeling with dbt + Kimball:** Extend the project with Phase 5 · Transformation and modeling with dbt + Kimball in Lakehouse time-travel auditor. Adapt this focused lab to the project data: Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.  Required concepts: dbt project and DAG, Incremental models, Snapshots and slowly changing dimensions, Testing, docs and exposures, Dimensional modeling, Consumer-focused contracts, Macros and reuse, Orchestration and CI.
-  - Deliverable: Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A snapshot report, rollback procedure and compaction plan. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 5 · Transformation and modeling with dbt + Kimball: Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Query the pre-fault snapshot, restore it and show file counts before and after compaction.
-- [ ] Phase 5 · Transformation and modeling with dbt + Kimball: Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
 
 ## Phase 6
 
@@ -2529,6 +2529,64 @@ A downstream team needs bad records stopped before they reach reports.
 **Acceptance**
 
 - [ ] Every seeded defect lands in quarantine, clean rows pass and the alert names the failing contract.
+- [ ] Phase 6 · Data quality and observability: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### LLM evaluation warehouse
+
+A team needs every assistant answer logged and comparable across prompt versions.
+
+**Data:** Record 200 fictional question, answer and citation runs across two prompt versions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A modeled evaluation table with per-version quality and latency views.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 6 · Data quality and observability:** Implement Phase 6 · Data quality and observability in LLM evaluation warehouse. Adapt this focused lab to the project data: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.  Required concepts: Quality as a discipline, Quality dimensions, Great Expectations and alternatives, Data contracts, Lineage, Monitoring and alerting, Lightweight anomaly detection, Operational quality checks.
+  - Deliverable: Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A modeled evaluation table with per-version quality and latency views. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 6 · Data quality and observability: Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compute groundedness and latency per version from the table and reproduce one regression found in it.
+- [ ] Phase 6 · Data quality and observability: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### PII-safe training data gate
+
+A data owner needs personal data removed before any model or LLM sees it.
+
+**Data:** Generate 500 fictional support tickets with seeded emails, phone numbers and names. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A quality-gated redaction step between bronze and the training and embedding inputs.
+
+**Effort:** 16h · Intermediate
+
+- **Phase 6 · Data quality and observability:** Implement Phase 6 · Data quality and observability in PII-safe training data gate. Adapt this focused lab to the project data: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.  Required concepts: Quality as a discipline, Quality dimensions, Great Expectations and alternatives, Data contracts, Lineage, Monitoring and alerting, Lightweight anomaly detection, Operational quality checks.
+  - Deliverable: Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A quality-gated redaction step between bronze and the training and embedding inputs. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Phase 6 · Data quality and observability: Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] No seeded identifier reaches the gold table or the vector index, and the gate fails on an unredacted batch.
 - [ ] Phase 6 · Data quality and observability: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -2732,64 +2790,6 @@ A manager needs consistent revenue numbers across reports.
 **Acceptance**
 
 - [ ] dbt tests pass, grain is documented and a changed customer keeps correct historical revenue.
-- [ ] Phase 6 · Data quality and observability: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Late-event window counter
-
-A product team needs per-minute order counts that stay correct when events arrive late.
-
-**Data:** Generate a seeded event stream with out-of-order and five-minute-late records. Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A Spark Structured Streaming or Flink job with event-time windows, a watermark and checkpointing.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Phase 6 · Data quality and observability:** Extend the project with Phase 6 · Data quality and observability in Late-event window counter. Adapt this focused lab to the project data: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.  Required concepts: Quality as a discipline, Quality dimensions, Great Expectations and alternatives, Data contracts, Lineage, Monitoring and alerting, Lightweight anomaly detection, Operational quality checks.
-  - Deliverable: Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A Spark Structured Streaming or Flink job with event-time windows, a watermark and checkpointing. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 6 · Data quality and observability: Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Restart from the checkpoint and match a batch recount for every closed window.
-- [ ] Phase 6 · Data quality and observability: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Lakehouse time-travel auditor
-
-An auditor needs to see what a table contained before a bad load.
-
-**Data:** Generate three loads into an Iceberg or Delta table, the last one faulty. Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A snapshot report, rollback procedure and compaction plan.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Phase 6 · Data quality and observability:** Extend the project with Phase 6 · Data quality and observability in Lakehouse time-travel auditor. Adapt this focused lab to the project data: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.  Required concepts: Quality as a discipline, Quality dimensions, Great Expectations and alternatives, Data contracts, Lineage, Monitoring and alerting, Lightweight anomaly detection, Operational quality checks.
-  - Deliverable: Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A snapshot report, rollback procedure and compaction plan. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Phase 6 · Data quality and observability: Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Query the pre-fault snapshot, restore it and show file counts before and after compaction.
 - [ ] Phase 6 · Data quality and observability: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 

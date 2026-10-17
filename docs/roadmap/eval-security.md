@@ -148,6 +148,35 @@ A maintainer needs a repeatable quality decision before release.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
+### LLM evaluation warehouse
+
+A team needs every assistant answer logged and comparable across prompt versions.
+
+**Data:** Record 200 fictional question, answer and citation runs across two prompt versions. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A modeled evaluation table with per-version quality and latency views.
+
+**Effort:** 16h · Intermediate
+
+- **Golden datasets and deterministic regression evaluation:** Implement Golden datasets and deterministic regression evaluation in LLM evaluation warehouse. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A modeled evaluation table with per-version quality and latency views. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Compute groundedness and latency per version from the table and reproduce one regression found in it.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
 ### Prompt regression workbench
 
 A support writer needs repeatable checks before changing instructions.
@@ -346,35 +375,6 @@ A maintainer needs to prevent test secrets leaking into logs.
 **Acceptance**
 
 - [ ] No seeded secret appears in outputs, including exception messages.
-- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Evaluation slice explorer
-
-An analyst needs to find failures hidden by an average score.
-
-**Data:** Generate 100 labeled results across language and length slices. Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A per-slice report with sample counts and uncertainty.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Golden datasets and deterministic regression evaluation:** Extend the project with Golden datasets and deterministic regression evaluation in Evaluation slice explorer. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A per-slice report with sample counts and uncertainty. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Flag small samples and reproduce all aggregate metrics from raw cases.
 - [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -1667,6 +1667,64 @@ A maintainer needs to prevent test secrets leaking into logs.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
+### PII-safe training data gate
+
+A data owner needs personal data removed before any model or LLM sees it.
+
+**Data:** Generate 500 fictional support tickets with seeded emails, phone numbers and names. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A quality-gated redaction step between bronze and the training and embedding inputs.
+
+**Effort:** 16h · Intermediate
+
+- **Guardrails, secrets, bias/fairness and graceful failure:** Implement Guardrails, secrets, bias/fairness and graceful failure in PII-safe training data gate. Adapt this focused lab to the project data: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.  Required concepts: Guardrails, Secrets and rate limits, Bias and fairness, Graceful failure.
+  - Deliverable: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A quality-gated redaction step between bronze and the training and embedding inputs. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Guardrails, secrets, bias/fairness and graceful failure: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] No seeded identifier reaches the gold table or the vector index, and the gate fails on an unredacted batch.
+- [ ] Guardrails, secrets, bias/fairness and graceful failure: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
+### Governed text-to-SQL assistant
+
+An analyst needs warehouse answers without writing SQL or touching restricted columns.
+
+**Data:** Use the star-schema tables from a dbt project with one column marked sensitive. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** A read-only SQL generation tool with schema context, query validation and an evaluation set.
+
+**Effort:** 16h · Intermediate
+
+- **Guardrails, secrets, bias/fairness and graceful failure:** Implement Guardrails, secrets, bias/fairness and graceful failure in Governed text-to-SQL assistant. Adapt this focused lab to the project data: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.  Required concepts: Guardrails, Secrets and rate limits, Bias and fairness, Graceful failure.
+  - Deliverable: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: A read-only SQL generation tool with schema context, query validation and an evaluation set. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Guardrails, secrets, bias/fairness and graceful failure: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Answer 20 labeled questions, reject every query on the sensitive column and never run a write statement.
+- [ ] Guardrails, secrets, bias/fairness and graceful failure: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
 ### Evidence faithfulness audit
 
 A researcher needs to identify unsupported answer claims.
@@ -1836,64 +1894,6 @@ A maintainer needs a repeatable quality decision before release.
 **Acceptance**
 
 - [ ] Fail when a critical case regresses even if average score improves.
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Evaluation slice explorer
-
-An analyst needs to find failures hidden by an average score.
-
-**Data:** Generate 100 labeled results across language and length slices. Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A per-slice report with sample counts and uncertainty.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Guardrails, secrets, bias/fairness and graceful failure:** Extend the project with Guardrails, secrets, bias/fairness and graceful failure in Evaluation slice explorer. Adapt this focused lab to the project data: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.  Required concepts: Guardrails, Secrets and rate limits, Bias and fairness, Graceful failure.
-  - Deliverable: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A per-slice report with sample counts and uncertainty. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Guardrails, secrets, bias/fairness and graceful failure: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Flag small samples and reproduce all aggregate metrics from raw cases.
-- [ ] Guardrails, secrets, bias/fairness and graceful failure: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### Local AI service threat model
-
-A builder needs practical boundaries for a small AI app.
-
-**Data:** Use a fictional notes assistant architecture and seeded abuse cases. Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A threat model linked to tests and mitigations.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Guardrails, secrets, bias/fairness and graceful failure:** Extend the project with Guardrails, secrets, bias/fairness and graceful failure in Local AI service threat model. Adapt this focused lab to the project data: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.  Required concepts: Guardrails, Secrets and rate limits, Bias and fairness, Graceful failure.
-  - Deliverable: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A threat model linked to tests and mitigations. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Guardrails, secrets, bias/fairness and graceful failure: Guardrails, secrets, bias/fairness and graceful failure: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Trace each trust boundary to a concrete enforcement point and test.
 - [ ] Guardrails, secrets, bias/fairness and graceful failure: Implement a fixture-based policy gate with input limits, redacted logging and safe failure responses; report a fairness slice analysis with uncertainty and limitations.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 

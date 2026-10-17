@@ -1627,6 +1627,35 @@ A team needs a traceable choice between two local designs.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
 
+### AI data platform design review
+
+A hiring panel needs a defensible end-to-end design for an ML and RAG platform.
+
+**Data:** Describe the platform built in the other AI + Data projects; no new data is required. Use a fixed seed and keep evaluation cases separate.
+
+**Output:** An architecture document, ADRs and a capacity and cost estimate.
+
+**Effort:** 16h · Intermediate
+
+- **Architecture, data requirements, schemas and ADRs:** Implement Architecture, data requirements, schemas and ADRs in AI data platform design review. Adapt this focused lab to the project data: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.  Required concepts: Architecture and data flow, Data requirements, ADRs.
+  - Deliverable: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+  - Check: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+
+**Milestones**
+
+- [ ] MVP · problem and reproducible baseline: An architecture document, ADRs and a capacity and cost estimate. Start with the smallest deterministic reference before adding extensions.
+- [ ] MVP · Architecture, data requirements, schemas and ADRs: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
+- [ ] Explain and hand off: README, decision notes and recorded limitations
+
+**Acceptance**
+
+- [ ] Defend three failure scenarios with recovery steps and justify one trade-off against a simpler design.
+- [ ] Architecture, data requirements, schemas and ADRs: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] A teammate can reproduce the demo using the README without paid credentials.
+
+**Documentation:** README: purpose, setup, worked example, checks and limitations.
+
 ### Project delivery documentation pack
 
 A team needs a handoff that survives the original developer leaving.
@@ -1854,35 +1883,6 @@ A teammate needs usable recovery instructions for a local service.
 **Acceptance**
 
 - [ ] A teammate follows the steps and restores service without undocumented knowledge.
-- [ ] Architecture, data requirements, schemas and ADRs: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] A teammate can reproduce the demo using the README without paid credentials.
-
-**Documentation:** README: purpose, setup, worked example, checks and limitations.
-
-### AI feature value calculator
-
-A founder needs transparent assumptions about time saved.
-
-**Data:** Generate fictional task volumes, review times and failure rates. Use a fixed seed and keep evaluation cases separate.
-
-**Output:** A sensitivity analysis comparing manual and assisted workflows.
-
-**Effort:** 10h · Beginner → intermediate
-
-- **Architecture, data requirements, schemas and ADRs:** Extend the project with Architecture, data requirements, schemas and ADRs in AI feature value calculator. Adapt this focused lab to the project data: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.  Required concepts: Architecture and data flow, Data requirements, ADRs.
-  - Deliverable: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-
-**Milestones**
-
-- [ ] MVP · problem and reproducible baseline: A sensitivity analysis comparing manual and assisted workflows. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Architecture, data requirements, schemas and ADRs: Architecture, data requirements, schemas and ADRs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
-- [ ] Explain and hand off: README, decision notes and recorded limitations
-
-**Acceptance**
-
-- [ ] Show break-even assumptions and include human review cost.
 - [ ] Architecture, data requirements, schemas and ADRs: Write an architecture diagram, data schema and one ADR for a local RAG prototype, including permission boundaries and refresh behavior.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 

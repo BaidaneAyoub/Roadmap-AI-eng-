@@ -1,6 +1,6 @@
 # Project catalog
 
-Browse the [142-project library with English mentor prompts](PROJECT_LIBRARY.md). Every lesson has ten initial project briefs in its domain document. The website supports further batches without repeating ideas. The website uses the same deterministic composer for combinations, with a named task, deliverable and check for every selected skill. Unmapped custom topics are explicitly general practice.
+Browse the [150-project library with English mentor prompts](PROJECT_LIBRARY.md). Every lesson has ten initial project briefs in its domain document. The website supports further batches without repeating ideas. The website uses the same deterministic composer for combinations, with a named task, deliverable and check for every selected skill. Unmapped custom topics are explicitly general practice.
 
 ## Example: ML + DL + FastAPI + Docker
 

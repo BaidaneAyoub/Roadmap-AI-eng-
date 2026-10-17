@@ -23,16 +23,15 @@ const skill = (id) =>
   catalog.lessons.find((s) => s.id === id) ??
   catalog.domains.find((s) => s.id === id);
 
-test("142 authored projects cover each domain ten times with valid native skills and complete briefs", () => {
-  assert.equal(projectLibrary.length, 142);
-  assert.equal(new Set(projectLibrary.map((p) => p.id)).size, 142);
-  assert.equal(new Set(projectLibrary.map((p) => p.title)).size, 142);
-  assert.equal(new Set(projectLibrary.map((p) => p.check)).size, 142);
+test("150 authored projects cover each domain ten times with valid native skills and complete briefs", () => {
+  assert.equal(projectLibrary.length, 150);
+  assert.equal(new Set(projectLibrary.map((p) => p.id)).size, 150);
+  assert.equal(new Set(projectLibrary.map((p) => p.title)).size, 150);
+  assert.equal(new Set(projectLibrary.map((p) => p.check)).size, 150);
   for (const domain of catalog.domains)
     assert.equal(
       projectLibrary.filter((p) => p.domainId === domain.id).length,
-      // ponytail: ai-data has 2 of 10 briefs until Ayoub adds the combined projects.
-      domain.id === "ai-data" ? 2 : 10,
+      10,
     );
   for (const entry of projectLibrary) {
     assert(
