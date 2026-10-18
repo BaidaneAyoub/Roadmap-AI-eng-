@@ -995,14 +995,19 @@ export function Roadmap({
   state,
   search,
   selected,
+  initialTrack,
 }: {
   state: Workspace | null;
   search: string;
   selected?: string;
+  initialTrack?: string;
 }) {
   const user = state?.profiles.find((p) => p.id === state.userId);
   const [filter, setFilter] = useState("all");
   const [priority, setPriority] = useState("all");
+  // Kept across #/roadmap/<domain> visits because App renders Roadmap in the same slot.
+  const [trackId, setTrackId] = useState(initialTrack);
+  const track = catalog.roadmaps.find((r) => r.id === trackId);
   const query = search.trim().toLowerCase();
   const chosen = domains.find((d) => d.id === selected);
   const places = chosen ? placesOf(chosen.id) : [];
@@ -1013,6 +1018,7 @@ export function Roadmap({
     ? domainLessons(chosen.id)
     : lessons
         .filter((l) => catalog.pipeline.some((s) => s.domain === l.domainId))
+        .filter((l) => !track || track.domains.includes(l.domainId))
         .filter(
           (l) => filter === "all" || user?.selectedDomains.includes(l.domainId),
         );
@@ -1170,10 +1176,38 @@ export function Roadmap({
           Prerequisites guide you. They never lock a lesson.
         </span>
       </div>
-      {!chosen && !query && priority === "all" ? (
+      {!chosen && !query && priority === "all" && !track ? (
+        <section className="roadmap-picker" aria-label="Choose a roadmap">
+          {catalog.roadmaps.map((roadmap, i) => (
+            <button
+              key={roadmap.id}
+              className="roadmap-choice"
+              data-phase={i}
+              onClick={() => setTrackId(roadmap.id)}
+            >
+              <span className="phase-number mono">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h2>{roadmap.title}</h2>
+              <p>
+                {roadmap.requires ?? `${roadmap.domains.length} steps`}
+              </p>
+              <span className="small muted">
+                {roadmap.domains
+                  .map((id) => domains.find((d) => d.id === id)?.title)
+                  .join(" → ")}
+              </span>
+              <span className="roadmap-choice-cta">
+                Open roadmap <Icon name="arrow" size={15} />
+              </span>
+            </button>
+          ))}
+        </section>
+      ) : null}
+      {!chosen && !query && priority === "all" && track ? (
         <section
           className="pipeline-map"
-          aria-label="AI, Data and AI + Data engineering roadmaps"
+          aria-label={`${track.title} roadmap`}
         >
           <div className="pipeline-legend">
             <span>
@@ -1185,7 +1219,7 @@ export function Roadmap({
             <span>Arrows guide order, never lock access</span>
           </div>
           <div className="pipeline-terminal">START · Choose a user problem</div>
-          {catalog.roadmaps.map((roadmap, phaseIndex) => (
+          {catalog.roadmaps.map((roadmap, phaseIndex) => roadmap !== track ? null : (
             <section
               className="pipeline-phase"
               data-phase={phaseIndex}
@@ -1206,6 +1240,12 @@ export function Roadmap({
                       `${roadmap.domains.length} steps. Shared steps count in every roadmap that lists them.`}
                   </p>
                 </div>
+                <button
+                  className="button subtle"
+                  onClick={() => setTrackId(undefined)}
+                >
+                  Change roadmap
+                </button>
               </header>
               {roadmap.domains
                 .map((id) => catalog.pipeline.find((s) => s.domain === id)!)

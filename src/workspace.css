@@ -238,12 +238,65 @@ main {
   padding: 24px;
   margin-bottom: 52px;
 }
-.pipeline-phase[data-phase="1"] {
+.roadmap-picker {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+.roadmap-choice {
+  --phase-color: #8ddcf5;
+  --phase-border: #477c96;
+  --phase-bg: #142a38;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 24px;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  background: #111d2a;
+  border: 1px solid var(--phase-border);
+  border-top: 3px solid var(--phase-color);
+  border-radius: 16px;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.roadmap-choice:hover {
+  border-color: var(--phase-color);
+  transform: translateY(-2px);
+}
+.roadmap-choice:focus-visible {
+  outline: 2px solid var(--phase-color);
+  outline-offset: 3px;
+}
+.roadmap-choice h2 {
+  font-size: 21px;
+  margin: 4px 0 0;
+  color: #f0f4fb;
+}
+.roadmap-choice p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+.roadmap-choice-cta {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--phase-color);
+  font-weight: 600;
+}
+.pipeline-phase-header > .button {
+  margin-left: auto;
+}
+:is(.pipeline-phase, .roadmap-choice)[data-phase="1"] {
   --phase-color: #e0bbff;
   --phase-border: #80629c;
   --phase-bg: #2c203d;
 }
-.pipeline-phase[data-phase="2"] {
+:is(.pipeline-phase, .roadmap-choice)[data-phase="2"] {
   --phase-color: #ffd58b;
   --phase-border: #9b7c48;
   --phase-bg: #342b1b;
