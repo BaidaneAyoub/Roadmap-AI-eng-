@@ -536,7 +536,8 @@ main#main {
     transition: transform 0.16s ease-out, box-shadow 0.35s ease,
       border-color 0.35s ease;
     box-shadow: calc((50 - var(--mx, 50)) * 0.22px)
-      calc(16px + (50 - var(--my, 50)) * 0.1px) 42px rgb(3 6 16 / 0.35);
+        calc(16px + (50 - var(--my, 50)) * 0.1px) 42px rgb(3 6 16 / 0.35),
+      0 0 38px rgb(184 161 255 / 0.1);
   }
   [data-tilt]:hover,
   .continue-card:hover,
@@ -1248,5 +1249,76 @@ main#main {
   .sidebar nav a:hover svg,
   .member-row:hover {
     translate: 3px 0;
+  }
+}
+/* ── Setup form: clear separation between the identity fields and the
+   domain picker — they were sitting right on top of each other. */
+.form-row + h2 {
+  margin: 46px 0 10px;
+}
+@media (min-width: 701px) {
+  .content-panel {
+    padding: 32px;
+  }
+  .selection-grid {
+    margin: 26px 0;
+  }
+  .selection-card {
+    padding: 20px;
+  }
+  .domain-grid {
+    gap: 24px;
+  }
+}
+/* ── Ambient light: three faint drifting glows behind the workspace.
+   Pure light, no layout; static under reduced motion. */
+main {
+  position: relative;
+  z-index: 1;
+}
+.sidebar {
+  position: relative;
+  z-index: 1;
+}
+#root::before {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(
+      36% 30% at 18% 10%,
+      rgb(96 141 255 / 0.06),
+      transparent 70%
+    ),
+    radial-gradient(32% 26% at 84% 18%, rgb(184 161 255 / 0.055), transparent 70%),
+    radial-gradient(30% 24% at 62% 92%, rgb(255 213 139 / 0.035), transparent 70%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  #root::before {
+    animation: aurora-drift 28s ease-in-out infinite alternate;
+  }
+}
+@keyframes aurora-drift {
+  from {
+    transform: translate3d(-1.5%, -1%, 0) scale(1);
+  }
+  to {
+    transform: translate3d(1.5%, 1.5%, 0) scale(1.06);
+  }
+}
+/* ── Scroll cascade: anything the reveal hook marks with .fx-wait
+   slides up into place the first time it enters the viewport. */
+@media (prefers-reduced-motion: no-preference) {
+  .fx-wait {
+    opacity: 0;
+    translate: 0 22px;
+    transition: opacity 0.6s ease,
+      translate 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.16s ease-out, box-shadow 0.35s ease;
+  }
+  .fx-wait.is-in {
+    opacity: 1;
+    translate: 0 0;
   }
 }

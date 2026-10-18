@@ -249,10 +249,14 @@ function download(name: string, content: string, type = "application/json") {
 }
 type Run = (action: () => Promise<unknown>, message?: string) => Promise<void>;
 
-// Progressive reveal: [data-reveal] sections fade in on first intersection.
+// Progressive reveal: marked sections and list items fade in on first
+// intersection. .fx-wait is only added once an element is observed, so
+// anything the observer never reaches is never left invisible.
 function useReveal() {
   useEffect(() => {
-    const els = Array.from(document.querySelectorAll("[data-reveal]"));
+    const sel =
+      "[data-reveal], .curriculum-section, .module, .project-card, .mentor-panel, .domain-card, .video-card, .resource-card, .lesson-row";
+    const els = Array.from(document.querySelectorAll(sel));
     if (!els.length) return;
     if (!("IntersectionObserver" in window)) {
       els.forEach((el) => el.classList.add("is-in"));
@@ -267,9 +271,12 @@ function useReveal() {
           }
         });
       },
-      { rootMargin: "0px 0px -8% 0px" },
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.05 },
     );
-    els.forEach((el) => io.observe(el));
+    els.forEach((el) => {
+      if (!el.classList.contains("is-in")) el.classList.add("fx-wait");
+      io.observe(el);
+    });
     return () => io.disconnect();
   });
 }
