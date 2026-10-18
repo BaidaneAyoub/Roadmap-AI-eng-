@@ -274,9 +274,52 @@ function useReveal() {
   });
 }
 
+// Pointer-tracked 3D tilt: streams --mx/--my (0–100) into the hovered
+// card; CSS maps them to rotation, lift and a cursor-following shadow.
+function useTilt() {
+  useEffect(() => {
+    if (matchMedia("(hover: none), (prefers-reduced-motion: reduce)").matches)
+      return;
+    const sel =
+      "[data-tilt], .continue-card, .journey-guide, .mentor-panel, .domain-card, .stat, .pipeline-node";
+    const track = (e: PointerEvent) => {
+      const el =
+        e.target instanceof Element ? e.target.closest<HTMLElement>(sel) : null;
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      el.style.setProperty(
+        "--mx",
+        (((e.clientX - r.left) / r.width) * 100).toFixed(1),
+      );
+      el.style.setProperty(
+        "--my",
+        (((e.clientY - r.top) / r.height) * 100).toFixed(1),
+      );
+    };
+    const reset = (e: PointerEvent) => {
+      const el =
+        e.target instanceof Element ? e.target.closest<HTMLElement>(sel) : null;
+      if (
+        !el ||
+        (e.relatedTarget instanceof Node && el.contains(e.relatedTarget))
+      )
+        return;
+      el.style.setProperty("--mx", "50");
+      el.style.setProperty("--my", "50");
+    };
+    document.addEventListener("pointermove", track, { passive: true });
+    document.addEventListener("pointerout", reset, { passive: true });
+    return () => {
+      document.removeEventListener("pointermove", track);
+      document.removeEventListener("pointerout", reset);
+    };
+  }, []);
+}
+
 export default function App() {
   const route = useRoute();
   useReveal();
+  useTilt();
   const [state, setState] = useState<Workspace | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");

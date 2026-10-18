@@ -515,17 +515,128 @@ main#main {
 .domain-card {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
+/* ── Alive: pointer-tracked 3D depth ─────────────────────
+   useTilt() streams --mx/--my (0–100) into the hovered card;
+   CSS turns them into rotation, lift and a shadow whose light
+   follows the cursor. Design untouched — depth only. */
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .pipeline-node:not(.branch):hover {
-    transform: perspective(900px) rotateX(1.5deg) rotateY(-1.2deg) translateY(-3px);
-    box-shadow: var(--shadow-portal);
+  [data-tilt],
+  .continue-card,
+  .journey-guide,
+  .mentor-panel,
+  .domain-card,
+  .stat,
+  .pipeline-node {
+    transform: perspective(1100px)
+      rotateX(calc((50 - var(--my, 50)) * 0.045deg))
+      rotateY(calc((var(--mx, 50) - 50) * 0.045deg))
+      translateY(calc(var(--lift, 0) * -3px));
+    transition: transform 0.16s ease-out, box-shadow 0.35s ease,
+      border-color 0.35s ease;
+    box-shadow: calc((50 - var(--mx, 50)) * 0.22px)
+      calc(16px + (50 - var(--my, 50)) * 0.1px) 42px rgb(3 6 16 / 0.35);
   }
+  [data-tilt]:hover,
   .continue-card:hover,
-  .journey-guide:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-portal);
+  .journey-guide:hover,
+  .mentor-panel:hover,
+  .domain-card:hover,
+  .stat:hover,
+  .pipeline-node:hover {
+    --lift: 1;
+    border-color: var(--accent-line);
   }
 }
+/* Tactile presses and focus */
+.button,
+.icon-button,
+.tabs button {
+  transition: transform 0.15s ease, background 0.18s ease,
+    border-color 0.18s ease, color 0.18s ease;
+}
+.button:hover,
+.tabs button:hover {
+  transform: translateY(-1px);
+}
+.button:active,
+.icon-button:active,
+.tabs button:active,
+.sidebar nav a:active {
+  transform: translateY(0) scale(0.97);
+  transition-duration: 0.06s;
+}
+.search:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+/* Living details */
+.meter span {
+  transform-origin: left center;
+  animation: meter-grow 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes meter-grow {
+  from {
+    transform: scaleX(0);
+  }
+}
+.live-dot {
+  animation: live-pulse 2.4s ease-out infinite;
+}
+@keyframes live-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgb(184 161 255 / 0.45);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 9px rgb(184 161 255 / 0);
+  }
+}
+.pipeline-main::after,
+.pipeline-phase::after,
+.pipeline-terminal:not(.finish)::after {
+  animation: arrow-bob 2.8s ease-in-out infinite;
+}
+@keyframes arrow-bob {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 5px;
+  }
+}
+.continue-card::after {
+  background-size: 220% 100%;
+  animation: sheen-slide 5.5s linear infinite;
+}
+@keyframes sheen-slide {
+  from {
+    background-position: 0% 0;
+  }
+  to {
+    background-position: 220% 0;
+  }
+}
+/* Staggered cascade: children of a revealed section flow in */
+[data-reveal] > * {
+  opacity: 0;
+  translate: 0 12px;
+  transition: opacity 0.55s ease var(--d, 0ms),
+    translate 0.55s cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0ms),
+    transform 0.16s ease-out 0ms, box-shadow 0.35s ease 0ms;
+}
+[data-reveal].is-in > * {
+  opacity: 1;
+  translate: 0 0;
+}
+[data-reveal] > :nth-child(1) { --d: 0ms; }
+[data-reveal] > :nth-child(2) { --d: 70ms; }
+[data-reveal] > :nth-child(3) { --d: 140ms; }
+[data-reveal] > :nth-child(4) { --d: 210ms; }
+[data-reveal] > :nth-child(5) { --d: 280ms; }
+[data-reveal] > :nth-child(6) { --d: 350ms; }
+[data-reveal] > :nth-child(7) { --d: 420ms; }
+[data-reveal] > :nth-child(8) { --d: 490ms; }
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -533,15 +644,30 @@ main#main {
   main#main {
     animation: none;
   }
-  [data-reveal] {
+  [data-reveal],
+  [data-reveal] > * {
     opacity: 1;
     translate: none;
     transition: none;
   }
-  .pipeline-node:not(.branch):hover,
-  .continue-card:hover,
-  .journey-guide:hover {
+  [data-tilt],
+  .continue-card,
+  .journey-guide,
+  .mentor-panel,
+  .domain-card,
+  .stat,
+  .pipeline-node,
+  .button,
+  .tabs button {
     transform: none;
+  }
+  .meter span,
+  .live-dot,
+  .pipeline-main::after,
+  .pipeline-phase::after,
+  .pipeline-terminal:not(.finish)::after,
+  .continue-card::after {
+    animation: none;
   }
 }
 .module summary {
