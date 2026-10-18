@@ -364,6 +364,45 @@ main {
 .pipeline-map .pipeline-legend i.optional {
   border-color: #e4a1b8;
 }
+/* Shared steps keep one green identity inside every roadmap so repeats read as
+   the same destination studied once, not two different cards. */
+.pipeline-node.shared {
+  --shared-color: #a4efc8;
+  --shared-border: #4d8a6b;
+  --shared-bg: #152a21;
+  background: var(--shared-bg);
+  border-color: var(--shared-border);
+  border-left: 3px solid var(--shared-color);
+}
+.pipeline-phase .pipeline-node.shared {
+  background: var(--shared-bg);
+  border-color: var(--shared-border);
+}
+.pipeline-node.shared .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 10px;
+  padding: 3px 9px;
+  border: 1px solid var(--shared-border);
+  border-radius: 999px;
+  background: #10271d;
+  color: var(--shared-color);
+  letter-spacing: 1px;
+}
+.pipeline-phase .pipeline-node.shared .pipeline-node-link h3 {
+  color: #dcf7e8;
+}
+.pipeline-phase .pipeline-node.shared .meter span {
+  background: var(--shared-color);
+}
+.pipeline-phase .pipeline-node.shared .pipeline-node-link:hover {
+  background: #ffffff0d;
+}
+.pipeline-map .pipeline-legend i.shared {
+  height: 4px;
+  background: transparent;
+  border-top: 4px double var(--shared-color, #a4efc8);
+}
 @media (max-width: 700px) {
   .pipeline-phase {
     padding: 18px 14px;

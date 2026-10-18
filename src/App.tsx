@@ -941,15 +941,16 @@ function PipelineNode({
     list,
     user ? state?.progress[user.id] : {},
   );
+  const shared = !branch && placesOf(id).length > 1;
   return (
     <div
-      className={`pipeline-node ${branch ? "branch" : ""} ${outsidePath ? "outside-path" : ""}`}
+      className={`pipeline-node ${branch ? "branch" : ""} ${shared ? "shared" : ""} ${outsidePath ? "outside-path" : ""}`}
     >
       <a className="pipeline-node-link" href={`#/roadmap/${id}`}>
         <span className="eyebrow">
           {branch
             ? "OPTIONAL BRANCH"
-            : placesOf(id).length > 1
+            : shared
               ? "SHARED · STUDIED ONCE"
               : "ROADMAP STEP"}
           {outsidePath ? " · NOT IN MY PATH" : ""}
@@ -1181,6 +1182,9 @@ export function Roadmap({
             </span>
             <span>
               <i className="optional" /> Optional depth / project choice
+            </span>
+            <span>
+              <i className="shared" /> Shared step · studied once
             </span>
             <span>Arrows guide order, never lock access</span>
           </div>

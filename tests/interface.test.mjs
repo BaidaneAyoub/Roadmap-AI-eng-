@@ -128,6 +128,17 @@ test("Roadmap map shows all three roadmaps and every domain destination", () => 
   ])
     assert(html.includes(`>${heading}</h2>`), heading);
   assert(html.includes("SHARED · STUDIED ONCE"));
+  const places = new Map();
+  for (const id of catalog.roadmaps.flatMap((r) => r.domains))
+    places.set(id, (places.get(id) ?? 0) + 1);
+  const sharedCards = [...places.values()]
+    .filter((count) => count > 1)
+    .reduce((sum, count) => sum + count, 0);
+  assert.equal(
+    (html.match(/pipeline-node +shared/g) ?? []).length,
+    sharedCards,
+    "shared nodes are marked in every roadmap that lists them",
+  );
   assert.equal(
     (html.match(/class="pipeline-topics-disclosure"/g) ?? []).length,
     steps,
