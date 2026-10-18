@@ -249,8 +249,34 @@ function download(name: string, content: string, type = "application/json") {
 }
 type Run = (action: () => Promise<unknown>, message?: string) => Promise<void>;
 
+// Progressive reveal: [data-reveal] sections fade in on first intersection.
+function useReveal() {
+  useEffect(() => {
+    const els = Array.from(document.querySelectorAll("[data-reveal]"));
+    if (!els.length) return;
+    if (!("IntersectionObserver" in window)) {
+      els.forEach((el) => el.classList.add("is-in"));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-in");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -8% 0px" },
+    );
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  });
+}
+
 export default function App() {
   const route = useRoute();
+  useReveal();
   const [state, setState] = useState<Workspace | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -601,7 +627,7 @@ export default function App() {
             {store.cloud ? "Cloud sync" : "Local workspace"}
           </span>
         </header>
-        <main id="main" tabIndex={-1}>
+        <main id="main" tabIndex={-1} key={route}>
           {!store.cloud ? (
             <div className="local-banner">
               Local mode · progress stays on this browser. Connect Supabase
@@ -706,7 +732,7 @@ export function Dashboard({
           </button>
         }
       />
-      <div className="dashboard-grid">
+      <div className="dashboard-grid" data-reveal>
         <section className="continue-card">
           <div className="eyebrow">
             <span className="live-dot" /> KEEP THE MOMENTUM
@@ -781,7 +807,7 @@ export function Dashboard({
           </div>
         </section>
       </div>
-      <div className="stats-grid">
+      <div className="stats-grid" data-reveal>
         <Stat
           label="Your learning progress"
           value={`${total.percent}%`}
@@ -1051,6 +1077,7 @@ export function Roadmap({
       <section
         className="panel journey-guide"
         aria-label="Step-by-step learning guide"
+        data-reveal
       >
         <div className="eyebrow">
           {chosen
@@ -1175,6 +1202,7 @@ export function Roadmap({
         <section
           className="pipeline-map"
           aria-label="AI, Data and AI + Data engineering roadmaps"
+          data-reveal
         >
           <div className="pipeline-legend">
             <span>
