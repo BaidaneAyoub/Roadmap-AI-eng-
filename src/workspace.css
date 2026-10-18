@@ -1276,10 +1276,9 @@ main {
   position: relative;
   z-index: 1;
 }
-.sidebar {
-  position: relative;
-  z-index: 1;
-}
+/* .sidebar stays position: fixed (z-index 30) from styles.css — it
+   already paints above the glow; forcing relative here would pull it
+   into the flex flow and offset every page. */
 #root::before {
   content: "";
   position: fixed;
