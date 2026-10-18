@@ -508,6 +508,7 @@ main#main {
   translate: 0 0;
 }
 .pipeline-node,
+.project-card,
 .continue-card,
 .journey-guide,
 .mentor-panel,
@@ -526,7 +527,8 @@ main#main {
   .mentor-panel,
   .domain-card,
   .stat,
-  .pipeline-node {
+  .pipeline-node,
+  .project-card {
     transform: perspective(1100px)
       rotateX(calc((50 - var(--my, 50)) * 0.045deg))
       rotateY(calc((var(--mx, 50) - 50) * 0.045deg))
@@ -542,7 +544,8 @@ main#main {
   .mentor-panel:hover,
   .domain-card:hover,
   .stat:hover,
-  .pipeline-node:hover {
+  .pipeline-node:hover,
+  .project-card:hover {
     --lift: 1;
     border-color: var(--accent-line);
   }
@@ -657,10 +660,14 @@ main#main {
   .domain-card,
   .stat,
   .pipeline-node,
+  .project-card,
   .button,
   .tabs button {
     transform: none;
   }
+  .brand-mark,
+  .phase-number,
+  .feedback,
   .meter span,
   .live-dot,
   .pipeline-main::after,
@@ -1045,5 +1052,201 @@ main#main {
   }
   .mentor-actions > button {
     width: 100%;
+  }
+}
+/* ── Breath: consistent whitespace so dense pages stop feeling crammed.
+   Desktop/tablet only — the compact paddings below 701px stay untouched. */
+@media (min-width: 701px) {
+  main {
+    padding: 34px 46px 72px;
+  }
+  .page-title {
+    margin-bottom: 38px;
+  }
+  .toolbar {
+    margin-bottom: 28px;
+  }
+  .stats-grid {
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+  .stat {
+    padding: 24px;
+  }
+  .dashboard-grid {
+    gap: 26px;
+    margin-bottom: 36px;
+  }
+  .continue-card {
+    padding: 36px;
+  }
+  .team-preview {
+    padding: 28px;
+  }
+  .section-heading {
+    margin-bottom: 22px;
+  }
+  .domain-card {
+    padding: 28px;
+  }
+  .journey-guide {
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+  .mentor-panel {
+    padding: 30px;
+    margin-top: 34px;
+  }
+  .pipeline-map {
+    padding: 36px;
+  }
+  .pipeline-phase {
+    padding: 32px 34px;
+    margin-bottom: 84px;
+  }
+  .pipeline-branches {
+    gap: 24px;
+  }
+  .pipeline-topics a {
+    padding: 13px 16px;
+  }
+  .tabs {
+    padding: 4px;
+    gap: 4px;
+  }
+  .tabs button {
+    padding: 9px 16px;
+  }
+  .curriculum-section {
+    margin-top: 44px;
+  }
+  .module {
+    margin: 20px 0;
+  }
+  .module summary {
+    padding: 24px;
+  }
+  .lesson-row {
+    padding: 22px 24px;
+  }
+  .project-card {
+    padding: 30px;
+    margin: 28px 0;
+  }
+  .video-card {
+    margin: 18px 0;
+    padding: 24px;
+  }
+  .resource-card {
+    padding: 18px 20px;
+    gap: 16px;
+  }
+  .study-navigation {
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+}
+@media (min-width: 701px) and (max-width: 1100px) {
+  main {
+    padding: 30px 28px 56px;
+  }
+  .continue-card,
+  .journey-guide {
+    padding: 30px;
+  }
+  .pipeline-map {
+    padding: 26px;
+  }
+  .pipeline-phase {
+    padding: 26px 28px;
+    margin-bottom: 64px;
+  }
+}
+/* ── Alive, part two: ambient depth. Still zero visual redesign —
+   motion only, and everything turns off under reduced motion. */
+.pipeline-phase {
+  perspective: 640px;
+}
+.brand-mark {
+  animation: levitate 6s ease-in-out 1s infinite;
+}
+@keyframes levitate {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -5px;
+  }
+}
+.phase-number {
+  transform-origin: 50% 100%;
+  animation: phase-flip 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes phase-flip {
+  from {
+    opacity: 0;
+    transform: rotateX(-90deg) scale(0.86);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0deg) scale(1);
+  }
+}
+.feedback {
+  animation: drop-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes drop-in {
+  from {
+    opacity: 0;
+    translate: 0 -6px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .pipeline-topics a {
+    transition: translate 0.18s ease, box-shadow 0.22s ease,
+      background 0.18s ease;
+  }
+  .pipeline-topics a:hover {
+    translate: 0 -3px;
+    box-shadow: 0 12px 22px rgb(3 6 16 / 0.35);
+  }
+  .pipeline-topics a:active {
+    translate: 0 -1px;
+    scale: 0.96;
+  }
+  .resource-card,
+  .video-card {
+    transition: translate 0.2s ease, box-shadow 0.25s ease,
+      border-color 0.25s ease;
+  }
+  .resource-card:hover,
+  .video-card:hover {
+    translate: 0 -3px;
+    box-shadow: 0 14px 26px rgb(3 6 16 / 0.32);
+  }
+  .study-navigation button {
+    transition: translate 0.2s ease, box-shadow 0.25s ease,
+      border-color 0.2s ease, background-color 160ms ease;
+  }
+  .study-navigation button:hover {
+    translate: 0 -3px;
+    box-shadow: 0 12px 22px rgb(3 6 16 / 0.3);
+  }
+  .study-navigation button:active {
+    translate: 0 0;
+    scale: 0.97;
+  }
+  .sidebar nav a svg,
+  .member-row {
+    transition: translate 0.2s ease;
+  }
+  .sidebar nav a:hover svg,
+  .member-row:hover {
+    translate: 3px 0;
   }
 }

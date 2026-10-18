@@ -281,7 +281,7 @@ function useTilt() {
     if (matchMedia("(hover: none), (prefers-reduced-motion: reduce)").matches)
       return;
     const sel =
-      "[data-tilt], .continue-card, .journey-guide, .mentor-panel, .domain-card, .stat, .pipeline-node";
+      "[data-tilt], .continue-card, .journey-guide, .mentor-panel, .domain-card, .stat, .pipeline-node, .project-card";
     const track = (e: PointerEvent) => {
       const el =
         e.target instanceof Element ? e.target.closest<HTMLElement>(sel) : null;
