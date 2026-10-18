@@ -1,14 +1,17 @@
 import test, { after } from "node:test";
 import assert from "node:assert/strict";
 import { createServer } from "vite";
-import { createElement } from "react";
-import { renderToStaticMarkup } from "react-dom/server";
 
 const server = await createServer({
   server: { middlewareMode: true, hmr: false },
   appType: "custom",
 });
 after(() => server.close());
+// React and react-dom are loaded through the same Vite module runner as App.tsx
+// so SSR shares one React instance; static imports create a duplicate on Windows.
+const { createElement, renderToStaticMarkup } = await server.ssrLoadModule(
+  "/tests/ssr-bridge.mjs",
+);
 const { LessonPage, Roadmap, Dashboard, ProjectBuilder, BriefDetail } =
   await server.ssrLoadModule("/src/App.tsx");
 const { catalog } = await server.ssrLoadModule("/src/catalog.ts");
