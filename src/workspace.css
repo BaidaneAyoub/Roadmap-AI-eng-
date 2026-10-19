@@ -509,6 +509,7 @@ main#main {
 }
 .pipeline-node,
 .project-card,
+.team-preview,
 .continue-card,
 .journey-guide,
 .mentor-panel,
@@ -528,7 +529,8 @@ main#main {
   .domain-card,
   .stat,
   .pipeline-node,
-  .project-card {
+  .project-card,
+  .team-preview {
     transform: perspective(1100px)
       rotateX(calc((50 - var(--my, 50)) * 0.045deg))
       rotateY(calc((var(--mx, 50) - 50) * 0.045deg))
@@ -546,7 +548,8 @@ main#main {
   .domain-card:hover,
   .stat:hover,
   .pipeline-node:hover,
-  .project-card:hover {
+  .project-card:hover,
+  .team-preview:hover {
     --lift: 1;
     border-color: var(--accent-line);
   }
@@ -662,10 +665,12 @@ main#main {
   .stat,
   .pipeline-node,
   .project-card,
+  .team-preview,
   .button,
   .tabs button {
     transform: none;
   }
+  .pipeline-terminal.finish,
   .brand-mark,
   .phase-number,
   .feedback,
@@ -1059,7 +1064,7 @@ main#main {
    Desktop/tablet only — the compact paddings below 701px stay untouched. */
 @media (min-width: 701px) {
   main {
-    padding: 34px 46px 72px;
+    padding: 34px 60px 72px;
   }
   .page-title {
     margin-bottom: 38px;
@@ -1149,7 +1154,7 @@ main#main {
 }
 @media (min-width: 701px) and (max-width: 1100px) {
   main {
-    padding: 30px 28px 56px;
+    padding: 30px 36px 56px;
   }
   .continue-card,
   .journey-guide {
@@ -1319,5 +1324,73 @@ main {
   .fx-wait.is-in {
     opacity: 1;
     translate: 0 0;
+  }
+}
+/* ── Equal, wider gutters: main content and the topbar share the same
+   horizontal rhythm so every page breathes symmetrically. */
+@media (min-width: 701px) {
+  .topbar {
+    padding-inline: 60px;
+  }
+}
+@media (min-width: 701px) and (max-width: 1100px) {
+  .topbar {
+    padding-inline: 36px;
+  }
+}
+/* ── Hover floats: rows, chips and pills lift with a soft shadow, so
+   every component answers the mouse with motion, not just color. */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .module summary,
+  .lesson-row,
+  .selection-card,
+  .brief-detail summary {
+    transition: translate 0.2s ease, box-shadow 0.25s ease,
+      border-color 0.2s ease, background 0.2s ease;
+  }
+  .module summary:hover,
+  .lesson-row:hover,
+  .selection-card:hover,
+  .brief-detail summary:hover {
+    translate: 0 -2px;
+    box-shadow: 0 10px 24px rgb(3 6 16 / 0.32);
+    border-color: var(--accent-line);
+  }
+  .module summary:active,
+  .lesson-row:active {
+    scale: 0.995;
+  }
+  .selection-card:active {
+    scale: 0.985;
+  }
+  .pipeline-terminal {
+    transition: translate 0.2s ease, box-shadow 0.25s ease,
+      border-color 0.2s ease;
+  }
+  .pipeline-terminal:not(.finish):hover {
+    translate: 0 -3px;
+    box-shadow: 0 12px 22px rgb(3 6 16 / 0.35);
+  }
+  .path-link {
+    transition: translate 0.2s ease, background-color 0.18s ease;
+  }
+  .path-link:hover {
+    translate: 2px 0;
+  }
+}
+/* ── Idle float: the finish terminal bobs gently, a small standing
+   3D cue that needs no pointer at all. */
+@media (prefers-reduced-motion: no-preference) {
+  .pipeline-terminal.finish {
+    animation: soft-float 5.5s ease-in-out infinite;
+  }
+}
+@keyframes soft-float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -4px;
   }
 }
