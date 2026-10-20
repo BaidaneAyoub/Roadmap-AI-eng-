@@ -21,6 +21,11 @@ Backpropagation and autograd~Reverse-mode differentiation accumulates gradients 
               "https://docs.pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html",
             ),
             ch(
+              r.fastai,
+              "fast.ai lesson 3: neural net foundations (free lecture and notebook)",
+              "https://course.fast.ai/Lessons/lesson3.html",
+            ),
+            ch(
               r.dl,
               "D2L: backpropagation",
               "https://d2l.ai/chapter_multilayer-perceptrons/backprop.html",
@@ -251,6 +256,11 @@ Context window~Inputs and generated outputs share a finite token budget; exceedi
               "D2L: transformer architecture",
               "https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html",
             ),
+            ch(
+              r.hf,
+              "Full Stack LLM Bootcamp: LLM foundations (2023 lecture)",
+              "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llm-foundations/",
+            ),
           ],
         ),
         l(
@@ -276,7 +286,7 @@ Self-hosting~Local serving needs memory budgets and operational checks; mock inf
           "Constrain the task and validate responses instead of trusting fluent text.",
           `Prompt design~State task, relevant context, examples and output requirements; examples must not leak test answers.~Compare zero-shot with two labeled examples on a held-out fixture set.
 Sampling~Temperature rescales logits, top-k limits candidates and top-p retains a probability mass; repetition penalties affect repeated tokens.~Sample a toy logits vector at two temperatures with fixed seeds.
-Structured output~JSON/schema constraints reduce formatting errors but still need semantic validation.~Reject a negative quantity even when the JSON parses correctly.
+Structured output~JSON/schema constraints reduce formatting errors but still need semantic validation, refusal handling and completeness checks before any side effect.~Reject a negative quantity even when JSON parses; an interrupted stream or refusal must never become a tool execution.
 Reasoning patterns~Decomposition and ReAct alternate planning with observable tool results; verbose explanations are not evidence of correctness.~Require a cited answer and validate it rather than judging prose length.`,
           "Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.",
           [
@@ -290,6 +300,16 @@ Reasoning patterns~Decomposition and ReAct alternate planning with observable to
               "Hugging Face: chat templates",
               "https://huggingface.co/docs/transformers/chat_templating",
             ),
+            ch(
+              r.hf,
+              "Full Stack LLM Bootcamp: prompt engineering (2023 lecture)",
+              "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/prompt-engineering/",
+            ),
+            ch(
+              r.python,
+              "Pydantic: models and validation for structured responses",
+              "https://docs.pydantic.dev/latest/concepts/models/",
+            ),
           ],
         ),
       ]),
@@ -300,7 +320,7 @@ Reasoning patterns~Decomposition and ReAct alternate planning with observable to
           "Supply relevant information while preventing stale, conflicting or untrusted context.",
           `Context sources~System instructions, user inputs, retrieval and tool results have different trust levels.~Label retrieved text as data, not as executable instructions.
 Compaction and isolation~Summaries reduce context size but can lose constraints; separate user sessions and agent contexts.~Preserve task constraints explicitly when summarizing old turns.
-Memory and caching~Memory persists selected facts; caches reuse prior computation and need scope and invalidation.~Key a retrieval cache by user permissions and document version.`,
+Memory and caching~Application memory persists selected facts; response/retrieval caches reuse results and require permission scope, expiry and invalidation. A transformer KV cache instead reuses attention computation within compatible token prefixes and does not supply durable user memory.~Key a retrieval cache by user permissions and document version, invalidate it after access revocation, and keep session memory separate from model KV tensors.`,
           "Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.",
           [
             ch(
@@ -312,6 +332,11 @@ Memory and caching~Memory persists selected facts; caches reuse prior computatio
               r.hf,
               "Hugging Face: KV cache strategies",
               "https://huggingface.co/docs/transformers/kv_cache",
+            ),
+            ch(
+              r.agents,
+              "LangGraph: thread-scoped checkpoints versus long-term memory",
+              "https://docs.langchain.com/oss/python/langgraph/persistence",
             ),
           ],
         ),
@@ -388,6 +413,11 @@ Metadata and refresh~Version, source, timestamp and permissions support updates 
               r.hf,
               "Haystack: document splitters",
               "https://docs.haystack.deepset.ai/docs/documentsplitter",
+            ),
+            ch(
+              r.hf,
+              "Full Stack LLM Bootcamp: retrieval, embeddings and tool use (2023 lecture)",
+              "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/augmented-language-models/",
             ),
           ],
         ),
@@ -541,6 +571,14 @@ Recovery~Retries need bounds and idempotency; durable checkpoints avoid repeatin
               "LangGraph: workflows and agents",
               "https://docs.langchain.com/oss/python/langgraph/workflows-agents",
             ),
+            {
+              ...ch(
+                r.agents,
+                "Hugging Face agents course: LangGraph walkthrough",
+                "https://huggingface.co/learn/agents-course/unit2/langgraph/introduction",
+              ),
+              extras: "Free reading; published examples use a hosted model. Reproduce the graph with deterministic local response fixtures; no paid API is required for this lab.",
+            },
           ],
           "Useful next",
         ),
@@ -743,6 +781,14 @@ Regression evaluation~Run the same cases after model, prompt, retrieval or tool 
               "Haystack: evaluation",
               "https://docs.haystack.deepset.ai/docs/evaluation",
             ),
+            {
+              ...ch(
+                r.hf,
+                "Full Stack LLM Bootcamp: LLMOps and evaluation (2023 lecture)",
+                "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llmops/",
+              ),
+              extras: "Free lecture; use the current linked documentation for APIs and local fixtures instead of optional hosted products.",
+            },
             r.testing,
           ],
         ),
@@ -1088,6 +1134,11 @@ Ownership and communication~Explain risks, costs and decisions to engineering, p
               r.product,
               "PAIR: feedback and control",
               "https://pair.withgoogle.com/guidebook/chapters/feedback-controls/",
+            ),
+            ch(
+              r.product,
+              "Full Stack LLM Bootcamp: UX for language interfaces (2023 lecture)",
+              "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/ux-for-luis/",
             ),
             ch(
               r.product,

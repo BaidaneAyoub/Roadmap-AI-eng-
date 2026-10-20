@@ -51,6 +51,7 @@ Links are per lesson and include specific chapters where available. Optional hos
 - [Inria: predictive modeling pipeline](https://inria.github.io/scikit-learn-mooc/python_scripts/02_numerical_pipeline_introduction.html) — Free; no registration required. No paid materials required.
 - [scikit-learn: dummy estimators](https://scikit-learn.org/stable/modules/model_evaluation.html#dummy-estimators) — Free; no registration required. No paid materials required.
 - [scikit-learn: cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html) — Free; no registration required. No paid materials required.
+- [Inria scikit-learn course: cross-validation notebook and exercises](https://inria.github.io/scikit-learn-mooc/python_scripts/02_numerical_pipeline_cross_validation.html) — Free; no registration required. No paid materials required.
 - [scikit-learn: common pitfalls](https://scikit-learn.org/stable/common_pitfalls.html) — Free; no registration required. No paid materials required.
 - [Inria: categorical variables](https://inria.github.io/scikit-learn-mooc/python_scripts/03_categorical_pipeline.html) — Free; no registration required. No paid materials required.
 - [scikit-learn: ColumnTransformer](https://scikit-learn.org/stable/modules/compose.html) — Free; no registration required. No paid materials required.
@@ -75,6 +76,7 @@ Links are per lesson and include specific chapters where available. Optional hos
 - [scikit-learn: outlier detection](https://scikit-learn.org/stable/modules/outlier_detection.html) — Free; no registration required. No paid materials required.
 - [scikit-learn: decomposition](https://scikit-learn.org/stable/modules/decomposition.html) — Free; no registration required. No paid materials required.
 - [PyTorch: tensor operations](https://docs.pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html) — Free; no registration required. No paid materials required.
+- [fast.ai lesson 3: neural net foundations (free lecture and notebook)](https://course.fast.ai/Lessons/lesson3.html) — Free; no registration required. No paid materials required.
 - [D2L: backpropagation](https://d2l.ai/chapter_multilayer-perceptrons/backprop.html) — Free; no registration required. No paid materials required.
 - [StatQuest: ArgMax and SoftMax](https://www.youtube.com/watch?v=KpKog-L9veg) — Free; no registration required. No paid materials required.
 - [D2L: softmax regression](https://d2l.ai/chapter_linear-classification/softmax-regression.html) — Free; no registration required. No paid materials required.
@@ -134,12 +136,16 @@ Links are per lesson and include specific chapters where available. Optional hos
 - [Hugging Face: deep reinforcement learning introduction](https://huggingface.co/learn/deep-rl-course/unit1/introduction) — Free; no registration required. No paid materials required.
 - [Official reference: Distributed training: ranks, synchronization and effective batches](https://docs.pytorch.org/tutorials/intermediate/ddp_tutorial.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
 - [Hugging Face: LLM course](https://huggingface.co/learn/llm-course/chapter1/1) — Free; no registration required. No paid materials required.
+- [Full Stack LLM Bootcamp: LLM foundations (2023 lecture)](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llm-foundations/) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 - [Hugging Face: using transformers](https://huggingface.co/learn/llm-course/chapter2/1) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 - [Ollama documentation](https://docs.ollama.com/) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 - [Hugging Face: generation strategies](https://huggingface.co/docs/transformers/generation_strategies) — Free; no registration required. No paid materials required.
 - [Hugging Face: chat templates](https://huggingface.co/docs/transformers/chat_templating) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
+- [Full Stack LLM Bootcamp: prompt engineering (2023 lecture)](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/prompt-engineering/) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
+- [Pydantic: models and validation for structured responses](https://docs.pydantic.dev/latest/concepts/models/) — Free; no registration required. No paid materials required.
 - [Hugging Face: messages and special tokens](https://huggingface.co/learn/agents-course/unit1/messages-and-special-tokens) — Free reading; optional account for course activities. No paid materials required.
 - [Hugging Face: KV cache strategies](https://huggingface.co/docs/transformers/kv_cache) — Free; no registration required. No paid materials required.
+- [LangGraph: persistence](https://docs.langchain.com/oss/python/langgraph/persistence) — Free; no registration required. No paid materials required.
 - [Hugging Face: tools](https://huggingface.co/learn/agents-course/unit1/tools) — Free reading; optional account for course activities. No paid materials required.
 - [Hugging Face: tasks](https://huggingface.co/docs/transformers/task_summary) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 - [Hugging Face PEFT: LoRA](https://huggingface.co/docs/peft/conceptual_guides/lora) — Free; no registration required. No paid materials required.
@@ -169,6 +175,7 @@ Links are per lesson and include specific chapters where available. Optional hos
 - [PostgreSQL: using EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) — Free; no registration required. No paid materials required.
 - [Sentence Transformers: semantic search](https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 - [Haystack: document splitters](https://docs.haystack.deepset.ai/docs/documentsplitter) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
+- [Full Stack LLM Bootcamp: retrieval, embeddings and tool use (2023 lecture)](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/augmented-language-models/) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 - [FAISS: getting started](https://github.com/facebookresearch/faiss/wiki/Getting-started) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 - [Sentence Transformers: retrieve and rerank](https://www.sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 - [Qdrant: hybrid queries](https://qdrant.tech/documentation/concepts/hybrid-queries/) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
@@ -183,6 +190,7 @@ Links are per lesson and include specific chapters where available. Optional hos
 - [Official reference: Document parsing, OCR limits and source provenance](https://pymupdf.readthedocs.io/en/latest/recipes-text.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
 - [Official reference: Approximate nearest neighbors and index tradeoffs](https://github.com/facebookresearch/faiss/wiki) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
 - [Official reference: Graph-grounded retrieval and GraphRAG limits](https://microsoft.github.io/graphrag/) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
+- [Full Stack LLM Bootcamp: LLMOps and evaluation (2023 lecture)](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llmops/) — Free reading; Hugging Face account optional for sharing models. Free lecture; use the current linked documentation for APIs and local fixtures instead of optional hosted products..
 - [Google PAIR: user needs](https://pair.withgoogle.com/guidebook/chapters/user-needs/) — Free; no registration required. No paid materials required.
 - [Google SRE: monitoring distributed systems](https://sre.google/sre-book/monitoring-distributed-systems/) — Free; no registration required. No paid materials required.
 - [OWASP: Top 10 for LLM applications](https://genai.owasp.org/llm-top-10/) — Free; no registration required. No paid materials required.
@@ -193,8 +201,8 @@ Links are per lesson and include specific chapters where available. Optional hos
 - [OWASP: sensitive information disclosure](https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/) — Free; no registration required. No paid materials required.
 - [Hugging Face agents course](https://huggingface.co/learn/agents-course/unit1/what-are-agents) — Free reading; optional account for course activities. No paid materials required.
 - [LangGraph: overview](https://docs.langchain.com/oss/python/langgraph/overview) — Free reading; optional account for course activities. No paid materials required.
-- [LangGraph: persistence](https://docs.langchain.com/oss/python/langgraph/persistence) — Free; no registration required. No paid materials required.
 - [LangGraph: workflows and agents](https://docs.langchain.com/oss/python/langgraph/workflows-agents) — Free reading; optional account for course activities. No paid materials required.
+- [Hugging Face agents course: LangGraph walkthrough](https://huggingface.co/learn/agents-course/unit2/langgraph/introduction) — Free reading; optional account for course activities. Free reading; published examples use a hosted model. Reproduce the graph with deterministic local response fixtures; no paid API is required for this lab..
 - [MCP: architecture](https://modelcontextprotocol.io/docs/learn/architecture) — Free; no registration required. No paid materials required.
 - [MCP: build a server](https://modelcontextprotocol.io/docs/develop/build-server) — Free; no registration required. No paid materials required.
 - [MCP: build a client](https://modelcontextprotocol.io/docs/develop/build-client) — Free; no registration required. No paid materials required.
@@ -221,6 +229,7 @@ Links are per lesson and include specific chapters where available. Optional hos
 - [Official reference: Backup, restore and data recovery drills](https://www.postgresql.org/docs/current/backup.html) — Free reading; no registration required. Use the local CPU exercise; optional hosted services and downloads are not required..
 - [PAIR: mental models](https://pair.withgoogle.com/guidebook/chapters/mental-models/) — Free; no registration required. No paid materials required.
 - [Google PAIR: feedback and control](https://pair.withgoogle.com/guidebook/chapters/feedback-controls/) — Free; no registration required. No paid materials required.
+- [Full Stack LLM Bootcamp: UX for language interfaces (2023 lecture)](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/ux-for-luis/) — Free; no registration required. No paid materials required.
 - [Google SRE: embracing risk](https://sre.google/sre-book/embracing-risk/) — Free; no registration required. No paid materials required.
 - [Architecture Decision Records](https://adr.github.io/) — Free; no registration required. No paid materials required.
 - [Apache Spark: PySpark overview](https://spark.apache.org/docs/latest/api/python/getting_started/index.html) — Free; no registration required. No paid materials required.

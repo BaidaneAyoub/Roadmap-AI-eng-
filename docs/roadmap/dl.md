@@ -95,7 +95,8 @@ Explain every dimension and gradient in a small neural network.
 #### Free written resources
 
 1. [PyTorch: tensors](https://docs.pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html) — Free; no registration required. No paid materials required.
-2. [D2L: backpropagation](https://d2l.ai/chapter_multilayer-perceptrons/backprop.html) — Free; no registration required. No paid materials required.
+2. [fast.ai lesson 3: neural net foundations (free lecture and notebook)](https://course.fast.ai/Lessons/lesson3.html) — Free; no registration required. No paid materials required.
+3. [D2L: backpropagation](https://d2l.ai/chapter_multilayer-perceptrons/backprop.html) — Free; no registration required. No paid materials required.
 
 #### Lab: Tensors, shapes, networks and autograd
 
@@ -2437,11 +2438,14 @@ Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare p
 
 - Runnable code or notebook with a small reproducible input
 - README explaining decisions, results and limitations
+- Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 
 **Completion checks**
 
 - [ ] Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.
 - [ ] Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.
+- [ ] Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 
 #### Ten project recommendations
 
@@ -2457,7 +2461,7 @@ A learner needs to compare classical and neural classification end to end.
 
 - **PyTorch loops, checkpoints and reproducibility:** Implement a small PyTorch model, explicit training loop and CPU checkpoint inference using the same target and split as any selected ML baseline. Apply this to Tiny digit recognition service: A linear baseline, small PyTorch MLP, inference endpoint and container when selected. Focus: Training loop, Checkpoints, Reproducibility.
   - Deliverable: Training script, checkpoint, learning curves and inference benchmark
-  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 
 **Milestones**
 
@@ -2469,7 +2473,7 @@ A learner needs to compare classical and neural classification end to end.
 **Acceptance**
 
 - [ ] Report held-out accuracy, confusion matrix and CPU latency for both models.
-- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2486,7 +2490,7 @@ A learner needs to inspect query, key and value operations.
 
 - **PyTorch loops, checkpoints and reproducibility:** Implement a small PyTorch model, explicit training loop and CPU checkpoint inference using the same target and split as any selected ML baseline. Apply this to Attention from scratch probe: A small masked-attention block and attention-weight visualizer. Focus: Training loop, Checkpoints, Reproducibility.
   - Deliverable: Training script, checkpoint, learning curves and inference benchmark
-  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 
 **Milestones**
 
@@ -2498,7 +2502,7 @@ A learner needs to inspect query, key and value operations.
 **Acceptance**
 
 - [ ] Assert causal masks, normalized weights and expected tensor shapes.
-- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2515,7 +2519,7 @@ A learner needs to understand gradients beyond calling backward.
 
 - **PyTorch loops, checkpoints and reproducibility:** Implement a small PyTorch model, explicit training loop and CPU checkpoint inference using the same target and split as any selected ML baseline. Apply this to Backpropagation verification kit: Manual, autograd and finite-difference gradient comparisons. Focus: Training loop, Checkpoints, Reproducibility.
   - Deliverable: Training script, checkpoint, learning curves and inference benchmark
-  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 
 **Milestones**
 
@@ -2527,7 +2531,7 @@ A learner needs to understand gradients beyond calling backward.
 **Acceptance**
 
 - [ ] All three methods agree within a documented float64 tolerance.
-- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2544,7 +2548,7 @@ A vision learner needs to understand kernels, strides and padding.
 
 - **PyTorch loops, checkpoints and reproducibility:** Implement a small PyTorch model, explicit training loop and CPU checkpoint inference using the same target and split as any selected ML baseline. Apply this to Convolution shape laboratory: A tiny CNN classifier with receptive-field diagrams. Focus: Training loop, Checkpoints, Reproducibility.
   - Deliverable: Training script, checkpoint, learning curves and inference benchmark
-  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 
 **Milestones**
 
@@ -2556,7 +2560,7 @@ A vision learner needs to understand kernels, strides and padding.
 **Acceptance**
 
 - [ ] Calculate output shapes by hand and match actual PyTorch tensors.
-- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2573,7 +2577,7 @@ A learner needs to distinguish reconstruction from generation.
 
 - **PyTorch loops, checkpoints and reproducibility:** Implement a small PyTorch model, explicit training loop and CPU checkpoint inference using the same target and split as any selected ML baseline. Apply this to Denoising reconstruction study: A small autoencoder and side-by-side reconstructions. Focus: Training loop, Checkpoints, Reproducibility.
   - Deliverable: Training script, checkpoint, learning curves and inference benchmark
-  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 
 **Milestones**
 
@@ -2585,7 +2589,7 @@ A learner needs to distinguish reconstruction from generation.
 **Acceptance**
 
 - [ ] Evaluate clean holdout reconstruction loss and compare with identity/noisy baselines.
-- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2602,7 +2606,7 @@ A learner needs to compare SGD, momentum and AdamW fairly.
 
 - **PyTorch loops, checkpoints and reproducibility:** Implement a small PyTorch model, explicit training loop and CPU checkpoint inference using the same target and split as any selected ML baseline. Apply this to Optimizer dynamics race: Learning curves and an optimizer-update notebook. Focus: Training loop, Checkpoints, Reproducibility.
   - Deliverable: Training script, checkpoint, learning curves and inference benchmark
-  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 
 **Milestones**
 
@@ -2614,7 +2618,7 @@ A learner needs to compare SGD, momentum and AdamW fairly.
 **Acceptance**
 
 - [ ] Keep seeds and update budgets equal; verify decoupled weight decay numerically.
-- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2631,7 +2635,7 @@ A vision learner needs pixel-level predictions with measurable masks.
 
 - **PyTorch loops, checkpoints and reproducibility:** Implement a small PyTorch model, explicit training loop and CPU checkpoint inference using the same target and split as any selected ML baseline. Apply this to Synthetic shape segmentation: A tiny segmentation network and mask overlay report. Focus: Training loop, Checkpoints, Reproducibility.
   - Deliverable: Training script, checkpoint, learning curves and inference benchmark
-  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 
 **Milestones**
 
@@ -2643,7 +2647,7 @@ A vision learner needs pixel-level predictions with measurable masks.
 **Acceptance**
 
 - [ ] Split by generation seed and report IoU for each shape type.
-- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2660,7 +2664,7 @@ A learner needs to understand recurrence and causal information flow.
 
 - **PyTorch loops, checkpoints and reproducibility:** Implement a small PyTorch model, explicit training loop and CPU checkpoint inference using the same target and split as any selected ML baseline. Apply this to Sequence memory comparison: RNN and causal-convolution baselines with controlled sequence lengths. Focus: Training loop, Checkpoints, Reproducibility.
   - Deliverable: Training script, checkpoint, learning curves and inference benchmark
-  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 
 **Milestones**
 
@@ -2672,7 +2676,7 @@ A learner needs to understand recurrence and causal information flow.
 **Acceptance**
 
 - [ ] Prove future tokens cannot influence an earlier prediction.
-- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2689,7 +2693,7 @@ A learner needs to diagnose broadcasting mistakes before training.
 
 - **PyTorch loops, checkpoints and reproducibility:** Implement a small PyTorch model, explicit training loop and CPU checkpoint inference using the same target and split as any selected ML baseline. Apply this to Tensor shape debugger: An annotated shape notebook with failing and corrected operations. Focus: Training loop, Checkpoints, Reproducibility.
   - Deliverable: Training script, checkpoint, learning curves and inference benchmark
-  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 
 **Milestones**
 
@@ -2701,7 +2705,7 @@ A learner needs to diagnose broadcasting mistakes before training.
 **Acceptance**
 
 - [ ] Assert expected shapes and show a silent broadcasting bug caught by a test.
-- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2718,7 +2722,7 @@ A developer needs a systematic way to find unstable training.
 
 - **PyTorch loops, checkpoints and reproducibility:** Implement a small PyTorch model, explicit training loop and CPU checkpoint inference using the same target and split as any selected ML baseline. Apply this to Training failure diagnosis clinic: A reproducible diagnostic report and repaired training loop. Focus: Training loop, Checkpoints, Reproducibility.
   - Deliverable: Training script, checkpoint, learning curves and inference benchmark
-  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 
 **Milestones**
 
@@ -2730,7 +2734,7 @@ A developer needs a systematic way to find unstable training.
 **Acceptance**
 
 - [ ] Reproduce each fault, overfit one batch and verify checkpoint reload.
-- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

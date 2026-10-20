@@ -68,6 +68,7 @@ Preserve source identity and useful boundaries when preparing knowledge.
 
 1. [Sentence Transformers: semantic search](https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 2. [Haystack: document splitters](https://docs.haystack.deepset.ai/docs/documentsplitter) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
+3. [Full Stack LLM Bootcamp: retrieval, embeddings and tool use (2023 lecture)](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/augmented-language-models/) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 
 #### Lab: Document parsing, chunking and metadata
 
@@ -824,11 +825,14 @@ Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fus
 
 - Runnable code or notebook with a small reproducible input
 - README explaining decisions, results and limitations
+- Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 
 **Completion checks**
 
 - [ ] Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.
 - [ ] Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.
+- [ ] Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 
 #### Ten project recommendations
 
@@ -844,7 +848,7 @@ A student needs answers traceable to their own notes.
 
 - **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Personal notes retrieval desk: A local search interface with passage IDs and citations. Focus: Hybrid search, Filters, Reranking.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 
 **Milestones**
 
@@ -856,7 +860,7 @@ A student needs answers traceable to their own notes.
 **Acceptance**
 
 - [ ] Report recall at five and refuse unsupported answers.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -873,7 +877,7 @@ A team needs retrieval that respects document access rights.
 
 - **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Permission-aware team search: A retrieval filter and adversarial permission test set. Focus: Hybrid search, Filters, Reranking.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 
 **Milestones**
 
@@ -885,7 +889,7 @@ A team needs retrieval that respects document access rights.
 **Acceptance**
 
 - [ ] Unauthorized passages never enter the retrieved context.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -902,7 +906,7 @@ A builder needs evidence for choosing chunk size and overlap.
 
 - **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Chunking experiment arena: A chunking benchmark and source-offset viewer. Focus: Hybrid search, Filters, Reranking.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 
 **Milestones**
 
@@ -914,7 +918,7 @@ A builder needs evidence for choosing chunk size and overlap.
 **Acceptance**
 
 - [ ] Compare retrieval on identical queries and preserve exact source spans.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -931,7 +935,7 @@ A reviewer needs to catch answers citing the wrong source.
 
 - **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Citation integrity checker: A citation validation report and abstention interface. Focus: Hybrid search, Filters, Reranking.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 
 **Milestones**
 
@@ -943,7 +947,7 @@ A reviewer needs to catch answers citing the wrong source.
 **Acceptance**
 
 - [ ] Flag missing IDs and unsupported spans; do not equate a valid link with support.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -960,7 +964,7 @@ A builder needs to choose representations for a small corpus.
 
 - **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Embedding retrieval scorecard: A representation comparison with dimension and latency reports. Focus: Hybrid search, Filters, Reranking.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 
 **Milestones**
 
@@ -972,7 +976,7 @@ A builder needs to choose representations for a small corpus.
 **Acceptance**
 
 - [ ] Keep evaluation queries separate and identify model download requirements.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -989,7 +993,7 @@ A learner needs to navigate relationships between study notes.
 
 - **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Concept relationship explorer: A graph traversal and provenance viewer. Focus: Hybrid search, Filters, Reranking.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 
 **Milestones**
 
@@ -1001,7 +1005,7 @@ A learner needs to navigate relationships between study notes.
 **Acceptance**
 
 - [ ] Handle cycles and distinguish authored edges from inferred hypotheses.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1018,7 +1022,7 @@ An analyst needs both exact-code and paraphrase retrieval.
 
 - **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Hybrid retrieval benchmark: A lexical/vector fusion and reranking comparison. Focus: Hybrid search, Filters, Reranking.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 
 **Milestones**
 
@@ -1030,7 +1034,7 @@ An analyst needs both exact-code and paraphrase retrieval.
 **Acceptance**
 
 - [ ] Measure exact-code and paraphrase slices separately.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1047,7 +1051,7 @@ A librarian needs updated documents without stale duplicate chunks.
 
 - **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Incremental document index: An idempotent ingestion and deletion workflow. Focus: Hybrid search, Filters, Reranking.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 
 **Milestones**
 
@@ -1059,7 +1063,7 @@ A librarian needs updated documents without stale duplicate chunks.
 **Acceptance**
 
 - [ ] Re-ingest twice, delete a source and prove its chunks disappear.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1076,7 +1080,7 @@ A maintainer needs to separate retrieval and answer failures.
 
 - **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Retrieval failure diagnosis bench: A retrieval/answer error taxonomy and regression report. Focus: Hybrid search, Filters, Reranking.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 
 **Milestones**
 
@@ -1088,7 +1092,7 @@ A maintainer needs to separate retrieval and answer failures.
 **Acceptance**
 
 - [ ] Measure retrieval recall separately from answer faithfulness.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1105,7 +1109,7 @@ An analyst needs answers grounded in tabular records.
 
 - **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Read-only SQL evidence assistant: A whitelisted query workflow with rows cited as evidence. Focus: Hybrid search, Filters, Reranking.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 
 **Milestones**
 
@@ -1117,7 +1121,7 @@ An analyst needs answers grounded in tabular records.
 **Acceptance**
 
 - [ ] Reject writes, bound row counts and verify join totals.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1191,11 +1195,14 @@ Build an extractive local Q&A system with citations and abstentions; evaluate tw
 
 - Runnable code or notebook with a small reproducible input
 - README explaining decisions, results and limitations
+- Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 
 **Completion checks**
 
 - [ ] Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.
 - [ ] Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.
+- [ ] Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 
 #### Ten project recommendations
 
@@ -1211,7 +1218,7 @@ A maintainer needs to separate retrieval and answer failures.
 
 - **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Retrieval failure diagnosis bench: A retrieval/answer error taxonomy and regression report. Focus: Grounding, Citations, Retrieval metrics.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 
 **Milestones**
 
@@ -1223,7 +1230,7 @@ A maintainer needs to separate retrieval and answer failures.
 **Acceptance**
 
 - [ ] Measure retrieval recall separately from answer faithfulness.
-- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1240,7 +1247,7 @@ A builder needs evidence for choosing chunk size and overlap.
 
 - **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Chunking experiment arena: A chunking benchmark and source-offset viewer. Focus: Grounding, Citations, Retrieval metrics.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 
 **Milestones**
 
@@ -1252,7 +1259,7 @@ A builder needs evidence for choosing chunk size and overlap.
 **Acceptance**
 
 - [ ] Compare retrieval on identical queries and preserve exact source spans.
-- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1269,7 +1276,7 @@ A reviewer needs to catch answers citing the wrong source.
 
 - **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Citation integrity checker: A citation validation report and abstention interface. Focus: Grounding, Citations, Retrieval metrics.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 
 **Milestones**
 
@@ -1281,7 +1288,7 @@ A reviewer needs to catch answers citing the wrong source.
 **Acceptance**
 
 - [ ] Flag missing IDs and unsupported spans; do not equate a valid link with support.
-- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1298,7 +1305,7 @@ A builder needs to choose representations for a small corpus.
 
 - **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Embedding retrieval scorecard: A representation comparison with dimension and latency reports. Focus: Grounding, Citations, Retrieval metrics.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 
 **Milestones**
 
@@ -1310,7 +1317,7 @@ A builder needs to choose representations for a small corpus.
 **Acceptance**
 
 - [ ] Keep evaluation queries separate and identify model download requirements.
-- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1327,7 +1334,7 @@ A learner needs to navigate relationships between study notes.
 
 - **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Concept relationship explorer: A graph traversal and provenance viewer. Focus: Grounding, Citations, Retrieval metrics.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 
 **Milestones**
 
@@ -1339,7 +1346,7 @@ A learner needs to navigate relationships between study notes.
 **Acceptance**
 
 - [ ] Handle cycles and distinguish authored edges from inferred hypotheses.
-- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1356,7 +1363,7 @@ An analyst needs both exact-code and paraphrase retrieval.
 
 - **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Hybrid retrieval benchmark: A lexical/vector fusion and reranking comparison. Focus: Grounding, Citations, Retrieval metrics.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 
 **Milestones**
 
@@ -1368,7 +1375,7 @@ An analyst needs both exact-code and paraphrase retrieval.
 **Acceptance**
 
 - [ ] Measure exact-code and paraphrase slices separately.
-- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1385,7 +1392,7 @@ A librarian needs updated documents without stale duplicate chunks.
 
 - **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Incremental document index: An idempotent ingestion and deletion workflow. Focus: Grounding, Citations, Retrieval metrics.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 
 **Milestones**
 
@@ -1397,7 +1404,7 @@ A librarian needs updated documents without stale duplicate chunks.
 **Acceptance**
 
 - [ ] Re-ingest twice, delete a source and prove its chunks disappear.
-- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1414,7 +1421,7 @@ A student needs answers traceable to their own notes.
 
 - **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Personal notes retrieval desk: A local search interface with passage IDs and citations. Focus: Grounding, Citations, Retrieval metrics.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 
 **Milestones**
 
@@ -1426,7 +1433,7 @@ A student needs answers traceable to their own notes.
 **Acceptance**
 
 - [ ] Report recall at five and refuse unsupported answers.
-- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1443,7 +1450,7 @@ A team needs retrieval that respects document access rights.
 
 - **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Permission-aware team search: A retrieval filter and adversarial permission test set. Focus: Grounding, Citations, Retrieval metrics.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 
 **Milestones**
 
@@ -1455,7 +1462,7 @@ A team needs retrieval that respects document access rights.
 **Acceptance**
 
 - [ ] Unauthorized passages never enter the retrieved context.
-- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1472,7 +1479,7 @@ An analyst needs answers grounded in tabular records.
 
 - **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Read-only SQL evidence assistant: A whitelisted query workflow with rows cited as evidence. Focus: Grounding, Citations, Retrieval metrics.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 
 **Milestones**
 
@@ -1484,7 +1491,7 @@ An analyst needs answers grounded in tabular records.
 **Acceptance**
 
 - [ ] Reject writes, bound row counts and verify join totals.
-- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

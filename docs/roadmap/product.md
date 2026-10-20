@@ -823,7 +823,8 @@ Learn from real users with the smallest useful product.
 #### Free written resources
 
 1. [PAIR: feedback and control](https://pair.withgoogle.com/guidebook/chapters/feedback-controls/) — Free; no registration required. No paid materials required.
-2. [PAIR: errors and graceful failure](https://pair.withgoogle.com/guidebook/chapters/errors-failing-gracefully/) — Free; no registration required. No paid materials required.
+2. [Full Stack LLM Bootcamp: UX for language interfaces (2023 lecture)](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/ux-for-luis/) — Free; no registration required. No paid materials required.
+3. [PAIR: errors and graceful failure](https://pair.withgoogle.com/guidebook/chapters/errors-failing-gracefully/) — Free; no registration required. No paid materials required.
 
 #### Lab: Prototypes, MVPs, UX, feedback and A/B testing
 
@@ -833,11 +834,14 @@ Test a small prototype with two teammates, record task completion and feedback, 
 
 - Runnable code or notebook with a small reproducible input
 - README explaining decisions, results and limitations
+- Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 
 **Completion checks**
 
 - [ ] Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.
 - [ ] Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.
+- [ ] Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 
 #### Ten project recommendations
 
@@ -852,20 +856,20 @@ A maintainer needs to turn messy feedback into testable changes.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prototypes, MVPs, UX, feedback and A/B testing:** Implement Prototypes, MVPs, UX, feedback and A/B testing in Feedback prioritization board. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
-  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A categorized backlog with evidence and experiment plans. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Deduplicate reports while retaining disagreement and define a test per priority.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -881,20 +885,20 @@ A designer needs to learn whether users can find evidence.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prototypes, MVPs, UX, feedback and A/B testing:** Implement Prototypes, MVPs, UX, feedback and A/B testing in Search UX prototype study. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
-  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A task-based usability test and revised prototype. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Record task completion and confusion points without claiming statistical significance.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -910,20 +914,20 @@ A team needs a traceable choice between two local designs.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prototypes, MVPs, UX, feedback and A/B testing:** Extend the project with Prototypes, MVPs, UX, feedback and A/B testing in Architecture decision dossier. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
-  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: An architecture diagram and ADR with a small reproducible experiment. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Tie the decision to constraints and document when to revisit it.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -939,20 +943,20 @@ A team needs a handoff that survives the original developer leaving.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prototypes, MVPs, UX, feedback and A/B testing:** Extend the project with Prototypes, MVPs, UX, feedback and A/B testing in Project delivery documentation pack. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
-  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: Requirements, architecture, API spec, evaluation and deployment handoff. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] A reviewer can trace one user scenario through every document.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -968,20 +972,20 @@ A builder needs metrics that connect usage to learning outcomes.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prototypes, MVPs, UX, feedback and A/B testing:** Extend the project with Prototypes, MVPs, UX, feedback and A/B testing in Product outcome measurement tree. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
-  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A metric tree and instrumentation contract. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Distinguish activity from learning and specify denominator and time window.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -997,20 +1001,20 @@ A learner needs to communicate limits of a toy classifier.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prototypes, MVPs, UX, feedback and A/B testing:** Extend the project with Prototypes, MVPs, UX, feedback and A/B testing in Educational model card studio. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
-  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A model card, dataset description and failure examples. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] State intended use, split, metrics and unsupported use cases.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1026,20 +1030,20 @@ A team needs a feasible first version of a document helper.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prototypes, MVPs, UX, feedback and A/B testing:** Extend the project with Prototypes, MVPs, UX, feedback and A/B testing in AI feature MVP scoping desk. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
-  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A PRD with MVP, exclusions and acceptance scenarios. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Every included feature supports a named user need and measurable outcome.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1055,20 +1059,20 @@ A builder needs evidence that a study tool solves a real problem.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prototypes, MVPs, UX, feedback and A/B testing:** Extend the project with Prototypes, MVPs, UX, feedback and A/B testing in Learning problem discovery kit. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
-  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A problem statement, journey and ranked assumptions. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Separate observations from guesses and identify a falsifiable success metric.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1084,20 +1088,20 @@ A teammate needs usable recovery instructions for a local service.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prototypes, MVPs, UX, feedback and A/B testing:** Extend the project with Prototypes, MVPs, UX, feedback and A/B testing in Incident runbook rehearsal. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
-  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A runbook with diagnosis, recovery and evidence capture. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] A teammate follows the steps and restores service without undocumented knowledge.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1113,20 +1117,20 @@ A founder needs transparent assumptions about time saved.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prototypes, MVPs, UX, feedback and A/B testing:** Extend the project with Prototypes, MVPs, UX, feedback and A/B testing in AI feature value calculator. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
-  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A sensitivity analysis comparing manual and assisted workflows. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Show break-even assumptions and include human review cost.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1200,11 +1204,14 @@ Create a spreadsheet or Python model using fictional costs and completion rates,
 
 - Runnable code or notebook with a small reproducible input
 - README explaining decisions, results and limitations
+- Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 
 **Completion checks**
 
 - [ ] Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.
 - [ ] Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.
+- [ ] Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 
 #### Ten project recommendations
 
@@ -1219,20 +1226,20 @@ A founder needs transparent assumptions about time saved.
 **Effort:** 10h · Beginner → intermediate
 
 - **Business models, unit economics and high-agency ownership:** Implement Business models, unit economics and high-agency ownership in AI feature value calculator. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
-  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A sensitivity analysis comparing manual and assisted workflows. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Show break-even assumptions and include human review cost.
-- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1248,20 +1255,20 @@ A product builder needs evidence that autonomy helps a task.
 **Effort:** 16h · Intermediate
 
 - **Business models, unit economics and high-agency ownership:** Implement Business models, unit economics and high-agency ownership in Workflow versus agent experiment. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
-  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A deterministic workflow versus bounded-planner benchmark. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Compare task success, tool count and failure behavior under identical cases.
-- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1277,20 +1284,20 @@ A team needs a traceable choice between two local designs.
 **Effort:** 10h · Beginner → intermediate
 
 - **Business models, unit economics and high-agency ownership:** Extend the project with Business models, unit economics and high-agency ownership in Architecture decision dossier. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
-  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: An architecture diagram and ADR with a small reproducible experiment. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Tie the decision to constraints and document when to revisit it.
-- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1306,20 +1313,20 @@ A team needs a handoff that survives the original developer leaving.
 **Effort:** 10h · Beginner → intermediate
 
 - **Business models, unit economics and high-agency ownership:** Extend the project with Business models, unit economics and high-agency ownership in Project delivery documentation pack. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
-  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: Requirements, architecture, API spec, evaluation and deployment handoff. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] A reviewer can trace one user scenario through every document.
-- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1335,20 +1342,20 @@ A maintainer needs to turn messy feedback into testable changes.
 **Effort:** 10h · Beginner → intermediate
 
 - **Business models, unit economics and high-agency ownership:** Extend the project with Business models, unit economics and high-agency ownership in Feedback prioritization board. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
-  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A categorized backlog with evidence and experiment plans. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Deduplicate reports while retaining disagreement and define a test per priority.
-- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1364,20 +1371,20 @@ A builder needs metrics that connect usage to learning outcomes.
 **Effort:** 10h · Beginner → intermediate
 
 - **Business models, unit economics and high-agency ownership:** Extend the project with Business models, unit economics and high-agency ownership in Product outcome measurement tree. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
-  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A metric tree and instrumentation contract. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Distinguish activity from learning and specify denominator and time window.
-- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1393,20 +1400,20 @@ A learner needs to communicate limits of a toy classifier.
 **Effort:** 10h · Beginner → intermediate
 
 - **Business models, unit economics and high-agency ownership:** Extend the project with Business models, unit economics and high-agency ownership in Educational model card studio. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
-  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A model card, dataset description and failure examples. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] State intended use, split, metrics and unsupported use cases.
-- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1422,20 +1429,20 @@ A team needs a feasible first version of a document helper.
 **Effort:** 10h · Beginner → intermediate
 
 - **Business models, unit economics and high-agency ownership:** Extend the project with Business models, unit economics and high-agency ownership in AI feature MVP scoping desk. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
-  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A PRD with MVP, exclusions and acceptance scenarios. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Every included feature supports a named user need and measurable outcome.
-- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1451,20 +1458,20 @@ A builder needs evidence that a study tool solves a real problem.
 **Effort:** 10h · Beginner → intermediate
 
 - **Business models, unit economics and high-agency ownership:** Extend the project with Business models, unit economics and high-agency ownership in Learning problem discovery kit. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
-  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A problem statement, journey and ranked assumptions. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Separate observations from guesses and identify a falsifiable success metric.
-- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1480,20 +1487,20 @@ A designer needs to learn whether users can find evidence.
 **Effort:** 10h · Beginner → intermediate
 
 - **Business models, unit economics and high-agency ownership:** Extend the project with Business models, unit economics and high-agency ownership in Search UX prototype study. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
-  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A task-based usability test and revised prototype. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Record task completion and confusion points without claiming statistical significance.
-- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

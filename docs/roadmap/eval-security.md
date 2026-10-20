@@ -72,7 +72,8 @@ Make improvement claims reproducible and keep evaluation cases separate from tun
 #### Free written resources
 
 1. [Haystack: evaluation](https://docs.haystack.deepset.ai/docs/evaluation) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
-2. [pytest: getting started](https://docs.pytest.org/en/stable/getting-started.html) — Free; no registration required. No paid materials required.
+2. [Full Stack LLM Bootcamp: LLMOps and evaluation (2023 lecture)](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llmops/) — Free reading; Hugging Face account optional for sharing models. Free lecture; use the current linked documentation for APIs and local fixtures instead of optional hosted products..
+3. [pytest: getting started](https://docs.pytest.org/en/stable/getting-started.html) — Free; no registration required. No paid materials required.
 
 #### Lab: Golden datasets and deterministic regression evaluation
 
@@ -82,11 +83,14 @@ Create a twenty-case fixture dataset and an offline evaluator with schema, citat
 
 - Runnable code or notebook with a small reproducible input
 - README explaining decisions, results and limitations
+- Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 
 **Completion checks**
 
 - [ ] Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.
 - [ ] Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.
+- [ ] Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 
 #### Ten project recommendations
 
@@ -101,20 +105,20 @@ A team needs a small trustworthy evaluation set.
 **Effort:** 10h · Beginner → intermediate
 
 - **Golden datasets and deterministic regression evaluation:** Implement Golden datasets and deterministic regression evaluation in Golden dataset workshop. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A versioned evaluation dataset and deterministic runner. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Separate development cases from a locked holdout and detect a seeded regression.
-- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -130,20 +134,20 @@ A maintainer needs a repeatable quality decision before release.
 **Effort:** 10h · Beginner → intermediate
 
 - **Golden datasets and deterministic regression evaluation:** Implement Golden datasets and deterministic regression evaluation in Release regression gate. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A deterministic CI gate with explicit allowed regressions. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Fail when a critical case regresses even if average score improves.
-- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -159,20 +163,20 @@ A team needs every assistant answer logged and comparable across prompt versions
 **Effort:** 16h · Intermediate
 
 - **Golden datasets and deterministic regression evaluation:** Implement Golden datasets and deterministic regression evaluation in LLM evaluation warehouse. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A modeled evaluation table with per-version quality and latency views. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Compute groundedness and latency per version from the table and reproduce one regression found in it.
-- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -188,20 +192,20 @@ A support writer needs repeatable checks before changing instructions.
 **Effort:** 10h · Beginner → intermediate
 
 - **Golden datasets and deterministic regression evaluation:** Implement Golden datasets and deterministic regression evaluation in Prompt regression workbench. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A prompt version comparison harness. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Detect malformed JSON, unsupported claims and changed required fields.
-- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -217,20 +221,20 @@ A researcher needs to identify unsupported answer claims.
 **Effort:** 10h · Beginner → intermediate
 
 - **Golden datasets and deterministic regression evaluation:** Extend the project with Golden datasets and deterministic regression evaluation in Evidence faithfulness audit. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A claim-level support annotation and scoring report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Distinguish absent evidence from direct contradiction.
-- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -246,20 +250,20 @@ A developer needs to know where validation actually holds.
 **Effort:** 10h · Beginner → intermediate
 
 - **Golden datasets and deterministic regression evaluation:** Extend the project with Golden datasets and deterministic regression evaluation in Guardrail bypass experiment. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A bounded-input validation and adversarial test suite. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Enforce server-side size/schema checks and document uncovered behaviors.
-- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -275,20 +279,20 @@ A developer needs to prevent retrieved instructions from becoming commands.
 **Effort:** 10h · Beginner → intermediate
 
 - **Golden datasets and deterministic regression evaluation:** Extend the project with Golden datasets and deterministic regression evaluation in Prompt injection boundary lab. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: An adversarial harness for a read-only assistant. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Tool permissions remain enforced even if an answer follows injected text.
-- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -304,20 +308,20 @@ A reviewer needs to know when automated ratings disagree.
 **Effort:** 10h · Beginner → intermediate
 
 - **Golden datasets and deterministic regression evaluation:** Extend the project with Golden datasets and deterministic regression evaluation in Human and model judge agreement lab. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A rubric, blind review sheet and disagreement report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Report agreement and inspect disagreements without treating model scores as truth.
-- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -333,20 +337,20 @@ A team needs to track which fields reach each component.
 **Effort:** 10h · Beginner → intermediate
 
 - **Golden datasets and deterministic regression evaluation:** Extend the project with Golden datasets and deterministic regression evaluation in Data minimization audit. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A data-flow inventory and allowlisted request serializer. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Disallowed fields never enter prompts, telemetry or exported examples.
-- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -362,20 +366,20 @@ A maintainer needs to prevent test secrets leaking into logs.
 **Effort:** 10h · Beginner → intermediate
 
 - **Golden datasets and deterministic regression evaluation:** Extend the project with Golden datasets and deterministic regression evaluation in Secret exposure regression kit. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A redaction pipeline with log and response checks. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] No seeded secret appears in outputs, including exception messages.
-- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -444,11 +448,14 @@ Build a human-rating sheet and a fixture-based judge comparison; compute agreeme
 
 - Runnable code or notebook with a small reproducible input
 - README explaining decisions, results and limitations
+- Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 
 **Completion checks**
 
 - [ ] Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.
 - [ ] Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.
+- [ ] Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 
 #### Ten project recommendations
 
@@ -463,20 +470,20 @@ A reviewer needs to know when automated ratings disagree.
 **Effort:** 10h · Beginner → intermediate
 
 - **Human evaluation, LLM judges and error analysis:** Implement Human evaluation, LLM judges and error analysis in Human and model judge agreement lab. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A rubric, blind review sheet and disagreement report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Report agreement and inspect disagreements without treating model scores as truth.
-- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -492,20 +499,20 @@ A team needs independent checks before combining conclusions.
 **Effort:** 16h · Intermediate
 
 - **Human evaluation, LLM judges and error analysis:** Implement Human evaluation, LLM judges and error analysis in Independent review coordinator. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A coordinator with separate review results and conflict handling. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Keep dissent visible and enforce a timeout per reviewer.
-- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -521,20 +528,20 @@ A researcher needs to identify unsupported answer claims.
 **Effort:** 10h · Beginner → intermediate
 
 - **Human evaluation, LLM judges and error analysis:** Extend the project with Human evaluation, LLM judges and error analysis in Evidence faithfulness audit. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A claim-level support annotation and scoring report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Distinguish absent evidence from direct contradiction.
-- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -550,20 +557,20 @@ A team needs a small trustworthy evaluation set.
 **Effort:** 10h · Beginner → intermediate
 
 - **Human evaluation, LLM judges and error analysis:** Extend the project with Human evaluation, LLM judges and error analysis in Golden dataset workshop. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A versioned evaluation dataset and deterministic runner. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Separate development cases from a locked holdout and detect a seeded regression.
-- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -579,20 +586,20 @@ A developer needs to know where validation actually holds.
 **Effort:** 10h · Beginner → intermediate
 
 - **Human evaluation, LLM judges and error analysis:** Extend the project with Human evaluation, LLM judges and error analysis in Guardrail bypass experiment. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A bounded-input validation and adversarial test suite. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Enforce server-side size/schema checks and document uncovered behaviors.
-- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -608,20 +615,20 @@ A developer needs to prevent retrieved instructions from becoming commands.
 **Effort:** 10h · Beginner → intermediate
 
 - **Human evaluation, LLM judges and error analysis:** Extend the project with Human evaluation, LLM judges and error analysis in Prompt injection boundary lab. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: An adversarial harness for a read-only assistant. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Tool permissions remain enforced even if an answer follows injected text.
-- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -637,20 +644,20 @@ A team needs to track which fields reach each component.
 **Effort:** 10h · Beginner → intermediate
 
 - **Human evaluation, LLM judges and error analysis:** Extend the project with Human evaluation, LLM judges and error analysis in Data minimization audit. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A data-flow inventory and allowlisted request serializer. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Disallowed fields never enter prompts, telemetry or exported examples.
-- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -666,20 +673,20 @@ A maintainer needs a repeatable quality decision before release.
 **Effort:** 10h · Beginner → intermediate
 
 - **Human evaluation, LLM judges and error analysis:** Extend the project with Human evaluation, LLM judges and error analysis in Release regression gate. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A deterministic CI gate with explicit allowed regressions. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Fail when a critical case regresses even if average score improves.
-- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -695,20 +702,20 @@ A maintainer needs to prevent test secrets leaking into logs.
 **Effort:** 10h · Beginner → intermediate
 
 - **Human evaluation, LLM judges and error analysis:** Extend the project with Human evaluation, LLM judges and error analysis in Secret exposure regression kit. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A redaction pipeline with log and response checks. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] No seeded secret appears in outputs, including exception messages.
-- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -724,20 +731,20 @@ An analyst needs to find failures hidden by an average score.
 **Effort:** 10h · Beginner → intermediate
 
 - **Human evaluation, LLM judges and error analysis:** Extend the project with Human evaluation, LLM judges and error analysis in Evaluation slice explorer. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A per-slice report with sample counts and uncertainty. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Flag small samples and reproduce all aggregate metrics from raw cases.
-- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

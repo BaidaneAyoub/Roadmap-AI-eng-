@@ -797,6 +797,7 @@ Make coordination explicit and preserve useful work when dependencies fail.
 
 1. [LangGraph: persistence](https://docs.langchain.com/oss/python/langgraph/persistence) — Free reading; optional account for course activities. No paid materials required.
 2. [LangGraph: workflows and agents](https://docs.langchain.com/oss/python/langgraph/workflows-agents) — Free reading; optional account for course activities. No paid materials required.
+3. [Hugging Face agents course: LangGraph walkthrough](https://huggingface.co/learn/agents-course/unit2/langgraph/introduction) — Free reading; optional account for course activities. Free reading; published examples use a hosted model. Reproduce the graph with deterministic local response fixtures; no paid API is required for this lab..
 
 #### Lab: LangGraph, multi-agent coordination and failure recovery
 
@@ -806,11 +807,14 @@ Implement a two-role research/verifier workflow with deterministic fixtures, che
 
 - Runnable code or notebook with a small reproducible input
 - README explaining decisions, results and limitations
+- Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 
 **Completion checks**
 
 - [ ] Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.
 - [ ] Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.
+- [ ] Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 
 #### Ten project recommendations
 
@@ -825,20 +829,20 @@ A maintainer needs reproducible debugging of tool errors.
 **Effort:** 16h · Intermediate
 
 - **LangGraph, multi-agent coordination and failure recovery:** Implement LangGraph, multi-agent coordination and failure recovery in Agent failure replay studio. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A deterministic replay and failure classification tool. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Replay without external side effects and cap retries.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -854,20 +858,20 @@ An operator needs to resume failed multi-step jobs safely.
 **Effort:** 16h · Intermediate
 
 - **LangGraph, multi-agent coordination and failure recovery:** Implement LangGraph, multi-agent coordination and failure recovery in Checkpoint recovery runner. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A durable local state machine with replay. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Resume without duplicating completed side effects.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -883,20 +887,20 @@ A reviewer needs risky actions paused until a decision is recorded.
 **Effort:** 16h · Intermediate
 
 - **LangGraph, multi-agent coordination and failure recovery:** Extend the project with LangGraph, multi-agent coordination and failure recovery in Human review state machine. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A draft, review, approved and rejected workflow. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Reject invalid transitions and stale approvals after draft changes.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -912,20 +916,20 @@ A learner needs an assistant that can search and stop predictably.
 **Effort:** 16h · Intermediate
 
 - **LangGraph, multi-agent coordination and failure recovery:** Extend the project with LangGraph, multi-agent coordination and failure recovery in Bounded research workflow. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A stateful search, summarize and review loop. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Stop at the step budget and cite only retrieved sources.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -941,20 +945,20 @@ A learner needs to inspect and call server tools safely.
 **Effort:** 16h · Intermediate
 
 - **LangGraph, multi-agent coordination and failure recovery:** Extend the project with LangGraph, multi-agent coordination and failure recovery in MCP client capability explorer. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A capability browser and bounded tool caller. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Handle server disconnects and unsupported capabilities explicitly.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -970,20 +974,20 @@ A learner needs a small MCP server with useful contracts.
 **Effort:** 16h · Intermediate
 
 - **LangGraph, multi-agent coordination and failure recovery:** Extend the project with LangGraph, multi-agent coordination and failure recovery in Read-only notes MCP server. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A search/read server and an example client transcript. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Validate arguments, reject path traversal and test unknown tool errors.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -999,20 +1003,20 @@ A learner needs to distinguish trusted facts from conversation summaries.
 **Effort:** 16h · Intermediate
 
 - **LangGraph, multi-agent coordination and failure recovery:** Extend the project with LangGraph, multi-agent coordination and failure recovery in Agent memory provenance ledger. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A scoped memory store with expiration and correction history. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Expired or cross-user entries cannot be retrieved.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1028,20 +1032,20 @@ A team needs independent checks before combining conclusions.
 **Effort:** 16h · Intermediate
 
 - **LangGraph, multi-agent coordination and failure recovery:** Extend the project with LangGraph, multi-agent coordination and failure recovery in Independent review coordinator. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A coordinator with separate review results and conflict handling. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Keep dissent visible and enforce a timeout per reviewer.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1057,20 +1061,20 @@ A developer needs a clear boundary between proposals and execution.
 **Effort:** 16h · Intermediate
 
 - **LangGraph, multi-agent coordination and failure recovery:** Extend the project with LangGraph, multi-agent coordination and failure recovery in Tool permission gateway. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A policy gate with dry-run and approval states. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Denied calls produce no side effects; approval is bound to exact arguments.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1086,20 +1090,20 @@ A product builder needs evidence that autonomy helps a task.
 **Effort:** 16h · Intermediate
 
 - **LangGraph, multi-agent coordination and failure recovery:** Extend the project with LangGraph, multi-agent coordination and failure recovery in Workflow versus agent experiment. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A deterministic workflow versus bounded-planner benchmark. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Compare task success, tool count and failure behavior under identical cases.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

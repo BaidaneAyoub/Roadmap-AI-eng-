@@ -1349,6 +1349,75 @@ Multilingual budget evaluation~Token cost depends on the tokenizer and text dist
   "Implement a small BPE trainer over local multilingual fixtures and document its encode/decode contract. Compare byte, character and token counts, test a chat-template boundary and show that round-trip decoding preserves the supported input representation.",
 );
 
+// Concrete evidence for the main skills-map handoffs. Keep these keyed by the
+// existing lesson IDs: saved progress also uses concept names as identities.
+const aiLabChecks = {
+  "python-async": [
+    "Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.",
+    "Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.",
+  ],
+  "engineering-git": [
+    "Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.",
+    "Run a secret-free example from a fresh local checkout using only the README commands.",
+  ],
+  "ml-splits": [
+    "Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.",
+    "Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.",
+  ],
+  "dl-training-loop": [
+    "Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.",
+    "Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.",
+  ],
+  "llm-model-selection": [
+    "Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.",
+    "Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.",
+  ],
+  "llm-prompting": [
+    "Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.",
+    "Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.",
+  ],
+  "llm-context": [
+    "Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.",
+    "Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.",
+  ],
+  "rag-retrieval": [
+    "Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.",
+    "Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.",
+  ],
+  "rag-answers": [
+    "Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.",
+    "Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.",
+  ],
+  "agents-recovery": [
+    "Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.",
+    "Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.",
+  ],
+  "eval-datasets": [
+    "Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.",
+    "Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.",
+  ],
+  "eval-human-judge": [
+    "Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.",
+    "Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.",
+  ],
+  "deployment-monitoring": [
+    "Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.",
+    "Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.",
+  ],
+  "coding-review": [
+    "For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.",
+    "Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.",
+  ],
+  "product-prototype": [
+    "Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.",
+    "Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.",
+  ],
+  "product-economics": [
+    "Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.",
+    "Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.",
+  ],
+};
+
 export function expandDomains(domains) {
   const expanded = structuredClone(domains);
   for (const lesson of additions) {
@@ -1359,6 +1428,18 @@ export function expandDomains(domains) {
       domain.modules.push(module);
     }
     module.lessons.push(structuredClone(lesson));
+  }
+  for (const domain of expanded) {
+    for (const module of domain.modules) {
+      for (const lesson of module.lessons) {
+        const checks = aiLabChecks[lesson.id];
+        if (!checks) continue;
+        lesson.exercise.deliverables.push(
+          "Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check",
+        );
+        lesson.exercise.acceptance.push(...checks);
+      }
+    }
   }
   return deepenDomains(expanded);
 }

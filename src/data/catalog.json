@@ -1972,11 +1972,14 @@
         "brief": "Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.",
         "deliverables": [
           "Runnable code or notebook with a small reproducible input",
-          "README explaining decisions, results and limitations"
+          "README explaining decisions, results and limitations",
+          "Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check"
         ],
         "acceptance": [
           "Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.",
-          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.",
+          "Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running."
         ]
       },
       "resources": [
@@ -2686,11 +2689,14 @@
         "brief": "Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.",
         "deliverables": [
           "Runnable code or notebook with a small reproducible input",
-          "README explaining decisions, results and limitations"
+          "README explaining decisions, results and limitations",
+          "Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check"
         ],
         "acceptance": [
           "Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.",
-          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.",
+          "Run a secret-free example from a fresh local checkout using only the README commands."
         ]
       },
       "resources": [
@@ -4871,11 +4877,11 @@
         },
         {
           "name": "Cross-validation",
-          "explanation": "Repeated train/validation folds estimate variability; groups and time ordering may require special splitters.",
-          "example": "Keep records from one customer in the same fold.",
+          "explanation": "Repeated train/validation folds estimate variability; the split must match deployment, including customer groups and chronological boundaries.",
+          "example": "Keep every record from one customer in the same fold; for forecasting train only on records earlier than validation.",
           "commonMistake": "Allowing held-out observations to influence fitting or model selection.",
           "checkQuestion": "Explain cross-validation using the example. What result do you expect, and what changed input would invalidate that expectation?",
-          "exercise": "Reproduce and explain this worked case, then test an edge case: Keep records from one customer in the same fold.",
+          "exercise": "Reproduce and explain this worked case, then test an edge case: Keep every record from one customer in the same fold; for forecasting train only on records earlier than validation.",
           "videoUrls": [
             "https://www.youtube.com/watch?v=fSytzGwwBVw",
             "https://www.youtube.com/watch?v=i_LwzRVP7bg"
@@ -4883,11 +4889,11 @@
         },
         {
           "name": "Leakage",
-          "explanation": "Information from evaluation data or future events can inflate scores.",
-          "example": "Fit a scaler inside a Pipeline on training folds only.",
+          "explanation": "Information from evaluation data or future events can inflate scores, including labels used during feature selection or duplicate documents across splits.",
+          "example": "Fit a scaler and feature selector inside a Pipeline on training folds only; deduplicate before assigning splits.",
           "commonMistake": "Allowing held-out observations to influence fitting or model selection.",
           "checkQuestion": "Explain leakage using the example. What result do you expect, and what changed input would invalidate that expectation?",
-          "exercise": "Reproduce and explain this worked case, then test an edge case: Fit a scaler inside a Pipeline on training folds only.",
+          "exercise": "Reproduce and explain this worked case, then test an edge case: Fit a scaler and feature selector inside a Pipeline on training folds only; deduplicate before assigning splits.",
           "videoUrls": [
             "https://www.youtube.com/watch?v=fSytzGwwBVw",
             "https://www.youtube.com/watch?v=i_LwzRVP7bg"
@@ -4896,20 +4902,29 @@
       ],
       "exercise": {
         "title": "Lab: Train/validation/test, cross-validation and leakage",
-        "brief": "Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.",
+        "brief": "Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.",
         "deliverables": [
           "Runnable code or notebook with a small reproducible input",
-          "README explaining decisions, results and limitations"
+          "README explaining decisions, results and limitations",
+          "Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check"
         ],
         "acceptance": [
-          "Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.",
-          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+          "Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.",
+          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.",
+          "Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split."
         ]
       },
       "resources": [
         {
           "title": "scikit-learn: cross-validation",
           "url": "https://scikit-learn.org/stable/modules/cross_validation.html",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "Inria scikit-learn course: cross-validation notebook and exercises",
+          "url": "https://inria.github.io/scikit-learn-mooc/python_scripts/02_numerical_pipeline_cross_validation.html",
           "access": "Free; no registration required",
           "extras": "No paid materials required"
         },
@@ -6989,6 +7004,12 @@
           "extras": "No paid materials required"
         },
         {
+          "title": "fast.ai lesson 3: neural net foundations (free lecture and notebook)",
+          "url": "https://course.fast.ai/Lessons/lesson3.html",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
           "title": "D2L: backpropagation",
           "url": "https://d2l.ai/chapter_multilayer-perceptrons/backprop.html",
           "access": "Free; no registration required",
@@ -7531,11 +7552,14 @@
         "brief": "Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.",
         "deliverables": [
           "Runnable code or notebook with a small reproducible input",
-          "README explaining decisions, results and limitations"
+          "README explaining decisions, results and limitations",
+          "Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check"
         ],
         "acceptance": [
           "Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.",
-          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.",
+          "Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run."
         ]
       },
       "resources": [
@@ -11277,6 +11301,12 @@
           "url": "https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html",
           "access": "Free; no registration required",
           "extras": "No paid materials required"
+        },
+        {
+          "title": "Full Stack LLM Bootcamp: LLM foundations (2023 lecture)",
+          "url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llm-foundations/",
+          "access": "Free reading; Hugging Face account optional for sharing models",
+          "extras": "No paid materials required"
         }
       ],
       "priority": "Essential",
@@ -11349,11 +11379,14 @@
         "brief": "Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.",
         "deliverables": [
           "Runnable code or notebook with a small reproducible input",
-          "README explaining decisions, results and limitations"
+          "README explaining decisions, results and limitations",
+          "Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check"
         ],
         "acceptance": [
           "Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.",
-          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.",
+          "Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement."
         ]
       },
       "resources": [
@@ -11423,11 +11456,11 @@
         },
         {
           "name": "Structured output",
-          "explanation": "JSON/schema constraints reduce formatting errors but still need semantic validation.",
-          "example": "Reject a negative quantity even when the JSON parses correctly.",
+          "explanation": "JSON/schema constraints reduce formatting errors but still need semantic validation, refusal handling and completeness checks before any side effect.",
+          "example": "Reject a negative quantity even when JSON parses; an interrupted stream or refusal must never become a tool execution.",
           "commonMistake": "Claiming the structured output example is correct without checking its inputs, output and failure case.",
           "checkQuestion": "Explain structured output using the example. What result do you expect, and what changed input would invalidate that expectation?",
-          "exercise": "Reproduce and explain this worked case, then test an edge case: Reject a negative quantity even when the JSON parses correctly.",
+          "exercise": "Reproduce and explain this worked case, then test an edge case: Reject a negative quantity even when JSON parses; an interrupted stream or refusal must never become a tool execution.",
           "videoUrls": [
             "https://www.youtube.com/watch?v=kCc8FmEb1nY",
             "https://www.youtube.com/watch?v=p3sij8QzONQ"
@@ -11451,11 +11484,14 @@
         "brief": "Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.",
         "deliverables": [
           "Runnable code or notebook with a small reproducible input",
-          "README explaining decisions, results and limitations"
+          "README explaining decisions, results and limitations",
+          "Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check"
         ],
         "acceptance": [
           "Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.",
-          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.",
+          "Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels."
         ]
       },
       "resources": [
@@ -11469,6 +11505,18 @@
           "title": "Hugging Face: chat templates",
           "url": "https://huggingface.co/docs/transformers/chat_templating",
           "access": "Free reading; Hugging Face account optional for sharing models",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "Full Stack LLM Bootcamp: prompt engineering (2023 lecture)",
+          "url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/prompt-engineering/",
+          "access": "Free reading; Hugging Face account optional for sharing models",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "Pydantic: models and validation for structured responses",
+          "url": "https://docs.pydantic.dev/latest/concepts/models/",
+          "access": "Free; no registration required",
           "extras": "No paid materials required"
         }
       ],
@@ -11526,11 +11574,11 @@
         },
         {
           "name": "Memory and caching",
-          "explanation": "Memory persists selected facts; caches reuse prior computation and need scope and invalidation.",
-          "example": "Key a retrieval cache by user permissions and document version.",
+          "explanation": "Application memory persists selected facts; response/retrieval caches reuse results and require permission scope, expiry and invalidation. A transformer KV cache instead reuses attention computation within compatible token prefixes and does not supply durable user memory.",
+          "example": "Key a retrieval cache by user permissions and document version, invalidate it after access revocation, and keep session memory separate from model KV tensors.",
           "commonMistake": "Reusing stale state without checking its identity, scope and version.",
           "checkQuestion": "Explain memory and caching using the example. What result do you expect, and what changed input would invalidate that expectation?",
-          "exercise": "Reproduce and explain this worked case, then test an edge case: Key a retrieval cache by user permissions and document version.",
+          "exercise": "Reproduce and explain this worked case, then test an edge case: Key a retrieval cache by user permissions and document version, invalidate it after access revocation, and keep session memory separate from model KV tensors.",
           "videoUrls": [
             "https://www.youtube.com/watch?v=I7_WXKhyGms",
             "https://www.youtube.com/watch?v=p3sij8QzONQ"
@@ -11542,11 +11590,14 @@
         "brief": "Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.",
         "deliverables": [
           "Runnable code or notebook with a small reproducible input",
-          "README explaining decisions, results and limitations"
+          "README explaining decisions, results and limitations",
+          "Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check"
         ],
         "acceptance": [
           "Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.",
-          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.",
+          "Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer."
         ]
       },
       "resources": [
@@ -11560,6 +11611,12 @@
           "title": "Hugging Face: KV cache strategies",
           "url": "https://huggingface.co/docs/transformers/kv_cache",
           "access": "Free reading; Hugging Face account optional for sharing models",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "LangGraph: thread-scoped checkpoints versus long-term memory",
+          "url": "https://docs.langchain.com/oss/python/langgraph/persistence",
+          "access": "Free reading; optional account for course activities",
           "extras": "No paid materials required"
         }
       ],
@@ -13954,6 +14011,12 @@
           "url": "https://docs.haystack.deepset.ai/docs/documentsplitter",
           "access": "Free reading; Hugging Face account optional for sharing models",
           "extras": "No paid materials required"
+        },
+        {
+          "title": "Full Stack LLM Bootcamp: retrieval, embeddings and tool use (2023 lecture)",
+          "url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/augmented-language-models/",
+          "access": "Free reading; Hugging Face account optional for sharing models",
+          "extras": "No paid materials required"
         }
       ],
       "priority": "Essential",
@@ -14112,11 +14175,14 @@
         "brief": "Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.",
         "deliverables": [
           "Runnable code or notebook with a small reproducible input",
-          "README explaining decisions, results and limitations"
+          "README explaining decisions, results and limitations",
+          "Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check"
         ],
         "acceptance": [
           "Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.",
-          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.",
+          "Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document."
         ]
       },
       "resources": [
@@ -14198,11 +14264,14 @@
         "brief": "Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.",
         "deliverables": [
           "Runnable code or notebook with a small reproducible input",
-          "README explaining decisions, results and limitations"
+          "README explaining decisions, results and limitations",
+          "Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check"
         ],
         "acceptance": [
           "Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.",
-          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.",
+          "Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass."
         ]
       },
       "resources": [
@@ -15274,11 +15343,14 @@
         "brief": "Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.",
         "deliverables": [
           "Runnable code or notebook with a small reproducible input",
-          "README explaining decisions, results and limitations"
+          "README explaining decisions, results and limitations",
+          "Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check"
         ],
         "acceptance": [
           "Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.",
-          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.",
+          "Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression."
         ]
       },
       "resources": [
@@ -15287,6 +15359,12 @@
           "url": "https://docs.haystack.deepset.ai/docs/evaluation",
           "access": "Free reading; Hugging Face account optional for sharing models",
           "extras": "No paid materials required"
+        },
+        {
+          "title": "Full Stack LLM Bootcamp: LLMOps and evaluation (2023 lecture)",
+          "url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llmops/",
+          "access": "Free reading; Hugging Face account optional for sharing models",
+          "extras": "Free lecture; use the current linked documentation for APIs and local fixtures instead of optional hosted products."
         },
         {
           "title": "pytest: getting started",
@@ -15362,11 +15440,14 @@
         "brief": "Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.",
         "deliverables": [
           "Runnable code or notebook with a small reproducible input",
-          "README explaining decisions, results and limitations"
+          "README explaining decisions, results and limitations",
+          "Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check"
         ],
         "acceptance": [
           "Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.",
-          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.",
+          "Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures."
         ]
       },
       "resources": [
@@ -16424,11 +16505,14 @@
         "brief": "Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.",
         "deliverables": [
           "Runnable code or notebook with a small reproducible input",
-          "README explaining decisions, results and limitations"
+          "README explaining decisions, results and limitations",
+          "Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check"
         ],
         "acceptance": [
           "Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.",
-          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.",
+          "Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget."
         ]
       },
       "resources": [
@@ -16443,6 +16527,12 @@
           "url": "https://docs.langchain.com/oss/python/langgraph/workflows-agents",
           "access": "Free reading; optional account for course activities",
           "extras": "No paid materials required"
+        },
+        {
+          "title": "Hugging Face agents course: LangGraph walkthrough",
+          "url": "https://huggingface.co/learn/agents-course/unit2/langgraph/introduction",
+          "access": "Free reading; optional account for course activities",
+          "extras": "Free reading; published examples use a hosted model. Reproduce the graph with deterministic local response fixtures; no paid API is required for this lab."
         }
       ],
       "priority": "Specialization",
@@ -17481,11 +17571,14 @@
         "brief": "Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.",
         "deliverables": [
           "Runnable code or notebook with a small reproducible input",
-          "README explaining decisions, results and limitations"
+          "README explaining decisions, results and limitations",
+          "Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check"
         ],
         "acceptance": [
           "Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.",
-          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.",
+          "Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run."
         ]
       },
       "resources": [
@@ -18394,11 +18487,14 @@
         "brief": "Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.",
         "deliverables": [
           "Runnable code or notebook with a small reproducible input",
-          "README explaining decisions, results and limitations"
+          "README explaining decisions, results and limitations",
+          "Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check"
         ],
         "acceptance": [
           "Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.",
-          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.",
+          "Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count."
         ]
       },
       "resources": [
@@ -19291,17 +19387,26 @@
         "brief": "Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.",
         "deliverables": [
           "Runnable code or notebook with a small reproducible input",
-          "README explaining decisions, results and limitations"
+          "README explaining decisions, results and limitations",
+          "Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check"
         ],
         "acceptance": [
           "Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.",
-          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.",
+          "Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance."
         ]
       },
       "resources": [
         {
           "title": "PAIR: feedback and control",
           "url": "https://pair.withgoogle.com/guidebook/chapters/feedback-controls/",
+          "access": "Free; no registration required",
+          "extras": "No paid materials required"
+        },
+        {
+          "title": "Full Stack LLM Bootcamp: UX for language interfaces (2023 lecture)",
+          "url": "https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/ux-for-luis/",
           "access": "Free; no registration required",
           "extras": "No paid materials required"
         },
@@ -19377,11 +19482,14 @@
         "brief": "Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.",
         "deliverables": [
           "Runnable code or notebook with a small reproducible input",
-          "README explaining decisions, results and limitations"
+          "README explaining decisions, results and limitations",
+          "Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check"
         ],
         "acceptance": [
           "Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.",
-          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist."
+          "Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.",
+          "Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.",
+          "Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner."
         ]
       },
       "resources": [
