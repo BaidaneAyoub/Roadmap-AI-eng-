@@ -2455,11 +2455,14 @@ Run three simulated I/O tasks concurrently with timeouts, log their outcomes and
 
 - Runnable code or notebook with a small reproducible input
 - README explaining decisions, results and limitations
+- Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 
 **Completion checks**
 
 - [ ] Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.
 - [ ] Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.
+- [ ] Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 
 #### Ten project recommendations
 
@@ -2474,20 +2477,20 @@ An operator needs latency samples without overwhelming local services.
 **Effort:** 10h · Beginner → intermediate
 
 - **Async, logging, debugging and pytest:** Implement Async, logging, debugging and pytest in Concurrent service sampler. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
-  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: An async sampler with bounded concurrency and a latency summary. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Keep concurrency at four or less and finish when one endpoint never responds.
-- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2503,20 +2506,20 @@ A developer needs understandable errors before running a data job.
 **Effort:** 10h · Beginner → intermediate
 
 - **Async, logging, debugging and pytest:** Extend the project with Async, logging, debugging and pytest in Configuration doctor. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
-  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A validated configuration loader with redacted diagnostic messages. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Reject each invalid fixture and never print a seeded secret value.
-- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2532,20 +2535,20 @@ A data analyst needs exports that never replace a good file with a partial one.
 **Effort:** 10h · Beginner → intermediate
 
 - **Async, logging, debugging and pytest:** Extend the project with Async, logging, debugging and pytest in Safe export writer. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
-  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A context-managed atomic JSON export utility. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] The previous export survives a simulated failure and temporary handles close.
-- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2561,20 +2564,20 @@ A club treasurer needs consistent totals from differently formatted receipts.
 **Effort:** 10h · Beginner → intermediate
 
 - **Async, logging, debugging and pytest:** Extend the project with Async, logging, debugging and pytest in Expense reconciliation CLI. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
-  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A typed normalization package and discrepancy report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Detect all seeded duplicates and reject mixed-currency totals.
-- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2590,20 +2593,20 @@ An archivist needs to inspect duplicate notes before cleaning a folder.
 **Effort:** 10h · Beginner → intermediate
 
 - **Async, logging, debugging and pytest:** Extend the project with Async, logging, debugging and pytest in Duplicate file index. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
-  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A hash-based index and read-only duplicate report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Detect content duplicates without treating equal filenames as equal content.
-- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2619,20 +2622,20 @@ A hobbyist needs rolling summaries of a long sensor stream.
 **Effort:** 10h · Beginner → intermediate
 
 - **Async, logging, debugging and pytest:** Extend the project with Async, logging, debugging and pytest in Streaming sensor summaries. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
-  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A generator pipeline producing rolling means and invalid-reading counts. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Match a small reference calculation while memory stays bounded by the window.
-- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2648,20 +2651,20 @@ A developer needs to locate failed requests across rotated logs.
 **Effort:** 10h · Beginner → intermediate
 
 - **Async, logging, debugging and pytest:** Extend the project with Async, logging, debugging and pytest in Log file investigator. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
-  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A streaming CLI that groups failures by request without loading every file. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Reject corrupt lines with line numbers; produce identical totals with a one-line buffer.
-- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2677,20 +2680,20 @@ An editor needs reusable transformations for inconsistent draft documents.
 **Effort:** 10h · Beginner → intermediate
 
 - **Async, logging, debugging and pytest:** Extend the project with Async, logging, debugging and pytest in Pluggable text cleaner. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
-  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A package with composable transformations and a CLI entry point. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Show idempotence and preserve non-ASCII text through every plugin.
-- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2706,20 +2709,20 @@ A learner needs practice on concepts they repeatedly miss.
 **Effort:** 10h · Beginner → intermediate
 
 - **Async, logging, debugging and pytest:** Extend the project with Async, logging, debugging and pytest in Adaptive terminal quiz. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
-  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A CLI quiz with deterministic scoring and weak-topic selection. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Resume an interrupted quiz and keep the two histories separate.
-- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -2735,20 +2738,20 @@ A maintainer needs confidence when extending a command parser.
 **Effort:** 10h · Beginner → intermediate
 
 - **Async, logging, debugging and pytest:** Extend the project with Async, logging, debugging and pytest in Parser regression kit. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
-  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A parser package with parametrized tests and readable failures. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Cover empty input, escaped quotes and unknown flags without crashing.
-- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

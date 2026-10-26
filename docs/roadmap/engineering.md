@@ -490,11 +490,14 @@ Create two branches that intentionally conflict, resolve the conflict, and write
 
 - Runnable code or notebook with a small reproducible input
 - README explaining decisions, results and limitations
+- Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 
 **Completion checks**
 
 - [ ] Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.
 - [ ] Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.
+- [ ] Run a secret-free example from a fresh local checkout using only the README commands.
 
 #### Ten project recommendations
 
@@ -509,20 +512,20 @@ A small team needs a safe process for reviewing conflicting changes.
 **Effort:** 10h · Beginner → intermediate
 
 - **Git, branches and pull requests:** Implement Git, branches and pull requests in Release conflict rehearsal. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
-  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A documented conflict resolution, PR checklist and release tag. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Reconstruct the release from its tag and explain each conflict decision.
-- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -538,20 +541,20 @@ A contributor needs to ship a change another teammate can audit.
 **Effort:** 10h · Beginner → intermediate
 
 - **Git, branches and pull requests:** Implement Git, branches and pull requests in Reviewable feature delivery. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
-  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A sequence of small commits with tests and a review brief. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] A reviewer can trace each requirement to code, a test and a commit.
-- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -567,20 +570,20 @@ A developer needs to choose a lookup strategy for growing catalogs.
 **Effort:** 10h · Beginner → intermediate
 
 - **Git, branches and pull requests:** Extend the project with Git, branches and pull requests in Search complexity workbench. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
-  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A benchmark comparing linear scan, binary search and hash lookup. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Check equal results and plot operation counts separately from noisy wall time.
-- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -596,20 +599,20 @@ An API owner needs to detect breaking schema changes before release.
 **Effort:** 10h · Beginner → intermediate
 
 - **Git, branches and pull requests:** Extend the project with Git, branches and pull requests in API change compatibility gate. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
-  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A schema comparison CLI and compatibility report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Detect each seeded breaking change while allowing a new optional field.
-- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -625,20 +628,20 @@ A teammate needs reliable setup from a clean checkout.
 **Effort:** 10h · Beginner → intermediate
 
 - **Git, branches and pull requests:** Extend the project with Git, branches and pull requests in Reproducible environment trial. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
-  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A locked dependency workflow and clean-environment setup guide. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Install into a fresh virtual environment and run the smoke test.
-- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -654,20 +657,20 @@ An API learner needs to see status codes and caching behavior.
 **Effort:** 10h · Beginner → intermediate
 
 - **Git, branches and pull requests:** Extend the project with Git, branches and pull requests in HTTP contract playground. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
-  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A request collection demonstrating headers, errors and conditional reads. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Verify 200, 304, 400 and 404 cases against documented contracts.
-- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -683,20 +686,20 @@ An operations teammate needs to rerun interrupted imports safely.
 **Effort:** 10h · Beginner → intermediate
 
 - **Git, branches and pull requests:** Extend the project with Git, branches and pull requests in Repeatable batch import. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
-  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A resumable importer with an explicit input/output contract. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Run the same batch twice and prove counts and totals do not change.
-- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -712,20 +715,20 @@ A maintainer needs isolated parsing, validation and storage responsibilities.
 **Effort:** 10h · Beginner → intermediate
 
 - **Git, branches and pull requests:** Extend the project with Git, branches and pull requests in Refactor a tangled importer. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
-  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A refactored package with explicit boundaries and unchanged output contracts. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Run identical golden inputs before and after refactoring.
-- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -741,20 +744,20 @@ A teammate needs to diagnose missing tools before setup.
 **Effort:** 10h · Beginner → intermediate
 
 - **Git, branches and pull requests:** Extend the project with Git, branches and pull requests in Workspace health inspector. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
-  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A read-only shell inspector and machine-readable health report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Report each missing requirement and return a failing exit code without editing files.
-- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -770,20 +773,20 @@ A developer needs to distinguish unit, integration and contract failures.
 **Effort:** 10h · Beginner → intermediate
 
 - **Git, branches and pull requests:** Extend the project with Git, branches and pull requests in Checkout service testing lab. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
-  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A small checkout simulator with separated test layers. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] A failing adapter contract must fail integration without corrupting the store.
-- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

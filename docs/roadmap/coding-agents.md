@@ -1212,11 +1212,14 @@ Review a deliberately flawed fixture patch, identify a contract bug and authoriz
 
 - Runnable code or notebook with a small reproducible input
 - README explaining decisions, results and limitations
+- Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 
 **Completion checks**
 
 - [ ] Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.
 - [ ] Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.
+- [ ] Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 
 #### Ten project recommendations
 
@@ -1231,20 +1234,20 @@ A learner needs to understand why repeated AI fixes fail.
 **Effort:** 10h · Beginner → intermediate
 
 - **Read code, test, lint, type-check and review security:** Implement Read code, test, lint, type-check and review security in Agent debugging learning journal. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
-  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A hypothesis log, minimal reproductions and verified fixes. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Reject changes that only hide errors and explain the actual cause of each bug.
-- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1260,20 +1263,20 @@ A learner needs to detect plausible but broken generated code.
 **Effort:** 10h · Beginner → intermediate
 
 - **Read code, test, lint, type-check and review security:** Implement Read code, test, lint, type-check and review security in Generated patch review clinic. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
-  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A review report with reproducing tests and corrected patches. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Each finding has a failing test that passes after the correction.
-- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1289,20 +1292,20 @@ A learner needs to prove a generated feature works beyond compilation.
 **Effort:** 10h · Beginner → intermediate
 
 - **Read code, test, lint, type-check and review security:** Implement Read code, test, lint, type-check and review security in End-to-end verification handoff. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
-  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A verification plan and evidence report across the complete flow. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Show input, persisted state and resulting UI behavior for success and failure.
-- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1318,20 +1321,20 @@ A team needs clear approval boundaries for agent actions.
 **Effort:** 10h · Beginner → intermediate
 
 - **Read code, test, lint, type-check and review security:** Extend the project with Read code, test, lint, type-check and review security in Coding autonomy boundary lab. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
-  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: An AGENTS.md policy and a dry-run decision table. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Classify destructive actions consistently without executing them.
-- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1347,20 +1350,20 @@ A maintainer needs to provide relevant context without secrets.
 **Effort:** 10h · Beginner → intermediate
 
 - **Read code, test, lint, type-check and review security:** Extend the project with Read code, test, lint, type-check and review security in Repository context packager. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
-  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: An allowlisted context bundle and file provenance list. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Exclude fake secrets and generated folders; include required caller contracts.
-- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1376,20 +1379,20 @@ A reviewer needs evidence that generated changes meet the request.
 **Effort:** 10h · Beginner → intermediate
 
 - **Read code, test, lint, type-check and review security:** Extend the project with Read code, test, lint, type-check and review security in Requirement-to-test tracker. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
-  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A traceability matrix linking requirements, code and tests. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Every requirement has an observable check and unrelated changes are identified.
-- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1405,20 +1408,20 @@ A maintainer needs manageable changes instead of one huge generated diff.
 **Effort:** 10h · Beginner → intermediate
 
 - **Read code, test, lint, type-check and review security:** Extend the project with Read code, test, lint, type-check and review security in Small-patch planning workbench. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
-  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A dependency-ordered task plan with independently testable patches. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Each patch has a clear rollback and does not leave broken callers.
-- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1434,20 +1437,20 @@ A learner needs an AI coding task with observable completion criteria.
 **Effort:** 10h · Beginner → intermediate
 
 - **Read code, test, lint, type-check and review security:** Extend the project with Read code, test, lint, type-check and review security in Executable feature handoff. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
-  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A task specification, fixtures and acceptance checklist. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Another developer can identify completion without reading the original conversation.
-- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1463,20 +1466,20 @@ A learner needs to guide an assistant through a small bug fix.
 **Effort:** 10h · Beginner → intermediate
 
 - **Read code, test, lint, type-check and review security:** Extend the project with Read code, test, lint, type-check and review security in Test-first coding exercise. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
-  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A failing regression test, bounded task prompt and reviewed fix. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] The fix handles the failing case without weakening existing tests.
-- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1492,20 +1495,20 @@ An agent builder needs precise read/search/edit tool semantics.
 **Effort:** 10h · Beginner → intermediate
 
 - **Read code, test, lint, type-check and review security:** Extend the project with Read code, test, lint, type-check and review security in Coding tool contract simulator. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
-  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A bounded tool adapter with explicit errors. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Reject traversal and out-of-scope writes and preserve files on failed edits.
-- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

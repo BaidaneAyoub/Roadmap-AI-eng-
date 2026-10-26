@@ -445,14 +445,19 @@ Baselines and losses~A baseline establishes minimum useful performance; a traini
           "Train/validation/test, cross-validation and leakage",
           "Measure generalization using data the model and preprocessing have not seen.",
           `Splits~Training fits parameters, validation chooses designs and testing estimates final performance.~Reserve a test set before choosing the regularization strength.
-Cross-validation~Repeated train/validation folds estimate variability; groups and time ordering may require special splitters.~Keep records from one customer in the same fold.
-Leakage~Information from evaluation data or future events can inflate scores.~Fit a scaler inside a Pipeline on training folds only.`,
-          "Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.",
+Cross-validation~Repeated train/validation folds estimate variability; the split must match deployment, including customer groups and chronological boundaries.~Keep every record from one customer in the same fold; for forecasting train only on records earlier than validation.
+Leakage~Information from evaluation data or future events can inflate scores, including labels used during feature selection or duplicate documents across splits.~Fit a scaler and feature selector inside a Pipeline on training folds only; deduplicate before assigning splits.`,
+          "Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.",
           [
             ch(
               r.sklearn,
               "scikit-learn: cross-validation",
               "https://scikit-learn.org/stable/modules/cross_validation.html",
+            ),
+            ch(
+              r.ml,
+              "Inria scikit-learn course: cross-validation notebook and exercises",
+              "https://inria.github.io/scikit-learn-mooc/python_scripts/02_numerical_pipeline_cross_validation.html",
             ),
             ch(
               r.sklearn,

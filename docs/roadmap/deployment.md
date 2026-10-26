@@ -1609,11 +1609,14 @@ Instrument a local service with structured logs and latency counters; simulate a
 
 - Runnable code or notebook with a small reproducible input
 - README explaining decisions, results and limitations
+- Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 
 **Completion checks**
 
 - [ ] Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.
 - [ ] Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.
+- [ ] Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 
 #### Ten project recommendations
 
@@ -1628,20 +1631,20 @@ A maintainer needs to follow one request across components.
 **Effort:** 10h · Beginner → intermediate
 
 - **Logging, tracing, monitoring, alerts and incidents:** Implement Logging, tracing, monitoring, alerts and incidents in Request trace investigation. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: Structured logs and a local trace report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Trace each request end to end without logging secrets or full private payloads.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1657,20 +1660,20 @@ A team needs a repeatable test gate before packaging.
 **Effort:** 10h · Beginner → intermediate
 
 - **Logging, tracing, monitoring, alerts and incidents:** Extend the project with Logging, tracing, monitoring, alerts and incidents in Offline quality pipeline. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A CI configuration with local equivalent commands. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] The gate fails on the broken test and produces a versioned artifact only on success.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1686,20 +1689,20 @@ A developer needs reproducible service networking and persistence.
 **Effort:** 10h · Beginner → intermediate
 
 - **Logging, tracing, monitoring, alerts and incidents:** Extend the project with Logging, tracing, monitoring, alerts and incidents in API and database Compose lab. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A Compose stack with isolated services and persistent data. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Restart containers without losing rows; API connects by service name.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1715,20 +1718,20 @@ A teammate needs to start the same API on another machine.
 **Effort:** 10h · Beginner → intermediate
 
 - **Logging, tracing, monitoring, alerts and incidents:** Extend the project with Logging, tracing, monitoring, alerts and incidents in Reproducible inference container. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A non-root Docker image with health check and smoke test. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Build cleanly, start on a configurable port and stop gracefully.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1744,20 +1747,20 @@ A learner needs to compare caching and batching tradeoffs.
 **Effort:** 10h · Beginner → intermediate
 
 - **Logging, tracing, monitoring, alerts and incidents:** Extend the project with Logging, tracing, monitoring, alerts and incidents in Local inference efficiency ledger. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A benchmark of cached, uncached and batched inference. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Report cache hit rate, memory and latency; verify outputs remain equivalent.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1773,20 +1776,20 @@ A builder needs to understand throughput on their own machine.
 **Effort:** 10h · Beginner → intermediate
 
 - **Logging, tracing, monitoring, alerts and incidents:** Extend the project with Logging, tracing, monitoring, alerts and incidents in Service capacity envelope. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A latency/throughput curve and saturation report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Report p50/p95, errors and machine specs without generalizing to production.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1802,20 +1805,20 @@ An operator needs safe retry of failed jobs.
 **Effort:** 10h · Beginner → intermediate
 
 - **Logging, tracing, monitoring, alerts and incidents:** Extend the project with Logging, tracing, monitoring, alerts and incidents in Idempotent background worker. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A queue worker with bounded retries and dead-letter records. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Duplicate delivery never duplicates the final output.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1831,20 +1834,20 @@ A maintainer needs a tested escape from a broken release.
 **Effort:** 10h · Beginner → intermediate
 
 - **Logging, tracing, monitoring, alerts and incidents:** Extend the project with Logging, tracing, monitoring, alerts and incidents in Release rollback rehearsal. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A rollout checklist and executable local rollback drill. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Restore healthy traffic and verify data compatibility after rollback.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1860,20 +1863,20 @@ An operator needs meaningful availability and latency indicators.
 **Effort:** 10h · Beginner → intermediate
 
 - **Logging, tracing, monitoring, alerts and incidents:** Extend the project with Logging, tracing, monitoring, alerts and incidents in Reliability budget dashboard. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: An SLO report with burn-rate alerts and investigation notes. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Compute error budget correctly and distinguish missing telemetry from success.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1889,20 +1892,20 @@ An engineer needs to prevent retry storms across dependent calls.
 **Effort:** 10h · Beginner → intermediate
 
 - **Logging, tracing, monitoring, alerts and incidents:** Extend the project with Logging, tracing, monitoring, alerts and incidents in Timeout budget simulator. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A timeout/retry budget experiment. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Total request duration stays bounded and attempts stay below the configured cap.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

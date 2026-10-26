@@ -111,6 +111,7 @@ Understand the model interface and the limitations of a finite context.
 
 1. [Hugging Face LLM course](https://huggingface.co/learn/llm-course/chapter1/1) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 2. [D2L: transformer architecture](https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html) — Free; no registration required. No paid materials required.
+3. [Full Stack LLM Bootcamp: LLM foundations (2023 lecture)](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/llm-foundations/) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 
 #### Lab: Tokens, embeddings, context and transformer internals
 
@@ -505,11 +506,14 @@ Create a model decision table and a mock OpenAI-compatible local endpoint; optio
 
 - Runnable code or notebook with a small reproducible input
 - README explaining decisions, results and limitations
+- Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 
 **Completion checks**
 
 - [ ] Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.
 - [ ] Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.
+- [ ] Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 
 #### Ten project recommendations
 
@@ -524,20 +528,20 @@ A developer needs a defensible model choice under laptop constraints.
 **Effort:** 10h · Beginner → intermediate
 
 - **Model selection, open models and local serving:** Implement Model selection, open models and local serving in Local model selection scorecard. Adapt this focused lab to the project data: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.  Required concepts: Model selection, Open and closed models, Self-hosting.
-  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A quality, memory and latency scorecard with provenance per run. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Separate measured local runs from fixtures and state untested capabilities.
-- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -553,20 +557,20 @@ A learner needs to measure compression tradeoffs before choosing a format.
 **Effort:** 10h · Beginner → intermediate
 
 - **Model selection, open models and local serving:** Implement Model selection, open models and local serving in Quantization error explorer. Adapt this focused lab to the project data: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.  Required concepts: Model selection, Open and closed models, Self-hosting.
-  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: An int8 quantize/dequantize notebook with size and output-error plots. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Compare per-tensor and per-channel scales and test outlier sensitivity.
-- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -582,20 +586,20 @@ A serving learner needs to understand cache growth and eviction.
 **Effort:** 10h · Beginner → intermediate
 
 - **Model selection, open models and local serving:** Extend the project with Model selection, open models and local serving in KV cache memory simulator. Adapt this focused lab to the project data: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.  Required concepts: Model selection, Open and closed models, Self-hosting.
-  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A cache size calculator and equivalent cached/uncached toy attention outputs. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Match outputs and document memory assumptions, batch sizes and dtypes.
-- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -611,20 +615,20 @@ A developer needs relevant context within a fixed budget.
 **Effort:** 10h · Beginner → intermediate
 
 - **Model selection, open models and local serving:** Extend the project with Model selection, open models and local serving in Context assembly laboratory. Adapt this focused lab to the project data: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.  Required concepts: Model selection, Open and closed models, Self-hosting.
-  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A context packer with source traceability. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Always retain required constraints and explain every dropped passage.
-- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -640,20 +644,20 @@ A learner needs to see what LoRA changes in a frozen model.
 **Effort:** 10h · Beginner → intermediate
 
 - **Model selection, open models and local serving:** Extend the project with Model selection, open models and local serving in Low-rank adaptation microscope. Adapt this focused lab to the project data: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.  Required concepts: Model selection, Open and closed models, Self-hosting.
-  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A low-rank adapter training experiment and parameter count report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Only adapters receive gradients; compare rank settings under the same budget.
-- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -669,20 +673,20 @@ A support writer needs repeatable checks before changing instructions.
 **Effort:** 10h · Beginner → intermediate
 
 - **Model selection, open models and local serving:** Extend the project with Model selection, open models and local serving in Prompt regression workbench. Adapt this focused lab to the project data: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.  Required concepts: Model selection, Open and closed models, Self-hosting.
-  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A prompt version comparison harness. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Detect malformed JSON, unsupported claims and changed required fields.
-- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -698,20 +702,20 @@ An interface builder needs correct partial structured-response handling.
 **Effort:** 10h · Beginner → intermediate
 
 - **Model selection, open models and local serving:** Extend the project with Model selection, open models and local serving in Streaming response assembler. Adapt this focused lab to the project data: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.  Required concepts: Model selection, Open and closed models, Self-hosting.
-  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A stream assembler and cancellation demo. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Never parse incomplete JSON as final; recover cleanly from a dropped stream.
-- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -727,20 +731,20 @@ A learner needs to understand temperature, top-k and top-p.
 **Effort:** 10h · Beginner → intermediate
 
 - **Model selection, open models and local serving:** Extend the project with Model selection, open models and local serving in Decoding distribution explorer. Adapt this focused lab to the project data: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.  Required concepts: Model selection, Open and closed models, Self-hosting.
-  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A probability visualizer and sampling experiment. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Verify normalization, deterministic seed behavior and nucleus boundaries.
-- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -756,20 +760,20 @@ An app builder needs to estimate what fits in a context window.
 **Effort:** 10h · Beginner → intermediate
 
 - **Model selection, open models and local serving:** Extend the project with Model selection, open models and local serving in Token budget planner. Adapt this focused lab to the project data: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.  Required concepts: Model selection, Open and closed models, Self-hosting.
-  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A tokenizer comparison and truncation report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Preserve required instructions and label byte estimates as estimates, not exact token counts.
-- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -785,20 +789,20 @@ An app builder needs safe interpretation of proposed tool arguments.
 **Effort:** 10h · Beginner → intermediate
 
 - **Model selection, open models and local serving:** Extend the project with Model selection, open models and local serving in Structured tool-call validator. Adapt this focused lab to the project data: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.  Required concepts: Model selection, Open and closed models, Self-hosting.
-  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A schema validator and read-only dispatch simulator. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Reject unknown tools, extra dangerous fields and invalid argument types.
-- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -848,19 +852,19 @@ Constrain the task and validate responses instead of trusting fluent text.
       - Watch for: Focus on sampling. Then reproduce the lesson example: Sample a toy logits vector at two temperatures with fixed seeds.
       - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
       - Verification source: https://www.freecodecamp.org/news/code-an-llm-from-scratch-theory-to-rlhf/
-- [ ] **Structured output:** JSON/schema constraints reduce formatting errors but still need semantic validation.
-  - Example: Reject a negative quantity even when the JSON parses correctly.
+- [ ] **Structured output:** JSON/schema constraints reduce formatting errors but still need semantic validation, refusal handling and completeness checks before any side effect.
+  - Example: Reject a negative quantity even when JSON parses; an interrupted stream or refusal must never become a tool execution.
   - Videos:
     - [Build GPT from scratch, in code](https://www.youtube.com/watch?v=kCc8FmEb1nY) · Andrej Karpathy · From-scratch lecture
       - Explains: Language modeling, embeddings, causal attention, transformer blocks and sampling.
       - Useful because: Trace token IDs to logits and understand a small end-to-end transformer.
-      - Watch for: Focus on structured output. Then reproduce the lesson example: Reject a negative quantity even when the JSON parses correctly.
+      - Watch for: Focus on structured output. Then reproduce the lesson example: Reject a negative quantity even when JSON parses; an interrupted stream or refusal must never become a tool execution.
       - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
       - Verification source: https://karpathy.ai/zero-to-hero.html
     - [Code an LLM from scratch — theory to RLHF](https://www.youtube.com/watch?v=p3sij8QzONQ) · freeCodeCamp · Full course · approximately 6h
       - Explains: A PyTorch language-model pipeline and the stages of language-model development.
       - Useful because: Connect model internals to application decisions; large training runs are optional.
-      - Watch for: Focus on structured output. Then reproduce the lesson example: Reject a negative quantity even when the JSON parses correctly.
+      - Watch for: Focus on structured output. Then reproduce the lesson example: Reject a negative quantity even when JSON parses; an interrupted stream or refusal must never become a tool execution.
       - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
       - Verification source: https://www.freecodecamp.org/news/code-an-llm-from-scratch-theory-to-rlhf/
 - [ ] **Reasoning patterns:** Decomposition and ReAct alternate planning with observable tool results; verbose explanations are not evidence of correctness.
@@ -901,6 +905,8 @@ Constrain the task and validate responses instead of trusting fluent text.
 
 1. [Hugging Face: generation strategies](https://huggingface.co/docs/transformers/generation_strategies) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
 2. [Hugging Face: chat templates](https://huggingface.co/docs/transformers/chat_templating) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
+3. [Full Stack LLM Bootcamp: prompt engineering (2023 lecture)](https://fullstackdeeplearning.com/llm-bootcamp/spring-2023/prompt-engineering/) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
+4. [Pydantic: models and validation for structured responses](https://docs.pydantic.dev/latest/concepts/models/) — Free; no registration required. No paid materials required.
 
 #### Lab: Prompting, sampling and structured outputs
 
@@ -910,11 +916,14 @@ Implement a toy sampling experiment plus a schema-validating response parser; us
 
 - Runnable code or notebook with a small reproducible input
 - README explaining decisions, results and limitations
+- Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 
 **Completion checks**
 
 - [ ] Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.
 - [ ] Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.
+- [ ] Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 
 #### Ten project recommendations
 
@@ -929,20 +938,20 @@ A support writer needs repeatable checks before changing instructions.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prompting, sampling and structured outputs:** Implement Prompting, sampling and structured outputs in Prompt regression workbench. Adapt this focused lab to the project data: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.  Required concepts: Prompt design, Sampling, Structured output, Reasoning patterns.
-  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A prompt version comparison harness. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Detect malformed JSON, unsupported claims and changed required fields.
-- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -958,20 +967,20 @@ A serving learner needs to understand cache growth and eviction.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prompting, sampling and structured outputs:** Extend the project with Prompting, sampling and structured outputs in KV cache memory simulator. Adapt this focused lab to the project data: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.  Required concepts: Prompt design, Sampling, Structured output, Reasoning patterns.
-  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A cache size calculator and equivalent cached/uncached toy attention outputs. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Match outputs and document memory assumptions, batch sizes and dtypes.
-- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -987,20 +996,20 @@ A developer needs relevant context within a fixed budget.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prompting, sampling and structured outputs:** Extend the project with Prompting, sampling and structured outputs in Context assembly laboratory. Adapt this focused lab to the project data: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.  Required concepts: Prompt design, Sampling, Structured output, Reasoning patterns.
-  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A context packer with source traceability. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Always retain required constraints and explain every dropped passage.
-- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1016,20 +1025,20 @@ A learner needs to see what LoRA changes in a frozen model.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prompting, sampling and structured outputs:** Extend the project with Prompting, sampling and structured outputs in Low-rank adaptation microscope. Adapt this focused lab to the project data: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.  Required concepts: Prompt design, Sampling, Structured output, Reasoning patterns.
-  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A low-rank adapter training experiment and parameter count report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Only adapters receive gradients; compare rank settings under the same budget.
-- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1045,20 +1054,20 @@ A developer needs a defensible model choice under laptop constraints.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prompting, sampling and structured outputs:** Extend the project with Prompting, sampling and structured outputs in Local model selection scorecard. Adapt this focused lab to the project data: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.  Required concepts: Prompt design, Sampling, Structured output, Reasoning patterns.
-  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A quality, memory and latency scorecard with provenance per run. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Separate measured local runs from fixtures and state untested capabilities.
-- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1074,20 +1083,20 @@ A learner needs to measure compression tradeoffs before choosing a format.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prompting, sampling and structured outputs:** Extend the project with Prompting, sampling and structured outputs in Quantization error explorer. Adapt this focused lab to the project data: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.  Required concepts: Prompt design, Sampling, Structured output, Reasoning patterns.
-  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: An int8 quantize/dequantize notebook with size and output-error plots. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Compare per-tensor and per-channel scales and test outlier sensitivity.
-- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1103,20 +1112,20 @@ An interface builder needs correct partial structured-response handling.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prompting, sampling and structured outputs:** Extend the project with Prompting, sampling and structured outputs in Streaming response assembler. Adapt this focused lab to the project data: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.  Required concepts: Prompt design, Sampling, Structured output, Reasoning patterns.
-  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A stream assembler and cancellation demo. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Never parse incomplete JSON as final; recover cleanly from a dropped stream.
-- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1132,20 +1141,20 @@ A learner needs to understand temperature, top-k and top-p.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prompting, sampling and structured outputs:** Extend the project with Prompting, sampling and structured outputs in Decoding distribution explorer. Adapt this focused lab to the project data: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.  Required concepts: Prompt design, Sampling, Structured output, Reasoning patterns.
-  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A probability visualizer and sampling experiment. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Verify normalization, deterministic seed behavior and nucleus boundaries.
-- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1161,20 +1170,20 @@ An app builder needs to estimate what fits in a context window.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prompting, sampling and structured outputs:** Extend the project with Prompting, sampling and structured outputs in Token budget planner. Adapt this focused lab to the project data: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.  Required concepts: Prompt design, Sampling, Structured output, Reasoning patterns.
-  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A tokenizer comparison and truncation report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Preserve required instructions and label byte estimates as estimates, not exact token counts.
-- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1190,20 +1199,20 @@ An app builder needs safe interpretation of proposed tool arguments.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prompting, sampling and structured outputs:** Extend the project with Prompting, sampling and structured outputs in Structured tool-call validator. Adapt this focused lab to the project data: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.  Required concepts: Prompt design, Sampling, Structured output, Reasoning patterns.
-  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A schema validator and read-only dispatch simulator. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Reject unknown tools, extra dangerous fields and invalid argument types.
-- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1253,19 +1262,19 @@ Supply relevant information while preventing stale, conflicting or untrusted con
       - Watch for: Focus on compaction and isolation. Then reproduce the lesson example: Preserve task constraints explicitly when summarizing old turns.
       - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
       - Verification source: https://www.freecodecamp.org/news/code-an-llm-from-scratch-theory-to-rlhf/
-- [ ] **Memory and caching:** Memory persists selected facts; caches reuse prior computation and need scope and invalidation.
-  - Example: Key a retrieval cache by user permissions and document version.
+- [ ] **Memory and caching:** Application memory persists selected facts; response/retrieval caches reuse results and require permission scope, expiry and invalidation. A transformer KV cache instead reuses attention computation within compatible token prefixes and does not supply durable user memory.
+  - Example: Key a retrieval cache by user permissions and document version, invalidate it after access revocation, and keep session memory separate from model KV tensors.
   - Videos:
     - [RAG and MCP fundamentals — hands-on course](https://www.youtube.com/watch?v=I7_WXKhyGms) · freeCodeCamp · Full course · approximately 2h
       - Explains: Retrieval, MCP coordination and caching integration.
       - Useful because: Connect knowledge retrieval with tool access while keeping permission checks in software.
-      - Watch for: Focus on memory and caching. Then reproduce the lesson example: Key a retrieval cache by user permissions and document version.
+      - Watch for: Focus on memory and caching. Then reproduce the lesson example: Key a retrieval cache by user permissions and document version, invalidate it after access revocation, and keep session memory separate from model KV tensors.
       - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
       - Verification source: https://www.freecodecamp.org/news/learn-rag-and-mcp-fundamentals/
     - [Code an LLM from scratch — theory to RLHF](https://www.youtube.com/watch?v=p3sij8QzONQ) · freeCodeCamp · Full course · approximately 6h
       - Explains: A PyTorch language-model pipeline and the stages of language-model development.
       - Useful because: Connect model internals to application decisions; large training runs are optional.
-      - Watch for: Focus on memory and caching. Then reproduce the lesson example: Key a retrieval cache by user permissions and document version.
+      - Watch for: Focus on memory and caching. Then reproduce the lesson example: Key a retrieval cache by user permissions and document version, invalidate it after access revocation, and keep session memory separate from model KV tensors.
       - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
       - Verification source: https://www.freecodecamp.org/news/code-an-llm-from-scratch-theory-to-rlhf/
 
@@ -1291,6 +1300,7 @@ Supply relevant information while preventing stale, conflicting or untrusted con
 
 1. [Hugging Face: messages and special tokens](https://huggingface.co/learn/agents-course/unit1/messages-and-special-tokens) — Free reading; optional account for course activities. No paid materials required.
 2. [Hugging Face: KV cache strategies](https://huggingface.co/docs/transformers/kv_cache) — Free reading; Hugging Face account optional for sharing models. No paid materials required.
+3. [LangGraph: thread-scoped checkpoints versus long-term memory](https://docs.langchain.com/oss/python/langgraph/persistence) — Free reading; optional account for course activities. No paid materials required.
 
 #### Lab: Context engineering, memory and caching
 
@@ -1300,11 +1310,14 @@ Build a context assembler with explicit token/character budget, source labels, s
 
 - Runnable code or notebook with a small reproducible input
 - README explaining decisions, results and limitations
+- Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 
 **Completion checks**
 
 - [ ] Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.
 - [ ] Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.
+- [ ] Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 
 #### Ten project recommendations
 
@@ -1319,20 +1332,20 @@ A developer needs relevant context within a fixed budget.
 **Effort:** 10h · Beginner → intermediate
 
 - **Context engineering, memory and caching:** Implement Context engineering, memory and caching in Context assembly laboratory. Adapt this focused lab to the project data: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.  Required concepts: Context sources, Compaction and isolation, Memory and caching.
-  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A context packer with source traceability. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Always retain required constraints and explain every dropped passage.
-- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1348,20 +1361,20 @@ A serving learner needs to understand cache growth and eviction.
 **Effort:** 10h · Beginner → intermediate
 
 - **Context engineering, memory and caching:** Extend the project with Context engineering, memory and caching in KV cache memory simulator. Adapt this focused lab to the project data: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.  Required concepts: Context sources, Compaction and isolation, Memory and caching.
-  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A cache size calculator and equivalent cached/uncached toy attention outputs. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Match outputs and document memory assumptions, batch sizes and dtypes.
-- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1377,20 +1390,20 @@ A learner needs to see what LoRA changes in a frozen model.
 **Effort:** 10h · Beginner → intermediate
 
 - **Context engineering, memory and caching:** Extend the project with Context engineering, memory and caching in Low-rank adaptation microscope. Adapt this focused lab to the project data: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.  Required concepts: Context sources, Compaction and isolation, Memory and caching.
-  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A low-rank adapter training experiment and parameter count report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Only adapters receive gradients; compare rank settings under the same budget.
-- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1406,20 +1419,20 @@ A developer needs a defensible model choice under laptop constraints.
 **Effort:** 10h · Beginner → intermediate
 
 - **Context engineering, memory and caching:** Extend the project with Context engineering, memory and caching in Local model selection scorecard. Adapt this focused lab to the project data: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.  Required concepts: Context sources, Compaction and isolation, Memory and caching.
-  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A quality, memory and latency scorecard with provenance per run. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Separate measured local runs from fixtures and state untested capabilities.
-- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1435,20 +1448,20 @@ A support writer needs repeatable checks before changing instructions.
 **Effort:** 10h · Beginner → intermediate
 
 - **Context engineering, memory and caching:** Extend the project with Context engineering, memory and caching in Prompt regression workbench. Adapt this focused lab to the project data: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.  Required concepts: Context sources, Compaction and isolation, Memory and caching.
-  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A prompt version comparison harness. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Detect malformed JSON, unsupported claims and changed required fields.
-- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1464,20 +1477,20 @@ A learner needs to measure compression tradeoffs before choosing a format.
 **Effort:** 10h · Beginner → intermediate
 
 - **Context engineering, memory and caching:** Extend the project with Context engineering, memory and caching in Quantization error explorer. Adapt this focused lab to the project data: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.  Required concepts: Context sources, Compaction and isolation, Memory and caching.
-  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: An int8 quantize/dequantize notebook with size and output-error plots. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Compare per-tensor and per-channel scales and test outlier sensitivity.
-- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1493,20 +1506,20 @@ An interface builder needs correct partial structured-response handling.
 **Effort:** 10h · Beginner → intermediate
 
 - **Context engineering, memory and caching:** Extend the project with Context engineering, memory and caching in Streaming response assembler. Adapt this focused lab to the project data: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.  Required concepts: Context sources, Compaction and isolation, Memory and caching.
-  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A stream assembler and cancellation demo. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Never parse incomplete JSON as final; recover cleanly from a dropped stream.
-- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1522,20 +1535,20 @@ A learner needs to understand temperature, top-k and top-p.
 **Effort:** 10h · Beginner → intermediate
 
 - **Context engineering, memory and caching:** Extend the project with Context engineering, memory and caching in Decoding distribution explorer. Adapt this focused lab to the project data: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.  Required concepts: Context sources, Compaction and isolation, Memory and caching.
-  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A probability visualizer and sampling experiment. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Verify normalization, deterministic seed behavior and nucleus boundaries.
-- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1551,20 +1564,20 @@ An app builder needs to estimate what fits in a context window.
 **Effort:** 10h · Beginner → intermediate
 
 - **Context engineering, memory and caching:** Extend the project with Context engineering, memory and caching in Token budget planner. Adapt this focused lab to the project data: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.  Required concepts: Context sources, Compaction and isolation, Memory and caching.
-  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A tokenizer comparison and truncation report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Preserve required instructions and label byte estimates as estimates, not exact token counts.
-- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1580,20 +1593,20 @@ An app builder needs safe interpretation of proposed tool arguments.
 **Effort:** 10h · Beginner → intermediate
 
 - **Context engineering, memory and caching:** Extend the project with Context engineering, memory and caching in Structured tool-call validator. Adapt this focused lab to the project data: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.  Required concepts: Context sources, Compaction and isolation, Memory and caching.
-  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A schema validator and read-only dispatch simulator. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Reject unknown tools, extra dangerous fields and invalid argument types.
-- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.

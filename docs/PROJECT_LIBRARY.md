@@ -858,8 +858,8 @@ An operator needs latency samples without overwhelming local services.
 **Effort:** 15h · Beginner → intermediate
 
 - **Async, logging, debugging and pytest:** Implement Async, logging, debugging and pytest in Concurrent service sampler. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
-  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 - **Async cancellation, timeouts and test doubles:** Implement Async cancellation, timeouts and test doubles in Concurrent service sampler. Adapt this focused lab to the project data: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.  Required concepts: Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup, Bounded concurrency, Dependency fakes.
   - Deliverable: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
@@ -867,7 +867,7 @@ An operator needs latency samples without overwhelming local services.
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: An async sampler with bounded concurrency and a latency summary. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Async, logging, debugging and pytest: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] MVP · Async cancellation, timeouts and test doubles: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
@@ -875,7 +875,7 @@ An operator needs latency samples without overwhelming local services.
 **Acceptance**
 
 - [ ] Keep concurrency at four or less and finish when one endpoint never responds.
-- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 - [ ] Async cancellation, timeouts and test doubles: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -894,7 +894,7 @@ An operator needs latency samples without overwhelming local services.
 
 1. Run three local stub endpoints with delays, errors and timeouts.
 2. Validate source records and preserve stable IDs.
-3. Async, logging, debugging and pytest consumes the project records/results and produces: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Async, logging, debugging and pytest consumes the project records/results and produces: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. Async cancellation, timeouts and test doubles consumes the project records/results and produces: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
 5. An async sampler with bounded concurrency and a latency summary.
 6. Keep concurrency at four or less and finish when one endpoint never responds.
@@ -954,7 +954,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 ## Components and data flow
 1. Run three local stub endpoints with delays, errors and timeouts.
 2. Validate source records and preserve stable IDs.
-3. Async, logging, debugging and pytest consumes the project records/results and produces: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Async, logging, debugging and pytest consumes the project records/results and produces: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. Async cancellation, timeouts and test doubles consumes the project records/results and produces: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
 5. An async sampler with bounded concurrency and a latency summary.
 6. Keep concurrency at four or less and finish when one endpoint never responds.
@@ -963,8 +963,8 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ## Required skill responsibilities
 ### Async, logging, debugging and pytest
 Task: Implement Async, logging, debugging and pytest in Concurrent service sampler. Adapt this focused lab to the project data: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.  Required concepts: Async I/O, Logging and debugging, pytest.
-Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 
 ### Async cancellation, timeouts and test doubles
 Task: Implement Async cancellation, timeouts and test doubles in Concurrent service sampler. Adapt this focused lab to the project data: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.  Required concepts: Coroutine versus blocking work, Timeout boundaries, Cancellation cleanup, Bounded concurrency, Dependency fakes.
@@ -976,8 +976,8 @@ Verification: Write an asynchronous fake-inference runner with timeouts, cancell
    Deliver: An async sampler with bounded concurrency and a latency summary. Start with the smallest deterministic reference before adding extensions.
    Check: Keep concurrency at four or less and finish when one endpoint never responds.
 2. MVP · Async, logging, debugging and pytest
-   Deliver: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Async, logging, debugging and pytest: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 3. MVP · Async cancellation, timeouts and test doubles
    Deliver: Async cancellation, timeouts and test doubles: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
    Check: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
@@ -991,7 +991,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. Keep concurrency at four or less and finish when one endpoint never responds.
-2. Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. Async, logging, debugging and pytest: Run three simulated I/O tasks concurrently with timeouts, log their outcomes and write parametrized pytest checks for success and one timeout.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record elapsed time for sequential and concurrent simulated I/O using the same delays; explain why this does not measure CPU parallelism.; Force one timeout and verify its task is cancelled, other task outcomes are recorded, and no background task remains running.
 3. Async cancellation, timeouts and test doubles: Write an asynchronous fake-inference runner with timeouts, cancellation and a three-worker limit. Use pytest to cover successful responses, invalid JSON and cancellation cleanup without any network service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 4. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
@@ -1826,20 +1826,20 @@ A small team needs a safe process for reviewing conflicting changes.
 **Effort:** 10h · Beginner → intermediate
 
 - **Git, branches and pull requests:** Implement Git, branches and pull requests in Release conflict rehearsal. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
-  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A documented conflict resolution, PR checklist and release tag. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Reconstruct the release from its tag and explain each conflict decision.
-- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -1856,7 +1856,7 @@ A small team needs a safe process for reviewing conflicting changes.
 
 1. Create a disposable local repository with two feature branches.
 2. Validate source records and preserve stable IDs.
-3. Git, branches and pull requests consumes the project records/results and produces: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Git, branches and pull requests consumes the project records/results and produces: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A documented conflict resolution, PR checklist and release tag.
 5. Reconstruct the release from its tag and explain each conflict decision.
 
@@ -1914,7 +1914,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 ## Components and data flow
 1. Create a disposable local repository with two feature branches.
 2. Validate source records and preserve stable IDs.
-3. Git, branches and pull requests consumes the project records/results and produces: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Git, branches and pull requests consumes the project records/results and produces: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A documented conflict resolution, PR checklist and release tag.
 5. Reconstruct the release from its tag and explain each conflict decision.
 Describe concrete interfaces between adjacent components. For alternative tools, compare them on the same inputs and checks rather than duplicating a feature without a purpose.
@@ -1922,16 +1922,16 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ## Required skill responsibilities
 ### Git, branches and pull requests
 Task: Implement Git, branches and pull requests in Release conflict rehearsal. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
-Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 
 ## Build plan
 1. MVP · problem and reproducible baseline
    Deliver: A documented conflict resolution, PR checklist and release tag. Start with the smallest deterministic reference before adding extensions.
    Check: Reconstruct the release from its tag and explain each conflict decision.
 2. MVP · Git, branches and pull requests
-   Deliver: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 3. Integrated demonstration
    Deliver: One clean-start command, connected end-to-end example and evidence report
    Check: Re-run the same input through all selected components and verify the final output against the source records.
@@ -1942,7 +1942,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. Reconstruct the release from its tag and explain each conflict decision.
-2. Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 3. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
 
@@ -3026,8 +3026,8 @@ A contributor needs to ship a change another teammate can audit.
 **Effort:** 15h · Beginner → intermediate
 
 - **Git, branches and pull requests:** Implement Git, branches and pull requests in Reviewable feature delivery. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
-  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 - **Unit, integration and contract tests:** Implement Unit, integration and contract tests in Reviewable feature delivery. Adapt this focused lab to the project data: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.  Required concepts: Unit boundaries, Integration boundaries, Contract fixtures, Fixture isolation, Failure-path assertions.
   - Deliverable: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
@@ -3035,7 +3035,7 @@ A contributor needs to ship a change another teammate can audit.
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A sequence of small commits with tests and a review brief. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Git, branches and pull requests: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] MVP · Unit, integration and contract tests: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
@@ -3043,7 +3043,7 @@ A contributor needs to ship a change another teammate can audit.
 **Acceptance**
 
 - [ ] A reviewer can trace each requirement to code, a test and a commit.
-- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 - [ ] Unit, integration and contract tests: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -3062,7 +3062,7 @@ A contributor needs to ship a change another teammate can audit.
 
 1. Use a tiny notes app and three requested behavior changes.
 2. Validate source records and preserve stable IDs.
-3. Git, branches and pull requests consumes the project records/results and produces: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Git, branches and pull requests consumes the project records/results and produces: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. Unit, integration and contract tests consumes the project records/results and produces: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
 5. A sequence of small commits with tests and a review brief.
 6. A reviewer can trace each requirement to code, a test and a commit.
@@ -3124,7 +3124,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 ## Components and data flow
 1. Use a tiny notes app and three requested behavior changes.
 2. Validate source records and preserve stable IDs.
-3. Git, branches and pull requests consumes the project records/results and produces: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Git, branches and pull requests consumes the project records/results and produces: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. Unit, integration and contract tests consumes the project records/results and produces: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
 5. A sequence of small commits with tests and a review brief.
 6. A reviewer can trace each requirement to code, a test and a commit.
@@ -3133,8 +3133,8 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ## Required skill responsibilities
 ### Git, branches and pull requests
 Task: Implement Git, branches and pull requests in Reviewable feature delivery. Adapt this focused lab to the project data: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.  Required concepts: Commits, Branches and merges, Pull requests.
-Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 
 ### Unit, integration and contract tests
 Task: Implement Unit, integration and contract tests in Reviewable feature delivery. Adapt this focused lab to the project data: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.  Required concepts: Unit boundaries, Integration boundaries, Contract fixtures, Fixture isolation, Failure-path assertions.
@@ -3146,8 +3146,8 @@ Verification: Create a small repository with unit tests for validation, an integ
    Deliver: A sequence of small commits with tests and a review brief. Start with the smallest deterministic reference before adding extensions.
    Check: A reviewer can trace each requirement to code, a test and a commit.
 2. MVP · Git, branches and pull requests
-   Deliver: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Git, branches and pull requests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 3. MVP · Unit, integration and contract tests
    Deliver: Unit, integration and contract tests: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
    Check: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
@@ -3161,7 +3161,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. A reviewer can trace each requirement to code, a test and a commit.
-2. Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. Git, branches and pull requests: Create two branches that intentionally conflict, resolve the conflict, and write a PR description containing scope and validation. Use a local Git repository; remote GitHub is optional.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Show the conflicting change, resolved diff and passing verification; the resolution must preserve the intended behavior from both branches.; Run a secret-free example from a fresh local checkout using only the README commands.
 3. Unit, integration and contract tests: Create a small repository with unit tests for validation, an integration test through a local database and a contract test for recorded AI outputs. Add one intentional regression and show which layer catches it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 4. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
@@ -6311,7 +6311,7 @@ A learner needs to compare classical and neural classification end to end.
   - Check: Compare a dummy baseline, use leakage-free splits and report task-appropriate metrics.
 - **PyTorch loops, checkpoints and reproducibility:** Implement a small PyTorch model, explicit training loop and CPU checkpoint inference using the same target and split as any selected ML baseline. Apply this to Tiny digit recognition service: A linear baseline, small PyTorch MLP, inference endpoint and container when selected. Focus: Training loop, Checkpoints, Reproducibility.
   - Deliverable: Training script, checkpoint, learning curves and inference benchmark
-  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 - **FastAPI routes, validation and OpenAPI:** Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Tiny digit recognition service: A linear baseline, small PyTorch MLP, inference endpoint and container when selected. Focus: Routes and models, Dependencies and async, OpenAPI and errors.
   - Deliverable: API routes, OpenAPI examples and integration tests
   - Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
@@ -6333,7 +6333,7 @@ A learner needs to compare classical and neural classification end to end.
 
 - [ ] Report held-out accuracy, confusion matrix and CPU latency for both models.
 - [ ] Machine learning: Compare a dummy baseline, use leakage-free splits and report task-appropriate metrics.
-- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 - [ ] FastAPI routes, validation and OpenAPI: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] Docker images, containers and Dockerfiles: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] Compare ML and DL on the same held-out target, metric and CPU latency benchmark.
@@ -6441,7 +6441,7 @@ Verification: Compare a dummy baseline, use leakage-free splits and report task-
 ### PyTorch loops, checkpoints and reproducibility
 Task: Implement a small PyTorch model, explicit training loop and CPU checkpoint inference using the same target and split as any selected ML baseline. Apply this to Tiny digit recognition service: A linear baseline, small PyTorch MLP, inference endpoint and container when selected. Focus: Training loop, Checkpoints, Reproducibility.
 Deliverable: Training script, checkpoint, learning curves and inference benchmark
-Verification: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Verification: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 
 ### FastAPI routes, validation and OpenAPI
 Task: Expose the project result through FastAPI with Pydantic request/response validation, explicit errors and a health endpoint. Apply this to Tiny digit recognition service: A linear baseline, small PyTorch MLP, inference endpoint and container when selected. Focus: Routes and models, Dependencies and async, OpenAPI and errors.
@@ -6462,7 +6462,7 @@ Verification: Build from a clean checkout, execute the smoke test and verify gra
    Check: Compare a dummy baseline, use leakage-free splits and report task-appropriate metrics.
 3. MVP · PyTorch loops, checkpoints and reproducibility
    Deliver: Training script, checkpoint, learning curves and inference benchmark
-   Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Check: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 4. MVP · FastAPI routes, validation and OpenAPI
    Deliver: API routes, OpenAPI examples and integration tests
    Check: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
@@ -6480,7 +6480,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 ## Final acceptance tests
 1. Report held-out accuracy, confusion matrix and CPU latency for both models.
 2. Machine learning: Compare a dummy baseline, use leakage-free splits and report task-appropriate metrics.
-3. PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+3. PyTorch loops, checkpoints and reproducibility: Overfit a tiny batch, reproduce seeded evaluation and compare predictions before and after reload. Train a digits MLP on CPU, interrupt and resume from a checkpoint, and compare predictions and metrics with an uninterrupted run.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Overfit one small batch before the full run, then report training and validation losses separately with the seed and CPU environment.; Reload the saved model and optimizer in a new process; compare predictions in eval mode and the next deterministic update with an uninterrupted run.
 4. FastAPI routes, validation and OpenAPI: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 5. Docker images, containers and Dockerfiles: Build from a clean checkout, execute the smoke test and verify graceful shutdown. Containerize a local FastAPI health/prediction service, run as non-root and prove the image works without your local Python environment.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 6. Compare ML and DL on the same held-out target, metric and CPU latency benchmark.
@@ -8076,25 +8076,25 @@ A support writer needs repeatable checks before changing instructions.
 **Effort:** 15h · Beginner → intermediate
 
 - **Prompting, sampling and structured outputs:** Implement Prompting, sampling and structured outputs in Prompt regression workbench. Adapt this focused lab to the project data: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.  Required concepts: Prompt design, Sampling, Structured output, Reasoning patterns.
-  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 - **Golden datasets and deterministic regression evaluation:** Implement Golden datasets and deterministic regression evaluation in Prompt regression workbench. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A prompt version comparison harness. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prompting, sampling and structured outputs: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Detect malformed JSON, unsupported claims and changed required fields.
-- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README and worked example; Requirements and success metric; Architecture, data contracts and ADR; Evaluation and limitations; Local deployment guide and recovery runbook.
@@ -8112,8 +8112,8 @@ A support writer needs repeatable checks before changing instructions.
 
 1. Author 30 requests with expected structured responses and recorded fixtures.
 2. Validate source records and preserve stable IDs.
-3. Prompting, sampling and structured outputs consumes the project records/results and produces: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
-4. Golden datasets and deterministic regression evaluation consumes the project records/results and produces: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Prompting, sampling and structured outputs consumes the project records/results and produces: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
+4. Golden datasets and deterministic regression evaluation consumes the project records/results and produces: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 5. A prompt version comparison harness.
 6. Detect malformed JSON, unsupported claims and changed required fields.
 
@@ -8174,8 +8174,8 @@ Provide the schema, a small example record, deterministic generation/seed instru
 ## Components and data flow
 1. Author 30 requests with expected structured responses and recorded fixtures.
 2. Validate source records and preserve stable IDs.
-3. Prompting, sampling and structured outputs consumes the project records/results and produces: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
-4. Golden datasets and deterministic regression evaluation consumes the project records/results and produces: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Prompting, sampling and structured outputs consumes the project records/results and produces: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
+4. Golden datasets and deterministic regression evaluation consumes the project records/results and produces: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 5. A prompt version comparison harness.
 6. Detect malformed JSON, unsupported claims and changed required fields.
 Describe concrete interfaces between adjacent components. For alternative tools, compare them on the same inputs and checks rather than duplicating a feature without a purpose.
@@ -8183,24 +8183,24 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ## Required skill responsibilities
 ### Prompting, sampling and structured outputs
 Task: Implement Prompting, sampling and structured outputs in Prompt regression workbench. Adapt this focused lab to the project data: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.  Required concepts: Prompt design, Sampling, Structured output, Reasoning patterns.
-Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 
 ### Golden datasets and deterministic regression evaluation
 Task: Implement Golden datasets and deterministic regression evaluation in Prompt regression workbench. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
-Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 
 ## Build plan
 1. MVP · problem and reproducible baseline
    Deliver: A prompt version comparison harness. Start with the smallest deterministic reference before adding extensions.
    Check: Detect malformed JSON, unsupported claims and changed required fields.
 2. MVP · Prompting, sampling and structured outputs
-   Deliver: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Prompting, sampling and structured outputs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
 3. MVP · Golden datasets and deterministic regression evaluation
-   Deliver: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 4. Integrated demonstration
    Deliver: One clean-start command, connected end-to-end example and evidence report
    Check: Re-run the same input through all selected components and verify the final output against the source records.
@@ -8211,8 +8211,8 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. Detect malformed JSON, unsupported claims and changed required fields.
-2. Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-3. Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. Prompting, sampling and structured outputs: Implement a toy sampling experiment plus a schema-validating response parser; use local recorded responses to test malformed JSON and semantically invalid values.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Test valid output, malformed JSON, missing fields, a negative quantity, refusal and a truncated response; only a complete semantically valid response may reach downstream actions.; Compare prompts on fixed held-out cases and report format validity separately from task correctness; do not tune against those held-out labels.
+3. Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 4. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
 
@@ -8241,20 +8241,20 @@ A developer needs relevant context within a fixed budget.
 **Effort:** 10h · Beginner → intermediate
 
 - **Context engineering, memory and caching:** Implement Context engineering, memory and caching in Context assembly laboratory. Adapt this focused lab to the project data: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.  Required concepts: Context sources, Compaction and isolation, Memory and caching.
-  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A context packer with source traceability. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Context engineering, memory and caching: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Always retain required constraints and explain every dropped passage.
-- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -8271,7 +8271,7 @@ A developer needs relevant context within a fixed budget.
 
 1. Use ten Markdown notes with IDs, priorities and contradictory statements.
 2. Validate source records and preserve stable IDs.
-3. Context engineering, memory and caching consumes the project records/results and produces: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Context engineering, memory and caching consumes the project records/results and produces: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A context packer with source traceability.
 5. Always retain required constraints and explain every dropped passage.
 
@@ -8329,7 +8329,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 ## Components and data flow
 1. Use ten Markdown notes with IDs, priorities and contradictory statements.
 2. Validate source records and preserve stable IDs.
-3. Context engineering, memory and caching consumes the project records/results and produces: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Context engineering, memory and caching consumes the project records/results and produces: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A context packer with source traceability.
 5. Always retain required constraints and explain every dropped passage.
 Describe concrete interfaces between adjacent components. For alternative tools, compare them on the same inputs and checks rather than duplicating a feature without a purpose.
@@ -8337,16 +8337,16 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ## Required skill responsibilities
 ### Context engineering, memory and caching
 Task: Implement Context engineering, memory and caching in Context assembly laboratory. Adapt this focused lab to the project data: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.  Required concepts: Context sources, Compaction and isolation, Memory and caching.
-Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 
 ## Build plan
 1. MVP · problem and reproducible baseline
    Deliver: A context packer with source traceability. Start with the smallest deterministic reference before adding extensions.
    Check: Always retain required constraints and explain every dropped passage.
 2. MVP · Context engineering, memory and caching
-   Deliver: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Context engineering, memory and caching: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 3. Integrated demonstration
    Deliver: One clean-start command, connected end-to-end example and evidence report
    Check: Re-run the same input through all selected components and verify the final output against the source records.
@@ -8357,7 +8357,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. Always retain required constraints and explain every dropped passage.
-2. Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. Context engineering, memory and caching: Build a context assembler with explicit token/character budget, source labels, session isolation and versioned cache keys; test conflicting and oversized inputs.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Reserve output tokens before packing context; use the actual tokenizer when available and label a character-budget fallback as an approximation.; Test two users, a changed document version, expired entries and permission revocation; none may return a stale or unauthorized cached answer.
 3. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
 
@@ -8664,20 +8664,20 @@ A developer needs a defensible model choice under laptop constraints.
 **Effort:** 10h · Beginner → intermediate
 
 - **Model selection, open models and local serving:** Implement Model selection, open models and local serving in Local model selection scorecard. Adapt this focused lab to the project data: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.  Required concepts: Model selection, Open and closed models, Self-hosting.
-  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A quality, memory and latency scorecard with provenance per run. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Separate measured local runs from fixtures and state untested capabilities.
-- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -8694,7 +8694,7 @@ A developer needs a defensible model choice under laptop constraints.
 
 1. Use 20 local evaluation prompts; recorded outputs are the offline fallback.
 2. Validate source records and preserve stable IDs.
-3. Model selection, open models and local serving consumes the project records/results and produces: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Model selection, open models and local serving consumes the project records/results and produces: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A quality, memory and latency scorecard with provenance per run.
 5. Separate measured local runs from fixtures and state untested capabilities.
 
@@ -8752,7 +8752,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 ## Components and data flow
 1. Use 20 local evaluation prompts; recorded outputs are the offline fallback.
 2. Validate source records and preserve stable IDs.
-3. Model selection, open models and local serving consumes the project records/results and produces: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Model selection, open models and local serving consumes the project records/results and produces: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A quality, memory and latency scorecard with provenance per run.
 5. Separate measured local runs from fixtures and state untested capabilities.
 Describe concrete interfaces between adjacent components. For alternative tools, compare them on the same inputs and checks rather than duplicating a feature without a purpose.
@@ -8760,16 +8760,16 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ## Required skill responsibilities
 ### Model selection, open models and local serving
 Task: Implement Model selection, open models and local serving in Local model selection scorecard. Adapt this focused lab to the project data: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.  Required concepts: Model selection, Open and closed models, Self-hosting.
-Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 
 ## Build plan
 1. MVP · problem and reproducible baseline
    Deliver: A quality, memory and latency scorecard with provenance per run. Start with the smallest deterministic reference before adding extensions.
    Check: Separate measured local runs from fixtures and state untested capabilities.
 2. MVP · Model selection, open models and local serving
-   Deliver: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 3. Integrated demonstration
    Deliver: One clean-start command, connected end-to-end example and evidence report
    Check: Re-run the same input through all selected components and verify the final output against the source records.
@@ -8780,7 +8780,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. Separate measured local runs from fixtures and state untested capabilities.
-2. Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 3. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
 
@@ -9255,14 +9255,14 @@ A learner needs to measure compression tradeoffs before choosing a format.
   - Deliverable: Mixed precision, memory and inference optimization: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Write a memory estimate and CPU inference benchmark; include an optional hardware-specific mixed-precision procedure and document unsupported paths.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - **Model selection, open models and local serving:** Implement Model selection, open models and local serving in Quantization error explorer. Adapt this focused lab to the project data: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.  Required concepts: Model selection, Open and closed models, Self-hosting.
-  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: An int8 quantize/dequantize notebook with size and output-error plots. Start with the smallest deterministic reference before adding extensions.
 - [ ] MVP · Mixed precision, memory and inference optimization: Mixed precision, memory and inference optimization: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Model selection, open models and local serving: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
@@ -9270,7 +9270,7 @@ A learner needs to measure compression tradeoffs before choosing a format.
 
 - [ ] Compare per-tensor and per-channel scales and test outlier sensitivity.
 - [ ] Mixed precision, memory and inference optimization: Write a memory estimate and CPU inference benchmark; include an optional hardware-specific mixed-precision procedure and document unsupported paths.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README and worked example; Requirements and success metric; Architecture, data contracts and ADR; Evaluation and limitations; Local deployment guide and recovery runbook.
@@ -9289,7 +9289,7 @@ A learner needs to measure compression tradeoffs before choosing a format.
 1. Use generated linear-layer weights and calibration vectors.
 2. Validate source records and preserve stable IDs.
 3. Mixed precision, memory and inference optimization consumes the project records/results and produces: Mixed precision, memory and inference optimization: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
-4. Model selection, open models and local serving consumes the project records/results and produces: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+4. Model selection, open models and local serving consumes the project records/results and produces: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 5. An int8 quantize/dequantize notebook with size and output-error plots.
 6. Compare per-tensor and per-channel scales and test outlier sensitivity.
 
@@ -9351,7 +9351,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 1. Use generated linear-layer weights and calibration vectors.
 2. Validate source records and preserve stable IDs.
 3. Mixed precision, memory and inference optimization consumes the project records/results and produces: Mixed precision, memory and inference optimization: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
-4. Model selection, open models and local serving consumes the project records/results and produces: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+4. Model selection, open models and local serving consumes the project records/results and produces: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 5. An int8 quantize/dequantize notebook with size and output-error plots.
 6. Compare per-tensor and per-channel scales and test outlier sensitivity.
 Describe concrete interfaces between adjacent components. For alternative tools, compare them on the same inputs and checks rather than duplicating a feature without a purpose.
@@ -9364,8 +9364,8 @@ Verification: Write a memory estimate and CPU inference benchmark; include an op
 
 ### Model selection, open models and local serving
 Task: Implement Model selection, open models and local serving in Quantization error explorer. Adapt this focused lab to the project data: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.  Required concepts: Model selection, Open and closed models, Self-hosting.
-Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 
 ## Build plan
 1. MVP · problem and reproducible baseline
@@ -9375,8 +9375,8 @@ Verification: Create a model decision table and a mock OpenAI-compatible local e
    Deliver: Mixed precision, memory and inference optimization: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
    Check: Write a memory estimate and CPU inference benchmark; include an optional hardware-specific mixed-precision procedure and document unsupported paths.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 3. MVP · Model selection, open models and local serving
-   Deliver: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Model selection, open models and local serving: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 4. Integrated demonstration
    Deliver: One clean-start command, connected end-to-end example and evidence report
    Check: Re-run the same input through all selected components and verify the final output against the source records.
@@ -9388,7 +9388,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 ## Final acceptance tests
 1. Compare per-tensor and per-channel scales and test outlier sensitivity.
 2. Mixed precision, memory and inference optimization: Write a memory estimate and CPU inference benchmark; include an optional hardware-specific mixed-precision procedure and document unsupported paths.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-3. Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+3. Model selection, open models and local serving: Create a model decision table and a mock OpenAI-compatible local endpoint; optionally compare a small Ollama model if your hardware supports it.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compare at least two candidates on the same ten cases with task score, license, input/output budget, hardware estimate and measured or explicitly estimated latency.; Complete the required endpoint exercise with local recorded responses; label fixture results separately from any optional real-model measurement.
 4. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
 
@@ -10966,7 +10966,7 @@ A student needs answers traceable to their own notes.
 
 - **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Personal notes retrieval desk: A local search interface with passage IDs and citations. Focus: Hybrid search, Filters, Reranking.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 - **LLM engineering:** Implement LLM engineering in Personal notes retrieval desk. Add a schema-validated explanation or summarization layer using local/recorded responses.
   - Deliverable: A context builder, response fixtures and output-validation suite
   - Check: Budget context, validate cited evidence and test malformed output and abstention.
@@ -10986,7 +10986,7 @@ A student needs answers traceable to their own notes.
 **Acceptance**
 
 - [ ] Report recall at five and refuse unsupported answers.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 - [ ] LLM engineering: Budget context, validate cited evidence and test malformed output and abstention.
 - [ ] FastAPI routes, validation and OpenAPI: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
@@ -11082,7 +11082,7 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ### Lexical, semantic and hybrid retrieval; filters and reranking
 Task: Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Personal notes retrieval desk: A local search interface with passage IDs and citations. Focus: Hybrid search, Filters, Reranking.
 Deliverable: Index, labeled query set, retrieval report and citation examples
-Verification: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Verification: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 
 ### LLM engineering
 Task: Implement LLM engineering in Personal notes retrieval desk. Add a schema-validated explanation or summarization layer using local/recorded responses.
@@ -11100,7 +11100,7 @@ Verification: Exercise valid requests, malformed payloads, unavailable dependenc
    Check: Report recall at five and refuse unsupported answers.
 2. MVP · Lexical, semantic and hybrid retrieval; filters and reranking
    Deliver: Index, labeled query set, retrieval report and citation examples
-   Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 3. MVP · LLM engineering
    Deliver: A context builder, response fixtures and output-validation suite
    Check: Budget context, validate cited evidence and test malformed output and abstention.
@@ -11117,7 +11117,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. Report recall at five and refuse unsupported answers.
-2. Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 3. LLM engineering: Budget context, validate cited evidence and test malformed output and abstention.
 4. FastAPI routes, validation and OpenAPI: Exercise valid requests, malformed payloads, unavailable dependencies and unauthorized access. Build a local FastAPI classifier endpoint using a small model or mock, schema validation and OpenAPI; test invalid requests and unavailable inference.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 5. A teammate can reproduce the demo using the README without paid credentials.
@@ -11854,7 +11854,7 @@ A team needs retrieval that respects document access rights.
 
 - **Lexical, semantic and hybrid retrieval; filters and reranking:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Permission-aware team search: A retrieval filter and adversarial permission test set. Focus: Hybrid search, Filters, Reranking.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 - **Frontend, authentication, authorization and sessions:** Implement Frontend, authentication, authorization and sessions in Permission-aware team search. Adapt this focused lab to the project data: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.  Required concepts: Frontend and API state, Authentication versus authorization, Sessions and secrets.
   - Deliverable: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
@@ -11870,7 +11870,7 @@ A team needs retrieval that respects document access rights.
 **Acceptance**
 
 - [ ] Unauthorized passages never enter the retrieved context.
-- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 - [ ] Frontend, authentication, authorization and sessions: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -11961,7 +11961,7 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ### Lexical, semantic and hybrid retrieval; filters and reranking
 Task: Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Permission-aware team search: A retrieval filter and adversarial permission test set. Focus: Hybrid search, Filters, Reranking.
 Deliverable: Index, labeled query set, retrieval report and citation examples
-Verification: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Verification: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 
 ### Frontend, authentication, authorization and sessions
 Task: Implement Frontend, authentication, authorization and sessions in Permission-aware team search. Adapt this focused lab to the project data: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.  Required concepts: Frontend and API state, Authentication versus authorization, Sessions and secrets.
@@ -11974,7 +11974,7 @@ Verification: Build a two-user local API fixture with owner-only record updates;
    Check: Unauthorized passages never enter the retrieved context.
 2. MVP · Lexical, semantic and hybrid retrieval; filters and reranking
    Deliver: Index, labeled query set, retrieval report and citation examples
-   Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 3. MVP · Frontend, authentication, authorization and sessions
    Deliver: Frontend, authentication, authorization and sessions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
    Check: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
@@ -11988,7 +11988,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. Unauthorized passages never enter the retrieved context.
-2. Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. Lexical, semantic and hybrid retrieval; filters and reranking: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Create a hybrid retrieval fixture with keyword/vector ranks, reciprocal rank fusion, permission filters and a deterministic reranker; assert forbidden passages never appear.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use the same relevance labels for lexical, semantic or explicitly labelled toy-vector, hybrid and reranked runs; report candidate recall before reranking and ranking quality afterward.; Apply document permissions before selecting evidence; include an exact identifier, a paraphrase and a query with no relevant document.
 3. Frontend, authentication, authorization and sessions: Build a two-user local API fixture with owner-only record updates; demonstrate unauthorized access failing and a frontend showing a failed save honestly.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 4. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
@@ -12325,7 +12325,7 @@ A maintainer needs to separate retrieval and answer failures.
 
 - **Grounded generation, citations and retrieval evaluation:** Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Retrieval failure diagnosis bench: A retrieval/answer error taxonomy and regression report. Focus: Grounding, Citations, Retrieval metrics.
   - Deliverable: Index, labeled query set, retrieval report and citation examples
-  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 - **Faithfulness, hallucinations, task success and business metrics:** Implement Faithfulness, hallucinations, task success and business metrics in Retrieval failure diagnosis bench. Adapt this focused lab to the project data: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.  Required concepts: Faithfulness and hallucinations, Task completion, Operational and business metrics.
   - Deliverable: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
@@ -12341,7 +12341,7 @@ A maintainer needs to separate retrieval and answer failures.
 **Acceptance**
 
 - [ ] Measure retrieval recall separately from answer faithfulness.
-- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 - [ ] Faithfulness, hallucinations, task success and business metrics: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -12432,7 +12432,7 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ### Grounded generation, citations and retrieval evaluation
 Task: Retrieve project records by stable source IDs and assemble evidence-grounded responses; compare lexical and vector retrieval when a local embedding model is available. Apply this to Retrieval failure diagnosis bench: A retrieval/answer error taxonomy and regression report. Focus: Grounding, Citations, Retrieval metrics.
 Deliverable: Index, labeled query set, retrieval report and citation examples
-Verification: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Verification: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 
 ### Faithfulness, hallucinations, task success and business metrics
 Task: Implement Faithfulness, hallucinations, task success and business metrics in Retrieval failure diagnosis bench. Adapt this focused lab to the project data: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.  Required concepts: Faithfulness and hallucinations, Task completion, Operational and business metrics.
@@ -12445,7 +12445,7 @@ Verification: Evaluate twenty fixture tasks with evidence support, completion ra
    Check: Measure retrieval recall separately from answer faithfulness.
 2. MVP · Grounded generation, citations and retrieval evaluation
    Deliver: Index, labeled query set, retrieval report and citation examples
-   Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Check: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 3. MVP · Faithfulness, hallucinations, task success and business metrics
    Deliver: Faithfulness, hallucinations, task success and business metrics: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
    Check: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
@@ -12459,7 +12459,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. Measure retrieval recall separately from answer faithfulness.
-2. Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. Grounded generation, citations and retrieval evaluation: Measure recall at five and reject unsupported citations; explicitly label fixture-only responses. Build an extractive local Q&A system with citations and abstentions; evaluate twenty queries for retrieval recall and evidence-supported answers.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Include a correct citation, a nonexistent source, a real but irrelevant source, conflicting versions and an unanswerable question; report citation existence separately from claim support.; Trace each factual claim to a supporting passage and abstain when support is insufficient; a fluent answer alone must not pass.
 3. Faithfulness, hallucinations, task success and business metrics: Evaluate twenty fixture tasks with evidence support, completion rate and latency; write an evaluation report with denominators, failure slices and one proposed improvement.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 4. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
@@ -12493,20 +12493,20 @@ A team needs a small trustworthy evaluation set.
 **Effort:** 10h · Beginner → intermediate
 
 - **Golden datasets and deterministic regression evaluation:** Implement Golden datasets and deterministic regression evaluation in Golden dataset workshop. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A versioned evaluation dataset and deterministic runner. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Separate development cases from a locked holdout and detect a seeded regression.
-- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -12523,7 +12523,7 @@ A team needs a small trustworthy evaluation set.
 
 1. Author 40 questions with expected answers, sources and failure categories.
 2. Validate source records and preserve stable IDs.
-3. Golden datasets and deterministic regression evaluation consumes the project records/results and produces: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Golden datasets and deterministic regression evaluation consumes the project records/results and produces: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A versioned evaluation dataset and deterministic runner.
 5. Separate development cases from a locked holdout and detect a seeded regression.
 
@@ -12581,7 +12581,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 ## Components and data flow
 1. Author 40 questions with expected answers, sources and failure categories.
 2. Validate source records and preserve stable IDs.
-3. Golden datasets and deterministic regression evaluation consumes the project records/results and produces: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Golden datasets and deterministic regression evaluation consumes the project records/results and produces: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A versioned evaluation dataset and deterministic runner.
 5. Separate development cases from a locked holdout and detect a seeded regression.
 Describe concrete interfaces between adjacent components. For alternative tools, compare them on the same inputs and checks rather than duplicating a feature without a purpose.
@@ -12589,16 +12589,16 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ## Required skill responsibilities
 ### Golden datasets and deterministic regression evaluation
 Task: Implement Golden datasets and deterministic regression evaluation in Golden dataset workshop. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
-Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 
 ## Build plan
 1. MVP · problem and reproducible baseline
    Deliver: A versioned evaluation dataset and deterministic runner. Start with the smallest deterministic reference before adding extensions.
    Check: Separate development cases from a locked holdout and detect a seeded regression.
 2. MVP · Golden datasets and deterministic regression evaluation
-   Deliver: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 3. Integrated demonstration
    Deliver: One clean-start command, connected end-to-end example and evidence report
    Check: Re-run the same input through all selected components and verify the final output against the source records.
@@ -12609,7 +12609,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. Separate development cases from a locked holdout and detect a seeded regression.
-2. Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 3. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
 
@@ -12634,8 +12634,8 @@ A reviewer needs to know when automated ratings disagree.
 **Effort:** 15h · Beginner → intermediate
 
 - **Human evaluation, LLM judges and error analysis:** Implement Human evaluation, LLM judges and error analysis in Human and model judge agreement lab. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 - **Judge rubrics, disagreement and uncertain improvements:** Implement Judge rubrics, disagreement and uncertain improvements in Human and model judge agreement lab. Adapt this focused lab to the project data: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.  Required concepts: Operational rubrics, Position and presentation bias, Human disagreement, Paired uncertainty, Regression slices and holdouts.
   - Deliverable: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
@@ -12643,7 +12643,7 @@ A reviewer needs to know when automated ratings disagree.
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A rubric, blind review sheet and disagreement report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] MVP · Judge rubrics, disagreement and uncertain improvements: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
@@ -12651,7 +12651,7 @@ A reviewer needs to know when automated ratings disagree.
 **Acceptance**
 
 - [ ] Report agreement and inspect disagreements without treating model scores as truth.
-- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 - [ ] Judge rubrics, disagreement and uncertain improvements: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -12670,7 +12670,7 @@ A reviewer needs to know when automated ratings disagree.
 
 1. Use 30 anonymized fictional outputs and recorded judge scores.
 2. Validate source records and preserve stable IDs.
-3. Human evaluation, LLM judges and error analysis consumes the project records/results and produces: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Human evaluation, LLM judges and error analysis consumes the project records/results and produces: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. Judge rubrics, disagreement and uncertain improvements consumes the project records/results and produces: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
 5. A rubric, blind review sheet and disagreement report.
 6. Report agreement and inspect disagreements without treating model scores as truth.
@@ -12732,7 +12732,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 ## Components and data flow
 1. Use 30 anonymized fictional outputs and recorded judge scores.
 2. Validate source records and preserve stable IDs.
-3. Human evaluation, LLM judges and error analysis consumes the project records/results and produces: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Human evaluation, LLM judges and error analysis consumes the project records/results and produces: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. Judge rubrics, disagreement and uncertain improvements consumes the project records/results and produces: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
 5. A rubric, blind review sheet and disagreement report.
 6. Report agreement and inspect disagreements without treating model scores as truth.
@@ -12741,8 +12741,8 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ## Required skill responsibilities
 ### Human evaluation, LLM judges and error analysis
 Task: Implement Human evaluation, LLM judges and error analysis in Human and model judge agreement lab. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
-Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 
 ### Judge rubrics, disagreement and uncertain improvements
 Task: Implement Judge rubrics, disagreement and uncertain improvements in Human and model judge agreement lab. Adapt this focused lab to the project data: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.  Required concepts: Operational rubrics, Position and presentation bias, Human disagreement, Paired uncertainty, Regression slices and holdouts.
@@ -12754,8 +12754,8 @@ Verification: Use recorded judge outputs for twenty paired answers, swap present
    Deliver: A rubric, blind review sheet and disagreement report. Start with the smallest deterministic reference before adding extensions.
    Check: Report agreement and inspect disagreements without treating model scores as truth.
 2. MVP · Human evaluation, LLM judges and error analysis
-   Deliver: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 3. MVP · Judge rubrics, disagreement and uncertain improvements
    Deliver: Judge rubrics, disagreement and uncertain improvements: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
    Check: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
@@ -12769,7 +12769,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. Report agreement and inspect disagreements without treating model scores as truth.
-2. Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 3. Judge rubrics, disagreement and uncertain improvements: Use recorded judge outputs for twenty paired answers, swap presentation order and compare with two human annotations. Produce a rubric revision, disagreement table and paired bootstrap interval without calling a paid judge.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 4. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
@@ -13502,20 +13502,20 @@ A maintainer needs a repeatable quality decision before release.
 **Effort:** 10h · Beginner → intermediate
 
 - **Golden datasets and deterministic regression evaluation:** Implement Golden datasets and deterministic regression evaluation in Release regression gate. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A deterministic CI gate with explicit allowed regressions. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Fail when a critical case regresses even if average score improves.
-- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -13532,7 +13532,7 @@ A maintainer needs a repeatable quality decision before release.
 
 1. Store baseline and candidate results for 40 fixed cases.
 2. Validate source records and preserve stable IDs.
-3. Golden datasets and deterministic regression evaluation consumes the project records/results and produces: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Golden datasets and deterministic regression evaluation consumes the project records/results and produces: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A deterministic CI gate with explicit allowed regressions.
 5. Fail when a critical case regresses even if average score improves.
 
@@ -13590,7 +13590,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 ## Components and data flow
 1. Store baseline and candidate results for 40 fixed cases.
 2. Validate source records and preserve stable IDs.
-3. Golden datasets and deterministic regression evaluation consumes the project records/results and produces: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Golden datasets and deterministic regression evaluation consumes the project records/results and produces: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A deterministic CI gate with explicit allowed regressions.
 5. Fail when a critical case regresses even if average score improves.
 Describe concrete interfaces between adjacent components. For alternative tools, compare them on the same inputs and checks rather than duplicating a feature without a purpose.
@@ -13598,16 +13598,16 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ## Required skill responsibilities
 ### Golden datasets and deterministic regression evaluation
 Task: Implement Golden datasets and deterministic regression evaluation in Release regression gate. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
-Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 
 ## Build plan
 1. MVP · problem and reproducible baseline
    Deliver: A deterministic CI gate with explicit allowed regressions. Start with the smallest deterministic reference before adding extensions.
    Check: Fail when a critical case regresses even if average score improves.
 2. MVP · Golden datasets and deterministic regression evaluation
-   Deliver: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 3. Integrated demonstration
    Deliver: One clean-start command, connected end-to-end example and evidence report
    Check: Re-run the same input through all selected components and verify the final output against the source records.
@@ -13618,7 +13618,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. Fail when a critical case regresses even if average score improves.
-2. Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 3. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
 
@@ -14231,8 +14231,8 @@ An operator needs to resume failed multi-step jobs safely.
 **Effort:** 21h · Intermediate
 
 - **LangGraph, multi-agent coordination and failure recovery:** Implement LangGraph, multi-agent coordination and failure recovery in Checkpoint recovery runner. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 - **Typed state, checkpoints and bounded execution graphs:** Implement Typed state, checkpoints and bounded execution graphs in Checkpoint recovery runner. Adapt this focused lab to the project data: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.  Required concepts: State schema, Nodes, edges and routing, Reducers and concurrent updates, Checkpoints and replay, Budgets and terminal states.
   - Deliverable: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
@@ -14240,7 +14240,7 @@ An operator needs to resume failed multi-step jobs safely.
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A durable local state machine with replay. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] MVP · Typed state, checkpoints and bounded execution graphs: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
@@ -14248,7 +14248,7 @@ An operator needs to resume failed multi-step jobs safely.
 **Acceptance**
 
 - [ ] Resume without duplicating completed side effects.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 - [ ] Typed state, checkpoints and bounded execution graphs: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -14267,7 +14267,7 @@ An operator needs to resume failed multi-step jobs safely.
 
 1. Create five deterministic tasks and inject failures after checkpoints.
 2. Validate source records and preserve stable IDs.
-3. LangGraph, multi-agent coordination and failure recovery consumes the project records/results and produces: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. LangGraph, multi-agent coordination and failure recovery consumes the project records/results and produces: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. Typed state, checkpoints and bounded execution graphs consumes the project records/results and produces: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
 5. A durable local state machine with replay.
 6. Resume without duplicating completed side effects.
@@ -14329,7 +14329,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 ## Components and data flow
 1. Create five deterministic tasks and inject failures after checkpoints.
 2. Validate source records and preserve stable IDs.
-3. LangGraph, multi-agent coordination and failure recovery consumes the project records/results and produces: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. LangGraph, multi-agent coordination and failure recovery consumes the project records/results and produces: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. Typed state, checkpoints and bounded execution graphs consumes the project records/results and produces: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
 5. A durable local state machine with replay.
 6. Resume without duplicating completed side effects.
@@ -14338,8 +14338,8 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ## Required skill responsibilities
 ### LangGraph, multi-agent coordination and failure recovery
 Task: Implement LangGraph, multi-agent coordination and failure recovery in Checkpoint recovery runner. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
-Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 
 ### Typed state, checkpoints and bounded execution graphs
 Task: Implement Typed state, checkpoints and bounded execution graphs in Checkpoint recovery runner. Adapt this focused lab to the project data: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.  Required concepts: State schema, Nodes, edges and routing, Reducers and concurrent updates, Checkpoints and replay, Budgets and terminal states.
@@ -14351,8 +14351,8 @@ Verification: Implement a deterministic Python workflow graph with a fake planne
    Deliver: A durable local state machine with replay. Start with the smallest deterministic reference before adding extensions.
    Check: Resume without duplicating completed side effects.
 2. MVP · LangGraph, multi-agent coordination and failure recovery
-   Deliver: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 3. MVP · Typed state, checkpoints and bounded execution graphs
    Deliver: Typed state, checkpoints and bounded execution graphs: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
    Check: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
@@ -14366,7 +14366,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. Resume without duplicating completed side effects.
-2. LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 3. Typed state, checkpoints and bounded execution graphs: Implement a deterministic Python workflow graph with a fake planner, evidence lookup and approval state. Save JSON checkpoints, resume after a simulated crash and test reducer merging plus step-budget exhaustion.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 4. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
@@ -14844,14 +14844,14 @@ A team needs independent checks before combining conclusions.
   - Deliverable: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - **Human evaluation, LLM judges and error analysis:** Implement Human evaluation, LLM judges and error analysis in Independent review coordinator. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
-  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A coordinator with separate review results and conflict handling. Start with the smallest deterministic reference before adding extensions.
 - [ ] MVP · Workflows, agent loops, planning and state: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Human evaluation, LLM judges and error analysis: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
@@ -14859,7 +14859,7 @@ A team needs independent checks before combining conclusions.
 
 - [ ] Keep dissent visible and enforce a timeout per reviewer.
 - [ ] Workflows, agent loops, planning and state: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README and worked example; Requirements and success metric; Architecture, data contracts and ADR; Evaluation and limitations; Local deployment guide and recovery runbook.
@@ -14878,7 +14878,7 @@ A team needs independent checks before combining conclusions.
 1. Use three deterministic reviewers for schema, evidence and policy.
 2. Validate source records and preserve stable IDs.
 3. Workflows, agent loops, planning and state consumes the project records/results and produces: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
-4. Human evaluation, LLM judges and error analysis consumes the project records/results and produces: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+4. Human evaluation, LLM judges and error analysis consumes the project records/results and produces: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 5. A coordinator with separate review results and conflict handling.
 6. Keep dissent visible and enforce a timeout per reviewer.
 
@@ -14940,7 +14940,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 1. Use three deterministic reviewers for schema, evidence and policy.
 2. Validate source records and preserve stable IDs.
 3. Workflows, agent loops, planning and state consumes the project records/results and produces: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
-4. Human evaluation, LLM judges and error analysis consumes the project records/results and produces: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+4. Human evaluation, LLM judges and error analysis consumes the project records/results and produces: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 5. A coordinator with separate review results and conflict handling.
 6. Keep dissent visible and enforce a timeout per reviewer.
 Describe concrete interfaces between adjacent components. For alternative tools, compare them on the same inputs and checks rather than duplicating a feature without a purpose.
@@ -14953,8 +14953,8 @@ Verification: Build a deterministic fixture-driven tool loop with maximum steps,
 
 ### Human evaluation, LLM judges and error analysis
 Task: Implement Human evaluation, LLM judges and error analysis in Independent review coordinator. Adapt this focused lab to the project data: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.  Required concepts: Human rubrics, Model-based judging, Failure categories.
-Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 
 ## Build plan
 1. MVP · problem and reproducible baseline
@@ -14964,8 +14964,8 @@ Verification: Build a human-rating sheet and a fixture-based judge comparison; c
    Deliver: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
    Check: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 3. MVP · Human evaluation, LLM judges and error analysis
-   Deliver: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Human evaluation, LLM judges and error analysis: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 4. Integrated demonstration
    Deliver: One clean-start command, connected end-to-end example and evidence report
    Check: Re-run the same input through all selected components and verify the final output against the source records.
@@ -14977,7 +14977,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 ## Final acceptance tests
 1. Keep dissent visible and enforce a timeout per reviewer.
 2. Workflows, agent loops, planning and state: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-3. Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+3. Human evaluation, LLM judges and error analysis: Build a human-rating sheet and a fixture-based judge comparison; compute agreement, inspect five disagreements and categorize errors without calling a paid model.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Use independent human labels or clearly labelled simulated labels; swap answer order and report the number of disagreements over the number of rated cases.; Inspect five disagreements with the rubric and distinguish uncertain quality judgments from deterministic schema, citation and permission failures.
 4. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
 
@@ -15171,20 +15171,20 @@ A maintainer needs reproducible debugging of tool errors.
 **Effort:** 16h · Intermediate
 
 - **LangGraph, multi-agent coordination and failure recovery:** Implement LangGraph, multi-agent coordination and failure recovery in Agent failure replay studio. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
-  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A deterministic replay and failure classification tool. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · LangGraph, multi-agent coordination and failure recovery: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Replay without external side effects and cap retries.
-- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -15201,7 +15201,7 @@ A maintainer needs reproducible debugging of tool errors.
 
 1. Record 12 tool traces with timeouts, malformed outputs and retryable errors.
 2. Validate source records and preserve stable IDs.
-3. LangGraph, multi-agent coordination and failure recovery consumes the project records/results and produces: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. LangGraph, multi-agent coordination and failure recovery consumes the project records/results and produces: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A deterministic replay and failure classification tool.
 5. Replay without external side effects and cap retries.
 
@@ -15259,7 +15259,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 ## Components and data flow
 1. Record 12 tool traces with timeouts, malformed outputs and retryable errors.
 2. Validate source records and preserve stable IDs.
-3. LangGraph, multi-agent coordination and failure recovery consumes the project records/results and produces: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. LangGraph, multi-agent coordination and failure recovery consumes the project records/results and produces: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A deterministic replay and failure classification tool.
 5. Replay without external side effects and cap retries.
 Describe concrete interfaces between adjacent components. For alternative tools, compare them on the same inputs and checks rather than duplicating a feature without a purpose.
@@ -15267,16 +15267,16 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ## Required skill responsibilities
 ### LangGraph, multi-agent coordination and failure recovery
 Task: Implement LangGraph, multi-agent coordination and failure recovery in Agent failure replay studio. Adapt this focused lab to the project data: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.  Required concepts: Graph orchestration, Multi-agent context, Recovery.
-Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 
 ## Build plan
 1. MVP · problem and reproducible baseline
    Deliver: A deterministic replay and failure classification tool. Start with the smallest deterministic reference before adding extensions.
    Check: Replay without external side effects and cap retries.
 2. MVP · LangGraph, multi-agent coordination and failure recovery
-   Deliver: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: LangGraph, multi-agent coordination and failure recovery: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 3. Integrated demonstration
    Deliver: One clean-start command, connected end-to-end example and evidence report
    Check: Re-run the same input through all selected components and verify the final output against the source records.
@@ -15287,7 +15287,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. Replay without external side effects and cap retries.
-2. LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. LangGraph, multi-agent coordination and failure recovery: Implement a two-role research/verifier workflow with deterministic fixtures, checkpointing and one injected failure; compare it with a simpler single-role baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Inject a timeout after a tool side effect but before recording its result; replay with the same operation key and verify exactly one saved result.; Compare the two-role workflow with the single-role baseline on identical fixtures, reporting tool-call count, completion and failure reasons within a fixed step budget.
 3. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
 
@@ -15312,8 +15312,8 @@ A product builder needs evidence that autonomy helps a task.
 **Effort:** 21h · Intermediate
 
 - **Business models, unit economics and high-agency ownership:** Implement Business models, unit economics and high-agency ownership in Workflow versus agent experiment. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
-  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 - **Workflows, agent loops, planning and state:** Implement Workflows, agent loops, planning and state in Workflow versus agent experiment. Adapt this focused lab to the project data: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.  Required concepts: Workflows versus agents, Planning and loops, State and memory.
   - Deliverable: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
@@ -15321,7 +15321,7 @@ A product builder needs evidence that autonomy helps a task.
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A deterministic workflow versus bounded-planner benchmark. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] MVP · Workflows, agent loops, planning and state: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
@@ -15329,7 +15329,7 @@ A product builder needs evidence that autonomy helps a task.
 **Acceptance**
 
 - [ ] Compare task success, tool count and failure behavior under identical cases.
-- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 - [ ] Workflows, agent loops, planning and state: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
@@ -15348,7 +15348,7 @@ A product builder needs evidence that autonomy helps a task.
 
 1. Use 20 document-routing cases and fixed decision fixtures.
 2. Validate source records and preserve stable IDs.
-3. Business models, unit economics and high-agency ownership consumes the project records/results and produces: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Business models, unit economics and high-agency ownership consumes the project records/results and produces: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. Workflows, agent loops, planning and state consumes the project records/results and produces: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
 5. A deterministic workflow versus bounded-planner benchmark.
 6. Compare task success, tool count and failure behavior under identical cases.
@@ -15410,7 +15410,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 ## Components and data flow
 1. Use 20 document-routing cases and fixed decision fixtures.
 2. Validate source records and preserve stable IDs.
-3. Business models, unit economics and high-agency ownership consumes the project records/results and produces: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Business models, unit economics and high-agency ownership consumes the project records/results and produces: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. Workflows, agent loops, planning and state consumes the project records/results and produces: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
 5. A deterministic workflow versus bounded-planner benchmark.
 6. Compare task success, tool count and failure behavior under identical cases.
@@ -15419,8 +15419,8 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ## Required skill responsibilities
 ### Business models, unit economics and high-agency ownership
 Task: Implement Business models, unit economics and high-agency ownership in Workflow versus agent experiment. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
-Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 
 ### Workflows, agent loops, planning and state
 Task: Implement Workflows, agent loops, planning and state in Workflow versus agent experiment. Adapt this focused lab to the project data: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.  Required concepts: Workflows versus agents, Planning and loops, State and memory.
@@ -15432,8 +15432,8 @@ Verification: Build a deterministic fixture-driven tool loop with maximum steps,
    Deliver: A deterministic workflow versus bounded-planner benchmark. Start with the smallest deterministic reference before adding extensions.
    Check: Compare task success, tool count and failure behavior under identical cases.
 2. MVP · Business models, unit economics and high-agency ownership
-   Deliver: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 3. MVP · Workflows, agent loops, planning and state
    Deliver: Workflows, agent loops, planning and state: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
    Check: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
@@ -15447,7 +15447,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. Compare task success, tool count and failure behavior under identical cases.
-2. Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 3. Workflows, agent loops, planning and state: Build a deterministic fixture-driven tool loop with maximum steps, typed state and a resume checkpoint; demonstrate successful completion and a loop-limit failure.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 4. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
@@ -15904,20 +15904,20 @@ A learner needs to detect plausible but broken generated code.
 **Effort:** 10h · Beginner → intermediate
 
 - **Read code, test, lint, type-check and review security:** Implement Read code, test, lint, type-check and review security in Generated patch review clinic. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
-  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A review report with reproducing tests and corrected patches. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Each finding has a failing test that passes after the correction.
-- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -15934,7 +15934,7 @@ A learner needs to detect plausible but broken generated code.
 
 1. Author five tiny patches with security and logic defects.
 2. Validate source records and preserve stable IDs.
-3. Read code, test, lint, type-check and review security consumes the project records/results and produces: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Read code, test, lint, type-check and review security consumes the project records/results and produces: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A review report with reproducing tests and corrected patches.
 5. Each finding has a failing test that passes after the correction.
 
@@ -15992,7 +15992,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 ## Components and data flow
 1. Author five tiny patches with security and logic defects.
 2. Validate source records and preserve stable IDs.
-3. Read code, test, lint, type-check and review security consumes the project records/results and produces: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Read code, test, lint, type-check and review security consumes the project records/results and produces: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A review report with reproducing tests and corrected patches.
 5. Each finding has a failing test that passes after the correction.
 Describe concrete interfaces between adjacent components. For alternative tools, compare them on the same inputs and checks rather than duplicating a feature without a purpose.
@@ -16000,16 +16000,16 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ## Required skill responsibilities
 ### Read code, test, lint, type-check and review security
 Task: Implement Read code, test, lint, type-check and review security in Generated patch review clinic. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
-Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 
 ## Build plan
 1. MVP · problem and reproducible baseline
    Deliver: A review report with reproducing tests and corrected patches. Start with the smallest deterministic reference before adding extensions.
    Check: Each finding has a failing test that passes after the correction.
 2. MVP · Read code, test, lint, type-check and review security
-   Deliver: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 3. Integrated demonstration
    Deliver: One clean-start command, connected end-to-end example and evidence report
    Check: Re-run the same input through all selected components and verify the final output against the source records.
@@ -16020,7 +16020,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. Each finding has a failing test that passes after the correction.
-2. Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 3. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
 
@@ -16636,14 +16636,14 @@ A learner needs to prove a generated feature works beyond compilation.
   - Deliverable: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - **Read code, test, lint, type-check and review security:** Implement Read code, test, lint, type-check and review security in End-to-end verification handoff. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
-  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A verification plan and evidence report across the complete flow. Start with the smallest deterministic reference before adding extensions.
 - [ ] MVP · CI/CD integration, verification and iteration: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
@@ -16651,7 +16651,7 @@ A learner needs to prove a generated feature works beyond compilation.
 
 - [ ] Show input, persisted state and resulting UI behavior for success and failure.
 - [ ] CI/CD integration, verification and iteration: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README and worked example; Requirements and success metric; Architecture, data contracts and ADR; Evaluation and limitations; Local deployment guide and recovery runbook.
@@ -16670,7 +16670,7 @@ A learner needs to prove a generated feature works beyond compilation.
 1. Use a local form/API/storage demo with one seeded integration bug.
 2. Validate source records and preserve stable IDs.
 3. CI/CD integration, verification and iteration consumes the project records/results and produces: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
-4. Read code, test, lint, type-check and review security consumes the project records/results and produces: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+4. Read code, test, lint, type-check and review security consumes the project records/results and produces: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 5. A verification plan and evidence report across the complete flow.
 6. Show input, persisted state and resulting UI behavior for success and failure.
 
@@ -16732,7 +16732,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 1. Use a local form/API/storage demo with one seeded integration bug.
 2. Validate source records and preserve stable IDs.
 3. CI/CD integration, verification and iteration consumes the project records/results and produces: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
-4. Read code, test, lint, type-check and review security consumes the project records/results and produces: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+4. Read code, test, lint, type-check and review security consumes the project records/results and produces: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 5. A verification plan and evidence report across the complete flow.
 6. Show input, persisted state and resulting UI behavior for success and failure.
 Describe concrete interfaces between adjacent components. For alternative tools, compare them on the same inputs and checks rather than duplicating a feature without a purpose.
@@ -16745,8 +16745,8 @@ Verification: Create a minimal CI workflow for a sample app and a verification r
 
 ### Read code, test, lint, type-check and review security
 Task: Implement Read code, test, lint, type-check and review security in End-to-end verification handoff. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
-Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 
 ## Build plan
 1. MVP · problem and reproducible baseline
@@ -16756,8 +16756,8 @@ Verification: Review a deliberately flawed fixture patch, identify a contract bu
    Deliver: CI/CD integration, verification and iteration: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
    Check: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 3. MVP · Read code, test, lint, type-check and review security
-   Deliver: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 4. Integrated demonstration
    Deliver: One clean-start command, connected end-to-end example and evidence report
    Check: Re-run the same input through all selected components and verify the final output against the source records.
@@ -16769,7 +16769,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 ## Final acceptance tests
 1. Show input, persisted state and resulting UI behavior for success and failure.
 2. CI/CD integration, verification and iteration: Create a minimal CI workflow for a sample app and a verification report covering a complete user flow, one failure and remaining external setup.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-3. Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+3. Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 4. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
 
@@ -16798,20 +16798,20 @@ A learner needs to understand why repeated AI fixes fail.
 **Effort:** 10h · Beginner → intermediate
 
 - **Read code, test, lint, type-check and review security:** Implement Read code, test, lint, type-check and review security in Agent debugging learning journal. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
-  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A hypothesis log, minimal reproductions and verified fixes. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Read code, test, lint, type-check and review security: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Reject changes that only hide errors and explain the actual cause of each bug.
-- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -16828,7 +16828,7 @@ A learner needs to understand why repeated AI fixes fail.
 
 1. Use three small bugs with known root causes.
 2. Validate source records and preserve stable IDs.
-3. Read code, test, lint, type-check and review security consumes the project records/results and produces: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Read code, test, lint, type-check and review security consumes the project records/results and produces: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A hypothesis log, minimal reproductions and verified fixes.
 5. Reject changes that only hide errors and explain the actual cause of each bug.
 
@@ -16886,7 +16886,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 ## Components and data flow
 1. Use three small bugs with known root causes.
 2. Validate source records and preserve stable IDs.
-3. Read code, test, lint, type-check and review security consumes the project records/results and produces: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Read code, test, lint, type-check and review security consumes the project records/results and produces: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A hypothesis log, minimal reproductions and verified fixes.
 5. Reject changes that only hide errors and explain the actual cause of each bug.
 Describe concrete interfaces between adjacent components. For alternative tools, compare them on the same inputs and checks rather than duplicating a feature without a purpose.
@@ -16894,16 +16894,16 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ## Required skill responsibilities
 ### Read code, test, lint, type-check and review security
 Task: Implement Read code, test, lint, type-check and review security in Agent debugging learning journal. Adapt this focused lab to the project data: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.  Required concepts: Review, Automated checks, Failure modes and evals.
-Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 
 ## Build plan
 1. MVP · problem and reproducible baseline
    Deliver: A hypothesis log, minimal reproductions and verified fixes. Start with the smallest deterministic reference before adding extensions.
    Check: Reject changes that only hide errors and explain the actual cause of each bug.
 2. MVP · Read code, test, lint, type-check and review security
-   Deliver: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Read code, test, lint, type-check and review security: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 3. Integrated demonstration
    Deliver: One clean-start command, connected end-to-end example and evidence report
    Check: Re-run the same input through all selected components and verify the final output against the source records.
@@ -16914,7 +16914,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. Reject changes that only hide errors and explain the actual cause of each bug.
-2. Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. Read code, test, lint, type-check and review security: Review a deliberately flawed fixture patch, identify a contract bug and authorization bug, fix them manually and attach test/evaluation evidence.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; For each planted contract or authorization bug, show a failing check before the repair and a passing check afterward; explain the relevant caller and trust boundary.; Attach actual lint/type/test results where applicable and one complete user-flow observation; explicitly label checks that were not run.
 3. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
 
@@ -17555,20 +17555,20 @@ A maintainer needs to follow one request across components.
 **Effort:** 10h · Beginner → intermediate
 
 - **Logging, tracing, monitoring, alerts and incidents:** Implement Logging, tracing, monitoring, alerts and incidents in Request trace investigation. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
-  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: Structured logs and a local trace report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Logging, tracing, monitoring, alerts and incidents: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Trace each request end to end without logging secrets or full private payloads.
-- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -17585,7 +17585,7 @@ A maintainer needs to follow one request across components.
 
 1. Generate requests with correlation IDs and seeded slow dependencies.
 2. Validate source records and preserve stable IDs.
-3. Logging, tracing, monitoring, alerts and incidents consumes the project records/results and produces: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Logging, tracing, monitoring, alerts and incidents consumes the project records/results and produces: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. Structured logs and a local trace report.
 5. Trace each request end to end without logging secrets or full private payloads.
 
@@ -17643,7 +17643,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 ## Components and data flow
 1. Generate requests with correlation IDs and seeded slow dependencies.
 2. Validate source records and preserve stable IDs.
-3. Logging, tracing, monitoring, alerts and incidents consumes the project records/results and produces: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Logging, tracing, monitoring, alerts and incidents consumes the project records/results and produces: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. Structured logs and a local trace report.
 5. Trace each request end to end without logging secrets or full private payloads.
 Describe concrete interfaces between adjacent components. For alternative tools, compare them on the same inputs and checks rather than duplicating a feature without a purpose.
@@ -17651,16 +17651,16 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ## Required skill responsibilities
 ### Logging, tracing, monitoring, alerts and incidents
 Task: Implement Logging, tracing, monitoring, alerts and incidents in Request trace investigation. Adapt this focused lab to the project data: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.  Required concepts: Observability, Monitoring and alerts, Runbooks and incident response.
-Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 
 ## Build plan
 1. MVP · problem and reproducible baseline
    Deliver: Structured logs and a local trace report. Start with the smallest deterministic reference before adding extensions.
    Check: Trace each request end to end without logging secrets or full private payloads.
 2. MVP · Logging, tracing, monitoring, alerts and incidents
-   Deliver: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Logging, tracing, monitoring, alerts and incidents: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 3. Integrated demonstration
    Deliver: One clean-start command, connected end-to-end example and evidence report
    Check: Re-run the same input through all selected components and verify the final output against the source records.
@@ -17671,7 +17671,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. Trace each request end to end without logging secrets or full private payloads.
-2. Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. Logging, tracing, monitoring, alerts and incidents: Instrument a local service with structured logs and latency counters; simulate an outage and follow a written incident runbook to restore service.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Trace a request through retrieval and inference with one request ID; logs must omit credentials and private document text.; Trigger a sustained failure, capture the actionable alert and recovery steps, and report p95 with the observation window and request count.
 3. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
 
@@ -18735,20 +18735,20 @@ A designer needs to learn whether users can find evidence.
 **Effort:** 10h · Beginner → intermediate
 
 - **Prototypes, MVPs, UX, feedback and A/B testing:** Implement Prototypes, MVPs, UX, feedback and A/B testing in Search UX prototype study. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
-  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A task-based usability test and revised prototype. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Record task completion and confusion points without claiming statistical significance.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -18765,7 +18765,7 @@ A designer needs to learn whether users can find evidence.
 
 1. Use a static prototype and ten fictional documents.
 2. Validate source records and preserve stable IDs.
-3. Prototypes, MVPs, UX, feedback and A/B testing consumes the project records/results and produces: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Prototypes, MVPs, UX, feedback and A/B testing consumes the project records/results and produces: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A task-based usability test and revised prototype.
 5. Record task completion and confusion points without claiming statistical significance.
 
@@ -18823,7 +18823,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 ## Components and data flow
 1. Use a static prototype and ten fictional documents.
 2. Validate source records and preserve stable IDs.
-3. Prototypes, MVPs, UX, feedback and A/B testing consumes the project records/results and produces: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Prototypes, MVPs, UX, feedback and A/B testing consumes the project records/results and produces: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A task-based usability test and revised prototype.
 5. Record task completion and confusion points without claiming statistical significance.
 Describe concrete interfaces between adjacent components. For alternative tools, compare them on the same inputs and checks rather than duplicating a feature without a purpose.
@@ -18831,16 +18831,16 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ## Required skill responsibilities
 ### Prototypes, MVPs, UX, feedback and A/B testing
 Task: Implement Prototypes, MVPs, UX, feedback and A/B testing in Search UX prototype study. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
-Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 
 ## Build plan
 1. MVP · problem and reproducible baseline
    Deliver: A task-based usability test and revised prototype. Start with the smallest deterministic reference before adding extensions.
    Check: Record task completion and confusion points without claiming statistical significance.
 2. MVP · Prototypes, MVPs, UX, feedback and A/B testing
-   Deliver: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 3. Integrated demonstration
    Deliver: One clean-start command, connected end-to-end example and evidence report
    Check: Re-run the same input through all selected components and verify the final output against the source records.
@@ -18851,7 +18851,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. Record task completion and confusion points without claiming statistical significance.
-2. Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 3. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
 
@@ -18876,20 +18876,20 @@ A founder needs transparent assumptions about time saved.
 **Effort:** 10h · Beginner → intermediate
 
 - **Business models, unit economics and high-agency ownership:** Implement Business models, unit economics and high-agency ownership in AI feature value calculator. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
-  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A sensitivity analysis comparing manual and assisted workflows. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Business models, unit economics and high-agency ownership: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Show break-even assumptions and include human review cost.
-- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -18906,7 +18906,7 @@ A founder needs transparent assumptions about time saved.
 
 1. Generate fictional task volumes, review times and failure rates.
 2. Validate source records and preserve stable IDs.
-3. Business models, unit economics and high-agency ownership consumes the project records/results and produces: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Business models, unit economics and high-agency ownership consumes the project records/results and produces: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A sensitivity analysis comparing manual and assisted workflows.
 5. Show break-even assumptions and include human review cost.
 
@@ -18964,7 +18964,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 ## Components and data flow
 1. Generate fictional task volumes, review times and failure rates.
 2. Validate source records and preserve stable IDs.
-3. Business models, unit economics and high-agency ownership consumes the project records/results and produces: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+3. Business models, unit economics and high-agency ownership consumes the project records/results and produces: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 4. A sensitivity analysis comparing manual and assisted workflows.
 5. Show break-even assumptions and include human review cost.
 Describe concrete interfaces between adjacent components. For alternative tools, compare them on the same inputs and checks rather than duplicating a feature without a purpose.
@@ -18972,16 +18972,16 @@ Describe concrete interfaces between adjacent components. For alternative tools,
 ## Required skill responsibilities
 ### Business models, unit economics and high-agency ownership
 Task: Implement Business models, unit economics and high-agency ownership in AI feature value calculator. Adapt this focused lab to the project data: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.  Required concepts: Business model, Unit economics, High-agency ownership.
-Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 
 ## Build plan
 1. MVP · problem and reproducible baseline
    Deliver: A sensitivity analysis comparing manual and assisted workflows. Start with the smallest deterministic reference before adding extensions.
    Check: Show break-even assumptions and include human review cost.
 2. MVP · Business models, unit economics and high-agency ownership
-   Deliver: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Business models, unit economics and high-agency ownership: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 3. Integrated demonstration
    Deliver: One clean-start command, connected end-to-end example and evidence report
    Check: Re-run the same input through all selected components and verify the final output against the source records.
@@ -18992,7 +18992,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 
 ## Final acceptance tests
 1. Show break-even assumptions and include human review cost.
-2. Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+2. Business models, unit economics and high-agency ownership: Create a spreadsheet or Python model using fictional costs and completion rates, compare two operating scenarios, and write an ownership plan for collecting real user feedback without spending money.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Compute cost per successful task including failed requests and review effort; state units, observation period and which inputs are fictional estimates.; Compare at least two completion-rate scenarios, including zero successes as undefined cost per success, and name the next user-value measurement and its owner.
 3. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
 
@@ -19747,14 +19747,14 @@ A maintainer needs to turn messy feedback into testable changes.
   - Deliverable: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - **Prototypes, MVPs, UX, feedback and A/B testing:** Implement Prototypes, MVPs, UX, feedback and A/B testing in Feedback prioritization board. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
-  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A categorized backlog with evidence and experiment plans. Start with the smallest deterministic reference before adding extensions.
 - [ ] MVP · Users, problems, discovery and product decisions: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Prototypes, MVPs, UX, feedback and A/B testing: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
@@ -19762,7 +19762,7 @@ A maintainer needs to turn messy feedback into testable changes.
 
 - [ ] Deduplicate reports while retaining disagreement and define a test per priority.
 - [ ] Users, problems, discovery and product decisions: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README and worked example; Requirements and success metric; Architecture, data contracts and ADR; Evaluation and limitations; Local deployment guide and recovery runbook.
@@ -19781,7 +19781,7 @@ A maintainer needs to turn messy feedback into testable changes.
 1. Write 40 fictional feedback notes with conflicting requests.
 2. Validate source records and preserve stable IDs.
 3. Users, problems, discovery and product decisions consumes the project records/results and produces: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
-4. Prototypes, MVPs, UX, feedback and A/B testing consumes the project records/results and produces: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+4. Prototypes, MVPs, UX, feedback and A/B testing consumes the project records/results and produces: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 5. A categorized backlog with evidence and experiment plans.
 6. Deduplicate reports while retaining disagreement and define a test per priority.
 
@@ -19843,7 +19843,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 1. Write 40 fictional feedback notes with conflicting requests.
 2. Validate source records and preserve stable IDs.
 3. Users, problems, discovery and product decisions consumes the project records/results and produces: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
-4. Prototypes, MVPs, UX, feedback and A/B testing consumes the project records/results and produces: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+4. Prototypes, MVPs, UX, feedback and A/B testing consumes the project records/results and produces: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 5. A categorized backlog with evidence and experiment plans.
 6. Deduplicate reports while retaining disagreement and define a test per priority.
 Describe concrete interfaces between adjacent components. For alternative tools, compare them on the same inputs and checks rather than duplicating a feature without a purpose.
@@ -19856,8 +19856,8 @@ Verification: Interview two teammates, write a problem statement and concise BRD
 
 ### Prototypes, MVPs, UX, feedback and A/B testing
 Task: Implement Prototypes, MVPs, UX, feedback and A/B testing in Feedback prioritization board. Adapt this focused lab to the project data: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.  Required concepts: Build loop, UX and limitations, Experiments and business value, Ownership and communication.
-Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 
 ## Build plan
 1. MVP · problem and reproducible baseline
@@ -19867,8 +19867,8 @@ Verification: Test a small prototype with two teammates, record task completion 
    Deliver: Users, problems, discovery and product decisions: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
    Check: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 3. MVP · Prototypes, MVPs, UX, feedback and A/B testing
-   Deliver: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Prototypes, MVPs, UX, feedback and A/B testing: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 4. Integrated demonstration
    Deliver: One clean-start command, connected end-to-end example and evidence report
    Check: Re-run the same input through all selected components and verify the final output against the source records.
@@ -19880,7 +19880,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 ## Final acceptance tests
 1. Deduplicate reports while retaining disagreement and define a test per priority.
 2. Users, problems, discovery and product decisions: Interview two teammates, write a problem statement and concise BRD, and compare an AI approach with a deterministic baseline.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-3. Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+3. Prototypes, MVPs, UX, feedback and A/B testing: Test a small prototype with two teammates, record task completion and feedback, prioritize one improvement and explain its expected user value.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Record two user sessions with task, completion, time and feedback; obtain consent and keep identifying details out of shared evidence.; Choose one measured problem, implement an improvement and repeat the task; treat this small sample as qualitative feedback rather than proof of statistical significance.
 4. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
 
@@ -22439,15 +22439,15 @@ A team needs every assistant answer logged and comparable across prompt versions
   - Deliverable: Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
   - Check: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - **Golden datasets and deterministic regression evaluation:** Implement Golden datasets and deterministic regression evaluation in LLM evaluation warehouse. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
-  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+  - Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A modeled evaluation table with per-version quality and latency views. Start with the smallest deterministic reference before adding extensions.
 - [ ] MVP · Phase 5 · Transformation and modeling with dbt + Kimball: Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
 - [ ] MVP · Phase 6 · Data quality and observability: Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Golden datasets and deterministic regression evaluation: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
@@ -22456,7 +22456,7 @@ A team needs every assistant answer logged and comparable across prompt versions
 - [ ] Compute groundedness and latency per version from the table and reproduce one regression found in it.
 - [ ] Phase 5 · Transformation and modeling with dbt + Kimball: Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 - [ ] Phase 6 · Data quality and observability: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README and worked example; Requirements and success metric; Architecture, data contracts and ADR; Evaluation and limitations; Local deployment guide and recovery runbook.
@@ -22477,7 +22477,7 @@ A team needs every assistant answer logged and comparable across prompt versions
 2. Validate source records and preserve stable IDs.
 3. Phase 5 · Transformation and modeling with dbt + Kimball consumes the project records/results and produces: Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
 4. Phase 6 · Data quality and observability consumes the project records/results and produces: Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
-5. Golden datasets and deterministic regression evaluation consumes the project records/results and produces: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+5. Golden datasets and deterministic regression evaluation consumes the project records/results and produces: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 6. A modeled evaluation table with per-version quality and latency views.
 7. Compute groundedness and latency per version from the table and reproduce one regression found in it.
 
@@ -22543,7 +22543,7 @@ Provide the schema, a small example record, deterministic generation/seed instru
 2. Validate source records and preserve stable IDs.
 3. Phase 5 · Transformation and modeling with dbt + Kimball consumes the project records/results and produces: Phase 5 · Transformation and modeling with dbt + Kimball: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
 4. Phase 6 · Data quality and observability consumes the project records/results and produces: Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
-5. Golden datasets and deterministic regression evaluation consumes the project records/results and produces: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations.
+5. Golden datasets and deterministic regression evaluation consumes the project records/results and produces: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check.
 6. A modeled evaluation table with per-version quality and latency views.
 7. Compute groundedness and latency per version from the table and reproduce one regression found in it.
 Describe concrete interfaces between adjacent components. For alternative tools, compare them on the same inputs and checks rather than duplicating a feature without a purpose.
@@ -22561,8 +22561,8 @@ Verification: Create a data-quality and observability report for a generated pip
 
 ### Golden datasets and deterministic regression evaluation
 Task: Implement Golden datasets and deterministic regression evaluation in LLM evaluation warehouse. Adapt this focused lab to the project data: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.  Required concepts: Golden datasets, Deterministic checks, Regression evaluation.
-Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-Verification: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+Deliverable: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+Verification: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 
 ## Build plan
 1. MVP · problem and reproducible baseline
@@ -22575,8 +22575,8 @@ Verification: Create a twenty-case fixture dataset and an offline evaluator with
    Deliver: Phase 6 · Data quality and observability: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
    Check: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 4. MVP · Golden datasets and deterministic regression evaluation
-   Deliver: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-   Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+   Deliver: Golden datasets and deterministic regression evaluation: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+   Check: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 5. Integrated demonstration
    Deliver: One clean-start command, connected end-to-end example and evidence report
    Check: Re-run the same input through all selected components and verify the final output against the source records.
@@ -22589,7 +22589,7 @@ For each stage, explain prerequisites, give one bounded exercise, wait for my at
 1. Compute groundedness and latency per version from the table and reproduce one regression found in it.
 2. Phase 5 · Transformation and modeling with dbt + Kimball: Create a dbt project over a small generated commerce dataset. Build a dimensional mart, an incremental model that handles late updates, an SCD Type 2 snapshot, tests, docs, exposures and a changed-model CI workflow.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
 3. Phase 6 · Data quality and observability: Create a data-quality and observability report for a generated pipeline. Include contracts, Great Expectations or equivalent checks, lineage, freshness/volume/schema monitoring, anomaly examples, quarantine behavior and an actionable alert.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
-4. Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+4. Golden datasets and deterministic regression evaluation: Create a twenty-case fixture dataset and an offline evaluator with schema, citation and expected-action checks; compare two mock system versions.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Version twenty cases with IDs, expected behavior and separate development/held-out membership; include unsupported questions and permission failures.; Save per-case baseline/candidate results, aggregate denominators and failure categories; return a failing exit code for a deliberately introduced critical regression.
 5. A teammate can reproduce the demo using the README without paid credentials.
 Include happy paths, malformed/empty inputs and dependency failures. Keep baseline comparison and held-out evaluation honest where models are involved.
 

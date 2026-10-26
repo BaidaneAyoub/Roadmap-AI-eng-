@@ -428,34 +428,34 @@ Measure generalization using data the model and preprocessing have not seen.
       - Watch for: Focus on splits. Then reproduce the lesson example: Reserve a test set before choosing the regularization strength.
       - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
       - Verification source: https://www.freecodecamp.org/news/machine-learning-for-everybody/
-- [ ] **Cross-validation:** Repeated train/validation folds estimate variability; groups and time ordering may require special splitters.
-  - Example: Keep records from one customer in the same fold.
+- [ ] **Cross-validation:** Repeated train/validation folds estimate variability; the split must match deployment, including customer groups and chronological boundaries.
+  - Example: Keep every record from one customer in the same fold; for forecasting train only on records earlier than validation.
   - Videos:
     - [Machine Learning Fundamentals: Cross Validation](https://www.youtube.com/watch?v=fSytzGwwBVw) · StatQuest · Josh Starmer · Focused explanation
       - Explains: A visual, step-by-step explanation of the topic named in the title.
       - Useful because: Use the worked intuition before writing the corresponding small experiment.
-      - Watch for: Focus on cross-validation. Then reproduce the lesson example: Keep records from one customer in the same fold.
+      - Watch for: Focus on cross-validation. Then reproduce the lesson example: Keep every record from one customer in the same fold; for forecasting train only on records earlier than validation.
       - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
       - Verification source: https://statquest.org/video_index.html
     - [Machine learning for everybody — full course](https://www.youtube.com/watch?v=i_LwzRVP7bg) · freeCodeCamp · Kylie Ying · Full course
       - Explains: Practical supervised/unsupervised modeling, preprocessing and model comparisons.
       - Useful because: A coding-oriented overview; pair it with focused mathematical explanations.
-      - Watch for: Focus on cross-validation. Then reproduce the lesson example: Keep records from one customer in the same fold.
+      - Watch for: Focus on cross-validation. Then reproduce the lesson example: Keep every record from one customer in the same fold; for forecasting train only on records earlier than validation.
       - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
       - Verification source: https://www.freecodecamp.org/news/machine-learning-for-everybody/
-- [ ] **Leakage:** Information from evaluation data or future events can inflate scores.
-  - Example: Fit a scaler inside a Pipeline on training folds only.
+- [ ] **Leakage:** Information from evaluation data or future events can inflate scores, including labels used during feature selection or duplicate documents across splits.
+  - Example: Fit a scaler and feature selector inside a Pipeline on training folds only; deduplicate before assigning splits.
   - Videos:
     - [Machine Learning Fundamentals: Cross Validation](https://www.youtube.com/watch?v=fSytzGwwBVw) · StatQuest · Josh Starmer · Focused explanation
       - Explains: A visual, step-by-step explanation of the topic named in the title.
       - Useful because: Use the worked intuition before writing the corresponding small experiment.
-      - Watch for: Focus on leakage. Then reproduce the lesson example: Fit a scaler inside a Pipeline on training folds only.
+      - Watch for: Focus on leakage. Then reproduce the lesson example: Fit a scaler and feature selector inside a Pipeline on training folds only; deduplicate before assigning splits.
       - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
       - Verification source: https://statquest.org/video_index.html
     - [Machine learning for everybody — full course](https://www.youtube.com/watch?v=i_LwzRVP7bg) · freeCodeCamp · Kylie Ying · Full course
       - Explains: Practical supervised/unsupervised modeling, preprocessing and model comparisons.
       - Useful because: A coding-oriented overview; pair it with focused mathematical explanations.
-      - Watch for: Focus on leakage. Then reproduce the lesson example: Fit a scaler inside a Pipeline on training folds only.
+      - Watch for: Focus on leakage. Then reproduce the lesson example: Fit a scaler and feature selector inside a Pipeline on training folds only; deduplicate before assigning splits.
       - Free YouTube video; no purchase required. Promoted tools/certificates may be paid. Use local labs and current linked documentation.
       - Verification source: https://www.freecodecamp.org/news/machine-learning-for-everybody/
 
@@ -475,21 +475,25 @@ Measure generalization using data the model and preprocessing have not seen.
 #### Free written resources
 
 1. [scikit-learn: cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html) — Free; no registration required. No paid materials required.
-2. [scikit-learn: common pitfalls](https://scikit-learn.org/stable/common_pitfalls.html) — Free; no registration required. No paid materials required.
+2. [Inria scikit-learn course: cross-validation notebook and exercises](https://inria.github.io/scikit-learn-mooc/python_scripts/02_numerical_pipeline_cross_validation.html) — Free; no registration required. No paid materials required.
+3. [scikit-learn: common pitfalls](https://scikit-learn.org/stable/common_pitfalls.html) — Free; no registration required. No paid materials required.
 
 #### Lab: Train/validation/test, cross-validation and leakage
 
-Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.
+Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.
 
 **Deliverables**
 
 - Runnable code or notebook with a small reproducible input
 - README explaining decisions, results and limitations
+- Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 
 **Completion checks**
 
-- [ ] Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.
+- [ ] Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.
 - [ ] Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.
+- [ ] Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 
 #### Ten project recommendations
 
@@ -503,21 +507,21 @@ An analyst needs an educational estimate of likely account cancellation.
 
 **Effort:** 16h · Intermediate
 
-- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Subscription retention baseline. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation. Predict fictional cancellation label; keep the same target and splits across model comparisons. Required concepts: Splits, Cross-validation, Leakage.
-  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Subscription retention baseline. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration. Predict fictional cancellation label; keep the same target and splits across model comparisons. Required concepts: Splits, Cross-validation, Leakage.
+  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A leakage-safe preprocessing and classification pipeline. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Exclude post-cancellation fields and report PR AUC plus calibration.
-- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -532,21 +536,21 @@ A researcher needs interpretable groups without invented ground truth.
 
 **Effort:** 16h · Intermediate
 
-- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Customer behavior segmentation. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.  Required concepts: Splits, Cross-validation, Leakage.
-  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Customer behavior segmentation. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.  Required concepts: Splits, Cross-validation, Leakage.
+  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A clustering comparison with stability and group descriptions. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Compare multiple seeds and explain why silhouette alone is insufficient.
-- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -561,21 +565,21 @@ A planner needs next-day demand estimates with honest validation.
 
 **Effort:** 16h · Intermediate
 
-- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Household energy forecasting. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation. Predict next-day energy demand; keep the same target and splits across model comparisons. Required concepts: Splits, Cross-validation, Leakage.
-  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Household energy forecasting. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration. Predict next-day energy demand; keep the same target and splits across model comparisons. Required concepts: Splits, Cross-validation, Leakage.
+  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A chronological forecast benchmark and residual report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Beat or explain failure against last-week demand on a future holdout.
-- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -590,21 +594,21 @@ A reviewer needs to investigate reliance on a suspicious feature.
 
 **Effort:** 16h · Intermediate
 
-- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Feature contribution audit. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation. Predict generated binary outcome with the leakage field excluded; keep the same target and splits across model comparisons. Required concepts: Splits, Cross-validation, Leakage.
-  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Feature contribution audit. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration. Predict generated binary outcome with the leakage field excluded; keep the same target and splits across model comparisons. Required concepts: Splits, Cross-validation, Leakage.
+  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: An ablation and permutation-importance report. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Compare held-out performance before/after leakage removal and explain correlation caveats.
-- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -619,21 +623,21 @@ A stock manager needs unusual movements flagged for review.
 
 **Effort:** 16h · Intermediate
 
-- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Inventory movement anomaly detector. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation. Predict injected anomaly flag; keep the same target and splits across model comparisons. Required concepts: Splits, Cross-validation, Leakage.
-  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Inventory movement anomaly detector. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration. Predict injected anomaly flag; keep the same target and splits across model comparisons. Required concepts: Splits, Cross-validation, Leakage.
+  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: An anomaly ranking and threshold investigation notebook. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Report precision at a fixed review budget and inspect false alerts.
-- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -648,21 +652,21 @@ A learner needs to understand when a nonlinear classifier helps.
 
 **Effort:** 16h · Intermediate
 
-- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Kernel decision boundary lab. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation. Predict generated moon class; keep the same target and splits across model comparisons. Required concepts: Splits, Cross-validation, Leakage.
-  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Kernel decision boundary lab. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration. Predict generated moon class; keep the same target and splits across model comparisons. Required concepts: Splits, Cross-validation, Leakage.
+  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A linear versus RBF SVM comparison with boundary plots. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Use nested tuning and report held-out errors and support-vector counts.
-- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -677,21 +681,21 @@ A learner needs predictions with inspectable reference examples.
 
 **Effort:** 16h · Intermediate
 
-- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Nearest example explanation service. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation. Predict digit class; keep the same target and splits across model comparisons. Required concepts: Splits, Cross-validation, Leakage.
-  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Nearest example explanation service. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration. Predict digit class; keep the same target and splits across model comparisons. Required concepts: Splits, Cross-validation, Leakage.
+  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A kNN classifier that returns neighbors and distance explanations. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Test scaling, ties and out-of-distribution inputs; record latency.
-- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -706,21 +710,21 @@ A teammate needs to compare preprocessing and estimator choices fairly.
 
 **Effort:** 16h · Intermediate
 
-- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Reproducible model selection bench. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation. Predict wine class; keep the same target and splits across model comparisons. Required concepts: Splits, Cross-validation, Leakage.
-  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Reproducible model selection bench. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration. Predict wine class; keep the same target and splits across model comparisons. Required concepts: Splits, Cross-validation, Leakage.
+  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A cross-validated search with persisted pipeline and inference script. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Keep the final holdout untouched until selection and reproduce predictions after reload.
-- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -735,21 +739,21 @@ An operator needs a controllable false-alert budget.
 
 **Effort:** 16h · Intermediate
 
-- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Rare event threshold workbench. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation. Predict rare event label; keep the same target and splits across model comparisons. Required concepts: Splits, Cross-validation, Leakage.
-  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Rare event threshold workbench. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration. Predict rare event label; keep the same target and splits across model comparisons. Required concepts: Splits, Cross-validation, Leakage.
+  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A calibrated classifier and threshold tradeoff dashboard. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Choose thresholds on validation only and publish confusion matrices.
-- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
@@ -764,21 +768,21 @@ A support lead needs category suggestions with human review for ambiguity.
 
 **Effort:** 16h · Intermediate
 
-- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Support ticket model comparison. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation. Predict ticket category (login, billing, setup); keep the same target and splits across model comparisons. Required concepts: Splits, Cross-validation, Leakage.
-  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
-  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- **Train/validation/test, cross-validation and leakage:** Extend the project with Train/validation/test, cross-validation and leakage in Support ticket model comparison. Adapt this focused lab to the project data: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration. Predict ticket category (login, billing, setup); keep the same target and splits across model comparisons. Required concepts: Splits, Cross-validation, Leakage.
+  - Deliverable: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
+  - Check: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 
 **Milestones**
 
 - [ ] MVP · problem and reproducible baseline: A classifier comparison, error slices and a review threshold. Start with the smallest deterministic reference before adding extensions.
-- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations
+- [ ] MVP · Train/validation/test, cross-validation and leakage: Train/validation/test, cross-validation and leakage: Runnable code or notebook with a small reproducible input; README explaining decisions, results and limitations; Evidence report with fixture IDs, commands, observed results and limitations for each acceptance check
 - [ ] Integrated demonstration: One clean-start command, connected end-to-end example and evidence report
 - [ ] Explain and hand off: README, decision notes and recorded limitations
 
 **Acceptance**
 
 - [ ] Hold out templates, compare a dummy baseline and report macro F1.
-- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked scaling; explain the risk and leave the held-out test set untouched until final evaluation.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.
+- [ ] Train/validation/test, cross-validation and leakage: Compare a correct Pipeline cross-validation experiment with intentionally leaked preprocessing on generated data. Save split IDs, assert train/test disjointness and show a grouped or chronological split. Explain why leakage is invalid even if this small experiment does not inflate the score, and evaluate the held-out test set only after selecting the configuration.; Include at least one happy-path and one failure/edge-case check; explain the output using the concept checklist.; Persist row IDs for every split and assert no overlap; for grouped data assert disjoint groups, or for chronological data assert training timestamps precede validation.; Record the selected configuration before the final test evaluation; report both the baseline and selected model on the same split.
 - [ ] A teammate can reproduce the demo using the README without paid credentials.
 
 **Documentation:** README: purpose, setup, worked example, checks and limitations.
