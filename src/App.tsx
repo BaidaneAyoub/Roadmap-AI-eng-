@@ -249,8 +249,84 @@ function download(name: string, content: string, type = "application/json") {
 }
 type Run = (action: () => Promise<unknown>, message?: string) => Promise<void>;
 
+// Progressive reveal: marked sections and list items fade in on first
+// intersection. .fx-wait is only added once an element is observed, so
+// anything the observer never reaches is never left invisible.
+function useReveal() {
+  useEffect(() => {
+    const sel =
+      "[data-reveal], .curriculum-section, .module, .project-card, .mentor-panel, .domain-card, .video-card, .resource-card, .lesson-row";
+    const els = Array.from(document.querySelectorAll(sel));
+    if (!els.length) return;
+    if (!("IntersectionObserver" in window)) {
+      els.forEach((el) => el.classList.add("is-in"));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-in");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.05 },
+    );
+    els.forEach((el) => {
+      if (!el.classList.contains("is-in")) el.classList.add("fx-wait");
+      io.observe(el);
+    });
+    return () => io.disconnect();
+  });
+}
+
+// Pointer-tracked 3D tilt: streams --mx/--my (0–100) into the hovered
+// card; CSS maps them to rotation, lift and a cursor-following shadow.
+function useTilt() {
+  useEffect(() => {
+    if (matchMedia("(hover: none), (prefers-reduced-motion: reduce)").matches)
+      return;
+    const sel =
+      "[data-tilt], .continue-card, .journey-guide, .mentor-panel, .domain-card, .stat, .pipeline-node, .project-card, .team-preview";
+    const track = (e: PointerEvent) => {
+      const el =
+        e.target instanceof Element ? e.target.closest<HTMLElement>(sel) : null;
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      el.style.setProperty(
+        "--mx",
+        (((e.clientX - r.left) / r.width) * 100).toFixed(1),
+      );
+      el.style.setProperty(
+        "--my",
+        (((e.clientY - r.top) / r.height) * 100).toFixed(1),
+      );
+    };
+    const reset = (e: PointerEvent) => {
+      const el =
+        e.target instanceof Element ? e.target.closest<HTMLElement>(sel) : null;
+      if (
+        !el ||
+        (e.relatedTarget instanceof Node && el.contains(e.relatedTarget))
+      )
+        return;
+      el.style.setProperty("--mx", "50");
+      el.style.setProperty("--my", "50");
+    };
+    document.addEventListener("pointermove", track, { passive: true });
+    document.addEventListener("pointerout", reset, { passive: true });
+    return () => {
+      document.removeEventListener("pointermove", track);
+      document.removeEventListener("pointerout", reset);
+    };
+  }, []);
+}
+
 export default function App() {
   const route = useRoute();
+  useReveal();
+  useTilt();
   const [state, setState] = useState<Workspace | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -601,7 +677,7 @@ export default function App() {
             {store.cloud ? "Cloud sync" : "Local workspace"}
           </span>
         </header>
-        <main id="main" tabIndex={-1}>
+        <main id="main" tabIndex={-1} key={route}>
           {!store.cloud ? (
             <div className="local-banner">
               Local mode · progress stays on this browser. Connect Supabase
@@ -706,7 +782,7 @@ export function Dashboard({
           </button>
         }
       />
-      <div className="dashboard-grid">
+      <div className="dashboard-grid" data-reveal>
         <section className="continue-card">
           <div className="eyebrow">
             <span className="live-dot" /> KEEP THE MOMENTUM
@@ -781,7 +857,7 @@ export function Dashboard({
           </div>
         </section>
       </div>
-      <div className="stats-grid">
+      <div className="stats-grid" data-reveal>
         <Stat
           label="Your learning progress"
           value={`${total.percent}%`}
@@ -941,15 +1017,16 @@ function PipelineNode({
     list,
     user ? state?.progress[user.id] : {},
   );
+  const shared = !branch && placesOf(id).length > 1;
   return (
     <div
-      className={`pipeline-node ${branch ? "branch" : ""} ${outsidePath ? "outside-path" : ""}`}
+      className={`pipeline-node ${branch ? "branch" : ""} ${shared ? "shared" : ""} ${outsidePath ? "outside-path" : ""}`}
     >
       <a className="pipeline-node-link" href={`#/roadmap/${id}`}>
         <span className="eyebrow">
           {branch
             ? "OPTIONAL BRANCH"
-            : placesOf(id).length > 1
+            : shared
               ? "SHARED · STUDIED ONCE"
               : "ROADMAP STEP"}
           {outsidePath ? " · NOT IN MY PATH" : ""}
@@ -1056,6 +1133,7 @@ export function Roadmap({
       <section
         className="panel journey-guide"
         aria-label="Step-by-step learning guide"
+        data-reveal
       >
         <div className="eyebrow">
           {chosen
@@ -1208,6 +1286,7 @@ export function Roadmap({
         <section
           className="pipeline-map"
           aria-label={`${track.title} roadmap`}
+          data-reveal
         >
           <div className="pipeline-legend">
             <span>
@@ -1215,6 +1294,9 @@ export function Roadmap({
             </span>
             <span>
               <i className="optional" /> Optional depth / project choice
+            </span>
+            <span>
+              <i className="shared" /> Shared step · studied once
             </span>
             <span>Arrows guide order, never lock access</span>
           </div>

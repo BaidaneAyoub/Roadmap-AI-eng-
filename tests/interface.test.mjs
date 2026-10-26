@@ -1,14 +1,17 @@
 import test, { after } from "node:test";
 import assert from "node:assert/strict";
 import { createServer } from "vite";
-import { createElement } from "react";
-import { renderToStaticMarkup } from "react-dom/server";
 
 const server = await createServer({
   server: { middlewareMode: true, hmr: false },
   appType: "custom",
 });
 after(() => server.close());
+// React and react-dom are loaded through the same Vite module runner as App.tsx
+// so SSR shares one React instance; static imports create a duplicate on Windows.
+const { createElement, renderToStaticMarkup } = await server.ssrLoadModule(
+  "/tests/ssr-bridge.mjs",
+);
 const { LessonPage, Roadmap, Dashboard, ProjectBuilder, BriefDetail } =
   await server.ssrLoadModule("/src/App.tsx");
 const { catalog } = await server.ssrLoadModule("/src/catalog.ts");
@@ -139,6 +142,9 @@ test("A chosen roadmap shows only its own steps and every destination across all
       roadmap.domains.length,
     );
     assert(html.includes(`>${roadmap.title}</h2>`));
+    const sharedCount = roadmap.domains.filter(id => catalog.roadmaps.filter(r => r.domains.includes(id)).length > 1).length;
+    assert.equal((html.match(/pipeline-node +shared/g) ?? []).length, sharedCount,
+      'shared identity is retained within the selected roadmap');
     for (const m of html.matchAll(/href="#\/roadmap\/([^"]+)"/g))
       linked.add(m[1]);
     if (roadmap.id === "ai") assert(html.includes("SHARED · STUDIED ONCE"));
